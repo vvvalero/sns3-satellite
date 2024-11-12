@@ -232,15 +232,15 @@ class SatOrbiterHelper : public Object
      * \param forwardLinkRegenerationMode Regeneration mode on forward
      * \param returnLinkRegenerationMode Regeneration mode on return
      */
-    void AttachChannelsUser(Ptr<SatOrbiterNetDevice> dev,
-                            Ptr<SatChannel> uf,
-                            Ptr<SatChannel> ur,
-                            Ptr<SatAntennaGainPattern> userAgp,
-                            Ptr<SatNcc> ncc,
-                            uint32_t satId,
-                            uint32_t userBeamId,
-                            SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                            SatEnums::RegenerationMode_t returnLinkRegenerationMode);
+    virtual void AttachChannelsUser(Ptr<SatOrbiterNetDevice> dev,
+                                    Ptr<SatChannel> uf,
+                                    Ptr<SatChannel> ur,
+                                    Ptr<SatAntennaGainPattern> userAgp,
+                                    Ptr<SatNcc> ncc,
+                                    uint32_t satId,
+                                    uint32_t userBeamId,
+                                    SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
+                                    SatEnums::RegenerationMode_t returnLinkRegenerationMode) = 0;
 
     /**
      * Enables creation traces to be written in given file
@@ -256,7 +256,7 @@ class SatOrbiterHelper : public Object
      */
     void SetIslRoutes(std::vector<std::pair<uint32_t, uint32_t>> isls);
 
-  private:
+  protected:
     /**
      * Satellites node id
      */

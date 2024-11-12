@@ -198,6 +198,7 @@ set(source_files
     helper/satellite-lora-conf.cc
     helper/satellite-on-off-helper.cc
     helper/satellite-orbiter-helper.cc
+    helper/satellite-orbiter-helper-dvb.cc
     helper/satellite-point-to-point-isl-helper.cc
     helper/satellite-traffic-helper.cc
     helper/satellite-user-helper.cc
@@ -446,6 +447,7 @@ set(header_files
     helper/satellite-lora-conf.h
     helper/satellite-on-off-helper.h
     helper/satellite-orbiter-helper.h
+    helper/satellite-orbiter-helper-dvb.h
     helper/satellite-point-to-point-isl-helper.h
     helper/satellite-traffic-helper.h
     helper/satellite-user-helper.h

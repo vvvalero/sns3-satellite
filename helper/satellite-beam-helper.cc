@@ -24,6 +24,7 @@
 
 #include "satellite-gw-helper-dvb.h"
 #include "satellite-gw-helper-lora.h"
+#include "satellite-orbiter-helper-dvb.h"
 #include "satellite-point-to-point-isl-helper.h"
 #include "satellite-ut-helper-dvb.h"
 #include "satellite-ut-helper-lora.h"
@@ -346,13 +347,13 @@ SatBeamHelper::SatBeamHelper(SatEnums::Standard_t standard,
     }
 
     // create needed low level satellite helpers
-    m_orbiterHelper = CreateObject<SatOrbiterHelper>(bandwidthConverterCb,
-                                                     rtnLinkCarrierCount,
-                                                     fwdLinkCarrierCount,
-                                                     seq,
-                                                     fwdReadCtrlCb,
-                                                     rtnReadCtrlCb,
-                                                     orbiterRaSettings);
+    m_orbiterHelper = CreateObject<SatOrbiterHelperDvb>(bandwidthConverterCb,
+                                                        rtnLinkCarrierCount,
+                                                        fwdLinkCarrierCount,
+                                                        seq,
+                                                        fwdReadCtrlCb,
+                                                        rtnReadCtrlCb,
+                                                        orbiterRaSettings);
 
     switch (m_standard)
     {
