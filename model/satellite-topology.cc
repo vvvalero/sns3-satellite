@@ -86,6 +86,54 @@ SatTopology::Reset()
 }
 
 void
+SatTopology::SetStandard(SatEnums::Standard_t standard)
+{
+    NS_LOG_FUNCTION(this << standard);
+
+    m_standard = standard;
+}
+
+SatEnums::Standard_t
+SatTopology::GetStandard()
+{
+    NS_LOG_FUNCTION(this);
+
+    return m_standard;
+}
+
+void
+SatTopology::SetForwardRegenerationMode(SatEnums::RegenerationMode_t forwardRegenerationMode)
+{
+    NS_LOG_FUNCTION(this << forwardRegenerationMode);
+
+    m_forwardRegenerationMode = forwardRegenerationMode;
+}
+
+SatEnums::RegenerationMode_t
+SatTopology::GetForwardRegenerationMode()
+{
+    NS_LOG_FUNCTION(this);
+
+    return m_forwardRegenerationMode;
+}
+
+void
+SatTopology::SetReturnRegenerationMode(SatEnums::RegenerationMode_t returnRegenerationMode)
+{
+    NS_LOG_FUNCTION(this << returnRegenerationMode);
+
+    m_returnRegenerationMode = returnRegenerationMode;
+}
+
+SatEnums::RegenerationMode_t
+SatTopology::GetReturnRegenerationMode()
+{
+    NS_LOG_FUNCTION(this);
+
+    return m_returnRegenerationMode;
+}
+
+void
 SatTopology::AddGwNode(uint32_t gwId, Ptr<Node> gw)
 {
     NS_LOG_FUNCTION(this << gw);

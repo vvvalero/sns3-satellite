@@ -61,7 +61,23 @@ class LoraForwarderHelper : public Object
     ApplicationContainer Install(Ptr<Node> node) const;
 
   private:
-    Ptr<Application> InstallPriv(Ptr<Node> node) const;
+    /**
+     * Install if ground GW is a Lora GW
+     *
+     * \param node GW node where the forwarder is installed
+     *
+     * \return LoraForwarder application
+     */
+    Ptr<Application> InstallPrivGwLora(Ptr<Node> node) const;
+
+    /**
+     * Install if ground GW is a DVB GW. Lora GW is on a satellite
+     *
+     * \param node Ground GW node where the forwarder is installed
+     *
+     * \return LoraForwarder application
+     */
+    Ptr<Application> InstallPrivGwDvb(Ptr<Node> node) const;
 
     ObjectFactory m_factory;
 };

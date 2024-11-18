@@ -35,6 +35,7 @@
 #include <ns3/satellite-gw-phy.h>
 #include <ns3/satellite-id-mapper.h>
 #include <ns3/satellite-link-results.h>
+#include <ns3/satellite-lorawan-net-device.h>
 #include <ns3/satellite-lower-layer-service.h>
 #include <ns3/satellite-net-device.h>
 #include <ns3/satellite-node-info.h>
@@ -122,8 +123,22 @@ SatGwHelperDvb::Install(Ptr<Node> n,
     NetDeviceContainer container;
 
     // Create SatNetDevice
-    m_deviceFactory.SetTypeId("ns3::SatNetDevice");
-    Ptr<SatNetDevice> dev = m_deviceFactory.Create<SatNetDevice>();
+    Ptr<SatNetDevice> dev;
+    switch (Singleton<SatTopology>::Get()->GetStandard())
+    {
+    case SatEnums::DVB: {
+        m_deviceFactory.SetTypeId("ns3::SatNetDevice");
+        dev = m_deviceFactory.Create<SatNetDevice>();
+        break;
+    }
+    case SatEnums::LORA: {
+        m_deviceFactory.SetTypeId("ns3::SatLorawanNetDevice");
+        dev = m_deviceFactory.Create<SatLorawanNetDevice>();
+        break;
+    }
+    default:
+        NS_FATAL_ERROR("Incorrect standard chosen");
+    }
 
     // Attach the SatNetDevices to nodes
     n->AddDevice(dev);

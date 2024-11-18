@@ -26,7 +26,9 @@
 #include <ns3/log.h>
 #include <ns3/lora-forwarder.h>
 #include <ns3/random-variable-stream.h>
+#include <ns3/satellite-topology.h>
 #include <ns3/simulator.h>
+#include <ns3/singleton.h>
 #include <ns3/string.h>
 #include <ns3/trace-source-accessor.h>
 
@@ -66,7 +68,17 @@ LoraForwarderHelper::SetAttribute(std::string name, const AttributeValue& value)
 ApplicationContainer
 LoraForwarderHelper::Install(Ptr<Node> node) const
 {
-    return ApplicationContainer(InstallPriv(node));
+    switch (Singleton<SatTopology>::Get()->GetForwardRegenerationMode())
+    {
+    case SatEnums::TRANSPARENT: {
+        return ApplicationContainer(InstallPrivGwLora(node));
+    }
+    case SatEnums::REGENERATION_NETWORK: {
+        return ApplicationContainer(InstallPrivGwDvb(node));
+    }
+    default:
+        NS_FATAL_ERROR("Incorrect regeneration mode for LORA");
+    }
 }
 
 ApplicationContainer
@@ -75,14 +87,14 @@ LoraForwarderHelper::Install(NodeContainer c) const
     ApplicationContainer apps;
     for (NodeContainer::Iterator i = c.Begin(); i != c.End(); ++i)
     {
-        apps.Add(InstallPriv(*i));
+        apps.Add(Install(*i));
     }
 
     return apps;
 }
 
 Ptr<Application>
-LoraForwarderHelper::InstallPriv(Ptr<Node> node) const
+LoraForwarderHelper::InstallPrivGwLora(Ptr<Node> node) const
 {
     NS_LOG_FUNCTION(this << node);
 
@@ -116,4 +128,43 @@ LoraForwarderHelper::InstallPriv(Ptr<Node> node) const
 
     return app;
 }
+
+Ptr<Application>
+LoraForwarderHelper::InstallPrivGwDvb(Ptr<Node> node) const
+{
+    NS_LOG_FUNCTION(this << node);
+
+    Ptr<LoraForwarder> app = m_factory.Create<LoraForwarder>();
+
+    return app;
+
+    app->SetNode(node);
+    node->AddApplication(app);
+
+    // Link the LoraForwarder to the SatLorawanNetDevices
+    for (uint32_t i = 0; i < node->GetNDevices(); i++)
+    {
+        Ptr<NetDevice> currentNetDevice = node->GetDevice(i);
+        if (currentNetDevice->GetObject<SatLorawanNetDevice>() != nullptr)
+        {
+            Ptr<SatLorawanNetDevice> loraNetDevice =
+                currentNetDevice->GetObject<SatLorawanNetDevice>();
+            uint8_t beamId = loraNetDevice->GetLorawanMac()->GetBeamId();
+            app->SetLoraNetDevice(beamId, loraNetDevice);
+            loraNetDevice->SetReceiveNetworkServerCallback(
+                MakeCallback(&LoraForwarder::ReceiveFromLora, app));
+        }
+        else if (currentNetDevice->GetObject<PointToPointNetDevice>() != nullptr)
+        {
+            Ptr<PointToPointNetDevice> pointToPointNetDevice =
+                currentNetDevice->GetObject<PointToPointNetDevice>();
+            app->SetPointToPointNetDevice(pointToPointNetDevice);
+            pointToPointNetDevice->SetReceiveCallback(
+                MakeCallback(&LoraForwarder::ReceiveFromPointToPoint, app));
+        }
+    }
+
+    return app;
+}
+
 } // namespace ns3

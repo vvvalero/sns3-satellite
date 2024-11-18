@@ -115,6 +115,48 @@ class SatTopology : public Object
     void Reset();
 
     /**
+     * Set standard used (DVB or LORA)
+     *
+     * \param standard Standard to use
+     */
+    void SetStandard(SatEnums::Standard_t standard);
+
+    /**
+     * Get standard used (DVB or LORA)
+     *
+     * \return Standard to use
+     */
+    SatEnums::Standard_t GetStandard();
+
+    /**
+     * Set forward link regeneration mode
+     *
+     * \param forwardRegenerationMode Forward link regeneration mode
+     */
+    void SetForwardRegenerationMode(SatEnums::RegenerationMode_t forwardRegenerationMode);
+
+    /**
+     * Get forward link regeneration mode
+     *
+     * \return Forward link regeneration mode
+     */
+    SatEnums::RegenerationMode_t GetForwardRegenerationMode();
+
+    /**
+     * Set return link regeneration mode
+     *
+     * \param returnRegenerationMode Return link regeneration mode
+     */
+    void SetReturnRegenerationMode(SatEnums::RegenerationMode_t returnRegenerationMode);
+
+    /**
+     * Get return link regeneration mode
+     *
+     * \return Return link regeneration mode
+     */
+    SatEnums::RegenerationMode_t GetReturnRegenerationMode();
+
+    /**
      * Add a GW node to the topology
      *
      * \param gwId ID of the GW
@@ -713,6 +755,10 @@ class SatTopology : public Object
     uint32_t GetClosestSat(GeoCoordinate position);
 
   private:
+    SatEnums::Standard_t m_standard;                        // Standard used
+    SatEnums::RegenerationMode_t m_forwardRegenerationMode; // Regeneration mode on forward link
+    SatEnums::RegenerationMode_t m_returnRegenerationMode;  // Regeneration mode on return link
+
     std::map<uint32_t, Ptr<Node>> m_gwIds;                 // List of GW nodes
     NodeContainer m_gws;                                   // List of GW nodes
     NodeContainer m_uts;                                   // List of UT nodes
