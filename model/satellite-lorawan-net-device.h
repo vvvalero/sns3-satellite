@@ -90,7 +90,6 @@ class SatLorawanNetDevice : public SatNetDevice
     virtual void DoDispose(void);
 
   private:
-    bool m_forwardToUtUsers;
     bool m_isRegenerative;
     ReceiveCallback m_rxNetworkServerCallback;
 };

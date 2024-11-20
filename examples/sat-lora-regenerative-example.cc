@@ -123,7 +123,6 @@ main(int argc, char* argv[])
     Config::SetDefault("ns3::LorawanMacEndDevice::DataRate", UintegerValue(5));
     Config::SetDefault("ns3::LorawanMacEndDevice::MType",
                        EnumValue(LorawanMacHeader::CONFIRMED_DATA_UP));
-    Config::SetDefault("ns3::SatLorawanNetDevice::ForwardToUtUsers", BooleanValue(false));
 
     // Config::SetDefault ("ns3::SatLoraConf::Standard", EnumValue (SatLoraConf::EU863_870));
     Config::SetDefault("ns3::SatLoraConf::Standard", EnumValue(SatLoraConf::SATELLITE));
@@ -255,21 +254,22 @@ main(int argc, char* argv[])
 
     simulationHelper->CreateSatScenario();
 
-    simulationHelper->GetTrafficHelper()->AddLoraCbrTraffic(
+    /*simulationHelper->GetTrafficHelper()->AddLoraCbrTraffic(
         loraInterval,
         packetSize,
         Singleton<SatTopology>::Get()->GetGwUserNodes(),
         Singleton<SatTopology>::Get()->GetUtUserNodes(),
         appStartTime,
         simLength,
-        Seconds(1));
+        Seconds(1));*/
 
-    /*simulationHelper->GetTrafficHelper()->AddLoraPeriodicTraffic(loraInterval,
-                                                                 packetSize,
-                                                                 Singleton<SatTopology>::Get()->GetUtNodes(),
-                                                                 appStartTime,
-                                                                 simLength,
-                                                                 Seconds(1));*/
+    simulationHelper->GetTrafficHelper()->AddLoraPeriodicTraffic(
+        loraInterval,
+        packetSize,
+        Singleton<SatTopology>::Get()->GetUtNodes(),
+        appStartTime,
+        simLength,
+        Seconds(1));
 
     // Outputs
     simulationHelper->EnableProgressLogs();

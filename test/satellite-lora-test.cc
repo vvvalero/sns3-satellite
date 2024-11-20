@@ -118,7 +118,6 @@ SatLoraFirstWindowTestCase::DoRun(void)
     Config::SetDefault("ns3::LorawanMacEndDevice::DataRate", UintegerValue(5));
     Config::SetDefault("ns3::LorawanMacEndDevice::MType",
                        EnumValue(LorawanMacHeader::CONFIRMED_DATA_UP));
-    Config::SetDefault("ns3::SatLorawanNetDevice::ForwardToUtUsers", BooleanValue(false));
     Config::SetDefault("ns3::SatLoraConf::Standard", EnumValue(SatLoraConf::SATELLITE));
 
     Config::SetDefault("ns3::LorawanMacEndDeviceClassA::FirstWindowDelay",
@@ -271,7 +270,6 @@ SatLoraSecondWindowTestCase::DoRun(void)
     Config::SetDefault("ns3::LorawanMacEndDevice::DataRate", UintegerValue(5));
     Config::SetDefault("ns3::LorawanMacEndDevice::MType",
                        EnumValue(LorawanMacHeader::CONFIRMED_DATA_UP));
-    Config::SetDefault("ns3::SatLorawanNetDevice::ForwardToUtUsers", BooleanValue(false));
     Config::SetDefault("ns3::SatLoraConf::Standard", EnumValue(SatLoraConf::SATELLITE));
 
     Config::SetDefault("ns3::LorawanMacEndDeviceClassA::FirstWindowDelay",
@@ -446,7 +444,6 @@ SatLoraOutOfWindowWindowTestCase::DoRun(void)
     Config::SetDefault("ns3::LorawanMacEndDevice::DataRate", UintegerValue(5));
     Config::SetDefault("ns3::LorawanMacEndDevice::MType",
                        EnumValue(LorawanMacHeader::CONFIRMED_DATA_UP));
-    Config::SetDefault("ns3::SatLorawanNetDevice::ForwardToUtUsers", BooleanValue(false));
     Config::SetDefault("ns3::SatLoraConf::Standard", EnumValue(SatLoraConf::SATELLITE));
 
     Config::SetDefault("ns3::LorawanMacEndDeviceClassA::FirstWindowDelay",
@@ -606,7 +603,6 @@ SatLoraOutOfWindowWindowNoRetransmissionTestCase::DoRun(void)
     Config::SetDefault("ns3::LorawanMacEndDevice::DataRate", UintegerValue(5));
     Config::SetDefault("ns3::LorawanMacEndDevice::MType",
                        EnumValue(LorawanMacHeader::UNCONFIRMED_DATA_UP));
-    Config::SetDefault("ns3::SatLorawanNetDevice::ForwardToUtUsers", BooleanValue(false));
     Config::SetDefault("ns3::SatLoraConf::Standard", EnumValue(SatLoraConf::SATELLITE));
 
     Config::SetDefault("ns3::LorawanMacEndDeviceClassA::FirstWindowDelay",
@@ -754,7 +750,6 @@ SatLoraCbrTestCase::DoRun(void)
     Config::SetDefault("ns3::LorawanMacEndDevice::DataRate", UintegerValue(5));
     Config::SetDefault("ns3::LorawanMacEndDevice::MType",
                        EnumValue(LorawanMacHeader::CONFIRMED_DATA_UP));
-    Config::SetDefault("ns3::SatLorawanNetDevice::ForwardToUtUsers", BooleanValue(true));
     Config::SetDefault("ns3::SatLoraConf::Standard", EnumValue(SatLoraConf::SATELLITE));
 
     Config::SetDefault("ns3::LorawanMacEndDeviceClassA::FirstWindowDelay",

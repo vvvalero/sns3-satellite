@@ -24,6 +24,7 @@
 #include "lorawan-mac-header.h"
 #include "satellite-topology.h"
 
+#include <ns3/ipv4-header.h>
 #include <ns3/log.h>
 #include <ns3/singleton.h>
 
@@ -37,15 +38,9 @@ NS_OBJECT_ENSURE_REGISTERED(SatLorawanNetDevice);
 TypeId
 SatLorawanNetDevice::GetTypeId(void)
 {
-    static TypeId tid =
-        TypeId("ns3::SatLorawanNetDevice")
-            .SetParent<SatNetDevice>()
-            .AddAttribute("ForwardToUtUsers",
-                          "Forward to UT users or stop packet transmission here",
-                          BooleanValue(false),
-                          MakeBooleanAccessor(&SatLorawanNetDevice::m_forwardToUtUsers),
-                          MakeBooleanChecker())
-            .AddConstructor<SatLorawanNetDevice>();
+    static TypeId tid = TypeId("ns3::SatLorawanNetDevice")
+                            .SetParent<SatNetDevice>()
+                            .AddConstructor<SatLorawanNetDevice>();
     return tid;
 }
 
@@ -137,13 +132,14 @@ SatLorawanNetDevice::Receive(Ptr<const Packet> packet)
     }
 
     // Pass the packet to the upper layer if IP header in packet (GW or UT side)
-    if (m_forwardToUtUsers)
+    LorawanMacHeader mHdr;
+    LoraFrameHeader fHdr;
+    Ipv4Header ipv4Header;
+    Ptr<Packet> pktCopy = packet->Copy();
+    pktCopy->RemoveHeader(mHdr);
+    pktCopy->RemoveHeader(fHdr);
+    if (pktCopy->PeekHeader(ipv4Header))
     {
-        Ptr<Packet> pktCopy = packet->Copy();
-        LorawanMacHeader mHdr;
-        pktCopy->RemoveHeader(mHdr);
-        LoraFrameHeader fHdr;
-        pktCopy->RemoveHeader(fHdr);
         m_rxCallback(this, pktCopy, Ipv4L3Protocol::PROT_NUMBER, Address());
     }
 }
