@@ -292,6 +292,7 @@ def build(bld):
         'test/satellite-interference-test.cc',
         'test/satellite-link-results-test.cc',
         'test/satellite-lora-test.cc',
+        'test/satellite-lora-regenerative-test.cc',
         'test/satellite-mobility-observer-test.cc',
         'test/satellite-mobility-test.cc',
         'test/satellite-ncr-test.cc',

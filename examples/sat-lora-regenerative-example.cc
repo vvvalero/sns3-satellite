@@ -66,7 +66,7 @@ main(int argc, char* argv[])
 
     Time firstWindowDelay = MilliSeconds(1500);
     Time secondWindowDelay = Seconds(2);
-    Time firstWindowDuration = MilliSeconds(500);
+    Time firstWindowDuration = MilliSeconds(400);
     Time secondWindowDuration = MilliSeconds(500);
     Time firstWindowAnswerDelay = Seconds(1);
     Time secondWindowAnswerDelay = Seconds(2);
@@ -282,9 +282,6 @@ main(int argc, char* argv[])
     Config::SetDefault("ns3::ConfigStore::Mode", StringValue("Save"));
     ConfigStore outputConfig;
     outputConfig.ConfigureDefaults();
-
-    Packet::EnablePrinting();
-    Packet::EnableChecking();
 
     if (displayTraces)
     {
