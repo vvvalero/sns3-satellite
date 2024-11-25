@@ -37,6 +37,7 @@ cpp_examples = [
     ("sat-log-example", "True", "True"),
     ("sat-logon-example", "True", "True"),
     ("sat-loo-example", "True", "True"),
+    ("sat-lora-constellation-example", "True", "True"),
     ("sat-lora-example", "True", "True"),
     ("sat-lora-regenerative-example", "True", "True"),
     ("sat-markov-fading-trace-example", "True", "True"),

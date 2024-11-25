@@ -27,6 +27,7 @@ set(base_examples
     sat-log-example
     sat-logon-example
     sat-loo-example
+    sat-lora-constellation-example
     sat-lora-example
     sat-lora-regenerative-example
     sat-markov-fading-trace-example

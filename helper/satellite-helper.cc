@@ -910,9 +910,26 @@ SatHelper::DoCreateScenario(BeamUserInfoMap_t& beamInfos, uint32_t gwUsers)
                     Ptr<SatNetDevice> netDevice = DynamicCast<SatNetDevice>(ut->GetDevice(j));
                     if (netDevice)
                     {
-                        Ptr<SatUtMac> mac = DynamicCast<SatUtMac>(netDevice->GetMac());
-                        mac->SetUpdateIslCallback(
-                            MakeCallback(&SatBeamHelper::SetIslRoutes, m_beamHelper));
+                        Ptr<SatMac> mac = netDevice->GetMac();
+                        switch (m_standard)
+                        {
+                        case SatEnums::DVB: {
+                            Ptr<SatUtMac> utMac = DynamicCast<SatUtMac>(mac);
+                            utMac->SetUpdateIslCallback(
+                                MakeCallback(&SatBeamHelper::SetIslRoutes, m_beamHelper));
+                            break;
+                        }
+                        case SatEnums::LORA: {
+                            Ptr<LorawanMacEndDevice> endDeviceMac =
+                                DynamicCast<LorawanMacEndDevice>(mac);
+                            endDeviceMac->SetUpdateIslCallback(
+                                MakeCallback(&SatBeamHelper::SetIslRoutes, m_beamHelper));
+                            break;
+                        }
+                        default: {
+                            NS_FATAL_ERROR("Unknown standard");
+                        }
+                        }
                     }
                 }
             }
@@ -987,7 +1004,26 @@ SatHelper::SetGwAddressInUts()
     {
         ut = *it;
         Mac48Address gwAddress = Singleton<SatTopology>::Get()->GetGwAddressInUt(ut->GetId());
-        Singleton<SatTopology>::Get()->GetUtMac(ut)->SetGwAddress(gwAddress);
+
+        switch (m_standard)
+        {
+        case SatEnums::DVB: {
+            Singleton<SatTopology>::Get()->GetUtMac(ut)->SetGwAddress(gwAddress);
+            break;
+        }
+        case SatEnums::LORA: {
+            Ptr<SatNetDevice> dev = Singleton<SatTopology>::Get()->GetUtNetDevice(ut);
+            Ptr<SatMac> mac = dev->GetMac();
+            Ptr<LorawanMacEndDevice> endDeviceMac = DynamicCast<LorawanMacEndDevice>(mac);
+            NS_ASSERT_MSG(endDeviceMac != nullptr,
+                          "In Lora mode, End devices must use Lorawan MAC instances");
+            endDeviceMac->SetGwAddress(gwAddress);
+            break;
+        }
+        default: {
+            NS_FATAL_ERROR("Unknown standard");
+        }
+        }
     }
 }
 
