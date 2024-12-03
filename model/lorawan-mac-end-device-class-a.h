@@ -42,7 +42,10 @@ class LorawanMacEndDeviceClassA : public LorawanMacEndDevice
     static TypeId GetTypeId(void);
 
     LorawanMacEndDeviceClassA();
-    LorawanMacEndDeviceClassA(uint32_t satId, uint32_t beamId, Ptr<SatSuperframeSeq> seq);
+    LorawanMacEndDeviceClassA(Ptr<Node> node,
+                              uint32_t satId,
+                              uint32_t beamId,
+                              Ptr<SatSuperframeSeq> seq);
     virtual ~LorawanMacEndDeviceClassA();
 
     /////////////////////

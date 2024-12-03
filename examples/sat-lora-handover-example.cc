@@ -224,25 +224,22 @@ main(int argc, char* argv[])
 
     simulationHelper->CreateSatScenario(SatHelper::NONE);
 
-    Singleton<SatTopology>::Get()->PrintTopology(std::cout);
-
-    /*simulationHelper->GetTrafficHelper()->AddLoraCbrTraffic(
+    simulationHelper->GetTrafficHelper()->AddLoraCbrTraffic(
         loraInterval,
         packetSize,
         Singleton<SatTopology>::Get()->GetGwUserNodes(),
         Singleton<SatTopology>::Get()->GetUtUserNodes(),
         appStartTime,
         simLength,
-        Seconds(1));*/
+        Seconds(1));
 
-    simulationHelper->GetTrafficHelper()->AddLoraPeriodicTraffic(
+    /*simulationHelper->GetTrafficHelper()->AddLoraPeriodicTraffic(
         loraInterval,
         packetSize,
-        // NodeContainer(Singleton<SatTopology>::Get()->GetUtNode(0)),
         Singleton<SatTopology>::Get()->GetUtNodes(),
         appStartTime,
         simLength,
-        Seconds(1));
+        Seconds(1));*/
 
     // Outputs
     std::string outputPath = Singleton<SatEnvVariables>::Get()->LocateDirectory(
@@ -253,8 +250,6 @@ main(int argc, char* argv[])
     Config::SetDefault("ns3::ConfigStore::Mode", StringValue("Save"));
     ConfigStore outputConfig;
     outputConfig.ConfigureDefaults();
-
-    Packet::EnablePrinting();
 
     Ptr<SatStatsHelperContainer> s = simulationHelper->GetStatisticsContainer();
 

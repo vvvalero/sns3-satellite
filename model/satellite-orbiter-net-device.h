@@ -103,9 +103,9 @@ class SatOrbiterNetDevice : public NetDevice
      * \param rxParams Strucutre storing additional parameters
      * \return True if success
      */
-    bool SendControlMsgToFeeder(Ptr<SatControlMessage> msg,
-                                const Address& dest,
-                                Ptr<SatSignalParameters> rxParams);
+    virtual bool SendControlMsgToFeeder(Ptr<SatControlMessage> msg,
+                                        const Address& dest,
+                                        Ptr<SatSignalParameters> rxParams) = 0;
 
     /**
      * Add the User Phy object for the beam

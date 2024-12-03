@@ -80,6 +80,17 @@ class SatOrbiterNetDeviceDvb : public SatOrbiterNetDevice
     void ReceivePacketFeeder(Ptr<Packet> packet, const Address& feederAddress);
 
     /**
+     * \brief Send a control packet on the feeder link
+     * \param msg The control message to send
+     * \param dest The MAC destination
+     * \param rxParams Strucutre storing additional parameters
+     * \return True if success
+     */
+    virtual bool SendControlMsgToFeeder(Ptr<SatControlMessage> msg,
+                                        const Address& dest,
+                                        Ptr<SatSignalParameters> rxParams);
+
+    /**
      * Receive a packet from ISL.
      * \param packet The packet to send
      * \param destination The MAC address of ground station that will receive the packet

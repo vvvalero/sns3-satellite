@@ -292,6 +292,16 @@ SatOrbiterNetDeviceLora::ReceiveFromIsl(Ptr<Packet> packet, Mac48Address destina
     }
 }
 
+bool
+SatOrbiterNetDeviceLora::SendControlMsgToFeeder(Ptr<SatControlMessage> msg,
+                                                const Address& dest,
+                                                Ptr<SatSignalParameters> rxParams)
+{
+    NS_LOG_FUNCTION(this << msg << dest);
+
+    return true;
+}
+
 void
 SatOrbiterNetDeviceLora::ConnectUt(Mac48Address utAddress, uint32_t beamId)
 {

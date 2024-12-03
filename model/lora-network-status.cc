@@ -201,14 +201,16 @@ LoraNetworkStatus::GetReplyForDevice(LoraDeviceAddress edAddress, int windowNumb
     tag.SetModcod(edStatus->GetModcod());
     switch (windowNumber)
     {
-    case 1:
+    case 1: {
         tag.SetDataRate(edStatus->GetMac()->GetFirstReceiveWindowDataRate());
         tag.SetFrequency(edStatus->GetFirstReceiveWindowFrequency());
         break;
-    case 2:
+    }
+    case 2: {
         tag.SetDataRate(edStatus->GetMac()->GetSecondReceiveWindowDataRate());
         tag.SetFrequency(edStatus->GetSecondReceiveWindowFrequency());
         break;
+    }
     }
 
     packet->AddPacketTag(tag);

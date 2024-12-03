@@ -842,19 +842,13 @@ SatHelper::DoCreateScenario(BeamUserInfoMap_t& beamInfos, uint32_t gwUsers)
                 }
             }
 
-            if (m_satConstellationEnabled)
+            DynamicCast<SatOrbiterNetDevice>(
+                Singleton<SatTopology>::Get()->GetOrbiterNode(feederSatId)->GetDevice(0))
+                ->ConnectGw(Mac48Address::ConvertFrom(netDevices.first->GetAddress()),
+                            feederBeamId);
+
+            if (m_satConstellationEnabled == false)
             {
-                DynamicCast<SatOrbiterNetDevice>(
-                    Singleton<SatTopology>::Get()->GetOrbiterNode(feederSatId)->GetDevice(0))
-                    ->ConnectGw(Mac48Address::ConvertFrom(netDevices.first->GetAddress()),
-                                feederBeamId);
-            }
-            else
-            {
-                DynamicCast<SatOrbiterNetDevice>(
-                    Singleton<SatTopology>::Get()->GetOrbiterNode(feederSatId)->GetDevice(0))
-                    ->ConnectGw(Mac48Address::ConvertFrom(netDevices.first->GetAddress()),
-                                feederBeamId);
                 m_userHelper->PopulateBeamRoutings(uts,
                                                    netDevices.second,
                                                    gwNode,
@@ -871,6 +865,7 @@ SatHelper::DoCreateScenario(BeamUserInfoMap_t& beamInfos, uint32_t gwUsers)
             }
         }
 
+        // TODO remove this ?
         m_mobileUtsByBeam
             .clear(); // Release unused resources (mobile UTs starting in non-existent beams)
 

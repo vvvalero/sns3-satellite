@@ -171,7 +171,7 @@ SatUtHelperLora::Install(Ptr<Node> n,
     phy->SetRxFadingContainer(n->GetObject<SatBaseFading>());
 
     Ptr<LorawanMacEndDeviceClassA> mac =
-        CreateObject<LorawanMacEndDeviceClassA>(satId, beamId, m_superframeSeq);
+        CreateObject<LorawanMacEndDeviceClassA>(n, satId, beamId, m_superframeSeq);
 
     // TODO configuration for EU only
     mac->SetTxDbmForTxPower(std::vector<double>{16, 14, 12, 10, 8, 6, 4, 2});
@@ -211,6 +211,8 @@ SatUtHelperLora::Install(Ptr<Node> n,
     mac->SetRoutingUpdateCallback(cbRouting);
     mac->SetGwAddress(gwAddr);
 
+    mac->SetHandoverCallback(MakeCallback(&SatUtPhy::PerformHandover, phy));
+
     if (forwardLinkRegenerationMode == SatEnums::REGENERATION_NETWORK)
     {
         mac->SetSatAddress(Mac48Address::ConvertFrom(satUserAddress));
@@ -231,6 +233,15 @@ SatUtHelperLora::Install(Ptr<Node> n,
     dev->SetNodeInfo(nodeInfo);
     mac->SetNodeInfo(nodeInfo);
     phy->SetNodeInfo(nodeInfo);
+
+    Ptr<SatHandoverModule> handoverModule = n->GetObject<SatHandoverModule>();
+    if (handoverModule != nullptr)
+    {
+        handoverModule->SetHandoverRequestCallback(
+            MakeCallback(&LorawanMacEndDevice::ChangeBeam, mac));
+        mac->SetHandoverModule(handoverModule);
+        mac->SetBeamSchedulerCallback(MakeCallback(&SatNcc::GetBeamScheduler, ncc));
+    }
 
     Singleton<SatTopology>::Get()->AddUtLayers(n, satId, beamId, 0, dev, nullptr, nullptr, phy);
 

@@ -88,6 +88,17 @@ class SatOrbiterNetDeviceLora : public SatOrbiterNetDevice
     void ReceiveFromIsl(Ptr<Packet> packet, Mac48Address destination);
 
     /**
+     * \brief Send a control packet on the feeder link
+     * \param msg The control message to send
+     * \param dest The MAC destination
+     * \param rxParams Strucutre storing additional parameters
+     * \return True if success
+     */
+    virtual bool SendControlMsgToFeeder(Ptr<SatControlMessage> msg,
+                                        const Address& dest,
+                                        Ptr<SatSignalParameters> rxParams);
+
+    /**
      * Connect a UT to this satellite.
      * \param utAddress MAC address of the UT to connect
      * \param beamId beam used by satellite to reach this UT

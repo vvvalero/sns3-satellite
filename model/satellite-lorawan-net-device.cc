@@ -21,6 +21,7 @@
 #include "satellite-lorawan-net-device.h"
 
 #include "lora-frame-header.h"
+#include "lora-tag.h"
 #include "lorawan-mac-header.h"
 #include "satellite-topology.h"
 
@@ -147,7 +148,14 @@ SatLorawanNetDevice::Receive(Ptr<const Packet> packet)
 bool
 SatLorawanNetDevice::Send(Ptr<Packet> packet, const Address& dest, uint16_t protocolNumber)
 {
-    NS_LOG_FUNCTION(this << packet);
+    NS_LOG_FUNCTION(this << packet << dest << protocolNumber);
+
+    // only send tagged Lora packets
+    LoraTag tag;
+    if (!packet->PeekPacketTag(tag))
+    {
+        return false;
+    }
 
     // Add packet trace entry:
     SatEnums::SatLinkDir_t ld =
@@ -185,8 +193,8 @@ SatLorawanNetDevice::Send(Ptr<Packet> packet, const Address& dest, uint16_t prot
 
     if (m_isRegenerative && m_nodeInfo->GetNodeType() == SatEnums::NT_GW)
     {
-        Ptr<SatGwMac> satMac = DynamicCast<SatGwMac>(m_mac);
         uint8_t flowId = m_classifier->Classify(packet, dest, protocolNumber);
+
         m_llc->Enque(packet, dest, flowId);
     }
     else

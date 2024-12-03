@@ -77,7 +77,7 @@ class SatLoraRegenerativeFirstWindowTestCase : public TestCase
     Time m_gwReceiveDate;
     Time m_edReceiveDate;
 
-    Address m_orbiterFeederAddress;
+    Address m_edAddress;
     Address m_orbiterUserAddress;
 };
 
@@ -97,7 +97,7 @@ SatLoraRegenerativeFirstWindowTestCase::MacTraceCb(std::string context,
                                                    Ptr<const Packet> packet,
                                                    const Address& address)
 {
-    if (address == m_orbiterFeederAddress)
+    if (address == m_edAddress)
     {
         m_gwReceiveDate = Simulator::Now();
     }
@@ -195,14 +195,12 @@ SatLoraRegenerativeFirstWindowTestCase::DoRun(void)
 
     Ptr<SatOrbiterNetDevice> orbiterNetDevice = DynamicCast<SatOrbiterNetDevice>(
         Singleton<SatTopology>::Get()->GetOrbiterNode(0)->GetDevice(0));
-    m_orbiterFeederAddress = orbiterNetDevice->GetSatelliteFeederAddress(8);
+    m_edAddress = Singleton<SatTopology>::Get()->GetUtNode(0)->GetDevice(2)->GetAddress();
     m_orbiterUserAddress = orbiterNetDevice->GetSatelliteUserAddress(8);
 
     Config::Connect("/NodeList/*/DeviceList/*/SatMac/Rx",
                     MakeCallback(&SatLoraRegenerativeFirstWindowTestCase::MacTraceCb, this));
     Config::Connect("/NodeList/*/DeviceList/*/FeederMac/*/Rx",
-                    MakeCallback(&SatLoraRegenerativeFirstWindowTestCase::MacTraceCb, this));
-    Config::Connect("/NodeList/*/DeviceList/*/UserMac/*/Rx",
                     MakeCallback(&SatLoraRegenerativeFirstWindowTestCase::MacTraceCb, this));
 
     Simulator::Stop(Seconds(10));
@@ -247,7 +245,7 @@ class SatLoraRegenerativeSecondWindowTestCase : public TestCase
     Time m_gwReceiveDate;
     Time m_edReceiveDate;
 
-    Address m_orbiterFeederAddress;
+    Address m_edAddress;
     Address m_orbiterUserAddress;
 };
 
@@ -267,7 +265,7 @@ SatLoraRegenerativeSecondWindowTestCase::MacTraceCb(std::string context,
                                                     Ptr<const Packet> packet,
                                                     const Address& address)
 {
-    if (address == m_orbiterFeederAddress)
+    if (address == m_edAddress)
     {
         m_gwReceiveDate = Simulator::Now();
     }
@@ -368,14 +366,12 @@ SatLoraRegenerativeSecondWindowTestCase::DoRun(void)
 
     Ptr<SatOrbiterNetDevice> orbiterNetDevice = DynamicCast<SatOrbiterNetDevice>(
         Singleton<SatTopology>::Get()->GetOrbiterNode(0)->GetDevice(0));
-    m_orbiterFeederAddress = orbiterNetDevice->GetSatelliteFeederAddress(8);
+    m_edAddress = Singleton<SatTopology>::Get()->GetUtNode(0)->GetDevice(2)->GetAddress();
     m_orbiterUserAddress = orbiterNetDevice->GetSatelliteUserAddress(8);
 
     Config::Connect("/NodeList/*/DeviceList/*/SatMac/Rx",
                     MakeCallback(&SatLoraRegenerativeSecondWindowTestCase::MacTraceCb, this));
     Config::Connect("/NodeList/*/DeviceList/*/FeederMac/*/Rx",
-                    MakeCallback(&SatLoraRegenerativeSecondWindowTestCase::MacTraceCb, this));
-    Config::Connect("/NodeList/*/DeviceList/*/UserMac/*/Rx",
                     MakeCallback(&SatLoraRegenerativeSecondWindowTestCase::MacTraceCb, this));
 
     Simulator::Stop(Seconds(10));
@@ -419,7 +415,7 @@ class SatLoraRegenerativeOutOfWindowWindowTestCase : public TestCase
     std::vector<Time> m_gwReceiveDates;
     Time m_edReceiveDate;
 
-    Address m_orbiterFeederAddress;
+    Address m_edAddress;
     Address m_orbiterUserAddress;
 
     bool m_phyGwReceive;
@@ -443,7 +439,7 @@ SatLoraRegenerativeOutOfWindowWindowTestCase::MacTraceCb(std::string context,
                                                          Ptr<const Packet> packet,
                                                          const Address& address)
 {
-    if (address == m_orbiterFeederAddress)
+    if (address == m_edAddress)
     {
         m_gwReceiveDates.push_back(Simulator::Now());
     }
@@ -459,7 +455,7 @@ SatLoraRegenerativeOutOfWindowWindowTestCase::PhyTraceCb(std::string context,
                                                          Ptr<const Packet> packet,
                                                          const Address& address)
 {
-    if (address == m_orbiterFeederAddress)
+    if (address == m_edAddress)
     {
         m_phyGwReceive = true;
     }
@@ -560,17 +556,15 @@ SatLoraRegenerativeOutOfWindowWindowTestCase::DoRun(void)
 
     Ptr<SatOrbiterNetDevice> orbiterNetDevice = DynamicCast<SatOrbiterNetDevice>(
         Singleton<SatTopology>::Get()->GetOrbiterNode(0)->GetDevice(0));
-    m_orbiterFeederAddress = orbiterNetDevice->GetSatelliteFeederAddress(8);
+    m_edAddress = Singleton<SatTopology>::Get()->GetUtNode(0)->GetDevice(2)->GetAddress();
     m_orbiterUserAddress = orbiterNetDevice->GetSatelliteUserAddress(8);
 
     Config::Connect("/NodeList/*/DeviceList/*/SatMac/Rx",
                     MakeCallback(&SatLoraRegenerativeOutOfWindowWindowTestCase::MacTraceCb, this));
     Config::Connect("/NodeList/*/DeviceList/*/FeederMac/*/Rx",
                     MakeCallback(&SatLoraRegenerativeOutOfWindowWindowTestCase::MacTraceCb, this));
-    Config::Connect("/NodeList/*/DeviceList/*/UserMac/*/Rx",
-                    MakeCallback(&SatLoraRegenerativeOutOfWindowWindowTestCase::MacTraceCb, this));
     Config::Connect("/NodeList/*/DeviceList/*/SatPhy/Rx",
-                    MakeCallback(&SatLoraRegenerativeOutOfWindowWindowTestCase::MacTraceCb, this));
+                    MakeCallback(&SatLoraRegenerativeOutOfWindowWindowTestCase::PhyTraceCb, this));
     Config::Connect("/NodeList/*/DeviceList/*/FeederPhy/*/Rx",
                     MakeCallback(&SatLoraRegenerativeOutOfWindowWindowTestCase::PhyTraceCb, this));
     Config::Connect("/NodeList/*/DeviceList/*/UserPhy/*/Rx",
@@ -620,7 +614,7 @@ class SatLoraRegenerativeOutOfWindowWindowNoRetransmissionTestCase : public Test
     std::vector<Time> m_gwReceiveDates;
     Time m_edReceiveDate;
 
-    Address m_orbiterFeederAddress;
+    Address m_edAddress;
     Address m_orbiterUserAddress;
 };
 
@@ -641,7 +635,7 @@ SatLoraRegenerativeOutOfWindowWindowNoRetransmissionTestCase::MacTraceCb(std::st
                                                                          Ptr<const Packet> packet,
                                                                          const Address& address)
 {
-    if (address == m_orbiterFeederAddress)
+    if (address == m_edAddress)
     {
         m_gwReceiveDates.push_back(Simulator::Now());
     }
@@ -742,7 +736,7 @@ SatLoraRegenerativeOutOfWindowWindowNoRetransmissionTestCase::DoRun(void)
 
     Ptr<SatOrbiterNetDevice> orbiterNetDevice = DynamicCast<SatOrbiterNetDevice>(
         Singleton<SatTopology>::Get()->GetOrbiterNode(0)->GetDevice(0));
-    m_orbiterFeederAddress = orbiterNetDevice->GetSatelliteFeederAddress(8);
+    m_edAddress = Singleton<SatTopology>::Get()->GetUtNode(0)->GetDevice(2)->GetAddress();
     m_orbiterUserAddress = orbiterNetDevice->GetSatelliteUserAddress(8);
 
     Config::Connect(
@@ -751,10 +745,6 @@ SatLoraRegenerativeOutOfWindowWindowNoRetransmissionTestCase::DoRun(void)
                      this));
     Config::Connect(
         "/NodeList/*/DeviceList/*/FeederMac/*/Rx",
-        MakeCallback(&SatLoraRegenerativeOutOfWindowWindowNoRetransmissionTestCase::MacTraceCb,
-                     this));
-    Config::Connect(
-        "/NodeList/*/DeviceList/*/UserMac/*/Rx",
         MakeCallback(&SatLoraRegenerativeOutOfWindowWindowNoRetransmissionTestCase::MacTraceCb,
                      this));
 
@@ -792,7 +782,7 @@ class SatLoraRegenerativeCbrTestCase : public TestCase
     Time m_gwReceiveDate;
     Time m_edReceiveDate;
 
-    Address m_orbiterFeederAddress;
+    Address m_edAddress;
     Address m_orbiterUserAddress;
 };
 
@@ -811,7 +801,7 @@ SatLoraRegenerativeCbrTestCase::MacTraceCb(std::string context,
                                            Ptr<const Packet> packet,
                                            const Address& address)
 {
-    if (address == m_orbiterFeederAddress)
+    if (address == m_edAddress)
     {
         m_gwReceiveDate = Simulator::Now();
     }
@@ -847,7 +837,7 @@ SatLoraRegenerativeCbrTestCase::DoRun(void)
                        TimeValue(MilliSeconds(1500)));
     Config::SetDefault("ns3::LorawanMacEndDeviceClassA::SecondWindowDelay", TimeValue(Seconds(2)));
     Config::SetDefault("ns3::LorawanMacEndDeviceClassA::FirstWindowDuration",
-                       TimeValue(MilliSeconds(400)));
+                       TimeValue(MilliSeconds(450)));
     Config::SetDefault("ns3::LorawanMacEndDeviceClassA::SecondWindowDuration",
                        TimeValue(MilliSeconds(500)));
     Config::SetDefault("ns3::LoraNetworkScheduler::FirstWindowAnswerDelay", TimeValue(Seconds(1)));
@@ -920,7 +910,7 @@ SatLoraRegenerativeCbrTestCase::DoRun(void)
 
     Ptr<SatOrbiterNetDevice> orbiterNetDevice = DynamicCast<SatOrbiterNetDevice>(
         Singleton<SatTopology>::Get()->GetOrbiterNode(0)->GetDevice(0));
-    m_orbiterFeederAddress = orbiterNetDevice->GetSatelliteFeederAddress(8);
+    m_edAddress = Singleton<SatTopology>::Get()->GetUtNode(0)->GetDevice(2)->GetAddress();
     m_orbiterUserAddress = orbiterNetDevice->GetSatelliteUserAddress(8);
 
     Ptr<PacketSink> receiver = DynamicCast<PacketSink>(sinkContainer.Get(0));
@@ -928,8 +918,6 @@ SatLoraRegenerativeCbrTestCase::DoRun(void)
     Config::Connect("/NodeList/*/DeviceList/*/SatMac/Rx",
                     MakeCallback(&SatLoraRegenerativeCbrTestCase::MacTraceCb, this));
     Config::Connect("/NodeList/*/DeviceList/*/FeederMac/*/Rx",
-                    MakeCallback(&SatLoraRegenerativeCbrTestCase::MacTraceCb, this));
-    Config::Connect("/NodeList/*/DeviceList/*/UserMac/*/Rx",
                     MakeCallback(&SatLoraRegenerativeCbrTestCase::MacTraceCb, this));
 
     Simulator::Stop(Seconds(20));
@@ -977,7 +965,7 @@ class SatLoraConstellationFirstWindowTestCase : public TestCase
     Time m_gwReceiveDate;
     Time m_edReceiveDate;
 
-    Address m_orbiterFeederAddress;
+    Address m_edAddress;
     Address m_orbiterUserAddress;
 };
 
@@ -997,7 +985,7 @@ SatLoraConstellationFirstWindowTestCase::MacTraceCb(std::string context,
                                                     Ptr<const Packet> packet,
                                                     const Address& address)
 {
-    if (address == m_orbiterFeederAddress)
+    if (address == m_edAddress)
     {
         m_gwReceiveDate = Simulator::Now();
     }
@@ -1104,14 +1092,12 @@ SatLoraConstellationFirstWindowTestCase::DoRun(void)
         Singleton<SatTopology>::Get()->GetOrbiterNode(0)->GetDevice(0));
     Ptr<SatOrbiterNetDevice> orbiterNetDevice1 = DynamicCast<SatOrbiterNetDevice>(
         Singleton<SatTopology>::Get()->GetOrbiterNode(1)->GetDevice(0));
-    m_orbiterFeederAddress = orbiterNetDevice1->GetSatelliteFeederAddress(43);
+    m_edAddress = Singleton<SatTopology>::Get()->GetUtNode(0)->GetDevice(2)->GetAddress();
     m_orbiterUserAddress = orbiterNetDevice0->GetSatelliteUserAddress(43);
 
     Config::Connect("/NodeList/*/DeviceList/*/SatMac/Rx",
                     MakeCallback(&SatLoraConstellationFirstWindowTestCase::MacTraceCb, this));
     Config::Connect("/NodeList/*/DeviceList/*/FeederMac/*/Rx",
-                    MakeCallback(&SatLoraConstellationFirstWindowTestCase::MacTraceCb, this));
-    Config::Connect("/NodeList/*/DeviceList/*/UserMac/*/Rx",
                     MakeCallback(&SatLoraConstellationFirstWindowTestCase::MacTraceCb, this));
 
     simulationHelper->RunSimulation();

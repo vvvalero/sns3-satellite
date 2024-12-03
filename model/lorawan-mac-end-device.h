@@ -51,7 +51,7 @@ class LorawanMacEndDevice : public LorawanMac
     static TypeId GetTypeId(void);
 
     LorawanMacEndDevice();
-    LorawanMacEndDevice(uint32_t satId, uint32_t beamId);
+    LorawanMacEndDevice(Ptr<Node> node, uint32_t satId, uint32_t beamId);
     virtual ~LorawanMacEndDevice();
 
     /////////////////////
@@ -363,6 +363,30 @@ class LorawanMacEndDevice : public LorawanMac
     void SetGatewayUpdateCallback(LorawanMacEndDevice::GatewayUpdateCallback cb);
 
     /**
+     * \brief Callback to reconfigure physical layer during handover.
+     * \param uint32_t new beam Id
+     */
+    typedef Callback<void, uint32_t, uint32_t> HandoverCallback;
+
+    /**
+     * \brief Method to set handover callback.
+     * \param cb callback to invoke whenever a TIM-U is received prompting us to switch beams
+     */
+    void SetHandoverCallback(LorawanMacEndDevice::HandoverCallback cb);
+
+    /**
+     * \brief Callback to update addresses in statistics helpers
+     */
+    typedef Callback<void, Ptr<Node>> UpdateAddressAndIdentifierCallback;
+
+    /**
+     * \brief Set the callback to update addresses in statistics helpers.
+     * \param cb Callback to update addresses in statistics helpers
+     */
+    void SetUpdateAddressAndIdentifierCallback(
+        LorawanMacEndDevice::UpdateAddressAndIdentifierCallback cb);
+
+    /**
      * Set address of the GW (or its MAC) serving this UT.
      *
      * \param gwAddress Address of the GW.
@@ -394,6 +418,13 @@ class LorawanMacEndDevice : public LorawanMac
 
     Ptr<SatLoraPhyRx> GetPhyRx();
 
+    /**
+     * Method handling beam handover
+     * \param satId New satellite id
+     * \param beamId New satellite beam id
+     */
+    void ChangeBeam(uint32_t satId, uint32_t beamId);
+
   protected:
     /**
      * Structure representing the parameters that will be used in the
@@ -406,6 +437,11 @@ class LorawanMacEndDevice : public LorawanMac
         bool waitingAck = false;
         uint8_t retxLeft;
     };
+
+    /**
+     * Node containing this MAC
+     */
+    Ptr<Node> m_node;
 
     /**
      * Enable Data Rate adaptation during the retransmission procedure.
@@ -441,6 +477,11 @@ class LorawanMacEndDevice : public LorawanMac
      * The address of this device.
      */
     LoraDeviceAddress m_address;
+
+    /**
+     * Check for UT handovers and perform it if necessary
+     */
+    void CheckHandovers();
 
     /**
      * Find the minimum waiting time before the next possible transmission based
@@ -587,6 +628,16 @@ class LorawanMacEndDevice : public LorawanMac
     LorawanMacHeader::MType m_mType;
 
     uint16_t m_currentFCnt;
+
+    /**
+     * The physical layer handover callback
+     */
+    LorawanMacEndDevice::HandoverCallback m_handoverCallback;
+
+    /**
+     * Callback to update addresses in statistics helpers
+     */
+    LorawanMacEndDevice::UpdateAddressAndIdentifierCallback m_updateAddressAndIdentifierCallback;
 };
 
 } /* namespace ns3 */

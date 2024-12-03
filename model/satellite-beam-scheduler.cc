@@ -631,6 +631,11 @@ SatBeamScheduler::Schedule()
     uint32_t requestedKbpsSum(0);
     uint32_t offeredKbpsSum(0);
 
+    if (m_useLora)
+    {
+        return;
+    }
+
     // check that there is UTs to schedule
     if (m_utInfos.size() > 0 && !m_useLora)
     {
