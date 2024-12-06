@@ -133,10 +133,8 @@ SatGwMac::SatGwMac(Ptr<Node> node,
                    uint32_t satId,
                    uint32_t beamId,
                    uint32_t feederSatId,
-                   uint32_t feederBeamId,
-                   SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                   SatEnums::RegenerationMode_t returnLinkRegenerationMode)
-    : SatMac(satId, beamId, forwardLinkRegenerationMode, returnLinkRegenerationMode),
+                   uint32_t feederBeamId)
+    : SatMac(satId, beamId),
       m_node(node),
       m_feederSatId(feederSatId),
       m_feederBeamId(feederBeamId),

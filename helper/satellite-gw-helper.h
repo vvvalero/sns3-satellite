@@ -154,8 +154,6 @@ class SatGwHelper : public Object
      * \param fCh forward channel
      * \param rCh return channel
      * \param ncc NCC (Network Control Center)
-     * \param forwardLinkRegenerationMode The regeneration mode on forward link
-     * \param returnLinkRegenerationMode The regeneration mode on return link
      *
      * This method creates a ns3::SatChannel with the
      * attributes configured by SatGwHelper::SetChannelAttribute,
@@ -174,9 +172,7 @@ class SatGwHelper : public Object
                                Ptr<SatChannel> rCh,
                                SatPhy::ChannelPairGetterCallback cbChannel,
                                Ptr<SatNcc> ncc,
-                               Ptr<SatLowerLayerServiceConf> llsConf,
-                               SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                               SatEnums::RegenerationMode_t returnLinkRegenerationMode);
+                               Ptr<SatLowerLayerServiceConf> llsConf);
 
     /**
      * \param n node
@@ -188,8 +184,6 @@ class SatGwHelper : public Object
      * \param fCh forward channel
      * \param rCh return channel
      * \param ncc NCC (Network Control Center)
-     * \param forwardLinkRegenerationMode The regeneration mode on forward link
-     * \param returnLinkRegenerationMode The regeneration mode on return link
      *
      * Saves you from having to construct a temporary NodeContainer.
      * This method is implemented in child classes.
@@ -204,9 +198,7 @@ class SatGwHelper : public Object
                                    Ptr<SatChannel> rCh,
                                    SatPhy::ChannelPairGetterCallback cbChannel,
                                    Ptr<SatNcc> ncc,
-                                   Ptr<SatLowerLayerServiceConf> llsConf,
-                                   SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                                   SatEnums::RegenerationMode_t returnLinkRegenerationMode) = 0;
+                                   Ptr<SatLowerLayerServiceConf> llsConf) = 0;
 
     /**
      * Enables creation traces to be written in given file

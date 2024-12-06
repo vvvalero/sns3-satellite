@@ -84,8 +84,6 @@ class SatUtHelperDvb : public SatUtHelper
      * \param gwNd satellite netdevice of the GW
      * \param ncc NCC (Network Control Center)
      * \param satUserAddress MAC address of satellite user link
-     * \param forwardLinkRegenerationMode The regeneration mode on forward link
-     * \param returnLinkRegenerationMode The regeneration mode on return link
      * \return Net device installed to node
      *
      * This method creates a ns3::SatChannel with the
@@ -104,9 +102,7 @@ class SatUtHelperDvb : public SatUtHelper
                                    Ptr<SatNcc> ncc,
                                    Address satUserAddress,
                                    SatPhy::ChannelPairGetterCallback cbChannel,
-                                   SatMac::RoutingUpdateCallback cbRouting,
-                                   SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                                   SatEnums::RegenerationMode_t returnLinkRegenerationMode);
+                                   SatMac::RoutingUpdateCallback cbRouting);
 };
 
 } // namespace ns3

@@ -25,6 +25,7 @@
 #include "ns3/log.h"
 #include "ns3/satellite-const-variables.h"
 #include "ns3/satellite-env-variables.h"
+#include "ns3/satellite-topology.h"
 #include "ns3/satellite-wave-form-conf.h"
 #include "ns3/simulator.h"
 #include "ns3/singleton.h"
@@ -232,6 +233,9 @@ SatConf::Initialize(std::string rtnConf,
 {
     NS_LOG_FUNCTION(this << rtnConf << fwdConf << gwPos << satPos << utPos << wfConf
                          << isConstellation);
+
+    Singleton<SatTopology>::Get()->SetForwardLinkRegenerationMode(m_forwardLinkRegenerationMode);
+    Singleton<SatTopology>::Get()->SetReturnLinkRegenerationMode(m_returnLinkRegenerationMode);
 
     m_isConstellation = isConstellation;
 
@@ -697,22 +701,6 @@ SatConf::GetFwdLinkCarrierCount() const
     NS_LOG_FUNCTION(this);
 
     return m_forwardLinkCarrierConf.size();
-}
-
-SatEnums::RegenerationMode_t
-SatConf::GetForwardLinkRegenerationMode() const
-{
-    NS_LOG_FUNCTION(this);
-
-    return m_forwardLinkRegenerationMode;
-}
-
-SatEnums::RegenerationMode_t
-SatConf::GetReturnLinkRegenerationMode() const
-{
-    NS_LOG_FUNCTION(this);
-
-    return m_returnLinkRegenerationMode;
 }
 
 double

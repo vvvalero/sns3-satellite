@@ -186,8 +186,6 @@ class SatOrbiterHelper : public Object
      * \param satId ID of satellite associated to this channel
      * \param gwId ID of GW associated to this channel
      * \param userBeamId Id of the user beam
-     * \param forwardLinkRegenerationMode Regeneration mode on forward
-     * \param returnLinkRegenerationMode Regeneration mode on return
      */
     void AttachChannels(Ptr<NetDevice> dev,
                         Ptr<SatChannel> ff,
@@ -199,9 +197,7 @@ class SatOrbiterHelper : public Object
                         Ptr<SatNcc> ncc,
                         uint32_t satId,
                         uint32_t gwId,
-                        uint32_t userBeamId,
-                        SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                        SatEnums::RegenerationMode_t returnLinkRegenerationMode);
+                        uint32_t userBeamId);
 
     /*
      * Attach the SatChannels for the beam to NetDevice
@@ -213,8 +209,6 @@ class SatOrbiterHelper : public Object
      * \param satId ID of satellite associated to this channel
      * \param gwId ID of GW associated to this channel
      * \param userBeamId Id of the user beam
-     * \param forwardLinkRegenerationMode Regeneration mode on forward
-     * \param returnLinkRegenerationMode Regeneration mode on return
      */
     void AttachChannelsFeeder(Ptr<SatOrbiterNetDevice> dev,
                               Ptr<SatChannel> ff,
@@ -223,9 +217,7 @@ class SatOrbiterHelper : public Object
                               Ptr<SatNcc> ncc,
                               uint32_t satId,
                               uint32_t gwId,
-                              uint32_t userBeamId,
-                              SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                              SatEnums::RegenerationMode_t returnLinkRegenerationMode);
+                              uint32_t userBeamId);
 
     /*
      * Attach the SatChannels for the beam to NetDevice
@@ -236,8 +228,6 @@ class SatOrbiterHelper : public Object
      * \param ncc NCC (Network Control Center)
      * \param satId ID of satellite associated to this channel
      * \param userBeamId Id of the beam
-     * \param forwardLinkRegenerationMode Regeneration mode on forward
-     * \param returnLinkRegenerationMode Regeneration mode on return
      */
     virtual void AttachChannelsUser(Ptr<SatOrbiterNetDevice> dev,
                                     Ptr<SatChannel> uf,
@@ -245,9 +235,7 @@ class SatOrbiterHelper : public Object
                                     Ptr<SatAntennaGainPattern> userAgp,
                                     Ptr<SatNcc> ncc,
                                     uint32_t satId,
-                                    uint32_t userBeamId,
-                                    SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                                    SatEnums::RegenerationMode_t returnLinkRegenerationMode) = 0;
+                                    uint32_t userBeamId) = 0;
 
     /**
      * Enables creation traces to be written in given file

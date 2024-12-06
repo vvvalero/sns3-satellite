@@ -313,7 +313,9 @@ SatTopology::GetGwAddressInUt(uint32_t utId)
     Ptr<SatOrbiterFeederMac> mac = GetOrbiterFeederMac(gwOrbiter, utBeamId);
     uint32_t usedBeamId = GetOrbiterFeederMacUsed(mac)->GetBeamId();
 
-    Ptr<SatGwMac> gwMac = GetGwMac(gwNode, gwSatId, usedBeamId);
+    Ptr<SatGwMac> gwMac = GetDvbGwMac(gwNode, gwSatId, usedBeamId);
+
+    NS_ASSERT_MSG(gwMac != nullptr, "Got a null SatGwMac");
 
     return Mac48Address::ConvertFrom(gwMac->GetAddress());
 }
@@ -537,15 +539,15 @@ SatTopology::GetNodeFromId(uint32_t nodeId) const
 }
 
 void
-SatTopology::AddGwLayers(Ptr<Node> gw,
-                         uint32_t gwSatId,
-                         uint32_t gwBeamId,
-                         uint32_t utSatId,
-                         uint32_t utBeamId,
-                         Ptr<SatNetDevice> netDevice,
-                         Ptr<SatGwLlc> llc,
-                         Ptr<SatGwMac> mac,
-                         Ptr<SatGwPhy> phy)
+SatTopology::AddGwLayersDvb(Ptr<Node> gw,
+                            uint32_t gwSatId,
+                            uint32_t gwBeamId,
+                            uint32_t utSatId,
+                            uint32_t utBeamId,
+                            Ptr<SatNetDevice> netDevice,
+                            Ptr<SatGwLlc> llc,
+                            Ptr<SatGwMac> mac,
+                            Ptr<SatGwPhy> phy)
 {
     NS_LOG_FUNCTION(this << gw << gwSatId << gwBeamId << utSatId << utBeamId << netDevice << llc
                          << mac << phy);
@@ -566,7 +568,8 @@ SatTopology::AddGwLayers(Ptr<Node> gw,
                       "Net device already stored for this GW + UT satellite and beam");
         NS_ASSERT_MSG(layers.m_llc.find(std::make_pair(utSatId, utBeamId)) == layers.m_llc.end(),
                       "LLC already stored for this GW + UT satellite and beam");
-        NS_ASSERT_MSG(layers.m_mac.find(std::make_pair(utSatId, utBeamId)) == layers.m_mac.end(),
+        NS_ASSERT_MSG(layers.m_dvbMac.find(std::make_pair(utSatId, utBeamId)) ==
+                          layers.m_dvbMac.end(),
                       "MAC already stored for this GW + UT satellite and beam");
         NS_ASSERT_MSG(layers.m_phy.find(std::make_pair(utSatId, utBeamId)) == layers.m_phy.end(),
                       "Physical layer already stored for this GW + UT satellite and beam");
@@ -579,7 +582,53 @@ SatTopology::AddGwLayers(Ptr<Node> gw,
 
     layers.m_netDevice.insert(std::make_pair(std::make_pair(utSatId, utBeamId), netDevice));
     layers.m_llc.insert(std::make_pair(std::make_pair(utSatId, utBeamId), llc));
-    layers.m_mac.insert(std::make_pair(std::make_pair(utSatId, utBeamId), mac));
+    layers.m_dvbMac.insert(std::make_pair(std::make_pair(utSatId, utBeamId), mac));
+    layers.m_phy.insert(std::make_pair(std::make_pair(utSatId, utBeamId), phy));
+
+    m_gwLayers[gw] = layers;
+}
+
+void
+SatTopology::AddGwLayersLora(Ptr<Node> gw,
+                             uint32_t gwSatId,
+                             uint32_t gwBeamId,
+                             uint32_t utSatId,
+                             uint32_t utBeamId,
+                             Ptr<SatNetDevice> netDevice,
+                             Ptr<LorawanGroundMacGateway> mac,
+                             Ptr<SatGwPhy> phy)
+{
+    NS_LOG_FUNCTION(this << gw << gwSatId << gwBeamId << utSatId << utBeamId << netDevice << mac
+                         << phy);
+
+    std::map<Ptr<Node>, GwLayers_s>::iterator it = m_gwLayers.find(gw);
+    GwLayers_s layers;
+    if (it != m_gwLayers.end())
+    {
+        layers = it->second;
+        NS_ASSERT_MSG(
+            layers.m_satId == gwSatId,
+            "Gw has already a different GW satellite ID that the one in argument of this method");
+        NS_ASSERT_MSG(
+            layers.m_beamId == gwBeamId,
+            "Gw has already a different GW beam ID that the one in argument of this method");
+        NS_ASSERT_MSG(layers.m_netDevice.find(std::make_pair(utSatId, utBeamId)) ==
+                          layers.m_netDevice.end(),
+                      "Net device already stored for this GW + UT satellite and beam");
+        NS_ASSERT_MSG(layers.m_loraMac.find(std::make_pair(utSatId, utBeamId)) ==
+                          layers.m_loraMac.end(),
+                      "MAC already stored for this GW + UT satellite and beam");
+        NS_ASSERT_MSG(layers.m_phy.find(std::make_pair(utSatId, utBeamId)) == layers.m_phy.end(),
+                      "Physical layer already stored for this GW + UT satellite and beam");
+    }
+    else
+    {
+        layers.m_satId = gwSatId;
+        layers.m_beamId = gwBeamId;
+    }
+
+    layers.m_netDevice.insert(std::make_pair(std::make_pair(utSatId, utBeamId), netDevice));
+    layers.m_loraMac.insert(std::make_pair(std::make_pair(utSatId, utBeamId), mac));
     layers.m_phy.insert(std::make_pair(std::make_pair(utSatId, utBeamId), phy));
 
     m_gwLayers[gw] = layers;
@@ -650,7 +699,7 @@ SatTopology::GetGwLlc(Ptr<Node> gw, uint32_t utSatId, uint32_t utBeamId) const
 }
 
 Ptr<SatGwMac>
-SatTopology::GetGwMac(Ptr<Node> gw, uint32_t utSatId, uint32_t utBeamId) const
+SatTopology::GetDvbGwMac(Ptr<Node> gw, uint32_t utSatId, uint32_t utBeamId) const
 {
     NS_LOG_FUNCTION(this << gw << utSatId << utBeamId);
 
@@ -659,10 +708,27 @@ SatTopology::GetGwMac(Ptr<Node> gw, uint32_t utSatId, uint32_t utBeamId) const
                   "Layers do not exist for this GW and pair UT satellite+beam");
 
     GwLayers_s layers = it->second;
-    NS_ASSERT_MSG(layers.m_mac.find(std::make_pair(utSatId, utBeamId)) != layers.m_mac.end(),
+    NS_ASSERT_MSG(layers.m_dvbMac.find(std::make_pair(utSatId, utBeamId)) != layers.m_dvbMac.end(),
                   "MAC not stored for this GW + UT satellite and beam");
 
-    return layers.m_mac.at(std::make_pair(utSatId, utBeamId));
+    return layers.m_dvbMac.at(std::make_pair(utSatId, utBeamId));
+}
+
+Ptr<LorawanGroundMacGateway>
+SatTopology::GetLoraGwMac(Ptr<Node> gw, uint32_t utSatId, uint32_t utBeamId) const
+{
+    NS_LOG_FUNCTION(this << gw << utSatId << utBeamId);
+
+    std::map<Ptr<Node>, GwLayers_s>::const_iterator it = m_gwLayers.find(gw);
+    NS_ASSERT_MSG(it != m_gwLayers.end(),
+                  "Layers do not exist for this GW and pair UT satellite+beam");
+
+    GwLayers_s layers = it->second;
+    NS_ASSERT_MSG(layers.m_loraMac.find(std::make_pair(utSatId, utBeamId)) !=
+                      layers.m_loraMac.end(),
+                  "MAC not stored for this GW + UT satellite and beam");
+
+    return layers.m_loraMac.at(std::make_pair(utSatId, utBeamId));
 }
 
 Ptr<SatGwPhy>
@@ -682,14 +748,14 @@ SatTopology::GetGwPhy(Ptr<Node> gw, uint32_t utSatId, uint32_t utBeamId) const
 }
 
 void
-SatTopology::AddUtLayers(Ptr<Node> ut,
-                         uint32_t satId,
-                         uint32_t beamId,
-                         uint32_t groupId,
-                         Ptr<SatNetDevice> netDevice,
-                         Ptr<SatUtLlc> llc,
-                         Ptr<SatUtMac> mac,
-                         Ptr<SatUtPhy> phy)
+SatTopology::AddUtLayersDvb(Ptr<Node> ut,
+                            uint32_t satId,
+                            uint32_t beamId,
+                            uint32_t groupId,
+                            Ptr<SatNetDevice> netDevice,
+                            Ptr<SatUtLlc> llc,
+                            Ptr<SatUtMac> mac,
+                            Ptr<SatUtPhy> phy)
 {
     NS_LOG_FUNCTION(this << ut << satId << beamId << groupId << netDevice << llc << mac << phy);
 
@@ -701,7 +767,31 @@ SatTopology::AddUtLayers(Ptr<Node> ut,
     layers.m_groupId = groupId;
     layers.m_netDevice = netDevice;
     layers.m_llc = llc;
-    layers.m_mac = mac;
+    layers.m_dvbMac = mac;
+    layers.m_phy = phy;
+
+    m_utLayers.insert(std::make_pair(ut, layers));
+}
+
+void
+SatTopology::AddUtLayersLora(Ptr<Node> ut,
+                             uint32_t satId,
+                             uint32_t beamId,
+                             uint32_t groupId,
+                             Ptr<SatNetDevice> netDevice,
+                             Ptr<LorawanMacEndDevice> mac,
+                             Ptr<SatUtPhy> phy)
+{
+    NS_LOG_FUNCTION(this << ut << satId << beamId << groupId << netDevice << mac << phy);
+
+    NS_ASSERT_MSG(m_utLayers.find(ut) == m_utLayers.end(), "Layers already added to this UT node");
+
+    UtLayers_s layers;
+    layers.m_satId = satId;
+    layers.m_beamId = beamId;
+    layers.m_groupId = groupId;
+    layers.m_netDevice = netDevice;
+    layers.m_loraMac = mac;
     layers.m_phy = phy;
 
     m_utLayers.insert(std::make_pair(ut, layers));
@@ -779,13 +869,23 @@ SatTopology::GetUtLlc(Ptr<Node> ut) const
 }
 
 Ptr<SatUtMac>
-SatTopology::GetUtMac(Ptr<Node> ut) const
+SatTopology::GetDvbUtMac(Ptr<Node> ut) const
 {
     NS_LOG_FUNCTION(this << ut);
 
     NS_ASSERT_MSG(m_utLayers.find(ut) != m_utLayers.end(), "Layers do not exist for this UT");
 
-    return m_utLayers.at(ut).m_mac;
+    return m_utLayers.at(ut).m_dvbMac;
+}
+
+Ptr<LorawanMacEndDevice>
+SatTopology::GetLoraUtMac(Ptr<Node> ut) const
+{
+    NS_LOG_FUNCTION(this << ut);
+
+    NS_ASSERT_MSG(m_utLayers.find(ut) != m_utLayers.end(), "Layers do not exist for this UT");
+
+    return m_utLayers.at(ut).m_loraMac;
 }
 
 Ptr<SatUtPhy>
@@ -841,13 +941,13 @@ SatTopology::AddOrbiterFeederLayers(Ptr<Node> orbiter,
 }
 
 void
-SatTopology::AddOrbiterUserLayers(Ptr<Node> orbiter,
-                                  uint32_t satId,
-                                  uint32_t beamId,
-                                  Ptr<SatOrbiterNetDevice> netDevice,
-                                  Ptr<SatOrbiterUserLlc> llc,
-                                  Ptr<SatOrbiterUserMac> mac,
-                                  Ptr<SatOrbiterUserPhy> phy)
+SatTopology::AddOrbiterUserLayersDvb(Ptr<Node> orbiter,
+                                     uint32_t satId,
+                                     uint32_t beamId,
+                                     Ptr<SatOrbiterNetDevice> netDevice,
+                                     Ptr<SatOrbiterUserLlc> llc,
+                                     Ptr<SatOrbiterUserMac> mac,
+                                     Ptr<SatOrbiterUserPhy> phy)
 {
     NS_LOG_FUNCTION(this << orbiter << satId << beamId << netDevice << llc << mac << phy);
 
@@ -864,7 +964,7 @@ SatTopology::AddOrbiterUserLayers(Ptr<Node> orbiter,
                       "argument of this method");
         NS_ASSERT_MSG(layers.m_userLlc.find(beamId) == layers.m_userLlc.end(),
                       "User LLC already stored for this pair orbiter/beam");
-        NS_ASSERT_MSG(layers.m_userMac.find(beamId) == layers.m_userMac.end(),
+        NS_ASSERT_MSG(layers.m_dvbUserMac.find(beamId) == layers.m_dvbUserMac.end(),
                       "User MAC already stored for this pair orbiter/beam");
         NS_ASSERT_MSG(layers.m_userPhy.find(beamId) == layers.m_userPhy.end(),
                       "User physical layer already stored for this pair orbiter/beam");
@@ -876,7 +976,45 @@ SatTopology::AddOrbiterUserLayers(Ptr<Node> orbiter,
     }
 
     layers.m_userLlc.insert(std::make_pair(beamId, llc));
-    layers.m_userMac.insert(std::make_pair(beamId, mac));
+    layers.m_dvbUserMac.insert(std::make_pair(beamId, mac));
+    layers.m_userPhy.insert(std::make_pair(beamId, phy));
+
+    m_orbiterLayers[orbiter] = layers;
+}
+
+void
+SatTopology::AddOrbiterUserLayersLora(Ptr<Node> orbiter,
+                                      uint32_t satId,
+                                      uint32_t beamId,
+                                      Ptr<SatOrbiterNetDevice> netDevice,
+                                      Ptr<LorawanOrbiterMacGateway> mac,
+                                      Ptr<SatOrbiterUserPhy> phy)
+{
+    NS_LOG_FUNCTION(this << orbiter << satId << beamId << netDevice << mac << phy);
+
+    std::map<Ptr<Node>, OrbiterLayers_s>::iterator it = m_orbiterLayers.find(orbiter);
+    OrbiterLayers_s layers;
+    if (it != m_orbiterLayers.end())
+    {
+        layers = it->second;
+        NS_ASSERT_MSG(
+            layers.m_satId == satId,
+            "Orbiter has already a different satellite ID that the one in argument of this method");
+        NS_ASSERT_MSG(layers.m_netDevice == netDevice,
+                      "Orbiter has already a different SatOrbiterNetDevice that the one in "
+                      "argument of this method");
+        NS_ASSERT_MSG(layers.m_loraUserMac.find(beamId) == layers.m_loraUserMac.end(),
+                      "User MAC already stored for this pair orbiter/beam");
+        NS_ASSERT_MSG(layers.m_userPhy.find(beamId) == layers.m_userPhy.end(),
+                      "User physical layer already stored for this pair orbiter/beam");
+    }
+    else
+    {
+        layers.m_satId = satId;
+        layers.m_netDevice = netDevice;
+    }
+
+    layers.m_loraUserMac.insert(std::make_pair(beamId, mac));
     layers.m_userPhy.insert(std::make_pair(beamId, phy));
 
     m_orbiterLayers[orbiter] = layers;
@@ -951,7 +1089,7 @@ SatTopology::GetOrbiterFeederMac(Ptr<Node> orbiter, uint32_t utBeamId) const
 }
 
 Ptr<SatOrbiterUserMac>
-SatTopology::GetOrbiterUserMac(Ptr<Node> orbiter, uint32_t beamId) const
+SatTopology::GetDvbOrbiterUserMac(Ptr<Node> orbiter, uint32_t beamId) const
 {
     NS_LOG_FUNCTION(this << orbiter << beamId);
 
@@ -959,10 +1097,25 @@ SatTopology::GetOrbiterUserMac(Ptr<Node> orbiter, uint32_t beamId) const
     NS_ASSERT_MSG(it != m_orbiterLayers.end(), "Layers do not exist for this UT");
 
     OrbiterLayers_s layers = it->second;
-    NS_ASSERT_MSG(layers.m_userMac.find(beamId) != layers.m_userMac.end(),
+    NS_ASSERT_MSG(layers.m_dvbUserMac.find(beamId) != layers.m_dvbUserMac.end(),
                   "Feeder MAC not stored for this pair orbiter/beam");
 
-    return layers.m_userMac.at(beamId);
+    return layers.m_dvbUserMac.at(beamId);
+}
+
+Ptr<LorawanOrbiterMacGateway>
+SatTopology::GetLoraOrbiterUserMac(Ptr<Node> orbiter, uint32_t beamId) const
+{
+    NS_LOG_FUNCTION(this << orbiter << beamId);
+
+    std::map<Ptr<Node>, OrbiterLayers_s>::const_iterator it = m_orbiterLayers.find(orbiter);
+    NS_ASSERT_MSG(it != m_orbiterLayers.end(), "Layers do not exist for this UT");
+
+    OrbiterLayers_s layers = it->second;
+    NS_ASSERT_MSG(layers.m_loraUserMac.find(beamId) != layers.m_loraUserMac.end(),
+                  "Feeder MAC not stored for this pair orbiter/beam");
+
+    return layers.m_loraUserMac.at(beamId);
 }
 
 Ptr<SatOrbiterFeederPhy>
@@ -975,7 +1128,7 @@ SatTopology::GetOrbiterFeederPhy(Ptr<Node> orbiter, uint32_t utBeamId) const
 
     OrbiterLayers_s layers = it->second;
     NS_ASSERT_MSG(layers.m_feederPhy.find(utBeamId) != layers.m_feederPhy.end(),
-                  "Feeder MAC not stored for this pair orbiter/beam");
+                  "Feeder PHY not stored for this pair orbiter/beam");
 
     return layers.m_feederPhy.at(utBeamId);
 }
@@ -990,7 +1143,7 @@ SatTopology::GetOrbiterUserPhy(Ptr<Node> orbiter, uint32_t beamId) const
 
     OrbiterLayers_s layers = it->second;
     NS_ASSERT_MSG(layers.m_userPhy.find(beamId) != layers.m_userPhy.end(),
-                  "Feeder MAC not stored for this pair orbiter/beam");
+                  "Feeder PHY not stored for this pair orbiter/beam");
 
     return layers.m_userPhy.at(beamId);
 }
@@ -1031,10 +1184,22 @@ SatTopology::PrintTopology(std::ostream& os) const
             os << "        " << *it << std::endl;
         }
 
-        for (std::pair<uint32_t, Ptr<SatOrbiterUserMac>> userMac : layers.m_userMac)
+        if (m_standard == SatEnums::LORA &&
+            m_forwardLinkRegenerationMode == SatEnums::REGENERATION_NETWORK)
         {
-            os << "        User at " << userMac.second->GetAddress() << ", beam " << userMac.first
-               << std::endl;
+            for (std::pair<uint32_t, Ptr<LorawanOrbiterMacGateway>> userMac : layers.m_loraUserMac)
+            {
+                os << "        User at " << userMac.second->GetAddress() << ", beam "
+                   << userMac.first << std::endl;
+            }
+        }
+        else
+        {
+            for (std::pair<uint32_t, Ptr<SatOrbiterUserMac>> userMac : layers.m_dvbUserMac)
+            {
+                os << "        User at " << userMac.second->GetAddress() << ", beam "
+                   << userMac.first << std::endl;
+            }
         }
 
         os << "      User connected to" << std::endl;
@@ -1068,18 +1233,26 @@ SatTopology::PrintTopology(std::ostream& os) const
         os << ", at " << GeoCoordinate(gwNode->GetObject<SatMobilityModel>()->GetPosition())
            << std::endl;
         os << "  Devices " << std::endl;
-        for (std::pair<std::pair<uint32_t, uint32_t>, Ptr<SatGwMac>> mac : layers.m_mac)
+
+        if (m_standard == SatEnums::LORA && m_forwardLinkRegenerationMode == SatEnums::TRANSPARENT)
         {
-            uint32_t satId = mac.first.first;
-            uint32_t beamId = mac.first.second;
-            if (mac.second != nullptr)
+            for (std::pair<std::pair<uint32_t, uint32_t>, Ptr<LorawanGroundMacGateway>> mac :
+                 layers.m_loraMac)
             {
+                uint32_t satId = mac.first.first;
+                uint32_t beamId = mac.first.second;
                 os << "    " << mac.second->GetAddress() << ", sat: " << satId
                    << ", beam: " << beamId << std::endl;
             }
-            else
+        }
+        else
+        {
+            for (std::pair<std::pair<uint32_t, uint32_t>, Ptr<SatGwMac>> mac : layers.m_dvbMac)
             {
-                os << "    LORA GW, sat: " << satId << ", beam: " << beamId << std::endl;
+                uint32_t satId = mac.first.first;
+                uint32_t beamId = mac.first.second;
+                os << "    " << mac.second->GetAddress() << ", sat: " << satId
+                   << ", beam: " << beamId << std::endl;
             }
         }
     }
@@ -1098,16 +1271,31 @@ SatTopology::PrintTopology(std::ostream& os) const
         uint32_t utSatId = utLayers.m_satId;
         uint32_t utBeamId = utLayers.m_beamId;
         uint32_t gwSatId = gwLayers.m_satId;
-        if (utLayers.m_mac != nullptr)
+
+        if (m_standard == SatEnums::DVB)
         {
-            os << "    " << utLayers.m_mac->GetAddress() << ", sat: " << utSatId
+            os << "    " << utLayers.m_dvbMac->GetAddress() << ", sat: " << utSatId
                << ", beam: " << utBeamId;
             os << ". Linked to GW "
-               << gwLayers.m_mac.at(std::make_pair(gwSatId, utBeamId))->GetAddress() << std::endl;
+               << gwLayers.m_dvbMac.at(std::make_pair(gwSatId, utBeamId))->GetAddress()
+               << std::endl;
         }
         else
         {
-            os << "    LORA DEVICE, sat: " << utSatId << ", beam: " << utBeamId << std::endl;
+            os << "    " << utLayers.m_loraMac->GetAddress() << ", sat: " << utSatId
+               << ", beam: " << utBeamId;
+            if (m_forwardLinkRegenerationMode == SatEnums::TRANSPARENT)
+            {
+                os << ". Linked to GW "
+                   << gwLayers.m_loraMac.at(std::make_pair(gwSatId, utBeamId))->GetAddress()
+                   << std::endl;
+            }
+            else
+            {
+                os << ". Linked to GW "
+                   << gwLayers.m_dvbMac.at(std::make_pair(gwSatId, utBeamId))->GetAddress()
+                   << std::endl;
+            }
         }
     }
 

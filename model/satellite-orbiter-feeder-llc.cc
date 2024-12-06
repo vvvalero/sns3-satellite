@@ -45,14 +45,6 @@ SatOrbiterFeederLlc::SatOrbiterFeederLlc()
     : SatOrbiterLlc()
 {
     NS_LOG_FUNCTION(this);
-    NS_ASSERT(false); // this version of the constructor should not been used
-}
-
-SatOrbiterFeederLlc::SatOrbiterFeederLlc(SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                                         SatEnums::RegenerationMode_t returnLinkRegenerationMode)
-    : SatOrbiterLlc(forwardLinkRegenerationMode, returnLinkRegenerationMode)
-{
-    NS_LOG_FUNCTION(this);
 }
 
 SatOrbiterFeederLlc::~SatOrbiterFeederLlc()

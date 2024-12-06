@@ -80,16 +80,12 @@ class SatGwMac : public SatMac
      * \param beamId ID of beam for UT
      * \param satId ID of sat for GW
      * \param beamId ID of beam for GW
-     * \param forwardLinkRegenerationMode Forward link regeneration mode
-     * \param returnLinkRegenerationMode Return link regeneration mode
      */
     SatGwMac(Ptr<Node> node,
              uint32_t satId,
              uint32_t beamId,
              uint32_t feederSatId,
-             uint32_t feederBeamId,
-             SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-             SatEnums::RegenerationMode_t returnLinkRegenerationMode);
+             uint32_t feederBeamId);
 
     /**
      * Destroy a SatGwMac

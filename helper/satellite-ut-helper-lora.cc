@@ -105,12 +105,9 @@ SatUtHelperLora::Install(Ptr<Node> n,
                          Ptr<SatNcc> ncc,
                          Address satUserAddress,
                          SatPhy::ChannelPairGetterCallback cbChannel,
-                         SatMac::RoutingUpdateCallback cbRouting,
-                         SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                         SatEnums::RegenerationMode_t returnLinkRegenerationMode)
+                         SatMac::RoutingUpdateCallback cbRouting)
 {
-    NS_LOG_FUNCTION(this << n << satId << beamId << fCh << rCh << gwNd << ncc << satUserAddress
-                         << forwardLinkRegenerationMode << returnLinkRegenerationMode);
+    NS_LOG_FUNCTION(this << n << satId << beamId << fCh << rCh << gwNd << ncc << satUserAddress);
 
     NetDeviceContainer container;
 
@@ -151,7 +148,8 @@ SatUtHelperLora::Install(Ptr<Node> n,
     parameters.m_daIfModel = m_daInterferenceModel;
     parameters.m_raIfModel = m_raSettings.m_raInterferenceModel;
     parameters.m_raIfEliminateModel = m_raSettings.m_raInterferenceEliminationModel;
-    parameters.m_linkRegenerationMode = forwardLinkRegenerationMode;
+    parameters.m_linkRegenerationMode =
+        Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode();
     parameters.m_bwConverter = m_carrierBandwidthConverter;
     parameters.m_carrierCount = m_fwdLinkCarrierCount;
     parameters.m_cec = cec;
@@ -162,8 +160,7 @@ SatUtHelperLora::Install(Ptr<Node> n,
         params,
         m_linkResults,
         parameters,
-        m_superframeSeq->GetSuperframeConf(SatConstVariables::SUPERFRAME_SEQUENCE),
-        forwardLinkRegenerationMode);
+        m_superframeSeq->GetSuperframeConf(SatConstVariables::SUPERFRAME_SEQUENCE));
     phy->SetChannelPairGetterCallback(cbChannel);
 
     // Set fading
@@ -213,7 +210,8 @@ SatUtHelperLora::Install(Ptr<Node> n,
 
     mac->SetHandoverCallback(MakeCallback(&SatUtPhy::PerformHandover, phy));
 
-    if (forwardLinkRegenerationMode == SatEnums::REGENERATION_NETWORK)
+    if (Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode() ==
+        SatEnums::REGENERATION_NETWORK)
     {
         mac->SetSatAddress(Mac48Address::ConvertFrom(satUserAddress));
         mac->SetRegenerative(true);
@@ -243,7 +241,7 @@ SatUtHelperLora::Install(Ptr<Node> n,
         mac->SetBeamSchedulerCallback(MakeCallback(&SatNcc::GetBeamScheduler, ncc));
     }
 
-    Singleton<SatTopology>::Get()->AddUtLayers(n, satId, beamId, 0, dev, nullptr, nullptr, phy);
+    Singleton<SatTopology>::Get()->AddUtLayersLora(n, satId, beamId, 0, dev, mac, phy);
 
     return dev;
 }

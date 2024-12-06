@@ -125,12 +125,9 @@ SatOrbiterHelperDvb::AttachChannelsUser(Ptr<SatOrbiterNetDevice> dev,
                                         Ptr<SatAntennaGainPattern> userAgp,
                                         Ptr<SatNcc> ncc,
                                         uint32_t satId,
-                                        uint32_t userBeamId,
-                                        SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                                        SatEnums::RegenerationMode_t returnLinkRegenerationMode)
+                                        uint32_t userBeamId)
 {
-    NS_LOG_FUNCTION(this << dev << uf << ur << userAgp << satId << userBeamId
-                         << forwardLinkRegenerationMode << returnLinkRegenerationMode);
+    NS_LOG_FUNCTION(this << dev << uf << ur << userAgp << satId << userBeamId);
 
     SatPhy::CreateParam_t params;
     params.m_satId = satId;
@@ -151,7 +148,8 @@ SatOrbiterHelperDvb::AttachChannelsUser(Ptr<SatOrbiterNetDevice> dev,
     parametersUser.m_daIfModel = m_daRtnLinkInterferenceModel;
     parametersUser.m_raIfModel = m_raSettings.m_raRtnInterferenceModel;
     parametersUser.m_raIfEliminateModel = m_raSettings.m_raInterferenceEliminationModel;
-    parametersUser.m_linkRegenerationMode = returnLinkRegenerationMode;
+    parametersUser.m_linkRegenerationMode =
+        Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode();
     parametersUser.m_bwConverter = m_carrierBandwidthConverter;
     parametersUser.m_carrierCount = m_rtnLinkCarrierCount;
     parametersUser.m_cec = cec;
@@ -165,9 +163,7 @@ SatOrbiterHelperDvb::AttachChannelsUser(Ptr<SatOrbiterNetDevice> dev,
         params,
         m_rtnLinkResults,
         parametersUser,
-        m_superframeSeq->GetSuperframeConf(SatConstVariables::SUPERFRAME_SEQUENCE),
-        forwardLinkRegenerationMode,
-        returnLinkRegenerationMode);
+        m_superframeSeq->GetSuperframeConf(SatConstVariables::SUPERFRAME_SEQUENCE));
 
     // Note, that currently we have only one set of antenna patterns,
     // which are utilized in both in user link and feeder link, and
@@ -182,15 +178,13 @@ SatOrbiterHelperDvb::AttachChannelsUser(Ptr<SatOrbiterNetDevice> dev,
     Ptr<SatOrbiterUserMac> uMac;
     Ptr<SatOrbiterUserLlc> uLlc;
 
-    uMac = CreateObject<SatOrbiterUserMac>(satId,
-                                           userBeamId,
-                                           forwardLinkRegenerationMode,
-                                           returnLinkRegenerationMode);
+    uMac = CreateObject<SatOrbiterUserMac>(satId, userBeamId);
 
     Mac48Address userAddress;
 
     // Create layers needed depending on max regeneration mode
-    switch (std::max(forwardLinkRegenerationMode, returnLinkRegenerationMode))
+    switch (std::max(Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode(),
+                     Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode()))
     {
     case SatEnums::TRANSPARENT:
     case SatEnums::REGENERATION_PHY: {
@@ -206,8 +200,7 @@ SatOrbiterHelperDvb::AttachChannelsUser(Ptr<SatOrbiterNetDevice> dev,
     }
     case SatEnums::REGENERATION_LINK: {
         // Create LLC layer
-        uLlc = CreateObject<SatOrbiterUserLlc>(forwardLinkRegenerationMode,
-                                               returnLinkRegenerationMode);
+        uLlc = CreateObject<SatOrbiterUserLlc>();
 
         dev->AddUserMac(uMac, userBeamId);
 
@@ -228,8 +221,7 @@ SatOrbiterHelperDvb::AttachChannelsUser(Ptr<SatOrbiterNetDevice> dev,
     }
     case SatEnums::REGENERATION_NETWORK: {
         // Create LLC layer
-        uLlc = CreateObject<SatOrbiterUserLlc>(forwardLinkRegenerationMode,
-                                               returnLinkRegenerationMode);
+        uLlc = CreateObject<SatOrbiterUserLlc>();
 
         dev->AddUserMac(uMac, userBeamId);
 
@@ -253,7 +245,7 @@ SatOrbiterHelperDvb::AttachChannelsUser(Ptr<SatOrbiterNetDevice> dev,
     }
 
     // Connect callbacks on forward link
-    switch (forwardLinkRegenerationMode)
+    switch (Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode())
     {
     case SatEnums::TRANSPARENT:
     case SatEnums::REGENERATION_PHY: {
@@ -285,7 +277,7 @@ SatOrbiterHelperDvb::AttachChannelsUser(Ptr<SatOrbiterNetDevice> dev,
     }
 
     // Connect callbacks on return link
-    switch (returnLinkRegenerationMode)
+    switch (Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode())
     {
     case SatEnums::TRANSPARENT:
     case SatEnums::REGENERATION_PHY: {
@@ -319,7 +311,7 @@ SatOrbiterHelperDvb::AttachChannelsUser(Ptr<SatOrbiterNetDevice> dev,
         NS_FATAL_ERROR("Return link regeneration mode unknown");
     }
 
-    if (returnLinkRegenerationMode != SatEnums::TRANSPARENT)
+    if (Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() != SatEnums::TRANSPARENT)
     {
         uPhy->BeginEndScheduling();
         uPhy->SetSendControlMsgToFeederCallback(
@@ -327,7 +319,7 @@ SatOrbiterHelperDvb::AttachChannelsUser(Ptr<SatOrbiterNetDevice> dev,
     }
 
     Singleton<SatTopology>::Get()
-        ->AddOrbiterUserLayers(dev->GetNode(), satId, userBeamId, dev, uLlc, uMac, uPhy);
+        ->AddOrbiterUserLayersDvb(dev->GetNode(), satId, userBeamId, dev, uLlc, uMac, uPhy);
 }
 
 } // namespace ns3

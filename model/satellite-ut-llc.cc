@@ -65,15 +65,7 @@ SatUtLlc::GetTypeId(void)
 }
 
 SatUtLlc::SatUtLlc()
-    : m_requestManager()
-{
-    NS_LOG_FUNCTION(this);
-    NS_ASSERT(false); // this version of the constructor should not been used
-}
-
-SatUtLlc::SatUtLlc(SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                   SatEnums::RegenerationMode_t returnLinkRegenerationMode)
-    : SatLlc(forwardLinkRegenerationMode, returnLinkRegenerationMode),
+    : SatLlc(),
       m_requestManager()
 {
     NS_LOG_FUNCTION(this);

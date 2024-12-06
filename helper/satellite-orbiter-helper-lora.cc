@@ -128,27 +128,28 @@ SatOrbiterHelperLora::AttachChannelsUser(Ptr<SatOrbiterNetDevice> dev,
                                          Ptr<SatAntennaGainPattern> userAgp,
                                          Ptr<SatNcc> ncc,
                                          uint32_t satId,
-                                         uint32_t userBeamId,
-                                         SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                                         SatEnums::RegenerationMode_t returnLinkRegenerationMode)
+                                         uint32_t userBeamId)
 {
-    NS_LOG_FUNCTION(this << dev << uf << ur << userAgp << satId << userBeamId
-                         << forwardLinkRegenerationMode << returnLinkRegenerationMode);
+    NS_LOG_FUNCTION(this << dev << uf << ur << userAgp << satId << userBeamId);
 
-    NS_ASSERT_MSG(forwardLinkRegenerationMode == forwardLinkRegenerationMode,
-                  "Regenration level must be the same on forward and return in Lora configuration");
     NS_ASSERT_MSG(
-        forwardLinkRegenerationMode == SatEnums::TRANSPARENT ||
-            returnLinkRegenerationMode == SatEnums::REGENERATION_NETWORK,
+        Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode() ==
+            Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode(),
+        "Regeneration level must be the same on forward and return in Lora configuration");
+    NS_ASSERT_MSG(
+        Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode() == SatEnums::TRANSPARENT ||
+            Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode() ==
+                SatEnums::REGENERATION_NETWORK,
         "Satellite can only be transparent or with network regenration in Lora configuration");
 
     SatPhy::CreateParam_t params;
     params.m_satId = satId;
     params.m_beamId = userBeamId;
     params.m_device = dev;
-    params.m_standard = forwardLinkRegenerationMode == SatEnums::TRANSPARENT
-                            ? SatEnums::DVB_ORBITER
-                            : SatEnums::LORA_ORBITER;
+    params.m_standard =
+        Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode() == SatEnums::TRANSPARENT
+            ? SatEnums::DVB_ORBITER
+            : SatEnums::LORA_ORBITER;
 
     /**
      * Simple channel estimation, which does not do actually anything
@@ -163,7 +164,8 @@ SatOrbiterHelperLora::AttachChannelsUser(Ptr<SatOrbiterNetDevice> dev,
     parametersUser.m_daIfModel = m_daRtnLinkInterferenceModel;
     parametersUser.m_raIfModel = m_raSettings.m_raRtnInterferenceModel;
     parametersUser.m_raIfEliminateModel = m_raSettings.m_raInterferenceEliminationModel;
-    parametersUser.m_linkRegenerationMode = returnLinkRegenerationMode;
+    parametersUser.m_linkRegenerationMode =
+        Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode();
     parametersUser.m_bwConverter = m_carrierBandwidthConverter;
     parametersUser.m_carrierCount = m_rtnLinkCarrierCount;
     parametersUser.m_cec = cec;
@@ -177,9 +179,7 @@ SatOrbiterHelperLora::AttachChannelsUser(Ptr<SatOrbiterNetDevice> dev,
         params,
         m_rtnLinkResults,
         parametersUser,
-        m_superframeSeq->GetSuperframeConf(SatConstVariables::SUPERFRAME_SEQUENCE),
-        forwardLinkRegenerationMode,
-        returnLinkRegenerationMode);
+        m_superframeSeq->GetSuperframeConf(SatConstVariables::SUPERFRAME_SEQUENCE));
 
     // Note, that currently we have only one set of antenna patterns,
     // which are utilized in both in user link and feeder link, and
@@ -196,15 +196,11 @@ SatOrbiterHelperLora::AttachChannelsUser(Ptr<SatOrbiterNetDevice> dev,
     Mac48Address userAddress;
 
     // Connect callbacks on forward link
-    switch (forwardLinkRegenerationMode)
+    switch (Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode())
     {
     case SatEnums::TRANSPARENT: {
         // Create layers
-        Ptr<SatOrbiterUserMac> uTransparentMac =
-            CreateObject<SatOrbiterUserMac>(satId,
-                                            userBeamId,
-                                            forwardLinkRegenerationMode,
-                                            returnLinkRegenerationMode);
+        Ptr<SatOrbiterUserMac> uTransparentMac = CreateObject<SatOrbiterUserMac>(satId, userBeamId);
 
         Ptr<SatNodeInfo> niPhyUser =
             Create<SatNodeInfo>(SatEnums::NT_SAT,
@@ -220,13 +216,13 @@ SatOrbiterHelperLora::AttachChannelsUser(Ptr<SatOrbiterNetDevice> dev,
         uTransparentMac->SetReceiveNetDeviceCallback(
             MakeCallback(&SatOrbiterNetDevice::ReceiveUser, dev));
 
-        Singleton<SatTopology>::Get()->AddOrbiterUserLayers(dev->GetNode(),
-                                                            satId,
-                                                            userBeamId,
-                                                            dev,
-                                                            nullptr,
-                                                            uTransparentMac,
-                                                            uPhy);
+        Singleton<SatTopology>::Get()->AddOrbiterUserLayersDvb(dev->GetNode(),
+                                                               satId,
+                                                               userBeamId,
+                                                               dev,
+                                                               nullptr,
+                                                               uTransparentMac,
+                                                               uPhy);
         break;
     }
     case SatEnums::REGENERATION_NETWORK: {
@@ -257,13 +253,21 @@ SatOrbiterHelperLora::AttachChannelsUser(Ptr<SatOrbiterNetDevice> dev,
 
         uRegenerationMac->SetPhy(uPhy);
 
+        Singleton<SatTopology>::Get()->AddOrbiterUserLayersLora(
+            dev->GetNode(),
+            satId,
+            userBeamId,
+            dev,
+            DynamicCast<LorawanOrbiterMacGateway>(uRegenerationMac),
+            uPhy);
+
         break;
     }
     default:
         NS_FATAL_ERROR("Regeneration mode unknown");
     }
 
-    if (returnLinkRegenerationMode != SatEnums::TRANSPARENT)
+    if (Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() != SatEnums::TRANSPARENT)
     {
         uPhy->BeginEndScheduling();
         uPhy->SetSendControlMsgToFeederCallback(

@@ -42,14 +42,7 @@ SatOrbiterLlc::GetTypeId(void)
 }
 
 SatOrbiterLlc::SatOrbiterLlc()
-{
-    NS_LOG_FUNCTION(this);
-    NS_ASSERT(false); // this version of the constructor should not been used
-}
-
-SatOrbiterLlc::SatOrbiterLlc(SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                             SatEnums::RegenerationMode_t returnLinkRegenerationMode)
-    : SatLlc(forwardLinkRegenerationMode, returnLinkRegenerationMode)
+    : SatLlc()
 {
     NS_LOG_FUNCTION(this);
 }

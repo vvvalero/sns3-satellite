@@ -79,8 +79,6 @@ class SatGwHelperLora : public SatGwHelper
      * \param fCh forward channel
      * \param rCh return channel
      * \param ncc NCC (Network Control Center)
-     * \param forwardLinkRegenerationMode The regeneration mode on forward link
-     * \param returnLinkRegenerationMode The regeneration mode on return link
      *
      * This method creates a ns3::SatChannel with the
      * attributes configured by SatGwHelper::SetChannelAttribute,
@@ -99,9 +97,7 @@ class SatGwHelperLora : public SatGwHelper
                                    Ptr<SatChannel> rCh,
                                    SatPhy::ChannelPairGetterCallback cbChannel,
                                    Ptr<SatNcc> ncc,
-                                   Ptr<SatLowerLayerServiceConf> llsConf,
-                                   SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                                   SatEnums::RegenerationMode_t returnLinkRegenerationMode);
+                                   Ptr<SatLowerLayerServiceConf> llsConf);
 };
 
 } // namespace ns3

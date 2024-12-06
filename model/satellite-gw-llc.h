@@ -46,17 +46,9 @@ class SatGwLlc : public SatLlc
     static TypeId GetTypeId(void);
 
     /**
-     * Construct a SatGwLlc, should not be used
+     * Construct a SatGwLlc
      */
     SatGwLlc();
-
-    /**
-     * Construct a SatGwLlc
-     * \param forwardLinkRegenerationMode Forward link regeneration model
-     * \param returnLinkRegenerationMode Return link regeneration model
-     */
-    SatGwLlc(SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-             SatEnums::RegenerationMode_t returnLinkRegenerationMode);
 
     /**
      * Destroy a SatGwLlc

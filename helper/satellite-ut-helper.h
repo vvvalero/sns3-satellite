@@ -146,8 +146,6 @@ class SatUtHelper : public Object
      * \param gwNd satellite netdevice of the GW
      * \param ncc NCC (Network Control Center)
      * \param satUserAddress MAC address of satellite user link
-     * \param forwardLinkRegenerationMode The regeneration mode on forward link
-     * \param returnLinkRegenerationMode The regeneration mode on return link
      * \return Container of installed net devices
      *
      * This method creates a ns3::SatChannel with the
@@ -166,9 +164,7 @@ class SatUtHelper : public Object
                                Ptr<SatNcc> ncc,
                                Address satUserAddress,
                                SatPhy::ChannelPairGetterCallback cbChannel,
-                               SatMac::RoutingUpdateCallback cbRouting,
-                               SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                               SatEnums::RegenerationMode_t returnLinkRegenerationMode);
+                               SatMac::RoutingUpdateCallback cbRouting);
     /**
      * \param n node
      * \param satId  id of the satellite
@@ -178,8 +174,6 @@ class SatUtHelper : public Object
      * \param gwNd satellite netdevice of the GW
      * \param ncc NCC (Network Control Center)
      * \param satUserAddress MAC address of satellite user link
-     * \param forwardLinkRegenerationMode The regeneration mode on forward link
-     * \param returnLinkRegenerationMode The regeneration mode on return link
      * \return Net device installed to node
      *
      * Saves you from having to construct a temporary NodeContainer.
@@ -194,9 +188,7 @@ class SatUtHelper : public Object
                                    Ptr<SatNcc> ncc,
                                    Address satUserAddress,
                                    SatPhy::ChannelPairGetterCallback cbChannel,
-                                   SatMac::RoutingUpdateCallback cbRouting,
-                                   SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                                   SatEnums::RegenerationMode_t returnLinkRegenerationMode) = 0;
+                                   SatMac::RoutingUpdateCallback cbRouting) = 0;
 
     /**
      * Enables creation traces to be written in given file

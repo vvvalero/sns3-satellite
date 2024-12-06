@@ -103,8 +103,6 @@ class SatOrbiterHelperLora : public SatOrbiterHelper
      * \param ncc NCC (Network Control Center)
      * \param satId ID of satellite associated to this channel
      * \param userBeamId Id of the beam
-     * \param forwardLinkRegenerationMode Regeneration mode on forward
-     * \param returnLinkRegenerationMode Regeneration mode on return
      */
     virtual void AttachChannelsUser(Ptr<SatOrbiterNetDevice> dev,
                                     Ptr<SatChannel> uf,
@@ -112,9 +110,7 @@ class SatOrbiterHelperLora : public SatOrbiterHelper
                                     Ptr<SatAntennaGainPattern> userAgp,
                                     Ptr<SatNcc> ncc,
                                     uint32_t satId,
-                                    uint32_t userBeamId,
-                                    SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                                    SatEnums::RegenerationMode_t returnLinkRegenerationMode);
+                                    uint32_t userBeamId);
 };
 
 } // namespace ns3

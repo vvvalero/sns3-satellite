@@ -69,11 +69,8 @@ SatOrbiterFeederMac::SatOrbiterFeederMac(void)
     NS_FATAL_ERROR("SatOrbiterFeederMac default constructor is not allowed to use");
 }
 
-SatOrbiterFeederMac::SatOrbiterFeederMac(uint32_t satId,
-                                         uint32_t beamId,
-                                         SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                                         SatEnums::RegenerationMode_t returnLinkRegenerationMode)
-    : SatOrbiterMac(satId, beamId, forwardLinkRegenerationMode, returnLinkRegenerationMode)
+SatOrbiterFeederMac::SatOrbiterFeederMac(uint32_t satId, uint32_t beamId)
+    : SatOrbiterMac(satId, beamId)
 {
     NS_LOG_FUNCTION(this << satId << beamId);
 }

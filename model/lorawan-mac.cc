@@ -66,7 +66,7 @@ LorawanMac::LorawanMac()
 }
 
 LorawanMac::LorawanMac(uint32_t satId, uint32_t beamId)
-    : SatMac(satId, beamId, SatEnums::TRANSPARENT, SatEnums::TRANSPARENT),
+    : SatMac(satId, beamId),
       m_beamId(beamId),
       m_isRegenerative(false)
 {

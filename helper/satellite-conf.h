@@ -205,18 +205,6 @@ class SatConf : public Object
     uint32_t GetFwdLinkCarrierCount() const;
 
     /**
-     * Get the regeneration mode used in satellites for forward link
-     * \return The regeneration mode used in satellites for forward link
-     */
-    SatEnums::RegenerationMode_t GetForwardLinkRegenerationMode() const;
-
-    /**
-     * Get the regeneration mode used in satellites for return link
-     * \return The regeneration mode used in satellites for return link
-     */
-    SatEnums::RegenerationMode_t GetReturnLinkRegenerationMode() const;
-
-    /**
      * Load a vector of TLE information from a file
      * \param filePathName Path to the file containing the TLEs
      * \param startDatePathName Path to the file containing the simulation start date

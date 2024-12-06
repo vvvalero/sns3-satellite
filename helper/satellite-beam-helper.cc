@@ -247,10 +247,7 @@ SatBeamHelper::SatBeamHelper()
       m_raCollisionModel(SatPhyRxCarrierConf::RA_COLLISION_NOT_DEFINED),
       m_raConstantErrorRate(0.0),
       m_enableFwdLinkBeamHopping(false),
-      m_bstpController(),
-      m_standard(SatEnums::DVB),
-      m_forwardLinkRegenerationMode(SatEnums::TRANSPARENT),
-      m_returnLinkRegenerationMode(SatEnums::TRANSPARENT)
+      m_bstpController()
 {
     NS_LOG_FUNCTION(this);
 
@@ -258,14 +255,11 @@ SatBeamHelper::SatBeamHelper()
     NS_FATAL_ERROR("SatBeamHelper::SatBeamHelper - Constructor not in use");
 }
 
-SatBeamHelper::SatBeamHelper(SatEnums::Standard_t standard,
-                             std::vector<std::pair<uint32_t, uint32_t>> isls,
+SatBeamHelper::SatBeamHelper(std::vector<std::pair<uint32_t, uint32_t>> isls,
                              SatTypedefs::CarrierBandwidthConverter_t bandwidthConverterCb,
                              uint32_t rtnLinkCarrierCount,
                              uint32_t fwdLinkCarrierCount,
-                             Ptr<SatSuperframeSeq> seq,
-                             SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                             SatEnums::RegenerationMode_t returnLinkRegenerationMode)
+                             Ptr<SatSuperframeSeq> seq)
     : m_carrierBandwidthConverter(bandwidthConverterCb),
       m_superframeSeq(seq),
       m_printDetailedInformationToCreationTraces(false),
@@ -279,9 +273,6 @@ SatBeamHelper::SatBeamHelper(SatEnums::Standard_t standard,
       m_raConstantErrorRate(0.0),
       m_enableFwdLinkBeamHopping(false),
       m_bstpController(),
-      m_standard(standard),
-      m_forwardLinkRegenerationMode(forwardLinkRegenerationMode),
-      m_returnLinkRegenerationMode(returnLinkRegenerationMode),
       m_isls(isls)
 {
     NS_LOG_FUNCTION(this << rtnLinkCarrierCount << fwdLinkCarrierCount << seq);
@@ -348,7 +339,7 @@ SatBeamHelper::SatBeamHelper(SatEnums::Standard_t standard,
     }
 
     // create needed low level satellite helpers
-    switch (m_standard)
+    switch (Singleton<SatTopology>::Get()->GetStandard())
     {
     case SatEnums::DVB: {
         m_gwHelper = CreateObject<SatGwHelperDvb>(bandwidthConverterCb,
@@ -375,7 +366,8 @@ SatBeamHelper::SatBeamHelper(SatEnums::Standard_t standard,
         break;
     }
     case SatEnums::LORA: {
-        if (m_forwardLinkRegenerationMode == SatEnums::TRANSPARENT)
+        if (Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode() ==
+            SatEnums::TRANSPARENT)
         {
             m_gwHelper = CreateObject<SatGwHelperLora>(bandwidthConverterCb,
                                                        rtnLinkCarrierCount,
@@ -464,8 +456,10 @@ SatBeamHelper::SatBeamHelper(SatEnums::Standard_t standard,
     linkResultsFwd->Initialize();
     linkResultsReturnLink->Initialize();
 
-    bool useScpc = (m_returnLinkRegenerationMode == SatEnums::REGENERATION_LINK ||
-                    m_returnLinkRegenerationMode == SatEnums::REGENERATION_NETWORK);
+    bool useScpc = (Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() ==
+                        SatEnums::REGENERATION_LINK ||
+                    Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() ==
+                        SatEnums::REGENERATION_NETWORK);
 
     // DVB-S2 link results for packet decoding at the UT
     m_utHelper->Initialize(linkResultsFwd);
@@ -481,7 +475,7 @@ SatBeamHelper::SatBeamHelper(SatEnums::Standard_t standard,
 
     m_ncc = CreateObject<SatNcc>();
 
-    if (m_standard == SatEnums::LORA)
+    if (Singleton<SatTopology>::Get()->GetStandard() == SatEnums::LORA)
     {
         m_ncc->SetUseLora(true);
     }
@@ -655,9 +649,7 @@ SatBeamHelper::Install(NodeContainer ut,
                                     m_ncc,
                                     satId,
                                     gwId,
-                                    beamId,
-                                    m_forwardLinkRegenerationMode,
-                                    m_returnLinkRegenerationMode);
+                                    beamId);
 
     Ptr<SatMobilityModel> gwMobility = gwNode->GetObject<SatMobilityModel>();
     NS_ASSERT(gwMobility != nullptr);
@@ -695,8 +687,10 @@ SatBeamHelper::Install(NodeContainer ut,
                                         routingCallback);
 
     NetDeviceContainer utNd;
-    if (m_returnLinkRegenerationMode == SatEnums::REGENERATION_LINK ||
-        m_returnLinkRegenerationMode == SatEnums::REGENERATION_NETWORK)
+    if (Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() ==
+            SatEnums::REGENERATION_LINK ||
+        Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() ==
+            SatEnums::REGENERATION_NETWORK)
     {
         if (m_gwNdMap.count(gwId) == 0)
         {
@@ -783,9 +777,7 @@ SatBeamHelper::InstallFeeder(Ptr<SatOrbiterNetDevice> orbiterNetDevice,
                             feederLink.second,
                             MakeCallback(&SatChannelPair::GetChannelPair, m_flChannels),
                             m_ncc,
-                            llsConf.Get<SatLowerLayerServiceConf>(),
-                            m_forwardLinkRegenerationMode,
-                            m_returnLinkRegenerationMode);
+                            llsConf.Get<SatLowerLayerServiceConf>());
 
     // calculate maximum size of the BB frame with the most robust MODCOD
     Ptr<SatBbFrameConf> bbFrameConf = m_gwHelper->GetBbFrameConf();
@@ -804,13 +796,15 @@ SatBeamHelper::InstallFeeder(Ptr<SatOrbiterNetDevice> orbiterNetDevice,
         bbFrameConf->GetBbFrameHeaderSizeInBytes();
 
     Address satelliteUserAddress = Address();
-    if (m_returnLinkRegenerationMode == SatEnums::REGENERATION_LINK ||
-        m_returnLinkRegenerationMode == SatEnums::REGENERATION_NETWORK)
+    if (Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() ==
+            SatEnums::REGENERATION_LINK ||
+        Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() ==
+            SatEnums::REGENERATION_NETWORK)
     {
         satelliteUserAddress = orbiterNetDevice->GetSatelliteUserAddress(beamId);
     }
 
-    switch (m_standard)
+    switch (Singleton<SatTopology>::Get()->GetStandard())
     {
     case SatEnums::DVB:
         m_ncc->AddBeam(
@@ -827,7 +821,8 @@ SatBeamHelper::InstallFeeder(Ptr<SatOrbiterNetDevice> orbiterNetDevice,
             gwNd->GetAddress());
         break;
     case SatEnums::LORA: {
-        if (m_forwardLinkRegenerationMode == SatEnums::TRANSPARENT)
+        if (Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode() ==
+            SatEnums::TRANSPARENT)
         {
             m_ncc->AddBeam(satId,
                            beamId,
@@ -864,8 +859,10 @@ SatBeamHelper::InstallFeeder(Ptr<SatOrbiterNetDevice> orbiterNetDevice,
     }
 
     // Add satellite addresses to GW MAC layers.
-    if (m_forwardLinkRegenerationMode == SatEnums::REGENERATION_LINK ||
-        m_forwardLinkRegenerationMode == SatEnums::REGENERATION_NETWORK)
+    if (Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode() ==
+            SatEnums::REGENERATION_LINK ||
+        Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode() ==
+            SatEnums::REGENERATION_NETWORK)
     {
         Ptr<SatGwMac> gwMac = DynamicCast<SatGwMac>(DynamicCast<SatNetDevice>(gwNd)->GetMac());
         Mac48Address satFeederAddress = orbiterNetDevice->GetSatelliteFeederAddress(beamId);
@@ -873,7 +870,8 @@ SatBeamHelper::InstallFeeder(Ptr<SatOrbiterNetDevice> orbiterNetDevice,
     }
 
     // Add satellite addresses to GW LLC layers.
-    if (m_forwardLinkRegenerationMode == SatEnums::REGENERATION_NETWORK)
+    if (Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode() ==
+        SatEnums::REGENERATION_NETWORK)
     {
         Ptr<SatGwMac> gwMac = DynamicCast<SatGwMac>(DynamicCast<SatNetDevice>(gwNd)->GetMac());
         Ptr<SatGwLlc> gwLlc = DynamicCast<SatGwLlc>(DynamicCast<SatNetDevice>(gwNd)->GetLlc());
@@ -905,8 +903,10 @@ SatBeamHelper::InstallUser(Ptr<SatOrbiterNetDevice> orbiterNetDevice,
     }
 
     Address satUserAddress = Address();
-    if (m_returnLinkRegenerationMode == SatEnums::REGENERATION_LINK ||
-        m_returnLinkRegenerationMode == SatEnums::REGENERATION_NETWORK)
+    if (Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() ==
+            SatEnums::REGENERATION_LINK ||
+        Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() ==
+            SatEnums::REGENERATION_NETWORK)
     {
         satUserAddress = orbiterNetDevice->GetUserMac(beamId)->GetAddress();
     }
@@ -922,13 +922,13 @@ SatBeamHelper::InstallUser(Ptr<SatOrbiterNetDevice> orbiterNetDevice,
                             m_ncc,
                             satUserAddress,
                             MakeCallback(&SatChannelPair::GetChannelPair, m_ulChannels),
-                            routingCallback,
-                            m_forwardLinkRegenerationMode,
-                            m_returnLinkRegenerationMode);
+                            routingCallback);
 
     // Add satellite addresses UT MAC layers.
-    if (m_returnLinkRegenerationMode == SatEnums::REGENERATION_LINK ||
-        m_returnLinkRegenerationMode == SatEnums::REGENERATION_NETWORK)
+    if (Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() ==
+            SatEnums::REGENERATION_LINK ||
+        Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() ==
+            SatEnums::REGENERATION_NETWORK)
     {
         for (NetDeviceContainer::Iterator i = utNd.Begin(); i != utNd.End(); i++)
         {
@@ -946,7 +946,8 @@ SatBeamHelper::InstallUser(Ptr<SatOrbiterNetDevice> orbiterNetDevice,
     }
 
     // Add satellite addresses UT LLC layers.
-    if (m_returnLinkRegenerationMode == SatEnums::REGENERATION_NETWORK)
+    if (Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() ==
+        SatEnums::REGENERATION_NETWORK)
     {
         for (NetDeviceContainer::Iterator i = utNd.Begin(); i != utNd.End(); i++)
         {
@@ -1124,14 +1125,6 @@ SatBeamHelper::GetUtBeamId(Ptr<Node> utNode) const
     return beamId;
 }
 
-SatEnums::RegenerationMode_t
-SatBeamHelper::GetReturnLinkRegenerationMode() const
-{
-    NS_LOG_FUNCTION(this);
-
-    return m_returnLinkRegenerationMode;
-}
-
 NetDeviceContainer
 SatBeamHelper::AddMulticastGroupRoutes(MulticastBeamInfo_t beamInfo,
                                        Ptr<Node> sourceUtNode,
@@ -1304,7 +1297,8 @@ SatBeamHelper::EnablePacketTrace()
      */
 
     SatEnums::RegenerationMode_t maxRegeneration =
-        std::max(m_forwardLinkRegenerationMode, m_returnLinkRegenerationMode);
+        std::max(Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode(),
+                 Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode());
 
     /**
      * TODO: Currently the packet trace logs all entries updated by the protocol layers. Here
@@ -1329,7 +1323,7 @@ SatBeamHelper::EnablePacketTrace()
         Config::ConnectWithoutContext("/NodeList/*/DeviceList/*/FeederMac/*/PacketTrace",
                                       MakeCallback(&SatPacketTrace::AddTraceEntry, m_packetTrace));
     }
-    if (m_standard == SatEnums::DVB)
+    if (Singleton<SatTopology>::Get()->GetStandard() == SatEnums::DVB)
     {
         Config::ConnectWithoutContext("/NodeList/*/DeviceList/*/SatLlc/PacketTrace",
                                       MakeCallback(&SatPacketTrace::AddTraceEntry, m_packetTrace));

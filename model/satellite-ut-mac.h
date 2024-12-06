@@ -96,16 +96,12 @@ class SatUtMac : public SatMac
      * \param satId ID of sat for UT
      * \param beamId ID of beam for UT
      * \param seq Pointer to superframe sequence.
-     * \param forwardLinkRegenerationMode Forward link regeneration mode
-     * \param returnLinkRegenerationMode Return link regeneration mode
      * \param crdsaOnlyForControl CRDSA buffer operation mode
      */
     SatUtMac(Ptr<Node> node,
              uint32_t satId,
              uint32_t beamId,
              Ptr<SatSuperframeSeq> seq,
-             SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-             SatEnums::RegenerationMode_t returnLinkRegenerationMode,
              bool crdsaOnlyForControl);
 
     /**

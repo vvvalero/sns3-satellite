@@ -26,12 +26,14 @@
 #include "satellite-queue.h"
 #include "satellite-scheduling-object.h"
 #include "satellite-time-tag.h"
+#include "satellite-topology.h"
 #include "satellite-typedefs.h"
 #include "satellite-utils.h"
 
 #include <ns3/log.h>
 #include <ns3/nstime.h>
 #include <ns3/simulator.h>
+#include <ns3/singleton.h>
 
 #include <utility>
 
@@ -73,25 +75,9 @@ SatLlc::SatLlc()
       m_gwAddress(),
       m_satelliteAddress(),
       m_additionalHeaderSize(0),
-      m_forwardLinkRegenerationMode(SatEnums::TRANSPARENT),
-      m_returnLinkRegenerationMode(SatEnums::TRANSPARENT)
-{
-    NS_LOG_FUNCTION(this);
-    NS_ASSERT(false); // this version of the constructor should not been used
-}
-
-SatLlc::SatLlc(SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-               SatEnums::RegenerationMode_t returnLinkRegenerationMode)
-    : m_nodeInfo(),
-      m_encaps(),
-      m_decaps(),
-      m_fwdLinkArqEnabled(false),
-      m_rtnLinkArqEnabled(false),
-      m_gwAddress(),
-      m_satelliteAddress(),
-      m_additionalHeaderSize(0),
-      m_forwardLinkRegenerationMode(forwardLinkRegenerationMode),
-      m_returnLinkRegenerationMode(returnLinkRegenerationMode)
+      m_forwardLinkRegenerationMode(
+          Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode()),
+      m_returnLinkRegenerationMode(Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode())
 {
     NS_LOG_FUNCTION(this);
 }

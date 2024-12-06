@@ -211,29 +211,16 @@ SatUtHelper::Install(NodeContainer c,
                      Ptr<SatNcc> ncc,
                      Address satUserAddress,
                      SatPhy::ChannelPairGetterCallback cbChannel,
-                     SatMac::RoutingUpdateCallback cbRouting,
-                     SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                     SatEnums::RegenerationMode_t returnLinkRegenerationMode)
+                     SatMac::RoutingUpdateCallback cbRouting)
 {
-    NS_LOG_FUNCTION(this << satId << beamId << fCh << rCh << gwNd << ncc << satUserAddress
-                         << forwardLinkRegenerationMode << returnLinkRegenerationMode);
+    NS_LOG_FUNCTION(this << satId << beamId << fCh << rCh << gwNd << ncc << satUserAddress);
 
     NetDeviceContainer devs;
 
     for (NodeContainer::Iterator i = c.Begin(); i != c.End(); i++)
     {
-        devs.Add(Install(*i,
-                         satId,
-                         beamId,
-                         fCh,
-                         rCh,
-                         gwNd,
-                         ncc,
-                         satUserAddress,
-                         cbChannel,
-                         cbRouting,
-                         forwardLinkRegenerationMode,
-                         returnLinkRegenerationMode));
+        devs.Add(
+            Install(*i, satId, beamId, fCh, rCh, gwNd, ncc, satUserAddress, cbChannel, cbRouting));
     }
 
     return devs;

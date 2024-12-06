@@ -28,12 +28,14 @@
 #include "satellite-phy-rx.h"
 #include "satellite-phy-tx.h"
 #include "satellite-signal-parameters.h"
+#include "satellite-topology.h"
 #include "satellite-utils.h"
 
 #include <ns3/double.h>
 #include <ns3/log.h>
 #include <ns3/pointer.h>
 #include <ns3/simulator.h>
+#include <ns3/singleton.h>
 #include <ns3/uinteger.h>
 
 NS_LOG_COMPONENT_DEFINE("SatUtPhy");
@@ -149,8 +151,7 @@ SatUtPhy::SatUtPhy(void)
 SatUtPhy::SatUtPhy(SatPhy::CreateParam_t& params,
                    Ptr<SatLinkResults> linkResults,
                    SatPhyRxCarrierConf::RxCarrierCreateParams_s parameters,
-                   Ptr<SatSuperframeConf> superFrameConf,
-                   SatEnums::RegenerationMode_t forwardLinkRegenerationMode)
+                   Ptr<SatSuperframeConf> superFrameConf)
     : SatPhy(params),
       m_antennaReconfigurationDelay(Seconds(0.0))
 {
@@ -164,7 +165,8 @@ SatUtPhy::SatUtPhy(SatPhy::CreateParam_t& params,
     parameters.m_aciIfWrtNoiseFactor = 0.0;
     parameters.m_extNoiseDensityWhz = 0.0;
     parameters.m_rxMode = SatPhyRxCarrierConf::NORMAL;
-    parameters.m_linkRegenerationMode = forwardLinkRegenerationMode;
+    parameters.m_linkRegenerationMode =
+        Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode();
     parameters.m_chType = SatEnums::FORWARD_USER_CH;
 
     Ptr<SatPhyRxCarrierConf> carrierConf = CreateObject<SatPhyRxCarrierConf>(parameters);

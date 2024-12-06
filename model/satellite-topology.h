@@ -20,6 +20,10 @@
 #ifndef SATELLITE_TOPOLOGY_H
 #define SATELLITE_TOPOLOGY_H
 
+#include "lorawan-ground-mac-gateway.h"
+#include "lorawan-mac-end-device.h"
+#include "lorawan-mac-gateway.h"
+#include "lorawan-orbiter-mac-gateway.h"
 #include "satellite-gw-llc.h"
 #include "satellite-gw-mac.h"
 #include "satellite-gw-phy.h"
@@ -61,7 +65,8 @@ class SatTopology : public Object
         uint32_t m_beamId;
         std::map<std::pair<uint32_t, uint32_t>, Ptr<SatNetDevice>> m_netDevice;
         std::map<std::pair<uint32_t, uint32_t>, Ptr<SatGwLlc>> m_llc;
-        std::map<std::pair<uint32_t, uint32_t>, Ptr<SatGwMac>> m_mac;
+        std::map<std::pair<uint32_t, uint32_t>, Ptr<SatGwMac>> m_dvbMac;
+        std::map<std::pair<uint32_t, uint32_t>, Ptr<LorawanGroundMacGateway>> m_loraMac;
         std::map<std::pair<uint32_t, uint32_t>, Ptr<SatGwPhy>> m_phy;
     } GwLayers_s;
 
@@ -72,7 +77,8 @@ class SatTopology : public Object
         uint32_t m_groupId;
         Ptr<SatNetDevice> m_netDevice;
         Ptr<SatUtLlc> m_llc;
-        Ptr<SatUtMac> m_mac;
+        Ptr<SatUtMac> m_dvbMac;
+        Ptr<LorawanMacEndDevice> m_loraMac;
         Ptr<SatUtPhy> m_phy;
     } UtLayers_s;
 
@@ -83,7 +89,8 @@ class SatTopology : public Object
         std::map<uint32_t, Ptr<SatOrbiterFeederLlc>> m_feederLlc;
         std::map<uint32_t, Ptr<SatOrbiterUserLlc>> m_userLlc;
         std::map<uint32_t, Ptr<SatOrbiterFeederMac>> m_feederMac;
-        std::map<uint32_t, Ptr<SatOrbiterUserMac>> m_userMac;
+        std::map<uint32_t, Ptr<SatOrbiterUserMac>> m_dvbUserMac;
+        std::map<uint32_t, Ptr<LorawanOrbiterMacGateway>> m_loraUserMac;
         std::map<uint32_t, Ptr<SatOrbiterFeederPhy>> m_feederPhy;
         std::map<uint32_t, Ptr<SatOrbiterUserPhy>> m_userPhy;
     } OrbiterLayers_s;
@@ -422,7 +429,7 @@ class SatTopology : public Object
     Ptr<Node> GetNodeFromId(uint32_t nodeId) const;
 
     /**
-     * Add GW layers for given node, associated to chosen satellite and beam
+     * Add DVB GW layers for given node, associated to chosen satellite and beam
      *
      * \param gw GW node to consider
      * \param gwSatId ID of satellite linked to this stack
@@ -434,15 +441,37 @@ class SatTopology : public Object
      * \param mac MAC layer for pair UT satellite/UT beam
      * \param phy PHY layer for pair UT satellite/UT beam
      */
-    void AddGwLayers(Ptr<Node> gw,
-                     uint32_t gwSatId,
-                     uint32_t gwBeamId,
-                     uint32_t utSatId,
-                     uint32_t utBeamId,
-                     Ptr<SatNetDevice> netDevice,
-                     Ptr<SatGwLlc> llc,
-                     Ptr<SatGwMac> mac,
-                     Ptr<SatGwPhy> phy);
+    void AddGwLayersDvb(Ptr<Node> gw,
+                        uint32_t gwSatId,
+                        uint32_t gwBeamId,
+                        uint32_t utSatId,
+                        uint32_t utBeamId,
+                        Ptr<SatNetDevice> netDevice,
+                        Ptr<SatGwLlc> llc,
+                        Ptr<SatGwMac> mac,
+                        Ptr<SatGwPhy> phy);
+
+    /**
+     * Add LORA GW layers for given node, associated to chosen satellite and beam
+     *
+     * \param gw GW node to consider
+     * \param gwSatId ID of satellite linked to this stack
+     * \param gwBeamId ID of beam linked to this stack
+     * \param utSatId ID of satellite serving UTs for this stack
+     * \param utBeamId ID of beam serving UTs for this stack
+     * \param netDevice SatNetDevice for pair UT satellite/UT beam
+     * \param llc LLC layer for pair UT satellite/UT beam
+     * \param mac MAC layer for pair UT satellite/UT beam
+     * \param phy PHY layer for pair UT satellite/UT beam
+     */
+    void AddGwLayersLora(Ptr<Node> gw,
+                         uint32_t gwSatId,
+                         uint32_t gwBeamId,
+                         uint32_t utSatId,
+                         uint32_t utBeamId,
+                         Ptr<SatNetDevice> netDevice,
+                         Ptr<LorawanGroundMacGateway> mac,
+                         Ptr<SatGwPhy> phy);
 
     /**
      * Update satellite and beam associated to a GW
@@ -494,7 +523,7 @@ class SatTopology : public Object
     Ptr<SatGwLlc> GetGwLlc(Ptr<Node> gw, uint32_t utSatId, uint32_t utBeamId) const;
 
     /**
-     * Get SatGwMac instance of a GW
+     * Get SatGwMac instance of a DVB GW
      *
      * \param gw GW node to consider
      * \param utSatId ID of satellite serving the UTs
@@ -502,7 +531,20 @@ class SatTopology : public Object
      *
      * \return SatGwMac instance of a GW
      */
-    Ptr<SatGwMac> GetGwMac(Ptr<Node> gw, uint32_t utSatId, uint32_t utBeamId) const;
+    Ptr<SatGwMac> GetDvbGwMac(Ptr<Node> gw, uint32_t utSatId, uint32_t utBeamId) const;
+
+    /**
+     * Get SatGwMac instance of a LORA GW
+     *
+     * \param gw GW node to consider
+     * \param utSatId ID of satellite serving the UTs
+     * \param utBeamId ID of beam serving the UTs
+     *
+     * \return LorawanGroundMacGateway instance of a GW
+     */
+    Ptr<LorawanGroundMacGateway> GetLoraGwMac(Ptr<Node> gw,
+                                              uint32_t utSatId,
+                                              uint32_t utBeamId) const;
 
     /**
      * Get SatGwPhy instance of a GW
@@ -516,7 +558,7 @@ class SatTopology : public Object
     Ptr<SatGwPhy> GetGwPhy(Ptr<Node> gw, uint32_t utSatId, uint32_t utBeamId) const;
 
     /**
-     * Add UT layers for given node, associated to chosen satellite and beam
+     * Add DVB UT layers for given node, associated to chosen satellite and beam
      *
      * \param ut UT node to consider
      * \param satId ID of satellite linked to this stack
@@ -527,14 +569,34 @@ class SatTopology : public Object
      * \param mac MAC layer of this node
      * \param phy PHY layer of this node
      */
-    void AddUtLayers(Ptr<Node> ut,
-                     uint32_t satId,
-                     uint32_t beamId,
-                     uint32_t groupId,
-                     Ptr<SatNetDevice> netDevice,
-                     Ptr<SatUtLlc> llc,
-                     Ptr<SatUtMac> mac,
-                     Ptr<SatUtPhy> phy);
+    void AddUtLayersDvb(Ptr<Node> ut,
+                        uint32_t satId,
+                        uint32_t beamId,
+                        uint32_t groupId,
+                        Ptr<SatNetDevice> netDevice,
+                        Ptr<SatUtLlc> llc,
+                        Ptr<SatUtMac> mac,
+                        Ptr<SatUtPhy> phy);
+
+    /**
+     * Add LORA UT layers for given node, associated to chosen satellite and beam
+     *
+     * \param ut UT node to consider
+     * \param satId ID of satellite linked to this stack
+     * \param beamId ID of beam linked to this stack
+     * \param groupId ID of group linked to this stack
+     * \param netDevice SatNetDevice of this node
+     * \param llc LLC layer of this node
+     * \param mac MAC layer of this node
+     * \param phy PHY layer of this node
+     */
+    void AddUtLayersLora(Ptr<Node> ut,
+                         uint32_t satId,
+                         uint32_t beamId,
+                         uint32_t groupId,
+                         Ptr<SatNetDevice> netDevice,
+                         Ptr<LorawanMacEndDevice> mac,
+                         Ptr<SatUtPhy> phy);
 
     /**
      * Update satellite and beam associated to a UT
@@ -599,13 +661,22 @@ class SatTopology : public Object
     Ptr<SatUtLlc> GetUtLlc(Ptr<Node> ut) const;
 
     /**
-     * Get SatUtMac instance of a UT
+     * Get SatUtMac instance of a DVB UT
      *
      * \param ut UT node to consider
      *
      * \return SatUtMac instance of a UT
      */
-    Ptr<SatUtMac> GetUtMac(Ptr<Node> ut) const;
+    Ptr<SatUtMac> GetDvbUtMac(Ptr<Node> ut) const;
+
+    /**
+     * Get SatUtMac instance of a LORA UT
+     *
+     * \param ut UT node to consider
+     *
+     * \return LorawanMacEndDevice instance of a UT
+     */
+    Ptr<LorawanMacEndDevice> GetLoraUtMac(Ptr<Node> ut) const;
 
     /**
      * Get SatUtPhy instance of a UT
@@ -637,7 +708,7 @@ class SatTopology : public Object
                                 Ptr<SatOrbiterFeederPhy> phy);
 
     /**
-     * Add orbiter user layers for given satellite and beam ID
+     * Add DVB orbiter user layers for given satellite and beam ID
      *
      * \param orbiter UT node to consider
      * \param satId ID of satellite linked to this stack
@@ -647,13 +718,31 @@ class SatTopology : public Object
      * \param mac MAC layer of this node
      * \param phy PHY layer of this node
      */
-    void AddOrbiterUserLayers(Ptr<Node> orbiter,
-                              uint32_t satId,
-                              uint32_t beamId,
-                              Ptr<SatOrbiterNetDevice> netDevice,
-                              Ptr<SatOrbiterUserLlc> llc,
-                              Ptr<SatOrbiterUserMac> mac,
-                              Ptr<SatOrbiterUserPhy> phy);
+    void AddOrbiterUserLayersDvb(Ptr<Node> orbiter,
+                                 uint32_t satId,
+                                 uint32_t beamId,
+                                 Ptr<SatOrbiterNetDevice> netDevice,
+                                 Ptr<SatOrbiterUserLlc> llc,
+                                 Ptr<SatOrbiterUserMac> mac,
+                                 Ptr<SatOrbiterUserPhy> phy);
+
+    /**
+     * Add LORA orbiter user layers for given satellite and beam ID
+     *
+     * \param orbiter UT node to consider
+     * \param satId ID of satellite linked to this stack
+     * \param beamId ID of beam linked to this stack
+     * \param netDevice SatNetDevice of this node
+     * \param mac LLC layer of this node
+     * \param mac MAC layer of this node
+     * \param phy PHY layer of this node
+     */
+    void AddOrbiterUserLayersLora(Ptr<Node> orbiter,
+                                  uint32_t satId,
+                                  uint32_t beamId,
+                                  Ptr<SatOrbiterNetDevice> netDevice,
+                                  Ptr<LorawanOrbiterMacGateway> mac,
+                                  Ptr<SatOrbiterUserPhy> phy);
 
     /**
      * Get ID of a given orbiter
@@ -704,14 +793,24 @@ class SatTopology : public Object
     Ptr<SatOrbiterFeederMac> GetOrbiterFeederMac(Ptr<Node> orbiter, uint32_t utBeamId) const;
 
     /**
-     * Get SatOrbiterUserMac instance of an orbiter serving wanted beam ID
+     * Get SatOrbiterUserMac instance of a DVB orbiter serving wanted beam ID
      *
      * \param orbiter Orbiter node to consider
      * \param beamId Beam ID served by this user MAC layer
      *
      * \return SatOrbiterUserMac instance of an orbiter
      */
-    Ptr<SatOrbiterUserMac> GetOrbiterUserMac(Ptr<Node> orbiter, uint32_t beamId) const;
+    Ptr<SatOrbiterUserMac> GetDvbOrbiterUserMac(Ptr<Node> orbiter, uint32_t beamId) const;
+
+    /**
+     * Get LorawanOrbiterMacGateway instance of a LORA orbiter serving wanted beam ID
+     *
+     * \param orbiter Orbiter node to consider
+     * \param beamId Beam ID served by this user MAC layer
+     *
+     * \return LorawanOrbiterMacGateway instance of an orbiter
+     */
+    Ptr<LorawanOrbiterMacGateway> GetLoraOrbiterUserMac(Ptr<Node> orbiter, uint32_t beamId) const;
 
     /**
      * Get SatOrbiterFeederPhy instance of an orbiter serving wanted beam ID

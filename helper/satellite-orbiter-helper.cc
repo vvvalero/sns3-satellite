@@ -310,38 +310,21 @@ SatOrbiterHelper::AttachChannels(Ptr<NetDevice> d,
                                  Ptr<SatNcc> ncc,
                                  uint32_t satId,
                                  uint32_t gwId,
-                                 uint32_t userBeamId,
-                                 SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                                 SatEnums::RegenerationMode_t returnLinkRegenerationMode)
+                                 uint32_t userBeamId)
 {
     NS_LOG_FUNCTION(this << d << ff << fr << uf << ur << userAgp << feederAgp << satId << gwId
                          << userBeamId);
 
     Ptr<SatOrbiterNetDevice> dev = DynamicCast<SatOrbiterNetDevice>(d);
 
-    dev->SetForwardLinkRegenerationMode(forwardLinkRegenerationMode);
-    dev->SetReturnLinkRegenerationMode(returnLinkRegenerationMode);
+    dev->SetForwardLinkRegenerationMode(
+        Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode());
+    dev->SetReturnLinkRegenerationMode(
+        Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode());
     dev->SetNodeId(satId);
 
-    AttachChannelsFeeder(dev,
-                         ff,
-                         fr,
-                         feederAgp,
-                         ncc,
-                         satId,
-                         gwId,
-                         userBeamId,
-                         forwardLinkRegenerationMode,
-                         returnLinkRegenerationMode);
-    AttachChannelsUser(dev,
-                       uf,
-                       ur,
-                       userAgp,
-                       ncc,
-                       satId,
-                       userBeamId,
-                       forwardLinkRegenerationMode,
-                       returnLinkRegenerationMode);
+    AttachChannelsFeeder(dev, ff, fr, feederAgp, ncc, satId, gwId, userBeamId);
+    AttachChannelsUser(dev, uf, ur, userAgp, ncc, satId, userBeamId);
 }
 
 void
@@ -352,12 +335,9 @@ SatOrbiterHelper::AttachChannelsFeeder(Ptr<SatOrbiterNetDevice> dev,
                                        Ptr<SatNcc> ncc,
                                        uint32_t satId,
                                        uint32_t gwId,
-                                       uint32_t userBeamId,
-                                       SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                                       SatEnums::RegenerationMode_t returnLinkRegenerationMode)
+                                       uint32_t userBeamId)
 {
-    NS_LOG_FUNCTION(this << dev << ff << fr << feederAgp << satId << gwId << userBeamId
-                         << forwardLinkRegenerationMode << returnLinkRegenerationMode);
+    NS_LOG_FUNCTION(this << dev << ff << fr << feederAgp << satId << gwId << userBeamId);
 
     SatPhy::CreateParam_t params;
     params.m_satId = satId;
@@ -378,7 +358,8 @@ SatOrbiterHelper::AttachChannelsFeeder(Ptr<SatOrbiterNetDevice> dev,
     parametersFeeder.m_daIfModel = m_daFwdLinkInterferenceModel;
     parametersFeeder.m_raIfModel = m_raSettings.m_raFwdInterferenceModel;
     parametersFeeder.m_raIfEliminateModel = m_raSettings.m_raInterferenceEliminationModel;
-    parametersFeeder.m_linkRegenerationMode = forwardLinkRegenerationMode;
+    parametersFeeder.m_linkRegenerationMode =
+        Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode();
     parametersFeeder.m_bwConverter = m_carrierBandwidthConverter;
     parametersFeeder.m_carrierCount = m_fwdLinkCarrierCount;
     parametersFeeder.m_cec = cec;
@@ -392,9 +373,7 @@ SatOrbiterHelper::AttachChannelsFeeder(Ptr<SatOrbiterNetDevice> dev,
         params,
         m_fwdLinkResults,
         parametersFeeder,
-        m_superframeSeq->GetSuperframeConf(SatConstVariables::SUPERFRAME_SEQUENCE),
-        forwardLinkRegenerationMode,
-        returnLinkRegenerationMode);
+        m_superframeSeq->GetSuperframeConf(SatConstVariables::SUPERFRAME_SEQUENCE));
 
     // Note, that currently we have only one set of antenna patterns,
     // which are utilized in both in user link and feeder link, and
@@ -411,15 +390,13 @@ SatOrbiterHelper::AttachChannelsFeeder(Ptr<SatOrbiterNetDevice> dev,
     bool startScheduler = false;
 
     // Create MAC layer
-    fMac = CreateObject<SatOrbiterFeederMac>(satId,
-                                             userBeamId,
-                                             forwardLinkRegenerationMode,
-                                             returnLinkRegenerationMode);
+    fMac = CreateObject<SatOrbiterFeederMac>(satId, userBeamId);
 
     Mac48Address feederAddress;
 
     // Create layers needed depending on max regeneration mode
-    switch (std::max(forwardLinkRegenerationMode, returnLinkRegenerationMode))
+    switch (std::max(Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode(),
+                     Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode()))
     {
     case SatEnums::TRANSPARENT:
     case SatEnums::REGENERATION_PHY: {
@@ -435,8 +412,7 @@ SatOrbiterHelper::AttachChannelsFeeder(Ptr<SatOrbiterNetDevice> dev,
     }
     case SatEnums::REGENERATION_LINK: {
         // Create LLC layer
-        fLlc = CreateObject<SatOrbiterFeederLlc>(forwardLinkRegenerationMode,
-                                                 returnLinkRegenerationMode);
+        fLlc = CreateObject<SatOrbiterFeederLlc>();
 
         if (m_gwMacMap.count(std::make_pair(satId, gwId)))
         {
@@ -472,8 +448,7 @@ SatOrbiterHelper::AttachChannelsFeeder(Ptr<SatOrbiterNetDevice> dev,
     }
     case SatEnums::REGENERATION_NETWORK: {
         // Create LLC layer
-        fLlc = CreateObject<SatOrbiterFeederLlc>(forwardLinkRegenerationMode,
-                                                 returnLinkRegenerationMode);
+        fLlc = CreateObject<SatOrbiterFeederLlc>();
 
         if (m_gwMacMap.count(std::make_pair(satId, gwId)))
         {
@@ -512,7 +487,7 @@ SatOrbiterHelper::AttachChannelsFeeder(Ptr<SatOrbiterNetDevice> dev,
     }
 
     // Connect callbacks on forward link
-    switch (forwardLinkRegenerationMode)
+    switch (Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode())
     {
     case SatEnums::TRANSPARENT:
     case SatEnums::REGENERATION_PHY: {
@@ -539,7 +514,7 @@ SatOrbiterHelper::AttachChannelsFeeder(Ptr<SatOrbiterNetDevice> dev,
     }
 
     // Connect callbacks on return link
-    switch (returnLinkRegenerationMode)
+    switch (Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode())
     {
     case SatEnums::TRANSPARENT:
     case SatEnums::REGENERATION_PHY: {
