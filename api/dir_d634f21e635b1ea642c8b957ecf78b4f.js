@@ -25,16 +25,19 @@ var dir_d634f21e635b1ea642c8b957ecf78b4f =
     [ "satellite-conf.h", "satellite-conf_8h.html", [
       [ "SatConf", "classns3_1_1_sat_conf.html", "classns3_1_1_sat_conf" ]
     ] ],
-    [ "satellite-geo-helper.cc", "satellite-geo-helper_8cc.html", null ],
-    [ "satellite-geo-helper.h", "satellite-geo-helper_8h.html", [
-      [ "RandomAccessSettings_s", "structns3_1_1_sat_geo_helper_1_1_random_access_settings__s.html", "structns3_1_1_sat_geo_helper_1_1_random_access_settings__s" ],
-      [ "SatGeoHelper", "classns3_1_1_sat_geo_helper.html", "classns3_1_1_sat_geo_helper" ]
-    ] ],
     [ "satellite-group-helper.cc", "satellite-group-helper_8cc.html", null ],
     [ "satellite-group-helper.h", "satellite-group-helper_8h.html", [
       [ "SatGroupHelper", "classns3_1_1_sat_group_helper.html", "classns3_1_1_sat_group_helper" ]
     ] ],
-    [ "satellite-gw-helper.cc", "satellite-gw-helper_8cc.html", "satellite-gw-helper_8cc" ],
+    [ "satellite-gw-helper-dvb.cc", "satellite-gw-helper-dvb_8cc.html", "satellite-gw-helper-dvb_8cc" ],
+    [ "satellite-gw-helper-dvb.h", "satellite-gw-helper-dvb_8h.html", [
+      [ "SatGwHelperDvb", "classns3_1_1_sat_gw_helper_dvb.html", "classns3_1_1_sat_gw_helper_dvb" ]
+    ] ],
+    [ "satellite-gw-helper-lora.cc", "satellite-gw-helper-lora_8cc.html", null ],
+    [ "satellite-gw-helper-lora.h", "satellite-gw-helper-lora_8h.html", [
+      [ "SatGwHelperLora", "classns3_1_1_sat_gw_helper_lora.html", "classns3_1_1_sat_gw_helper_lora" ]
+    ] ],
+    [ "satellite-gw-helper.cc", "satellite-gw-helper_8cc.html", null ],
     [ "satellite-gw-helper.h", "satellite-gw-helper_8h.html", [
       [ "RandomAccessSettings_s", "structns3_1_1_sat_gw_helper_1_1_random_access_settings__s.html", "structns3_1_1_sat_gw_helper_1_1_random_access_settings__s" ],
       [ "SatGwHelper", "classns3_1_1_sat_gw_helper.html", "classns3_1_1_sat_gw_helper" ]
@@ -55,24 +58,45 @@ var dir_d634f21e635b1ea642c8b957ecf78b4f =
     [ "satellite-on-off-helper.h", "satellite-on-off-helper_8h.html", [
       [ "SatOnOffHelper", "classns3_1_1_sat_on_off_helper.html", "classns3_1_1_sat_on_off_helper" ]
     ] ],
+    [ "satellite-orbiter-helper-dvb.cc", "satellite-orbiter-helper-dvb_8cc.html", null ],
+    [ "satellite-orbiter-helper-dvb.h", "satellite-orbiter-helper-dvb_8h.html", [
+      [ "SatOrbiterHelperDvb", "classns3_1_1_sat_orbiter_helper_dvb.html", "classns3_1_1_sat_orbiter_helper_dvb" ]
+    ] ],
+    [ "satellite-orbiter-helper-lora.cc", "satellite-orbiter-helper-lora_8cc.html", null ],
+    [ "satellite-orbiter-helper-lora.h", "satellite-orbiter-helper-lora_8h.html", [
+      [ "SatOrbiterHelperLora", "classns3_1_1_sat_orbiter_helper_lora.html", "classns3_1_1_sat_orbiter_helper_lora" ]
+    ] ],
+    [ "satellite-orbiter-helper.cc", "satellite-orbiter-helper_8cc.html", null ],
+    [ "satellite-orbiter-helper.h", "satellite-orbiter-helper_8h.html", [
+      [ "RandomAccessSettings_s", "structns3_1_1_sat_orbiter_helper_1_1_random_access_settings__s.html", "structns3_1_1_sat_orbiter_helper_1_1_random_access_settings__s" ],
+      [ "SatOrbiterHelper", "classns3_1_1_sat_orbiter_helper.html", "classns3_1_1_sat_orbiter_helper" ]
+    ] ],
     [ "satellite-point-to-point-isl-helper.cc", "satellite-point-to-point-isl-helper_8cc.html", null ],
     [ "satellite-point-to-point-isl-helper.h", "satellite-point-to-point-isl-helper_8h.html", [
       [ "PointToPointIslHelper", "classns3_1_1_point_to_point_isl_helper.html", "classns3_1_1_point_to_point_isl_helper" ]
     ] ],
-    [ "satellite-traffic-helper.cc", "satellite-traffic-helper_8cc.html", null ],
-    [ "satellite-traffic-helper.h", "satellite-traffic-helper_8h.html", [
-      [ "CustomTrafficInfo_s", "structns3_1_1_sat_traffic_helper_1_1_custom_traffic_info__s.html", "structns3_1_1_sat_traffic_helper_1_1_custom_traffic_info__s" ],
-      [ "SatTrafficHelper", "classns3_1_1_sat_traffic_helper.html", "classns3_1_1_sat_traffic_helper" ]
-    ] ],
+    [ "satellite-traffic-helper.cc", "satellite-traffic-helper_8cc.html", "satellite-traffic-helper_8cc" ],
+    [ "satellite-traffic-helper.h", "satellite-traffic-helper_8h.html", "satellite-traffic-helper_8h" ],
     [ "satellite-user-helper.cc", "satellite-user-helper_8cc.html", null ],
     [ "satellite-user-helper.h", "satellite-user-helper_8h.html", [
       [ "SatUserHelper", "classns3_1_1_sat_user_helper.html", "classns3_1_1_sat_user_helper" ]
+    ] ],
+    [ "satellite-ut-helper-dvb.cc", "satellite-ut-helper-dvb_8cc.html", null ],
+    [ "satellite-ut-helper-dvb.h", "satellite-ut-helper-dvb_8h.html", [
+      [ "SatUtHelperDvb", "classns3_1_1_sat_ut_helper_dvb.html", "classns3_1_1_sat_ut_helper_dvb" ]
+    ] ],
+    [ "satellite-ut-helper-lora.cc", "satellite-ut-helper-lora_8cc.html", null ],
+    [ "satellite-ut-helper-lora.h", "satellite-ut-helper-lora_8h.html", [
+      [ "SatUtHelperLora", "classns3_1_1_sat_ut_helper_lora.html", "classns3_1_1_sat_ut_helper_lora" ]
     ] ],
     [ "satellite-ut-helper.cc", "satellite-ut-helper_8cc.html", null ],
     [ "satellite-ut-helper.h", "satellite-ut-helper_8h.html", [
       [ "RandomAccessSettings_s", "structns3_1_1_sat_ut_helper_1_1_random_access_settings__s.html", "structns3_1_1_sat_ut_helper_1_1_random_access_settings__s" ],
       [ "SatUtHelper", "classns3_1_1_sat_ut_helper.html", "classns3_1_1_sat_ut_helper" ]
     ] ],
-    [ "simulation-helper.cc", "simulation-helper_8cc.html", "simulation-helper_8cc" ],
-    [ "simulation-helper.h", "simulation-helper_8h.html", "simulation-helper_8h" ]
+    [ "simulation-helper.cc", "simulation-helper_8cc.html", null ],
+    [ "simulation-helper.h", "simulation-helper_8h.html", [
+      [ "SimulationHelper", "classns3_1_1_simulation_helper.html", "classns3_1_1_simulation_helper" ],
+      [ "SimulationHelperConf", "classns3_1_1_simulation_helper_conf.html", "classns3_1_1_simulation_helper_conf" ]
+    ] ]
 ];

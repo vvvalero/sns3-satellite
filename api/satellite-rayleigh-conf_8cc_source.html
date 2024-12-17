@@ -151,123 +151,124 @@ $(document).ready(function(){initNavTree('satellite-rayleigh-conf_8cc_source.htm
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="satellite-markov-conf_8h.html">satellite-markov-conf.h</a>&quot;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacens3.html">ns3</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;NS_OBJECT_ENSURE_REGISTERED(SatRayleighConf);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;NS_LOG_COMPONENT_DEFINE(<span class="stringliteral">&quot;SatRayleighConf&quot;</span>);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="namespacens3.html#ae7c44a00f43a966a55ea99c3c24757f0">   33</a></span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="namespacens3.html#ae7c44a00f43a966a55ea99c3c24757f0">g_RayleighParameters</a>[<a class="code" href="classns3_1_1_sat_markov_conf.html#a13f7aef28f06a72419c0f02bc6953abf">SatMarkovConf::DEFAULT_ELEVATION_COUNT</a>]</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                        [<a class="code" href="classns3_1_1_sat_markov_conf.html#ab5860971d15ba074f83ee1b651293e86">SatMarkovConf::DEFAULT_STATE_COUNT</a>]</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                        [<a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a13f311b199f3e1dc3a2a965cb09d5577">SatRayleighConf::DEFAULT_RAYLEIGH_PARAMETER_COUNT</a>] = {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                            <span class="comment">/* Elevation 30 degrees */</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                            {{10, 10}, {10, 10}, {10, 10}}};</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;TypeId</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_rayleigh_conf.html#a3e904d76f479f981db4f762386a9a931">   49</a></span>&#160;<a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a3e904d76f479f981db4f762386a9a931">SatRayleighConf::GetTypeId</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">static</span> TypeId tid = TypeId(<span class="stringliteral">&quot;ns3::SatRayleighConf&quot;</span>)</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                            .SetParent&lt;<a class="code" href="classns3_1_1_sat_base_fader_conf.html">SatBaseFaderConf</a>&gt;()</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                            .AddConstructor&lt;SatRayleighConf&gt;()</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                            .AddAttribute(<span class="stringliteral">&quot;ElevationCount&quot;</span>,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                          <span class="stringliteral">&quot;Number of elevation sets in the Markov model.&quot;</span>,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                                          UintegerValue(<a class="code" href="classns3_1_1_sat_markov_conf.html#a13f7aef28f06a72419c0f02bc6953abf">SatMarkovConf::DEFAULT_ELEVATION_COUNT</a>),</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                          MakeUintegerAccessor(&amp;<a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a6ec185eb379f10b7aea398548347497e">SatRayleighConf::m_elevationCount</a>),</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                          MakeUintegerChecker&lt;uint32_t&gt;())</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                            .AddAttribute(<span class="stringliteral">&quot;StateCount&quot;</span>,</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                                          <span class="stringliteral">&quot;Number of states in the Markov model.&quot;</span>,</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                                          UintegerValue(<a class="code" href="classns3_1_1_sat_markov_conf.html#ab5860971d15ba074f83ee1b651293e86">SatMarkovConf::DEFAULT_STATE_COUNT</a>),</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                                          MakeUintegerAccessor(&amp;<a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a04d6e07acb37e36008399adc1e55330b">SatRayleighConf::m_stateCount</a>),</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                          MakeUintegerChecker&lt;uint32_t&gt;());</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> tid;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_rayleigh_conf.html#a0db880b2e60410eef2071a73e12f313c">   67</a></span>&#160;<a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a0db880b2e60410eef2071a73e12f313c">SatRayleighConf::SatRayleighConf</a>()</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    : m_elevationCount(<a class="code" href="classns3_1_1_sat_markov_conf.html">SatMarkovConf</a>::DEFAULT_ELEVATION_COUNT),</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      m_stateCount(<a class="code" href="classns3_1_1_sat_markov_conf.html">SatMarkovConf</a>::DEFAULT_STATE_COUNT)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; <a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a6ec185eb379f10b7aea398548347497e">m_elevationCount</a>; i++)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        std::vector&lt;std::vector&lt;double&gt;&gt; states;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">for</span> (uint32_t j = 0; j &lt; <a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a04d6e07acb37e36008399adc1e55330b">m_stateCount</a>; j++)</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            std::vector&lt;double&gt; parameters;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">for</span> (uint32_t k = 0; k &lt; <a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a13f311b199f3e1dc3a2a965cb09d5577">SatRayleighConf::DEFAULT_RAYLEIGH_PARAMETER_COUNT</a>; k++)</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                parameters.push_back(<a class="code" href="namespacens3.html#ae7c44a00f43a966a55ea99c3c24757f0">g_RayleighParameters</a>[i][j][k]);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            states.push_back(parameters);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a3debc5eacc402334064de48e9f0a761e">m_rayleighParameters</a>.push_back(states);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_rayleigh_conf.html#afd654bbe19b0f022ee23600f72ce0342">   91</a></span>&#160;<a class="code" href="classns3_1_1_sat_rayleigh_conf.html#afd654bbe19b0f022ee23600f72ce0342">SatRayleighConf::~SatRayleighConf</a>()</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a3a812a5efc1ea7d3a1a882e7bf1a5b19">Reset</a>();</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;std::vector&lt;std::vector&lt;double&gt;&gt;</div>
-<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_rayleigh_conf.html#a0cc4006fc9179e411aba84915171c61b">   99</a></span>&#160;<a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a0cc4006fc9179e411aba84915171c61b">SatRayleighConf::GetParameters</a>(uint32_t set)</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;{</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span> &lt;&lt; set);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">if</span> (set &gt;= <a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a6ec185eb379f10b7aea398548347497e">m_elevationCount</a>)</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        NS_FATAL_ERROR(<span class="stringliteral">&quot;SatRayleighConf::GetParameters - Invalid set&quot;</span>);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a3debc5eacc402334064de48e9f0a761e">m_rayleighParameters</a>[set];</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_rayleigh_conf.html#a3a812a5efc1ea7d3a1a882e7bf1a5b19">  112</a></span>&#160;<a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a3a812a5efc1ea7d3a1a882e7bf1a5b19">SatRayleighConf::Reset</a>()</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; <a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a6ec185eb379f10b7aea398548347497e">m_elevationCount</a>; i++)</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">for</span> (uint32_t j = 0; j &lt; <a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a04d6e07acb37e36008399adc1e55330b">m_stateCount</a>; j++)</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a3debc5eacc402334064de48e9f0a761e">m_rayleighParameters</a>[i][j].clear();</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_rayleigh_conf.html#a9e1555e9450b075818601e8afac9974c">  126</a></span>&#160;<a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a9e1555e9450b075818601e8afac9974c">SatRayleighConf::DoDispose</a>()</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;{</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a3a812a5efc1ea7d3a1a882e7bf1a5b19">Reset</a>();</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    SatBaseFaderConf::DoDispose();</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;} <span class="comment">// namespace ns3</span></div>
-<div class="ttc" id="aclassns3_1_1_sat_base_fader_conf_html"><div class="ttname"><a href="classns3_1_1_sat_base_fader_conf.html">ns3::SatBaseFaderConf</a></div><div class="ttdoc">Base class for fader configuration classes.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-base-fader-conf_8h_source.html#l00039">satellite-base-fader-conf.h:40</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_markov_conf_html"><div class="ttname"><a href="classns3_1_1_sat_markov_conf.html">ns3::SatMarkovConf</a></div><div class="ttdoc">A configuration class for three state Markov model.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-markov-conf_8h_source.html#l00045">satellite-markov-conf.h:46</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_markov_conf_html_a13f7aef28f06a72419c0f02bc6953abf"><div class="ttname"><a href="classns3_1_1_sat_markov_conf.html#a13f7aef28f06a72419c0f02bc6953abf">ns3::SatMarkovConf::DEFAULT_ELEVATION_COUNT</a></div><div class="ttdeci">static const uint32_t DEFAULT_ELEVATION_COUNT</div><div class="ttdoc">Default elevation count.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-markov-conf_8h_source.html#l00060">satellite-markov-conf.h:60</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_markov_conf_html_ab5860971d15ba074f83ee1b651293e86"><div class="ttname"><a href="classns3_1_1_sat_markov_conf.html#ab5860971d15ba074f83ee1b651293e86">ns3::SatMarkovConf::DEFAULT_STATE_COUNT</a></div><div class="ttdeci">static const uint32_t DEFAULT_STATE_COUNT</div><div class="ttdoc">Default state count.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-markov-conf_8h_source.html#l00065">satellite-markov-conf.h:65</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_rayleigh_conf_html_a04d6e07acb37e36008399adc1e55330b"><div class="ttname"><a href="classns3_1_1_sat_rayleigh_conf.html#a04d6e07acb37e36008399adc1e55330b">ns3::SatRayleighConf::m_stateCount</a></div><div class="ttdeci">uint32_t m_stateCount</div><div class="ttdoc">Number of states.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-rayleigh-conf_8h_source.html#l00086">satellite-rayleigh-conf.h:86</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_rayleigh_conf_html_a0cc4006fc9179e411aba84915171c61b"><div class="ttname"><a href="classns3_1_1_sat_rayleigh_conf.html#a0cc4006fc9179e411aba84915171c61b">ns3::SatRayleighConf::GetParameters</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; double &gt; &gt; GetParameters(uint32_t set)</div><div class="ttdoc">Function for getting the Rayleigh parameters.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-rayleigh-conf_8cc_source.html#l00099">satellite-rayleigh-conf.cc:99</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_rayleigh_conf_html_a0db880b2e60410eef2071a73e12f313c"><div class="ttname"><a href="classns3_1_1_sat_rayleigh_conf.html#a0db880b2e60410eef2071a73e12f313c">ns3::SatRayleighConf::SatRayleighConf</a></div><div class="ttdeci">SatRayleighConf()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-rayleigh-conf_8cc_source.html#l00067">satellite-rayleigh-conf.cc:67</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_rayleigh_conf_html_a13f311b199f3e1dc3a2a965cb09d5577"><div class="ttname"><a href="classns3_1_1_sat_rayleigh_conf.html#a13f311b199f3e1dc3a2a965cb09d5577">ns3::SatRayleighConf::DEFAULT_RAYLEIGH_PARAMETER_COUNT</a></div><div class="ttdeci">static const uint32_t DEFAULT_RAYLEIGH_PARAMETER_COUNT</div><div class="ttdoc">Default Rayleigh parameter count.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-rayleigh-conf_8h_source.html#l00042">satellite-rayleigh-conf.h:42</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_rayleigh_conf_html_a3a812a5efc1ea7d3a1a882e7bf1a5b19"><div class="ttname"><a href="classns3_1_1_sat_rayleigh_conf.html#a3a812a5efc1ea7d3a1a882e7bf1a5b19">ns3::SatRayleighConf::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdoc">Clear used variables.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-rayleigh-conf_8cc_source.html#l00112">satellite-rayleigh-conf.cc:112</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_rayleigh_conf_html_a3debc5eacc402334064de48e9f0a761e"><div class="ttname"><a href="classns3_1_1_sat_rayleigh_conf.html#a3debc5eacc402334064de48e9f0a761e">ns3::SatRayleighConf::m_rayleighParameters</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; std::vector&lt; double &gt; &gt; &gt; m_rayleighParameters</div><div class="ttdoc">Rayleigh model parameters.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-rayleigh-conf_8h_source.html#l00091">satellite-rayleigh-conf.h:91</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_rayleigh_conf_html_a3e904d76f479f981db4f762386a9a931"><div class="ttname"><a href="classns3_1_1_sat_rayleigh_conf.html#a3e904d76f479f981db4f762386a9a931">ns3::SatRayleighConf::GetTypeId</a></div><div class="ttdeci">static TypeId GetTypeId(void)</div><div class="ttdoc">NS-3 function for type id.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-rayleigh-conf_8cc_source.html#l00049">satellite-rayleigh-conf.cc:49</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_rayleigh_conf_html_a6ec185eb379f10b7aea398548347497e"><div class="ttname"><a href="classns3_1_1_sat_rayleigh_conf.html#a6ec185eb379f10b7aea398548347497e">ns3::SatRayleighConf::m_elevationCount</a></div><div class="ttdeci">uint32_t m_elevationCount</div><div class="ttdoc">Number of parameters sets.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-rayleigh-conf_8h_source.html#l00081">satellite-rayleigh-conf.h:81</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_rayleigh_conf_html_a9e1555e9450b075818601e8afac9974c"><div class="ttname"><a href="classns3_1_1_sat_rayleigh_conf.html#a9e1555e9450b075818601e8afac9974c">ns3::SatRayleighConf::DoDispose</a></div><div class="ttdeci">void DoDispose()</div><div class="ttdoc">Do needed dispose actions.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-rayleigh-conf_8cc_source.html#l00126">satellite-rayleigh-conf.cc:126</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_rayleigh_conf_html_afd654bbe19b0f022ee23600f72ce0342"><div class="ttname"><a href="classns3_1_1_sat_rayleigh_conf.html#afd654bbe19b0f022ee23600f72ce0342">ns3::SatRayleighConf::~SatRayleighConf</a></div><div class="ttdeci">~SatRayleighConf()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-rayleigh-conf_8cc_source.html#l00091">satellite-rayleigh-conf.cc:91</a></div></div>
-<div class="ttc" id="anamespacens3_html"><div class="ttname"><a href="namespacens3.html">ns3</a></div><div class="ttdoc">SatArqSequenceNumber is handling the sequence numbers for the ARQ process.</div><div class="ttdef"><b>Definition:</b> <a href="sat-link-results-plot_8cc_source.html#l00039">sat-link-results-plot.cc:40</a></div></div>
-<div class="ttc" id="anamespacens3_html_ae7c44a00f43a966a55ea99c3c24757f0"><div class="ttname"><a href="namespacens3.html#ae7c44a00f43a966a55ea99c3c24757f0">ns3::g_RayleighParameters</a></div><div class="ttdeci">static const double g_RayleighParameters[SatMarkovConf::DEFAULT_ELEVATION_COUNT][SatMarkovConf::DEFAULT_STATE_COUNT][SatRayleighConf::DEFAULT_RAYLEIGH_PARAMETER_COUNT]</div><div class="ttdef"><b>Definition:</b> <a href="satellite-rayleigh-conf_8cc_source.html#l00033">satellite-rayleigh-conf.cc:35</a></div></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacens3.html">ns3</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;NS_OBJECT_ENSURE_REGISTERED(SatRayleighConf);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;NS_LOG_COMPONENT_DEFINE(<span class="stringliteral">&quot;SatRayleighConf&quot;</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="namespacens3.html#ae7c44a00f43a966a55ea99c3c24757f0">   34</a></span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="namespacens3.html#ae7c44a00f43a966a55ea99c3c24757f0">g_RayleighParameters</a>[<a class="code" href="classns3_1_1_sat_markov_conf.html#a13f7aef28f06a72419c0f02bc6953abf">SatMarkovConf::DEFAULT_ELEVATION_COUNT</a>]</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                        [<a class="code" href="classns3_1_1_sat_markov_conf.html#ab5860971d15ba074f83ee1b651293e86">SatMarkovConf::DEFAULT_STATE_COUNT</a>]</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                                        [<a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a13f311b199f3e1dc3a2a965cb09d5577">SatRayleighConf::DEFAULT_RAYLEIGH_PARAMETER_COUNT</a>] = {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                            <span class="comment">/* Elevation 30 degrees */</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                            {{10, 10}, {10, 10}, {10, 10}}};</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;TypeId</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_rayleigh_conf.html#a3e904d76f479f981db4f762386a9a931">   50</a></span>&#160;<a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a3e904d76f479f981db4f762386a9a931">SatRayleighConf::GetTypeId</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">static</span> TypeId tid = TypeId(<span class="stringliteral">&quot;ns3::SatRayleighConf&quot;</span>)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                            .SetParent&lt;<a class="code" href="classns3_1_1_sat_base_fader_conf.html">SatBaseFaderConf</a>&gt;()</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                            .AddConstructor&lt;SatRayleighConf&gt;()</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                            .AddAttribute(<span class="stringliteral">&quot;ElevationCount&quot;</span>,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                                          <span class="stringliteral">&quot;Number of elevation sets in the Markov model.&quot;</span>,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                          UintegerValue(<a class="code" href="classns3_1_1_sat_markov_conf.html#a13f7aef28f06a72419c0f02bc6953abf">SatMarkovConf::DEFAULT_ELEVATION_COUNT</a>),</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                          MakeUintegerAccessor(&amp;<a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a6ec185eb379f10b7aea398548347497e">SatRayleighConf::m_elevationCount</a>),</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                          MakeUintegerChecker&lt;uint32_t&gt;())</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                            .AddAttribute(<span class="stringliteral">&quot;StateCount&quot;</span>,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                                          <span class="stringliteral">&quot;Number of states in the Markov model.&quot;</span>,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                                          UintegerValue(<a class="code" href="classns3_1_1_sat_markov_conf.html#ab5860971d15ba074f83ee1b651293e86">SatMarkovConf::DEFAULT_STATE_COUNT</a>),</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                          MakeUintegerAccessor(&amp;<a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a04d6e07acb37e36008399adc1e55330b">SatRayleighConf::m_stateCount</a>),</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                          MakeUintegerChecker&lt;uint32_t&gt;());</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> tid;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_rayleigh_conf.html#a0db880b2e60410eef2071a73e12f313c">   68</a></span>&#160;<a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a0db880b2e60410eef2071a73e12f313c">SatRayleighConf::SatRayleighConf</a>()</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    : m_elevationCount(<a class="code" href="classns3_1_1_sat_markov_conf.html">SatMarkovConf</a>::DEFAULT_ELEVATION_COUNT),</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      m_stateCount(<a class="code" href="classns3_1_1_sat_markov_conf.html">SatMarkovConf</a>::DEFAULT_STATE_COUNT)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; <a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a6ec185eb379f10b7aea398548347497e">m_elevationCount</a>; i++)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        std::vector&lt;std::vector&lt;double&gt;&gt; states;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">for</span> (uint32_t j = 0; j &lt; <a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a04d6e07acb37e36008399adc1e55330b">m_stateCount</a>; j++)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            std::vector&lt;double&gt; parameters;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">for</span> (uint32_t k = 0; k &lt; <a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a13f311b199f3e1dc3a2a965cb09d5577">SatRayleighConf::DEFAULT_RAYLEIGH_PARAMETER_COUNT</a>; k++)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                parameters.push_back(<a class="code" href="namespacens3.html#ae7c44a00f43a966a55ea99c3c24757f0">g_RayleighParameters</a>[i][j][k]);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            states.push_back(parameters);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a3debc5eacc402334064de48e9f0a761e">m_rayleighParameters</a>.push_back(states);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_rayleigh_conf.html#afd654bbe19b0f022ee23600f72ce0342">   92</a></span>&#160;<a class="code" href="classns3_1_1_sat_rayleigh_conf.html#afd654bbe19b0f022ee23600f72ce0342">SatRayleighConf::~SatRayleighConf</a>()</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a3a812a5efc1ea7d3a1a882e7bf1a5b19">Reset</a>();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;std::vector&lt;std::vector&lt;double&gt;&gt;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_rayleigh_conf.html#a0cc4006fc9179e411aba84915171c61b">  100</a></span>&#160;<a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a0cc4006fc9179e411aba84915171c61b">SatRayleighConf::GetParameters</a>(uint32_t set)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span> &lt;&lt; set);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">if</span> (set &gt;= <a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a6ec185eb379f10b7aea398548347497e">m_elevationCount</a>)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        NS_FATAL_ERROR(<span class="stringliteral">&quot;SatRayleighConf::GetParameters - Invalid set&quot;</span>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a3debc5eacc402334064de48e9f0a761e">m_rayleighParameters</a>[set];</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_rayleigh_conf.html#a3a812a5efc1ea7d3a1a882e7bf1a5b19">  113</a></span>&#160;<a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a3a812a5efc1ea7d3a1a882e7bf1a5b19">SatRayleighConf::Reset</a>()</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;{</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; <a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a6ec185eb379f10b7aea398548347497e">m_elevationCount</a>; i++)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">for</span> (uint32_t j = 0; j &lt; <a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a04d6e07acb37e36008399adc1e55330b">m_stateCount</a>; j++)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a3debc5eacc402334064de48e9f0a761e">m_rayleighParameters</a>[i][j].clear();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_rayleigh_conf.html#a9e1555e9450b075818601e8afac9974c">  127</a></span>&#160;<a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a9e1555e9450b075818601e8afac9974c">SatRayleighConf::DoDispose</a>()</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;{</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="code" href="classns3_1_1_sat_rayleigh_conf.html#a3a812a5efc1ea7d3a1a882e7bf1a5b19">Reset</a>();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    SatBaseFaderConf::DoDispose();</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;} <span class="comment">// namespace ns3</span></div>
+<div class="ttc" id="aclassns3_1_1_sat_base_fader_conf_html"><div class="ttname"><a href="classns3_1_1_sat_base_fader_conf.html">ns3::SatBaseFaderConf</a></div><div class="ttdoc">Base class for fader configuration classes.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-base-fader-conf_8h_source.html#l00042">satellite-base-fader-conf.h:43</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_markov_conf_html"><div class="ttname"><a href="classns3_1_1_sat_markov_conf.html">ns3::SatMarkovConf</a></div><div class="ttdoc">A configuration class for three state Markov model.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-markov-conf_8h_source.html#l00049">satellite-markov-conf.h:50</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_markov_conf_html_a13f7aef28f06a72419c0f02bc6953abf"><div class="ttname"><a href="classns3_1_1_sat_markov_conf.html#a13f7aef28f06a72419c0f02bc6953abf">ns3::SatMarkovConf::DEFAULT_ELEVATION_COUNT</a></div><div class="ttdeci">static const uint32_t DEFAULT_ELEVATION_COUNT</div><div class="ttdoc">Default elevation count.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-markov-conf_8h_source.html#l00064">satellite-markov-conf.h:64</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_markov_conf_html_ab5860971d15ba074f83ee1b651293e86"><div class="ttname"><a href="classns3_1_1_sat_markov_conf.html#ab5860971d15ba074f83ee1b651293e86">ns3::SatMarkovConf::DEFAULT_STATE_COUNT</a></div><div class="ttdeci">static const uint32_t DEFAULT_STATE_COUNT</div><div class="ttdoc">Default state count.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-markov-conf_8h_source.html#l00069">satellite-markov-conf.h:69</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_rayleigh_conf_html_a04d6e07acb37e36008399adc1e55330b"><div class="ttname"><a href="classns3_1_1_sat_rayleigh_conf.html#a04d6e07acb37e36008399adc1e55330b">ns3::SatRayleighConf::m_stateCount</a></div><div class="ttdeci">uint32_t m_stateCount</div><div class="ttdoc">Number of states.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-rayleigh-conf_8h_source.html#l00089">satellite-rayleigh-conf.h:89</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_rayleigh_conf_html_a0cc4006fc9179e411aba84915171c61b"><div class="ttname"><a href="classns3_1_1_sat_rayleigh_conf.html#a0cc4006fc9179e411aba84915171c61b">ns3::SatRayleighConf::GetParameters</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; double &gt; &gt; GetParameters(uint32_t set)</div><div class="ttdoc">Function for getting the Rayleigh parameters.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-rayleigh-conf_8cc_source.html#l00100">satellite-rayleigh-conf.cc:100</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_rayleigh_conf_html_a0db880b2e60410eef2071a73e12f313c"><div class="ttname"><a href="classns3_1_1_sat_rayleigh_conf.html#a0db880b2e60410eef2071a73e12f313c">ns3::SatRayleighConf::SatRayleighConf</a></div><div class="ttdeci">SatRayleighConf()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-rayleigh-conf_8cc_source.html#l00068">satellite-rayleigh-conf.cc:68</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_rayleigh_conf_html_a13f311b199f3e1dc3a2a965cb09d5577"><div class="ttname"><a href="classns3_1_1_sat_rayleigh_conf.html#a13f311b199f3e1dc3a2a965cb09d5577">ns3::SatRayleighConf::DEFAULT_RAYLEIGH_PARAMETER_COUNT</a></div><div class="ttdeci">static const uint32_t DEFAULT_RAYLEIGH_PARAMETER_COUNT</div><div class="ttdoc">Default Rayleigh parameter count.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-rayleigh-conf_8h_source.html#l00045">satellite-rayleigh-conf.h:45</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_rayleigh_conf_html_a3a812a5efc1ea7d3a1a882e7bf1a5b19"><div class="ttname"><a href="classns3_1_1_sat_rayleigh_conf.html#a3a812a5efc1ea7d3a1a882e7bf1a5b19">ns3::SatRayleighConf::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdoc">Clear used variables.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-rayleigh-conf_8cc_source.html#l00113">satellite-rayleigh-conf.cc:113</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_rayleigh_conf_html_a3debc5eacc402334064de48e9f0a761e"><div class="ttname"><a href="classns3_1_1_sat_rayleigh_conf.html#a3debc5eacc402334064de48e9f0a761e">ns3::SatRayleighConf::m_rayleighParameters</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; std::vector&lt; double &gt; &gt; &gt; m_rayleighParameters</div><div class="ttdoc">Rayleigh model parameters.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-rayleigh-conf_8h_source.html#l00094">satellite-rayleigh-conf.h:94</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_rayleigh_conf_html_a3e904d76f479f981db4f762386a9a931"><div class="ttname"><a href="classns3_1_1_sat_rayleigh_conf.html#a3e904d76f479f981db4f762386a9a931">ns3::SatRayleighConf::GetTypeId</a></div><div class="ttdeci">static TypeId GetTypeId(void)</div><div class="ttdoc">NS-3 function for type id.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-rayleigh-conf_8cc_source.html#l00050">satellite-rayleigh-conf.cc:50</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_rayleigh_conf_html_a6ec185eb379f10b7aea398548347497e"><div class="ttname"><a href="classns3_1_1_sat_rayleigh_conf.html#a6ec185eb379f10b7aea398548347497e">ns3::SatRayleighConf::m_elevationCount</a></div><div class="ttdeci">uint32_t m_elevationCount</div><div class="ttdoc">Number of parameters sets.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-rayleigh-conf_8h_source.html#l00084">satellite-rayleigh-conf.h:84</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_rayleigh_conf_html_a9e1555e9450b075818601e8afac9974c"><div class="ttname"><a href="classns3_1_1_sat_rayleigh_conf.html#a9e1555e9450b075818601e8afac9974c">ns3::SatRayleighConf::DoDispose</a></div><div class="ttdeci">void DoDispose()</div><div class="ttdoc">Do needed dispose actions.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-rayleigh-conf_8cc_source.html#l00127">satellite-rayleigh-conf.cc:127</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_rayleigh_conf_html_afd654bbe19b0f022ee23600f72ce0342"><div class="ttname"><a href="classns3_1_1_sat_rayleigh_conf.html#afd654bbe19b0f022ee23600f72ce0342">ns3::SatRayleighConf::~SatRayleighConf</a></div><div class="ttdeci">~SatRayleighConf()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-rayleigh-conf_8cc_source.html#l00092">satellite-rayleigh-conf.cc:92</a></div></div>
+<div class="ttc" id="anamespacens3_html"><div class="ttname"><a href="namespacens3.html">ns3</a></div><div class="ttdoc">SatArqSequenceNumber is handling the sequence numbers for the ARQ process.</div><div class="ttdef"><b>Definition:</b> <a href="sat-link-results-plot_8cc_source.html#l00040">sat-link-results-plot.cc:41</a></div></div>
+<div class="ttc" id="anamespacens3_html_ae7c44a00f43a966a55ea99c3c24757f0"><div class="ttname"><a href="namespacens3.html#ae7c44a00f43a966a55ea99c3c24757f0">ns3::g_RayleighParameters</a></div><div class="ttdeci">static const double g_RayleighParameters[SatMarkovConf::DEFAULT_ELEVATION_COUNT][SatMarkovConf::DEFAULT_STATE_COUNT][SatRayleighConf::DEFAULT_RAYLEIGH_PARAMETER_COUNT]</div><div class="ttdef"><b>Definition:</b> <a href="satellite-rayleigh-conf_8cc_source.html#l00034">satellite-rayleigh-conf.cc:36</a></div></div>
 <div class="ttc" id="asatellite-markov-conf_8h_html"><div class="ttname"><a href="satellite-markov-conf_8h.html">satellite-markov-conf.h</a></div></div>
 <div class="ttc" id="asatellite-rayleigh-conf_8h_html"><div class="ttname"><a href="satellite-rayleigh-conf_8h.html">satellite-rayleigh-conf.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

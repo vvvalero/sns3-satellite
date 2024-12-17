@@ -149,67 +149,73 @@ $(document).ready(function(){initNavTree('satellite-free-space-loss_8cc_source.h
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="satellite-free-space-loss_8h.html">satellite-free-space-loss.h</a>&quot;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="satellite-const-variables_8h.html">satellite-const-variables.h</a>&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="satellite-utils_8h.html">satellite-utils.h</a>&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;ns3/double.h&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;ns3/log.h&gt;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;ns3/string.h&gt;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;NS_LOG_COMPONENT_DEFINE(<span class="stringliteral">&quot;SatFreeSpaceLoss&quot;</span>);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacens3.html">ns3</a></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;NS_OBJECT_ENSURE_REGISTERED(SatFreeSpaceLoss);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;TypeId</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_free_space_loss.html#a0debc7abfc9af27f60f7972883ad0f97">   38</a></span>&#160;<a class="code" href="classns3_1_1_sat_free_space_loss.html#a0debc7abfc9af27f60f7972883ad0f97">SatFreeSpaceLoss::GetTypeId</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">static</span> TypeId tid =</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        TypeId(<span class="stringliteral">&quot;ns3::SatFreeSpaceLoss&quot;</span>).SetParent&lt;Object&gt;().AddConstructor&lt;SatFreeSpaceLoss&gt;();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> tid;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_free_space_loss.html#a9ddf48b04fc2b2a07398e644ddd92e1d">   45</a></span>&#160;<a class="code" href="classns3_1_1_sat_free_space_loss.html#a9ddf48b04fc2b2a07398e644ddd92e1d">SatFreeSpaceLoss::SatFreeSpaceLoss</a>()</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="satellite-mobility-model_8h.html">satellite-mobility-model.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="satellite-utils_8h.html">satellite-utils.h</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;ns3/double.h&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;ns3/log.h&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;ns3/string.h&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;NS_LOG_COMPONENT_DEFINE(<span class="stringliteral">&quot;SatFreeSpaceLoss&quot;</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacens3.html">ns3</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;NS_OBJECT_ENSURE_REGISTERED(SatFreeSpaceLoss);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;TypeId</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_free_space_loss.html#a0debc7abfc9af27f60f7972883ad0f97">   42</a></span>&#160;<a class="code" href="classns3_1_1_sat_free_space_loss.html#a0debc7abfc9af27f60f7972883ad0f97">SatFreeSpaceLoss::GetTypeId</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">static</span> TypeId tid =</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        TypeId(<span class="stringliteral">&quot;ns3::SatFreeSpaceLoss&quot;</span>).SetParent&lt;Object&gt;().AddConstructor&lt;SatFreeSpaceLoss&gt;();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> tid;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">double</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_free_space_loss.html#a9e1ddf8ea860312369d58682ccc44733">   50</a></span>&#160;<a class="code" href="classns3_1_1_sat_free_space_loss.html#a9e1ddf8ea860312369d58682ccc44733">SatFreeSpaceLoss::GetFsldB</a>(Ptr&lt;MobilityModel&gt; a, Ptr&lt;MobilityModel&gt; b, <span class="keywordtype">double</span> frequencyHz)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span> &lt;&lt; frequencyHz);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">double</span> fsl_dB;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    fsl_dB = <a class="code" href="classns3_1_1_sat_utils.html#a9f677cdf81c7bdbee6a036b6084c7368">SatUtils::LinearToDb</a>(<a class="code" href="classns3_1_1_sat_free_space_loss.html#a155b50cd65d915f43735866bb15dc07c">GetFsl</a>(a, b, frequencyHz));</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_free_space_loss.html#a9ddf48b04fc2b2a07398e644ddd92e1d">   49</a></span>&#160;<a class="code" href="classns3_1_1_sat_free_space_loss.html#a9ddf48b04fc2b2a07398e644ddd92e1d">SatFreeSpaceLoss::SatFreeSpaceLoss</a>()</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">double</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_free_space_loss.html#a9e1ddf8ea860312369d58682ccc44733">   54</a></span>&#160;<a class="code" href="classns3_1_1_sat_free_space_loss.html#a9e1ddf8ea860312369d58682ccc44733">SatFreeSpaceLoss::GetFsldB</a>(Ptr&lt;MobilityModel&gt; a, Ptr&lt;MobilityModel&gt; b, <span class="keywordtype">double</span> frequencyHz)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span> &lt;&lt; frequencyHz);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> fsl_dB;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">double</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_free_space_loss.html#a155b50cd65d915f43735866bb15dc07c">   62</a></span>&#160;<a class="code" href="classns3_1_1_sat_free_space_loss.html#a155b50cd65d915f43735866bb15dc07c">SatFreeSpaceLoss::GetFsl</a>(Ptr&lt;MobilityModel&gt; a, Ptr&lt;MobilityModel&gt; b, <span class="keywordtype">double</span> frequencyHz)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span> &lt;&lt; frequencyHz);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">double</span> fsl;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">double</span> distance = a-&gt;GetDistanceFrom(b);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    fsl =</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        std::pow(((4.0 * M_PI * distance * frequencyHz) / <a class="code" href="namespacens3_1_1_sat_const_variables.html#a13d38e3eb790509dddd1d01d5eb3b151">SatConstVariables::SPEED_OF_LIGHT</a>), 2.0);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> fsl;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;} <span class="comment">// namespace ns3</span></div>
-<div class="ttc" id="aclassns3_1_1_sat_free_space_loss_html_a0debc7abfc9af27f60f7972883ad0f97"><div class="ttname"><a href="classns3_1_1_sat_free_space_loss.html#a0debc7abfc9af27f60f7972883ad0f97">ns3::SatFreeSpaceLoss::GetTypeId</a></div><div class="ttdeci">static TypeId GetTypeId(void)</div><div class="ttdoc">Get the type ID.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-free-space-loss_8cc_source.html#l00038">satellite-free-space-loss.cc:38</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_free_space_loss_html_a155b50cd65d915f43735866bb15dc07c"><div class="ttname"><a href="classns3_1_1_sat_free_space_loss.html#a155b50cd65d915f43735866bb15dc07c">ns3::SatFreeSpaceLoss::GetFsl</a></div><div class="ttdeci">virtual double GetFsl(Ptr&lt; MobilityModel &gt; a, Ptr&lt; MobilityModel &gt; b, double frequencyHz) const</div><div class="ttdoc">Calculate the free-space loss in linear format.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-free-space-loss_8cc_source.html#l00062">satellite-free-space-loss.cc:62</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_free_space_loss_html_a9ddf48b04fc2b2a07398e644ddd92e1d"><div class="ttname"><a href="classns3_1_1_sat_free_space_loss.html#a9ddf48b04fc2b2a07398e644ddd92e1d">ns3::SatFreeSpaceLoss::SatFreeSpaceLoss</a></div><div class="ttdeci">SatFreeSpaceLoss()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-free-space-loss_8cc_source.html#l00045">satellite-free-space-loss.cc:45</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_free_space_loss_html_a9e1ddf8ea860312369d58682ccc44733"><div class="ttname"><a href="classns3_1_1_sat_free_space_loss.html#a9e1ddf8ea860312369d58682ccc44733">ns3::SatFreeSpaceLoss::GetFsldB</a></div><div class="ttdeci">virtual double GetFsldB(Ptr&lt; MobilityModel &gt; a, Ptr&lt; MobilityModel &gt; b, double frequencyHz) const</div><div class="ttdoc">Calculate the free-space loss in dB.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-free-space-loss_8cc_source.html#l00050">satellite-free-space-loss.cc:50</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_utils_html_a9f677cdf81c7bdbee6a036b6084c7368"><div class="ttname"><a href="classns3_1_1_sat_utils.html#a9f677cdf81c7bdbee6a036b6084c7368">ns3::SatUtils::LinearToDb</a></div><div class="ttdeci">static T LinearToDb(T linear)</div><div class="ttdoc">Converts linear to decibels.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-utils_8h_source.html#l00166">satellite-utils.h:166</a></div></div>
-<div class="ttc" id="anamespacens3_1_1_sat_const_variables_html_a13d38e3eb790509dddd1d01d5eb3b151"><div class="ttname"><a href="namespacens3_1_1_sat_const_variables.html#a13d38e3eb790509dddd1d01d5eb3b151">ns3::SatConstVariables::SPEED_OF_LIGHT</a></div><div class="ttdeci">constexpr double SPEED_OF_LIGHT</div><div class="ttdoc">Constant definition for the speed of light in m/s.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-const-variables_8h_source.html#l00040">satellite-const-variables.h:40</a></div></div>
-<div class="ttc" id="anamespacens3_html"><div class="ttname"><a href="namespacens3.html">ns3</a></div><div class="ttdoc">SatArqSequenceNumber is handling the sequence numbers for the ARQ process.</div><div class="ttdef"><b>Definition:</b> <a href="sat-link-results-plot_8cc_source.html#l00039">sat-link-results-plot.cc:40</a></div></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">double</span> fsl_dB;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    fsl_dB = <a class="code" href="classns3_1_1_sat_utils.html#a9f677cdf81c7bdbee6a036b6084c7368">SatUtils::LinearToDb</a>(<a class="code" href="classns3_1_1_sat_free_space_loss.html#a155b50cd65d915f43735866bb15dc07c">GetFsl</a>(a, b, frequencyHz));</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> fsl_dB;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">double</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_free_space_loss.html#a155b50cd65d915f43735866bb15dc07c">   66</a></span>&#160;<a class="code" href="classns3_1_1_sat_free_space_loss.html#a155b50cd65d915f43735866bb15dc07c">SatFreeSpaceLoss::GetFsl</a>(Ptr&lt;MobilityModel&gt; a, Ptr&lt;MobilityModel&gt; b, <span class="keywordtype">double</span> frequencyHz)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span> &lt;&lt; frequencyHz);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">double</span> fsl;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">double</span> distance =</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        DynamicCast&lt;SatMobilityModel&gt;(a)-&gt;GetDistanceFrom(DynamicCast&lt;SatMobilityModel&gt;(b));</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    fsl =</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        std::pow(((4.0 * M_PI * distance * frequencyHz) / <a class="code" href="namespacens3_1_1_sat_const_variables.html#a13d38e3eb790509dddd1d01d5eb3b151">SatConstVariables::SPEED_OF_LIGHT</a>), 2.0);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> fsl;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;} <span class="comment">// namespace ns3</span></div>
+<div class="ttc" id="aclassns3_1_1_sat_free_space_loss_html_a0debc7abfc9af27f60f7972883ad0f97"><div class="ttname"><a href="classns3_1_1_sat_free_space_loss.html#a0debc7abfc9af27f60f7972883ad0f97">ns3::SatFreeSpaceLoss::GetTypeId</a></div><div class="ttdeci">static TypeId GetTypeId(void)</div><div class="ttdoc">Get the type ID.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-free-space-loss_8cc_source.html#l00042">satellite-free-space-loss.cc:42</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_free_space_loss_html_a155b50cd65d915f43735866bb15dc07c"><div class="ttname"><a href="classns3_1_1_sat_free_space_loss.html#a155b50cd65d915f43735866bb15dc07c">ns3::SatFreeSpaceLoss::GetFsl</a></div><div class="ttdeci">virtual double GetFsl(Ptr&lt; MobilityModel &gt; a, Ptr&lt; MobilityModel &gt; b, double frequencyHz) const</div><div class="ttdoc">Calculate the free-space loss in linear format.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-free-space-loss_8cc_source.html#l00066">satellite-free-space-loss.cc:66</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_free_space_loss_html_a9ddf48b04fc2b2a07398e644ddd92e1d"><div class="ttname"><a href="classns3_1_1_sat_free_space_loss.html#a9ddf48b04fc2b2a07398e644ddd92e1d">ns3::SatFreeSpaceLoss::SatFreeSpaceLoss</a></div><div class="ttdeci">SatFreeSpaceLoss()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-free-space-loss_8cc_source.html#l00049">satellite-free-space-loss.cc:49</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_free_space_loss_html_a9e1ddf8ea860312369d58682ccc44733"><div class="ttname"><a href="classns3_1_1_sat_free_space_loss.html#a9e1ddf8ea860312369d58682ccc44733">ns3::SatFreeSpaceLoss::GetFsldB</a></div><div class="ttdeci">virtual double GetFsldB(Ptr&lt; MobilityModel &gt; a, Ptr&lt; MobilityModel &gt; b, double frequencyHz) const</div><div class="ttdoc">Calculate the free-space loss in dB.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-free-space-loss_8cc_source.html#l00054">satellite-free-space-loss.cc:54</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_utils_html_a9f677cdf81c7bdbee6a036b6084c7368"><div class="ttname"><a href="classns3_1_1_sat_utils.html#a9f677cdf81c7bdbee6a036b6084c7368">ns3::SatUtils::LinearToDb</a></div><div class="ttdeci">static T LinearToDb(T linear)</div><div class="ttdoc">Converts linear to decibels.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-utils_8h_source.html#l00170">satellite-utils.h:170</a></div></div>
+<div class="ttc" id="anamespacens3_1_1_sat_const_variables_html_a13d38e3eb790509dddd1d01d5eb3b151"><div class="ttname"><a href="namespacens3_1_1_sat_const_variables.html#a13d38e3eb790509dddd1d01d5eb3b151">ns3::SatConstVariables::SPEED_OF_LIGHT</a></div><div class="ttdeci">constexpr double SPEED_OF_LIGHT</div><div class="ttdoc">Constant definition for the speed of light in m/s.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-const-variables_8h_source.html#l00043">satellite-const-variables.h:43</a></div></div>
+<div class="ttc" id="anamespacens3_html"><div class="ttname"><a href="namespacens3.html">ns3</a></div><div class="ttdoc">SatArqSequenceNumber is handling the sequence numbers for the ARQ process.</div><div class="ttdef"><b>Definition:</b> <a href="sat-link-results-plot_8cc_source.html#l00040">sat-link-results-plot.cc:41</a></div></div>
 <div class="ttc" id="asatellite-const-variables_8h_html"><div class="ttname"><a href="satellite-const-variables_8h.html">satellite-const-variables.h</a></div></div>
 <div class="ttc" id="asatellite-free-space-loss_8h_html"><div class="ttname"><a href="satellite-free-space-loss_8h.html">satellite-free-space-loss.h</a></div></div>
+<div class="ttc" id="asatellite-mobility-model_8h_html"><div class="ttname"><a href="satellite-mobility-model_8h.html">satellite-mobility-model.h</a></div></div>
 <div class="ttc" id="asatellite-utils_8h_html"><div class="ttname"><a href="satellite-utils_8h.html">satellite-utils.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

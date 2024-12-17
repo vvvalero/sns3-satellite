@@ -17,7 +17,7 @@ var classns3_1_1_sat_group_helper =
     [ "GetNodesNotAddedFromPosition", "classns3_1_1_sat_group_helper.html#aa1e48e9afa727e4ae1fc7547d328b594", null ],
     [ "GetTypeId", "classns3_1_1_sat_group_helper.html#a6d097449367989b5411fcd3af1001a4e", null ],
     [ "GetUtNodes", "classns3_1_1_sat_group_helper.html#a353c649f938cd0ed305beee0f811ff9f", null ],
-    [ "Init", "classns3_1_1_sat_group_helper.html#a1e4b313a1e638f7c4457a88d4460cc02", null ],
+    [ "Init", "classns3_1_1_sat_group_helper.html#a647ff8891c85a7171dabf6692a22ed0d", null ],
     [ "IsGroupExisting", "classns3_1_1_sat_group_helper.html#aa3d3f1ebaf56fa0d44ea0263159ac189", null ],
     [ "SetSatConstellationEnabled", "classns3_1_1_sat_group_helper.html#acc27317810836f66d7d46e7e84444d55", null ],
     [ "m_additionalNodesPerBeam", "classns3_1_1_sat_group_helper.html#ae6913a41ea9c9e9788ec43fab187c97f", null ],
@@ -25,6 +25,5 @@ var classns3_1_1_sat_group_helper =
     [ "m_groupsMap", "classns3_1_1_sat_group_helper.html#a805a1b36f1cf1dc041d880c64349eaa3", null ],
     [ "m_nodesToAdd", "classns3_1_1_sat_group_helper.html#a6f256b4c933ea93cdbf9a2cfd4f1e393", null ],
     [ "m_satConstellationEnabled", "classns3_1_1_sat_group_helper.html#a9bacccdf559b9166f539282d7e0b3255", null ],
-    [ "m_scenarioCreated", "classns3_1_1_sat_group_helper.html#a99da087383c0bdfbcec0eca7e3575fea", null ],
-    [ "m_uts", "classns3_1_1_sat_group_helper.html#a58ebbc1958588d8439e6dc804353acff", null ]
+    [ "m_scenarioCreated", "classns3_1_1_sat_group_helper.html#a99da087383c0bdfbcec0eca7e3575fea", null ]
 ];

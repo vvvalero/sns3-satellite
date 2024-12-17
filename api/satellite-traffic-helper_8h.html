@@ -124,18 +124,22 @@ $(document).ready(function(){initNavTree('satellite-traffic-helper_8h.html','');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">satellite-traffic-helper.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;ns3/application-container.h&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="satellite-helper_8h_source.html">satellite-helper.h</a>&quot;</code><br />
+<code>#include &lt;ns3/application-container.h&gt;</code><br />
 <code>#include &lt;ns3/cbr-application.h&gt;</code><br />
 <code>#include &lt;ns3/config.h&gt;</code><br />
 <code>#include &lt;ns3/object.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-helper.h&gt;</code><br />
 <code>#include &lt;ns3/satellite-stats-helper-container.h&gt;</code><br />
 <code>#include &lt;ns3/string.h&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for satellite-traffic-helper.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -143,14 +147,56 @@ $(document).ready(function(){initNavTree('satellite-traffic-helper_8h.html','');
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="satellite-traffic-helper_8h__incl.png" border="0" usemap="#a_2builds_2sns3_2satellite_2satellite_2helper_2satellite-traffic-helper_8h" alt=""/></div>
 <map name="a_2builds_2sns3_2satellite_2satellite_2helper_2satellite-traffic-helper_8h" id="a_2builds_2sns3_2satellite_2satellite_2helper_2satellite-traffic-helper_8h">
-<area shape="rect" title=" " alt="" coords="495,5,677,61"/>
-<area shape="rect" title=" " alt="" coords="5,117,204,143"/>
-<area shape="rect" title=" " alt="" coords="228,117,387,143"/>
-<area shape="rect" title=" " alt="" coords="411,117,511,143"/>
-<area shape="rect" title=" " alt="" coords="535,117,637,143"/>
-<area shape="rect" title=" " alt="" coords="661,117,820,143"/>
-<area shape="rect" title=" " alt="" coords="844,109,989,151"/>
-<area shape="rect" title=" " alt="" coords="1014,117,1113,143"/>
+<area shape="rect" title=" " alt="" coords="3885,5,4066,61"/>
+<area shape="rect" href="satellite-helper_8h.html" title=" " alt="" coords="1717,109,1849,136"/>
+<area shape="rect" title=" " alt="" coords="1433,370,1504,397"/>
+<area shape="rect" title=" " alt="" coords="3425,370,3483,397"/>
+<area shape="rect" title=" " alt="" coords="354,370,405,397"/>
+<area shape="rect" title=" " alt="" coords="3946,370,4047,397"/>
+<area shape="rect" title=" " alt="" coords="3767,184,3912,225"/>
+<area shape="rect" title=" " alt="" coords="4037,109,4236,136"/>
+<area shape="rect" title=" " alt="" coords="4260,109,4419,136"/>
+<area shape="rect" title=" " alt="" coords="4443,109,4543,136"/>
+<area shape="rect" title=" " alt="" coords="4567,109,4666,136"/>
+<area shape="rect" href="satellite-beam-helper_8h.html" title=" " alt="" coords="2131,191,2305,218"/>
+<area shape="rect" title=" " alt="" coords="1251,370,1409,397"/>
+<area shape="rect" title=" " alt="" coords="2787,370,2998,397"/>
+<area shape="rect" title=" " alt="" coords="804,370,864,397"/>
+<area shape="rect" title=" " alt="" coords="1572,370,1635,397"/>
+<area shape="rect" title=" " alt="" coords="429,370,620,397"/>
+<area shape="rect" title=" " alt="" coords="3362,273,3546,315"/>
+<area shape="rect" title=" " alt="" coords="1149,370,1191,397"/>
+<area shape="rect" href="satellite-beam-user-info_8h.html" title=" " alt="" coords="976,273,1127,315"/>
+<area shape="rect" href="satellite-conf_8h.html" title=" " alt="" coords="3621,281,3740,307"/>
+<area shape="rect" href="satellite-group-helper_8h.html" title=" " alt="" coords="587,281,761,307"/>
+<area shape="rect" title=" " alt="" coords="5,363,164,404"/>
+<area shape="rect" href="satellite-user-helper_8h.html" title=" " alt="" coords="786,281,951,307"/>
+<area shape="rect" title=" " alt="" coords="189,370,330,397"/>
+<area shape="rect" title=" " alt="" coords="477,184,652,225"/>
+<area shape="rect" title=" " alt="" coords="677,184,861,225"/>
+<area shape="rect" title=" " alt="" coords="885,184,1071,225"/>
+<area shape="rect" title=" " alt="" coords="1095,184,1282,225"/>
+<area shape="rect" title=" " alt="" coords="1307,184,1481,225"/>
+<area shape="rect" title=" " alt="" coords="1506,184,1690,225"/>
+<area shape="rect" title=" " alt="" coords="1714,191,1853,218"/>
+<area shape="rect" href="satellite-gw-helper_8h.html" title=" " alt="" coords="2956,281,3112,307"/>
+<area shape="rect" title=" " alt="" coords="2062,370,2203,397"/>
+<area shape="rect" title=" " alt="" coords="3217,363,3400,404"/>
+<area shape="rect" title=" " alt="" coords="2587,370,2763,397"/>
+<area shape="rect" href="satellite-orbiter-helper_8h.html" title=" " alt="" coords="1557,281,1737,307"/>
+<area shape="rect" href="satellite-ut-helper_8h.html" title=" " alt="" coords="3136,281,3287,307"/>
+<area shape="rect" title=" " alt="" coords="1813,273,1957,315"/>
+<area shape="rect" title=" " alt="" coords="1981,273,2116,315"/>
+<area shape="rect" title=" " alt="" coords="2140,273,2296,315"/>
+<area shape="rect" title=" " alt="" coords="2320,273,2481,315"/>
+<area shape="rect" title=" " alt="" coords="2505,273,2656,315"/>
+<area shape="rect" title=" " alt="" coords="2681,273,2830,315"/>
+<area shape="rect" title=" " alt="" coords="649,370,691,397"/>
+<area shape="rect" title=" " alt="" coords="3022,370,3193,397"/>
+<area shape="rect" title=" " alt="" coords="965,370,1124,397"/>
+<area shape="rect" title=" " alt="" coords="3744,363,3921,404"/>
+<area shape="rect" title=" " alt="" coords="3507,370,3622,397"/>
+<area shape="rect" title=" " alt="" coords="3647,370,3720,397"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -160,8 +206,10 @@ $(document).ready(function(){initNavTree('satellite-traffic-helper_8h.html','');
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="satellite-traffic-helper_8h__dep__incl.png" border="0" usemap="#a_2builds_2sns3_2satellite_2satellite_2helper_2satellite-traffic-helper_8hdep" alt=""/></div>
 <map name="a_2builds_2sns3_2satellite_2satellite_2helper_2satellite-traffic-helper_8hdep" id="a_2builds_2sns3_2satellite_2satellite_2helper_2satellite-traffic-helper_8hdep">
-<area shape="rect" title=" " alt="" coords="5,5,187,61"/>
-<area shape="rect" href="satellite-traffic-helper_8cc.html" title=" " alt="" coords="5,109,187,165"/>
+<area shape="rect" title=" " alt="" coords="73,5,255,61"/>
+<area shape="rect" href="satellite-traffic-helper_8cc.html" title=" " alt="" coords="5,213,187,269"/>
+<area shape="rect" href="simulation-helper_8h.html" title=" " alt="" coords="133,109,331,165"/>
+<area shape="rect" href="simulation-helper_8cc.html" title=" " alt="" coords="211,213,408,269"/>
 </map>
 </div>
 </div>
@@ -175,13 +223,486 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_traffic_helper.html">ns3::SatTrafficHelper</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates pre-defined trafics.  <a href="classns3_1_1_sat_traffic_helper.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_traffic_helper_conf.html">ns3::SatTrafficHelperConf</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_traffic_configuration__t.html">TrafficConfiguration_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacens3"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacens3.html">ns3</a></td></tr>
 <tr class="memdesc:namespacens3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classns3_1_1_sat_arq_sequence_number.html">SatArqSequenceNumber</a> is handling the sequence numbers for the ARQ process. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a6df1d22fb5f09eccc23b9f399670cfd7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="satellite-traffic-helper_8h.html#a6df1d22fb5f09eccc23b9f399670cfd7">STRINGIFY</a>(x)&#160;&#160;&#160;#x</td></tr>
+<tr class="separator:a6df1d22fb5f09eccc23b9f399670cfd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9063e80f8777300c93afde6e6f4c9cea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(x)&#160;&#160;&#160;<a class="el" href="satellite-traffic-helper_8h.html#a6df1d22fb5f09eccc23b9f399670cfd7">STRINGIFY</a>(x)</td></tr>
+<tr class="separator:a9063e80f8777300c93afde6e6f4c9cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a966d14fef3e92abbf8b094a1322f22e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="satellite-traffic-helper_8h.html#a966d14fef3e92abbf8b094a1322f22e2">TRAFFIC_MODEL_CODEC_ATTRIBUTE_ACCESSOR_DEFINE</a>(index)</td></tr>
+<tr class="separator:a966d14fef3e92abbf8b094a1322f22e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f981c5481d311738c582571cad8fc48"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="satellite-traffic-helper_8h.html#a7f981c5481d311738c582571cad8fc48">TRAFFIC_MODEL_DATA_RATE_ATTRIBUTE_ACCESSOR_DEFINE</a>(index)</td></tr>
+<tr class="separator:a7f981c5481d311738c582571cad8fc48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f52f09b1325813815d788b72e219814"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="satellite-traffic-helper_8h.html#a5f52f09b1325813815d788b72e219814">TRAFFIC_MODEL_DIRECTION_ATTRIBUTE_ACCESSOR_DEFINE</a>(index)</td></tr>
+<tr class="separator:a5f52f09b1325813815d788b72e219814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2de53244ad104bfbc9dae1d8824f060"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="satellite-traffic-helper_8h.html#ac2de53244ad104bfbc9dae1d8824f060">TRAFFIC_MODEL_INTERVAL_ATTRIBUTE_ACCESSOR_DEFINE</a>(index)</td></tr>
+<tr class="separator:ac2de53244ad104bfbc9dae1d8824f060"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4c2eedd0a4c7e2bdfffff8ad27fbf8e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="satellite-traffic-helper_8h.html#ae4c2eedd0a4c7e2bdfffff8ad27fbf8e">TRAFFIC_MODEL_OFF_TIME_ATTRIBUTE_ACCESSOR_DEFINE</a>(index)</td></tr>
+<tr class="separator:ae4c2eedd0a4c7e2bdfffff8ad27fbf8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecaec5c68502d3847dcc849db3bacced"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="satellite-traffic-helper_8h.html#aecaec5c68502d3847dcc849db3bacced">TRAFFIC_MODEL_OFF_TIME_PATTERN_ATTRIBUTE_ACCESSOR_DEFINE</a>(index)</td></tr>
+<tr class="separator:aecaec5c68502d3847dcc849db3bacced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93172ad9be907f1e9aadc94547962bbc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="satellite-traffic-helper_8h.html#a93172ad9be907f1e9aadc94547962bbc">TRAFFIC_MODEL_ON_TIME_ATTRIBUTE_ACCESSOR_DEFINE</a>(index)</td></tr>
+<tr class="separator:a93172ad9be907f1e9aadc94547962bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cb0316b6843ea80e31bcc77f67ad978"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="satellite-traffic-helper_8h.html#a2cb0316b6843ea80e31bcc77f67ad978">TRAFFIC_MODEL_ON_TIME_PATTERN_ATTRIBUTE_ACCESSOR_DEFINE</a>(index)</td></tr>
+<tr class="separator:a2cb0316b6843ea80e31bcc77f67ad978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad86dfe19f7793ed8df7a7ddb6268d21a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="satellite-traffic-helper_8h.html#ad86dfe19f7793ed8df7a7ddb6268d21a">TRAFFIC_MODEL_PACKET_SIZE_ATTRIBUTE_ACCESSOR_DEFINE</a>(index)</td></tr>
+<tr class="separator:ad86dfe19f7793ed8df7a7ddb6268d21a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12580e9907f9e8f99ce773ac6f3c332f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="satellite-traffic-helper_8h.html#a12580e9907f9e8f99ce773ac6f3c332f">TRAFFIC_MODEL_PERCENTAGE_ATTRIBUTE_ACCESSOR_DEFINE</a>(index)</td></tr>
+<tr class="separator:a12580e9907f9e8f99ce773ac6f3c332f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5b0285f1ebaf26806291e6beed78977"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="satellite-traffic-helper_8h.html#af5b0285f1ebaf26806291e6beed78977">TRAFFIC_MODEL_PROTOCOL_ATTRIBUTE_ACCESSOR_DEFINE</a>(index)</td></tr>
+<tr class="separator:af5b0285f1ebaf26806291e6beed78977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5d0b293e61f26d4b33c5acb44ca4260"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="satellite-traffic-helper_8h.html#ac5d0b293e61f26d4b33c5acb44ca4260">TRAFFIC_MODEL_START_DELAY_ATTRIBUTE_ACCESSOR_DEFINE</a>(index)</td></tr>
+<tr class="separator:ac5d0b293e61f26d4b33c5acb44ca4260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a500e676d44011c404336e88f751f15aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="satellite-traffic-helper_8h.html#a500e676d44011c404336e88f751f15aa">TRAFFIC_MODEL_START_TIME_ATTRIBUTE_ACCESSOR_DEFINE</a>(index)</td></tr>
+<tr class="separator:a500e676d44011c404336e88f751f15aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8a7d9374c58febf6e850ce662fc9bb2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="satellite-traffic-helper_8h.html#ae8a7d9374c58febf6e850ce662fc9bb2">TRAFFIC_MODEL_STOP_TIME_ATTRIBUTE_ACCESSOR_DEFINE</a>(index)</td></tr>
+<tr class="separator:ae8a7d9374c58febf6e850ce662fc9bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a6df1d22fb5f09eccc23b9f399670cfd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6df1d22fb5f09eccc23b9f399670cfd7">&#9670;&nbsp;</a></span>STRINGIFY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STRINGIFY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;#x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="satellite-traffic-helper_8h_source.html#l00038">38</a> of file <a class="el" href="satellite-traffic-helper_8h_source.html">satellite-traffic-helper.h</a>.</p>
+
+</div>
+</div>
+<a id="a9063e80f8777300c93afde6e6f4c9cea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9063e80f8777300c93afde6e6f4c9cea">&#9670;&nbsp;</a></span>TOSTRING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TOSTRING</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="satellite-traffic-helper_8h.html#a6df1d22fb5f09eccc23b9f399670cfd7">STRINGIFY</a>(x)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="satellite-traffic-helper_8h_source.html#l00039">39</a> of file <a class="el" href="satellite-traffic-helper_8h_source.html">satellite-traffic-helper.h</a>.</p>
+
+</div>
+</div>
+<a id="a966d14fef3e92abbf8b094a1322f22e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a966d14fef3e92abbf8b094a1322f22e2">&#9670;&nbsp;</a></span>TRAFFIC_MODEL_CODEC_ATTRIBUTE_ACCESSOR_DEFINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRAFFIC_MODEL_CODEC_ATTRIBUTE_ACCESSOR_DEFINE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">inline</span> <span class="keywordtype">void</span> SetTraffic##index##Codec(SatTrafficHelper::VoipCodec_t value)                      \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return SetTrafficCodec(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index), value);                                            \</div>
+<div class="line">    }                                                                                              \</div>
+<div class="line">    inline SatTrafficHelper::VoipCodec_t GetTraffic##index##Codec() const                          \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return GetTrafficCodec(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index));                                                   \</div>
+<div class="line">    }</div>
+<div class="ttc" id="asatellite-traffic-helper_8h_html_a9063e80f8777300c93afde6e6f4c9cea"><div class="ttname"><a href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a></div><div class="ttdeci">#define TOSTRING(x)</div><div class="ttdef"><b>Definition:</b> <a href="satellite-traffic-helper_8h_source.html#l00039">satellite-traffic-helper.h:39</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="satellite-traffic-helper_8h_source.html#l01078">1078</a> of file <a class="el" href="satellite-traffic-helper_8h_source.html">satellite-traffic-helper.h</a>.</p>
+
+</div>
+</div>
+<a id="a7f981c5481d311738c582571cad8fc48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f981c5481d311738c582571cad8fc48">&#9670;&nbsp;</a></span>TRAFFIC_MODEL_DATA_RATE_ATTRIBUTE_ACCESSOR_DEFINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRAFFIC_MODEL_DATA_RATE_ATTRIBUTE_ACCESSOR_DEFINE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">inline</span> <span class="keywordtype">void</span> SetTraffic##index##DataRate(DataRate value)                                        \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return SetTrafficDataRate(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index), value);                                         \</div>
+<div class="line">    }                                                                                              \</div>
+<div class="line">    inline DataRate GetTraffic##index##DataRate() const                                            \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return GetTrafficDataRate(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index));                                                \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="satellite-traffic-helper_8h_source.html#l01018">1018</a> of file <a class="el" href="satellite-traffic-helper_8h_source.html">satellite-traffic-helper.h</a>.</p>
+
+</div>
+</div>
+<a id="a5f52f09b1325813815d788b72e219814"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f52f09b1325813815d788b72e219814">&#9670;&nbsp;</a></span>TRAFFIC_MODEL_DIRECTION_ATTRIBUTE_ACCESSOR_DEFINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRAFFIC_MODEL_DIRECTION_ATTRIBUTE_ACCESSOR_DEFINE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">inline</span> <span class="keywordtype">void</span> SetTraffic##index##Direction(TrafficDirection_t value)                             \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return SetTrafficDirection(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index), value);                                        \</div>
+<div class="line">    }                                                                                              \</div>
+<div class="line">    inline TrafficDirection_t GetTraffic##index##Direction() const                                 \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return GetTrafficDirection(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index));                                               \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="satellite-traffic-helper_8h_source.html#l00998">998</a> of file <a class="el" href="satellite-traffic-helper_8h_source.html">satellite-traffic-helper.h</a>.</p>
+
+</div>
+</div>
+<a id="ac2de53244ad104bfbc9dae1d8824f060"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2de53244ad104bfbc9dae1d8824f060">&#9670;&nbsp;</a></span>TRAFFIC_MODEL_INTERVAL_ATTRIBUTE_ACCESSOR_DEFINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRAFFIC_MODEL_INTERVAL_ATTRIBUTE_ACCESSOR_DEFINE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">inline</span> <span class="keywordtype">void</span> SetTraffic##index##Interval(Time value)                                            \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return SetTrafficInterval(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index), value);                                         \</div>
+<div class="line">    }                                                                                              \</div>
+<div class="line">    inline Time GetTraffic##index##Interval() const                                                \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return GetTrafficInterval(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index));                                                \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="satellite-traffic-helper_8h_source.html#l01008">1008</a> of file <a class="el" href="satellite-traffic-helper_8h_source.html">satellite-traffic-helper.h</a>.</p>
+
+</div>
+</div>
+<a id="ae4c2eedd0a4c7e2bdfffff8ad27fbf8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4c2eedd0a4c7e2bdfffff8ad27fbf8e">&#9670;&nbsp;</a></span>TRAFFIC_MODEL_OFF_TIME_ATTRIBUTE_ACCESSOR_DEFINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRAFFIC_MODEL_OFF_TIME_ATTRIBUTE_ACCESSOR_DEFINE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">inline</span> <span class="keywordtype">void</span> SetTraffic##index##OffTime(Time value)                                             \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return SetTrafficOffTime(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index), value);                                          \</div>
+<div class="line">    }                                                                                              \</div>
+<div class="line">    inline Time GetTraffic##index##OffTime() const                                                 \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return GetTrafficOffTime(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index));                                                 \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="satellite-traffic-helper_8h_source.html#l01068">1068</a> of file <a class="el" href="satellite-traffic-helper_8h_source.html">satellite-traffic-helper.h</a>.</p>
+
+</div>
+</div>
+<a id="aecaec5c68502d3847dcc849db3bacced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecaec5c68502d3847dcc849db3bacced">&#9670;&nbsp;</a></span>TRAFFIC_MODEL_OFF_TIME_PATTERN_ATTRIBUTE_ACCESSOR_DEFINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRAFFIC_MODEL_OFF_TIME_PATTERN_ATTRIBUTE_ACCESSOR_DEFINE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">inline</span> <span class="keywordtype">void</span> SetTraffic##index##OffTimePattern(std::string value)                               \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return SetTrafficOffTimePattern(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index), value);                                   \</div>
+<div class="line">    }                                                                                              \</div>
+<div class="line">    inline std::string GetTraffic##index##OffTimePattern() const                                   \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return GetTrafficOffTimePattern(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index));                                          \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="satellite-traffic-helper_8h_source.html#l01048">1048</a> of file <a class="el" href="satellite-traffic-helper_8h_source.html">satellite-traffic-helper.h</a>.</p>
+
+</div>
+</div>
+<a id="a93172ad9be907f1e9aadc94547962bbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93172ad9be907f1e9aadc94547962bbc">&#9670;&nbsp;</a></span>TRAFFIC_MODEL_ON_TIME_ATTRIBUTE_ACCESSOR_DEFINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRAFFIC_MODEL_ON_TIME_ATTRIBUTE_ACCESSOR_DEFINE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">inline</span> <span class="keywordtype">void</span> SetTraffic##index##OnTime(Time value)                                              \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return SetTrafficOnTime(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index), value);                                           \</div>
+<div class="line">    }                                                                                              \</div>
+<div class="line">    inline Time GetTraffic##index##OnTime() const                                                  \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return GetTrafficOnTime(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index));                                                  \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="satellite-traffic-helper_8h_source.html#l01058">1058</a> of file <a class="el" href="satellite-traffic-helper_8h_source.html">satellite-traffic-helper.h</a>.</p>
+
+</div>
+</div>
+<a id="a2cb0316b6843ea80e31bcc77f67ad978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cb0316b6843ea80e31bcc77f67ad978">&#9670;&nbsp;</a></span>TRAFFIC_MODEL_ON_TIME_PATTERN_ATTRIBUTE_ACCESSOR_DEFINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRAFFIC_MODEL_ON_TIME_PATTERN_ATTRIBUTE_ACCESSOR_DEFINE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">inline</span> <span class="keywordtype">void</span> SetTraffic##index##OnTimePattern(std::string value)                                \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return SetTrafficOnTimePattern(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index), value);                                    \</div>
+<div class="line">    }                                                                                              \</div>
+<div class="line">    inline std::string GetTraffic##index##OnTimePattern() const                                    \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return GetTrafficOnTimePattern(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index));                                           \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="satellite-traffic-helper_8h_source.html#l01038">1038</a> of file <a class="el" href="satellite-traffic-helper_8h_source.html">satellite-traffic-helper.h</a>.</p>
+
+</div>
+</div>
+<a id="ad86dfe19f7793ed8df7a7ddb6268d21a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad86dfe19f7793ed8df7a7ddb6268d21a">&#9670;&nbsp;</a></span>TRAFFIC_MODEL_PACKET_SIZE_ATTRIBUTE_ACCESSOR_DEFINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRAFFIC_MODEL_PACKET_SIZE_ATTRIBUTE_ACCESSOR_DEFINE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">inline</span> <span class="keywordtype">void</span> SetTraffic##index##PacketSize(uint32_t value)                                      \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return SetTrafficPacketSize(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index), value);                                       \</div>
+<div class="line">    }                                                                                              \</div>
+<div class="line">    inline uint32_t GetTraffic##index##PacketSize() const                                          \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return GetTrafficPacketSize(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index));                                              \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="satellite-traffic-helper_8h_source.html#l01028">1028</a> of file <a class="el" href="satellite-traffic-helper_8h_source.html">satellite-traffic-helper.h</a>.</p>
+
+</div>
+</div>
+<a id="a12580e9907f9e8f99ce773ac6f3c332f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12580e9907f9e8f99ce773ac6f3c332f">&#9670;&nbsp;</a></span>TRAFFIC_MODEL_PERCENTAGE_ATTRIBUTE_ACCESSOR_DEFINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRAFFIC_MODEL_PERCENTAGE_ATTRIBUTE_ACCESSOR_DEFINE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">inline</span> <span class="keywordtype">void</span> SetTraffic##index##Percentage(<span class="keywordtype">double</span> value)                                        \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return SetTrafficPercentage(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index), value);                                       \</div>
+<div class="line">    }                                                                                              \</div>
+<div class="line">    inline <span class="keywordtype">double</span> GetTraffic##index##Percentage() const                                            \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return GetTrafficPercentage(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index));                                              \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="satellite-traffic-helper_8h_source.html#l01118">1118</a> of file <a class="el" href="satellite-traffic-helper_8h_source.html">satellite-traffic-helper.h</a>.</p>
+
+</div>
+</div>
+<a id="af5b0285f1ebaf26806291e6beed78977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5b0285f1ebaf26806291e6beed78977">&#9670;&nbsp;</a></span>TRAFFIC_MODEL_PROTOCOL_ATTRIBUTE_ACCESSOR_DEFINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRAFFIC_MODEL_PROTOCOL_ATTRIBUTE_ACCESSOR_DEFINE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">inline</span> <span class="keywordtype">void</span> SetTraffic##index##Protocol(TransportLayerProtocol_t value)                        \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return SetTrafficProtocol(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index), value);                                         \</div>
+<div class="line">    }                                                                                              \</div>
+<div class="line">    inline TransportLayerProtocol_t GetTraffic##index##Protocol() const                            \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return GetTrafficProtocol(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index));                                                \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="satellite-traffic-helper_8h_source.html#l00988">988</a> of file <a class="el" href="satellite-traffic-helper_8h_source.html">satellite-traffic-helper.h</a>.</p>
+
+</div>
+</div>
+<a id="ac5d0b293e61f26d4b33c5acb44ca4260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5d0b293e61f26d4b33c5acb44ca4260">&#9670;&nbsp;</a></span>TRAFFIC_MODEL_START_DELAY_ATTRIBUTE_ACCESSOR_DEFINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRAFFIC_MODEL_START_DELAY_ATTRIBUTE_ACCESSOR_DEFINE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">inline</span> <span class="keywordtype">void</span> SetTraffic##index##StartDelay(Time value)                                          \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return SetTrafficStartDelay(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index), value);                                       \</div>
+<div class="line">    }                                                                                              \</div>
+<div class="line">    inline Time GetTraffic##index##StartDelay() const                                              \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return GetTrafficStartDelay(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index));                                              \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="satellite-traffic-helper_8h_source.html#l01108">1108</a> of file <a class="el" href="satellite-traffic-helper_8h_source.html">satellite-traffic-helper.h</a>.</p>
+
+</div>
+</div>
+<a id="a500e676d44011c404336e88f751f15aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a500e676d44011c404336e88f751f15aa">&#9670;&nbsp;</a></span>TRAFFIC_MODEL_START_TIME_ATTRIBUTE_ACCESSOR_DEFINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRAFFIC_MODEL_START_TIME_ATTRIBUTE_ACCESSOR_DEFINE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">inline</span> <span class="keywordtype">void</span> SetTraffic##index##StartTime(Time value)                                           \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return SetTrafficStartTime(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index), value);                                        \</div>
+<div class="line">    }                                                                                              \</div>
+<div class="line">    inline Time GetTraffic##index##StartTime() const                                               \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return GetTrafficStartTime(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index));                                               \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="satellite-traffic-helper_8h_source.html#l01088">1088</a> of file <a class="el" href="satellite-traffic-helper_8h_source.html">satellite-traffic-helper.h</a>.</p>
+
+</div>
+</div>
+<a id="ae8a7d9374c58febf6e850ce662fc9bb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8a7d9374c58febf6e850ce662fc9bb2">&#9670;&nbsp;</a></span>TRAFFIC_MODEL_STOP_TIME_ATTRIBUTE_ACCESSOR_DEFINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRAFFIC_MODEL_STOP_TIME_ATTRIBUTE_ACCESSOR_DEFINE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">inline</span> <span class="keywordtype">void</span> SetTraffic##index##StopTime(Time value)                                            \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return SetTrafficStopTime(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index), value);                                         \</div>
+<div class="line">    }                                                                                              \</div>
+<div class="line">    inline Time GetTraffic##index##StopTime() const                                                \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        return GetTrafficStopTime(<a class="code" href="satellite-traffic-helper_8h.html#a9063e80f8777300c93afde6e6f4c9cea">TOSTRING</a>(index));                                                \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="satellite-traffic-helper_8h_source.html#l01098">1098</a> of file <a class="el" href="satellite-traffic-helper_8h_source.html">satellite-traffic-helper.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 

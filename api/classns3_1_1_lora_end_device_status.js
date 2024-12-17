@@ -52,5 +52,6 @@ var classns3_1_1_lora_end_device_status =
     [ "m_receiveWindowEvent", "classns3_1_1_lora_end_device_status.html#a985958a9f4a4c2606ff1d000d4502ce1", null ],
     [ "m_reply", "classns3_1_1_lora_end_device_status.html#a05fa2877204f5b8ad386e3fb42baa201", null ],
     [ "m_secondReceiveWindowFrequency", "classns3_1_1_lora_end_device_status.html#a69c1cb86e973851ac1f3ded937f11ca1", null ],
-    [ "m_secondReceiveWindowOffset", "classns3_1_1_lora_end_device_status.html#a6fcf8804317b8479ac5204029e17bf79", null ]
+    [ "m_secondReceiveWindowOffset", "classns3_1_1_lora_end_device_status.html#a6fcf8804317b8479ac5204029e17bf79", null ],
+    [ "m_utAddress", "classns3_1_1_lora_end_device_status.html#aa4cf68168266b82d9b472ef997c7cbe6", null ]
 ];

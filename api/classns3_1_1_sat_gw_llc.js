@@ -1,8 +1,8 @@
 var classns3_1_1_sat_gw_llc =
 [
     [ "SatGwLlc", "classns3_1_1_sat_gw_llc.html#a404f051797c90a32d7fb73fb0ed27e56", null ],
-    [ "SatGwLlc", "classns3_1_1_sat_gw_llc.html#aa3a1c66d164b81321ea99d7b948000a3", null ],
     [ "~SatGwLlc", "classns3_1_1_sat_gw_llc.html#a58ec2b50cbabe6cf9acf1d12d9720aa5", null ],
+    [ "ClearQueues", "classns3_1_1_sat_gw_llc.html#ad1ee71a1357052f36156a6db0162b901", null ],
     [ "CreateDecap", "classns3_1_1_sat_gw_llc.html#a1181abf447768420329620b9fbc9e81c", null ],
     [ "CreateEncap", "classns3_1_1_sat_gw_llc.html#aec3a94fe8aabcb98ce74cde93a989554", null ],
     [ "DoDispose", "classns3_1_1_sat_gw_llc.html#aeee5e4ef5313c851d1281481ff59579b", null ],

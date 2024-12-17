@@ -1,5 +1,6 @@
 var classns3_1_1_sat_mac =
 [
+    [ "BeamSchedulerCallback", "classns3_1_1_sat_mac.html#a37f5089899cad8b266acf60c4f6b68d6", null ],
     [ "LoraReceiveCallback", "classns3_1_1_sat_mac.html#a7f9b673806d52ee593f91fbd1100ef49", null ],
     [ "ReadCtrlMsgCallback", "classns3_1_1_sat_mac.html#acd5bba88131851e925b0c7b77385c46f", null ],
     [ "ReceiveCallback", "classns3_1_1_sat_mac.html#aa836b1ad13b60c22440dfd2b9fcfb6fd", null ],
@@ -7,8 +8,9 @@ var classns3_1_1_sat_mac =
     [ "RoutingUpdateCallback", "classns3_1_1_sat_mac.html#a9fc6eaa003c7fc843930bb72fabfaaf6", null ],
     [ "SendCtrlMsgCallback", "classns3_1_1_sat_mac.html#ab229de9b5d5aeca7fe26b9475c0b477c", null ],
     [ "TransmitCallback", "classns3_1_1_sat_mac.html#a27a11a151e2031a549d4d63d2e9a98be", null ],
+    [ "UpdateIslCallback", "classns3_1_1_sat_mac.html#a006ed5b03c1fa864d01abb015c29be50", null ],
     [ "SatMac", "classns3_1_1_sat_mac.html#ab2cf8ba5322da064e625ec1718432d60", null ],
-    [ "SatMac", "classns3_1_1_sat_mac.html#a1bfa4047169aafc0f04cfd2b1daf41fd", null ],
+    [ "SatMac", "classns3_1_1_sat_mac.html#a42e4c1bc79cc32a5d63dde5298e32b05", null ],
     [ "~SatMac", "classns3_1_1_sat_mac.html#a8dd28832ee374767d8041a10f120cde6", null ],
     [ "SatMac", "classns3_1_1_sat_mac.html#aed183c4e1664deac7b2ed42ca540a313", null ],
     [ "Disable", "classns3_1_1_sat_mac.html#ae021493735e909a8daef3a3d449cdb47", null ],
@@ -24,6 +26,9 @@ var classns3_1_1_sat_mac =
     [ "RxTraces", "classns3_1_1_sat_mac.html#a063a893d7cf3306845dc548d0725676f", null ],
     [ "SendCtrlMsgFromContainer", "classns3_1_1_sat_mac.html#ac270589a2d869c3b381cbfea69423232", null ],
     [ "SendPacket", "classns3_1_1_sat_mac.html#ae68fea8d8d9210ee609f2d080bee0a06", null ],
+    [ "SetBeamId", "classns3_1_1_sat_mac.html#a0dd50da3a64dc5d15db48c5af2be0f25", null ],
+    [ "SetBeamSchedulerCallback", "classns3_1_1_sat_mac.html#a0b950242e7dd1b76d22abb5528ef0a34", null ],
+    [ "SetHandoverModule", "classns3_1_1_sat_mac.html#ab149a03206a95287419703c0cfaec5bf", null ],
     [ "SetLoraReceiveCallback", "classns3_1_1_sat_mac.html#abccacc5e219b30732077880713b05245", null ],
     [ "SetNodeInfo", "classns3_1_1_sat_mac.html#a63ba5709af337685ea6e07f04b781114", null ],
     [ "SetReadCtrlCallback", "classns3_1_1_sat_mac.html#aabb8ad86acb3f755e0a2dbe173119d70", null ],
@@ -31,13 +36,17 @@ var classns3_1_1_sat_mac =
     [ "SetReserveCtrlCallback", "classns3_1_1_sat_mac.html#a13a7d2380a644725c4974350eb541580", null ],
     [ "SetRoutingUpdateCallback", "classns3_1_1_sat_mac.html#a8fc3c04b6b4ae25c12d61b96febbd7c8", null ],
     [ "SetSatelliteAddress", "classns3_1_1_sat_mac.html#a1d30abdff0d7390793cda4ac8871ebd5", null ],
+    [ "SetSatId", "classns3_1_1_sat_mac.html#aa8842fbd6425ae363bc09fe80af2e164", null ],
     [ "SetSendCtrlCallback", "classns3_1_1_sat_mac.html#a5f6169a573b2f91902784bd1351b9c10", null ],
     [ "SetTimeTag", "classns3_1_1_sat_mac.html#a4acc7d5425a276fd04c8bf0a109519cc", null ],
     [ "SetTransmitCallback", "classns3_1_1_sat_mac.html#a386753ea4ce63bcab0d9a16e30e73aed", null ],
+    [ "SetUpdateIslCallback", "classns3_1_1_sat_mac.html#a98c7f98ef724b763cae2df21419d50c6", null ],
     [ "m_beamEnabledTime", "classns3_1_1_sat_mac.html#a3cb5175f0ef43fd6a613dec42e5715a8", null ],
     [ "m_beamId", "classns3_1_1_sat_mac.html#a1101ce9dd73f52d16a53c2f2a0ecc01d", null ],
+    [ "m_beamSchedulerCallback", "classns3_1_1_sat_mac.html#a2b7048b360406e0439a1f86f9041b3d2", null ],
     [ "m_beamServiceTrace", "classns3_1_1_sat_mac.html#a10ebb0e1879a95c52a6b9079dd9b5ac3", null ],
     [ "m_forwardLinkRegenerationMode", "classns3_1_1_sat_mac.html#ab69c2122cb565ab162be72040897a0dc", null ],
+    [ "m_handoverModule", "classns3_1_1_sat_mac.html#aaa339806a59ed0d5b79970af956ed51d", null ],
     [ "m_isRegenerative", "classns3_1_1_sat_mac.html#a9c77e629096533bb6cb318863c9580e2", null ],
     [ "m_isStatisticsTagsEnabled", "classns3_1_1_sat_mac.html#a3a2b3931ab2ce81adca086ea938360a1", null ],
     [ "m_lastDelay", "classns3_1_1_sat_mac.html#a7de396cc3d31cdcc73b97d03aa193989", null ],
@@ -62,5 +71,6 @@ var classns3_1_1_sat_mac =
     [ "m_satId", "classns3_1_1_sat_mac.html#adfd7ab421480a63b42000c35be981b9b", null ],
     [ "m_sendCtrlCallback", "classns3_1_1_sat_mac.html#a496d6c01ca4c8245eed88b1a21d13892", null ],
     [ "m_txCallback", "classns3_1_1_sat_mac.html#a04217ac55038ea8c3fa2e05eef60b431", null ],
-    [ "m_txEnabled", "classns3_1_1_sat_mac.html#ab18d89c409a7689f8b7e997e75f55ef1", null ]
+    [ "m_txEnabled", "classns3_1_1_sat_mac.html#ab18d89c409a7689f8b7e997e75f55ef1", null ],
+    [ "m_updateIslCallback", "classns3_1_1_sat_mac.html#afcb8ae3e24fa24918fe8030198489eab", null ]
 ];

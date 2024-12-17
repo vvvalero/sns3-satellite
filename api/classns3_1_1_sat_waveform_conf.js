@@ -2,7 +2,7 @@ var classns3_1_1_sat_waveform_conf =
 [
     [ "BurstLengthContainer_t", "classns3_1_1_sat_waveform_conf.html#a538e3c2c64ba36f71335dd7a4cd82e31", null ],
     [ "SatWaveformConf", "classns3_1_1_sat_waveform_conf.html#af14c93717f8a0e36bb788093838d8fa9", null ],
-    [ "SatWaveformConf", "classns3_1_1_sat_waveform_conf.html#a12f9dca929431cf107a300ebb1351d21", null ],
+    [ "SatWaveformConf", "classns3_1_1_sat_waveform_conf.html#a86ec1131f208d9764a6549479e956769", null ],
     [ "~SatWaveformConf", "classns3_1_1_sat_waveform_conf.html#a155dad80d8bbcd588408f16ebe302112", null ],
     [ "ConvertToModCod", "classns3_1_1_sat_waveform_conf.html#af2c0cec5d96c05eee7ca89232354e8d5", null ],
     [ "Dump", "classns3_1_1_sat_waveform_conf.html#a508900dd33e2040d8fafdbf39dff227e", null ],
@@ -20,6 +20,7 @@ var classns3_1_1_sat_waveform_conf =
     [ "InitializeEbNoRequirements", "classns3_1_1_sat_waveform_conf.html#ab73e163c5513677ee413031866b92977", null ],
     [ "IsAcmEnabled", "classns3_1_1_sat_waveform_conf.html#a548ce37ec53fd3adcef0bd1d837b0733", null ],
     [ "ReadFromFile", "classns3_1_1_sat_waveform_conf.html#a59e715cde160011fd14cdff2973aba8d", null ],
+    [ "ReadFromFileDefaultWaveform", "classns3_1_1_sat_waveform_conf.html#adae8251b7e4c6bdd0767ba04d781dc5d", null ],
     [ "LONG_BURST_LENGTH", "classns3_1_1_sat_waveform_conf.html#a9347c70c7c7b5457eb0d1ac883c15891", null ],
     [ "m_acmEnabled", "classns3_1_1_sat_waveform_conf.html#acda22b667edf4059f1b4816b7c850278", null ],
     [ "m_burstLength", "classns3_1_1_sat_waveform_conf.html#a6ad9ba8e94333fa2a55960587263fed4", null ],

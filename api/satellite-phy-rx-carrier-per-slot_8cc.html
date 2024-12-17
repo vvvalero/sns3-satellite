@@ -135,6 +135,7 @@ $(document).ready(function(){initNavTree('satellite-phy-rx-carrier-per-slot_8cc.
 <code>#include &lt;ns3/log.h&gt;</code><br />
 <code>#include &lt;ns3/simulator.h&gt;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;deque&gt;</code><br />
 <code>#include &lt;limits&gt;</code><br />
 <code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
@@ -145,56 +146,56 @@ $(document).ready(function(){initNavTree('satellite-phy-rx-carrier-per-slot_8cc.
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="satellite-phy-rx-carrier-per-slot_8cc__incl.png" border="0" usemap="#a_2builds_2sns3_2satellite_2satellite_2model_2satellite-phy-rx-carrier-per-slot_8cc" alt=""/></div>
 <map name="a_2builds_2sns3_2satellite_2satellite_2model_2satellite-phy-rx-carrier-per-slot_8cc" id="a_2builds_2sns3_2satellite_2satellite_2model_2satellite-phy-rx-carrier-per-slot_8cc">
-<area shape="rect" title=" " alt="" coords="3772,5,3962,61"/>
-<area shape="rect" href="satellite-phy-rx-carrier-per-slot_8h.html" title=" " alt="" coords="953,109,1122,151"/>
-<area shape="rect" title=" " alt="" coords="2432,713,2555,739"/>
-<area shape="rect" title=" " alt="" coords="3798,795,3856,821"/>
-<area shape="rect" title=" " alt="" coords="3240,355,3352,382"/>
-<area shape="rect" href="satellite-uplink-info-tag_8h.html" title=" " alt="" coords="3678,705,3829,747"/>
-<area shape="rect" title=" " alt="" coords="3858,117,3972,143"/>
-<area shape="rect" title=" " alt="" coords="3996,117,4077,143"/>
-<area shape="rect" title=" " alt="" coords="4102,117,4187,143"/>
-<area shape="rect" title=" " alt="" coords="4212,117,4288,143"/>
-<area shape="rect" title=" " alt="" coords="4312,117,4372,143"/>
-<area shape="rect" href="satellite-phy-rx-carrier_8h.html" title=" " alt="" coords="1012,199,1192,225"/>
-<area shape="rect" title=" " alt="" coords="1218,869,1281,896"/>
-<area shape="rect" title=" " alt="" coords="427,795,528,821"/>
-<area shape="rect" title=" " alt="" coords="3408,869,3569,896"/>
-<area shape="rect" title=" " alt="" coords="646,534,696,561"/>
-<area shape="rect" title=" " alt="" coords="3044,713,3205,739"/>
-<area shape="rect" title=" " alt="" coords="894,795,973,821"/>
-<area shape="rect" title=" " alt="" coords="3240,273,3302,300"/>
-<area shape="rect" title=" " alt="" coords="696,273,739,300"/>
-<area shape="rect" href="satellite-enums_8h.html" title=" " alt="" coords="1751,795,1887,821"/>
-<area shape="rect" href="satellite-interference-elimination_8h.html" title=" " alt="" coords="362,348,521,389"/>
-<area shape="rect" href="satellite-interference_8h.html" title=" " alt="" coords="1883,713,2054,739"/>
-<area shape="rect" href="satellite-phy-rx-carrier-conf_8h.html" title=" " alt="" coords="1190,348,1360,389"/>
-<area shape="rect" href="satellite-phy-rx_8h.html" title=" " alt="" coords="2492,534,2626,561"/>
-<area shape="rect" href="satellite-wave-form-conf_8h.html" title=" " alt="" coords="1174,705,1325,747"/>
-<area shape="rect" href="satellite-utils_8h.html" title=" " alt="" coords="3382,713,3502,739"/>
-<area shape="rect" href="satellite-phy_8h.html" title=" " alt="" coords="1812,273,1927,300"/>
-<area shape="rect" title=" " alt="" coords="1756,869,1882,896"/>
-<area shape="rect" title=" " alt="" coords="2614,869,2672,896"/>
-<area shape="rect" title=" " alt="" coords="2215,795,2322,821"/>
-<area shape="rect" title=" " alt="" coords="1559,795,1727,821"/>
-<area shape="rect" href="satellite-channel-estimation-error-container_8h.html" title=" " alt="" coords="364,437,570,479"/>
-<area shape="rect" href="satellite-channel_8h.html" title=" " alt="" coords="1568,445,1710,471"/>
-<area shape="rect" href="satellite-typedefs_8h.html" title=" " alt="" coords="1448,534,1598,561"/>
-<area shape="rect" href="satellite-link-results_8h.html" title=" " alt="" coords="747,445,912,471"/>
-<area shape="rect" href="satellite-channel-estimation-error_8h.html" title=" " alt="" coords="364,527,570,568"/>
-<area shape="rect" href="satellite-signal-parameters_8h.html" title=" " alt="" coords="1875,623,2086,650"/>
-<area shape="rect" href="satellite-antenna-gain-pattern_8h.html" title=" " alt="" coords="2354,616,2521,657"/>
-<area shape="rect" href="satellite-mobility-model_8h.html" title=" " alt="" coords="2782,705,2917,747"/>
-<area shape="rect" title=" " alt="" coords="2829,795,2990,821"/>
-<area shape="rect" href="satellite-base-fading_8h.html" title=" " alt="" coords="2161,623,2330,650"/>
-<area shape="rect" href="satellite-frame-conf_8h.html" title=" " alt="" coords="1264,623,1427,650"/>
-<area shape="rect" href="satellite-net-device_8h.html" title=" " alt="" coords="2648,623,2809,650"/>
-<area shape="rect" title=" " alt="" coords="3087,795,3191,821"/>
-<area shape="rect" href="satellite-mac-tag_8h.html" title=" " alt="" coords="3627,795,3774,821"/>
-<area shape="rect" title=" " alt="" coords="3388,795,3450,821"/>
-<area shape="rect" title=" " alt="" coords="3780,869,3863,896"/>
-<area shape="rect" href="satellite-beam-channel-pair_8h.html" title=" " alt="" coords="1384,348,1558,389"/>
-<area shape="rect" href="satellite-node-info_8h.html" title=" " alt="" coords="1704,713,1859,739"/>
+<area shape="rect" title=" " alt="" coords="4372,5,4561,61"/>
+<area shape="rect" href="satellite-phy-rx-carrier-per-slot_8h.html" title=" " alt="" coords="667,109,837,151"/>
+<area shape="rect" title=" " alt="" coords="3950,773,4010,799"/>
+<area shape="rect" title=" " alt="" coords="3503,773,3625,799"/>
+<area shape="rect" title=" " alt="" coords="42,855,118,881"/>
+<area shape="rect" title=" " alt="" coords="4867,773,4925,799"/>
+<area shape="rect" title=" " alt="" coords="4267,355,4379,382"/>
+<area shape="rect" title=" " alt="" coords="499,273,562,300"/>
+<area shape="rect" href="satellite-uplink-info-tag_8h.html" title=" " alt="" coords="43,676,194,717"/>
+<area shape="rect" title=" " alt="" coords="4669,117,4782,143"/>
+<area shape="rect" title=" " alt="" coords="4806,117,4887,143"/>
+<area shape="rect" title=" " alt="" coords="4912,117,4997,143"/>
+<area shape="rect" href="satellite-phy-rx-carrier_8h.html" title=" " alt="" coords="1666,199,1846,225"/>
+<area shape="rect" title=" " alt="" coords="4307,855,4370,881"/>
+<area shape="rect" title=" " alt="" coords="1199,773,1300,799"/>
+<area shape="rect" title=" " alt="" coords="2819,855,2981,881"/>
+<area shape="rect" title=" " alt="" coords="863,773,913,799"/>
+<area shape="rect" title=" " alt="" coords="1710,855,1781,881"/>
+<area shape="rect" title=" " alt="" coords="1546,773,1707,799"/>
+<area shape="rect" title=" " alt="" coords="2005,773,2083,799"/>
+<area shape="rect" title=" " alt="" coords="4336,273,4379,300"/>
+<area shape="rect" href="satellite-enums_8h.html" title=" " alt="" coords="3343,773,3479,799"/>
+<area shape="rect" href="satellite-interference-elimination_8h.html" title=" " alt="" coords="841,437,999,479"/>
+<area shape="rect" href="satellite-interference_8h.html" title=" " alt="" coords="2211,683,2381,710"/>
+<area shape="rect" href="satellite-phy-rx-carrier-conf_8h.html" title=" " alt="" coords="1331,348,1501,389"/>
+<area shape="rect" href="satellite-phy-rx_8h.html" title=" " alt="" coords="3594,527,3729,553"/>
+<area shape="rect" href="satellite-wave-form-conf_8h.html" title=" " alt="" coords="2507,676,2658,717"/>
+<area shape="rect" href="satellite-utils_8h.html" title=" " alt="" coords="4267,683,4387,710"/>
+<area shape="rect" href="satellite-phy_8h.html" title=" " alt="" coords="2960,273,3075,300"/>
+<area shape="rect" title=" " alt="" coords="3411,855,3538,881"/>
+<area shape="rect" title=" " alt="" coords="3328,855,3387,881"/>
+<area shape="rect" title=" " alt="" coords="2412,773,2519,799"/>
+<area shape="rect" title=" " alt="" coords="2644,773,2812,799"/>
+<area shape="rect" href="satellite-channel-estimation-error-container_8h.html" title=" " alt="" coords="574,676,781,717"/>
+<area shape="rect" href="satellite-channel_8h.html" title=" " alt="" coords="2337,445,2479,471"/>
+<area shape="rect" href="satellite-typedefs_8h.html" title=" " alt="" coords="2784,683,2933,710"/>
+<area shape="rect" href="satellite-link-results_8h.html" title=" " alt="" coords="1464,683,1629,710"/>
+<area shape="rect" href="satellite-signal-parameters_8h.html" title=" " alt="" coords="3292,601,3503,628"/>
+<area shape="rect" href="satellite-antenna-gain-pattern_8h.html" title=" " alt="" coords="3873,676,4039,717"/>
+<area shape="rect" href="satellite-mobility-model_8h.html" title=" " alt="" coords="4606,765,4741,807"/>
+<area shape="rect" title=" " alt="" coords="4737,855,4898,881"/>
+<area shape="rect" href="satellite-base-fading_8h.html" title=" " alt="" coords="3577,683,3746,710"/>
+<area shape="rect" href="satellite-frame-conf_8h.html" title=" " alt="" coords="2547,601,2709,628"/>
+<area shape="rect" href="satellite-net-device_8h.html" title=" " alt="" coords="3187,683,3349,710"/>
+<area shape="rect" title=" " alt="" coords="4427,773,4531,799"/>
+<area shape="rect" href="satellite-mac-tag_8h.html" title=" " alt="" coords="1783,773,1929,799"/>
+<area shape="rect" title=" " alt="" coords="4187,773,4250,799"/>
+<area shape="rect" title=" " alt="" coords="873,855,956,881"/>
+<area shape="rect" href="satellite-beam-channel-pair_8h.html" title=" " alt="" coords="2321,348,2495,389"/>
+<area shape="rect" href="satellite-node-info_8h.html" title=" " alt="" coords="3008,683,3163,710"/>
 </map>
 </div>
 </div>

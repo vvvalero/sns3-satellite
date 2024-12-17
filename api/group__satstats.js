@@ -45,18 +45,18 @@ var group__satstats =
       [ "GetTraceSourceName", "classns3_1_1_sat_stats_carrier_id_helper.html#a90b7ccd17c38c08579904e19a85d4d64", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_carrier_id_helper.html#aa399caeb8a0682ce132dc355ef127a79", null ],
       [ "GetValidCarrierType", "classns3_1_1_sat_stats_carrier_id_helper.html#a56c6aca2bf18dee928b7f346e87eee70", null ],
-      [ "SaveAddressAndIdentifier", "classns3_1_1_sat_stats_carrier_id_helper.html#ae975a93c8904aa24db95010815b1480d", null ],
       [ "SetTraceSourceName", "classns3_1_1_sat_stats_carrier_id_helper.html#afff7fff3d15ce3466fa4dbcb3ad24fdb", null ],
       [ "SetValidCarrierType", "classns3_1_1_sat_stats_carrier_id_helper.html#a97f0efbd2c3281073ea9458eddf98978", null ],
       [ "m_aggregator", "classns3_1_1_sat_stats_carrier_id_helper.html#a665ba5a8f821f152205c1e63af13e0a0", null ],
       [ "m_carrierType", "classns3_1_1_sat_stats_carrier_id_helper.html#ad17a75b5fa0aa5311515110880410c86", null ],
-      [ "m_identifierMap", "classns3_1_1_sat_stats_carrier_id_helper.html#a09b6c93b8bf01abc7b2be9a5a61374c3", null ],
       [ "m_terminalCollectors", "classns3_1_1_sat_stats_carrier_id_helper.html#ae40f8132509037d14a0063af41338e86", null ],
       [ "m_traceSourceName", "classns3_1_1_sat_stats_carrier_id_helper.html#a5f1f4af829f628ab615af69927950d73", null ]
     ] ],
     [ "SatStatsCompositeSinrHelper", "classns3_1_1_sat_stats_composite_sinr_helper.html", [
       [ "SatStatsCompositeSinrHelper", "classns3_1_1_sat_stats_composite_sinr_helper.html#afe20439605d36d5d4b74c0e47afc9ad6", null ],
       [ "~SatStatsCompositeSinrHelper", "classns3_1_1_sat_stats_composite_sinr_helper.html#af89b696e6d6abfea77ee74d2c0284f7a", null ],
+      [ "ConnectProbeToCollector", "classns3_1_1_sat_stats_composite_sinr_helper.html#a3a4c3b834c26cc253a71eddf7988723b", null ],
+      [ "DisconnectProbeFromCollector", "classns3_1_1_sat_stats_composite_sinr_helper.html#ac59866e6345c2d905ab5e5d3017a6d0d", null ],
       [ "DoInstall", "classns3_1_1_sat_stats_composite_sinr_helper.html#ac4163e0490c639eca97b6d527e4203de", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_composite_sinr_helper.html#af40b38c2d25e0ddf5aa3470e91bf0fea", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_composite_sinr_helper.html#a1cf98de438d0ad3760528244b5ade992", null ],
@@ -68,6 +68,7 @@ var group__satstats =
       [ "SatStatsDelayHelper", "classns3_1_1_sat_stats_delay_helper.html#ab47ff1205c0239e07f120eb7e30b7b66", null ],
       [ "~SatStatsDelayHelper", "classns3_1_1_sat_stats_delay_helper.html#aba237126bd72fd6d18edf1b78285cba1", null ],
       [ "ConnectProbeToCollector", "classns3_1_1_sat_stats_delay_helper.html#afd79e2e73c01b12767435a4af9040c84", null ],
+      [ "DisconnectProbeFromCollector", "classns3_1_1_sat_stats_delay_helper.html#aacd411511f3d7f5d0834d5df4bfc1c14", null ],
       [ "DoInstall", "classns3_1_1_sat_stats_delay_helper.html#a6c65f6af74e1994d756143f24924fa8b", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_delay_helper.html#a7af1143d09f04d1679ee0aa9d80b7ebc", null ],
       [ "GetAveragingMode", "classns3_1_1_sat_stats_delay_helper.html#af31c249d511d470f324f73614cb76a2e", null ],
@@ -75,12 +76,10 @@ var group__satstats =
       [ "InstallProbes", "classns3_1_1_sat_stats_delay_helper.html#a28f92b765564809ea471565cc2d48b26", null ],
       [ "PassSampleToCollector", "classns3_1_1_sat_stats_delay_helper.html#a7f41ec39073c840c23890b48d3e1a173", null ],
       [ "RxDelayCallback", "classns3_1_1_sat_stats_delay_helper.html#a70954847f73a4334fb9607c93932814f", null ],
-      [ "SaveAddressAndIdentifier", "classns3_1_1_sat_stats_delay_helper.html#a9e69820df607af91042c697b43c987e6", null ],
       [ "SetAveragingMode", "classns3_1_1_sat_stats_delay_helper.html#a5d5cc2b309e77ecdf6528c4d41288e79", null ],
       [ "m_aggregator", "classns3_1_1_sat_stats_delay_helper.html#a807b1db6e3eb045eedb251fb21a76ed0", null ],
       [ "m_averagingCollector", "classns3_1_1_sat_stats_delay_helper.html#aa70171e4f535c2592adc29d158b747cb", null ],
       [ "m_averagingMode", "classns3_1_1_sat_stats_delay_helper.html#a9f3b21f89bac5d43e4b8be3aa6985e34", null ],
-      [ "m_identifierMap", "classns3_1_1_sat_stats_delay_helper.html#a8950ffbd480b181717cd971b71b925bd", null ],
       [ "m_terminalCollectors", "classns3_1_1_sat_stats_delay_helper.html#a04ef6ca7ea34c253971d017f340259a4", null ]
     ] ],
     [ "SatStatsFeederCrdsaPacketCollisionHelper", "classns3_1_1_sat_stats_feeder_crdsa_packet_collision_helper.html", [
@@ -175,28 +174,32 @@ var group__satstats =
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_app_delay_helper.html#a3297c03ab2dc81c5467ba311cb948d21", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_fwd_app_delay_helper.html#a04c92e7bfe0be0bd395e3eabf313b4d3", null ],
       [ "RxCallback", "classns3_1_1_sat_stats_fwd_app_delay_helper.html#a75ca6077220b0b64f32a22359b31d48e", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_app_delay_helper.html#a4ed5c4612743680ab0812db62a5ac724", null ]
+      [ "UpdateIdentifierOnProbes", "classns3_1_1_sat_stats_fwd_app_delay_helper.html#a0705d12a6f7b9820b21e963af194ca08", null ],
+      [ "m_probes", "classns3_1_1_sat_stats_fwd_app_delay_helper.html#ab9782362cc339c0e3bd41a7931be04c9", null ]
     ] ],
     [ "SatStatsFwdAppThroughputHelper", "classns3_1_1_sat_stats_fwd_app_throughput_helper.html", [
       [ "SatStatsFwdAppThroughputHelper", "classns3_1_1_sat_stats_fwd_app_throughput_helper.html#a14ebc13c0fc77a24a6bba41e518b6340", null ],
       [ "~SatStatsFwdAppThroughputHelper", "classns3_1_1_sat_stats_fwd_app_throughput_helper.html#a34567a447df456e23a7af3d20e784452", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_app_throughput_helper.html#a68f6878ea09836a284f13972bf22d709", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_fwd_app_throughput_helper.html#addc451f617701b07e61b6079ef8ad708", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_app_throughput_helper.html#a9205e061e931b39f88cb6294b0ceff23", null ]
+      [ "UpdateIdentifierOnProbes", "classns3_1_1_sat_stats_fwd_app_throughput_helper.html#af4a94402dd0d17e76ff8e24ddf958b12", null ],
+      [ "m_probes", "classns3_1_1_sat_stats_fwd_app_throughput_helper.html#a07740b4b3b978af9882662e800fe6a3d", null ]
     ] ],
     [ "SatStatsFwdCompositeSinrHelper", "classns3_1_1_sat_stats_fwd_composite_sinr_helper.html", [
       [ "SatStatsFwdCompositeSinrHelper", "classns3_1_1_sat_stats_fwd_composite_sinr_helper.html#a8b27f4b3f8f88f7db24e3c4d862b8439", null ],
       [ "~SatStatsFwdCompositeSinrHelper", "classns3_1_1_sat_stats_fwd_composite_sinr_helper.html#a207dab80da6f30104350705c5a1acae5", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_composite_sinr_helper.html#a5fff14abb245091589776ecf660fc5a8", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_fwd_composite_sinr_helper.html#a1556de1b1b977fcfa6dd024b336aadd1", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_composite_sinr_helper.html#a05fa41186cec7609c991d99abd05684e", null ]
+      [ "UpdateIdentifierOnProbes", "classns3_1_1_sat_stats_fwd_composite_sinr_helper.html#adb4d1c7364804a109b4fdced40d2b1a5", null ],
+      [ "m_probes", "classns3_1_1_sat_stats_fwd_composite_sinr_helper.html#afa91723f9ecd2db342a6a26f2a4794a0", null ]
     ] ],
     [ "SatStatsFwdDevDelayHelper", "classns3_1_1_sat_stats_fwd_dev_delay_helper.html", [
       [ "SatStatsFwdDevDelayHelper", "classns3_1_1_sat_stats_fwd_dev_delay_helper.html#a60a4c5d9c39d5d68c92572edf10f35c3", null ],
       [ "~SatStatsFwdDevDelayHelper", "classns3_1_1_sat_stats_fwd_dev_delay_helper.html#aeb796e0c5795b30b9509dafc3245c717", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_dev_delay_helper.html#ae97db4d8d39bb32499d1ba20654c6892", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_fwd_dev_delay_helper.html#ad9d0b2e9f1ef017680b821f4d2a0cd24", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_dev_delay_helper.html#ae5b5821bd7327802dcd44f106c2d1e4b", null ]
+      [ "UpdateIdentifierOnProbes", "classns3_1_1_sat_stats_fwd_dev_delay_helper.html#a9b229054674649ad241987452edd7bbe", null ],
+      [ "m_probes", "classns3_1_1_sat_stats_fwd_dev_delay_helper.html#a8ca1fdf2e46814a93b1b023047359f49", null ]
     ] ],
     [ "SatStatsFwdFeederDaPacketErrorHelper", "classns3_1_1_sat_stats_fwd_feeder_da_packet_error_helper.html", [
       [ "SatStatsFwdFeederDaPacketErrorHelper", "classns3_1_1_sat_stats_fwd_feeder_da_packet_error_helper.html#a3bac949d79608b497e946693a2a6ede2", null ],
@@ -207,29 +210,25 @@ var group__satstats =
       [ "SatStatsFwdFeederDevLinkDelayHelper", "classns3_1_1_sat_stats_fwd_feeder_dev_link_delay_helper.html#ae2d95b7367964e1378c29b6d492f53c5", null ],
       [ "~SatStatsFwdFeederDevLinkDelayHelper", "classns3_1_1_sat_stats_fwd_feeder_dev_link_delay_helper.html#a75f5af4f8e3f34f0140864e63b527d6b", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_feeder_dev_link_delay_helper.html#a5139d50ce6449a968a121cb576aa67c6", null ],
-      [ "GetTypeId", "classns3_1_1_sat_stats_fwd_feeder_dev_link_delay_helper.html#a0fd2edeeb15c8539ac514602e4af3b67", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_feeder_dev_link_delay_helper.html#ac0583cd2e18cc1f2086bac064303a915", null ]
+      [ "GetTypeId", "classns3_1_1_sat_stats_fwd_feeder_dev_link_delay_helper.html#a0fd2edeeb15c8539ac514602e4af3b67", null ]
     ] ],
     [ "SatStatsFwdFeederDevLinkJitterHelper", "classns3_1_1_sat_stats_fwd_feeder_dev_link_jitter_helper.html", [
       [ "SatStatsFwdFeederDevLinkJitterHelper", "classns3_1_1_sat_stats_fwd_feeder_dev_link_jitter_helper.html#a191a09df7d57df0d82f72073af6c1526", null ],
       [ "~SatStatsFwdFeederDevLinkJitterHelper", "classns3_1_1_sat_stats_fwd_feeder_dev_link_jitter_helper.html#a6963fa86b1eba2c8feb5879ade4b270d", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_feeder_dev_link_jitter_helper.html#a46da04b385d9b37a8e3ea22f748e5c45", null ],
-      [ "GetTypeId", "classns3_1_1_sat_stats_fwd_feeder_dev_link_jitter_helper.html#a3270eebde256ac5cd8e4f57fbbc1b575", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_feeder_dev_link_jitter_helper.html#a0de9b6e6bbb3c197b8d6364eab4346ba", null ]
+      [ "GetTypeId", "classns3_1_1_sat_stats_fwd_feeder_dev_link_jitter_helper.html#a3270eebde256ac5cd8e4f57fbbc1b575", null ]
     ] ],
     [ "SatStatsFwdFeederDevThroughputHelper", "classns3_1_1_sat_stats_fwd_feeder_dev_throughput_helper.html", [
       [ "SatStatsFwdFeederDevThroughputHelper", "classns3_1_1_sat_stats_fwd_feeder_dev_throughput_helper.html#aa41a21e1e275505c3e9073a43e38da43", null ],
       [ "~SatStatsFwdFeederDevThroughputHelper", "classns3_1_1_sat_stats_fwd_feeder_dev_throughput_helper.html#ab296a68dc1b38bdd87523dd31a987a44", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_feeder_dev_throughput_helper.html#a3c28ef53ca4e79f3edb91180a8f20491", null ],
-      [ "GetTypeId", "classns3_1_1_sat_stats_fwd_feeder_dev_throughput_helper.html#a16e5591163f2a269da127ac151ebe31b", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_feeder_dev_throughput_helper.html#a1d32c92b8c5e4165f32b931a5ecbac83", null ]
+      [ "GetTypeId", "classns3_1_1_sat_stats_fwd_feeder_dev_throughput_helper.html#a16e5591163f2a269da127ac151ebe31b", null ]
     ] ],
     [ "SatStatsFwdFeederLinkModcodHelper", "classns3_1_1_sat_stats_fwd_feeder_link_modcod_helper.html", [
       [ "SatStatsFwdFeederLinkModcodHelper", "classns3_1_1_sat_stats_fwd_feeder_link_modcod_helper.html#affbb0dcee5dc8e7d7ecd28dad8e1ab6a", null ],
       [ "~SatStatsFwdFeederLinkModcodHelper", "classns3_1_1_sat_stats_fwd_feeder_link_modcod_helper.html#aba51b2c7b01f006102afa44241708291", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_feeder_link_modcod_helper.html#a356642959d40ee6d013ea0da339f1b98", null ],
-      [ "GetTypeId", "classns3_1_1_sat_stats_fwd_feeder_link_modcod_helper.html#a554cfd127781814f89ea6c4ebfe099b9", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_feeder_link_modcod_helper.html#a20200e6388ec61e6bb335c857585ec8b", null ]
+      [ "GetTypeId", "classns3_1_1_sat_stats_fwd_feeder_link_modcod_helper.html#a554cfd127781814f89ea6c4ebfe099b9", null ]
     ] ],
     [ "SatStatsFwdFeederLinkRxPowerHelper", "classns3_1_1_sat_stats_fwd_feeder_link_rx_power_helper.html", [
       [ "SatStatsFwdFeederLinkRxPowerHelper", "classns3_1_1_sat_stats_fwd_feeder_link_rx_power_helper.html#afe2cd9a448a2e4b5f4b5c3914b3bf5c2", null ],
@@ -247,43 +246,37 @@ var group__satstats =
       [ "SatStatsFwdFeederMacLinkDelayHelper", "classns3_1_1_sat_stats_fwd_feeder_mac_link_delay_helper.html#a9313ccd1ac6267c0c7a1be4546374487", null ],
       [ "~SatStatsFwdFeederMacLinkDelayHelper", "classns3_1_1_sat_stats_fwd_feeder_mac_link_delay_helper.html#aff31f13d383d947e6ef410f8aca5a2b6", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_feeder_mac_link_delay_helper.html#a9de9df205c225b84c42b73b2735a8495", null ],
-      [ "GetTypeId", "classns3_1_1_sat_stats_fwd_feeder_mac_link_delay_helper.html#a54832e9508edc53cb28ad5e9520d918e", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_feeder_mac_link_delay_helper.html#a6a6f51067e8da890bdde62d1917b8634", null ]
+      [ "GetTypeId", "classns3_1_1_sat_stats_fwd_feeder_mac_link_delay_helper.html#a54832e9508edc53cb28ad5e9520d918e", null ]
     ] ],
     [ "SatStatsFwdFeederMacLinkJitterHelper", "classns3_1_1_sat_stats_fwd_feeder_mac_link_jitter_helper.html", [
       [ "SatStatsFwdFeederMacLinkJitterHelper", "classns3_1_1_sat_stats_fwd_feeder_mac_link_jitter_helper.html#a2718af6f4d8fe5434c94777b745aa1f6", null ],
       [ "~SatStatsFwdFeederMacLinkJitterHelper", "classns3_1_1_sat_stats_fwd_feeder_mac_link_jitter_helper.html#aae9025e7f7e295b4adcfd4fd4ccf3b35", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_feeder_mac_link_jitter_helper.html#a17d74e11e5ec10c6e559cdcd7944162f", null ],
-      [ "GetTypeId", "classns3_1_1_sat_stats_fwd_feeder_mac_link_jitter_helper.html#a3ae95e93642df95e11d1995f858855cb", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_feeder_mac_link_jitter_helper.html#a45a4602660057bc94dbe7b9a5c9f5964", null ]
+      [ "GetTypeId", "classns3_1_1_sat_stats_fwd_feeder_mac_link_jitter_helper.html#a3ae95e93642df95e11d1995f858855cb", null ]
     ] ],
     [ "SatStatsFwdFeederMacThroughputHelper", "classns3_1_1_sat_stats_fwd_feeder_mac_throughput_helper.html", [
       [ "SatStatsFwdFeederMacThroughputHelper", "classns3_1_1_sat_stats_fwd_feeder_mac_throughput_helper.html#a2bfc9c2debb7dbd588e05bd5463644e6", null ],
       [ "~SatStatsFwdFeederMacThroughputHelper", "classns3_1_1_sat_stats_fwd_feeder_mac_throughput_helper.html#a71e010dd8db4833233123c14e325a78f", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_feeder_mac_throughput_helper.html#af8b3e846d7ad8ac3383409b3a580a0ab", null ],
-      [ "GetTypeId", "classns3_1_1_sat_stats_fwd_feeder_mac_throughput_helper.html#a9aabbe28621708a4b997693999113b03", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_feeder_mac_throughput_helper.html#ac219b4fbecdf6cd6d44da8d89ddab27a", null ]
+      [ "GetTypeId", "classns3_1_1_sat_stats_fwd_feeder_mac_throughput_helper.html#a9aabbe28621708a4b997693999113b03", null ]
     ] ],
     [ "SatStatsFwdFeederPhyLinkDelayHelper", "classns3_1_1_sat_stats_fwd_feeder_phy_link_delay_helper.html", [
       [ "SatStatsFwdFeederPhyLinkDelayHelper", "classns3_1_1_sat_stats_fwd_feeder_phy_link_delay_helper.html#af60d4521655833e1f17aa7c4b6558779", null ],
       [ "~SatStatsFwdFeederPhyLinkDelayHelper", "classns3_1_1_sat_stats_fwd_feeder_phy_link_delay_helper.html#a09c3e4ed2554d0e3d7bef147e080dac3", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_feeder_phy_link_delay_helper.html#aafd9dc4dae97e3f36130ce151aecf534", null ],
-      [ "GetTypeId", "classns3_1_1_sat_stats_fwd_feeder_phy_link_delay_helper.html#a06230b19cdc1ba95295416c9b6c823ec", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_feeder_phy_link_delay_helper.html#a2c479939daa9d4993d5cb08e0093e363", null ]
+      [ "GetTypeId", "classns3_1_1_sat_stats_fwd_feeder_phy_link_delay_helper.html#a06230b19cdc1ba95295416c9b6c823ec", null ]
     ] ],
     [ "SatStatsFwdFeederPhyLinkJitterHelper", "classns3_1_1_sat_stats_fwd_feeder_phy_link_jitter_helper.html", [
       [ "SatStatsFwdFeederPhyLinkJitterHelper", "classns3_1_1_sat_stats_fwd_feeder_phy_link_jitter_helper.html#a71d7cc23dfc4b1dbebd8ff4abdff3690", null ],
       [ "~SatStatsFwdFeederPhyLinkJitterHelper", "classns3_1_1_sat_stats_fwd_feeder_phy_link_jitter_helper.html#ac4b66297b1b5941e4f3690a267a132ee", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_feeder_phy_link_jitter_helper.html#afdf3d61590dbbd0c09814c8e8d0ca681", null ],
-      [ "GetTypeId", "classns3_1_1_sat_stats_fwd_feeder_phy_link_jitter_helper.html#a33dd3abe2aebb8973ccb9811283a9039", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_feeder_phy_link_jitter_helper.html#a773991cd484640c2c7414848916d992f", null ]
+      [ "GetTypeId", "classns3_1_1_sat_stats_fwd_feeder_phy_link_jitter_helper.html#a33dd3abe2aebb8973ccb9811283a9039", null ]
     ] ],
     [ "SatStatsFwdFeederPhyThroughputHelper", "classns3_1_1_sat_stats_fwd_feeder_phy_throughput_helper.html", [
       [ "SatStatsFwdFeederPhyThroughputHelper", "classns3_1_1_sat_stats_fwd_feeder_phy_throughput_helper.html#a2802d0a7d022f1104900af0bc48195f3", null ],
       [ "~SatStatsFwdFeederPhyThroughputHelper", "classns3_1_1_sat_stats_fwd_feeder_phy_throughput_helper.html#a4b1de96331920a34a506865b9db1f363", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_feeder_phy_throughput_helper.html#a9b69bcd78fa2ba4aa52c75a841c2d3a4", null ],
-      [ "GetTypeId", "classns3_1_1_sat_stats_fwd_feeder_phy_throughput_helper.html#a6e304ac8fd674c0abf51830df691b4fb", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_feeder_phy_throughput_helper.html#a72d95ecad682970c3c44657281f2fd43", null ]
+      [ "GetTypeId", "classns3_1_1_sat_stats_fwd_feeder_phy_throughput_helper.html#a6e304ac8fd674c0abf51830df691b4fb", null ]
     ] ],
     [ "SatStatsFwdLinkSchedulerSymbolRateHelper", "classns3_1_1_sat_stats_fwd_link_scheduler_symbol_rate_helper.html", [
       [ "SatStatsFwdLinkSchedulerSymbolRateHelper", "classns3_1_1_sat_stats_fwd_link_scheduler_symbol_rate_helper.html#a609f232438592234d9e1f327757c025b", null ],
@@ -302,14 +295,16 @@ var group__satstats =
       [ "~SatStatsFwdMacDelayHelper", "classns3_1_1_sat_stats_fwd_mac_delay_helper.html#afd0c4c37d09733e10b5e29dfada6787c", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_mac_delay_helper.html#ace1c3b69fe78ce07e14b7fac2a2185a7", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_fwd_mac_delay_helper.html#a67d11b10e513dd33efe68db439b6d480", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_mac_delay_helper.html#accd700bbeca1587e704238eac24e59b8", null ]
+      [ "UpdateIdentifierOnProbes", "classns3_1_1_sat_stats_fwd_mac_delay_helper.html#a9b751984038838b01d6d236933589787", null ],
+      [ "m_probes", "classns3_1_1_sat_stats_fwd_mac_delay_helper.html#a2e11b3ba3dd13023e16df7d17cbbdcb9", null ]
     ] ],
     [ "SatStatsFwdPhyDelayHelper", "classns3_1_1_sat_stats_fwd_phy_delay_helper.html", [
       [ "SatStatsFwdPhyDelayHelper", "classns3_1_1_sat_stats_fwd_phy_delay_helper.html#ac84e0bb741decdbad57d3b5605f12bba", null ],
       [ "~SatStatsFwdPhyDelayHelper", "classns3_1_1_sat_stats_fwd_phy_delay_helper.html#ab92a4577094fff77c5784160c4dcceb0", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_phy_delay_helper.html#adcc7e7dc476bd81790156dfb75e8e932", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_fwd_phy_delay_helper.html#a60884be9cae1d2a6f79005237a0dce17", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_phy_delay_helper.html#a147f0091ea80fc51bee9e9a75ed3c283", null ]
+      [ "UpdateIdentifierOnProbes", "classns3_1_1_sat_stats_fwd_phy_delay_helper.html#a03f57cd43565e9e1ce371d2a8fed484d", null ],
+      [ "m_probes", "classns3_1_1_sat_stats_fwd_phy_delay_helper.html#a11a79a8cc10233b65cc0894d927a9d92", null ]
     ] ],
     [ "SatStatsFwdQueueBytesHelper", "classns3_1_1_sat_stats_fwd_queue_bytes_helper.html", [
       [ "SatStatsFwdQueueBytesHelper", "classns3_1_1_sat_stats_fwd_queue_bytes_helper.html#a3aa4051aacf90b263ae734f331bde628", null ],
@@ -346,28 +341,30 @@ var group__satstats =
       [ "~SatStatsFwdUserDevLinkDelayHelper", "classns3_1_1_sat_stats_fwd_user_dev_link_delay_helper.html#a9fb2bd30990ed8bbe7dd816ab84537ec", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_user_dev_link_delay_helper.html#a0c129a642385291e9480a3b141c563d9", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_fwd_user_dev_link_delay_helper.html#ad36dd683d313473ded66bb5b4da68423", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_user_dev_link_delay_helper.html#a1c6412e43cd0c0a0cc67c2aac3bfcecf", null ]
+      [ "UpdateIdentifierOnProbes", "classns3_1_1_sat_stats_fwd_user_dev_link_delay_helper.html#aba24a008a29fff259c8c927c06b5957a", null ],
+      [ "m_probes", "classns3_1_1_sat_stats_fwd_user_dev_link_delay_helper.html#a143b0ab101a010369631db6cd90078fb", null ]
     ] ],
     [ "SatStatsFwdUserDevLinkJitterHelper", "classns3_1_1_sat_stats_fwd_user_dev_link_jitter_helper.html", [
       [ "SatStatsFwdUserDevLinkJitterHelper", "classns3_1_1_sat_stats_fwd_user_dev_link_jitter_helper.html#a269f27495f9e141d8279a52adbbdee7a", null ],
       [ "~SatStatsFwdUserDevLinkJitterHelper", "classns3_1_1_sat_stats_fwd_user_dev_link_jitter_helper.html#aa66b54dc0585a772931bbde8c11fc6a4", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_user_dev_link_jitter_helper.html#ae2bf5631c82d093473a7833aa63ecdc2", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_fwd_user_dev_link_jitter_helper.html#a094f62a03e9b0bc214e50c6c90df8b78", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_user_dev_link_jitter_helper.html#ab33691691dbe2c5be794cbe035fa06fa", null ]
+      [ "UpdateIdentifierOnProbes", "classns3_1_1_sat_stats_fwd_user_dev_link_jitter_helper.html#afbac185cdac04c03572cb389c33e3e68", null ],
+      [ "m_probes", "classns3_1_1_sat_stats_fwd_user_dev_link_jitter_helper.html#ad17de69770e49ebe00c5e2b77b12e29f", null ]
     ] ],
     [ "SatStatsFwdUserDevThroughputHelper", "classns3_1_1_sat_stats_fwd_user_dev_throughput_helper.html", [
       [ "SatStatsFwdUserDevThroughputHelper", "classns3_1_1_sat_stats_fwd_user_dev_throughput_helper.html#a61898ae7e2968f7bf77f3cd17dd1ab43", null ],
       [ "~SatStatsFwdUserDevThroughputHelper", "classns3_1_1_sat_stats_fwd_user_dev_throughput_helper.html#ad6e475a1d84b5024ce9fa6fe764c0b2a", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_user_dev_throughput_helper.html#a5a012c041e532c585df7554a1cfee1be", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_fwd_user_dev_throughput_helper.html#aca94f22c437634e97620e6b81d6cb5d2", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_user_dev_throughput_helper.html#a2e2ed1f7390605f305ca6163cb9d62a8", null ]
+      [ "UpdateIdentifierOnProbes", "classns3_1_1_sat_stats_fwd_user_dev_throughput_helper.html#a95d2ae590969b5e8ef5b77672fa86b37", null ],
+      [ "m_probes", "classns3_1_1_sat_stats_fwd_user_dev_throughput_helper.html#a72995a43c77a4fec76d2a9cd8e3934b5", null ]
     ] ],
     [ "SatStatsFwdUserLinkModcodHelper", "classns3_1_1_sat_stats_fwd_user_link_modcod_helper.html", [
       [ "SatStatsFwdUserLinkModcodHelper", "classns3_1_1_sat_stats_fwd_user_link_modcod_helper.html#a44f4ae9fbbe4ade71146a866992ae0b1", null ],
       [ "~SatStatsFwdUserLinkModcodHelper", "classns3_1_1_sat_stats_fwd_user_link_modcod_helper.html#a31510c3cf3da580392bc5d829f8de0eb", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_user_link_modcod_helper.html#a8a033fd92a99dd3f0588cc23ceee674c", null ],
-      [ "GetTypeId", "classns3_1_1_sat_stats_fwd_user_link_modcod_helper.html#ac8bb3597b3ad58935c39418169d56744", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_user_link_modcod_helper.html#a0cd1837f666c7a3d64ece318989b361b", null ]
+      [ "GetTypeId", "classns3_1_1_sat_stats_fwd_user_link_modcod_helper.html#ac8bb3597b3ad58935c39418169d56744", null ]
     ] ],
     [ "SatStatsFwdUserLinkRxPowerHelper", "classns3_1_1_sat_stats_fwd_user_link_rx_power_helper.html", [
       [ "SatStatsFwdUserLinkRxPowerHelper", "classns3_1_1_sat_stats_fwd_user_link_rx_power_helper.html#a1a69be0cdd6fa43e602a93e7edcb83bd", null ],
@@ -386,42 +383,48 @@ var group__satstats =
       [ "~SatStatsFwdUserMacLinkDelayHelper", "classns3_1_1_sat_stats_fwd_user_mac_link_delay_helper.html#a47cedcfb64f92825530d28330899386f", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_user_mac_link_delay_helper.html#aa1c86a3623928c6e58fe19614ff70e82", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_fwd_user_mac_link_delay_helper.html#ae0b5027ca2f50d30c96b0a0d916fb2c3", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_user_mac_link_delay_helper.html#a7ed8f3c9860cd514320425f5fd14cbf6", null ]
+      [ "UpdateIdentifierOnProbes", "classns3_1_1_sat_stats_fwd_user_mac_link_delay_helper.html#a3f839e70c4b3eabcfc48445ac34e955c", null ],
+      [ "m_probes", "classns3_1_1_sat_stats_fwd_user_mac_link_delay_helper.html#a458874fa965ca839b5a26b6fc14328bf", null ]
     ] ],
     [ "SatStatsFwdUserMacLinkJitterHelper", "classns3_1_1_sat_stats_fwd_user_mac_link_jitter_helper.html", [
       [ "SatStatsFwdUserMacLinkJitterHelper", "classns3_1_1_sat_stats_fwd_user_mac_link_jitter_helper.html#a3eb259f74e230cdb8e7db59d156cbbaa", null ],
       [ "~SatStatsFwdUserMacLinkJitterHelper", "classns3_1_1_sat_stats_fwd_user_mac_link_jitter_helper.html#a2bbac14e9e2710997581409594daef9b", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_user_mac_link_jitter_helper.html#a7eba8dbe2a39cb8ff4c000644bfb3443", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_fwd_user_mac_link_jitter_helper.html#ab7705ec064897320c918050e11378565", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_user_mac_link_jitter_helper.html#acac3f1261921c285a9d6a6009d42d6d5", null ]
+      [ "UpdateIdentifierOnProbes", "classns3_1_1_sat_stats_fwd_user_mac_link_jitter_helper.html#acc3575d15c21fdc827239c25ec1df3fb", null ],
+      [ "m_probes", "classns3_1_1_sat_stats_fwd_user_mac_link_jitter_helper.html#a00bf29f4d54865e7a700c7e824cccce4", null ]
     ] ],
     [ "SatStatsFwdUserMacThroughputHelper", "classns3_1_1_sat_stats_fwd_user_mac_throughput_helper.html", [
       [ "SatStatsFwdUserMacThroughputHelper", "classns3_1_1_sat_stats_fwd_user_mac_throughput_helper.html#a978187770fb7d18a26678f994f3b5ab1", null ],
       [ "~SatStatsFwdUserMacThroughputHelper", "classns3_1_1_sat_stats_fwd_user_mac_throughput_helper.html#a563820d9293ce5cd502885bc214c6e6e", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_user_mac_throughput_helper.html#a4c1fa10899e69eec22301b1cdd6d53e2", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_fwd_user_mac_throughput_helper.html#ab84e1ac569659868df574afd168b4588", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_user_mac_throughput_helper.html#aa519e344c585ef8b7dbe7cf1993653b2", null ]
+      [ "UpdateIdentifierOnProbes", "classns3_1_1_sat_stats_fwd_user_mac_throughput_helper.html#a94508be62807a965dd97e8120a543528", null ],
+      [ "m_probes", "classns3_1_1_sat_stats_fwd_user_mac_throughput_helper.html#a21fcf63b77e7dc61c764984c4f174d8c", null ]
     ] ],
     [ "SatStatsFwdUserPhyLinkDelayHelper", "classns3_1_1_sat_stats_fwd_user_phy_link_delay_helper.html", [
       [ "SatStatsFwdUserPhyLinkDelayHelper", "classns3_1_1_sat_stats_fwd_user_phy_link_delay_helper.html#a14b7a08b76227b2460d794c58871813b", null ],
       [ "~SatStatsFwdUserPhyLinkDelayHelper", "classns3_1_1_sat_stats_fwd_user_phy_link_delay_helper.html#a9384ac6faffd99419151faeab82f5b66", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_user_phy_link_delay_helper.html#aa766fcb7f791fb3e176e0af22f16b3a7", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_fwd_user_phy_link_delay_helper.html#a4004150a7fee5bf57c56a41607873c70", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_user_phy_link_delay_helper.html#abff76251207366f397a076267c96d1b1", null ]
+      [ "UpdateIdentifierOnProbes", "classns3_1_1_sat_stats_fwd_user_phy_link_delay_helper.html#a97b536c33ff305fc7b974674a59236ad", null ],
+      [ "m_probes", "classns3_1_1_sat_stats_fwd_user_phy_link_delay_helper.html#a4eff624e99eee0e838ae4eb0703d8e72", null ]
     ] ],
     [ "SatStatsFwdUserPhyLinkJitterHelper", "classns3_1_1_sat_stats_fwd_user_phy_link_jitter_helper.html", [
       [ "SatStatsFwdUserPhyLinkJitterHelper", "classns3_1_1_sat_stats_fwd_user_phy_link_jitter_helper.html#aac0df1eb877bf22190715e82d731962e", null ],
       [ "~SatStatsFwdUserPhyLinkJitterHelper", "classns3_1_1_sat_stats_fwd_user_phy_link_jitter_helper.html#a8d6d905dceeba7579c852a955d9dbbd7", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_user_phy_link_jitter_helper.html#a95fbf63e4ec354a9e8144d5359683eed", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_fwd_user_phy_link_jitter_helper.html#af79a226e8ef18c3cb9aca62d411c6afe", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_user_phy_link_jitter_helper.html#a8b0403a489759af0e56c7d7798b3f8e7", null ]
+      [ "UpdateIdentifierOnProbes", "classns3_1_1_sat_stats_fwd_user_phy_link_jitter_helper.html#afc7dc0fd624294095b7cda9dd0df3ba8", null ],
+      [ "m_probes", "classns3_1_1_sat_stats_fwd_user_phy_link_jitter_helper.html#a523629d6d7ab79769211a19729e5e067", null ]
     ] ],
     [ "SatStatsFwdUserPhyThroughputHelper", "classns3_1_1_sat_stats_fwd_user_phy_throughput_helper.html", [
       [ "SatStatsFwdUserPhyThroughputHelper", "classns3_1_1_sat_stats_fwd_user_phy_throughput_helper.html#a196fabba1eb5f99bc58dd09379e3f9b0", null ],
       [ "~SatStatsFwdUserPhyThroughputHelper", "classns3_1_1_sat_stats_fwd_user_phy_throughput_helper.html#adc3b2dae5e016d025a87274332a5ee3e", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_user_phy_throughput_helper.html#ae037307197ee32ec292db0ffbec8bc3d", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_fwd_user_phy_throughput_helper.html#a45735f163e4f68658cfd294911cc6820", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_fwd_user_phy_throughput_helper.html#a4a8399c2936cb67238364208adeb25d4", null ]
+      [ "UpdateIdentifierOnProbes", "classns3_1_1_sat_stats_fwd_user_phy_throughput_helper.html#a025f48e8d94b2718001d4c00c787579a", null ],
+      [ "m_probes", "classns3_1_1_sat_stats_fwd_user_phy_throughput_helper.html#a71b280422a03beae84831faa7297b36a", null ]
     ] ],
     [ "SatStatsFwdUserQueueBytesHelper", "classns3_1_1_sat_stats_fwd_user_queue_bytes_helper.html", [
       [ "SatStatsFwdUserQueueBytesHelper", "classns3_1_1_sat_stats_fwd_user_queue_bytes_helper.html#ac45abb5a7482c7ff273ee190c77a310b", null ],
@@ -485,7 +488,7 @@ var group__satstats =
       [ "GetOutputTypeName", "classns3_1_1_sat_stats_helper.html#a411c6b7b3e64097cc86f8a1ad2da868c", null ],
       [ "GetSatHelper", "classns3_1_1_sat_stats_helper.html#a1d63ffd6ebacd9f2d2db32580b1bfadb", null ],
       [ "GetSatId", "classns3_1_1_sat_stats_helper.html#a19596c7a9d76347944aedba7838b6a5c", null ],
-      [ "GetSatSatGeoNetDevice", "classns3_1_1_sat_stats_helper.html#a489e487004c59e47965c3bcfa53d1f55", null ],
+      [ "GetSatSatOrbiterNetDevice", "classns3_1_1_sat_stats_helper.html#a1bddc4263f820ab84fd7d54baeb0f54b", null ],
       [ "GetTimeHeading", "classns3_1_1_sat_stats_helper.html#afa8d91e2580d8263fd20eef9952e1ee6", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_helper.html#a8bedd50374d3e8b57e8e9f3c90c8ab73", null ],
       [ "GetUtId", "classns3_1_1_sat_stats_helper.html#a93e39c005ae0351b47a5fca8dcfad7e7", null ],
@@ -493,9 +496,13 @@ var group__satstats =
       [ "GetUtUserId", "classns3_1_1_sat_stats_helper.html#ae37e2e28674be92dcdfd00dbb03f3e2e", null ],
       [ "Install", "classns3_1_1_sat_stats_helper.html#ac1b0bd3e528dc7cab96d05931315f6d1", null ],
       [ "IsInstalled", "classns3_1_1_sat_stats_helper.html#afeb5ac108c19eb00c53425e5f40b1ccc", null ],
+      [ "SaveAddressAndIdentifier", "classns3_1_1_sat_stats_helper.html#a356a8bcd2f2a99403be1f6a801d53ede", null ],
       [ "SetIdentifierType", "classns3_1_1_sat_stats_helper.html#a2e45dd9a24b7dc221710c0e52b0cf8b1", null ],
       [ "SetName", "classns3_1_1_sat_stats_helper.html#a2eb19b25f18ebb2abc388fd986d9cc80", null ],
       [ "SetOutputType", "classns3_1_1_sat_stats_helper.html#a97b7054c096118362f657a669d02c304", null ],
+      [ "UpdateAddressAndIdentifier", "classns3_1_1_sat_stats_helper.html#a89bd4dcae67d3f6efb94cc3347807ad2", null ],
+      [ "UpdateIdentifierOnProbes", "classns3_1_1_sat_stats_helper.html#a004d37ac17a7443b99b436d735355d8e", null ],
+      [ "m_identifierMap", "classns3_1_1_sat_stats_helper.html#adbfb10e2a6c0b2dcb0d717cc1370c07a", null ],
       [ "m_identifierType", "classns3_1_1_sat_stats_helper.html#a2e347ed89f9e3a320288ee1cf029caff", null ],
       [ "m_isInstalled", "classns3_1_1_sat_stats_helper.html#a298d1ca347f6d74a30c0dadb289b4478", null ],
       [ "m_name", "classns3_1_1_sat_stats_helper.html#a61da4cb74aefb59539b44c89e6a0b843", null ],
@@ -503,7 +510,7 @@ var group__satstats =
       [ "m_satHelper", "classns3_1_1_sat_stats_helper.html#a01bc5eefb931eea444a9557c60a21f7e", null ]
     ] ],
     [ "SatStatsHelperContainer", "classns3_1_1_sat_stats_helper_container.html", [
-      [ "SatStatsHelperContainer", "classns3_1_1_sat_stats_helper_container.html#a22fa773342d52a8ab5ffd1d612520dce", null ],
+      [ "SatStatsHelperContainer", "classns3_1_1_sat_stats_helper_container.html#a20526393da1e67f8fdaf52112a7a5fbe", null ],
       [ "AddAverageBeamAntennaGain", "classns3_1_1_sat_stats_helper_container.html#a9140667188a455ebf7cf6b5505e14d2f", null ],
       [ "AddAverageBeamFwdAppDelay", "classns3_1_1_sat_stats_helper_container.html#a15f1f924f432ef4786295b7d227378f8", null ],
       [ "AddAverageBeamFwdAppJitter", "classns3_1_1_sat_stats_helper_container.html#a23ae7d5e64a5825654bef4b11198da07", null ],
@@ -821,15 +828,17 @@ var group__satstats =
       [ "GetOutputTypeSuffix", "classns3_1_1_sat_stats_helper_container.html#af99c9ebe293218aaf896065f3f298f48", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_helper_container.html#a0a6b4f016b994d1ba7025b87e951e276", null ],
       [ "SetName", "classns3_1_1_sat_stats_helper_container.html#ae67c73d49258302d1d79825be622072e", null ],
+      [ "UpdateAddressAndIdentifier", "classns3_1_1_sat_stats_helper_container.html#a8f71bc3530d5c78c07caedebc545769f", null ],
       [ "m_name", "classns3_1_1_sat_stats_helper_container.html#a8a66ee05328e96e05002c99bd0a3b13d", null ],
       [ "m_names", "classns3_1_1_sat_stats_helper_container.html#acb48745b0594226732687a88687c9ad7", null ],
-      [ "m_satHelper", "classns3_1_1_sat_stats_helper_container.html#a742f8986cb8f43461062250a60dd4dc8", null ],
-      [ "m_stats", "classns3_1_1_sat_stats_helper_container.html#a079d4a973b1cebe6426bccf0d68980f3", null ]
+      [ "m_satHelper", "classns3_1_1_sat_stats_helper_container.html#afe888c58fffbbe11dfdf575b7dece640", null ],
+      [ "m_stats", "classns3_1_1_sat_stats_helper_container.html#aa79e805baa1bc893ea2aa5ae5c43b8e5", null ]
     ] ],
     [ "SatStatsJitterHelper", "classns3_1_1_sat_stats_jitter_helper.html", [
       [ "SatStatsJitterHelper", "classns3_1_1_sat_stats_jitter_helper.html#a29a0fd64e23d4a87907b089155cfbd52", null ],
       [ "~SatStatsJitterHelper", "classns3_1_1_sat_stats_jitter_helper.html#ad5116df34c1595dbac2b9dd356a7c2ce", null ],
       [ "ConnectProbeToCollector", "classns3_1_1_sat_stats_jitter_helper.html#a4dacae4e92d7657a303f474e347be989", null ],
+      [ "DisconnectProbeFromCollector", "classns3_1_1_sat_stats_jitter_helper.html#a1d8cc77230258927a906160b27e9df7a", null ],
       [ "DoInstall", "classns3_1_1_sat_stats_jitter_helper.html#ae924bbaedb214ca571da7cf3f34bbd3f", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_jitter_helper.html#a8f31653babc4ca18150c886638e80acb", null ],
       [ "GetAveragingMode", "classns3_1_1_sat_stats_jitter_helper.html#adc1e675dae042b037fedd21d9b48dcc3", null ],
@@ -837,18 +846,17 @@ var group__satstats =
       [ "InstallProbes", "classns3_1_1_sat_stats_jitter_helper.html#af9f6c0fbbfcf65950b502f64ef1a1874", null ],
       [ "PassSampleToCollector", "classns3_1_1_sat_stats_jitter_helper.html#a413cecaae441d4c791844e9c7c5ee231", null ],
       [ "RxJitterCallback", "classns3_1_1_sat_stats_jitter_helper.html#a3808d39110082907010eaf9ebe4ef12b", null ],
-      [ "SaveAddressAndIdentifier", "classns3_1_1_sat_stats_jitter_helper.html#a6e624140941165b76d478f79486bcf54", null ],
       [ "SetAveragingMode", "classns3_1_1_sat_stats_jitter_helper.html#ac72f86ff93b97a4cbe695d478fc0735c", null ],
       [ "m_aggregator", "classns3_1_1_sat_stats_jitter_helper.html#a662663ad9334316298e3deda25196f0f", null ],
       [ "m_averagingCollector", "classns3_1_1_sat_stats_jitter_helper.html#afff78ab39c0b7186991c75db7a0fa9f9", null ],
       [ "m_averagingMode", "classns3_1_1_sat_stats_jitter_helper.html#a0ebe44a5e1a3f1540299792a576e444d", null ],
-      [ "m_identifierMap", "classns3_1_1_sat_stats_jitter_helper.html#a66d0211edc8b2b385664952c1747d578", null ],
       [ "m_terminalCollectors", "classns3_1_1_sat_stats_jitter_helper.html#ac90577cde81a381b74cbe4a4dc61adfa", null ]
     ] ],
     [ "SatStatsLinkDelayHelper", "classns3_1_1_sat_stats_link_delay_helper.html", [
       [ "SatStatsLinkDelayHelper", "classns3_1_1_sat_stats_link_delay_helper.html#aa9cfa380c9c5c43d172dbb5d99279cd4", null ],
       [ "~SatStatsLinkDelayHelper", "classns3_1_1_sat_stats_link_delay_helper.html#ab2cc49dd298a97760f4ab2c0f6967336", null ],
       [ "ConnectProbeToCollector", "classns3_1_1_sat_stats_link_delay_helper.html#a883ff939cdd867ca010c90aa81fdfa23", null ],
+      [ "DisconnectProbeFromCollector", "classns3_1_1_sat_stats_link_delay_helper.html#af49685ab697cf562d5c377978ecdebfb", null ],
       [ "DoInstall", "classns3_1_1_sat_stats_link_delay_helper.html#ac4647634310da86b6c1ace59dd116cbd", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_link_delay_helper.html#ae69c7af8c0142802a77f12225b6d693f", null ],
       [ "GetAveragingMode", "classns3_1_1_sat_stats_link_delay_helper.html#acd90fa2f4f8660d5cf61e60437cbf03b", null ],
@@ -856,7 +864,6 @@ var group__satstats =
       [ "InstallProbes", "classns3_1_1_sat_stats_link_delay_helper.html#a1d5c1d295c1d8dda1ac690253bd0e16b", null ],
       [ "PassSampleToCollector", "classns3_1_1_sat_stats_link_delay_helper.html#a9b65c40c702c13ac93a06577b5fab36c", null ],
       [ "RxLinkDelayCallback", "classns3_1_1_sat_stats_link_delay_helper.html#ac318d167cbcdc1afa05ab2c1da314db2", null ],
-      [ "SaveAddressAndIdentifier", "classns3_1_1_sat_stats_link_delay_helper.html#a78bc587c7529ef0e9f529ce09a17a72e", null ],
       [ "SetAveragingMode", "classns3_1_1_sat_stats_link_delay_helper.html#aabf59bf69f98f49c3b701f8a34637a69", null ],
       [ "m_aggregator", "classns3_1_1_sat_stats_link_delay_helper.html#a0015c648828077b08eedf09dab4cb012", null ],
       [ "m_averagingCollector", "classns3_1_1_sat_stats_link_delay_helper.html#a9e2f00ce077a84657e6f9cb0c971888f", null ],
@@ -868,6 +875,7 @@ var group__satstats =
       [ "SatStatsLinkJitterHelper", "classns3_1_1_sat_stats_link_jitter_helper.html#a6afae1727e25d789cf4ff2533974c53d", null ],
       [ "~SatStatsLinkJitterHelper", "classns3_1_1_sat_stats_link_jitter_helper.html#a02e758799dde2caf3b1b5c3cc5339669", null ],
       [ "ConnectProbeToCollector", "classns3_1_1_sat_stats_link_jitter_helper.html#abe2b3aa8921ad1240899f234b96adc9d", null ],
+      [ "DisconnectProbeFromCollector", "classns3_1_1_sat_stats_link_jitter_helper.html#aa19e58a947d5adea206ae9e60d2f5f43", null ],
       [ "DoInstall", "classns3_1_1_sat_stats_link_jitter_helper.html#a6b5ce0e084912f09ef94b07f00698a1f", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_link_jitter_helper.html#a84456abbe1abf65f3b63ac39dfe3d234", null ],
       [ "GetAveragingMode", "classns3_1_1_sat_stats_link_jitter_helper.html#ab4a1e64bcb489bbae33c2fb6cbd448b6", null ],
@@ -875,14 +883,12 @@ var group__satstats =
       [ "InstallProbes", "classns3_1_1_sat_stats_link_jitter_helper.html#ab2b486e9909a56972cc49387902d4a58", null ],
       [ "PassSampleToCollector", "classns3_1_1_sat_stats_link_jitter_helper.html#a50a404a469c792f27172f7a860362bd8", null ],
       [ "RxLinkJitterCallback", "classns3_1_1_sat_stats_link_jitter_helper.html#aad7779f7e49363eeb58948ae4bf38a6f", null ],
-      [ "SaveAddressAndIdentifier", "classns3_1_1_sat_stats_link_jitter_helper.html#a288e0cc85fe262e42b093c954a7ed23c", null ],
       [ "SetAveragingMode", "classns3_1_1_sat_stats_link_jitter_helper.html#a028ca3550e6bc02e7334fde105677aa5", null ],
       [ "SetChannelLink", "classns3_1_1_sat_stats_link_jitter_helper.html#aa94869ccdfe2fa9f91169a167922cf39", null ],
       [ "m_aggregator", "classns3_1_1_sat_stats_link_jitter_helper.html#a763c2f8166592e6023c52ffd4d91833c", null ],
       [ "m_averagingCollector", "classns3_1_1_sat_stats_link_jitter_helper.html#a0a3ddb133298906551fb858bc2fc3b03", null ],
       [ "m_averagingMode", "classns3_1_1_sat_stats_link_jitter_helper.html#a61b9e090cddaf4159723a86be6183482", null ],
       [ "m_channelLink", "classns3_1_1_sat_stats_link_jitter_helper.html#aab1ec073a9d3cf990bf5d96b1c6033d0", null ],
-      [ "m_identifierMap", "classns3_1_1_sat_stats_link_jitter_helper.html#a4d8dd50aaa466cb8cca51b8b7ea3020f", null ],
       [ "m_terminalCollectors", "classns3_1_1_sat_stats_link_jitter_helper.html#a1c2cf6e90d129f872373faf3378ccdec", null ]
     ] ],
     [ "SatStatsLinkModcodHelper", "classns3_1_1_sat_stats_link_modcod_helper.html", [
@@ -896,12 +902,10 @@ var group__satstats =
       [ "InstallProbes", "classns3_1_1_sat_stats_link_modcod_helper.html#a649dde08fa1f3245d2071d5ad2cdbe24", null ],
       [ "PassSampleToCollector", "classns3_1_1_sat_stats_link_modcod_helper.html#a1be10469fa2e36a8ab725a604b6d19e8", null ],
       [ "RxLinkModcodCallback", "classns3_1_1_sat_stats_link_modcod_helper.html#abdf06cdd0b4ca893a85cca2ad6de27b9", null ],
-      [ "SaveAddressAndIdentifier", "classns3_1_1_sat_stats_link_modcod_helper.html#a2cd324274b9cce86ce6b1a35e61fb89f", null ],
       [ "SetAveragingMode", "classns3_1_1_sat_stats_link_modcod_helper.html#a7788e359bcdae709d59d8ac900fd949a", null ],
       [ "m_aggregator", "classns3_1_1_sat_stats_link_modcod_helper.html#a71cf5edb94814b0d0d6183c00bf2c4f2", null ],
       [ "m_averagingCollector", "classns3_1_1_sat_stats_link_modcod_helper.html#ace34ee7cd73cfa3533a2ffe1b35548b5", null ],
       [ "m_averagingMode", "classns3_1_1_sat_stats_link_modcod_helper.html#a3bedf0d018f390180174d198c75bf11c", null ],
-      [ "m_identifierMap", "classns3_1_1_sat_stats_link_modcod_helper.html#af6016215994dc97426b2bd00808e2f72", null ],
       [ "m_terminalCollectors", "classns3_1_1_sat_stats_link_modcod_helper.html#a34d60a88ef6c2cdb826910b1d92c42c3", null ]
     ] ],
     [ "SatStatsLinkRxPowerHelper", "classns3_1_1_sat_stats_link_rx_power_helper.html", [
@@ -915,13 +919,11 @@ var group__satstats =
       [ "InstallProbes", "classns3_1_1_sat_stats_link_rx_power_helper.html#ac7f35bcb8d5d1b7a6acaadaa83ab3075", null ],
       [ "PassSampleToCollector", "classns3_1_1_sat_stats_link_rx_power_helper.html#a8b061a2b52dbd0e1c3e3bffc62b57a2b", null ],
       [ "RxPowerCallback", "classns3_1_1_sat_stats_link_rx_power_helper.html#ae72c3739361f9a4d7209bc70bfc1bc78", null ],
-      [ "SaveAddressAndIdentifier", "classns3_1_1_sat_stats_link_rx_power_helper.html#add0085bde7aadd99cd83d6aac22e065c", null ],
       [ "SetAveragingMode", "classns3_1_1_sat_stats_link_rx_power_helper.html#a57b074cbe0ab058d6b900a28203f3379", null ],
       [ "m_aggregator", "classns3_1_1_sat_stats_link_rx_power_helper.html#a4d75cc91027b4cec48af4754e37b1605", null ],
       [ "m_averagingCollector", "classns3_1_1_sat_stats_link_rx_power_helper.html#a9ddfb9caffede3e7c3230c2cdf494989", null ],
       [ "m_averagingMode", "classns3_1_1_sat_stats_link_rx_power_helper.html#a894bd30c8a972513ab519d343b088772", null ],
       [ "m_collector", "classns3_1_1_sat_stats_link_rx_power_helper.html#a47d1046db489e46c37a622f0df6bfedd", null ],
-      [ "m_identifierMap", "classns3_1_1_sat_stats_link_rx_power_helper.html#afaf7cd1c641b7bf03b5db6b8fe625906", null ],
       [ "m_terminalCollectors", "classns3_1_1_sat_stats_link_rx_power_helper.html#a3509a499b91f105c5aaaea7f2ea63229", null ],
       [ "m_traceSinkCallback", "classns3_1_1_sat_stats_link_rx_power_helper.html#ae12f5a2464860ef86ccaddec5503449a", null ]
     ] ],
@@ -935,14 +937,12 @@ var group__satstats =
       [ "GetTypeId", "classns3_1_1_sat_stats_link_sinr_helper.html#aec7d3d233f68a70ad3ec5dad9360f5ad", null ],
       [ "InstallProbes", "classns3_1_1_sat_stats_link_sinr_helper.html#adabc4e8cedb387e1743e43ed6c00510a", null ],
       [ "PassSampleToCollector", "classns3_1_1_sat_stats_link_sinr_helper.html#a82f54e535785d94982460fd94e4fe5b4", null ],
-      [ "SaveAddressAndIdentifier", "classns3_1_1_sat_stats_link_sinr_helper.html#aefa4fe706d94fda1a13848bc214f3eab", null ],
       [ "SetAveragingMode", "classns3_1_1_sat_stats_link_sinr_helper.html#ace203d06ea219addfdc9f2519da720ea", null ],
       [ "SinrCallback", "classns3_1_1_sat_stats_link_sinr_helper.html#aabd679ffd6255a8508e851e2823ea0e9", null ],
       [ "m_aggregator", "classns3_1_1_sat_stats_link_sinr_helper.html#a4c878746836c9685af6af0aacfce95ad", null ],
       [ "m_averagingCollector", "classns3_1_1_sat_stats_link_sinr_helper.html#a0298464f2c57b0c232e1ae2a75469e88", null ],
       [ "m_averagingMode", "classns3_1_1_sat_stats_link_sinr_helper.html#a893c7815a12b9f5c36e1572c13c9f4c8", null ],
       [ "m_collector", "classns3_1_1_sat_stats_link_sinr_helper.html#a835ba4761c2888b7ddf73ab7a69b039f", null ],
-      [ "m_identifierMap", "classns3_1_1_sat_stats_link_sinr_helper.html#af220225ffeb24947eebd97de9d784736", null ],
       [ "m_terminalCollectors", "classns3_1_1_sat_stats_link_sinr_helper.html#a9f1f0fbf2e44e5a9cfa509e0dbb3d8c6", null ],
       [ "m_traceSinkCallback", "classns3_1_1_sat_stats_link_sinr_helper.html#a2418cf291a06ea0e92bc0444dce012e1", null ]
     ] ],
@@ -954,12 +954,10 @@ var group__satstats =
       [ "GetTraceSourceName", "classns3_1_1_sat_stats_marsala_correlation_helper.html#a372d4473de85e010c608e7b53284fc6d", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_marsala_correlation_helper.html#af629bebd2b30ad8be9a1305c99d81c0f", null ],
       [ "GetValidCarrierType", "classns3_1_1_sat_stats_marsala_correlation_helper.html#a220cc77f89a98d3ffb192be537539bd9", null ],
-      [ "SaveAddressAndIdentifier", "classns3_1_1_sat_stats_marsala_correlation_helper.html#a0339eda3a44c1f40f52d42e276a0fcfa", null ],
       [ "SetTraceSourceName", "classns3_1_1_sat_stats_marsala_correlation_helper.html#a3b8ea35b3bc31a76e044c817e6b263fa", null ],
       [ "SetValidCarrierType", "classns3_1_1_sat_stats_marsala_correlation_helper.html#a6722da58b6f2fd151b6fe827bab95487", null ],
       [ "m_aggregator", "classns3_1_1_sat_stats_marsala_correlation_helper.html#aa9c6ef30b3bc0533b52cf3badd781d05", null ],
       [ "m_carrierType", "classns3_1_1_sat_stats_marsala_correlation_helper.html#afe4d5c4dc76aa7a29d9faf32e21fb479", null ],
-      [ "m_identifierMap", "classns3_1_1_sat_stats_marsala_correlation_helper.html#a46a40434776e26faa99e646c46956a30", null ],
       [ "m_terminalCollectors", "classns3_1_1_sat_stats_marsala_correlation_helper.html#a6ec0d734794b7bb954902fbf8a59c14a", null ],
       [ "m_traceSourceName", "classns3_1_1_sat_stats_marsala_correlation_helper.html#ad538f9893575ad11a33835a006e6276a", null ]
     ] ],
@@ -970,11 +968,9 @@ var group__satstats =
       [ "GetTraceSourceName", "classns3_1_1_sat_stats_packet_collision_helper.html#ae36c99192926638ea277600cacdf2007", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_packet_collision_helper.html#af07808e4ed2da78c49e370963fe2d2d6", null ],
       [ "GetValidCarrierType", "classns3_1_1_sat_stats_packet_collision_helper.html#a955947e3405e14e2facc2b13526a4d6c", null ],
-      [ "SaveAddressAndIdentifier", "classns3_1_1_sat_stats_packet_collision_helper.html#a291c4fe1cf077679469a3bcc60d6c0d6", null ],
       [ "SetTraceSourceName", "classns3_1_1_sat_stats_packet_collision_helper.html#a1c674db75d9212f41d90c32c5c604a7b", null ],
       [ "SetValidCarrierType", "classns3_1_1_sat_stats_packet_collision_helper.html#a57b04067d7d7cd53014a2bf46851506b", null ],
       [ "m_carrierType", "classns3_1_1_sat_stats_packet_collision_helper.html#ad43e066e7287b12f84e055db53cff19c", null ],
-      [ "m_identifierMap", "classns3_1_1_sat_stats_packet_collision_helper.html#a7dd2383ccc85a4cb2324724b81492121", null ],
       [ "m_terminalCollectors", "classns3_1_1_sat_stats_packet_collision_helper.html#ac1b596fc88ecfb789fa6963c3ee22dfd", null ],
       [ "m_traceSourceName", "classns3_1_1_sat_stats_packet_collision_helper.html#a954c498a86fa5c23efe9636f0c184762", null ]
     ] ],
@@ -991,6 +987,8 @@ var group__satstats =
     [ "SatStatsPacketErrorHelper", "classns3_1_1_sat_stats_packet_error_helper.html", [
       [ "SatStatsPacketErrorHelper", "classns3_1_1_sat_stats_packet_error_helper.html#ab31134b720a539afe9a5c9892023606e", null ],
       [ "~SatStatsPacketErrorHelper", "classns3_1_1_sat_stats_packet_error_helper.html#af5bdabdd43aa9857d5fb4f9c700602cd", null ],
+      [ "ConnectProbeToCollector", "classns3_1_1_sat_stats_packet_error_helper.html#ae2c916e493e13a67208c814036221fd1", null ],
+      [ "DisconnectProbeFromCollector", "classns3_1_1_sat_stats_packet_error_helper.html#aa77c27390e3dff3a18a79d6149fc1540", null ],
       [ "DoInstall", "classns3_1_1_sat_stats_packet_error_helper.html#a2ffe1764a029ba4319e14bb2c8d0404b", null ],
       [ "ErrorRxCallback", "classns3_1_1_sat_stats_packet_error_helper.html#af51bc131c49bcbd8932d5a205fd61685", null ],
       [ "GetChannelType", "classns3_1_1_sat_stats_packet_error_helper.html#a75886ad472ad9fd01031a3358e97a363", null ],
@@ -1001,15 +999,14 @@ var group__satstats =
       [ "InstallProbeOnSatFeeder", "classns3_1_1_sat_stats_packet_error_helper.html#afd9a1f3020ada6cd80b8375dd0b2ac19", null ],
       [ "InstallProbeOnSatUser", "classns3_1_1_sat_stats_packet_error_helper.html#acb00218808bf9ce3088e12fd37c6d5f0", null ],
       [ "InstallProbeOnUt", "classns3_1_1_sat_stats_packet_error_helper.html#ac652151c16b40ff575c6ea115daa3370", null ],
-      [ "SaveAddressAndIdentifier", "classns3_1_1_sat_stats_packet_error_helper.html#ac1158586f8f3001367d137844e90b649", null ],
       [ "SetChannelType", "classns3_1_1_sat_stats_packet_error_helper.html#ad29738488ab475990438e6ec003195dd", null ],
       [ "SetTraceSourceName", "classns3_1_1_sat_stats_packet_error_helper.html#af1d2991fc4ead90d600ccadee5e63088", null ],
       [ "SetValidCarrierType", "classns3_1_1_sat_stats_packet_error_helper.html#aecb52337dceaa976f21fabeb6df0e08e", null ],
+      [ "UpdateIdentifierOnProbes", "classns3_1_1_sat_stats_packet_error_helper.html#a777972a7fdf663f1598aa9272a9552e1", null ],
       [ "m_aggregator", "classns3_1_1_sat_stats_packet_error_helper.html#a8a53f43af57ffd06db41db3dd201e815", null ],
       [ "m_carrierType", "classns3_1_1_sat_stats_packet_error_helper.html#ae49ba1bbf844333439a79afc1554352d", null ],
       [ "m_channelType", "classns3_1_1_sat_stats_packet_error_helper.html#aca3d6ab6028a6d6fcfe421832f041338", null ],
-      [ "m_identifierMap", "classns3_1_1_sat_stats_packet_error_helper.html#ae4439321e6c731fd6a59b4ac5094f76c", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_packet_error_helper.html#ae60706a896deb1463decdbf53fa82880", null ],
+      [ "m_probes", "classns3_1_1_sat_stats_packet_error_helper.html#a86a7e004d9e26ffebf880a0359695ac5", null ],
       [ "m_terminalCollectors", "classns3_1_1_sat_stats_packet_error_helper.html#ac572c3a7e08ffaea4a6f5bdc3fff5167", null ],
       [ "m_traceSourceName", "classns3_1_1_sat_stats_packet_error_helper.html#a4825c57df556cd56d21327c839647b1d", null ]
     ] ],
@@ -1017,6 +1014,7 @@ var group__satstats =
       [ "SatStatsPltHelper", "classns3_1_1_sat_stats_plt_helper.html#aa36d308cbf6454a833ead3a7153c0809", null ],
       [ "~SatStatsPltHelper", "classns3_1_1_sat_stats_plt_helper.html#a926ce2b509371bdb882cb770ccdd0239", null ],
       [ "ConnectProbeToCollector", "classns3_1_1_sat_stats_plt_helper.html#a46fdb3e0a99ddd14d30f48de253b26a6", null ],
+      [ "DisconnectProbeFromCollector", "classns3_1_1_sat_stats_plt_helper.html#a8e43ccc19ec2e0315ff448b0fe514937", null ],
       [ "DoInstall", "classns3_1_1_sat_stats_plt_helper.html#a2446510a163cbfb863d63e84b364b5c2", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_plt_helper.html#a1a50285047da6a835025e89aff824d1f", null ],
       [ "GetAveragingMode", "classns3_1_1_sat_stats_plt_helper.html#af15a420d8e3e67fb7b4c9c4f03659d09", null ],
@@ -1024,12 +1022,10 @@ var group__satstats =
       [ "InstallProbes", "classns3_1_1_sat_stats_plt_helper.html#ad93778c58ffa7724887a9784f1257b89", null ],
       [ "PassSampleToCollector", "classns3_1_1_sat_stats_plt_helper.html#aec4409b5fba411fa210664f2e77c2f9c", null ],
       [ "RxPltCallback", "classns3_1_1_sat_stats_plt_helper.html#a2010832b7b5484706c4a48f5ab8af8a0", null ],
-      [ "SaveAddressAndIdentifier", "classns3_1_1_sat_stats_plt_helper.html#a9c21fd9fc054594a23e6958a811cbf22", null ],
       [ "SetAveragingMode", "classns3_1_1_sat_stats_plt_helper.html#a7e8e77bbca1ec6b3b7844a6fd7099769", null ],
       [ "m_aggregator", "classns3_1_1_sat_stats_plt_helper.html#ae9cbc8b00112fc1309994a9f5f069d55", null ],
       [ "m_averagingCollector", "classns3_1_1_sat_stats_plt_helper.html#a3779a43ff1aa345a76e96a30ba738424", null ],
       [ "m_averagingMode", "classns3_1_1_sat_stats_plt_helper.html#a6239f597ced1818b83493c0a61bee4a5", null ],
-      [ "m_identifierMap", "classns3_1_1_sat_stats_plt_helper.html#af4d2372074609d7a7f20f921f18ff5e6", null ],
       [ "m_terminalCollectors", "classns3_1_1_sat_stats_plt_helper.html#a35190c2cf082d0740196a3d020753201", null ]
     ] ],
     [ "SatStatsQueueHelper", "classns3_1_1_sat_stats_queue_helper.html", [
@@ -1078,8 +1074,9 @@ var group__satstats =
       [ "DoInstall", "classns3_1_1_sat_stats_resources_granted_helper.html#a625db3d3914a4c86cc0aabab5e41cc62", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_resources_granted_helper.html#ae91b47b8e10d12d8c51c21467bbfe062", null ],
       [ "InstallProbe", "classns3_1_1_sat_stats_resources_granted_helper.html#a4245f748f78cd1d89bfe5b4b0ab7d177", null ],
+      [ "UpdateIdentifierOnProbes", "classns3_1_1_sat_stats_resources_granted_helper.html#ae62166116ebdb73be526de3d0b714757", null ],
       [ "m_aggregator", "classns3_1_1_sat_stats_resources_granted_helper.html#a665119d8cea86c7fe491edad47059859", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_resources_granted_helper.html#a582fab082e1aeae6df70f2fa2dcb7a8c", null ],
+      [ "m_probes", "classns3_1_1_sat_stats_resources_granted_helper.html#a3d72eac6491128adf77fae92300023da", null ],
       [ "m_terminalCollectors", "classns3_1_1_sat_stats_resources_granted_helper.html#aead69408e422ef64be6ea0bcfb973e09", null ]
     ] ],
     [ "SatStatsRtnAppDelayHelper", "classns3_1_1_sat_stats_rtn_app_delay_helper.html", [
@@ -1104,9 +1101,7 @@ var group__satstats =
       [ "~SatStatsRtnCompositeSinrHelper", "classns3_1_1_sat_stats_rtn_composite_sinr_helper.html#afb85ef606aa7382766f2657499a2db68", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_rtn_composite_sinr_helper.html#afd0b8c1947eb4cdcb643e73f792fefcc", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_rtn_composite_sinr_helper.html#acede4d905310e1c28d952b2336f3216f", null ],
-      [ "SaveAddressAndIdentifier", "classns3_1_1_sat_stats_rtn_composite_sinr_helper.html#a468c9576a7d94cc6057c5309ae6456f4", null ],
-      [ "SinrCallback", "classns3_1_1_sat_stats_rtn_composite_sinr_helper.html#acd23f9bf09e8678015fce9f18ee52cc0", null ],
-      [ "m_identifierMap", "classns3_1_1_sat_stats_rtn_composite_sinr_helper.html#a7467ab40615458e0b80636e9682b7482", null ]
+      [ "SinrCallback", "classns3_1_1_sat_stats_rtn_composite_sinr_helper.html#acd23f9bf09e8678015fce9f18ee52cc0", null ]
     ] ],
     [ "SatStatsRtnDevDelayHelper", "classns3_1_1_sat_stats_rtn_dev_delay_helper.html", [
       [ "SatStatsRtnDevDelayHelper", "classns3_1_1_sat_stats_rtn_dev_delay_helper.html#a1e5d27e4c100d415bcbb581c9f9d204b", null ],
@@ -1244,7 +1239,8 @@ var group__satstats =
       [ "~SatStatsRtnSignallingLoadHelper", "classns3_1_1_sat_stats_rtn_signalling_load_helper.html#ae15a53ce6d3fd5e4c6b4cf1738dea252", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_rtn_signalling_load_helper.html#a9e8ce076abeca4f0d313183e54f0505f", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_rtn_signalling_load_helper.html#a54095f8776bfa5ed06ba46463b587b73", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_rtn_signalling_load_helper.html#a469dc2015352bc4f32a3f4e59fc222d3", null ]
+      [ "UpdateIdentifierOnProbes", "classns3_1_1_sat_stats_rtn_signalling_load_helper.html#aa55094470d5d0d7d1502b421723ec863", null ],
+      [ "m_probes", "classns3_1_1_sat_stats_rtn_signalling_load_helper.html#a21549b458f63c6c4fa9e326697ac3d0c", null ]
     ] ],
     [ "SatStatsRtnUserDaPacketErrorHelper", "classns3_1_1_sat_stats_rtn_user_da_packet_error_helper.html", [
       [ "SatStatsRtnUserDaPacketErrorHelper", "classns3_1_1_sat_stats_rtn_user_da_packet_error_helper.html#a785e07b075eac4119f78819666d4079a", null ],
@@ -1255,15 +1251,13 @@ var group__satstats =
       [ "SatStatsRtnUserDevLinkDelayHelper", "classns3_1_1_sat_stats_rtn_user_dev_link_delay_helper.html#a969aa865a902cf52f9d06dc46f6b56fd", null ],
       [ "~SatStatsRtnUserDevLinkDelayHelper", "classns3_1_1_sat_stats_rtn_user_dev_link_delay_helper.html#a077a0120f561224e01a42e757b92ce78", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_rtn_user_dev_link_delay_helper.html#a92e4dab1e29721007440c9570f19a2a6", null ],
-      [ "GetTypeId", "classns3_1_1_sat_stats_rtn_user_dev_link_delay_helper.html#a35e0bf052a2fdccf7a3a3e40ab3b9496", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_rtn_user_dev_link_delay_helper.html#a95d3fc182602aa4b7218d5dbf977d122", null ]
+      [ "GetTypeId", "classns3_1_1_sat_stats_rtn_user_dev_link_delay_helper.html#a35e0bf052a2fdccf7a3a3e40ab3b9496", null ]
     ] ],
     [ "SatStatsRtnUserDevLinkJitterHelper", "classns3_1_1_sat_stats_rtn_user_dev_link_jitter_helper.html", [
       [ "SatStatsRtnUserDevLinkJitterHelper", "classns3_1_1_sat_stats_rtn_user_dev_link_jitter_helper.html#a5ce5021bd92a4f3d21899339f1dadbff", null ],
       [ "~SatStatsRtnUserDevLinkJitterHelper", "classns3_1_1_sat_stats_rtn_user_dev_link_jitter_helper.html#a5694fa658bf8aaa4b313dec90ca5901c", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_rtn_user_dev_link_jitter_helper.html#aca4444f89217670fd18a5912fce55fed", null ],
-      [ "GetTypeId", "classns3_1_1_sat_stats_rtn_user_dev_link_jitter_helper.html#abc81d629fb2357c3b5f241f5ca7fa0cc", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_rtn_user_dev_link_jitter_helper.html#a6d8af38c2fcb8b95d58be40fc86918ee", null ]
+      [ "GetTypeId", "classns3_1_1_sat_stats_rtn_user_dev_link_jitter_helper.html#abc81d629fb2357c3b5f241f5ca7fa0cc", null ]
     ] ],
     [ "SatStatsRtnUserDevThroughputHelper", "classns3_1_1_sat_stats_rtn_user_dev_throughput_helper.html", [
       [ "SatStatsRtnUserDevThroughputHelper", "classns3_1_1_sat_stats_rtn_user_dev_throughput_helper.html#af7696ba7c96707330de12ea87d8ff254", null ],
@@ -1275,8 +1269,7 @@ var group__satstats =
       [ "SatStatsRtnUserLinkModcodHelper", "classns3_1_1_sat_stats_rtn_user_link_modcod_helper.html#ab1135618f7bc7fd0250cc2ad8b1eea22", null ],
       [ "~SatStatsRtnUserLinkModcodHelper", "classns3_1_1_sat_stats_rtn_user_link_modcod_helper.html#a4154d1aa00e54fd009cab52c792ef3c2", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_rtn_user_link_modcod_helper.html#ab2d4c421280f9ff3d7e77acd025a62ec", null ],
-      [ "GetTypeId", "classns3_1_1_sat_stats_rtn_user_link_modcod_helper.html#ab03bbbbd12ae9aa82e307f9c77d64e3a", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_rtn_user_link_modcod_helper.html#ad8478e454454efd62d2f88e485b5e607", null ]
+      [ "GetTypeId", "classns3_1_1_sat_stats_rtn_user_link_modcod_helper.html#ab03bbbbd12ae9aa82e307f9c77d64e3a", null ]
     ] ],
     [ "SatStatsRtnUserLinkRxPowerHelper", "classns3_1_1_sat_stats_rtn_user_link_rx_power_helper.html", [
       [ "SatStatsRtnUserLinkRxPowerHelper", "classns3_1_1_sat_stats_rtn_user_link_rx_power_helper.html#acafa80caba281e388f70227737b063f6", null ],
@@ -1294,15 +1287,13 @@ var group__satstats =
       [ "SatStatsRtnUserMacLinkDelayHelper", "classns3_1_1_sat_stats_rtn_user_mac_link_delay_helper.html#affd38afa40b39829521c48896b1b8063", null ],
       [ "~SatStatsRtnUserMacLinkDelayHelper", "classns3_1_1_sat_stats_rtn_user_mac_link_delay_helper.html#acef7c52887731069d4ae5145a5dc1357", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_rtn_user_mac_link_delay_helper.html#a5609fc1e806f0e0ce861b1d1317341b8", null ],
-      [ "GetTypeId", "classns3_1_1_sat_stats_rtn_user_mac_link_delay_helper.html#ae29acc1fc880785591c6e5988d19080b", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_rtn_user_mac_link_delay_helper.html#a0031f20e2508c573691469ec54a228cd", null ]
+      [ "GetTypeId", "classns3_1_1_sat_stats_rtn_user_mac_link_delay_helper.html#ae29acc1fc880785591c6e5988d19080b", null ]
     ] ],
     [ "SatStatsRtnUserMacLinkJitterHelper", "classns3_1_1_sat_stats_rtn_user_mac_link_jitter_helper.html", [
       [ "SatStatsRtnUserMacLinkJitterHelper", "classns3_1_1_sat_stats_rtn_user_mac_link_jitter_helper.html#a61cc99c7269dd4d2af52085a5d0dd4bd", null ],
       [ "~SatStatsRtnUserMacLinkJitterHelper", "classns3_1_1_sat_stats_rtn_user_mac_link_jitter_helper.html#a926b5bd8a3ff4c5bb43f8a7595baf3a2", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_rtn_user_mac_link_jitter_helper.html#a93190adb6125170b8adb226b64d0b117", null ],
-      [ "GetTypeId", "classns3_1_1_sat_stats_rtn_user_mac_link_jitter_helper.html#a1951c22a16cb82445096901b3ceb3bcd", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_rtn_user_mac_link_jitter_helper.html#a913800e715d7baf28ade0c2de06379e1", null ]
+      [ "GetTypeId", "classns3_1_1_sat_stats_rtn_user_mac_link_jitter_helper.html#a1951c22a16cb82445096901b3ceb3bcd", null ]
     ] ],
     [ "SatStatsRtnUserMacThroughputHelper", "classns3_1_1_sat_stats_rtn_user_mac_throughput_helper.html", [
       [ "SatStatsRtnUserMacThroughputHelper", "classns3_1_1_sat_stats_rtn_user_mac_throughput_helper.html#a00161fa299775fe180bc5e0887907b8e", null ],
@@ -1314,15 +1305,13 @@ var group__satstats =
       [ "SatStatsRtnUserPhyLinkDelayHelper", "classns3_1_1_sat_stats_rtn_user_phy_link_delay_helper.html#a8df999c237b89c990f0b59e4f63a7978", null ],
       [ "~SatStatsRtnUserPhyLinkDelayHelper", "classns3_1_1_sat_stats_rtn_user_phy_link_delay_helper.html#af156b4549b66549401f2009b2543796a", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_rtn_user_phy_link_delay_helper.html#a1fe19079ff88560583a642cb5af25065", null ],
-      [ "GetTypeId", "classns3_1_1_sat_stats_rtn_user_phy_link_delay_helper.html#af7a5cb4e2cf220f95b346d9cedde912a", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_rtn_user_phy_link_delay_helper.html#a377e279f7730d24cb7f89d158f9f501d", null ]
+      [ "GetTypeId", "classns3_1_1_sat_stats_rtn_user_phy_link_delay_helper.html#af7a5cb4e2cf220f95b346d9cedde912a", null ]
     ] ],
     [ "SatStatsRtnUserPhyLinkJitterHelper", "classns3_1_1_sat_stats_rtn_user_phy_link_jitter_helper.html", [
       [ "SatStatsRtnUserPhyLinkJitterHelper", "classns3_1_1_sat_stats_rtn_user_phy_link_jitter_helper.html#a8ae9193d19380d17776f633ad0b62967", null ],
       [ "~SatStatsRtnUserPhyLinkJitterHelper", "classns3_1_1_sat_stats_rtn_user_phy_link_jitter_helper.html#a973d2533de853f864f1c1b3a25b7c75f", null ],
       [ "DoInstallProbes", "classns3_1_1_sat_stats_rtn_user_phy_link_jitter_helper.html#a1c074b6056840127c031d973700b39b1", null ],
-      [ "GetTypeId", "classns3_1_1_sat_stats_rtn_user_phy_link_jitter_helper.html#a1451ac6fd1966fbbf5a7da6b6be6788f", null ],
-      [ "m_probes", "classns3_1_1_sat_stats_rtn_user_phy_link_jitter_helper.html#acf901e585446cff3f8dbb4633292ab8e", null ]
+      [ "GetTypeId", "classns3_1_1_sat_stats_rtn_user_phy_link_jitter_helper.html#a1451ac6fd1966fbbf5a7da6b6be6788f", null ]
     ] ],
     [ "SatStatsRtnUserPhyThroughputHelper", "classns3_1_1_sat_stats_rtn_user_phy_throughput_helper.html", [
       [ "SatStatsRtnUserPhyThroughputHelper", "classns3_1_1_sat_stats_rtn_user_phy_throughput_helper.html#a85b45bbd61c309c2b567a5ee751aa97f", null ],
@@ -1345,14 +1334,12 @@ var group__satstats =
       [ "InstallProbes", "classns3_1_1_sat_stats_satellite_queue_helper.html#a5dbf5d696a26d5321452b526ba3055c5", null ],
       [ "PassSampleToCollector", "classns3_1_1_sat_stats_satellite_queue_helper.html#add95e2c7d0791b84f85e276e1ce97adc", null ],
       [ "QueueSizeCallback", "classns3_1_1_sat_stats_satellite_queue_helper.html#a7dad4bccd708d3e55c8105a7feee836e", null ],
-      [ "SaveAddressAndIdentifier", "classns3_1_1_sat_stats_satellite_queue_helper.html#a316668a98c01da7bb685cb02317ab6b4", null ],
       [ "SetAveragingMode", "classns3_1_1_sat_stats_satellite_queue_helper.html#afe41a3a9f1d21549b1162eeab5c092cf", null ],
       [ "SetUnitType", "classns3_1_1_sat_stats_satellite_queue_helper.html#a40022df853b2ffecb0fe011bdae66ded", null ],
       [ "m_aggregator", "classns3_1_1_sat_stats_satellite_queue_helper.html#aff4e1c273af4beca072f644f8668ee61", null ],
       [ "m_averagingCollector", "classns3_1_1_sat_stats_satellite_queue_helper.html#a4468f561b05de7399228048d2e6bca91", null ],
       [ "m_averagingMode", "classns3_1_1_sat_stats_satellite_queue_helper.html#a784fd69267fb9a107791c273abdcc266", null ],
       [ "m_collector", "classns3_1_1_sat_stats_satellite_queue_helper.html#a3978bd4b8ed69e718628f8963865ea41", null ],
-      [ "m_identifierMap", "classns3_1_1_sat_stats_satellite_queue_helper.html#a63e1e6821d1b660ff924c1c274eb3696", null ],
       [ "m_longLabel", "classns3_1_1_sat_stats_satellite_queue_helper.html#ad14fb1c5e1d15f80f8fd8a93f5ce2ef2", null ],
       [ "m_shortLabel", "classns3_1_1_sat_stats_satellite_queue_helper.html#a971c19c725682a45fec17b30e0906d3c", null ],
       [ "m_terminalCollectors", "classns3_1_1_sat_stats_satellite_queue_helper.html#aa278beda8e5157286e12740a8aa4cf12", null ],
@@ -1365,11 +1352,9 @@ var group__satstats =
       [ "DoInstallProbes", "classns3_1_1_sat_stats_signalling_load_helper.html#a05fc2fd42c42e260d91492a330d5062b", null ],
       [ "GetTypeId", "classns3_1_1_sat_stats_signalling_load_helper.html#aaf05bf563fa8ff6e54e21577434294a8", null ],
       [ "InstallProbes", "classns3_1_1_sat_stats_signalling_load_helper.html#a60e32fb35fea4b1c2fe15205f7903eaf", null ],
-      [ "SaveAddressAndIdentifier", "classns3_1_1_sat_stats_signalling_load_helper.html#a78911aeb84c81d252772f6c4d54ba794", null ],
       [ "SignallingTxCallback", "classns3_1_1_sat_stats_signalling_load_helper.html#aa6475fe22df93ec2e4f3371d24ecccc5", null ],
       [ "m_aggregator", "classns3_1_1_sat_stats_signalling_load_helper.html#a11da549b515c951ca54d8f5bdce3ba74", null ],
       [ "m_conversionCollectors", "classns3_1_1_sat_stats_signalling_load_helper.html#af2446ba158a8e00c467f160e5b17e040", null ],
-      [ "m_identifierMap", "classns3_1_1_sat_stats_signalling_load_helper.html#aec7a5dc46ff27c3f214037faa7b95aaa", null ],
       [ "m_terminalCollectors", "classns3_1_1_sat_stats_signalling_load_helper.html#a6518c8fe199117b101510550b3163d39", null ]
     ] ],
     [ "SatStatsThroughputHelper", "classns3_1_1_sat_stats_throughput_helper.html", [
@@ -1381,13 +1366,11 @@ var group__satstats =
       [ "GetTypeId", "classns3_1_1_sat_stats_throughput_helper.html#a7fb8cd706f69e243befa030e4bb90e1d", null ],
       [ "InstallProbes", "classns3_1_1_sat_stats_throughput_helper.html#a0a81aa635358193e5bc842cf75862a1e", null ],
       [ "RxCallback", "classns3_1_1_sat_stats_throughput_helper.html#a4c523c282af3cca3d83ab63382752bfa", null ],
-      [ "SaveAddressAndIdentifier", "classns3_1_1_sat_stats_throughput_helper.html#ae73a62b1cbf68131e750f94dbc98b533", null ],
       [ "SetAveragingMode", "classns3_1_1_sat_stats_throughput_helper.html#a7772311e0a8dbf1642a20dfcb4405ca8", null ],
       [ "m_aggregator", "classns3_1_1_sat_stats_throughput_helper.html#a714e68f1f3f8b15d4f16da38905be698", null ],
       [ "m_averagingCollector", "classns3_1_1_sat_stats_throughput_helper.html#a4273b6f6c1ae54869e0d18cfae9763e0", null ],
       [ "m_averagingMode", "classns3_1_1_sat_stats_throughput_helper.html#ad585b2db693f76ca10120bb8b559ccd7", null ],
       [ "m_conversionCollectors", "classns3_1_1_sat_stats_throughput_helper.html#a0a7a27b30faf10c7760bce37945c67a6", null ],
-      [ "m_identifierMap", "classns3_1_1_sat_stats_throughput_helper.html#ab85eefca486ced41042d7d122903c087", null ],
       [ "m_terminalCollectors", "classns3_1_1_sat_stats_throughput_helper.html#aad99b361bf1e552b4139f08c44cc0120", null ]
     ] ],
     [ "SatStatsUserCrdsaPacketCollisionHelper", "classns3_1_1_sat_stats_user_crdsa_packet_collision_helper.html", [

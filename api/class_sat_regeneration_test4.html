@@ -168,16 +168,16 @@ Public Member Functions</h2></td></tr>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a834064e359f9f6830be2f6b7ea768760"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sat_regeneration_test4.html#a834064e359f9f6830be2f6b7ea768760">DoRun</a> (void)</td></tr>
 <tr class="separator:a834064e359f9f6830be2f6b7ea768760"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fed49cb8dd9215bd2036c18f50e4d56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sat_regeneration_test4.html#a5fed49cb8dd9215bd2036c18f50e4d56">GeoDevGwRxTraceCb</a> (Ptr&lt; const Packet &gt; packet, const Address &amp;)</td></tr>
-<tr class="separator:a5fed49cb8dd9215bd2036c18f50e4d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55e1806e54990ffa68da83fa2b8b9f95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sat_regeneration_test4.html#a55e1806e54990ffa68da83fa2b8b9f95">GeoDevGwTxTraceCb</a> (Ptr&lt; const Packet &gt; packet)</td></tr>
-<tr class="separator:a55e1806e54990ffa68da83fa2b8b9f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af833abdde6229d1c2f18376573156e5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sat_regeneration_test4.html#af833abdde6229d1c2f18376573156e5a">GeoDevUtRxTraceCb</a> (Ptr&lt; const Packet &gt; packet, const Address &amp;)</td></tr>
-<tr class="separator:af833abdde6229d1c2f18376573156e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af512d972608a4cc8fe04ded5db06091f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sat_regeneration_test4.html#af512d972608a4cc8fe04ded5db06091f">GeoDevUtTxTraceCb</a> (Ptr&lt; const Packet &gt; packet)</td></tr>
-<tr class="separator:af512d972608a4cc8fe04ded5db06091f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69417d1df6755520a0d4ca23dfb639bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sat_regeneration_test4.html#a69417d1df6755520a0d4ca23dfb639bc">HasSinkInstalled</a> (Ptr&lt; Node &gt; node, uint16_t port)</td></tr>
 <tr class="separator:a69417d1df6755520a0d4ca23dfb639bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0304575cf7e04a4e23095eb7cbc66a85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sat_regeneration_test4.html#a0304575cf7e04a4e23095eb7cbc66a85">OrbiterDevGwRxTraceCb</a> (Ptr&lt; const Packet &gt; packet, const Address &amp;)</td></tr>
+<tr class="separator:a0304575cf7e04a4e23095eb7cbc66a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac71f67b9ab426b633818c963dbe18ba9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sat_regeneration_test4.html#ac71f67b9ab426b633818c963dbe18ba9">OrbiterDevGwTxTraceCb</a> (Ptr&lt; const Packet &gt; packet)</td></tr>
+<tr class="separator:ac71f67b9ab426b633818c963dbe18ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a258e8d50a3b71d9424266cbeedb410bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sat_regeneration_test4.html#a258e8d50a3b71d9424266cbeedb410bd">OrbiterDevUtRxTraceCb</a> (Ptr&lt; const Packet &gt; packet, const Address &amp;)</td></tr>
+<tr class="separator:a258e8d50a3b71d9424266cbeedb410bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3078a135414db30ea835878be7b30bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sat_regeneration_test4.html#ac3078a135414db30ea835878be7b30bc">OrbiterDevUtTxTraceCb</a> (Ptr&lt; const Packet &gt; packet)</td></tr>
+<tr class="separator:ac3078a135414db30ea835878be7b30bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -197,7 +197,7 @@ Private Attributes</h2></td></tr>
 <p>This case tests link regeneration on satellite. It is based on a LARGER scenario.</p>
 <p>Expected result: No bytes sent or received on FWD Same number of bytes sent and received on RTN </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00865">865</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00886">886</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1a63f33f09831bfc91b84ec920ac1508"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1a63f33f09831bfc91b84ec920ac1508">&#9670;&nbsp;</a></span>SatRegenerationTest4()</h2>
@@ -214,9 +214,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00931">931</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00952">952</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-regeneration-test_8cc_source.html#l00883">m_totalReceivedGw</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00884">m_totalReceivedUt</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00881">m_totalSentGw</a>, and <a class="el" href="satellite-regeneration-test_8cc_source.html#l00882">m_totalSentUt</a>.</p>
+<p class="reference">References <a class="el" href="satellite-regeneration-test_8cc_source.html#l00904">m_totalReceivedGw</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00905">m_totalReceivedUt</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00902">m_totalSentGw</a>, and <a class="el" href="satellite-regeneration-test_8cc_source.html#l00903">m_totalSentUt</a>.</p>
 
 </div>
 </div>
@@ -243,7 +243,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00942">942</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00963">963</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
 
 </div>
 </div>
@@ -274,9 +274,9 @@ Private Attributes</h2></td></tr>
 <p>Set regeneration mode</p>
 <p>Set simulation output details</p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00950">950</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00971">971</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-regeneration-test_8cc_source.html#l00900">GeoDevGwRxTraceCb()</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00888">GeoDevGwTxTraceCb()</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00906">GeoDevUtRxTraceCb()</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00894">GeoDevUtTxTraceCb()</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00912">HasSinkInstalled()</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00879">m_helper</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00883">m_totalReceivedGw</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00884">m_totalReceivedUt</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00881">m_totalSentGw</a>, and <a class="el" href="satellite-regeneration-test_8cc_source.html#l00882">m_totalSentUt</a>.</p>
+<p class="reference">References <a class="el" href="satellite-regeneration-test_8cc_source.html#l00933">HasSinkInstalled()</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00900">m_helper</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00904">m_totalReceivedGw</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00905">m_totalReceivedUt</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00902">m_totalSentGw</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00903">m_totalSentUt</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00921">OrbiterDevGwRxTraceCb()</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00909">OrbiterDevGwTxTraceCb()</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00927">OrbiterDevUtRxTraceCb()</a>, and <a class="el" href="satellite-regeneration-test_8cc_source.html#l00915">OrbiterDevUtTxTraceCb()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -285,203 +285,11 @@ Private Attributes</h2></td></tr>
 <div class="center"><img src="class_sat_regeneration_test4_a834064e359f9f6830be2f6b7ea768760_cgraph.png" border="0" usemap="#aclass_sat_regeneration_test4_a834064e359f9f6830be2f6b7ea768760_cgraph" alt=""/></div>
 <map name="aclass_sat_regeneration_test4_a834064e359f9f6830be2f6b7ea768760_cgraph" id="aclass_sat_regeneration_test4_a834064e359f9f6830be2f6b7ea768760_cgraph">
 <area shape="rect" title=" " alt="" coords="5,136,169,177"/>
-<area shape="rect" href="class_sat_regeneration_test4.html#a5fed49cb8dd9215bd2036c18f50e4d56" title=" " alt="" coords="217,5,388,47"/>
-<area shape="rect" href="class_sat_regeneration_test4.html#a55e1806e54990ffa68da83fa2b8b9f95" title=" " alt="" coords="217,71,388,112"/>
-<area shape="rect" href="class_sat_regeneration_test4.html#af833abdde6229d1c2f18376573156e5a" title=" " alt="" coords="220,136,385,177"/>
-<area shape="rect" href="class_sat_regeneration_test4.html#af512d972608a4cc8fe04ded5db06091f" title=" " alt="" coords="221,201,385,243"/>
-<area shape="rect" href="class_sat_regeneration_test4.html#a69417d1df6755520a0d4ca23dfb639bc" title=" " alt="" coords="221,267,385,308"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a5fed49cb8dd9215bd2036c18f50e4d56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fed49cb8dd9215bd2036c18f50e4d56">&#9670;&nbsp;</a></span>GeoDevGwRxTraceCb()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SatRegenerationTest4::GeoDevGwRxTraceCb </td>
-          <td>(</td>
-          <td class="paramtype">Ptr&lt; const Packet &gt;&#160;</td>
-          <td class="paramname"><em>packet</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Address &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00900">900</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
-
-<p class="reference">References <a class="el" href="satellite-regeneration-test_8cc_source.html#l00883">m_totalReceivedGw</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="satellite-regeneration-test_8cc_source.html#l00950">DoRun()</a>.</p>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="class_sat_regeneration_test4_a5fed49cb8dd9215bd2036c18f50e4d56_icgraph.png" border="0" usemap="#aclass_sat_regeneration_test4_a5fed49cb8dd9215bd2036c18f50e4d56_icgraph" alt=""/></div>
-<map name="aclass_sat_regeneration_test4_a5fed49cb8dd9215bd2036c18f50e4d56_icgraph" id="aclass_sat_regeneration_test4_a5fed49cb8dd9215bd2036c18f50e4d56_icgraph">
-<area shape="rect" title=" " alt="" coords="217,5,388,47"/>
-<area shape="rect" href="class_sat_regeneration_test4.html#a834064e359f9f6830be2f6b7ea768760" title=" " alt="" coords="5,5,169,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a55e1806e54990ffa68da83fa2b8b9f95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55e1806e54990ffa68da83fa2b8b9f95">&#9670;&nbsp;</a></span>GeoDevGwTxTraceCb()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SatRegenerationTest4::GeoDevGwTxTraceCb </td>
-          <td>(</td>
-          <td class="paramtype">Ptr&lt; const Packet &gt;&#160;</td>
-          <td class="paramname"><em>packet</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00888">888</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
-
-<p class="reference">References <a class="el" href="satellite-regeneration-test_8cc_source.html#l00881">m_totalSentGw</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="satellite-regeneration-test_8cc_source.html#l00950">DoRun()</a>.</p>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="class_sat_regeneration_test4_a55e1806e54990ffa68da83fa2b8b9f95_icgraph.png" border="0" usemap="#aclass_sat_regeneration_test4_a55e1806e54990ffa68da83fa2b8b9f95_icgraph" alt=""/></div>
-<map name="aclass_sat_regeneration_test4_a55e1806e54990ffa68da83fa2b8b9f95_icgraph" id="aclass_sat_regeneration_test4_a55e1806e54990ffa68da83fa2b8b9f95_icgraph">
-<area shape="rect" title=" " alt="" coords="217,5,388,47"/>
-<area shape="rect" href="class_sat_regeneration_test4.html#a834064e359f9f6830be2f6b7ea768760" title=" " alt="" coords="5,5,169,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="af833abdde6229d1c2f18376573156e5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af833abdde6229d1c2f18376573156e5a">&#9670;&nbsp;</a></span>GeoDevUtRxTraceCb()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SatRegenerationTest4::GeoDevUtRxTraceCb </td>
-          <td>(</td>
-          <td class="paramtype">Ptr&lt; const Packet &gt;&#160;</td>
-          <td class="paramname"><em>packet</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Address &amp;&#160;</td>
-          <td class="paramname"><em>address</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00906">906</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
-
-<p class="reference">References <a class="el" href="satellite-regeneration-test_8cc_source.html#l00884">m_totalReceivedUt</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="satellite-regeneration-test_8cc_source.html#l00950">DoRun()</a>.</p>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="class_sat_regeneration_test4_af833abdde6229d1c2f18376573156e5a_icgraph.png" border="0" usemap="#aclass_sat_regeneration_test4_af833abdde6229d1c2f18376573156e5a_icgraph" alt=""/></div>
-<map name="aclass_sat_regeneration_test4_af833abdde6229d1c2f18376573156e5a_icgraph" id="aclass_sat_regeneration_test4_af833abdde6229d1c2f18376573156e5a_icgraph">
-<area shape="rect" title=" " alt="" coords="217,5,383,47"/>
-<area shape="rect" href="class_sat_regeneration_test4.html#a834064e359f9f6830be2f6b7ea768760" title=" " alt="" coords="5,5,169,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="af512d972608a4cc8fe04ded5db06091f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af512d972608a4cc8fe04ded5db06091f">&#9670;&nbsp;</a></span>GeoDevUtTxTraceCb()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SatRegenerationTest4::GeoDevUtTxTraceCb </td>
-          <td>(</td>
-          <td class="paramtype">Ptr&lt; const Packet &gt;&#160;</td>
-          <td class="paramname"><em>packet</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00894">894</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
-
-<p class="reference">References <a class="el" href="satellite-regeneration-test_8cc_source.html#l00882">m_totalSentUt</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="satellite-regeneration-test_8cc_source.html#l00950">DoRun()</a>.</p>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="class_sat_regeneration_test4_af512d972608a4cc8fe04ded5db06091f_icgraph.png" border="0" usemap="#aclass_sat_regeneration_test4_af512d972608a4cc8fe04ded5db06091f_icgraph" alt=""/></div>
-<map name="aclass_sat_regeneration_test4_af512d972608a4cc8fe04ded5db06091f_icgraph" id="aclass_sat_regeneration_test4_af512d972608a4cc8fe04ded5db06091f_icgraph">
-<area shape="rect" title=" " alt="" coords="217,5,381,47"/>
-<area shape="rect" href="class_sat_regeneration_test4.html#a834064e359f9f6830be2f6b7ea768760" title=" " alt="" coords="5,5,169,47"/>
+<area shape="rect" href="class_sat_regeneration_test4.html#a69417d1df6755520a0d4ca23dfb639bc" title=" " alt="" coords="231,5,395,47"/>
+<area shape="rect" href="class_sat_regeneration_test4.html#a0304575cf7e04a4e23095eb7cbc66a85" title=" " alt="" coords="217,71,408,112"/>
+<area shape="rect" href="class_sat_regeneration_test4.html#ac71f67b9ab426b633818c963dbe18ba9" title=" " alt="" coords="218,136,407,177"/>
+<area shape="rect" href="class_sat_regeneration_test4.html#a258e8d50a3b71d9424266cbeedb410bd" title=" " alt="" coords="221,201,405,243"/>
+<area shape="rect" href="class_sat_regeneration_test4.html#ac3078a135414db30ea835878be7b30bc" title=" " alt="" coords="221,267,404,308"/>
 </map>
 </div>
 
@@ -521,17 +329,209 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00912">912</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00933">933</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-regeneration-test_8cc_source.html#l00950">DoRun()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-regeneration-test_8cc_source.html#l00971">DoRun()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_sat_regeneration_test4_a69417d1df6755520a0d4ca23dfb639bc_icgraph.png" border="0" usemap="#aclass_sat_regeneration_test4_a69417d1df6755520a0d4ca23dfb639bc_icgraph" alt=""/></div>
+<map name="aclass_sat_regeneration_test4_a69417d1df6755520a0d4ca23dfb639bc_icgraph" id="aclass_sat_regeneration_test4_a69417d1df6755520a0d4ca23dfb639bc_icgraph">
+<area shape="rect" title=" " alt="" coords="217,5,381,47"/>
+<area shape="rect" href="class_sat_regeneration_test4.html#a834064e359f9f6830be2f6b7ea768760" title=" " alt="" coords="5,5,169,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0304575cf7e04a4e23095eb7cbc66a85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0304575cf7e04a4e23095eb7cbc66a85">&#9670;&nbsp;</a></span>OrbiterDevGwRxTraceCb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SatRegenerationTest4::OrbiterDevGwRxTraceCb </td>
+          <td>(</td>
+          <td class="paramtype">Ptr&lt; const Packet &gt;&#160;</td>
+          <td class="paramname"><em>packet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Address &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00921">921</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="satellite-regeneration-test_8cc_source.html#l00904">m_totalReceivedGw</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="satellite-regeneration-test_8cc_source.html#l00971">DoRun()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_sat_regeneration_test4_a0304575cf7e04a4e23095eb7cbc66a85_icgraph.png" border="0" usemap="#aclass_sat_regeneration_test4_a0304575cf7e04a4e23095eb7cbc66a85_icgraph" alt=""/></div>
+<map name="aclass_sat_regeneration_test4_a0304575cf7e04a4e23095eb7cbc66a85_icgraph" id="aclass_sat_regeneration_test4_a0304575cf7e04a4e23095eb7cbc66a85_icgraph">
+<area shape="rect" title=" " alt="" coords="217,5,408,47"/>
+<area shape="rect" href="class_sat_regeneration_test4.html#a834064e359f9f6830be2f6b7ea768760" title=" " alt="" coords="5,5,169,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac71f67b9ab426b633818c963dbe18ba9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac71f67b9ab426b633818c963dbe18ba9">&#9670;&nbsp;</a></span>OrbiterDevGwTxTraceCb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SatRegenerationTest4::OrbiterDevGwTxTraceCb </td>
+          <td>(</td>
+          <td class="paramtype">Ptr&lt; const Packet &gt;&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00909">909</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="satellite-regeneration-test_8cc_source.html#l00902">m_totalSentGw</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="satellite-regeneration-test_8cc_source.html#l00971">DoRun()</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_sat_regeneration_test4_ac71f67b9ab426b633818c963dbe18ba9_icgraph.png" border="0" usemap="#aclass_sat_regeneration_test4_ac71f67b9ab426b633818c963dbe18ba9_icgraph" alt=""/></div>
+<map name="aclass_sat_regeneration_test4_ac71f67b9ab426b633818c963dbe18ba9_icgraph" id="aclass_sat_regeneration_test4_ac71f67b9ab426b633818c963dbe18ba9_icgraph">
+<area shape="rect" title=" " alt="" coords="217,5,407,47"/>
+<area shape="rect" href="class_sat_regeneration_test4.html#a834064e359f9f6830be2f6b7ea768760" title=" " alt="" coords="5,5,169,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a258e8d50a3b71d9424266cbeedb410bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a258e8d50a3b71d9424266cbeedb410bd">&#9670;&nbsp;</a></span>OrbiterDevUtRxTraceCb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SatRegenerationTest4::OrbiterDevUtRxTraceCb </td>
+          <td>(</td>
+          <td class="paramtype">Ptr&lt; const Packet &gt;&#160;</td>
+          <td class="paramname"><em>packet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Address &amp;&#160;</td>
+          <td class="paramname"><em>address</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00927">927</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="satellite-regeneration-test_8cc_source.html#l00905">m_totalReceivedUt</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="satellite-regeneration-test_8cc_source.html#l00971">DoRun()</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_sat_regeneration_test4_a258e8d50a3b71d9424266cbeedb410bd_icgraph.png" border="0" usemap="#aclass_sat_regeneration_test4_a258e8d50a3b71d9424266cbeedb410bd_icgraph" alt=""/></div>
+<map name="aclass_sat_regeneration_test4_a258e8d50a3b71d9424266cbeedb410bd_icgraph" id="aclass_sat_regeneration_test4_a258e8d50a3b71d9424266cbeedb410bd_icgraph">
+<area shape="rect" title=" " alt="" coords="217,5,401,47"/>
+<area shape="rect" href="class_sat_regeneration_test4.html#a834064e359f9f6830be2f6b7ea768760" title=" " alt="" coords="5,5,169,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac3078a135414db30ea835878be7b30bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3078a135414db30ea835878be7b30bc">&#9670;&nbsp;</a></span>OrbiterDevUtTxTraceCb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SatRegenerationTest4::OrbiterDevUtTxTraceCb </td>
+          <td>(</td>
+          <td class="paramtype">Ptr&lt; const Packet &gt;&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00915">915</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="satellite-regeneration-test_8cc_source.html#l00903">m_totalSentUt</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="satellite-regeneration-test_8cc_source.html#l00971">DoRun()</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="class_sat_regeneration_test4_a69417d1df6755520a0d4ca23dfb639bc_icgraph.png" border="0" usemap="#aclass_sat_regeneration_test4_a69417d1df6755520a0d4ca23dfb639bc_icgraph" alt=""/></div>
-<map name="aclass_sat_regeneration_test4_a69417d1df6755520a0d4ca23dfb639bc_icgraph" id="aclass_sat_regeneration_test4_a69417d1df6755520a0d4ca23dfb639bc_icgraph">
-<area shape="rect" title=" " alt="" coords="217,5,381,47"/>
+<div class="center"><img src="class_sat_regeneration_test4_ac3078a135414db30ea835878be7b30bc_icgraph.png" border="0" usemap="#aclass_sat_regeneration_test4_ac3078a135414db30ea835878be7b30bc_icgraph" alt=""/></div>
+<map name="aclass_sat_regeneration_test4_ac3078a135414db30ea835878be7b30bc_icgraph" id="aclass_sat_regeneration_test4_ac3078a135414db30ea835878be7b30bc_icgraph">
+<area shape="rect" title=" " alt="" coords="217,5,400,47"/>
 <area shape="rect" href="class_sat_regeneration_test4.html#a834064e359f9f6830be2f6b7ea768760" title=" " alt="" coords="5,5,169,47"/>
 </map>
 </div>
@@ -559,9 +559,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00879">879</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00900">900</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-regeneration-test_8cc_source.html#l00950">DoRun()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-regeneration-test_8cc_source.html#l00971">DoRun()</a>.</p>
 
 </div>
 </div>
@@ -585,9 +585,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00883">883</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00904">904</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-regeneration-test_8cc_source.html#l00931">SatRegenerationTest4()</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00950">DoRun()</a>, and <a class="el" href="satellite-regeneration-test_8cc_source.html#l00900">GeoDevGwRxTraceCb()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-regeneration-test_8cc_source.html#l00952">SatRegenerationTest4()</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00971">DoRun()</a>, and <a class="el" href="satellite-regeneration-test_8cc_source.html#l00921">OrbiterDevGwRxTraceCb()</a>.</p>
 
 </div>
 </div>
@@ -611,9 +611,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00884">884</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00905">905</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-regeneration-test_8cc_source.html#l00931">SatRegenerationTest4()</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00950">DoRun()</a>, and <a class="el" href="satellite-regeneration-test_8cc_source.html#l00906">GeoDevUtRxTraceCb()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-regeneration-test_8cc_source.html#l00952">SatRegenerationTest4()</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00971">DoRun()</a>, and <a class="el" href="satellite-regeneration-test_8cc_source.html#l00927">OrbiterDevUtRxTraceCb()</a>.</p>
 
 </div>
 </div>
@@ -637,9 +637,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00881">881</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00902">902</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-regeneration-test_8cc_source.html#l00931">SatRegenerationTest4()</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00950">DoRun()</a>, and <a class="el" href="satellite-regeneration-test_8cc_source.html#l00888">GeoDevGwTxTraceCb()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-regeneration-test_8cc_source.html#l00952">SatRegenerationTest4()</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00971">DoRun()</a>, and <a class="el" href="satellite-regeneration-test_8cc_source.html#l00909">OrbiterDevGwTxTraceCb()</a>.</p>
 
 </div>
 </div>
@@ -663,9 +663,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00882">882</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-regeneration-test_8cc_source.html#l00903">903</a> of file <a class="el" href="satellite-regeneration-test_8cc_source.html">satellite-regeneration-test.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-regeneration-test_8cc_source.html#l00931">SatRegenerationTest4()</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00950">DoRun()</a>, and <a class="el" href="satellite-regeneration-test_8cc_source.html#l00894">GeoDevUtTxTraceCb()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-regeneration-test_8cc_source.html#l00952">SatRegenerationTest4()</a>, <a class="el" href="satellite-regeneration-test_8cc_source.html#l00971">DoRun()</a>, and <a class="el" href="satellite-regeneration-test_8cc_source.html#l00915">OrbiterDevUtTxTraceCb()</a>.</p>
 
 </div>
 </div>

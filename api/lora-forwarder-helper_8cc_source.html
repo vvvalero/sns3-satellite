@@ -154,109 +154,164 @@ $(document).ready(function(){initNavTree('lora-forwarder-helper_8cc_source.html'
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;ns3/log.h&gt;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;ns3/lora-forwarder.h&gt;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;ns3/random-variable-stream.h&gt;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;ns3/simulator.h&gt;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;ns3/string.h&gt;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;ns3/trace-source-accessor.h&gt;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;NS_LOG_COMPONENT_DEFINE(<span class="stringliteral">&quot;LoraForwarderHelper&quot;</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;ns3/satellite-topology.h&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;ns3/simulator.h&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;ns3/singleton.h&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;ns3/string.h&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;ns3/trace-source-accessor.h&gt;</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacens3.html">ns3</a></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;NS_OBJECT_ENSURE_REGISTERED(LoraForwarderHelper);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;NS_LOG_COMPONENT_DEFINE(<span class="stringliteral">&quot;LoraForwarderHelper&quot;</span>);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;TypeId</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_forwarder_helper.html#ac059da8e807bf918f3741f7f50bcab48">   41</a></span>&#160;<a class="code" href="classns3_1_1_lora_forwarder_helper.html#ac059da8e807bf918f3741f7f50bcab48">LoraForwarderHelper::GetTypeId</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">static</span> TypeId tid = TypeId(<span class="stringliteral">&quot;ns3::LoraForwarderHelper&quot;</span>)</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                            .SetParent&lt;Object&gt;()</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                            .AddConstructor&lt;LoraForwarderHelper&gt;();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> tid;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_forwarder_helper.html#a4949b22ee4ca9c27c21e99e2a8961813">   49</a></span>&#160;<a class="code" href="classns3_1_1_lora_forwarder_helper.html#a4949b22ee4ca9c27c21e99e2a8961813">LoraForwarderHelper::LoraForwarderHelper</a>()</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="classns3_1_1_lora_forwarder_helper.html#a7d0c56479fc691753b3e989770b0ce16">m_factory</a>.SetTypeId(<span class="stringliteral">&quot;ns3::LoraForwarder&quot;</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacens3.html">ns3</a></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;NS_OBJECT_ENSURE_REGISTERED(LoraForwarderHelper);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;TypeId</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_forwarder_helper.html#ac059da8e807bf918f3741f7f50bcab48">   46</a></span>&#160;<a class="code" href="classns3_1_1_lora_forwarder_helper.html#ac059da8e807bf918f3741f7f50bcab48">LoraForwarderHelper::GetTypeId</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">static</span> TypeId tid = TypeId(<span class="stringliteral">&quot;ns3::LoraForwarderHelper&quot;</span>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                            .SetParent&lt;Object&gt;()</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                            .AddConstructor&lt;LoraForwarderHelper&gt;();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> tid;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_forwarder_helper.html#a9266f2edaf95b74f56a8b984e9d753a2">   54</a></span>&#160;<a class="code" href="classns3_1_1_lora_forwarder_helper.html#a9266f2edaf95b74f56a8b984e9d753a2">LoraForwarderHelper::~LoraForwarderHelper</a>()</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_forwarder_helper.html#a4949b22ee4ca9c27c21e99e2a8961813">   54</a></span>&#160;<a class="code" href="classns3_1_1_lora_forwarder_helper.html#a4949b22ee4ca9c27c21e99e2a8961813">LoraForwarderHelper::LoraForwarderHelper</a>()</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_forwarder_helper.html#a1f2ad67d24bcf9fe2cb574682de000a8">   59</a></span>&#160;<a class="code" href="classns3_1_1_lora_forwarder_helper.html#a1f2ad67d24bcf9fe2cb574682de000a8">LoraForwarderHelper::SetAttribute</a>(std::string name, <span class="keyword">const</span> AttributeValue&amp; value)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classns3_1_1_lora_forwarder_helper.html#a7d0c56479fc691753b3e989770b0ce16">m_factory</a>.SetTypeId(<span class="stringliteral">&quot;ns3::LoraForwarder&quot;</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_forwarder_helper.html#a9266f2edaf95b74f56a8b984e9d753a2">   59</a></span>&#160;<a class="code" href="classns3_1_1_lora_forwarder_helper.html#a9266f2edaf95b74f56a8b984e9d753a2">LoraForwarderHelper::~LoraForwarderHelper</a>()</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classns3_1_1_lora_forwarder_helper.html#a7d0c56479fc691753b3e989770b0ce16">m_factory</a>.Set(name, value);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;ApplicationContainer</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_forwarder_helper.html#abc65c90df65db5317accbe9642d3296e">   65</a></span>&#160;<a class="code" href="classns3_1_1_lora_forwarder_helper.html#a69b089faa637425c82a1af3323d3cf63">LoraForwarderHelper::Install</a>(Ptr&lt;Node&gt; node)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> ApplicationContainer(<a class="code" href="classns3_1_1_lora_forwarder_helper.html#af2522b8a06837ab5ab83780cc6422225">InstallPriv</a>(node));</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;ApplicationContainer</div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_forwarder_helper.html#a69b089faa637425c82a1af3323d3cf63">   71</a></span>&#160;<a class="code" href="classns3_1_1_lora_forwarder_helper.html#a69b089faa637425c82a1af3323d3cf63">LoraForwarderHelper::Install</a>(NodeContainer c)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    ApplicationContainer apps;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">for</span> (NodeContainer::Iterator i = c.Begin(); i != c.End(); ++i)</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        apps.Add(<a class="code" href="classns3_1_1_lora_forwarder_helper.html#af2522b8a06837ab5ab83780cc6422225">InstallPriv</a>(*i));</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> apps;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;Ptr&lt;Application&gt;</div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_forwarder_helper.html#af2522b8a06837ab5ab83780cc6422225">   83</a></span>&#160;<a class="code" href="classns3_1_1_lora_forwarder_helper.html#af2522b8a06837ab5ab83780cc6422225">LoraForwarderHelper::InstallPriv</a>(Ptr&lt;Node&gt; node)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span> &lt;&lt; node);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    Ptr&lt;LoraForwarder&gt; app = <a class="code" href="classns3_1_1_lora_forwarder_helper.html#a7d0c56479fc691753b3e989770b0ce16">m_factory</a>.Create&lt;<a class="code" href="classns3_1_1_lora_forwarder.html">LoraForwarder</a>&gt;();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    app-&gt;SetNode(node);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    node-&gt;AddApplication(app);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">// Link the LoraForwarder to the SatLorawanNetDevices</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; node-&gt;GetNDevices(); i++)</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        Ptr&lt;NetDevice&gt; currentNetDevice = node-&gt;GetDevice(i);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">if</span> (currentNetDevice-&gt;GetObject&lt;<a class="code" href="classns3_1_1_sat_lorawan_net_device.html">SatLorawanNetDevice</a>&gt;() != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            Ptr&lt;SatLorawanNetDevice&gt; loraNetDevice =</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                currentNetDevice-&gt;GetObject&lt;<a class="code" href="classns3_1_1_sat_lorawan_net_device.html">SatLorawanNetDevice</a>&gt;();</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            uint8_t beamId = loraNetDevice-&gt;<a class="code" href="classns3_1_1_sat_lorawan_net_device.html#a13128647ac415cdd1fc12413e60ec922">GetLorawanMac</a>()-&gt;GetBeamId();</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            app-&gt;SetLoraNetDevice(beamId, loraNetDevice);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            loraNetDevice-&gt;SetReceiveNetworkServerCallback(</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                MakeCallback(&amp;<a class="code" href="classns3_1_1_lora_forwarder.html#a2bcd5d8660b1706994c7e58b2a3bc4ed">LoraForwarder::ReceiveFromLora</a>, app));</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (currentNetDevice-&gt;GetObject&lt;PointToPointNetDevice&gt;() != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            Ptr&lt;PointToPointNetDevice&gt; pointToPointNetDevice =</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                currentNetDevice-&gt;GetObject&lt;PointToPointNetDevice&gt;();</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            app-&gt;SetPointToPointNetDevice(pointToPointNetDevice);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            pointToPointNetDevice-&gt;SetReceiveCallback(</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                MakeCallback(&amp;<a class="code" href="classns3_1_1_lora_forwarder.html#ab3fe629b89ec7c09453d2e1a511bc472">LoraForwarder::ReceiveFromPointToPoint</a>, app));</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        }</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">return</span> app;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;} <span class="comment">// namespace ns3</span></div>
-<div class="ttc" id="aclassns3_1_1_lora_forwarder_helper_html_a1f2ad67d24bcf9fe2cb574682de000a8"><div class="ttname"><a href="classns3_1_1_lora_forwarder_helper.html#a1f2ad67d24bcf9fe2cb574682de000a8">ns3::LoraForwarderHelper::SetAttribute</a></div><div class="ttdeci">void SetAttribute(std::string name, const AttributeValue &amp;value)</div><div class="ttdef"><b>Definition:</b> <a href="lora-forwarder-helper_8cc_source.html#l00059">lora-forwarder-helper.cc:59</a></div></div>
-<div class="ttc" id="aclassns3_1_1_lora_forwarder_helper_html_a4949b22ee4ca9c27c21e99e2a8961813"><div class="ttname"><a href="classns3_1_1_lora_forwarder_helper.html#a4949b22ee4ca9c27c21e99e2a8961813">ns3::LoraForwarderHelper::LoraForwarderHelper</a></div><div class="ttdeci">LoraForwarderHelper()</div><div class="ttdef"><b>Definition:</b> <a href="lora-forwarder-helper_8cc_source.html#l00049">lora-forwarder-helper.cc:49</a></div></div>
-<div class="ttc" id="aclassns3_1_1_lora_forwarder_helper_html_a69b089faa637425c82a1af3323d3cf63"><div class="ttname"><a href="classns3_1_1_lora_forwarder_helper.html#a69b089faa637425c82a1af3323d3cf63">ns3::LoraForwarderHelper::Install</a></div><div class="ttdeci">ApplicationContainer Install(NodeContainer c) const</div><div class="ttdef"><b>Definition:</b> <a href="lora-forwarder-helper_8cc_source.html#l00071">lora-forwarder-helper.cc:71</a></div></div>
-<div class="ttc" id="aclassns3_1_1_lora_forwarder_helper_html_a7d0c56479fc691753b3e989770b0ce16"><div class="ttname"><a href="classns3_1_1_lora_forwarder_helper.html#a7d0c56479fc691753b3e989770b0ce16">ns3::LoraForwarderHelper::m_factory</a></div><div class="ttdeci">ObjectFactory m_factory</div><div class="ttdef"><b>Definition:</b> <a href="lora-forwarder-helper_8h_source.html#l00066">lora-forwarder-helper.h:66</a></div></div>
-<div class="ttc" id="aclassns3_1_1_lora_forwarder_helper_html_a9266f2edaf95b74f56a8b984e9d753a2"><div class="ttname"><a href="classns3_1_1_lora_forwarder_helper.html#a9266f2edaf95b74f56a8b984e9d753a2">ns3::LoraForwarderHelper::~LoraForwarderHelper</a></div><div class="ttdeci">~LoraForwarderHelper()</div><div class="ttdef"><b>Definition:</b> <a href="lora-forwarder-helper_8cc_source.html#l00054">lora-forwarder-helper.cc:54</a></div></div>
-<div class="ttc" id="aclassns3_1_1_lora_forwarder_helper_html_ac059da8e807bf918f3741f7f50bcab48"><div class="ttname"><a href="classns3_1_1_lora_forwarder_helper.html#ac059da8e807bf918f3741f7f50bcab48">ns3::LoraForwarderHelper::GetTypeId</a></div><div class="ttdeci">static TypeId GetTypeId(void)</div><div class="ttdoc">Get the type ID.</div><div class="ttdef"><b>Definition:</b> <a href="lora-forwarder-helper_8cc_source.html#l00041">lora-forwarder-helper.cc:41</a></div></div>
-<div class="ttc" id="aclassns3_1_1_lora_forwarder_helper_html_af2522b8a06837ab5ab83780cc6422225"><div class="ttname"><a href="classns3_1_1_lora_forwarder_helper.html#af2522b8a06837ab5ab83780cc6422225">ns3::LoraForwarderHelper::InstallPriv</a></div><div class="ttdeci">Ptr&lt; Application &gt; InstallPriv(Ptr&lt; Node &gt; node) const</div><div class="ttdef"><b>Definition:</b> <a href="lora-forwarder-helper_8cc_source.html#l00083">lora-forwarder-helper.cc:83</a></div></div>
-<div class="ttc" id="aclassns3_1_1_lora_forwarder_html"><div class="ttname"><a href="classns3_1_1_lora_forwarder.html">ns3::LoraForwarder</a></div><div class="ttdoc">This application forwards packets between NetDevices: SatLorawanNetDevice -&gt; PointToPointNetDevice an...</div><div class="ttdef"><b>Definition:</b> <a href="lora-forwarder_8h_source.html#l00042">lora-forwarder.h:43</a></div></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_forwarder_helper.html#a1f2ad67d24bcf9fe2cb574682de000a8">   64</a></span>&#160;<a class="code" href="classns3_1_1_lora_forwarder_helper.html#a1f2ad67d24bcf9fe2cb574682de000a8">LoraForwarderHelper::SetAttribute</a>(std::string name, <span class="keyword">const</span> AttributeValue&amp; value)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="classns3_1_1_lora_forwarder_helper.html#a7d0c56479fc691753b3e989770b0ce16">m_factory</a>.Set(name, value);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;ApplicationContainer</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_forwarder_helper.html#abc65c90df65db5317accbe9642d3296e">   70</a></span>&#160;<a class="code" href="classns3_1_1_lora_forwarder_helper.html#a69b089faa637425c82a1af3323d3cf63">LoraForwarderHelper::Install</a>(Ptr&lt;Node&gt; node)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">switch</span> (Singleton&lt;SatTopology&gt;::Get()-&gt;GetForwardLinkRegenerationMode())</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classns3_1_1_sat_enums.html#ae1323e94664d2248445952d05080df7aa8d3f97b30f6f004d18a3798f534dba5b">SatEnums::TRANSPARENT</a>: {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">return</span> ApplicationContainer(<a class="code" href="classns3_1_1_lora_forwarder_helper.html#a348a38fa765d1673adbd907aa376d216">InstallPrivGwLora</a>(node));</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="classns3_1_1_sat_enums.html#ae1323e94664d2248445952d05080df7aa8a2f528fea830bfb9641edb0ab267759">SatEnums::REGENERATION_NETWORK</a>: {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> ApplicationContainer(<a class="code" href="classns3_1_1_lora_forwarder_helper.html#a145993a25963b430406a1bf3f4f75b8d">InstallPrivGwDvb</a>(node));</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        NS_FATAL_ERROR(<span class="stringliteral">&quot;Incorrect regeneration mode for LORA&quot;</span>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;ApplicationContainer</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_forwarder_helper.html#a69b089faa637425c82a1af3323d3cf63">   86</a></span>&#160;<a class="code" href="classns3_1_1_lora_forwarder_helper.html#a69b089faa637425c82a1af3323d3cf63">LoraForwarderHelper::Install</a>(NodeContainer c)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    ApplicationContainer apps;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">for</span> (NodeContainer::Iterator i = c.Begin(); i != c.End(); ++i)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        apps.Add(<a class="code" href="classns3_1_1_lora_forwarder_helper.html#a69b089faa637425c82a1af3323d3cf63">Install</a>(*i));</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> apps;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;Ptr&lt;Application&gt;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_forwarder_helper.html#a348a38fa765d1673adbd907aa376d216">   98</a></span>&#160;<a class="code" href="classns3_1_1_lora_forwarder_helper.html#a348a38fa765d1673adbd907aa376d216">LoraForwarderHelper::InstallPrivGwLora</a>(Ptr&lt;Node&gt; node)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span> &lt;&lt; node);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    Ptr&lt;LoraForwarder&gt; app = <a class="code" href="classns3_1_1_lora_forwarder_helper.html#a7d0c56479fc691753b3e989770b0ce16">m_factory</a>.Create&lt;<a class="code" href="classns3_1_1_lora_forwarder.html">LoraForwarder</a>&gt;();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    app-&gt;SetNode(node);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    node-&gt;AddApplication(app);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">// Link the LoraForwarder to the SatLorawanNetDevices</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; node-&gt;GetNDevices(); i++)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        Ptr&lt;NetDevice&gt; currentNetDevice = node-&gt;GetDevice(i);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">if</span> (currentNetDevice-&gt;GetObject&lt;<a class="code" href="classns3_1_1_sat_lorawan_net_device.html">SatLorawanNetDevice</a>&gt;() != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            Ptr&lt;SatLorawanNetDevice&gt; loraNetDevice =</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                currentNetDevice-&gt;GetObject&lt;<a class="code" href="classns3_1_1_sat_lorawan_net_device.html">SatLorawanNetDevice</a>&gt;();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            uint8_t beamId = loraNetDevice-&gt;<a class="code" href="classns3_1_1_sat_net_device.html#a20f3f614427c22653f54470b16bcebf6">GetMac</a>()-&gt;GetBeamId();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            app-&gt;SetLoraNetDevice(beamId, loraNetDevice);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            loraNetDevice-&gt;SetReceiveNetworkServerCallback(</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                MakeCallback(&amp;<a class="code" href="classns3_1_1_lora_forwarder.html#a2bcd5d8660b1706994c7e58b2a3bc4ed">LoraForwarder::ReceiveFromLora</a>, app));</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (currentNetDevice-&gt;GetObject&lt;PointToPointNetDevice&gt;() != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            Ptr&lt;PointToPointNetDevice&gt; pointToPointNetDevice =</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                currentNetDevice-&gt;GetObject&lt;PointToPointNetDevice&gt;();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            app-&gt;SetPointToPointNetDevice(pointToPointNetDevice);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            pointToPointNetDevice-&gt;SetReceiveCallback(</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                MakeCallback(&amp;<a class="code" href="classns3_1_1_lora_forwarder.html#ab3fe629b89ec7c09453d2e1a511bc472">LoraForwarder::ReceiveFromPointToPoint</a>, app));</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">return</span> app;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;Ptr&lt;Application&gt;</div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_forwarder_helper.html#a145993a25963b430406a1bf3f4f75b8d">  134</a></span>&#160;<a class="code" href="classns3_1_1_lora_forwarder_helper.html#a145993a25963b430406a1bf3f4f75b8d">LoraForwarderHelper::InstallPrivGwDvb</a>(Ptr&lt;Node&gt; node)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span> &lt;&lt; node);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    Ptr&lt;LoraForwarder&gt; app = <a class="code" href="classns3_1_1_lora_forwarder_helper.html#a7d0c56479fc691753b3e989770b0ce16">m_factory</a>.Create&lt;<a class="code" href="classns3_1_1_lora_forwarder.html">LoraForwarder</a>&gt;();</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    app-&gt;SetNode(node);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    node-&gt;AddApplication(app);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="comment">// Link the LoraForwarder to the SatLorawanNetDevices</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; node-&gt;GetNDevices(); i++)</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        Ptr&lt;NetDevice&gt; currentNetDevice = node-&gt;GetDevice(i);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">if</span> (currentNetDevice-&gt;GetObject&lt;<a class="code" href="classns3_1_1_sat_lorawan_net_device.html">SatLorawanNetDevice</a>&gt;() != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            Ptr&lt;SatLorawanNetDevice&gt; loraNetDevice =</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                currentNetDevice-&gt;GetObject&lt;<a class="code" href="classns3_1_1_sat_lorawan_net_device.html">SatLorawanNetDevice</a>&gt;();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            uint8_t beamId = loraNetDevice-&gt;<a class="code" href="classns3_1_1_sat_net_device.html#a20f3f614427c22653f54470b16bcebf6">GetMac</a>()-&gt;GetBeamId();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            app-&gt;SetLoraNetDevice(beamId, loraNetDevice);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            loraNetDevice-&gt;SetReceiveNetworkServerCallback(</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                MakeCallback(&amp;<a class="code" href="classns3_1_1_lora_forwarder.html#a2bcd5d8660b1706994c7e58b2a3bc4ed">LoraForwarder::ReceiveFromLora</a>, app));</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (currentNetDevice-&gt;GetObject&lt;PointToPointNetDevice&gt;() != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            Ptr&lt;PointToPointNetDevice&gt; pointToPointNetDevice =</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                currentNetDevice-&gt;GetObject&lt;PointToPointNetDevice&gt;();</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            app-&gt;SetPointToPointNetDevice(pointToPointNetDevice);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            pointToPointNetDevice-&gt;SetReceiveCallback(</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                MakeCallback(&amp;<a class="code" href="classns3_1_1_lora_forwarder.html#ab3fe629b89ec7c09453d2e1a511bc472">LoraForwarder::ReceiveFromPointToPoint</a>, app));</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">return</span> app;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;} <span class="comment">// namespace ns3</span></div>
+<div class="ttc" id="aclassns3_1_1_lora_forwarder_helper_html_a145993a25963b430406a1bf3f4f75b8d"><div class="ttname"><a href="classns3_1_1_lora_forwarder_helper.html#a145993a25963b430406a1bf3f4f75b8d">ns3::LoraForwarderHelper::InstallPrivGwDvb</a></div><div class="ttdeci">Ptr&lt; Application &gt; InstallPrivGwDvb(Ptr&lt; Node &gt; node) const</div><div class="ttdoc">Install if ground GW is a DVB GW.</div><div class="ttdef"><b>Definition:</b> <a href="lora-forwarder-helper_8cc_source.html#l00134">lora-forwarder-helper.cc:134</a></div></div>
+<div class="ttc" id="aclassns3_1_1_lora_forwarder_helper_html_a1f2ad67d24bcf9fe2cb574682de000a8"><div class="ttname"><a href="classns3_1_1_lora_forwarder_helper.html#a1f2ad67d24bcf9fe2cb574682de000a8">ns3::LoraForwarderHelper::SetAttribute</a></div><div class="ttdeci">void SetAttribute(std::string name, const AttributeValue &amp;value)</div><div class="ttdef"><b>Definition:</b> <a href="lora-forwarder-helper_8cc_source.html#l00064">lora-forwarder-helper.cc:64</a></div></div>
+<div class="ttc" id="aclassns3_1_1_lora_forwarder_helper_html_a348a38fa765d1673adbd907aa376d216"><div class="ttname"><a href="classns3_1_1_lora_forwarder_helper.html#a348a38fa765d1673adbd907aa376d216">ns3::LoraForwarderHelper::InstallPrivGwLora</a></div><div class="ttdeci">Ptr&lt; Application &gt; InstallPrivGwLora(Ptr&lt; Node &gt; node) const</div><div class="ttdoc">Install if ground GW is a Lora GW.</div><div class="ttdef"><b>Definition:</b> <a href="lora-forwarder-helper_8cc_source.html#l00098">lora-forwarder-helper.cc:98</a></div></div>
+<div class="ttc" id="aclassns3_1_1_lora_forwarder_helper_html_a4949b22ee4ca9c27c21e99e2a8961813"><div class="ttname"><a href="classns3_1_1_lora_forwarder_helper.html#a4949b22ee4ca9c27c21e99e2a8961813">ns3::LoraForwarderHelper::LoraForwarderHelper</a></div><div class="ttdeci">LoraForwarderHelper()</div><div class="ttdef"><b>Definition:</b> <a href="lora-forwarder-helper_8cc_source.html#l00054">lora-forwarder-helper.cc:54</a></div></div>
+<div class="ttc" id="aclassns3_1_1_lora_forwarder_helper_html_a69b089faa637425c82a1af3323d3cf63"><div class="ttname"><a href="classns3_1_1_lora_forwarder_helper.html#a69b089faa637425c82a1af3323d3cf63">ns3::LoraForwarderHelper::Install</a></div><div class="ttdeci">ApplicationContainer Install(NodeContainer c) const</div><div class="ttdef"><b>Definition:</b> <a href="lora-forwarder-helper_8cc_source.html#l00086">lora-forwarder-helper.cc:86</a></div></div>
+<div class="ttc" id="aclassns3_1_1_lora_forwarder_helper_html_a7d0c56479fc691753b3e989770b0ce16"><div class="ttname"><a href="classns3_1_1_lora_forwarder_helper.html#a7d0c56479fc691753b3e989770b0ce16">ns3::LoraForwarderHelper::m_factory</a></div><div class="ttdeci">ObjectFactory m_factory</div><div class="ttdef"><b>Definition:</b> <a href="lora-forwarder-helper_8h_source.html#l00082">lora-forwarder-helper.h:82</a></div></div>
+<div class="ttc" id="aclassns3_1_1_lora_forwarder_helper_html_a9266f2edaf95b74f56a8b984e9d753a2"><div class="ttname"><a href="classns3_1_1_lora_forwarder_helper.html#a9266f2edaf95b74f56a8b984e9d753a2">ns3::LoraForwarderHelper::~LoraForwarderHelper</a></div><div class="ttdeci">~LoraForwarderHelper()</div><div class="ttdef"><b>Definition:</b> <a href="lora-forwarder-helper_8cc_source.html#l00059">lora-forwarder-helper.cc:59</a></div></div>
+<div class="ttc" id="aclassns3_1_1_lora_forwarder_helper_html_ac059da8e807bf918f3741f7f50bcab48"><div class="ttname"><a href="classns3_1_1_lora_forwarder_helper.html#ac059da8e807bf918f3741f7f50bcab48">ns3::LoraForwarderHelper::GetTypeId</a></div><div class="ttdeci">static TypeId GetTypeId(void)</div><div class="ttdoc">Get the type ID.</div><div class="ttdef"><b>Definition:</b> <a href="lora-forwarder-helper_8cc_source.html#l00046">lora-forwarder-helper.cc:46</a></div></div>
+<div class="ttc" id="aclassns3_1_1_lora_forwarder_html"><div class="ttname"><a href="classns3_1_1_lora_forwarder.html">ns3::LoraForwarder</a></div><div class="ttdoc">This application forwards packets between NetDevices: SatLorawanNetDevice -&gt; PointToPointNetDevice an...</div><div class="ttdef"><b>Definition:</b> <a href="lora-forwarder_8h_source.html#l00043">lora-forwarder.h:44</a></div></div>
 <div class="ttc" id="aclassns3_1_1_lora_forwarder_html_a2bcd5d8660b1706994c7e58b2a3bc4ed"><div class="ttname"><a href="classns3_1_1_lora_forwarder.html#a2bcd5d8660b1706994c7e58b2a3bc4ed">ns3::LoraForwarder::ReceiveFromLora</a></div><div class="ttdeci">bool ReceiveFromLora(Ptr&lt; SatLorawanNetDevice &gt; loraNetDevice, Ptr&lt; const Packet &gt; packet, uint16_t protocol, const Address &amp;sender)</div><div class="ttdoc">Receive a packet from the LoraNetDevice.</div><div class="ttdef"><b>Definition:</b> <a href="lora-forwarder_8cc_source.html#l00071">lora-forwarder.cc:71</a></div></div>
-<div class="ttc" id="aclassns3_1_1_lora_forwarder_html_ab3fe629b89ec7c09453d2e1a511bc472"><div class="ttname"><a href="classns3_1_1_lora_forwarder.html#ab3fe629b89ec7c09453d2e1a511bc472">ns3::LoraForwarder::ReceiveFromPointToPoint</a></div><div class="ttdeci">bool ReceiveFromPointToPoint(Ptr&lt; NetDevice &gt; pointToPointNetDevice, Ptr&lt; const Packet &gt; packet, uint16_t protocol, const Address &amp;sender)</div><div class="ttdoc">Receive a packet from the PointToPointNetDevice.</div><div class="ttdef"><b>Definition:</b> <a href="lora-forwarder_8cc_source.html#l00089">lora-forwarder.cc:89</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_lorawan_net_device_html"><div class="ttname"><a href="classns3_1_1_sat_lorawan_net_device.html">ns3::SatLorawanNetDevice</a></div><div class="ttdoc">SatLorawanNetDevice to be utilized in the UT and GW nodes for IoT configuration.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-lorawan-net-device_8h_source.html#l00045">satellite-lorawan-net-device.h:46</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_lorawan_net_device_html_a13128647ac415cdd1fc12413e60ec922"><div class="ttname"><a href="classns3_1_1_sat_lorawan_net_device.html#a13128647ac415cdd1fc12413e60ec922">ns3::SatLorawanNetDevice::GetLorawanMac</a></div><div class="ttdeci">Ptr&lt; LorawanMac &gt; GetLorawanMac()</div><div class="ttdef"><b>Definition:</b> <a href="satellite-lorawan-net-device_8cc_source.html#l00187">satellite-lorawan-net-device.cc:187</a></div></div>
+<div class="ttc" id="aclassns3_1_1_lora_forwarder_html_ab3fe629b89ec7c09453d2e1a511bc472"><div class="ttname"><a href="classns3_1_1_lora_forwarder.html#ab3fe629b89ec7c09453d2e1a511bc472">ns3::LoraForwarder::ReceiveFromPointToPoint</a></div><div class="ttdeci">bool ReceiveFromPointToPoint(Ptr&lt; NetDevice &gt; pointToPointNetDevice, Ptr&lt; const Packet &gt; packet, uint16_t protocol, const Address &amp;sender)</div><div class="ttdoc">Receive a packet from the PointToPointNetDevice.</div><div class="ttdef"><b>Definition:</b> <a href="lora-forwarder_8cc_source.html#l00086">lora-forwarder.cc:86</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_enums_html_ae1323e94664d2248445952d05080df7aa8a2f528fea830bfb9641edb0ab267759"><div class="ttname"><a href="classns3_1_1_sat_enums.html#ae1323e94664d2248445952d05080df7aa8a2f528fea830bfb9641edb0ab267759">ns3::SatEnums::REGENERATION_NETWORK</a></div><div class="ttdeci">@ REGENERATION_NETWORK</div><div class="ttdef"><b>Definition:</b> <a href="satellite-enums_8h_source.html#l00103">satellite-enums.h:101</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_enums_html_ae1323e94664d2248445952d05080df7aa8d3f97b30f6f004d18a3798f534dba5b"><div class="ttname"><a href="classns3_1_1_sat_enums.html#ae1323e94664d2248445952d05080df7aa8d3f97b30f6f004d18a3798f534dba5b">ns3::SatEnums::TRANSPARENT</a></div><div class="ttdeci">@ TRANSPARENT</div><div class="ttdef"><b>Definition:</b> <a href="satellite-enums_8h_source.html#l00096">satellite-enums.h:96</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_lorawan_net_device_html"><div class="ttname"><a href="classns3_1_1_sat_lorawan_net_device.html">ns3::SatLorawanNetDevice</a></div><div class="ttdoc">SatLorawanNetDevice to be utilized in the UT and GW nodes for IoT configuration.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-lorawan-net-device_8h_source.html#l00047">satellite-lorawan-net-device.h:48</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_net_device_html_a20f3f614427c22653f54470b16bcebf6"><div class="ttname"><a href="classns3_1_1_sat_net_device.html#a20f3f614427c22653f54470b16bcebf6">ns3::SatNetDevice::GetMac</a></div><div class="ttdeci">Ptr&lt; SatMac &gt; GetMac(void) const</div><div class="ttdoc">Get a Mac pointer.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-net-device_8cc_source.html#l00288">satellite-net-device.cc:288</a></div></div>
 <div class="ttc" id="alora-forwarder-helper_8h_html"><div class="ttname"><a href="lora-forwarder-helper_8h.html">lora-forwarder-helper.h</a></div></div>
-<div class="ttc" id="anamespacens3_html"><div class="ttname"><a href="namespacens3.html">ns3</a></div><div class="ttdoc">SatArqSequenceNumber is handling the sequence numbers for the ARQ process.</div><div class="ttdef"><b>Definition:</b> <a href="sat-link-results-plot_8cc_source.html#l00039">sat-link-results-plot.cc:40</a></div></div>
+<div class="ttc" id="anamespacens3_html"><div class="ttname"><a href="namespacens3.html">ns3</a></div><div class="ttdoc">SatArqSequenceNumber is handling the sequence numbers for the ARQ process.</div><div class="ttdef"><b>Definition:</b> <a href="sat-link-results-plot_8cc_source.html#l00040">sat-link-results-plot.cc:41</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 

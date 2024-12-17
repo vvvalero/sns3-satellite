@@ -6,25 +6,6 @@ var classns3_1_1_simulation_helper =
       [ "CR_SLOTTED_ALOHA", "classns3_1_1_simulation_helper.html#a39defd6e75cecd9b0e17211c6ebde1e9a9f480b96446c9392607fc35c6637782a", null ],
       [ "CR_CRDSA_LOOSE_RC_0", "classns3_1_1_simulation_helper.html#a39defd6e75cecd9b0e17211c6ebde1e9a68c6be46bc975a2e2eebf4f631609dbb", null ]
     ] ],
-    [ "LoraTrafficModel_t", "classns3_1_1_simulation_helper.html#aff377ffe7a331525403527b8d63733b2", [
-      [ "ONE_SHOT", "classns3_1_1_simulation_helper.html#aff377ffe7a331525403527b8d63733b2afef146f82ce71335eff2ce55c7832c74", null ],
-      [ "PERIODIC", "classns3_1_1_simulation_helper.html#aff377ffe7a331525403527b8d63733b2a59a132fe6d2ccfdbd3ee01bec6bf35a8", null ],
-      [ "LORA_CBR", "classns3_1_1_simulation_helper.html#aff377ffe7a331525403527b8d63733b2a1c8b4484cfebd540eca2a0034d9300b0", null ]
-    ] ],
-    [ "TrafficDirection_t", "classns3_1_1_simulation_helper.html#a8b86c00ea977318601f1f369d969fe61", [
-      [ "RTN_LINK", "classns3_1_1_simulation_helper.html#a8b86c00ea977318601f1f369d969fe61aab3ad6a5d00c874263988e5f40a46b98", null ],
-      [ "FWD_LINK", "classns3_1_1_simulation_helper.html#a8b86c00ea977318601f1f369d969fe61ad181b81164db8f65868c0f22d09a792b", null ]
-    ] ],
-    [ "TrafficModel_t", "classns3_1_1_simulation_helper.html#a2e7e7e80ffd116eaf0e5eaf9307ca2ea", [
-      [ "CBR", "classns3_1_1_simulation_helper.html#a2e7e7e80ffd116eaf0e5eaf9307ca2eaa48e23ec27f1b9eea0bc5fbbc907dfed8", null ],
-      [ "ONOFF", "classns3_1_1_simulation_helper.html#a2e7e7e80ffd116eaf0e5eaf9307ca2eaa0cc889192d5cafd4f81ac1f578cb8805", null ],
-      [ "HTTP", "classns3_1_1_simulation_helper.html#a2e7e7e80ffd116eaf0e5eaf9307ca2eaaa4e446c9c16f94d6d482ab8c31c8cff5", null ],
-      [ "NRTV", "classns3_1_1_simulation_helper.html#a2e7e7e80ffd116eaf0e5eaf9307ca2eaaafb054e420127ea799879c0df4698bbb", null ]
-    ] ],
-    [ "TransportLayerProtocol_t", "classns3_1_1_simulation_helper.html#ace1b7fe6575e4f44ef13c2890ed982f4", [
-      [ "UDP", "classns3_1_1_simulation_helper.html#ace1b7fe6575e4f44ef13c2890ed982f4ae62a5c46852170ec23778e447dc91720", null ],
-      [ "TCP", "classns3_1_1_simulation_helper.html#ace1b7fe6575e4f44ef13c2890ed982f4a31cbd22f6b11292ce11d37a96fef8ff6", null ]
-    ] ],
     [ "SimulationHelper", "classns3_1_1_simulation_helper.html#a296b4f81a78f482d8fee296ef593c8bd", null ],
     [ "SimulationHelper", "classns3_1_1_simulation_helper.html#a0da69246d490db53c8c164e8d7c3269b", null ],
     [ "~SimulationHelper", "classns3_1_1_simulation_helper.html#a323594fbaedd34ebe092b7df15e6740a", null ],
@@ -72,13 +53,9 @@ var classns3_1_1_simulation_helper =
     [ "GetTrafficHelper", "classns3_1_1_simulation_helper.html#a98711e976d6574d2b89cd229ce31fb62", null ],
     [ "GetTypeId", "classns3_1_1_simulation_helper.html#af81078bc11c1a91c7ae11d83e2c3acd1", null ],
     [ "HasSinkInstalled", "classns3_1_1_simulation_helper.html#aca21a42f13cca7e321a2cd580c433c81", null ],
-    [ "InstallLoraTrafficModel", "classns3_1_1_simulation_helper.html#a93e66c505ce8772a97e639f01b8d17eb", null ],
-    [ "InstallTrafficModel", "classns3_1_1_simulation_helper.html#a21ed46b8c78b9a689f4acb9cb5eb901d", null ],
-    [ "InstallTrafficModel", "classns3_1_1_simulation_helper.html#ad9ff1416ab512a28a01fc190d0d23e72", null ],
-    [ "InstallTrafficModel", "classns3_1_1_simulation_helper.html#acec3e3b725d39e5b1279916eae5c75b1", null ],
-    [ "InstallTrafficModel", "classns3_1_1_simulation_helper.html#adb4adf03188a08dbdfd73f2faf744e1d", null ],
-    [ "InstallTrafficModel", "classns3_1_1_simulation_helper.html#a18c238c122ded9aa727e944bbd8d803c", null ],
     [ "IsBeamEnabled", "classns3_1_1_simulation_helper.html#ae16503cb94ccef70f4604cdc091b28b0", null ],
+    [ "LoadScenario", "classns3_1_1_simulation_helper.html#ab9ad8323d0b89713738a2377942ae449", null ],
+    [ "ParseScenarioFolder", "classns3_1_1_simulation_helper.html#a29554f4a14f7a5a67ef6142b5b8cf523", null ],
     [ "ProgressCb", "classns3_1_1_simulation_helper.html#a13a504628ed0021c5e1e021e2081f844", null ],
     [ "ReadInputAttributesFromFile", "classns3_1_1_simulation_helper.html#a9d94988c66b18b6f38dd00dc0887bdd1", null ],
     [ "RunSimulation", "classns3_1_1_simulation_helper.html#a582d2cf09077c5d8739def40c0bf063c", null ],
@@ -89,7 +66,6 @@ var classns3_1_1_simulation_helper =
     [ "SetDefaultValues", "classns3_1_1_simulation_helper.html#afa31f75da556aff82ae4525094cae5a5", null ],
     [ "SetErrorModel", "classns3_1_1_simulation_helper.html#a1b04726074abce2c97bd49ab85c05b31", null ],
     [ "SetGwUserCount", "classns3_1_1_simulation_helper.html#a6bd12ddef5a66342460262d40e1bb29d", null ],
-    [ "SetGwUserId", "classns3_1_1_simulation_helper.html#a98ddd7be846dae58729b3f53a05b2692", null ],
     [ "SetIdealPhyParameterization", "classns3_1_1_simulation_helper.html#a431024dca15d4ac3210572d48e147ff2", null ],
     [ "SetInterferenceModel", "classns3_1_1_simulation_helper.html#ab721c1132471a7d31ea76323d640b60d", null ],
     [ "SetOutputPath", "classns3_1_1_simulation_helper.html#ab00632118dc6b9c247a374eb630e4381", null ],
@@ -111,9 +87,8 @@ var classns3_1_1_simulation_helper =
     [ "m_commonUtPositions", "classns3_1_1_simulation_helper.html#a57e2fdf3a2798e9154c0a51e4c4f54fa", null ],
     [ "m_enabledBeams", "classns3_1_1_simulation_helper.html#aa96aaca6b22b9d75c15788fbd6f40573", null ],
     [ "m_enabledBeamsStr", "classns3_1_1_simulation_helper.html#af81fd3f1ea0e8bfdd0a604ada48afad1", null ],
-    [ "m_enableInputFileUtListPositions", "classns3_1_1_simulation_helper.html#a6ab57cf97b949d2bc02e4d9138febde6", null ],
     [ "m_groupHelper", "classns3_1_1_simulation_helper.html#a52a1d0442f086063b353df153cdc8483", null ],
-    [ "m_gwUserId", "classns3_1_1_simulation_helper.html#a867d1e104f8c5e773da6dcf753a0e363", null ],
+    [ "m_inputFileUtListPositions", "classns3_1_1_simulation_helper.html#a31c7f8855dc77898e96ae9b068751049", null ],
     [ "m_inputFileUtPositionsCheckBeams", "classns3_1_1_simulation_helper.html#adb6bcc50a567d07e6fe83132fa825e19", null ],
     [ "m_numberOfConfiguredFrames", "classns3_1_1_simulation_helper.html#af63c35a461e524baa04c27497f131fc4", null ],
     [ "m_outputPath", "classns3_1_1_simulation_helper.html#ada5acef192a7f4b26f52f70bc863eac0", null ],
@@ -122,6 +97,7 @@ var classns3_1_1_simulation_helper =
     [ "m_progressUpdateInterval", "classns3_1_1_simulation_helper.html#a8f88e62a56fd81959839355832285707", null ],
     [ "m_randomAccessConfigured", "classns3_1_1_simulation_helper.html#af3b2e15c3f2f83b99b1c34ec2a93c859", null ],
     [ "m_satHelper", "classns3_1_1_simulation_helper.html#a4c2bf95523e736a0794cfccd8f396002", null ],
+    [ "m_scenarioPath", "classns3_1_1_simulation_helper.html#ae0b0fc19b056cf435c3a91aee603da77", null ],
     [ "m_simTime", "classns3_1_1_simulation_helper.html#acb490e84c6fdc93e38c93f5bd909e32e", null ],
     [ "m_simulationName", "classns3_1_1_simulation_helper.html#a1559072d4241385027bea84db1c3ca14", null ],
     [ "m_simulationTag", "classns3_1_1_simulation_helper.html#aade17892a165f7918c8ddf11f7d7eafe", null ],

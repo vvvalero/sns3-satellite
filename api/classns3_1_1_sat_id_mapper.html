@@ -154,13 +154,14 @@ $(document).ready(function(){initNavTree('classns3_1_1_sat_id_mapper.html',''); 
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_id_mapper__coll__graph.png" border="0" usemap="#ans3_1_1_sat_id_mapper_coll__map" alt="Collaboration graph"/></div>
 <map name="ans3_1_1_sat_id_mapper_coll__map" id="ans3_1_1_sat_id_mapper_coll__map">
-<area shape="rect" title="Class for ID&#45;mapper." alt="" coords="123,391,258,417"/>
-<area shape="rect" title=" " alt="" coords="5,191,69,218"/>
-<area shape="rect" title=" " alt="" coords="94,184,287,225"/>
-<area shape="rect" title=" " alt="" coords="227,95,362,121"/>
-<area shape="rect" title=" " alt="" coords="323,184,474,225"/>
-<area shape="rect" title=" " alt="" coords="243,5,282,32"/>
-<area shape="rect" title=" " alt="" coords="309,5,347,32"/>
+<area shape="rect" title="Class for ID&#45;mapper." alt="" coords="959,75,1093,101"/>
+<area shape="rect" title=" " alt="" coords="595,5,659,32"/>
+<area shape="rect" title=" " alt="" coords="547,57,708,98"/>
+<area shape="rect" title=" " alt="" coords="157,129,292,156"/>
+<area shape="rect" title=" " alt="" coords="531,122,724,163"/>
+<area shape="rect" title=" " alt="" coords="552,213,703,254"/>
+<area shape="rect" title=" " alt="" coords="5,104,44,131"/>
+<area shape="rect" title=" " alt="" coords="5,155,44,181"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -255,6 +256,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a55476a54a4e0413cc869da4cda18f8fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_id_mapper.html#a55476a54a4e0413cc869da4cda18f8fb">ShowIslMap</a> ()</td></tr>
 <tr class="memdesc:a55476a54a4e0413cc869da4cda18f8fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the map GW/UT address to satellite ID.  <a href="classns3_1_1_sat_id_mapper.html#a55476a54a4e0413cc869da4cda18f8fb">More...</a><br /></td></tr>
 <tr class="separator:a55476a54a4e0413cc869da4cda18f8fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceaf2758af05021fffa6c9f7753eb10c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_id_mapper.html#aceaf2758af05021fffa6c9f7753eb10c">UpdateMacToBeamId</a> (Address mac, uint32_t beamId)</td></tr>
+<tr class="memdesc:aceaf2758af05021fffa6c9f7753eb10c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update MAC address to the beam ID maps.  <a href="classns3_1_1_sat_id_mapper.html#aceaf2758af05021fffa6c9f7753eb10c">More...</a><br /></td></tr>
+<tr class="separator:aceaf2758af05021fffa6c9f7753eb10c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35d9d5bb62c56f6fcbf9aa04aa1ad87a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_id_mapper.html#a35d9d5bb62c56f6fcbf9aa04aa1ad87a">UpdateMacToSatId</a> (Address mac, uint32_t satId)</td></tr>
+<tr class="memdesc:a35d9d5bb62c56f6fcbf9aa04aa1ad87a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update MAC address to the SAT ID maps.  <a href="classns3_1_1_sat_id_mapper.html#a35d9d5bb62c56f6fcbf9aa04aa1ad87a">More...</a><br /></td></tr>
+<tr class="separator:a35d9d5bb62c56f6fcbf9aa04aa1ad87a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -303,6 +310,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a6967effb296c4eddee1b3a3cd8d48f9b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_id_mapper.html#a6967effb296c4eddee1b3a3cd8d48f9b">m_utIdIndex</a></td></tr>
 <tr class="memdesc:a6967effb296c4eddee1b3a3cd8d48f9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Running UT index number.  <a href="classns3_1_1_sat_id_mapper.html#a6967effb296c4eddee1b3a3cd8d48f9b">More...</a><br /></td></tr>
 <tr class="separator:a6967effb296c4eddee1b3a3cd8d48f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4f1e10a2760d597d9d917942b6e0d94"><td class="memItemLeft" align="right" valign="top">std::map&lt; Ptr&lt; Node &gt;, Address &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_id_mapper.html#ab4f1e10a2760d597d9d917942b6e0d94">m_utNodeToGwAddressMap</a></td></tr>
+<tr class="memdesc:ab4f1e10a2760d597d9d917942b6e0d94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map between UT nodes and GW address.  <a href="classns3_1_1_sat_id_mapper.html#ab4f1e10a2760d597d9d917942b6e0d94">More...</a><br /></td></tr>
+<tr class="separator:ab4f1e10a2760d597d9d917942b6e0d94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d0f0830f8a00fed6177f5a009cb282b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_id_mapper.html#a3d0f0830f8a00fed6177f5a009cb282b">m_utUserIdIndex</a></td></tr>
 <tr class="memdesc:a3d0f0830f8a00fed6177f5a009cb282b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Running UT user index number.  <a href="classns3_1_1_sat_id_mapper.html#a3d0f0830f8a00fed6177f5a009cb282b">More...</a><br /></td></tr>
 <tr class="separator:a3d0f0830f8a00fed6177f5a009cb282b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -311,7 +321,7 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p>Class for ID-mapper. </p>
 <p>The class enables mapping of a specific MAC-address to UT/GW/user/beam/group ID. These IDs can be obtained with MAC-address by using the provided functions. It is also possible to obtain the MAC-address with node. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00043">43</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00045">45</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3ef1482dc65c2a28c221bce4053be9a1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3ef1482dc65c2a28c221bce4053be9a1">&#9670;&nbsp;</a></span>SatIdMapper()</h2>
@@ -330,7 +340,7 @@ Private Attributes</h2></td></tr>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00047">47</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00051">51</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
 </div>
 </div>
@@ -351,9 +361,9 @@ Private Attributes</h2></td></tr>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00057">57</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00061">61</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8cc_source.html#l00075">Reset()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8cc_source.html#l00079">Reset()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -406,9 +416,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00247">247</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00251">251</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00313">m_macToBeamIdMap</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00329">m_macToBeamIdMap</a>.</p>
 
 </div>
 </div>
@@ -447,9 +457,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00263">263</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00267">267</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00318">m_macToGroupIdMap</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00334">m_macToGroupIdMap</a>.</p>
 
 </div>
 </div>
@@ -488,9 +498,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00279">279</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00283">283</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00323">m_macToGwIdMap</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00339">m_macToGwIdMap</a>.</p>
 
 </div>
 </div>
@@ -519,9 +529,9 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the GW user ID assigned to the given MAC address </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00295">295</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00299">299</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00288">m_gwUserIdIndex</a>, and <a class="el" href="satellite-id-mapper_8h_source.html#l00328">m_macToGwUserIdMap</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00304">m_gwUserIdIndex</a>, and <a class="el" href="satellite-id-mapper_8h_source.html#l00344">m_macToGwUserIdMap</a>.</p>
 
 </div>
 </div>
@@ -560,9 +570,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00231">231</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00235">235</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00308">m_macToSatIdMap</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00324">m_macToSatIdMap</a>.</p>
 
 </div>
 </div>
@@ -601,9 +611,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00315">315</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00319">319</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00338">m_macToSatIdIslMap</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00359">m_macToSatIdIslMap</a>.</p>
 
 </div>
 </div>
@@ -632,9 +642,9 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the trace ID assigned to the given MAC address </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00169">169</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00173">173</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00293">m_macToTraceIdMap</a>, and <a class="el" href="satellite-id-mapper_8h_source.html#l00273">m_traceIdIndex</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00309">m_macToTraceIdMap</a>, and <a class="el" href="satellite-id-mapper_8h_source.html#l00289">m_traceIdIndex</a>.</p>
 
 </div>
 </div>
@@ -663,9 +673,9 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the UT ID assigned to the given MAC address </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00191">191</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00195">195</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00298">m_macToUtIdMap</a>, and <a class="el" href="satellite-id-mapper_8h_source.html#l00278">m_utIdIndex</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00314">m_macToUtIdMap</a>, and <a class="el" href="satellite-id-mapper_8h_source.html#l00294">m_utIdIndex</a>.</p>
 
 </div>
 </div>
@@ -694,9 +704,9 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the UT user ID assigned to the given MAC address </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00211">211</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00215">215</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00303">m_macToUtUserIdMap</a>, and <a class="el" href="satellite-id-mapper_8h_source.html#l00283">m_utUserIdIndex</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00319">m_macToUtUserIdMap</a>, and <a class="el" href="satellite-id-mapper_8h_source.html#l00299">m_utUserIdIndex</a>.</p>
 
 </div>
 </div>
@@ -718,9 +728,9 @@ Private Attributes</h2></td></tr>
 
 <p>Do needed dispose actions. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00065">65</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00069">69</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8cc_source.html#l00075">Reset()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8cc_source.html#l00079">Reset()</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -763,9 +773,9 @@ Private Attributes</h2></td></tr>
 
 <p>Function for enabling the map prints. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00264">264</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00280">280</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00333">m_enableMapPrint</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00354">m_enableMapPrint</a>.</p>
 
 </div>
 </div>
@@ -794,11 +804,11 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>beam ID </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00406">406</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00444">444</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00313">m_macToBeamIdMap</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00329">m_macToBeamIdMap</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-helper_8cc_source.html#l00803">ns3::SatStatsHelper::GetIdentifierForUt()</a>, and <a class="el" href="satellite-stats-helper_8cc_source.html#l00658">ns3::SatStatsHelper::GetIdentifierForUtUser()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-stats-helper_8cc_source.html#l00810">ns3::SatStatsHelper::GetIdentifierForUt()</a>, and <a class="el" href="satellite-stats-helper_8cc_source.html#l00665">ns3::SatStatsHelper::GetIdentifierForUtUser()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -806,9 +816,9 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_id_mapper_a3174ce104d98c7f37b69256d573255da_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_id_mapper_a3174ce104d98c7f37b69256d573255da_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_id_mapper_a3174ce104d98c7f37b69256d573255da_icgraph" id="aclassns3_1_1_sat_id_mapper_a3174ce104d98c7f37b69256d573255da_icgraph">
-<area shape="rect" title="Function for getting the beam ID with MAC." alt="" coords="545,2063,749,2104"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#ada8b440db63c67048f066b1049d4a898" title=" " alt="" coords="334,1312,485,1353"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a21ae6f0b83a6bac6f2df21a31d1d51ea" title=" " alt="" coords="321,2781,497,2823"/>
+<area shape="rect" title="Function for getting the beam ID with MAC." alt="" coords="545,1955,749,1996"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#ada8b440db63c67048f066b1049d4a898" title=" " alt="" coords="334,1181,485,1223"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a21ae6f0b83a6bac6f2df21a31d1d51ea" title=" " alt="" coords="321,2696,497,2737"/>
 <area shape="rect" href="classns3_1_1_sat_stats_fwd_queue_helper.html#a028938c5c6fe6bdfd9be50ba484d06fb" title=" " alt="" coords="30,5,249,47"/>
 <area shape="rect" href="classns3_1_1_sat_stats_rtn_queue_helper.html#a58ee6574a71096d5cc8507e43c4dbf89" title=" " alt="" coords="32,71,247,112"/>
 <area shape="rect" href="classns3_1_1_sat_stats_capacity_request_helper.html#ad825e6e241e914d780f51c66394c5b61" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="31,136,248,177"/>
@@ -833,29 +843,29 @@ Private Attributes</h2></td></tr>
 <area shape="rect" href="classns3_1_1_sat_stats_packet_error_helper.html#ac652151c16b40ff575c6ea115daa3370" title="Set up several probes on a UT node and connect them to the collectors." alt="" coords="48,1377,231,1419"/>
 <area shape="rect" href="classns3_1_1_sat_stats_antenna_gain_helper.html#a607b81c576742bc49ac786dde1863baa" title="Set up several probes or other means of listeners and connect them to the collectors." alt="" coords="44,1443,235,1484"/>
 <area shape="rect" href="classns3_1_1_sat_stats_rbdc_request_helper.html#a4181f06915819efd44f64dbfacaf7c3b" title="Set up several probes or other means of listeners and connect them to the collectors." alt="" coords="43,1508,235,1549"/>
-<area shape="rect" href="classns3_1_1_sat_stats_carrier_id_helper.html#ae975a93c8904aa24db95010815b1480d" title="Save the address and the proper identifier from the given UT node." alt="" coords="36,1573,243,1615"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_composite_sinr_helper.html#a468c9576a7d94cc6057c5309ae6456f4" title="Save the address and the proper identifier from the given UT node." alt="" coords="7,1639,272,1680"/>
-<area shape="rect" href="classns3_1_1_sat_stats_delay_helper.html#a9e69820df607af91042c697b43c987e6" title="Save the address and the proper identifier from the given UT node." alt="" coords="41,1704,238,1745"/>
-<area shape="rect" href="classns3_1_1_sat_stats_jitter_helper.html#a6e624140941165b76d478f79486bcf54" title="Save the address and the proper identifier from the given UT node." alt="" coords="41,1769,238,1811"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_delay_helper.html#a78bc587c7529ef0e9f529ce09a17a72e" title="Save the address and the proper identifier from the given UT node." alt="" coords="32,1835,247,1876"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_jitter_helper.html#a288e0cc85fe262e42b093c954a7ed23c" title="Save the address and the proper identifier from the given UT node." alt="" coords="35,1900,243,1941"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_modcod_helper.html#a2cd324274b9cce86ce6b1a35e61fb89f" title="Save the address and the proper identifier from the given UT node." alt="" coords="25,1965,253,2007"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_rx_power_helper.html#add0085bde7aadd99cd83d6aac22e065c" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,2031,259,2072"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_sinr_helper.html#aefa4fe706d94fda1a13848bc214f3eab" title="Save the address and the proper identifier from the given UT node." alt="" coords="38,2096,241,2137"/>
-<area shape="rect" href="classns3_1_1_sat_stats_marsala_correlation_helper.html#a0339eda3a44c1f40f52d42e276a0fcfa" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,2161,259,2203"/>
-<area shape="rect" href="classns3_1_1_sat_stats_packet_collision_helper.html#a291c4fe1cf077679469a3bcc60d6c0d6" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,2227,259,2268"/>
-<area shape="rect" href="classns3_1_1_sat_stats_packet_error_helper.html#ac1158586f8f3001367d137844e90b649" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,2292,259,2333"/>
-<area shape="rect" href="classns3_1_1_sat_stats_plt_helper.html#a9c21fd9fc054594a23e6958a811cbf22" title="Save the address and the proper identifier from the given UT node." alt="" coords="41,2357,238,2399"/>
-<area shape="rect" href="classns3_1_1_sat_stats_satellite_queue_helper.html#a316668a98c01da7bb685cb02317ab6b4" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,2423,259,2464"/>
-<area shape="rect" href="classns3_1_1_sat_stats_signalling_load_helper.html#a78911aeb84c81d252772f6c4d54ba794" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,2488,259,2529"/>
-<area shape="rect" href="classns3_1_1_sat_stats_throughput_helper.html#ae73a62b1cbf68131e750f94dbc98b533" title="Save the address and the proper identifier from the given UT node." alt="" coords="27,2553,251,2595"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a3297c03ab2dc81c5467ba311cb948d21" title=" " alt="" coords="41,2619,238,2660"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_jitter_helper.html#a6ece45857a3593e0ae4a0a090fa4f0aa" title=" " alt="" coords="44,2684,235,2725"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_plt_helper.html#a30cfbf618edb0f2657d02440af0d12f4" title=" " alt="" coords="30,2749,249,2791"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_throughput_helper.html#a68f6878ea09836a284f13972bf22d709" title=" " alt="" coords="23,2815,256,2856"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_delay_helper.html#af181be6d8915c34385d5239ba02a5890" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="5,2880,273,2921"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_jitter_helper.html#a055d11687c5eb7a29554788dfabe0789" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="5,2945,273,2987"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_plt_helper.html#a6b2d5afb33bd0a7200a4fc85c145f443" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="27,3011,252,3052"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a356a8bcd2f2a99403be1f6a801d53ede" title="Save the address and the proper identifier from the given UT node." alt="" coords="41,1573,238,1615"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a89bd4dcae67d3f6efb94cc3347807ad2" title="Update the address and the proper identifier from the given UT node." alt="" coords="33,1639,245,1680"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_dev_delay_helper.html#a9b229054674649ad241987452edd7bbe" title="Change identifier used on probes, when handovers occur." alt="" coords="19,1704,259,1745"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_mac_delay_helper.html#a9b751984038838b01d6d236933589787" title="Change identifier used on probes, when handovers occur." alt="" coords="19,1769,259,1811"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_phy_delay_helper.html#a03f57cd43565e9e1ce371d2a8fed484d" title="Change identifier used on probes, when handovers occur." alt="" coords="19,1835,259,1876"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_dev_link_delay_helper.html#aba24a008a29fff259c8c927c06b5957a" title="Change identifier used on probes, when handovers occur." alt="" coords="22,1901,257,1957"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_mac_link_delay_helper.html#a3f839e70c4b3eabcfc48445ac34e955c" title="Change identifier used on probes, when handovers occur." alt="" coords="22,1981,257,2037"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_phy_link_delay_helper.html#a97b536c33ff305fc7b974674a59236ad" title="Change identifier used on probes, when handovers occur." alt="" coords="22,2061,257,2117"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_plt_helper.html#a8376f02dd166bd5c9ec9502525581ca9" title="Change identifier used on probes, when handovers occur." alt="" coords="30,2141,249,2183"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_dev_throughput_helper.html#a95d2ae590969b5e8ef5b77672fa86b37" title="Change identifier used on probes, when handovers occur." alt="" coords="7,2207,271,2248"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_mac_throughput_helper.html#a94508be62807a965dd97e8120a543528" title="Change identifier used on probes, when handovers occur." alt="" coords="7,2272,272,2313"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_phy_throughput_helper.html#a025f48e8d94b2718001d4c00c787579a" title="Change identifier used on probes, when handovers occur." alt="" coords="8,2337,271,2379"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a3297c03ab2dc81c5467ba311cb948d21" title=" " alt="" coords="41,2403,238,2444"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_jitter_helper.html#a6ece45857a3593e0ae4a0a090fa4f0aa" title=" " alt="" coords="44,2468,235,2509"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_plt_helper.html#a30cfbf618edb0f2657d02440af0d12f4" title=" " alt="" coords="30,2533,249,2575"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_throughput_helper.html#a68f6878ea09836a284f13972bf22d709" title=" " alt="" coords="23,2599,256,2640"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_delay_helper.html#af181be6d8915c34385d5239ba02a5890" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="5,2664,273,2705"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_jitter_helper.html#a055d11687c5eb7a29554788dfabe0789" title=" " alt="" coords="5,2729,273,2771"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_plt_helper.html#a6b2d5afb33bd0a7200a4fc85c145f443" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="27,2795,252,2836"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_throughput_helper.html#aee0726beb70903dd932f341530c2b191" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="5,2860,273,2901"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_composite_sinr_helper.html#adb4d1c7364804a109b4fdced40d2b1a5" title="Change identifier used on probes, when handovers occur." alt="" coords="29,2926,250,2982"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a0705d12a6f7b9820b21e963af194ca08" title="Change identifier used on probes, when handovers occur." alt="" coords="19,3007,259,3048"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_jitter_helper.html#a920571f6e26a37047093deeba4758747" title="Change identifier used on probes, when handovers occur." alt="" coords="19,3072,259,3113"/>
 </map>
 </div>
 
@@ -886,11 +896,11 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>group ID </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00421">421</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00459">459</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00318">m_macToGroupIdMap</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00334">m_macToGroupIdMap</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-helper_8cc_source.html#l00803">ns3::SatStatsHelper::GetIdentifierForUt()</a>, and <a class="el" href="satellite-stats-helper_8cc_source.html#l00658">ns3::SatStatsHelper::GetIdentifierForUtUser()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-stats-helper_8cc_source.html#l00810">ns3::SatStatsHelper::GetIdentifierForUt()</a>, and <a class="el" href="satellite-stats-helper_8cc_source.html#l00665">ns3::SatStatsHelper::GetIdentifierForUtUser()</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -898,9 +908,9 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_id_mapper_af7c2802b2da9140f72b9f91943eca400_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_id_mapper_af7c2802b2da9140f72b9f91943eca400_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_id_mapper_af7c2802b2da9140f72b9f91943eca400_icgraph" id="aclassns3_1_1_sat_id_mapper_af7c2802b2da9140f72b9f91943eca400_icgraph">
-<area shape="rect" title="Function for getting the group ID with MAC." alt="" coords="545,2063,751,2104"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#ada8b440db63c67048f066b1049d4a898" title=" " alt="" coords="334,1312,485,1353"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a21ae6f0b83a6bac6f2df21a31d1d51ea" title=" " alt="" coords="321,2781,497,2823"/>
+<area shape="rect" title="Function for getting the group ID with MAC." alt="" coords="545,1955,751,1996"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#ada8b440db63c67048f066b1049d4a898" title=" " alt="" coords="334,1181,485,1223"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a21ae6f0b83a6bac6f2df21a31d1d51ea" title=" " alt="" coords="321,2696,497,2737"/>
 <area shape="rect" href="classns3_1_1_sat_stats_fwd_queue_helper.html#a028938c5c6fe6bdfd9be50ba484d06fb" title=" " alt="" coords="30,5,249,47"/>
 <area shape="rect" href="classns3_1_1_sat_stats_rtn_queue_helper.html#a58ee6574a71096d5cc8507e43c4dbf89" title=" " alt="" coords="32,71,247,112"/>
 <area shape="rect" href="classns3_1_1_sat_stats_capacity_request_helper.html#ad825e6e241e914d780f51c66394c5b61" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="31,136,248,177"/>
@@ -925,29 +935,29 @@ Private Attributes</h2></td></tr>
 <area shape="rect" href="classns3_1_1_sat_stats_packet_error_helper.html#ac652151c16b40ff575c6ea115daa3370" title="Set up several probes on a UT node and connect them to the collectors." alt="" coords="48,1377,231,1419"/>
 <area shape="rect" href="classns3_1_1_sat_stats_antenna_gain_helper.html#a607b81c576742bc49ac786dde1863baa" title="Set up several probes or other means of listeners and connect them to the collectors." alt="" coords="44,1443,235,1484"/>
 <area shape="rect" href="classns3_1_1_sat_stats_rbdc_request_helper.html#a4181f06915819efd44f64dbfacaf7c3b" title="Set up several probes or other means of listeners and connect them to the collectors." alt="" coords="43,1508,235,1549"/>
-<area shape="rect" href="classns3_1_1_sat_stats_carrier_id_helper.html#ae975a93c8904aa24db95010815b1480d" title="Save the address and the proper identifier from the given UT node." alt="" coords="36,1573,243,1615"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_composite_sinr_helper.html#a468c9576a7d94cc6057c5309ae6456f4" title="Save the address and the proper identifier from the given UT node." alt="" coords="7,1639,272,1680"/>
-<area shape="rect" href="classns3_1_1_sat_stats_delay_helper.html#a9e69820df607af91042c697b43c987e6" title="Save the address and the proper identifier from the given UT node." alt="" coords="41,1704,238,1745"/>
-<area shape="rect" href="classns3_1_1_sat_stats_jitter_helper.html#a6e624140941165b76d478f79486bcf54" title="Save the address and the proper identifier from the given UT node." alt="" coords="41,1769,238,1811"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_delay_helper.html#a78bc587c7529ef0e9f529ce09a17a72e" title="Save the address and the proper identifier from the given UT node." alt="" coords="32,1835,247,1876"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_jitter_helper.html#a288e0cc85fe262e42b093c954a7ed23c" title="Save the address and the proper identifier from the given UT node." alt="" coords="35,1900,243,1941"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_modcod_helper.html#a2cd324274b9cce86ce6b1a35e61fb89f" title="Save the address and the proper identifier from the given UT node." alt="" coords="25,1965,253,2007"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_rx_power_helper.html#add0085bde7aadd99cd83d6aac22e065c" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,2031,259,2072"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_sinr_helper.html#aefa4fe706d94fda1a13848bc214f3eab" title="Save the address and the proper identifier from the given UT node." alt="" coords="38,2096,241,2137"/>
-<area shape="rect" href="classns3_1_1_sat_stats_marsala_correlation_helper.html#a0339eda3a44c1f40f52d42e276a0fcfa" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,2161,259,2203"/>
-<area shape="rect" href="classns3_1_1_sat_stats_packet_collision_helper.html#a291c4fe1cf077679469a3bcc60d6c0d6" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,2227,259,2268"/>
-<area shape="rect" href="classns3_1_1_sat_stats_packet_error_helper.html#ac1158586f8f3001367d137844e90b649" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,2292,259,2333"/>
-<area shape="rect" href="classns3_1_1_sat_stats_plt_helper.html#a9c21fd9fc054594a23e6958a811cbf22" title="Save the address and the proper identifier from the given UT node." alt="" coords="41,2357,238,2399"/>
-<area shape="rect" href="classns3_1_1_sat_stats_satellite_queue_helper.html#a316668a98c01da7bb685cb02317ab6b4" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,2423,259,2464"/>
-<area shape="rect" href="classns3_1_1_sat_stats_signalling_load_helper.html#a78911aeb84c81d252772f6c4d54ba794" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,2488,259,2529"/>
-<area shape="rect" href="classns3_1_1_sat_stats_throughput_helper.html#ae73a62b1cbf68131e750f94dbc98b533" title="Save the address and the proper identifier from the given UT node." alt="" coords="27,2553,251,2595"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a3297c03ab2dc81c5467ba311cb948d21" title=" " alt="" coords="41,2619,238,2660"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_jitter_helper.html#a6ece45857a3593e0ae4a0a090fa4f0aa" title=" " alt="" coords="44,2684,235,2725"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_plt_helper.html#a30cfbf618edb0f2657d02440af0d12f4" title=" " alt="" coords="30,2749,249,2791"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_throughput_helper.html#a68f6878ea09836a284f13972bf22d709" title=" " alt="" coords="23,2815,256,2856"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_delay_helper.html#af181be6d8915c34385d5239ba02a5890" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="5,2880,273,2921"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_jitter_helper.html#a055d11687c5eb7a29554788dfabe0789" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="5,2945,273,2987"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_plt_helper.html#a6b2d5afb33bd0a7200a4fc85c145f443" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="27,3011,252,3052"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a356a8bcd2f2a99403be1f6a801d53ede" title="Save the address and the proper identifier from the given UT node." alt="" coords="41,1573,238,1615"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a89bd4dcae67d3f6efb94cc3347807ad2" title="Update the address and the proper identifier from the given UT node." alt="" coords="33,1639,245,1680"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_dev_delay_helper.html#a9b229054674649ad241987452edd7bbe" title="Change identifier used on probes, when handovers occur." alt="" coords="19,1704,259,1745"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_mac_delay_helper.html#a9b751984038838b01d6d236933589787" title="Change identifier used on probes, when handovers occur." alt="" coords="19,1769,259,1811"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_phy_delay_helper.html#a03f57cd43565e9e1ce371d2a8fed484d" title="Change identifier used on probes, when handovers occur." alt="" coords="19,1835,259,1876"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_dev_link_delay_helper.html#aba24a008a29fff259c8c927c06b5957a" title="Change identifier used on probes, when handovers occur." alt="" coords="22,1901,257,1957"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_mac_link_delay_helper.html#a3f839e70c4b3eabcfc48445ac34e955c" title="Change identifier used on probes, when handovers occur." alt="" coords="22,1981,257,2037"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_phy_link_delay_helper.html#a97b536c33ff305fc7b974674a59236ad" title="Change identifier used on probes, when handovers occur." alt="" coords="22,2061,257,2117"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_plt_helper.html#a8376f02dd166bd5c9ec9502525581ca9" title="Change identifier used on probes, when handovers occur." alt="" coords="30,2141,249,2183"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_dev_throughput_helper.html#a95d2ae590969b5e8ef5b77672fa86b37" title="Change identifier used on probes, when handovers occur." alt="" coords="7,2207,271,2248"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_mac_throughput_helper.html#a94508be62807a965dd97e8120a543528" title="Change identifier used on probes, when handovers occur." alt="" coords="7,2272,272,2313"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_phy_throughput_helper.html#a025f48e8d94b2718001d4c00c787579a" title="Change identifier used on probes, when handovers occur." alt="" coords="8,2337,271,2379"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a3297c03ab2dc81c5467ba311cb948d21" title=" " alt="" coords="41,2403,238,2444"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_jitter_helper.html#a6ece45857a3593e0ae4a0a090fa4f0aa" title=" " alt="" coords="44,2468,235,2509"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_plt_helper.html#a30cfbf618edb0f2657d02440af0d12f4" title=" " alt="" coords="30,2533,249,2575"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_throughput_helper.html#a68f6878ea09836a284f13972bf22d709" title=" " alt="" coords="23,2599,256,2640"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_delay_helper.html#af181be6d8915c34385d5239ba02a5890" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="5,2664,273,2705"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_jitter_helper.html#a055d11687c5eb7a29554788dfabe0789" title=" " alt="" coords="5,2729,273,2771"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_plt_helper.html#a6b2d5afb33bd0a7200a4fc85c145f443" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="27,2795,252,2836"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_throughput_helper.html#aee0726beb70903dd932f341530c2b191" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="5,2860,273,2901"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_composite_sinr_helper.html#adb4d1c7364804a109b4fdced40d2b1a5" title="Change identifier used on probes, when handovers occur." alt="" coords="29,2926,250,2982"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a0705d12a6f7b9820b21e963af194ca08" title="Change identifier used on probes, when handovers occur." alt="" coords="19,3007,259,3048"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_jitter_helper.html#a920571f6e26a37047093deeba4758747" title="Change identifier used on probes, when handovers occur." alt="" coords="19,3072,259,3113"/>
 </map>
 </div>
 
@@ -978,11 +988,11 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>GW ID </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00436">436</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00474">474</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00323">m_macToGwIdMap</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00339">m_macToGwIdMap</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-helper_8cc_source.html#l00599">ns3::SatStatsHelper::GetGwId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-stats-helper_8cc_source.html#l00606">ns3::SatStatsHelper::GetGwId()</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -1052,9 +1062,9 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the MAC address of the GW node's first satellite beam network device, or an invalid address if such device is not found. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00483">483</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00521">521</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-helper_8cc_source.html#l00599">ns3::SatStatsHelper::GetGwId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-stats-helper_8cc_source.html#l00606">ns3::SatStatsHelper::GetGwId()</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -1126,9 +1136,9 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>GW user ID </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00451">451</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00489">489</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00328">m_macToGwUserIdMap</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00344">m_macToGwUserIdMap</a>.</p>
 
 </div>
 </div>
@@ -1157,11 +1167,11 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>info string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00629">629</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00667">667</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00313">m_macToBeamIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00318">m_macToGroupIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00323">m_macToGwIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00308">m_macToSatIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00293">m_macToTraceIdMap</a>, and <a class="el" href="satellite-id-mapper_8h_source.html#l00298">m_macToUtIdMap</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00329">m_macToBeamIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00334">m_macToGroupIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00339">m_macToGwIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00324">m_macToSatIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00309">m_macToTraceIdMap</a>, and <a class="el" href="satellite-id-mapper_8h_source.html#l00314">m_macToUtIdMap</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00699">PrintTraceMap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00737">PrintTraceMap()</a>.</p>
 <div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
@@ -1204,11 +1214,11 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>SAT user ID </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00391">391</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00429">429</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00308">m_macToSatIdMap</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00324">m_macToSatIdMap</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-helper_8cc_source.html#l00803">ns3::SatStatsHelper::GetIdentifierForUt()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00658">ns3::SatStatsHelper::GetIdentifierForUtUser()</a>, and <a class="el" href="satellite-stats-helper_8cc_source.html#l00628">ns3::SatStatsHelper::GetSatId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-stats-helper_8cc_source.html#l00810">ns3::SatStatsHelper::GetIdentifierForUt()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00665">ns3::SatStatsHelper::GetIdentifierForUtUser()</a>, and <a class="el" href="satellite-stats-helper_8cc_source.html#l00635">ns3::SatStatsHelper::GetSatId()</a>.</p>
 <div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
@@ -1216,10 +1226,10 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_id_mapper_a451689de1096fda8d49f803c93a23696_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_id_mapper_a451689de1096fda8d49f803c93a23696_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_id_mapper_a451689de1096fda8d49f803c93a23696_icgraph" id="aclassns3_1_1_sat_id_mapper_a451689de1096fda8d49f803c93a23696_icgraph">
-<area shape="rect" title="Function for getting the SAT ID with MAC." alt="" coords="545,2749,732,2791"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#ada8b440db63c67048f066b1049d4a898" title=" " alt="" coords="334,1312,485,1353"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a21ae6f0b83a6bac6f2df21a31d1d51ea" title=" " alt="" coords="321,2749,497,2791"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a19596c7a9d76347944aedba7838b6a5c" title=" " alt="" coords="334,2815,485,2856"/>
+<area shape="rect" title="Function for getting the SAT ID with MAC." alt="" coords="545,2664,732,2705"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#ada8b440db63c67048f066b1049d4a898" title=" " alt="" coords="334,1181,485,1223"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a21ae6f0b83a6bac6f2df21a31d1d51ea" title=" " alt="" coords="321,2664,497,2705"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a19596c7a9d76347944aedba7838b6a5c" title=" " alt="" coords="334,2729,485,2771"/>
 <area shape="rect" href="classns3_1_1_sat_stats_fwd_queue_helper.html#a028938c5c6fe6bdfd9be50ba484d06fb" title=" " alt="" coords="30,5,249,47"/>
 <area shape="rect" href="classns3_1_1_sat_stats_rtn_queue_helper.html#a58ee6574a71096d5cc8507e43c4dbf89" title=" " alt="" coords="32,71,247,112"/>
 <area shape="rect" href="classns3_1_1_sat_stats_capacity_request_helper.html#ad825e6e241e914d780f51c66394c5b61" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="31,136,248,177"/>
@@ -1244,28 +1254,28 @@ Private Attributes</h2></td></tr>
 <area shape="rect" href="classns3_1_1_sat_stats_packet_error_helper.html#ac652151c16b40ff575c6ea115daa3370" title="Set up several probes on a UT node and connect them to the collectors." alt="" coords="48,1377,231,1419"/>
 <area shape="rect" href="classns3_1_1_sat_stats_antenna_gain_helper.html#a607b81c576742bc49ac786dde1863baa" title="Set up several probes or other means of listeners and connect them to the collectors." alt="" coords="44,1443,235,1484"/>
 <area shape="rect" href="classns3_1_1_sat_stats_rbdc_request_helper.html#a4181f06915819efd44f64dbfacaf7c3b" title="Set up several probes or other means of listeners and connect them to the collectors." alt="" coords="43,1508,235,1549"/>
-<area shape="rect" href="classns3_1_1_sat_stats_carrier_id_helper.html#ae975a93c8904aa24db95010815b1480d" title="Save the address and the proper identifier from the given UT node." alt="" coords="36,1573,243,1615"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_composite_sinr_helper.html#a468c9576a7d94cc6057c5309ae6456f4" title="Save the address and the proper identifier from the given UT node." alt="" coords="7,1639,272,1680"/>
-<area shape="rect" href="classns3_1_1_sat_stats_delay_helper.html#a9e69820df607af91042c697b43c987e6" title="Save the address and the proper identifier from the given UT node." alt="" coords="41,1704,238,1745"/>
-<area shape="rect" href="classns3_1_1_sat_stats_jitter_helper.html#a6e624140941165b76d478f79486bcf54" title="Save the address and the proper identifier from the given UT node." alt="" coords="41,1769,238,1811"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_delay_helper.html#a78bc587c7529ef0e9f529ce09a17a72e" title="Save the address and the proper identifier from the given UT node." alt="" coords="32,1835,247,1876"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_jitter_helper.html#a288e0cc85fe262e42b093c954a7ed23c" title="Save the address and the proper identifier from the given UT node." alt="" coords="35,1900,243,1941"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_modcod_helper.html#a2cd324274b9cce86ce6b1a35e61fb89f" title="Save the address and the proper identifier from the given UT node." alt="" coords="25,1965,253,2007"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_rx_power_helper.html#add0085bde7aadd99cd83d6aac22e065c" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,2031,259,2072"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_sinr_helper.html#aefa4fe706d94fda1a13848bc214f3eab" title="Save the address and the proper identifier from the given UT node." alt="" coords="38,2096,241,2137"/>
-<area shape="rect" href="classns3_1_1_sat_stats_marsala_correlation_helper.html#a0339eda3a44c1f40f52d42e276a0fcfa" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,2161,259,2203"/>
-<area shape="rect" href="classns3_1_1_sat_stats_packet_collision_helper.html#a291c4fe1cf077679469a3bcc60d6c0d6" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,2227,259,2268"/>
-<area shape="rect" href="classns3_1_1_sat_stats_packet_error_helper.html#ac1158586f8f3001367d137844e90b649" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,2292,259,2333"/>
-<area shape="rect" href="classns3_1_1_sat_stats_plt_helper.html#a9c21fd9fc054594a23e6958a811cbf22" title="Save the address and the proper identifier from the given UT node." alt="" coords="41,2357,238,2399"/>
-<area shape="rect" href="classns3_1_1_sat_stats_satellite_queue_helper.html#a316668a98c01da7bb685cb02317ab6b4" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,2423,259,2464"/>
-<area shape="rect" href="classns3_1_1_sat_stats_signalling_load_helper.html#a78911aeb84c81d252772f6c4d54ba794" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,2488,259,2529"/>
-<area shape="rect" href="classns3_1_1_sat_stats_throughput_helper.html#ae73a62b1cbf68131e750f94dbc98b533" title="Save the address and the proper identifier from the given UT node." alt="" coords="27,2553,251,2595"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a3297c03ab2dc81c5467ba311cb948d21" title=" " alt="" coords="41,2619,238,2660"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_jitter_helper.html#a6ece45857a3593e0ae4a0a090fa4f0aa" title=" " alt="" coords="44,2684,235,2725"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_plt_helper.html#a30cfbf618edb0f2657d02440af0d12f4" title=" " alt="" coords="30,2749,249,2791"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_throughput_helper.html#a68f6878ea09836a284f13972bf22d709" title=" " alt="" coords="23,2815,256,2856"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_delay_helper.html#af181be6d8915c34385d5239ba02a5890" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="5,2880,273,2921"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_jitter_helper.html#a055d11687c5eb7a29554788dfabe0789" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="5,2945,273,2987"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a356a8bcd2f2a99403be1f6a801d53ede" title="Save the address and the proper identifier from the given UT node." alt="" coords="41,1573,238,1615"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a89bd4dcae67d3f6efb94cc3347807ad2" title="Update the address and the proper identifier from the given UT node." alt="" coords="33,1639,245,1680"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_dev_delay_helper.html#a9b229054674649ad241987452edd7bbe" title="Change identifier used on probes, when handovers occur." alt="" coords="19,1704,259,1745"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_mac_delay_helper.html#a9b751984038838b01d6d236933589787" title="Change identifier used on probes, when handovers occur." alt="" coords="19,1769,259,1811"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_phy_delay_helper.html#a03f57cd43565e9e1ce371d2a8fed484d" title="Change identifier used on probes, when handovers occur." alt="" coords="19,1835,259,1876"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_dev_link_delay_helper.html#aba24a008a29fff259c8c927c06b5957a" title="Change identifier used on probes, when handovers occur." alt="" coords="22,1901,257,1957"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_mac_link_delay_helper.html#a3f839e70c4b3eabcfc48445ac34e955c" title="Change identifier used on probes, when handovers occur." alt="" coords="22,1981,257,2037"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_phy_link_delay_helper.html#a97b536c33ff305fc7b974674a59236ad" title="Change identifier used on probes, when handovers occur." alt="" coords="22,2061,257,2117"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_plt_helper.html#a8376f02dd166bd5c9ec9502525581ca9" title="Change identifier used on probes, when handovers occur." alt="" coords="30,2141,249,2183"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_dev_throughput_helper.html#a95d2ae590969b5e8ef5b77672fa86b37" title="Change identifier used on probes, when handovers occur." alt="" coords="7,2207,271,2248"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_mac_throughput_helper.html#a94508be62807a965dd97e8120a543528" title="Change identifier used on probes, when handovers occur." alt="" coords="7,2272,272,2313"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_phy_throughput_helper.html#a025f48e8d94b2718001d4c00c787579a" title="Change identifier used on probes, when handovers occur." alt="" coords="8,2337,271,2379"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a3297c03ab2dc81c5467ba311cb948d21" title=" " alt="" coords="41,2403,238,2444"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_jitter_helper.html#a6ece45857a3593e0ae4a0a090fa4f0aa" title=" " alt="" coords="44,2468,235,2509"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_plt_helper.html#a30cfbf618edb0f2657d02440af0d12f4" title=" " alt="" coords="30,2533,249,2575"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_throughput_helper.html#a68f6878ea09836a284f13972bf22d709" title=" " alt="" coords="23,2599,256,2640"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_delay_helper.html#af181be6d8915c34385d5239ba02a5890" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="5,2664,273,2705"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_jitter_helper.html#a055d11687c5eb7a29554788dfabe0789" title=" " alt="" coords="5,2729,273,2771"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_plt_helper.html#a6b2d5afb33bd0a7200a4fc85c145f443" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="27,2795,252,2836"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_throughput_helper.html#aee0726beb70903dd932f341530c2b191" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="5,2860,273,2901"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_composite_sinr_helper.html#adb4d1c7364804a109b4fdced40d2b1a5" title="Change identifier used on probes, when handovers occur." alt="" coords="29,2926,250,2982"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a0705d12a6f7b9820b21e963af194ca08" title="Change identifier used on probes, when handovers occur." alt="" coords="19,3007,259,3048"/>
 </map>
 </div>
 
@@ -1296,9 +1306,9 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>satellite ID </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00466">466</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00504">504</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00338">m_macToSatIdIslMap</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00359">m_macToSatIdIslMap</a>.</p>
 
 </div>
 </div>
@@ -1325,9 +1335,9 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the MAC address of the SAT node's first satellite beam network device, or an invalid address if such device is not found. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00523">523</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00561">561</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-helper_8cc_source.html#l00628">ns3::SatStatsHelper::GetSatId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-stats-helper_8cc_source.html#l00635">ns3::SatStatsHelper::GetSatId()</a>.</p>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -1395,9 +1405,9 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Trace ID </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00346">346</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00384">384</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00293">m_macToTraceIdMap</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00309">m_macToTraceIdMap</a>.</p>
 
 </div>
 </div>
@@ -1428,7 +1438,7 @@ Private Attributes</h2></td></tr>
 <p>NS-3 type id function. </p>
 <dl class="section return"><dt>Returns</dt><dd>type id </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00040">40</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00044">44</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
 </div>
 </div>
@@ -1457,11 +1467,11 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>UT ID </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00361">361</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00399">399</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00298">m_macToUtIdMap</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00314">m_macToUtIdMap</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-helper_8cc_source.html#l00570">ns3::SatStatsHelper::GetUtId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-stats-helper_8cc_source.html#l00577">ns3::SatStatsHelper::GetUtId()</a>.</p>
 <div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">
@@ -1547,9 +1557,9 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>MAC address of the UT node's satellite beam network device, or an invalid address if such device is not found. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00558">558</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00596">596</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-queue-helper_8cc_source.html#l00432">ns3::SatStatsFwdQueueHelper::DoEnlistSource()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00803">ns3::SatStatsHelper::GetIdentifierForUt()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00658">ns3::SatStatsHelper::GetIdentifierForUtUser()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00570">ns3::SatStatsHelper::GetUtId()</a>, <a class="el" href="satellite-stats-carrier-id-helper_8cc_source.html#l00343">ns3::SatStatsCarrierIdHelper::SaveAddressAndIdentifier()</a>, <a class="el" href="satellite-stats-composite-sinr-helper_8cc_source.html#l00552">ns3::SatStatsRtnCompositeSinrHelper::SaveAddressAndIdentifier()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00447">ns3::SatStatsDelayHelper::SaveAddressAndIdentifier()</a>, <a class="el" href="satellite-stats-jitter-helper_8cc_source.html#l00447">ns3::SatStatsJitterHelper::SaveAddressAndIdentifier()</a>, <a class="el" href="satellite-stats-link-delay-helper_8cc_source.html#l00454">ns3::SatStatsLinkDelayHelper::SaveAddressAndIdentifier()</a>, <a class="el" href="satellite-stats-link-jitter-helper_8cc_source.html#l00454">ns3::SatStatsLinkJitterHelper::SaveAddressAndIdentifier()</a>, <a class="el" href="satellite-stats-link-modcod-helper_8cc_source.html#l00450">ns3::SatStatsLinkModcodHelper::SaveAddressAndIdentifier()</a>, <a class="el" href="satellite-stats-link-rx-power-helper_8cc_source.html#l00434">ns3::SatStatsLinkRxPowerHelper::SaveAddressAndIdentifier()</a>, <a class="el" href="satellite-stats-link-sinr-helper_8cc_source.html#l00434">ns3::SatStatsLinkSinrHelper::SaveAddressAndIdentifier()</a>, <a class="el" href="satellite-stats-marsala-correlation-helper_8cc_source.html#l00344">ns3::SatStatsMarsalaCorrelationHelper::SaveAddressAndIdentifier()</a>, <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00151">ns3::SatStatsPacketCollisionHelper::SaveAddressAndIdentifier()</a>, <a class="el" href="satellite-stats-packet-error-helper_8cc_source.html#l00399">ns3::SatStatsPacketErrorHelper::SaveAddressAndIdentifier()</a>, <a class="el" href="satellite-stats-plt-helper_8cc_source.html#l00446">ns3::SatStatsPltHelper::SaveAddressAndIdentifier()</a>, <a class="el" href="satellite-stats-satellite-queue-helper_8cc_source.html#l00467">ns3::SatStatsSatelliteQueueHelper::SaveAddressAndIdentifier()</a>, <a class="el" href="satellite-stats-signalling-load-helper_8cc_source.html#l00290">ns3::SatStatsSignallingLoadHelper::SaveAddressAndIdentifier()</a>, and <a class="el" href="satellite-stats-throughput-helper_8cc_source.html#l00436">ns3::SatStatsThroughputHelper::SaveAddressAndIdentifier()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-stats-queue-helper_8cc_source.html#l00437">ns3::SatStatsFwdQueueHelper::DoEnlistSource()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00810">ns3::SatStatsHelper::GetIdentifierForUt()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00665">ns3::SatStatsHelper::GetIdentifierForUtUser()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00577">ns3::SatStatsHelper::GetUtId()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l01081">ns3::SatStatsHelper::SaveAddressAndIdentifier()</a>, and <a class="el" href="satellite-stats-helper_8cc_source.html#l01101">ns3::SatStatsHelper::UpdateAddressAndIdentifier()</a>.</p>
 <div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-12-summary" class="dynsummary" style="display:block;">
@@ -1557,56 +1567,56 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-12-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_id_mapper_af3a42178e8d687643c54cf473e008901_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_id_mapper_af3a42178e8d687643c54cf473e008901_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_id_mapper_af3a42178e8d687643c54cf473e008901_icgraph" id="aclassns3_1_1_sat_id_mapper_af3a42178e8d687643c54cf473e008901_icgraph">
-<area shape="rect" title=" " alt="" coords="744,631,952,672"/>
+<area shape="rect" title=" " alt="" coords="744,1873,952,1915"/>
 <area shape="rect" href="classns3_1_1_sat_stats_fwd_queue_helper.html#a028938c5c6fe6bdfd9be50ba484d06fb" title=" " alt="" coords="30,5,249,47"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#ada8b440db63c67048f066b1049d4a898" title=" " alt="" coords="334,1249,485,1291"/>
-<area shape="rect" href="classns3_1_1_sat_stats_carrier_id_helper.html#ae975a93c8904aa24db95010815b1480d" title="Save the address and the proper identifier from the given UT node." alt="" coords="36,71,243,112"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_composite_sinr_helper.html#a468c9576a7d94cc6057c5309ae6456f4" title="Save the address and the proper identifier from the given UT node." alt="" coords="7,136,272,177"/>
-<area shape="rect" href="classns3_1_1_sat_stats_delay_helper.html#a9e69820df607af91042c697b43c987e6" title="Save the address and the proper identifier from the given UT node." alt="" coords="41,201,238,243"/>
-<area shape="rect" href="classns3_1_1_sat_stats_jitter_helper.html#a6e624140941165b76d478f79486bcf54" title="Save the address and the proper identifier from the given UT node." alt="" coords="41,267,238,308"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_delay_helper.html#a78bc587c7529ef0e9f529ce09a17a72e" title="Save the address and the proper identifier from the given UT node." alt="" coords="32,332,247,373"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_jitter_helper.html#a288e0cc85fe262e42b093c954a7ed23c" title="Save the address and the proper identifier from the given UT node." alt="" coords="35,397,243,439"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_modcod_helper.html#a2cd324274b9cce86ce6b1a35e61fb89f" title="Save the address and the proper identifier from the given UT node." alt="" coords="25,463,253,504"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_rx_power_helper.html#add0085bde7aadd99cd83d6aac22e065c" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,528,259,569"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_sinr_helper.html#aefa4fe706d94fda1a13848bc214f3eab" title="Save the address and the proper identifier from the given UT node." alt="" coords="38,593,241,635"/>
-<area shape="rect" href="classns3_1_1_sat_stats_marsala_correlation_helper.html#a0339eda3a44c1f40f52d42e276a0fcfa" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,659,259,700"/>
-<area shape="rect" href="classns3_1_1_sat_stats_packet_collision_helper.html#a291c4fe1cf077679469a3bcc60d6c0d6" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,724,259,765"/>
-<area shape="rect" href="classns3_1_1_sat_stats_packet_error_helper.html#ac1158586f8f3001367d137844e90b649" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,789,259,831"/>
-<area shape="rect" href="classns3_1_1_sat_stats_plt_helper.html#a9c21fd9fc054594a23e6958a811cbf22" title="Save the address and the proper identifier from the given UT node." alt="" coords="41,855,238,896"/>
-<area shape="rect" href="classns3_1_1_sat_stats_satellite_queue_helper.html#a316668a98c01da7bb685cb02317ab6b4" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,920,259,961"/>
-<area shape="rect" href="classns3_1_1_sat_stats_signalling_load_helper.html#a78911aeb84c81d252772f6c4d54ba794" title="Save the address and the proper identifier from the given UT node." alt="" coords="19,985,259,1027"/>
-<area shape="rect" href="classns3_1_1_sat_stats_throughput_helper.html#ae73a62b1cbf68131e750f94dbc98b533" title="Save the address and the proper identifier from the given UT node." alt="" coords="27,1312,251,1353"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a21ae6f0b83a6bac6f2df21a31d1d51ea" title=" " alt="" coords="321,2717,497,2759"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a93e39c005ae0351b47a5fca8dcfad7e7" title=" " alt="" coords="545,1925,696,1967"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_queue_helper.html#a58ee6574a71096d5cc8507e43c4dbf89" title=" " alt="" coords="32,1181,247,1223"/>
-<area shape="rect" href="classns3_1_1_sat_stats_capacity_request_helper.html#ad825e6e241e914d780f51c66394c5b61" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="31,1247,248,1288"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_composite_sinr_helper.html#a5fff14abb245091589776ecf660fc5a8" title=" " alt="" coords="37,1377,241,1419"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_dev_delay_helper.html#ae97db4d8d39bb32499d1ba20654c6892" title=" " alt="" coords="40,1443,239,1484"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_mac_delay_helper.html#ace1c3b69fe78ce07e14b7fac2a2185a7" title=" " alt="" coords="40,1508,239,1549"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_phy_delay_helper.html#adcc7e7dc476bd81790156dfb75e8e932" title=" " alt="" coords="41,1573,237,1615"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_dev_jitter_helper.html#a96329770f0d68020361c3290d814daba" title=" " alt="" coords="44,1639,235,1680"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_mac_jitter_helper.html#a8a51abf39b231f15b37c5999502e1efc" title=" " alt="" coords="43,1704,235,1745"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_phy_jitter_helper.html#ae825846a06a307b2470e8eaf781f489c" title=" " alt="" coords="45,1769,234,1811"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_dev_link_delay_helper.html#a0c129a642385291e9480a3b141c563d9" title=" " alt="" coords="31,1835,248,1876"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_mac_link_delay_helper.html#aa1c86a3623928c6e58fe19614ff70e82" title=" " alt="" coords="30,1900,249,1941"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_phy_link_delay_helper.html#aa766fcb7f791fb3e176e0af22f16b3a7" title=" " alt="" coords="32,1965,247,2007"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_dev_link_jitter_helper.html#ae2bf5631c82d093473a7833aa63ecdc2" title=" " alt="" coords="31,2031,248,2072"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_mac_link_jitter_helper.html#a7eba8dbe2a39cb8ff4c000644bfb3443" title=" " alt="" coords="30,2096,249,2137"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_phy_link_jitter_helper.html#a95fbf63e4ec354a9e8144d5359683eed" title=" " alt="" coords="32,2161,247,2203"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_signalling_load_helper.html#a9e8ce076abeca4f0d313183e54f0505f" title=" " alt="" coords="36,2227,243,2268"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_dev_throughput_helper.html#a5a012c041e532c585df7554a1cfee1be" title=" " alt="" coords="7,2292,271,2333"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_mac_throughput_helper.html#a4c1fa10899e69eec22301b1cdd6d53e2" title=" " alt="" coords="7,2357,272,2399"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_phy_throughput_helper.html#ae037307197ee32ec292db0ffbec8bc3d" title=" " alt="" coords="8,2423,271,2464"/>
-<area shape="rect" href="classns3_1_1_sat_stats_resources_granted_helper.html#a4245f748f78cd1d89bfe5b4b0ab7d177" title=" " alt="" coords="26,2488,253,2529"/>
-<area shape="rect" href="classns3_1_1_sat_stats_packet_error_helper.html#ac652151c16b40ff575c6ea115daa3370" title="Set up several probes on a UT node and connect them to the collectors." alt="" coords="48,2553,231,2595"/>
-<area shape="rect" href="classns3_1_1_sat_stats_antenna_gain_helper.html#a607b81c576742bc49ac786dde1863baa" title="Set up several probes or other means of listeners and connect them to the collectors." alt="" coords="44,1051,235,1092"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rbdc_request_helper.html#a4181f06915819efd44f64dbfacaf7c3b" title="Set up several probes or other means of listeners and connect them to the collectors." alt="" coords="43,1116,235,1157"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a3297c03ab2dc81c5467ba311cb948d21" title=" " alt="" coords="41,2619,238,2660"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_jitter_helper.html#a6ece45857a3593e0ae4a0a090fa4f0aa" title=" " alt="" coords="44,2684,235,2725"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_plt_helper.html#a30cfbf618edb0f2657d02440af0d12f4" title=" " alt="" coords="30,2749,249,2791"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_throughput_helper.html#a68f6878ea09836a284f13972bf22d709" title=" " alt="" coords="23,2815,256,2856"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_delay_helper.html#af181be6d8915c34385d5239ba02a5890" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="5,2880,273,2921"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_jitter_helper.html#a055d11687c5eb7a29554788dfabe0789" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="5,2945,273,2987"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#ada8b440db63c67048f066b1049d4a898" title=" " alt="" coords="334,1283,485,1324"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a356a8bcd2f2a99403be1f6a801d53ede" title="Save the address and the proper identifier from the given UT node." alt="" coords="41,2941,238,2983"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a89bd4dcae67d3f6efb94cc3347807ad2" title="Update the address and the proper identifier from the given UT node." alt="" coords="33,3007,245,3048"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a21ae6f0b83a6bac6f2df21a31d1d51ea" title=" " alt="" coords="321,2500,497,2541"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a93e39c005ae0351b47a5fca8dcfad7e7" title=" " alt="" coords="545,1644,696,1685"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_queue_helper.html#a58ee6574a71096d5cc8507e43c4dbf89" title=" " alt="" coords="32,528,247,569"/>
+<area shape="rect" href="classns3_1_1_sat_stats_capacity_request_helper.html#ad825e6e241e914d780f51c66394c5b61" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="31,593,248,635"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_composite_sinr_helper.html#a5fff14abb245091589776ecf660fc5a8" title=" " alt="" coords="37,71,241,112"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_dev_delay_helper.html#ae97db4d8d39bb32499d1ba20654c6892" title=" " alt="" coords="40,136,239,177"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_mac_delay_helper.html#ace1c3b69fe78ce07e14b7fac2a2185a7" title=" " alt="" coords="40,201,239,243"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_phy_delay_helper.html#adcc7e7dc476bd81790156dfb75e8e932" title=" " alt="" coords="41,267,237,308"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_dev_jitter_helper.html#a96329770f0d68020361c3290d814daba" title=" " alt="" coords="44,332,235,373"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_mac_jitter_helper.html#a8a51abf39b231f15b37c5999502e1efc" title=" " alt="" coords="43,397,235,439"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_phy_jitter_helper.html#ae825846a06a307b2470e8eaf781f489c" title=" " alt="" coords="45,463,234,504"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_dev_link_delay_helper.html#a0c129a642385291e9480a3b141c563d9" title=" " alt="" coords="31,1488,248,1529"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_mac_link_delay_helper.html#aa1c86a3623928c6e58fe19614ff70e82" title=" " alt="" coords="30,1553,249,1595"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_phy_link_delay_helper.html#aa766fcb7f791fb3e176e0af22f16b3a7" title=" " alt="" coords="32,1619,247,1660"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_dev_link_jitter_helper.html#ae2bf5631c82d093473a7833aa63ecdc2" title=" " alt="" coords="31,1684,248,1725"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_mac_link_jitter_helper.html#a7eba8dbe2a39cb8ff4c000644bfb3443" title=" " alt="" coords="30,1749,249,1791"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_phy_link_jitter_helper.html#a95fbf63e4ec354a9e8144d5359683eed" title=" " alt="" coords="32,1815,247,1856"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_signalling_load_helper.html#a9e8ce076abeca4f0d313183e54f0505f" title=" " alt="" coords="36,1880,243,1921"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_dev_throughput_helper.html#a5a012c041e532c585df7554a1cfee1be" title=" " alt="" coords="7,1945,271,1987"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_mac_throughput_helper.html#a4c1fa10899e69eec22301b1cdd6d53e2" title=" " alt="" coords="7,2011,272,2052"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_phy_throughput_helper.html#ae037307197ee32ec292db0ffbec8bc3d" title=" " alt="" coords="8,2076,271,2117"/>
+<area shape="rect" href="classns3_1_1_sat_stats_resources_granted_helper.html#a4245f748f78cd1d89bfe5b4b0ab7d177" title=" " alt="" coords="26,2141,253,2183"/>
+<area shape="rect" href="classns3_1_1_sat_stats_packet_error_helper.html#ac652151c16b40ff575c6ea115daa3370" title="Set up several probes on a UT node and connect them to the collectors." alt="" coords="48,2207,231,2248"/>
+<area shape="rect" href="classns3_1_1_sat_stats_antenna_gain_helper.html#a607b81c576742bc49ac786dde1863baa" title="Set up several probes or other means of listeners and connect them to the collectors." alt="" coords="44,659,235,700"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rbdc_request_helper.html#a4181f06915819efd44f64dbfacaf7c3b" title="Set up several probes or other means of listeners and connect them to the collectors." alt="" coords="43,724,235,765"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_dev_delay_helper.html#a9b229054674649ad241987452edd7bbe" title="Change identifier used on probes, when handovers occur." alt="" coords="19,789,259,831"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_mac_delay_helper.html#a9b751984038838b01d6d236933589787" title="Change identifier used on probes, when handovers occur." alt="" coords="19,855,259,896"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_phy_delay_helper.html#a03f57cd43565e9e1ce371d2a8fed484d" title="Change identifier used on probes, when handovers occur." alt="" coords="19,920,259,961"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_dev_link_delay_helper.html#aba24a008a29fff259c8c927c06b5957a" title="Change identifier used on probes, when handovers occur." alt="" coords="22,986,257,1042"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_mac_link_delay_helper.html#a3f839e70c4b3eabcfc48445ac34e955c" title="Change identifier used on probes, when handovers occur." alt="" coords="22,1066,257,1122"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_phy_link_delay_helper.html#a97b536c33ff305fc7b974674a59236ad" title="Change identifier used on probes, when handovers occur." alt="" coords="22,1146,257,1202"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_plt_helper.html#a8376f02dd166bd5c9ec9502525581ca9" title="Change identifier used on probes, when handovers occur." alt="" coords="30,1227,249,1268"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_dev_throughput_helper.html#a95d2ae590969b5e8ef5b77672fa86b37" title="Change identifier used on probes, when handovers occur." alt="" coords="7,1292,271,1333"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_mac_throughput_helper.html#a94508be62807a965dd97e8120a543528" title="Change identifier used on probes, when handovers occur." alt="" coords="7,1357,272,1399"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_phy_throughput_helper.html#a025f48e8d94b2718001d4c00c787579a" title="Change identifier used on probes, when handovers occur." alt="" coords="8,1423,271,1464"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a3297c03ab2dc81c5467ba311cb948d21" title=" " alt="" coords="41,2272,238,2313"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_jitter_helper.html#a6ece45857a3593e0ae4a0a090fa4f0aa" title=" " alt="" coords="44,2337,235,2379"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_plt_helper.html#a30cfbf618edb0f2657d02440af0d12f4" title=" " alt="" coords="30,2403,249,2444"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_throughput_helper.html#a68f6878ea09836a284f13972bf22d709" title=" " alt="" coords="23,2468,256,2509"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_delay_helper.html#af181be6d8915c34385d5239ba02a5890" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="5,2533,273,2575"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_jitter_helper.html#a055d11687c5eb7a29554788dfabe0789" title=" " alt="" coords="5,2599,273,2640"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_plt_helper.html#a6b2d5afb33bd0a7200a4fc85c145f443" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="27,2664,252,2705"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_throughput_helper.html#aee0726beb70903dd932f341530c2b191" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="5,2729,273,2771"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_composite_sinr_helper.html#adb4d1c7364804a109b4fdced40d2b1a5" title="Change identifier used on probes, when handovers occur." alt="" coords="29,2795,250,2851"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a0705d12a6f7b9820b21e963af194ca08" title="Change identifier used on probes, when handovers occur." alt="" coords="19,2876,259,2917"/>
 </map>
 </div>
 
@@ -1637,11 +1647,11 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>UT user ID </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00376">376</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00414">414</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00303">m_macToUtUserIdMap</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00319">m_macToUtUserIdMap</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-helper_8cc_source.html#l00540">ns3::SatStatsHelper::GetUtUserId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-stats-helper_8cc_source.html#l00547">ns3::SatStatsHelper::GetUtUserId()</a>.</p>
 <div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-13-summary" class="dynsummary" style="display:block;">
@@ -1649,44 +1659,56 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-13-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_id_mapper_a440866ec6938c1b3a8dca8fafe980c65_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_id_mapper_a440866ec6938c1b3a8dca8fafe980c65_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_id_mapper_a440866ec6938c1b3a8dca8fafe980c65_icgraph" id="aclassns3_1_1_sat_id_mapper_a440866ec6938c1b3a8dca8fafe980c65_icgraph">
-<area shape="rect" title="Function for getting the UT user ID with MAC." alt="" coords="1055,1603,1265,1644"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#ae37e2e28674be92dcdfd00dbb03f3e2e" title=" " alt="" coords="856,1603,1007,1644"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a9db72a646e12ebb38af79b69a977c9e2" title="Create one collector instance for each identifier in the simulation." alt="" coords="597,757,808,799"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a3297c03ab2dc81c5467ba311cb948d21" title=" " alt="" coords="317,1508,514,1549"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_jitter_helper.html#a6ece45857a3593e0ae4a0a090fa4f0aa" title=" " alt="" coords="320,1573,511,1615"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_plt_helper.html#a30cfbf618edb0f2657d02440af0d12f4" title=" " alt="" coords="306,1639,525,1680"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_throughput_helper.html#a68f6878ea09836a284f13972bf22d709" title=" " alt="" coords="299,1965,532,2007"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a21ae6f0b83a6bac6f2df21a31d1d51ea" title=" " alt="" coords="615,1704,791,1745"/>
-<area shape="rect" href="classns3_1_1_sat_stats_antenna_gain_helper.html#affcde91173068ba4a194345f36eba087" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="320,71,511,112"/>
-<area shape="rect" href="classns3_1_1_sat_stats_carrier_id_helper.html#adca706a59eef2bfe7d6392d6276955ca" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="312,136,519,177"/>
-<area shape="rect" href="classns3_1_1_sat_stats_composite_sinr_helper.html#ac4163e0490c639eca97b6d527e4203de" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="314,201,517,243"/>
-<area shape="rect" href="classns3_1_1_sat_stats_delay_helper.html#a6c65f6af74e1994d756143f24924fa8b" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="321,267,509,308"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_link_scheduler_symbol_rate_helper.html#a2860e04cbb07f23427a48c47bbbfff67" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="303,332,528,373"/>
-<area shape="rect" href="classns3_1_1_sat_stats_jitter_helper.html#ae924bbaedb214ca571da7cf3f34bbd3f" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="325,397,506,439"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_delay_helper.html#ac4647634310da86b6c1ace59dd116cbd" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="308,463,523,504"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_jitter_helper.html#a6b5ce0e084912f09ef94b07f00698a1f" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="311,528,519,569"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_modcod_helper.html#a3c8f83bef8360eb3cee2c704a61aa054" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="301,593,529,635"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_rx_power_helper.html#a18ede0cf55eaa04a167fc99d5f4ba4ec" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="320,659,511,700"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_sinr_helper.html#aa3b3e559587c2db1137bf6b3fa82f5d7" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="314,724,517,765"/>
-<area shape="rect" href="classns3_1_1_sat_stats_marsala_correlation_helper.html#acab58a91471b817bdddf4e1cbe4ef6fc" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="300,789,531,831"/>
-<area shape="rect" href="classns3_1_1_sat_stats_feeder_packet_collision_helper.html#ac7fa450f3da1545b22feadf313cf55ea" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="319,855,512,896"/>
-<area shape="rect" href="classns3_1_1_sat_stats_user_packet_collision_helper.html#a7a265e985b08b2fa50d32763535f75b0" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="298,920,533,961"/>
-<area shape="rect" href="classns3_1_1_sat_stats_packet_drop_rate_helper.html#a5fe26e3f2b367e483e967f6943271b4f" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="310,985,521,1027"/>
-<area shape="rect" href="classns3_1_1_sat_stats_packet_error_helper.html#a2ffe1764a029ba4319e14bb2c8d0404b" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="325,1051,505,1092"/>
-<area shape="rect" href="classns3_1_1_sat_stats_plt_helper.html#a2446510a163cbfb863d63e84b364b5c2" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="332,1116,499,1157"/>
-<area shape="rect" href="classns3_1_1_sat_stats_queue_helper.html#a0f0bc900bdd80fbf743f6e056abaf640" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="319,1181,511,1223"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rbdc_request_helper.html#a0bad206f188f8dec4a1e881df9ecdab9" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="319,1247,511,1288"/>
-<area shape="rect" href="classns3_1_1_sat_stats_resources_granted_helper.html#a625db3d3914a4c86cc0aabab5e41cc62" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="302,1312,529,1353"/>
-<area shape="rect" href="classns3_1_1_sat_stats_satellite_queue_helper.html#a250f888988358596053f1991b352d91d" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="314,1377,517,1419"/>
-<area shape="rect" href="classns3_1_1_sat_stats_signalling_load_helper.html#a5fb3a6918068d4511c2fde20ca014654" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="314,1443,517,1484"/>
-<area shape="rect" href="classns3_1_1_sat_stats_throughput_helper.html#ae72a1a948473f308689d30e9d493e4f2" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="303,5,527,47"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_delay_helper.html#af181be6d8915c34385d5239ba02a5890" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="281,1769,549,1811"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_jitter_helper.html#a055d11687c5eb7a29554788dfabe0789" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="281,1835,549,1876"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_plt_helper.html#a6b2d5afb33bd0a7200a4fc85c145f443" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="303,1900,528,1941"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_throughput_helper.html#aee0726beb70903dd932f341530c2b191" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="281,1704,549,1745"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_delay_helper.html#a6927aa74525d63c7030973b65daaa815" title=" " alt="" coords="23,1769,215,1811"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_jitter_helper.html#a23f2c58d7dc6959e1d6ebde3fbc35115" title=" " alt="" coords="27,1835,212,1876"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_throughput_helper.html#ad1cbee997b0c11ad6ae3bb0d26814c2a" title=" " alt="" coords="5,1704,233,1745"/>
+<area shape="rect" title="Function for getting the UT user ID with MAC." alt="" coords="1019,1603,1229,1644"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#ae37e2e28674be92dcdfd00dbb03f3e2e" title=" " alt="" coords="820,1603,971,1644"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a9db72a646e12ebb38af79b69a977c9e2" title="Create one collector instance for each identifier in the simulation." alt="" coords="561,757,772,799"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a3297c03ab2dc81c5467ba311cb948d21" title=" " alt="" coords="281,1508,478,1549"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_jitter_helper.html#a6ece45857a3593e0ae4a0a090fa4f0aa" title=" " alt="" coords="284,1573,475,1615"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_plt_helper.html#a30cfbf618edb0f2657d02440af0d12f4" title=" " alt="" coords="270,1639,489,1680"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_throughput_helper.html#a68f6878ea09836a284f13972bf22d709" title=" " alt="" coords="263,1704,496,1745"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a21ae6f0b83a6bac6f2df21a31d1d51ea" title=" " alt="" coords="579,2148,755,2189"/>
+<area shape="rect" href="classns3_1_1_sat_stats_antenna_gain_helper.html#affcde91173068ba4a194345f36eba087" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="284,1116,475,1157"/>
+<area shape="rect" href="classns3_1_1_sat_stats_carrier_id_helper.html#adca706a59eef2bfe7d6392d6276955ca" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="276,1181,483,1223"/>
+<area shape="rect" href="classns3_1_1_sat_stats_composite_sinr_helper.html#ac4163e0490c639eca97b6d527e4203de" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="278,1247,481,1288"/>
+<area shape="rect" href="classns3_1_1_sat_stats_delay_helper.html#a6c65f6af74e1994d756143f24924fa8b" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="285,1312,473,1353"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_link_scheduler_symbol_rate_helper.html#a2860e04cbb07f23427a48c47bbbfff67" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="267,1377,492,1419"/>
+<area shape="rect" href="classns3_1_1_sat_stats_jitter_helper.html#ae924bbaedb214ca571da7cf3f34bbd3f" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="289,1443,470,1484"/>
+<area shape="rect" href="classns3_1_1_sat_stats_link_delay_helper.html#ac4647634310da86b6c1ace59dd116cbd" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="272,5,487,47"/>
+<area shape="rect" href="classns3_1_1_sat_stats_link_jitter_helper.html#a6b5ce0e084912f09ef94b07f00698a1f" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="275,71,483,112"/>
+<area shape="rect" href="classns3_1_1_sat_stats_link_modcod_helper.html#a3c8f83bef8360eb3cee2c704a61aa054" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="265,136,493,177"/>
+<area shape="rect" href="classns3_1_1_sat_stats_link_rx_power_helper.html#a18ede0cf55eaa04a167fc99d5f4ba4ec" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="284,201,475,243"/>
+<area shape="rect" href="classns3_1_1_sat_stats_link_sinr_helper.html#aa3b3e559587c2db1137bf6b3fa82f5d7" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="278,267,481,308"/>
+<area shape="rect" href="classns3_1_1_sat_stats_marsala_correlation_helper.html#acab58a91471b817bdddf4e1cbe4ef6fc" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="264,332,495,373"/>
+<area shape="rect" href="classns3_1_1_sat_stats_feeder_packet_collision_helper.html#ac7fa450f3da1545b22feadf313cf55ea" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="283,397,476,439"/>
+<area shape="rect" href="classns3_1_1_sat_stats_user_packet_collision_helper.html#a7a265e985b08b2fa50d32763535f75b0" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="262,463,497,504"/>
+<area shape="rect" href="classns3_1_1_sat_stats_packet_drop_rate_helper.html#a5fe26e3f2b367e483e967f6943271b4f" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="274,528,485,569"/>
+<area shape="rect" href="classns3_1_1_sat_stats_packet_error_helper.html#a2ffe1764a029ba4319e14bb2c8d0404b" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="289,593,469,635"/>
+<area shape="rect" href="classns3_1_1_sat_stats_plt_helper.html#a2446510a163cbfb863d63e84b364b5c2" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="296,659,463,700"/>
+<area shape="rect" href="classns3_1_1_sat_stats_queue_helper.html#a0f0bc900bdd80fbf743f6e056abaf640" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="283,724,475,765"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rbdc_request_helper.html#a0bad206f188f8dec4a1e881df9ecdab9" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="283,789,475,831"/>
+<area shape="rect" href="classns3_1_1_sat_stats_resources_granted_helper.html#a625db3d3914a4c86cc0aabab5e41cc62" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="266,855,493,896"/>
+<area shape="rect" href="classns3_1_1_sat_stats_satellite_queue_helper.html#a250f888988358596053f1991b352d91d" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="278,920,481,961"/>
+<area shape="rect" href="classns3_1_1_sat_stats_signalling_load_helper.html#a5fb3a6918068d4511c2fde20ca014654" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="278,985,481,1027"/>
+<area shape="rect" href="classns3_1_1_sat_stats_throughput_helper.html#ae72a1a948473f308689d30e9d493e4f2" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="267,1051,491,1092"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_delay_helper.html#af181be6d8915c34385d5239ba02a5890" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="245,2696,513,2737"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_jitter_helper.html#a055d11687c5eb7a29554788dfabe0789" title=" " alt="" coords="245,2761,513,2803"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_plt_helper.html#a6b2d5afb33bd0a7200a4fc85c145f443" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="267,2827,492,2868"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_throughput_helper.html#aee0726beb70903dd932f341530c2b191" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="245,2892,513,2933"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_composite_sinr_helper.html#adb4d1c7364804a109b4fdced40d2b1a5" title="Change identifier used on probes, when handovers occur." alt="" coords="269,1770,490,1826"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a0705d12a6f7b9820b21e963af194ca08" title="Change identifier used on probes, when handovers occur." alt="" coords="259,1851,499,1892"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_jitter_helper.html#a920571f6e26a37047093deeba4758747" title="Change identifier used on probes, when handovers occur." alt="" coords="259,1916,499,1957"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_dev_jitter_helper.html#a9a0f57944e28a8b913500f3bf6177668" title="Change identifier used on probes, when handovers occur." alt="" coords="259,1981,499,2023"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_mac_jitter_helper.html#a7b6c5899bc1b0dbbb0cd1fefe838b4a6" title="Change identifier used on probes, when handovers occur." alt="" coords="259,2047,499,2088"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_phy_jitter_helper.html#a8365afcb521cd18ddc944490addb4ff2" title="Change identifier used on probes, when handovers occur." alt="" coords="259,2112,499,2153"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_dev_link_jitter_helper.html#afbac185cdac04c03572cb389c33e3e68" title="Change identifier used on probes, when handovers occur." alt="" coords="266,2178,493,2234"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_mac_link_jitter_helper.html#acc3575d15c21fdc827239c25ec1df3fb" title="Change identifier used on probes, when handovers occur." alt="" coords="266,2258,493,2314"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_phy_link_jitter_helper.html#afc7dc0fd624294095b7cda9dd0df3ba8" title="Change identifier used on probes, when handovers occur." alt="" coords="266,2338,493,2394"/>
+<area shape="rect" href="classns3_1_1_sat_stats_packet_error_helper.html#a777972a7fdf663f1598aa9272a9552e1" title="Change identifier used on probes, when handovers occur." alt="" coords="259,2419,499,2460"/>
+<area shape="rect" href="classns3_1_1_sat_stats_resources_granted_helper.html#ae62166116ebdb73be526de3d0b714757" title="Change identifier used on probes, when handovers occur." alt="" coords="259,2484,499,2525"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_signalling_load_helper.html#aa55094470d5d0d7d1502b421723ec863" title="Change identifier used on probes, when handovers occur." alt="" coords="266,2550,493,2606"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_throughput_helper.html#af4a94402dd0d17e76ff8e24ddf958b12" title="Change identifier used on probes, when handovers occur." alt="" coords="259,2631,499,2672"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_delay_helper.html#a6927aa74525d63c7030973b65daaa815" title=" " alt="" coords="5,2696,197,2737"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_jitter_helper.html#a23f2c58d7dc6959e1d6ebde3fbc35115" title=" " alt="" coords="9,2761,194,2803"/>
 </map>
 </div>
 
@@ -1715,9 +1737,9 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>MAC address of the UT user node's subscriber network device, or an invalid address if such device is not found. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00597">597</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00635">635</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-helper_8cc_source.html#l00540">ns3::SatStatsHelper::GetUtUserId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-stats-helper_8cc_source.html#l00547">ns3::SatStatsHelper::GetUtUserId()</a>.</p>
 <div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-14-summary" class="dynsummary" style="display:block;">
@@ -1725,44 +1747,56 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-14-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_id_mapper_af5f2f1f6f9297b6481d4dce9fbd91ae5_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_id_mapper_af5f2f1f6f9297b6481d4dce9fbd91ae5_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_id_mapper_af5f2f1f6f9297b6481d4dce9fbd91ae5_icgraph" id="aclassns3_1_1_sat_id_mapper_af5f2f1f6f9297b6481d4dce9fbd91ae5_icgraph">
-<area shape="rect" title=" " alt="" coords="1055,1603,1265,1644"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#ae37e2e28674be92dcdfd00dbb03f3e2e" title=" " alt="" coords="856,1603,1007,1644"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a9db72a646e12ebb38af79b69a977c9e2" title="Create one collector instance for each identifier in the simulation." alt="" coords="597,757,808,799"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a3297c03ab2dc81c5467ba311cb948d21" title=" " alt="" coords="317,1508,514,1549"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_jitter_helper.html#a6ece45857a3593e0ae4a0a090fa4f0aa" title=" " alt="" coords="320,1573,511,1615"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_plt_helper.html#a30cfbf618edb0f2657d02440af0d12f4" title=" " alt="" coords="306,1639,525,1680"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_throughput_helper.html#a68f6878ea09836a284f13972bf22d709" title=" " alt="" coords="299,1965,532,2007"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a21ae6f0b83a6bac6f2df21a31d1d51ea" title=" " alt="" coords="615,1704,791,1745"/>
-<area shape="rect" href="classns3_1_1_sat_stats_antenna_gain_helper.html#affcde91173068ba4a194345f36eba087" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="320,71,511,112"/>
-<area shape="rect" href="classns3_1_1_sat_stats_carrier_id_helper.html#adca706a59eef2bfe7d6392d6276955ca" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="312,136,519,177"/>
-<area shape="rect" href="classns3_1_1_sat_stats_composite_sinr_helper.html#ac4163e0490c639eca97b6d527e4203de" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="314,201,517,243"/>
-<area shape="rect" href="classns3_1_1_sat_stats_delay_helper.html#a6c65f6af74e1994d756143f24924fa8b" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="321,267,509,308"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_link_scheduler_symbol_rate_helper.html#a2860e04cbb07f23427a48c47bbbfff67" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="303,332,528,373"/>
-<area shape="rect" href="classns3_1_1_sat_stats_jitter_helper.html#ae924bbaedb214ca571da7cf3f34bbd3f" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="325,397,506,439"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_delay_helper.html#ac4647634310da86b6c1ace59dd116cbd" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="308,463,523,504"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_jitter_helper.html#a6b5ce0e084912f09ef94b07f00698a1f" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="311,528,519,569"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_modcod_helper.html#a3c8f83bef8360eb3cee2c704a61aa054" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="301,593,529,635"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_rx_power_helper.html#a18ede0cf55eaa04a167fc99d5f4ba4ec" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="320,659,511,700"/>
-<area shape="rect" href="classns3_1_1_sat_stats_link_sinr_helper.html#aa3b3e559587c2db1137bf6b3fa82f5d7" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="314,724,517,765"/>
-<area shape="rect" href="classns3_1_1_sat_stats_marsala_correlation_helper.html#acab58a91471b817bdddf4e1cbe4ef6fc" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="300,789,531,831"/>
-<area shape="rect" href="classns3_1_1_sat_stats_feeder_packet_collision_helper.html#ac7fa450f3da1545b22feadf313cf55ea" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="319,855,512,896"/>
-<area shape="rect" href="classns3_1_1_sat_stats_user_packet_collision_helper.html#a7a265e985b08b2fa50d32763535f75b0" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="298,920,533,961"/>
-<area shape="rect" href="classns3_1_1_sat_stats_packet_drop_rate_helper.html#a5fe26e3f2b367e483e967f6943271b4f" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="310,985,521,1027"/>
-<area shape="rect" href="classns3_1_1_sat_stats_packet_error_helper.html#a2ffe1764a029ba4319e14bb2c8d0404b" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="325,1051,505,1092"/>
-<area shape="rect" href="classns3_1_1_sat_stats_plt_helper.html#a2446510a163cbfb863d63e84b364b5c2" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="332,1116,499,1157"/>
-<area shape="rect" href="classns3_1_1_sat_stats_queue_helper.html#a0f0bc900bdd80fbf743f6e056abaf640" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="319,1181,511,1223"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rbdc_request_helper.html#a0bad206f188f8dec4a1e881df9ecdab9" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="319,1247,511,1288"/>
-<area shape="rect" href="classns3_1_1_sat_stats_resources_granted_helper.html#a625db3d3914a4c86cc0aabab5e41cc62" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="302,1312,529,1353"/>
-<area shape="rect" href="classns3_1_1_sat_stats_satellite_queue_helper.html#a250f888988358596053f1991b352d91d" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="314,1377,517,1419"/>
-<area shape="rect" href="classns3_1_1_sat_stats_signalling_load_helper.html#a5fb3a6918068d4511c2fde20ca014654" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="314,1443,517,1484"/>
-<area shape="rect" href="classns3_1_1_sat_stats_throughput_helper.html#ae72a1a948473f308689d30e9d493e4f2" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="303,5,527,47"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_delay_helper.html#af181be6d8915c34385d5239ba02a5890" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="281,1769,549,1811"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_jitter_helper.html#a055d11687c5eb7a29554788dfabe0789" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="281,1835,549,1876"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_plt_helper.html#a6b2d5afb33bd0a7200a4fc85c145f443" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="303,1900,528,1941"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_throughput_helper.html#aee0726beb70903dd932f341530c2b191" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="281,1704,549,1745"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_delay_helper.html#a6927aa74525d63c7030973b65daaa815" title=" " alt="" coords="23,1769,215,1811"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_jitter_helper.html#a23f2c58d7dc6959e1d6ebde3fbc35115" title=" " alt="" coords="27,1835,212,1876"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_throughput_helper.html#ad1cbee997b0c11ad6ae3bb0d26814c2a" title=" " alt="" coords="5,1704,233,1745"/>
+<area shape="rect" title=" " alt="" coords="1019,1603,1229,1644"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#ae37e2e28674be92dcdfd00dbb03f3e2e" title=" " alt="" coords="820,1603,971,1644"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a9db72a646e12ebb38af79b69a977c9e2" title="Create one collector instance for each identifier in the simulation." alt="" coords="561,757,772,799"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a3297c03ab2dc81c5467ba311cb948d21" title=" " alt="" coords="281,1508,478,1549"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_jitter_helper.html#a6ece45857a3593e0ae4a0a090fa4f0aa" title=" " alt="" coords="284,1573,475,1615"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_plt_helper.html#a30cfbf618edb0f2657d02440af0d12f4" title=" " alt="" coords="270,1639,489,1680"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_throughput_helper.html#a68f6878ea09836a284f13972bf22d709" title=" " alt="" coords="263,1704,496,1745"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a21ae6f0b83a6bac6f2df21a31d1d51ea" title=" " alt="" coords="579,2148,755,2189"/>
+<area shape="rect" href="classns3_1_1_sat_stats_antenna_gain_helper.html#affcde91173068ba4a194345f36eba087" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="284,1116,475,1157"/>
+<area shape="rect" href="classns3_1_1_sat_stats_carrier_id_helper.html#adca706a59eef2bfe7d6392d6276955ca" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="276,1181,483,1223"/>
+<area shape="rect" href="classns3_1_1_sat_stats_composite_sinr_helper.html#ac4163e0490c639eca97b6d527e4203de" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="278,1247,481,1288"/>
+<area shape="rect" href="classns3_1_1_sat_stats_delay_helper.html#a6c65f6af74e1994d756143f24924fa8b" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="285,1312,473,1353"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_link_scheduler_symbol_rate_helper.html#a2860e04cbb07f23427a48c47bbbfff67" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="267,1377,492,1419"/>
+<area shape="rect" href="classns3_1_1_sat_stats_jitter_helper.html#ae924bbaedb214ca571da7cf3f34bbd3f" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="289,1443,470,1484"/>
+<area shape="rect" href="classns3_1_1_sat_stats_link_delay_helper.html#ac4647634310da86b6c1ace59dd116cbd" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="272,5,487,47"/>
+<area shape="rect" href="classns3_1_1_sat_stats_link_jitter_helper.html#a6b5ce0e084912f09ef94b07f00698a1f" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="275,71,483,112"/>
+<area shape="rect" href="classns3_1_1_sat_stats_link_modcod_helper.html#a3c8f83bef8360eb3cee2c704a61aa054" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="265,136,493,177"/>
+<area shape="rect" href="classns3_1_1_sat_stats_link_rx_power_helper.html#a18ede0cf55eaa04a167fc99d5f4ba4ec" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="284,201,475,243"/>
+<area shape="rect" href="classns3_1_1_sat_stats_link_sinr_helper.html#aa3b3e559587c2db1137bf6b3fa82f5d7" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="278,267,481,308"/>
+<area shape="rect" href="classns3_1_1_sat_stats_marsala_correlation_helper.html#acab58a91471b817bdddf4e1cbe4ef6fc" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="264,332,495,373"/>
+<area shape="rect" href="classns3_1_1_sat_stats_feeder_packet_collision_helper.html#ac7fa450f3da1545b22feadf313cf55ea" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="283,397,476,439"/>
+<area shape="rect" href="classns3_1_1_sat_stats_user_packet_collision_helper.html#a7a265e985b08b2fa50d32763535f75b0" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="262,463,497,504"/>
+<area shape="rect" href="classns3_1_1_sat_stats_packet_drop_rate_helper.html#a5fe26e3f2b367e483e967f6943271b4f" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="274,528,485,569"/>
+<area shape="rect" href="classns3_1_1_sat_stats_packet_error_helper.html#a2ffe1764a029ba4319e14bb2c8d0404b" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="289,593,469,635"/>
+<area shape="rect" href="classns3_1_1_sat_stats_plt_helper.html#a2446510a163cbfb863d63e84b364b5c2" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="296,659,463,700"/>
+<area shape="rect" href="classns3_1_1_sat_stats_queue_helper.html#a0f0bc900bdd80fbf743f6e056abaf640" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="283,724,475,765"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rbdc_request_helper.html#a0bad206f188f8dec4a1e881df9ecdab9" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="283,789,475,831"/>
+<area shape="rect" href="classns3_1_1_sat_stats_resources_granted_helper.html#a625db3d3914a4c86cc0aabab5e41cc62" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="266,855,493,896"/>
+<area shape="rect" href="classns3_1_1_sat_stats_satellite_queue_helper.html#a250f888988358596053f1991b352d91d" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="278,920,481,961"/>
+<area shape="rect" href="classns3_1_1_sat_stats_signalling_load_helper.html#a5fb3a6918068d4511c2fde20ca014654" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="278,985,481,1027"/>
+<area shape="rect" href="classns3_1_1_sat_stats_throughput_helper.html#ae72a1a948473f308689d30e9d493e4f2" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="267,1051,491,1092"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_delay_helper.html#af181be6d8915c34385d5239ba02a5890" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="245,2696,513,2737"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_jitter_helper.html#a055d11687c5eb7a29554788dfabe0789" title=" " alt="" coords="245,2761,513,2803"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_plt_helper.html#a6b2d5afb33bd0a7200a4fc85c145f443" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="267,2827,492,2868"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_throughput_helper.html#aee0726beb70903dd932f341530c2b191" title="Save the IPv4 address and the proper identifier from the given UT user node." alt="" coords="245,2892,513,2933"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_composite_sinr_helper.html#adb4d1c7364804a109b4fdced40d2b1a5" title="Change identifier used on probes, when handovers occur." alt="" coords="269,1770,490,1826"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a0705d12a6f7b9820b21e963af194ca08" title="Change identifier used on probes, when handovers occur." alt="" coords="259,1851,499,1892"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_jitter_helper.html#a920571f6e26a37047093deeba4758747" title="Change identifier used on probes, when handovers occur." alt="" coords="259,1916,499,1957"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_dev_jitter_helper.html#a9a0f57944e28a8b913500f3bf6177668" title="Change identifier used on probes, when handovers occur." alt="" coords="259,1981,499,2023"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_mac_jitter_helper.html#a7b6c5899bc1b0dbbb0cd1fefe838b4a6" title="Change identifier used on probes, when handovers occur." alt="" coords="259,2047,499,2088"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_phy_jitter_helper.html#a8365afcb521cd18ddc944490addb4ff2" title="Change identifier used on probes, when handovers occur." alt="" coords="259,2112,499,2153"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_dev_link_jitter_helper.html#afbac185cdac04c03572cb389c33e3e68" title="Change identifier used on probes, when handovers occur." alt="" coords="266,2178,493,2234"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_mac_link_jitter_helper.html#acc3575d15c21fdc827239c25ec1df3fb" title="Change identifier used on probes, when handovers occur." alt="" coords="266,2258,493,2314"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_user_phy_link_jitter_helper.html#afc7dc0fd624294095b7cda9dd0df3ba8" title="Change identifier used on probes, when handovers occur." alt="" coords="266,2338,493,2394"/>
+<area shape="rect" href="classns3_1_1_sat_stats_packet_error_helper.html#a777972a7fdf663f1598aa9272a9552e1" title="Change identifier used on probes, when handovers occur." alt="" coords="259,2419,499,2460"/>
+<area shape="rect" href="classns3_1_1_sat_stats_resources_granted_helper.html#ae62166116ebdb73be526de3d0b714757" title="Change identifier used on probes, when handovers occur." alt="" coords="259,2484,499,2525"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_signalling_load_helper.html#aa55094470d5d0d7d1502b421723ec863" title="Change identifier used on probes, when handovers occur." alt="" coords="266,2550,493,2606"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_throughput_helper.html#af4a94402dd0d17e76ff8e24ddf958b12" title="Change identifier used on probes, when handovers occur." alt="" coords="259,2631,499,2672"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_delay_helper.html#a6927aa74525d63c7030973b65daaa815" title=" " alt="" coords="5,2696,197,2737"/>
+<area shape="rect" href="classns3_1_1_sat_stats_rtn_app_jitter_helper.html#a23f2c58d7dc6959e1d6ebde3fbc35115" title=" " alt="" coords="9,2761,194,2803"/>
 </map>
 </div>
 
@@ -1785,11 +1819,11 @@ Private Attributes</h2></td></tr>
 
 <p>Function for printing out the trace map. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00699">699</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00737">737</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8cc_source.html#l00629">GetMacInfo()</a>, and <a class="el" href="satellite-id-mapper_8h_source.html#l00293">m_macToTraceIdMap</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8cc_source.html#l00667">GetMacInfo()</a>, and <a class="el" href="satellite-id-mapper_8h_source.html#l00309">m_macToTraceIdMap</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00075">Reset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00079">Reset()</a>.</p>
 <div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-15-summary" class="dynsummary" style="display:block;">
@@ -1841,9 +1875,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00331">331</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00335">335</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00338">m_macToSatIdIslMap</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00359">m_macToSatIdIslMap</a>.</p>
 
 </div>
 </div>
@@ -1864,11 +1898,11 @@ Private Attributes</h2></td></tr>
 
 <p>Function for resetting the variables. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00075">75</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00079">79</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00333">m_enableMapPrint</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00288">m_gwUserIdIndex</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00313">m_macToBeamIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00318">m_macToGroupIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00323">m_macToGwIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00328">m_macToGwUserIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00338">m_macToSatIdIslMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00308">m_macToSatIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00293">m_macToTraceIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00298">m_macToUtIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00303">m_macToUtUserIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00273">m_traceIdIndex</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00278">m_utIdIndex</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00283">m_utUserIdIndex</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00699">PrintTraceMap()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00354">m_enableMapPrint</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00304">m_gwUserIdIndex</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00329">m_macToBeamIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00334">m_macToGroupIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00339">m_macToGwIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00344">m_macToGwUserIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00359">m_macToSatIdIslMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00324">m_macToSatIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00309">m_macToTraceIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00314">m_macToUtIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00319">m_macToUtUserIdMap</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00289">m_traceIdIndex</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00294">m_utIdIndex</a>, <a class="el" href="satellite-id-mapper_8h_source.html#l00299">m_utUserIdIndex</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00737">PrintTraceMap()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00057">~SatIdMapper()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00065">DoDispose()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00061">~SatIdMapper()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00069">DoDispose()</a>.</p>
 <div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-17-summary" class="dynsummary" style="display:block;">
@@ -1913,9 +1947,91 @@ Private Attributes</h2></td></tr>
 
 <p>Print the map GW/UT address to satellite ID. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00155">155</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00159">159</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00338">m_macToSatIdIslMap</a>.</p>
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00359">m_macToSatIdIslMap</a>.</p>
+
+</div>
+</div>
+<a id="aceaf2758af05021fffa6c9f7753eb10c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceaf2758af05021fffa6c9f7753eb10c">&#9670;&nbsp;</a></span>UpdateMacToBeamId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ns3::SatIdMapper::UpdateMacToBeamId </td>
+          <td>(</td>
+          <td class="paramtype">Address&#160;</td>
+          <td class="paramname"><em>mac</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>beamId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update MAC address to the beam ID maps. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mac</td><td>MAC address </td></tr>
+    <tr><td class="paramname">beamId</td><td>beam ID </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00365">365</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00329">m_macToBeamIdMap</a>.</p>
+
+</div>
+</div>
+<a id="a35d9d5bb62c56f6fcbf9aa04aa1ad87a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35d9d5bb62c56f6fcbf9aa04aa1ad87a">&#9670;&nbsp;</a></span>UpdateMacToSatId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ns3::SatIdMapper::UpdateMacToSatId </td>
+          <td>(</td>
+          <td class="paramtype">Address&#160;</td>
+          <td class="paramname"><em>mac</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>satId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update MAC address to the SAT ID maps. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mac</td><td>MAC address </td></tr>
+    <tr><td class="paramname">satId</td><td>satellite ID </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8cc_source.html#l00348">348</a> of file <a class="el" href="satellite-id-mapper_8cc_source.html">satellite-id-mapper.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="satellite-id-mapper_8h_source.html#l00324">m_macToSatIdMap</a>.</p>
 
 </div>
 </div>
@@ -1942,9 +2058,9 @@ Private Attributes</h2></td></tr>
 
 <p>Is map printing enabled or not. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00333">333</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00354">354</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8h_source.html#l00264">EnableMapPrint()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00075">Reset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8h_source.html#l00280">EnableMapPrint()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00079">Reset()</a>.</p>
 
 </div>
 </div>
@@ -1970,9 +2086,9 @@ Private Attributes</h2></td></tr>
 
 <p>Running GW user index number. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00288">288</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00304">304</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00295">AttachMacToGwUserId()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00075">Reset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00299">AttachMacToGwUserId()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00079">Reset()</a>.</p>
 
 </div>
 </div>
@@ -1998,9 +2114,9 @@ Private Attributes</h2></td></tr>
 
 <p>Map for MAC to beam ID conversion. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00313">313</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00329">329</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00247">AttachMacToBeamId()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00406">GetBeamIdWithMac()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00629">GetMacInfo()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00075">Reset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00251">AttachMacToBeamId()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00444">GetBeamIdWithMac()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00667">GetMacInfo()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00079">Reset()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00365">UpdateMacToBeamId()</a>.</p>
 
 </div>
 </div>
@@ -2026,9 +2142,9 @@ Private Attributes</h2></td></tr>
 
 <p>Map for MAC to group ID conversion. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00318">318</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00334">334</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00263">AttachMacToGroupId()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00421">GetGroupIdWithMac()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00629">GetMacInfo()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00075">Reset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00267">AttachMacToGroupId()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00459">GetGroupIdWithMac()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00667">GetMacInfo()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00079">Reset()</a>.</p>
 
 </div>
 </div>
@@ -2054,9 +2170,9 @@ Private Attributes</h2></td></tr>
 
 <p>Map for MAC to GW ID conversion. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00323">323</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00339">339</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00279">AttachMacToGwId()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00436">GetGwIdWithMac()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00629">GetMacInfo()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00075">Reset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00283">AttachMacToGwId()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00474">GetGwIdWithMac()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00667">GetMacInfo()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00079">Reset()</a>.</p>
 
 </div>
 </div>
@@ -2082,9 +2198,9 @@ Private Attributes</h2></td></tr>
 
 <p>Map for MAC to GW user ID conversion. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00328">328</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00344">344</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00295">AttachMacToGwUserId()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00451">GetGwUserIdWithMac()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00075">Reset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00299">AttachMacToGwUserId()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00489">GetGwUserIdWithMac()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00079">Reset()</a>.</p>
 
 </div>
 </div>
@@ -2110,9 +2226,9 @@ Private Attributes</h2></td></tr>
 
 <p>Map for GW/UT MAC to associated SAT ID conversion. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00338">338</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00359">359</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00315">AttachMacToSatIdIsl()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00466">GetSatIdWithMacIsl()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00331">RemoveMacToSatIdIsl()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00075">Reset()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00155">ShowIslMap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00319">AttachMacToSatIdIsl()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00504">GetSatIdWithMacIsl()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00335">RemoveMacToSatIdIsl()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00079">Reset()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00159">ShowIslMap()</a>.</p>
 
 </div>
 </div>
@@ -2138,9 +2254,9 @@ Private Attributes</h2></td></tr>
 
 <p>Map for MAC to SAT ID conversion. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00308">308</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00324">324</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00231">AttachMacToSatId()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00629">GetMacInfo()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00391">GetSatIdWithMac()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00075">Reset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00235">AttachMacToSatId()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00667">GetMacInfo()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00429">GetSatIdWithMac()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00079">Reset()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00348">UpdateMacToSatId()</a>.</p>
 
 </div>
 </div>
@@ -2166,9 +2282,9 @@ Private Attributes</h2></td></tr>
 
 <p>Map for MAC to trace ID conversion. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00293">293</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00309">309</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00169">AttachMacToTraceId()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00629">GetMacInfo()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00346">GetTraceIdWithMac()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00699">PrintTraceMap()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00075">Reset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00173">AttachMacToTraceId()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00667">GetMacInfo()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00384">GetTraceIdWithMac()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00737">PrintTraceMap()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00079">Reset()</a>.</p>
 
 </div>
 </div>
@@ -2194,9 +2310,9 @@ Private Attributes</h2></td></tr>
 
 <p>Map for MAC to UT ID conversion. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00298">298</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00314">314</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00191">AttachMacToUtId()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00629">GetMacInfo()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00361">GetUtIdWithMac()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00075">Reset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00195">AttachMacToUtId()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00667">GetMacInfo()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00399">GetUtIdWithMac()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00079">Reset()</a>.</p>
 
 </div>
 </div>
@@ -2222,9 +2338,9 @@ Private Attributes</h2></td></tr>
 
 <p>Map for MAC to UT user ID conversion. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00303">303</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00319">319</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00211">AttachMacToUtUserId()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00376">GetUtUserIdWithMac()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00075">Reset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00215">AttachMacToUtUserId()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00414">GetUtUserIdWithMac()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00079">Reset()</a>.</p>
 
 </div>
 </div>
@@ -2250,9 +2366,9 @@ Private Attributes</h2></td></tr>
 
 <p>Running trace index number. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00273">273</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00289">289</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00169">AttachMacToTraceId()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00075">Reset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00173">AttachMacToTraceId()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00079">Reset()</a>.</p>
 
 </div>
 </div>
@@ -2278,9 +2394,35 @@ Private Attributes</h2></td></tr>
 
 <p>Running UT index number. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00278">278</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00294">294</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00191">AttachMacToUtId()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00075">Reset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00195">AttachMacToUtId()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00079">Reset()</a>.</p>
+
+</div>
+</div>
+<a id="ab4f1e10a2760d597d9d917942b6e0d94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4f1e10a2760d597d9d917942b6e0d94">&#9670;&nbsp;</a></span>m_utNodeToGwAddressMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;Ptr&lt;Node&gt;, Address&gt; ns3::SatIdMapper::m_utNodeToGwAddressMap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Map between UT nodes and GW address. </p>
+
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00349">349</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
 
 </div>
 </div>
@@ -2306,9 +2448,9 @@ Private Attributes</h2></td></tr>
 
 <p>Running UT user index number. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00283">283</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-id-mapper_8h_source.html#l00299">299</a> of file <a class="el" href="satellite-id-mapper_8h_source.html">satellite-id-mapper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00211">AttachMacToUtUserId()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00075">Reset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-id-mapper_8cc_source.html#l00215">AttachMacToUtUserId()</a>, and <a class="el" href="satellite-id-mapper_8cc_source.html#l00079">Reset()</a>.</p>
 
 </div>
 </div>

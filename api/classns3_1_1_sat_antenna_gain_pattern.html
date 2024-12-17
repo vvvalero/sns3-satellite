@@ -182,6 +182,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a39a98dd1be466c964625af3ad6dac908"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_antenna_gain_pattern.html#a39a98dd1be466c964625af3ad6dac908">GetAntennaGain_lin</a> (<a class="el" href="classns3_1_1_geo_coordinate.html">GeoCoordinate</a> coord, Ptr&lt; <a class="el" href="classns3_1_1_sat_mobility_model.html">SatMobilityModel</a> &gt; mobility) const</td></tr>
 <tr class="memdesc:a39a98dd1be466c964625af3ad6dac908"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the antenna gain value for a certain {latitude, longitude} point.  <a href="classns3_1_1_sat_antenna_gain_pattern.html#a39a98dd1be466c964625af3ad6dac908">More...</a><br /></td></tr>
 <tr class="separator:a39a98dd1be466c964625af3ad6dac908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91855825f274df18519bc5d43845f501"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_antenna_gain_pattern.html#a91855825f274df18519bc5d43845f501">GetCenterLatitude</a> (Ptr&lt; <a class="el" href="classns3_1_1_sat_mobility_model.html">SatMobilityModel</a> &gt; mobility) const</td></tr>
+<tr class="memdesc:a91855825f274df18519bc5d43845f501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get latitude of this beam with best gain, based on satellite given in mobility model.  <a href="classns3_1_1_sat_antenna_gain_pattern.html#a91855825f274df18519bc5d43845f501">More...</a><br /></td></tr>
+<tr class="separator:a91855825f274df18519bc5d43845f501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ee8d1ab09e9eacc9568dd075e4e4bc6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_antenna_gain_pattern.html#a0ee8d1ab09e9eacc9568dd075e4e4bc6">GetCenterLongitude</a> (Ptr&lt; <a class="el" href="classns3_1_1_sat_mobility_model.html">SatMobilityModel</a> &gt; mobility) const</td></tr>
+<tr class="memdesc:a0ee8d1ab09e9eacc9568dd075e4e4bc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get latitude of this beam with best gain, based on satellite given in mobility model.  <a href="classns3_1_1_sat_antenna_gain_pattern.html#a0ee8d1ab09e9eacc9568dd075e4e4bc6">More...</a><br /></td></tr>
+<tr class="separator:a0ee8d1ab09e9eacc9568dd075e4e4bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e60b22ed020e89e88d659c7dc1299b9"><td class="memItemLeft" align="right" valign="top">virtual TypeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_antenna_gain_pattern.html#a0e60b22ed020e89e88d659c7dc1299b9">GetInstanceTypeId</a> (void) const</td></tr>
 <tr class="memdesc:a0e60b22ed020e89e88d659c7dc1299b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type ID of instance.  <a href="classns3_1_1_sat_antenna_gain_pattern.html#a0e60b22ed020e89e88d659c7dc1299b9">More...</a><br /></td></tr>
 <tr class="separator:a0e60b22ed020e89e88d659c7dc1299b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,6 +217,12 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:aee537ef4d8fdfabbbb50f1ed6d5d221e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_antenna_gain_pattern.html#aee537ef4d8fdfabbbb50f1ed6d5d221e">m_antennaPattern</a></td></tr>
 <tr class="memdesc:aee537ef4d8fdfabbbb50f1ed6d5d221e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container for the antenna pattern from one spot-beam.  <a href="classns3_1_1_sat_antenna_gain_pattern.html#aee537ef4d8fdfabbbb50f1ed6d5d221e">More...</a><br /></td></tr>
 <tr class="separator:aee537ef4d8fdfabbbb50f1ed6d5d221e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a096057d1ac586807abf24da5dbfe0c23"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_antenna_gain_pattern.html#a096057d1ac586807abf24da5dbfe0c23">m_centerLatitude</a></td></tr>
+<tr class="memdesc:a096057d1ac586807abf24da5dbfe0c23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Latitude with best gain.  <a href="classns3_1_1_sat_antenna_gain_pattern.html#a096057d1ac586807abf24da5dbfe0c23">More...</a><br /></td></tr>
+<tr class="separator:a096057d1ac586807abf24da5dbfe0c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ccc1083496641fc9dd47ce3bfa0fca4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_antenna_gain_pattern.html#a5ccc1083496641fc9dd47ce3bfa0fca4">m_centerLongitude</a></td></tr>
+<tr class="memdesc:a5ccc1083496641fc9dd47ce3bfa0fca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Longitude with best gain.  <a href="classns3_1_1_sat_antenna_gain_pattern.html#a5ccc1083496641fc9dd47ce3bfa0fca4">More...</a><br /></td></tr>
+<tr class="separator:a5ccc1083496641fc9dd47ce3bfa0fca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abca482239785afd4fe9104d9dbfdeaa6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_antenna_gain_pattern.html#abca482239785afd4fe9104d9dbfdeaa6">m_latDefaultSatellite</a></td></tr>
 <tr class="memdesc:abca482239785afd4fe9104d9dbfdeaa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Latitude of default satellite for antenna gain pattern.  <a href="classns3_1_1_sat_antenna_gain_pattern.html#abca482239785afd4fe9104d9dbfdeaa6">More...</a><br /></td></tr>
 <tr class="separator:abca482239785afd4fe9104d9dbfdeaa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -265,7 +277,7 @@ Static Private Attributes</h2></td></tr>
 <p>Antenna gain patter is used also for spot-beam selection. In initialization phase a valid positions list is constructed based on a minimum accepted antenna gain set as an attribute. This approach is selected to speed up the random UT positioning.</p>
 <p>Antenna gain value for a given longitude and latitude position is calculated by using 4-point bilinear interpolation. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00053">53</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00055">55</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1a16ff01999c055c92be5c1b69ee109f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1a16ff01999c055c92be5c1b69ee109f">&#9670;&nbsp;</a></span>SatAntennaGainPattern() <span class="overload">[1/2]</span></h2>
@@ -284,7 +296,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Default constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00062">62</a> of file <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html">satellite-antenna-gain-pattern.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00070">70</a> of file <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html">satellite-antenna-gain-pattern.cc</a>.</p>
 
 </div>
 </div>
@@ -323,9 +335,9 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00082">82</a> of file <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html">satellite-antenna-gain-pattern.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00090">90</a> of file <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html">satellite-antenna-gain-pattern.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="geo-coordinate_8cc_source.html#l00193">ns3::GeoCoordinate::GetLatitude()</a>, <a class="el" href="geo-coordinate_8cc_source.html#l00186">ns3::GeoCoordinate::GetLongitude()</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00187">m_latDefaultSatellite</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00192">m_lonDefaultSatellite</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00142">m_uniformRandomVariable</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00100">ReadAntennaPatternFromFile()</a>.</p>
+<p class="reference">References <a class="el" href="geo-coordinate_8cc_source.html#l00197">ns3::GeoCoordinate::GetLatitude()</a>, <a class="el" href="geo-coordinate_8cc_source.html#l00190">ns3::GeoCoordinate::GetLongitude()</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00215">m_latDefaultSatellite</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00220">m_lonDefaultSatellite</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00160">m_uniformRandomVariable</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00108">ReadAntennaPatternFromFile()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -365,7 +377,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00080">80</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00082">82</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
 
 </div>
 </div>
@@ -406,11 +418,11 @@ Static Private Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The gain value in linear format </dd></dl>
 <p>4-point bilinear interpolation R(x, y1) = (x2 - x)/(x2 - x1) * Q(x1, y1)) + (x - x1)/(x2 - x1) * Q(x2, y1); R(x, y2) = (x2 - x)/(x2 - x1) * Q(x1, y2)) + (x - x1)/(x2 - x1) * Q(x2, y2); R = (y2 - y)/(y2 - y1) * R(x, y1) + (y - y1)/(y2 - y1) * R(x, y2);</p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00329">329</a> of file <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html">satellite-antenna-gain-pattern.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00380">380</a> of file <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html">satellite-antenna-gain-pattern.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-utils_8h_source.html#l00147">ns3::SatUtils::DbToLinear()</a>, <a class="el" href="geo-coordinate_8cc_source.html#l00193">ns3::GeoCoordinate::GetLatitude()</a>, <a class="el" href="geo-coordinate_8cc_source.html#l00186">ns3::GeoCoordinate::GetLongitude()</a>, <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00231">GetSatelliteOffset()</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00124">m_antennaPattern</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00177">m_latInterval</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00147">m_latitudes</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00152">m_longitudes</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00182">m_lonInterval</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00167">m_maxLat</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00172">m_maxLon</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00157">m_minLat</a>, and <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00162">m_minLon</a>.</p>
+<p class="reference">References <a class="el" href="satellite-utils_8h_source.html#l00151">ns3::SatUtils::DbToLinear()</a>, <a class="el" href="geo-coordinate_8cc_source.html#l00197">ns3::GeoCoordinate::GetLatitude()</a>, <a class="el" href="geo-coordinate_8cc_source.html#l00190">ns3::GeoCoordinate::GetLongitude()</a>, <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00248">GetSatelliteOffset()</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00142">m_antennaPattern</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00205">m_latInterval</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00165">m_latitudes</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00170">m_longitudes</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00210">m_lonInterval</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00195">m_maxLat</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00200">m_maxLon</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00185">m_minLat</a>, and <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00190">m_minLon</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00317">IsValidPosition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00368">IsValidPosition()</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -434,6 +446,90 @@ Static Private Attributes</h2></td></tr>
 <map name="aclassns3_1_1_sat_antenna_gain_pattern_a39a98dd1be466c964625af3ad6dac908_icgraph" id="aclassns3_1_1_sat_antenna_gain_pattern_a39a98dd1be466c964625af3ad6dac908_icgraph">
 <area shape="rect" title="Calculate the antenna gain value for a certain {latitude, longitude} point." alt="" coords="257,5,461,47"/>
 <area shape="rect" href="classns3_1_1_sat_antenna_gain_pattern.html#a900fceb7d85badec398a890441d9e171" title="Check if a given position is under this spot&#45;beam coverage." alt="" coords="5,5,209,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a91855825f274df18519bc5d43845f501"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91855825f274df18519bc5d43845f501">&#9670;&nbsp;</a></span>GetCenterLatitude()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ns3::SatAntennaGainPattern::GetCenterLatitude </td>
+          <td>(</td>
+          <td class="paramtype">Ptr&lt; <a class="el" href="classns3_1_1_sat_mobility_model.html">SatMobilityModel</a> &gt;&#160;</td>
+          <td class="paramname"><em>mobility</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get latitude of this beam with best gain, based on satellite given in mobility model. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mobility</td><td>The mobility model of the associated satellite </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Latitude with best gain. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00270">270</a> of file <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html">satellite-antenna-gain-pattern.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="geo-coordinate_8cc_source.html#l00197">ns3::GeoCoordinate::GetLatitude()</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00175">m_centerLatitude</a>, and <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00215">m_latDefaultSatellite</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classns3_1_1_sat_antenna_gain_pattern_a91855825f274df18519bc5d43845f501_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_antenna_gain_pattern_a91855825f274df18519bc5d43845f501_cgraph" alt=""/></div>
+<map name="aclassns3_1_1_sat_antenna_gain_pattern_a91855825f274df18519bc5d43845f501_cgraph" id="aclassns3_1_1_sat_antenna_gain_pattern_a91855825f274df18519bc5d43845f501_cgraph">
+<area shape="rect" title="Get latitude of this beam with best gain, based on satellite given in mobility model." alt="" coords="5,5,209,47"/>
+<area shape="rect" href="classns3_1_1_geo_coordinate.html#a59603e335f58c0ce2b03abee2739ffcd" title="Gets latitude value of coordinate." alt="" coords="257,5,408,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0ee8d1ab09e9eacc9568dd075e4e4bc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ee8d1ab09e9eacc9568dd075e4e4bc6">&#9670;&nbsp;</a></span>GetCenterLongitude()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ns3::SatAntennaGainPattern::GetCenterLongitude </td>
+          <td>(</td>
+          <td class="paramtype">Ptr&lt; <a class="el" href="classns3_1_1_sat_mobility_model.html">SatMobilityModel</a> &gt;&#160;</td>
+          <td class="paramname"><em>mobility</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get latitude of this beam with best gain, based on satellite given in mobility model. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mobility</td><td>The mobility model of the associated satellite </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Longitude with best gain. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00287">287</a> of file <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html">satellite-antenna-gain-pattern.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="geo-coordinate_8cc_source.html#l00190">ns3::GeoCoordinate::GetLongitude()</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00180">m_centerLongitude</a>, and <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00220">m_lonDefaultSatellite</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classns3_1_1_sat_antenna_gain_pattern_a0ee8d1ab09e9eacc9568dd075e4e4bc6_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_antenna_gain_pattern_a0ee8d1ab09e9eacc9568dd075e4e4bc6_cgraph" alt=""/></div>
+<map name="aclassns3_1_1_sat_antenna_gain_pattern_a0ee8d1ab09e9eacc9568dd075e4e4bc6_cgraph" id="aclassns3_1_1_sat_antenna_gain_pattern_a0ee8d1ab09e9eacc9568dd075e4e4bc6_cgraph">
+<area shape="rect" title="Get latitude of this beam with best gain, based on satellite given in mobility model." alt="" coords="5,5,209,47"/>
+<area shape="rect" href="classns3_1_1_geo_coordinate.html#a9e08204255850f048fef7eea44602c1d" title="Gets longitude value of coordinate." alt="" coords="257,5,408,47"/>
 </map>
 </div>
 
@@ -466,14 +562,14 @@ Static Private Attributes</h2></td></tr>
 <p>Get the type ID of instance. </p>
 <dl class="section return"><dt>Returns</dt><dd>the object TypeId </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00057">57</a> of file <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html">satellite-antenna-gain-pattern.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00065">65</a> of file <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html">satellite-antenna-gain-pattern.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00041">GetTypeId()</a>.</p>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00049">GetTypeId()</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_antenna_gain_pattern_a0e60b22ed020e89e88d659c7dc1299b9_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_antenna_gain_pattern_a0e60b22ed020e89e88d659c7dc1299b9_cgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_antenna_gain_pattern_a0e60b22ed020e89e88d659c7dc1299b9_cgraph" id="aclassns3_1_1_sat_antenna_gain_pattern_a0e60b22ed020e89e88d659c7dc1299b9_cgraph">
 <area shape="rect" title="Get the type ID of instance." alt="" coords="5,5,209,47"/>
@@ -515,16 +611,16 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00231">231</a> of file <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html">satellite-antenna-gain-pattern.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00248">248</a> of file <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html">satellite-antenna-gain-pattern.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="geo-coordinate_8cc_source.html#l00193">ns3::GeoCoordinate::GetLatitude()</a>, <a class="el" href="geo-coordinate_8cc_source.html#l00186">ns3::GeoCoordinate::GetLongitude()</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00187">m_latDefaultSatellite</a>, and <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00192">m_lonDefaultSatellite</a>.</p>
+<p class="reference">References <a class="el" href="geo-coordinate_8cc_source.html#l00197">ns3::GeoCoordinate::GetLatitude()</a>, <a class="el" href="geo-coordinate_8cc_source.html#l00190">ns3::GeoCoordinate::GetLongitude()</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00215">m_latDefaultSatellite</a>, and <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00220">m_lonDefaultSatellite</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00329">GetAntennaGain_lin()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00253">GetValidRandomPosition()</a>.</p>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00380">GetAntennaGain_lin()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00304">GetValidRandomPosition()</a>.</p>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_antenna_gain_pattern_a0b45b165cb19cccdf51f05a6bfa89eab_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_antenna_gain_pattern_a0b45b165cb19cccdf51f05a6bfa89eab_cgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_antenna_gain_pattern_a0b45b165cb19cccdf51f05a6bfa89eab_cgraph" id="aclassns3_1_1_sat_antenna_gain_pattern_a0b45b165cb19cccdf51f05a6bfa89eab_cgraph">
 <area shape="rect" title=" " alt="" coords="5,39,209,80"/>
@@ -532,11 +628,11 @@ Static Private Attributes</h2></td></tr>
 <area shape="rect" href="classns3_1_1_geo_coordinate.html#a9e08204255850f048fef7eea44602c1d" title="Gets longitude value of coordinate." alt="" coords="257,71,408,112"/>
 </map>
 </div>
-<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_antenna_gain_pattern_a0b45b165cb19cccdf51f05a6bfa89eab_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_antenna_gain_pattern_a0b45b165cb19cccdf51f05a6bfa89eab_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_antenna_gain_pattern_a0b45b165cb19cccdf51f05a6bfa89eab_icgraph" id="aclassns3_1_1_sat_antenna_gain_pattern_a0b45b165cb19cccdf51f05a6bfa89eab_icgraph">
 <area shape="rect" title=" " alt="" coords="509,39,713,80"/>
@@ -575,16 +671,16 @@ Static Private Attributes</h2></td></tr>
 <p>Get the type ID. </p>
 <dl class="section return"><dt>Returns</dt><dd>the object TypeId </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00041">41</a> of file <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html">satellite-antenna-gain-pattern.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00049">49</a> of file <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html">satellite-antenna-gain-pattern.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00137">m_minAcceptableAntennaGainInDb</a>.</p>
+<p class="reference">References <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00155">m_minAcceptableAntennaGainInDb</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00057">GetInstanceTypeId()</a>.</p>
-<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00065">GetInstanceTypeId()</a>.</p>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_antenna_gain_pattern_af5510acbe003dd3149008241fa86e2f1_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_antenna_gain_pattern_af5510acbe003dd3149008241fa86e2f1_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_antenna_gain_pattern_af5510acbe003dd3149008241fa86e2f1_icgraph" id="aclassns3_1_1_sat_antenna_gain_pattern_af5510acbe003dd3149008241fa86e2f1_icgraph">
 <area shape="rect" title="Get the type ID." alt="" coords="257,5,461,47"/>
@@ -619,14 +715,14 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A valid random <a class="el" href="classns3_1_1_geo_coordinate.html" title="GeoCoordinate class is used to store and operate with geodetic coordinates.">GeoCoordinate</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00253">253</a> of file <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html">satellite-antenna-gain-pattern.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00304">304</a> of file <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html">satellite-antenna-gain-pattern.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00231">GetSatelliteOffset()</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00177">m_latInterval</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00182">m_lonInterval</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00142">m_uniformRandomVariable</a>, and <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00131">m_validPositions</a>.</p>
-<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00248">GetSatelliteOffset()</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00205">m_latInterval</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00210">m_lonInterval</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00160">m_uniformRandomVariable</a>, and <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00149">m_validPositions</a>.</p>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_antenna_gain_pattern_a3d73c289a7d02b32e88cb7d9868c84aa_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_antenna_gain_pattern_a3d73c289a7d02b32e88cb7d9868c84aa_cgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_antenna_gain_pattern_a3d73c289a7d02b32e88cb7d9868c84aa_cgraph" id="aclassns3_1_1_sat_antenna_gain_pattern_a3d73c289a7d02b32e88cb7d9868c84aa_cgraph">
 <area shape="rect" title="Get a valid random position under this spot&#45;beam coverage." alt="" coords="5,39,209,80"/>
@@ -680,14 +776,14 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether or not the given position is valid for this spot-beam </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00317">317</a> of file <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html">satellite-antenna-gain-pattern.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00368">368</a> of file <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html">satellite-antenna-gain-pattern.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00329">GetAntennaGain_lin()</a>, <a class="el" href="geo-coordinate_8cc_source.html#l00193">ns3::GeoCoordinate::GetLatitude()</a>, <a class="el" href="geo-coordinate_8cc_source.html#l00186">ns3::GeoCoordinate::GetLongitude()</a>, <a class="el" href="satellite-utils_8h_source.html#l00166">ns3::SatUtils::LinearToDb()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00137">m_minAcceptableAntennaGainInDb</a>.</p>
-<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00380">GetAntennaGain_lin()</a>, <a class="el" href="geo-coordinate_8cc_source.html#l00197">ns3::GeoCoordinate::GetLatitude()</a>, <a class="el" href="geo-coordinate_8cc_source.html#l00190">ns3::GeoCoordinate::GetLongitude()</a>, <a class="el" href="satellite-utils_8h_source.html#l00170">ns3::SatUtils::LinearToDb()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00155">m_minAcceptableAntennaGainInDb</a>.</p>
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_antenna_gain_pattern_a900fceb7d85badec398a890441d9e171_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_antenna_gain_pattern_a900fceb7d85badec398a890441d9e171_cgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_antenna_gain_pattern_a900fceb7d85badec398a890441d9e171_cgraph" id="aclassns3_1_1_sat_antenna_gain_pattern_a900fceb7d85badec398a890441d9e171_cgraph">
 <area shape="rect" title="Check if a given position is under this spot&#45;beam coverage." alt="" coords="5,169,209,211"/>
@@ -734,16 +830,16 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00100">100</a> of file <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html">satellite-antenna-gain-pattern.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00108">108</a> of file <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html">satellite-antenna-gain-pattern.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00124">m_antennaPattern</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00177">m_latInterval</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00147">m_latitudes</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00152">m_longitudes</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00182">m_lonInterval</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00167">m_maxLat</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00172">m_maxLon</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00137">m_minAcceptableAntennaGainInDb</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00157">m_minLat</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00162">m_minLon</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00198">m_nanStrings</a>, and <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00131">m_validPositions</a>.</p>
+<p class="reference">References <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00142">m_antennaPattern</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00175">m_centerLatitude</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00180">m_centerLongitude</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00205">m_latInterval</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00165">m_latitudes</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00170">m_longitudes</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00210">m_lonInterval</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00195">m_maxLat</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00200">m_maxLon</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00155">m_minAcceptableAntennaGainInDb</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00185">m_minLat</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00190">m_minLon</a>, <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00226">m_nanStrings</a>, and <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00149">m_validPositions</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00082">SatAntennaGainPattern()</a>.</p>
-<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00090">SatAntennaGainPattern()</a>.</p>
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_antenna_gain_pattern_adacb3da97feae8b47de1b497c60c2e7a_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_antenna_gain_pattern_adacb3da97feae8b47de1b497c60c2e7a_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_antenna_gain_pattern_adacb3da97feae8b47de1b497c60c2e7a_icgraph" id="aclassns3_1_1_sat_antenna_gain_pattern_adacb3da97feae8b47de1b497c60c2e7a_icgraph">
 <area shape="rect" title="Read the antenna gain pattern from a file." alt="" coords="257,5,476,47"/>
@@ -780,9 +876,65 @@ Static Private Attributes</h2></td></tr>
 <li>Inner vector holds gain values for all longitudes for a certain latitude </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00124">124</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00142">142</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00329">GetAntennaGain_lin()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00100">ReadAntennaPatternFromFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00380">GetAntennaGain_lin()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00108">ReadAntennaPatternFromFile()</a>.</p>
+
+</div>
+</div>
+<a id="a096057d1ac586807abf24da5dbfe0c23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a096057d1ac586807abf24da5dbfe0c23">&#9670;&nbsp;</a></span>m_centerLatitude</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ns3::SatAntennaGainPattern::m_centerLatitude</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Latitude with best gain. </p>
+
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00175">175</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00270">GetCenterLatitude()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00108">ReadAntennaPatternFromFile()</a>.</p>
+
+</div>
+</div>
+<a id="a5ccc1083496641fc9dd47ce3bfa0fca4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ccc1083496641fc9dd47ce3bfa0fca4">&#9670;&nbsp;</a></span>m_centerLongitude</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ns3::SatAntennaGainPattern::m_centerLongitude</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Longitude with best gain. </p>
+
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00180">180</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00287">GetCenterLongitude()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00108">ReadAntennaPatternFromFile()</a>.</p>
 
 </div>
 </div>
@@ -808,9 +960,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Latitude of default satellite for antenna gain pattern. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00187">187</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00215">215</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00082">SatAntennaGainPattern()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00231">GetSatelliteOffset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00090">SatAntennaGainPattern()</a>, <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00270">GetCenterLatitude()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00248">GetSatelliteOffset()</a>.</p>
 
 </div>
 </div>
@@ -836,9 +988,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Interval between latitudes, must be constant. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00177">177</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00205">205</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00329">GetAntennaGain_lin()</a>, <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00253">GetValidRandomPosition()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00100">ReadAntennaPatternFromFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00380">GetAntennaGain_lin()</a>, <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00304">GetValidRandomPosition()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00108">ReadAntennaPatternFromFile()</a>.</p>
 
 </div>
 </div>
@@ -864,9 +1016,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>All valid latitudes from the file. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00147">147</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00165">165</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00329">GetAntennaGain_lin()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00100">ReadAntennaPatternFromFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00380">GetAntennaGain_lin()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00108">ReadAntennaPatternFromFile()</a>.</p>
 
 </div>
 </div>
@@ -892,9 +1044,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Longitude of default satellite for antenna gain pattern. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00192">192</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00220">220</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00082">SatAntennaGainPattern()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00231">GetSatelliteOffset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00090">SatAntennaGainPattern()</a>, <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00287">GetCenterLongitude()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00248">GetSatelliteOffset()</a>.</p>
 
 </div>
 </div>
@@ -920,9 +1072,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>All valid latitudes from the file. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00152">152</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00170">170</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00329">GetAntennaGain_lin()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00100">ReadAntennaPatternFromFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00380">GetAntennaGain_lin()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00108">ReadAntennaPatternFromFile()</a>.</p>
 
 </div>
 </div>
@@ -948,9 +1100,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Interval between longitudes, must be constant. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00182">182</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00210">210</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00329">GetAntennaGain_lin()</a>, <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00253">GetValidRandomPosition()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00100">ReadAntennaPatternFromFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00380">GetAntennaGain_lin()</a>, <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00304">GetValidRandomPosition()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00108">ReadAntennaPatternFromFile()</a>.</p>
 
 </div>
 </div>
@@ -976,9 +1128,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Maximum latitude value of the antenna gain pattern. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00167">167</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00195">195</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00329">GetAntennaGain_lin()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00100">ReadAntennaPatternFromFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00380">GetAntennaGain_lin()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00108">ReadAntennaPatternFromFile()</a>.</p>
 
 </div>
 </div>
@@ -1004,9 +1156,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Minimum longitude value of the antenna gain pattern. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00172">172</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00200">200</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00329">GetAntennaGain_lin()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00100">ReadAntennaPatternFromFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00380">GetAntennaGain_lin()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00108">ReadAntennaPatternFromFile()</a>.</p>
 
 </div>
 </div>
@@ -1033,9 +1185,9 @@ Static Private Attributes</h2></td></tr>
 <p>Minimum acceptable antenna gain for a serving spot-beam. </p>
 <p>Used for beam selection. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00137">137</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00155">155</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00041">GetTypeId()</a>, <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00317">IsValidPosition()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00100">ReadAntennaPatternFromFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00049">GetTypeId()</a>, <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00368">IsValidPosition()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00108">ReadAntennaPatternFromFile()</a>.</p>
 
 </div>
 </div>
@@ -1061,9 +1213,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Minimum latitude value of the antenna gain pattern. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00157">157</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00185">185</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00329">GetAntennaGain_lin()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00100">ReadAntennaPatternFromFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00380">GetAntennaGain_lin()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00108">ReadAntennaPatternFromFile()</a>.</p>
 
 </div>
 </div>
@@ -1089,9 +1241,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Minimum longitude value of the antenna gain pattern. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00162">162</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00190">190</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00329">GetAntennaGain_lin()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00100">ReadAntennaPatternFromFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00380">GetAntennaGain_lin()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00108">ReadAntennaPatternFromFile()</a>.</p>
 
 </div>
 </div>
@@ -1117,7 +1269,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Valid Not-a-Number (NaN) strings. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00197">197</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00225">225</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
 
 </div>
 </div>
@@ -1141,9 +1293,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00198">198</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00226">226</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00100">ReadAntennaPatternFromFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00108">ReadAntennaPatternFromFile()</a>.</p>
 
 </div>
 </div>
@@ -1169,9 +1321,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Uniform random variable used for beam selection. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00142">142</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00160">160</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00082">SatAntennaGainPattern()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00253">GetValidRandomPosition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00090">SatAntennaGainPattern()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00304">GetValidRandomPosition()</a>.</p>
 
 </div>
 </div>
@@ -1201,9 +1353,9 @@ Static Private Attributes</h2></td></tr>
 <li>Longitude </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00131">131</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-antenna-gain-pattern_8h_source.html#l00149">149</a> of file <a class="el" href="satellite-antenna-gain-pattern_8h_source.html">satellite-antenna-gain-pattern.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00253">GetValidRandomPosition()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00100">ReadAntennaPatternFromFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00304">GetValidRandomPosition()</a>, and <a class="el" href="satellite-antenna-gain-pattern_8cc_source.html#l00108">ReadAntennaPatternFromFile()</a>.</p>
 
 </div>
 </div>

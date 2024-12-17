@@ -43,7 +43,7 @@ var classns3_1_1_sat_phy =
     [ "RxTraces", "classns3_1_1_sat_phy.html#a769c3647dd64fe2141e6f864445bee0b", null ],
     [ "SendPdu", "classns3_1_1_sat_phy.html#a748f0a6ca20a80acc08576474297e1d7", null ],
     [ "SendPduWithParams", "classns3_1_1_sat_phy.html#a52cc5b2a060eeefbd76967b90a6583a1", null ],
-    [ "SetBeamId", "classns3_1_1_sat_phy.html#a02e705c8d6887652906bd09656993c24", null ],
+    [ "SetBeamId", "classns3_1_1_sat_phy.html#afc9e5d6c15699cc3b5d43000a6851496", null ],
     [ "SetChannelPairGetterCallback", "classns3_1_1_sat_phy.html#a751263249d97c3a9e26dd34069313be6", null ],
     [ "SetDefaultFading", "classns3_1_1_sat_phy.html#a34059216601257190e381ddf1872faa9", null ],
     [ "SetNodeInfo", "classns3_1_1_sat_phy.html#a076bf8620978de6058b38ff0764abadf", null ],

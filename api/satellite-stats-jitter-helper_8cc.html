@@ -146,19 +146,23 @@ $(document).ready(function(){initNavTree('satellite-stats-jitter-helper_8cc.html
 <code>#include &lt;ns3/node-container.h&gt;</code><br />
 <code>#include &lt;ns3/nstime.h&gt;</code><br />
 <code>#include &lt;ns3/probe.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-geo-net-device.h&gt;</code><br />
 <code>#include &lt;ns3/satellite-helper.h&gt;</code><br />
 <code>#include &lt;ns3/satellite-id-mapper.h&gt;</code><br />
 <code>#include &lt;ns3/satellite-mac.h&gt;</code><br />
 <code>#include &lt;ns3/satellite-net-device.h&gt;</code><br />
+<code>#include &lt;ns3/satellite-orbiter-net-device.h&gt;</code><br />
 <code>#include &lt;ns3/satellite-phy.h&gt;</code><br />
 <code>#include &lt;ns3/satellite-time-tag.h&gt;</code><br />
+<code>#include &lt;ns3/satellite-topology.h&gt;</code><br />
 <code>#include &lt;ns3/scalar-collector.h&gt;</code><br />
 <code>#include &lt;ns3/singleton.h&gt;</code><br />
 <code>#include &lt;ns3/string.h&gt;</code><br />
 <code>#include &lt;ns3/traffic-time-tag.h&gt;</code><br />
 <code>#include &lt;ns3/unit-conversion-collector.h&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for satellite-stats-jitter-helper.cc:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -166,44 +170,50 @@ $(document).ready(function(){initNavTree('satellite-stats-jitter-helper_8cc.html
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="satellite-stats-jitter-helper_8cc__incl.png" border="0" usemap="#a_2builds_2sns3_2satellite_2satellite_2stats_2satellite-stats-jitter-helper_8cc" alt=""/></div>
 <map name="a_2builds_2sns3_2satellite_2satellite_2stats_2satellite-stats-jitter-helper_8cc" id="a_2builds_2sns3_2satellite_2satellite_2stats_2satellite-stats-jitter-helper_8cc">
-<area shape="rect" title=" " alt="" coords="2826,5,2998,61"/>
-<area shape="rect" href="satellite-stats-jitter-helper_8h.html" title=" " alt="" coords="349,109,497,151"/>
-<area shape="rect" title=" " alt="" coords="521,109,684,151"/>
-<area shape="rect" title=" " alt="" coords="708,117,841,143"/>
-<area shape="rect" title=" " alt="" coords="866,117,979,143"/>
-<area shape="rect" title=" " alt="" coords="1004,117,1119,143"/>
-<area shape="rect" title=" " alt="" coords="1143,109,1289,151"/>
-<area shape="rect" title=" " alt="" coords="1313,117,1508,143"/>
-<area shape="rect" title=" " alt="" coords="1532,117,1631,143"/>
-<area shape="rect" title=" " alt="" coords="1655,117,1844,143"/>
-<area shape="rect" title=" " alt="" coords="1869,117,1958,143"/>
-<area shape="rect" title=" " alt="" coords="1982,117,2063,143"/>
-<area shape="rect" title=" " alt="" coords="2087,117,2249,143"/>
-<area shape="rect" title=" " alt="" coords="2273,109,2434,151"/>
-<area shape="rect" title=" " alt="" coords="2459,117,2653,143"/>
-<area shape="rect" title=" " alt="" coords="2677,117,2808,143"/>
-<area shape="rect" title=" " alt="" coords="2833,117,2991,143"/>
-<area shape="rect" title=" " alt="" coords="3016,117,3123,143"/>
-<area shape="rect" title=" " alt="" coords="3147,117,3245,143"/>
-<area shape="rect" title=" " alt="" coords="3269,109,3427,151"/>
-<area shape="rect" title=" " alt="" coords="3451,117,3610,143"/>
-<area shape="rect" title=" " alt="" coords="3634,117,3819,143"/>
-<area shape="rect" title=" " alt="" coords="3844,117,3991,143"/>
-<area shape="rect" title=" " alt="" coords="4015,117,4203,143"/>
-<area shape="rect" title=" " alt="" coords="4228,117,4369,143"/>
-<area shape="rect" title=" " alt="" coords="4394,109,4531,151"/>
-<area shape="rect" title=" " alt="" coords="4556,117,4716,143"/>
-<area shape="rect" title=" " alt="" coords="4741,117,4862,143"/>
-<area shape="rect" title=" " alt="" coords="4887,117,4985,143"/>
-<area shape="rect" title=" " alt="" coords="5009,117,5169,143"/>
-<area shape="rect" title=" " alt="" coords="5194,109,5345,151"/>
-<area shape="rect" title=" " alt="" coords="5369,117,5444,143"/>
-<area shape="rect" title=" " alt="" coords="5,206,117,233"/>
-<area shape="rect" title=" " alt="" coords="142,206,293,233"/>
-<area shape="rect" title=" " alt="" coords="317,206,395,233"/>
-<area shape="rect" title=" " alt="" coords="420,199,559,240"/>
-<area shape="rect" title=" " alt="" coords="583,206,625,233"/>
-<area shape="rect" title=" " alt="" coords="649,206,700,233"/>
+<area shape="rect" title=" " alt="" coords="3027,5,3199,61"/>
+<area shape="rect" href="satellite-stats-jitter-helper_8h.html" title=" " alt="" coords="381,109,529,151"/>
+<area shape="rect" title=" " alt="" coords="677,273,728,300"/>
+<area shape="rect" title=" " alt="" coords="5,273,64,300"/>
+<area shape="rect" title=" " alt="" coords="757,199,817,225"/>
+<area shape="rect" title=" " alt="" coords="892,109,1055,151"/>
+<area shape="rect" title=" " alt="" coords="1079,117,1212,143"/>
+<area shape="rect" title=" " alt="" coords="1237,117,1350,143"/>
+<area shape="rect" title=" " alt="" coords="1375,117,1489,143"/>
+<area shape="rect" title=" " alt="" coords="1513,109,1660,151"/>
+<area shape="rect" title=" " alt="" coords="1684,117,1879,143"/>
+<area shape="rect" title=" " alt="" coords="1903,117,2001,143"/>
+<area shape="rect" title=" " alt="" coords="2025,117,2215,143"/>
+<area shape="rect" title=" " alt="" coords="2239,117,2329,143"/>
+<area shape="rect" title=" " alt="" coords="2353,117,2434,143"/>
+<area shape="rect" title=" " alt="" coords="2458,117,2619,143"/>
+<area shape="rect" title=" " alt="" coords="2643,109,2805,151"/>
+<area shape="rect" title=" " alt="" coords="2829,117,3024,143"/>
+<area shape="rect" title=" " alt="" coords="3048,117,3179,143"/>
+<area shape="rect" title=" " alt="" coords="3203,117,3362,143"/>
+<area shape="rect" title=" " alt="" coords="3387,117,3493,143"/>
+<area shape="rect" title=" " alt="" coords="3517,117,3616,143"/>
+<area shape="rect" title=" " alt="" coords="3641,117,3799,143"/>
+<area shape="rect" title=" " alt="" coords="3823,117,4009,143"/>
+<area shape="rect" title=" " alt="" coords="4033,117,4180,143"/>
+<area shape="rect" title=" " alt="" coords="4205,117,4393,143"/>
+<area shape="rect" title=" " alt="" coords="4417,109,4567,151"/>
+<area shape="rect" title=" " alt="" coords="4592,117,4733,143"/>
+<area shape="rect" title=" " alt="" coords="4758,109,4895,151"/>
+<area shape="rect" title=" " alt="" coords="4919,117,5094,143"/>
+<area shape="rect" title=" " alt="" coords="5119,117,5279,143"/>
+<area shape="rect" title=" " alt="" coords="5303,117,5425,143"/>
+<area shape="rect" title=" " alt="" coords="5449,117,5548,143"/>
+<area shape="rect" title=" " alt="" coords="5572,117,5732,143"/>
+<area shape="rect" title=" " alt="" coords="5757,109,5907,151"/>
+<area shape="rect" title=" " alt="" coords="5932,117,6007,143"/>
+<area shape="rect" href="satellite-stats-helper_8h.html" title=" " alt="" coords="201,199,370,225"/>
+<area shape="rect" title=" " alt="" coords="89,273,167,300"/>
+<area shape="rect" title=" " alt="" coords="445,199,557,225"/>
+<area shape="rect" title=" " alt="" coords="582,199,733,225"/>
+<area shape="rect" title=" " alt="" coords="83,199,125,225"/>
+<area shape="rect" title=" " alt="" coords="536,273,653,300"/>
+<area shape="rect" title=" " alt="" coords="192,273,387,300"/>
+<area shape="rect" title=" " alt="" coords="411,273,512,300"/>
 </map>
 </div>
 </div>

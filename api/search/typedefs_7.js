@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['handovercallback_12589',['HandoverCallback',['../classns3_1_1_sat_gw_mac.html#a33564ae352c3981d902e58279b5cb7e3',1,'ns3::SatGwMac::HandoverCallback()'],['../classns3_1_1_sat_ut_mac.html#a08d494ae76a711253bfb4b095a1878de',1,'ns3::SatUtMac::HandoverCallback()']]],
-  ['handoverrequestcallback_12590',['HandoverRequestCallback',['../classns3_1_1_sat_ut_handover_module.html#a0dabdd03cd73f1e6cb253b26a2392193',1,'ns3::SatUtHandoverModule']]]
+  ['handovercallback_13097',['HandoverCallback',['../classns3_1_1_lorawan_mac_end_device.html#a3cfbeee0ec9e8f776e43e85ec48f9481',1,'ns3::LorawanMacEndDevice::HandoverCallback()'],['../classns3_1_1_sat_gw_mac.html#aabf5cf9b41c8d68b48c4fa034d70c5e0',1,'ns3::SatGwMac::HandoverCallback()'],['../classns3_1_1_sat_ut_mac.html#a24d6c41a87e8c79d48ecd072e53f7b5c',1,'ns3::SatUtMac::HandoverCallback()']]],
+  ['handoverrequestcallback_13098',['HandoverRequestCallback',['../classns3_1_1_sat_handover_module.html#af4c38289a2f06fa0ec1e840a23ff4883',1,'ns3::SatHandoverModule']]]
 ];

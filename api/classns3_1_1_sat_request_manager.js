@@ -38,7 +38,7 @@ var classns3_1_1_sat_request_manager =
     [ "ResetAssignedResources", "classns3_1_1_sat_request_manager.html#a987fba8916e832f988a86e1c0477664b", null ],
     [ "SendCapacityRequest", "classns3_1_1_sat_request_manager.html#ad641719817ed7f59877fcde6a3b19ae1", null ],
     [ "SendCnoReport", "classns3_1_1_sat_request_manager.html#a8db4765a79b1729996f5354c814ad0b6", null ],
-    [ "SendHandoverRecommendation", "classns3_1_1_sat_request_manager.html#a86a1282604eb2e9b02ac227b24a004c4", null ],
+    [ "SendHandoverRecommendation", "classns3_1_1_sat_request_manager.html#af94dc276df2e7cb6169de908cda5bc8d", null ],
     [ "SendLogonMessage", "classns3_1_1_sat_request_manager.html#a2bc890e93980b6e6335e8f6c071f4c8c", null ],
     [ "SetCtrlMsgCallback", "classns3_1_1_sat_request_manager.html#af306377b8864586c79e25a91fc5fd4ed", null ],
     [ "SetCtrlMsgTxPossibleCallback", "classns3_1_1_sat_request_manager.html#a7bc08d190ebe1c41a8f2fe5fab7c371f", null ],

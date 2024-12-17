@@ -177,6 +177,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aace92aa381857bff428e042a58b5bc8d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_fwd_link_scheduler_default.html#aace92aa381857bff428e042a58b5bc8d">~SatFwdLinkSchedulerDefault</a> ()</td></tr>
 <tr class="memdesc:aace92aa381857bff428e042a58b5bc8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html" title="SatFwdLinkScheduler schedules BB frames for forward link.">SatFwdLinkScheduler</a>.  <a href="classns3_1_1_sat_fwd_link_scheduler_default.html#aace92aa381857bff428e042a58b5bc8d">More...</a><br /></td></tr>
 <tr class="separator:aace92aa381857bff428e042a58b5bc8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cecba12787c972106fe1715bb10ee53"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_fwd_link_scheduler_default.html#a8cecba12787c972106fe1715bb10ee53">ClearAllPackets</a> ()</td></tr>
+<tr class="memdesc:a8cecba12787c972106fe1715bb10ee53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all packets being treated.  <a href="classns3_1_1_sat_fwd_link_scheduler_default.html#a8cecba12787c972106fe1715bb10ee53">More...</a><br /></td></tr>
+<tr class="separator:a8cecba12787c972106fe1715bb10ee53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe104cdae1d9b5e5d50be13e4450bc96"><td class="memItemLeft" align="right" valign="top">virtual TypeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_fwd_link_scheduler_default.html#abe104cdae1d9b5e5d50be13e4450bc96">GetInstanceTypeId</a> (void) const</td></tr>
 <tr class="memdesc:abe104cdae1d9b5e5d50be13e4450bc96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type ID of instance.  <a href="classns3_1_1_sat_fwd_link_scheduler_default.html#abe104cdae1d9b5e5d50be13e4450bc96">More...</a><br /></td></tr>
 <tr class="separator:abe104cdae1d9b5e5d50be13e4450bc96"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -370,7 +373,7 @@ Additional Inherited Members</h2></td></tr>
 <p>This is the reference case of the scheduler, without separation between slices. It uses only one instance of BbFrameContainer. </p><pre class="fragment">   SatFwdLinkSchedulerDefault communicated through callback functions to request scheduling
 </pre><p> objects and notifying TX opportunities. </p><pre class="fragment">   GW MAC requests frames from scheduler through method GetNextFrame.
 </pre> 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00044">44</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html">satellite-fwd-link-scheduler-default.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00048">48</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html">satellite-fwd-link-scheduler-default.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6bacbd1fb88c05106245783b08f7a20d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6bacbd1fb88c05106245783b08f7a20d">&#9670;&nbsp;</a></span>SatFwdLinkSchedulerDefault() <span class="overload">[1/2]</span></h2>
@@ -390,7 +393,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Construct a <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html" title="SatFwdLinkScheduler schedules BB frames for forward link.">SatFwdLinkScheduler</a>. </p>
 <p>This the default constructor for the <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html" title="SatFwdLinkScheduler schedules BB frames for forward link.">SatFwdLinkScheduler</a> is not supported. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00069">69</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00072">72</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
 
 </div>
 </div>
@@ -436,9 +439,9 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00076">76</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00079">79</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00317">ns3::SatFwdLinkScheduler::m_bbFrameConf</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00124">m_bbFrameContainer</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00312">ns3::SatFwdLinkScheduler::m_periodicInterval</a>, and <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00169">PeriodicTimerExpired()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00326">ns3::SatFwdLinkScheduler::m_bbFrameConf</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00133">m_bbFrameContainer</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00321">ns3::SatFwdLinkScheduler::m_periodicInterval</a>, and <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00180">PeriodicTimerExpired()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -479,11 +482,44 @@ Additional Inherited Members</h2></td></tr>
 <p>Destroy a <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html" title="SatFwdLinkScheduler schedules BB frames for forward link.">SatFwdLinkScheduler</a>. </p>
 <p>This is the destructor for the <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html" title="SatFwdLinkScheduler schedules BB frames for forward link.">SatFwdLinkScheduler</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00095">95</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00098">98</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8cecba12787c972106fe1715bb10ee53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cecba12787c972106fe1715bb10ee53">&#9670;&nbsp;</a></span>ClearAllPackets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ns3::SatFwdLinkSchedulerDefault::ClearAllPackets </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove all packets being treated. </p>
+
+<p>Reimplemented from <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html#a34d3129b5ad974b050e5dc106ca2506b">ns3::SatFwdLinkScheduler</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00172">172</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00133">m_bbFrameContainer</a>.</p>
+
+</div>
+</div>
 <a id="ab812b9b5f3cabdcfa583659bccdcb04f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab812b9b5f3cabdcfa583659bccdcb04f">&#9670;&nbsp;</a></span>DoDispose()</h2>
 
@@ -510,9 +546,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Do dispose actions. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00101">101</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00104">104</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00198">ns3::SatFwdLinkScheduler::DoDispose()</a>, and <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00124">m_bbFrameContainer</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00205">ns3::SatFwdLinkScheduler::DoDispose()</a>, and <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00133">m_bbFrameContainer</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -556,9 +592,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html#ac5c1a6f696653a8ad7eb448b8c839a0b">ns3::SatFwdLinkScheduler</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00062">62</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00065">65</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00033">GetTypeId()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00036">GetTypeId()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -601,9 +637,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html#aa401adf6cfbda6c7f5eb1e9541523f06">ns3::SatFwdLinkScheduler</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00109">109</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00112">112</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-enums_8h_source.html#l01749">ns3::SatEnums::DUMMY_FRAME</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00317">ns3::SatFwdLinkScheduler::m_bbFrameConf</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00124">m_bbFrameContainer</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00359">ns3::SatFwdLinkScheduler::m_carrierBandwidthInHz</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00301">ns3::SatFwdLinkScheduler::m_dummyFrameSendingEnabled</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00295">ns3::SatFwdLinkScheduler::m_macAddress</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00129">m_schedulingStartThresholdTime</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00139">m_symbolsSent</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00192">ScheduleBbFrames()</a>, <a class="el" href="satellite-mac-tag_8cc_source.html#l00059">ns3::SatMacTag::SetDestAddress()</a>, <a class="el" href="satellite-mac-tag_8cc_source.html#l00158">ns3::SatAddressE2ETag::SetE2EDestAddress()</a>, <a class="el" href="satellite-mac-tag_8cc_source.html#l00172">ns3::SatAddressE2ETag::SetE2ESourceAddress()</a>, and <a class="el" href="satellite-mac-tag_8cc_source.html#l00073">ns3::SatMacTag::SetSourceAddress()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-enums_8h_source.html#l01750">ns3::SatEnums::DUMMY_FRAME</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00326">ns3::SatFwdLinkScheduler::m_bbFrameConf</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00133">m_bbFrameContainer</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00368">ns3::SatFwdLinkScheduler::m_carrierBandwidthInHz</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00310">ns3::SatFwdLinkScheduler::m_dummyFrameSendingEnabled</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00304">ns3::SatFwdLinkScheduler::m_macAddress</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00138">m_schedulingStartThresholdTime</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00148">m_symbolsSent</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00203">ScheduleBbFrames()</a>, <a class="el" href="satellite-mac-tag_8cc_source.html#l00061">ns3::SatMacTag::SetDestAddress()</a>, <a class="el" href="satellite-mac-tag_8cc_source.html#l00160">ns3::SatAddressE2ETag::SetE2EDestAddress()</a>, <a class="el" href="satellite-mac-tag_8cc_source.html#l00174">ns3::SatAddressE2ETag::SetE2ESourceAddress()</a>, and <a class="el" href="satellite-mac-tag_8cc_source.html#l00075">ns3::SatMacTag::SetSourceAddress()</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -660,11 +696,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00257">257</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00268">268</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00124">m_bbFrameContainer</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00334">ns3::SatFwdLinkScheduler::m_schedContextCallback</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00134">m_schedulingStopThresholdTime</a>, and <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00309">ns3::SatFwdLinkScheduler::SortSchedulingObjects()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00133">m_bbFrameContainer</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00343">ns3::SatFwdLinkScheduler::m_schedContextCallback</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00143">m_schedulingStopThresholdTime</a>, and <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00324">ns3::SatFwdLinkScheduler::SortSchedulingObjects()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00192">ScheduleBbFrames()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00203">ScheduleBbFrames()</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -723,11 +759,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Get the type ID. </p>
 <dl class="section return"><dt>Returns</dt><dd>the object TypeId </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00033">33</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00036">36</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00124">m_bbFrameContainer</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00129">m_schedulingStartThresholdTime</a>, and <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00134">m_schedulingStopThresholdTime</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00133">m_bbFrameContainer</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00138">m_schedulingStartThresholdTime</a>, and <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00143">m_schedulingStopThresholdTime</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00062">GetInstanceTypeId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00065">GetInstanceTypeId()</a>.</p>
 <div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
@@ -767,11 +803,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Handles periodic timer timeouts. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00169">169</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00180">180</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00312">ns3::SatFwdLinkScheduler::m_periodicInterval</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00192">ScheduleBbFrames()</a>, and <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00182">SendAndClearSymbolsSentStat()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00321">ns3::SatFwdLinkScheduler::m_periodicInterval</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00203">ScheduleBbFrames()</a>, and <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00193">SendAndClearSymbolsSentStat()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00076">SatFwdLinkSchedulerDefault()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00079">SatFwdLinkSchedulerDefault()</a>.</p>
 <div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
@@ -829,11 +865,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Schedule BB Frames. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00192">192</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00203">203</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00363">ns3::SatFwdLinkScheduler::GetSchedulingObjectCno()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00257">GetSchedulingObjects()</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00317">ns3::SatFwdLinkScheduler::m_bbFrameConf</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00124">m_bbFrameContainer</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00359">ns3::SatFwdLinkScheduler::m_carrierBandwidthInHz</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00134">m_schedulingStopThresholdTime</a>, and <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00329">ns3::SatFwdLinkScheduler::m_txOpportunityCallback</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00378">ns3::SatFwdLinkScheduler::GetSchedulingObjectCno()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00268">GetSchedulingObjects()</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00326">ns3::SatFwdLinkScheduler::m_bbFrameConf</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00133">m_bbFrameContainer</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00368">ns3::SatFwdLinkScheduler::m_carrierBandwidthInHz</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00143">m_schedulingStopThresholdTime</a>, and <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00338">ns3::SatFwdLinkScheduler::m_txOpportunityCallback</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00109">GetNextFrame()</a>, and <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00169">PeriodicTimerExpired()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00112">GetNextFrame()</a>, and <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00180">PeriodicTimerExpired()</a>.</p>
 <div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">
@@ -893,11 +929,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html#a50cf3b11e1c06fdac63db5721b14f0e1">ns3::SatFwdLinkScheduler</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00182">182</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00193">193</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html">satellite-fwd-link-scheduler-default.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00364">ns3::SatFwdLinkScheduler::m_schedulingSymbolRateTrace</a>, and <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00139">m_symbolsSent</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00373">ns3::SatFwdLinkScheduler::m_schedulingSymbolRateTrace</a>, and <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00148">m_symbolsSent</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00169">PeriodicTimerExpired()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00180">PeriodicTimerExpired()</a>.</p>
 <div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-13-summary" class="dynsummary" style="display:block;">
@@ -936,9 +972,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>The container for BB Frames. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00124">124</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html">satellite-fwd-link-scheduler-default.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00133">133</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html">satellite-fwd-link-scheduler-default.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00076">SatFwdLinkSchedulerDefault()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00101">DoDispose()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00109">GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00257">GetSchedulingObjects()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00033">GetTypeId()</a>, and <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00192">ScheduleBbFrames()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00079">SatFwdLinkSchedulerDefault()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00172">ClearAllPackets()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00104">DoDispose()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00112">GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00268">GetSchedulingObjects()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00036">GetTypeId()</a>, and <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00203">ScheduleBbFrames()</a>.</p>
 
 </div>
 </div>
@@ -964,9 +1000,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Threshold time of total transmissions in BB Frame container to trigger a scheduling round. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00129">129</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html">satellite-fwd-link-scheduler-default.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00138">138</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html">satellite-fwd-link-scheduler-default.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00109">GetNextFrame()</a>, and <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00033">GetTypeId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00112">GetNextFrame()</a>, and <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00036">GetTypeId()</a>.</p>
 
 </div>
 </div>
@@ -992,9 +1028,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Threshold time of total transmissions in BB Frame container to stop a scheduling round. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00134">134</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html">satellite-fwd-link-scheduler-default.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00143">143</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html">satellite-fwd-link-scheduler-default.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00257">GetSchedulingObjects()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00033">GetTypeId()</a>, and <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00192">ScheduleBbFrames()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00268">GetSchedulingObjects()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00036">GetTypeId()</a>, and <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00203">ScheduleBbFrames()</a>.</p>
 
 </div>
 </div>
@@ -1020,9 +1056,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>The number of symbols sent for each slice during an allocation cycle. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00139">139</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html">satellite-fwd-link-scheduler-default.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html#l00148">148</a> of file <a class="el" href="satellite-fwd-link-scheduler-default_8h_source.html">satellite-fwd-link-scheduler-default.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00109">GetNextFrame()</a>, and <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00182">SendAndClearSymbolsSentStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00112">GetNextFrame()</a>, and <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00193">SendAndClearSymbolsSentStat()</a>.</p>
 
 </div>
 </div>

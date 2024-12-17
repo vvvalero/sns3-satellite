@@ -203,6 +203,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ade38bcf4b398fba09c15b6ce56b60488"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html#ade38bcf4b398fba09c15b6ce56b60488">~SatFwdLinkScheduler</a> ()</td></tr>
 <tr class="memdesc:ade38bcf4b398fba09c15b6ce56b60488"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html" title="SatFwdLinkScheduler schedules BB frames for forward link.">SatFwdLinkScheduler</a>.  <a href="classns3_1_1_sat_fwd_link_scheduler.html#ade38bcf4b398fba09c15b6ce56b60488">More...</a><br /></td></tr>
 <tr class="separator:ade38bcf4b398fba09c15b6ce56b60488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34d3129b5ad974b050e5dc106ca2506b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html#a34d3129b5ad974b050e5dc106ca2506b">ClearAllPackets</a> ()</td></tr>
+<tr class="memdesc:a34d3129b5ad974b050e5dc106ca2506b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all packets being treated.  <a href="classns3_1_1_sat_fwd_link_scheduler.html#a34d3129b5ad974b050e5dc106ca2506b">More...</a><br /></td></tr>
+<tr class="separator:a34d3129b5ad974b050e5dc106ca2506b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a560c9d543754ce71ff6f7b190deb2e6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html#a560c9d543754ce71ff6f7b190deb2e6b">CnoInfoUpdated</a> (Mac48Address utAddress, double cnoEstimate)</td></tr>
 <tr class="memdesc:a560c9d543754ce71ff6f7b190deb2e6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when UT's C/N0 estimation is updated.  <a href="classns3_1_1_sat_fwd_link_scheduler.html#a560c9d543754ce71ff6f7b190deb2e6b">More...</a><br /></td></tr>
 <tr class="separator:a560c9d543754ce71ff6f7b190deb2e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -334,7 +337,7 @@ Protected Attributes</h2></td></tr>
 <p>In every GW MAC is assigned own instance of the <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html" title="SatFwdLinkScheduler schedules BB frames for forward link.">SatFwdLinkScheduler</a>. To handle BB frames and maintain queues for the them, it utilizes BB frame container given as attribute.</p>
 <p><a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html" title="SatFwdLinkScheduler schedules BB frames for forward link.">SatFwdLinkScheduler</a> communicated through callback functions to request scheduling objects and notifying TX opportunities. </p><pre class="fragment">   GW MAC requests frames from scheduler through method GetNextFrame.
 </pre> 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00064">64</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00068">68</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a7629a0898b02ef882e2b6e3158a2c3d7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7629a0898b02ef882e2b6e3158a2c3d7">&#9670;&nbsp;</a></span>CnoEstimatorMap_t</h2>
@@ -356,7 +359,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00230">230</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00239">239</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
 
 </div>
 </div>
@@ -380,7 +383,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00158">158</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00162">162</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
 
 </div>
 </div>
@@ -406,7 +409,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00178">178</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00182">182</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
 
 </div>
 </div>
@@ -435,7 +438,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>packet Packet to be transmitted to PHY </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00170">170</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00174">174</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
 
 </div>
 </div>
@@ -466,7 +469,7 @@ Protected Attributes</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00070">70</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00074">74</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
 
 </div>
 </div>
@@ -489,7 +492,7 @@ Protected Attributes</h2></td></tr>
 <p>Construct a <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html" title="SatFwdLinkScheduler schedules BB frames for forward link.">SatFwdLinkScheduler</a>. </p>
 <p>This the default constructor for the <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html" title="SatFwdLinkScheduler schedules BB frames for forward link.">SatFwdLinkScheduler</a> is not supported. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00166">166</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00173">173</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
 </div>
 </div>
@@ -535,9 +538,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00175">175</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00182">182</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00306">m_random</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00315">m_random</a>.</p>
 
 </div>
 </div>
@@ -559,7 +562,7 @@ Protected Attributes</h2></td></tr>
 <p>Destroy a <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html" title="SatFwdLinkScheduler schedules BB frames for forward link.">SatFwdLinkScheduler</a>. </p>
 <p>This is the destructor for the <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html" title="SatFwdLinkScheduler schedules BB frames for forward link.">SatFwdLinkScheduler</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00192">192</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00199">199</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
 </div>
 </div>
@@ -590,6 +593,37 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a34d3129b5ad974b050e5dc106ca2506b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34d3129b5ad974b050e5dc106ca2506b">&#9670;&nbsp;</a></span>ClearAllPackets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ns3::SatFwdLinkScheduler::ClearAllPackets </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove all packets being treated. </p>
+
+<p>Reimplemented in <a class="el" href="classns3_1_1_sat_fwd_link_scheduler_time_slicing.html#a4e87a587dfc22fcf4709feaeb73f2ca2">ns3::SatFwdLinkSchedulerTimeSlicing</a>, and <a class="el" href="classns3_1_1_sat_fwd_link_scheduler_default.html#a8cecba12787c972106fe1715bb10ee53">ns3::SatFwdLinkSchedulerDefault</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00292">292</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+
+</div>
+</div>
 <a id="a560c9d543754ce71ff6f7b190deb2e6b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a560c9d543754ce71ff6f7b190deb2e6b">&#9670;&nbsp;</a></span>CnoInfoUpdated()</h2>
 
@@ -625,9 +659,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00246">246</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00253">253</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00380">CreateCnoEstimator()</a>, and <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00344">m_cnoEstimatorContainer</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00395">CreateCnoEstimator()</a>, and <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00353">m_cnoEstimatorContainer</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -686,9 +720,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if C/N0 match with frame false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00346">346</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00361">361</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00317">m_bbFrameConf</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00326">m_bbFrameConf</a>.</p>
 
 </div>
 </div>
@@ -736,9 +770,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if first object priority is considered to be higher that second object, false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00068">68</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00073">73</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00088">CompareSoPriorityHol()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00074">CompareSoPriorityLoad()</a>, and <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00309">SortSchedulingObjects()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00093">CompareSoPriorityHol()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00079">CompareSoPriorityLoad()</a>, and <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00324">SortSchedulingObjects()</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -813,11 +847,11 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if first object priority is considered to be higher that second object or if priorities are same first object HOL is considered to be higher, false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00088">88</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00093">93</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00068">CompareSoFlowId()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00073">CompareSoFlowId()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00309">SortSchedulingObjects()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00324">SortSchedulingObjects()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -901,11 +935,11 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if first object priority is considered to be higher that second object or if priorities are same first object load is considered to be higher, false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00074">74</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00079">79</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00068">CompareSoFlowId()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00073">CompareSoFlowId()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00309">SortSchedulingObjects()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00324">SortSchedulingObjects()</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -971,11 +1005,11 @@ Protected Attributes</h2></td></tr>
 <p>Create estimator for the UT according to set attributes. </p>
 <dl class="section return"><dt>Returns</dt><dd>pointer to created estimator </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00380">380</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00395">395</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-cno-estimator_8h_source.html#l00049">ns3::SatCnoEstimator::AVERAGE</a>, <a class="el" href="satellite-cno-estimator_8h_source.html#l00047">ns3::SatCnoEstimator::LAST</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00354">m_cnoEstimationWindow</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00349">m_cnoEstimatorMode</a>, and <a class="el" href="satellite-cno-estimator_8h_source.html#l00048">ns3::SatCnoEstimator::MINIMUM</a>.</p>
+<p class="reference">References <a class="el" href="satellite-cno-estimator_8h_source.html#l00051">ns3::SatCnoEstimator::AVERAGE</a>, <a class="el" href="satellite-cno-estimator_8h_source.html#l00049">ns3::SatCnoEstimator::LAST</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00363">m_cnoEstimationWindow</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00358">m_cnoEstimatorMode</a>, and <a class="el" href="satellite-cno-estimator_8h_source.html#l00050">ns3::SatCnoEstimator::MINIMUM</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00246">CnoInfoUpdated()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00253">CnoInfoUpdated()</a>.</p>
 <div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
@@ -1016,11 +1050,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Do dispose actions. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00198">198</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00205">205</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00344">m_cnoEstimatorContainer</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00334">m_schedContextCallback</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00339">m_sendControlMsgCallback</a>, and <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00329">m_txOpportunityCallback</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00353">m_cnoEstimatorContainer</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00343">m_schedContextCallback</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00348">m_sendControlMsgCallback</a>, and <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00338">m_txOpportunityCallback</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00101">ns3::SatFwdLinkSchedulerDefault::DoDispose()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00137">ns3::SatFwdLinkSchedulerTimeSlicing::DoDispose()</a>, and <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00097">ns3::SatScpcScheduler::DoDispose()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00104">ns3::SatFwdLinkSchedulerDefault::DoDispose()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00142">ns3::SatFwdLinkSchedulerTimeSlicing::DoDispose()</a>, and <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00100">ns3::SatScpcScheduler::DoDispose()</a>.</p>
 <div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
@@ -1055,9 +1089,9 @@ Protected Attributes</h2></td></tr>
 <p>Return the BB frame duration of the default frame format, i.e. </p>
 <p>default MODCOD and NORMAL frame type. This is used by the GW MAC to schedule next txop events if it is disabled. </p><dl class="section return"><dt>Returns</dt><dd>Default frame duration in Time </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00270">270</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00277">277</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00317">m_bbFrameConf</a>, and <a class="el" href="satellite-enums_8h_source.html#l01748">ns3::SatEnums::NORMAL_FRAME</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00326">m_bbFrameConf</a>, and <a class="el" href="satellite-enums_8h_source.html#l01749">ns3::SatEnums::NORMAL_FRAME</a>.</p>
 
 </div>
 </div>
@@ -1090,9 +1124,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classns3_1_1_sat_scpc_scheduler.html#ac050c764a34a186a8485b635e15c6975">ns3::SatScpcScheduler</a>, <a class="el" href="classns3_1_1_sat_fwd_link_scheduler_time_slicing.html#adbc1cb240cfa107359f56049d2f2c23c">ns3::SatFwdLinkSchedulerTimeSlicing</a>, and <a class="el" href="classns3_1_1_sat_fwd_link_scheduler_default.html#abe104cdae1d9b5e5d50be13e4450bc96">ns3::SatFwdLinkSchedulerDefault</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00159">159</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00166">166</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00102">GetTypeId()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00107">GetTypeId()</a>.</p>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -1135,9 +1169,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classns3_1_1_sat_scpc_scheduler.html#aa1b9fde0c41e184842c9559061c351ab">ns3::SatScpcScheduler</a>, <a class="el" href="classns3_1_1_sat_fwd_link_scheduler_time_slicing.html#a43515cf758c6ff84eb7cd9827dea6035">ns3::SatFwdLinkSchedulerTimeSlicing</a>, and <a class="el" href="classns3_1_1_sat_fwd_link_scheduler_default.html#a2386074164f7fa1f232016ae942e2634">ns3::SatFwdLinkSchedulerDefault</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00236">236</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00243">243</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00317">m_bbFrameConf</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00326">m_bbFrameConf</a>.</p>
 
 </div>
 </div>
@@ -1172,11 +1206,11 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>C/N0 estimated for object. NAN, if estimate is not available. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00363">363</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00378">378</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00344">m_cnoEstimatorContainer</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00353">m_cnoEstimatorContainer</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00192">ns3::SatFwdLinkSchedulerDefault::ScheduleBbFrames()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00270">ns3::SatFwdLinkSchedulerTimeSlicing::ScheduleBbFrames()</a>, and <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00186">ns3::SatScpcScheduler::ScheduleBbFrames()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00203">ns3::SatFwdLinkSchedulerDefault::ScheduleBbFrames()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00287">ns3::SatFwdLinkSchedulerTimeSlicing::ScheduleBbFrames()</a>, and <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00189">ns3::SatScpcScheduler::ScheduleBbFrames()</a>.</p>
 <div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">
@@ -1233,7 +1267,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00303">303</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00318">318</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
 </div>
 </div>
@@ -1264,11 +1298,11 @@ Protected Attributes</h2></td></tr>
 <p>Get the type ID. </p>
 <dl class="section return"><dt>Returns</dt><dd>the object TypeId </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00102">102</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00107">107</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-cno-estimator_8h_source.html#l00049">ns3::SatCnoEstimator::AVERAGE</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00073">BUFFERING_DELAY_SORT</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00074">BUFFERING_LOAD_SORT</a>, <a class="el" href="satellite-cno-estimator_8h_source.html#l00047">ns3::SatCnoEstimator::LAST</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00322">m_additionalSortCriteria</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00317">m_bbFrameConf</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00354">m_cnoEstimationWindow</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00349">m_cnoEstimatorMode</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00301">m_dummyFrameSendingEnabled</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00312">m_periodicInterval</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00364">m_schedulingSymbolRateTrace</a>, <a class="el" href="satellite-cno-estimator_8h_source.html#l00048">ns3::SatCnoEstimator::MINIMUM</a>, and <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00072">NO_SORT</a>.</p>
+<p class="reference">References <a class="el" href="satellite-cno-estimator_8h_source.html#l00051">ns3::SatCnoEstimator::AVERAGE</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00077">BUFFERING_DELAY_SORT</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00078">BUFFERING_LOAD_SORT</a>, <a class="el" href="satellite-cno-estimator_8h_source.html#l00049">ns3::SatCnoEstimator::LAST</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00331">m_additionalSortCriteria</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00326">m_bbFrameConf</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00363">m_cnoEstimationWindow</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00358">m_cnoEstimatorMode</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00310">m_dummyFrameSendingEnabled</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00321">m_periodicInterval</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00373">m_schedulingSymbolRateTrace</a>, <a class="el" href="satellite-cno-estimator_8h_source.html#l00050">ns3::SatCnoEstimator::MINIMUM</a>, and <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00076">NO_SORT</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00159">GetInstanceTypeId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00166">GetInstanceTypeId()</a>.</p>
 <div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-12-summary" class="dynsummary" style="display:block;">
@@ -1334,7 +1368,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Handles periodic timer timeouts. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00285">285</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00300">300</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
 </div>
 </div>
@@ -1363,7 +1397,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Schedule BB Frames. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00297">297</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00312">312</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
 </div>
 </div>
@@ -1394,7 +1428,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classns3_1_1_sat_scpc_scheduler.html#a1c3f17f6706ac7d39c3aac87506d98ae">ns3::SatScpcScheduler</a>, <a class="el" href="classns3_1_1_sat_fwd_link_scheduler_time_slicing.html#a78c0e59fa045df4f1074e23101b2e4ce">ns3::SatFwdLinkSchedulerTimeSlicing</a>, and <a class="el" href="classns3_1_1_sat_fwd_link_scheduler_default.html#a49f6392ff892ac0e9ea9d852e609e292">ns3::SatFwdLinkSchedulerDefault</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00291">291</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00306">306</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
 </div>
 </div>
@@ -1433,9 +1467,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00229">229</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00236">236</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00339">m_sendControlMsgCallback</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00348">m_sendControlMsgCallback</a>.</p>
 
 </div>
 </div>
@@ -1457,9 +1491,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Set the value of m_dummyFrameSendingEnabled. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00279">279</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00286">286</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00301">m_dummyFrameSendingEnabled</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00310">m_dummyFrameSendingEnabled</a>.</p>
 
 </div>
 </div>
@@ -1487,9 +1521,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00208">208</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00215">215</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00334">m_schedContextCallback</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00343">m_schedContextCallback</a>.</p>
 
 </div>
 </div>
@@ -1517,9 +1551,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00222">222</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00229">229</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00339">m_sendControlMsgCallback</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00348">m_sendControlMsgCallback</a>.</p>
 
 </div>
 </div>
@@ -1547,9 +1581,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00215">215</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00222">222</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00329">m_txOpportunityCallback</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00338">m_txOpportunityCallback</a>.</p>
 
 </div>
 </div>
@@ -1585,11 +1619,11 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00309">309</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00324">324</a> of file <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html">satellite-fwd-link-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00073">BUFFERING_DELAY_SORT</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00074">BUFFERING_LOAD_SORT</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00068">CompareSoFlowId()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00088">CompareSoPriorityHol()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00074">CompareSoPriorityLoad()</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00322">m_additionalSortCriteria</a>, and <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00072">NO_SORT</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00077">BUFFERING_DELAY_SORT</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00078">BUFFERING_LOAD_SORT</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00073">CompareSoFlowId()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00093">CompareSoPriorityHol()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00079">CompareSoPriorityLoad()</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00331">m_additionalSortCriteria</a>, and <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00076">NO_SORT</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00257">ns3::SatFwdLinkSchedulerDefault::GetSchedulingObjects()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00381">ns3::SatFwdLinkSchedulerTimeSlicing::GetSchedulingObjects()</a>, and <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00251">ns3::SatScpcScheduler::GetSchedulingObjects()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00268">ns3::SatFwdLinkSchedulerDefault::GetSchedulingObjects()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00398">ns3::SatFwdLinkSchedulerTimeSlicing::GetSchedulingObjects()</a>, and <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00254">ns3::SatScpcScheduler::GetSchedulingObjects()</a>.</p>
 <div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-13-summary" class="dynsummary" style="display:block;">
@@ -1653,9 +1687,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Additional sorting criteria for scheduling objects received from LLC. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00322">322</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00331">331</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00102">GetTypeId()</a>, and <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00309">SortSchedulingObjects()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00107">GetTypeId()</a>, and <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00324">SortSchedulingObjects()</a>.</p>
 
 </div>
 </div>
@@ -1681,9 +1715,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Configured BB Frame conf. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00317">317</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00326">326</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00076">ns3::SatFwdLinkSchedulerDefault::SatFwdLinkSchedulerDefault()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00060">ns3::SatFwdLinkSchedulerTimeSlicing::SatFwdLinkSchedulerTimeSlicing()</a>, <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00074">ns3::SatScpcScheduler::SatScpcScheduler()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00346">CnoMatchWithFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00270">GetDefaultFrameDuration()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00109">ns3::SatFwdLinkSchedulerDefault::GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00145">ns3::SatFwdLinkSchedulerTimeSlicing::GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00236">GetNextFrame()</a>, <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00105">ns3::SatScpcScheduler::GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00102">GetTypeId()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00192">ns3::SatFwdLinkSchedulerDefault::ScheduleBbFrames()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00270">ns3::SatFwdLinkSchedulerTimeSlicing::ScheduleBbFrames()</a>, and <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00186">ns3::SatScpcScheduler::ScheduleBbFrames()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00079">ns3::SatFwdLinkSchedulerDefault::SatFwdLinkSchedulerDefault()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00065">ns3::SatFwdLinkSchedulerTimeSlicing::SatFwdLinkSchedulerTimeSlicing()</a>, <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00077">ns3::SatScpcScheduler::SatScpcScheduler()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00361">CnoMatchWithFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00277">GetDefaultFrameDuration()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00112">ns3::SatFwdLinkSchedulerDefault::GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00150">ns3::SatFwdLinkSchedulerTimeSlicing::GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00243">GetNextFrame()</a>, <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00108">ns3::SatScpcScheduler::GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00107">GetTypeId()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00203">ns3::SatFwdLinkSchedulerDefault::ScheduleBbFrames()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00287">ns3::SatFwdLinkSchedulerTimeSlicing::ScheduleBbFrames()</a>, and <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00189">ns3::SatScpcScheduler::ScheduleBbFrames()</a>.</p>
 
 </div>
 </div>
@@ -1709,9 +1743,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Carrier bandwidth in hertz where scheduler is associated to. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00359">359</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00368">368</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00060">ns3::SatFwdLinkSchedulerTimeSlicing::SatFwdLinkSchedulerTimeSlicing()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00109">ns3::SatFwdLinkSchedulerDefault::GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00145">ns3::SatFwdLinkSchedulerTimeSlicing::GetNextFrame()</a>, <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00105">ns3::SatScpcScheduler::GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00477">ns3::SatFwdLinkSchedulerTimeSlicing::GetSymbols()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00192">ns3::SatFwdLinkSchedulerDefault::ScheduleBbFrames()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00270">ns3::SatFwdLinkSchedulerTimeSlicing::ScheduleBbFrames()</a>, and <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00186">ns3::SatScpcScheduler::ScheduleBbFrames()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00065">ns3::SatFwdLinkSchedulerTimeSlicing::SatFwdLinkSchedulerTimeSlicing()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00112">ns3::SatFwdLinkSchedulerDefault::GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00150">ns3::SatFwdLinkSchedulerTimeSlicing::GetNextFrame()</a>, <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00108">ns3::SatScpcScheduler::GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00494">ns3::SatFwdLinkSchedulerTimeSlicing::GetSymbols()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00203">ns3::SatFwdLinkSchedulerDefault::ScheduleBbFrames()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00287">ns3::SatFwdLinkSchedulerTimeSlicing::ScheduleBbFrames()</a>, and <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00189">ns3::SatScpcScheduler::ScheduleBbFrames()</a>.</p>
 
 </div>
 </div>
@@ -1737,9 +1771,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Time window for C/N0 estimation. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00354">354</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00363">363</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00380">CreateCnoEstimator()</a>, and <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00102">GetTypeId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00395">CreateCnoEstimator()</a>, and <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00107">GetTypeId()</a>.</p>
 
 </div>
 </div>
@@ -1765,9 +1799,9 @@ Protected Attributes</h2></td></tr>
 
 <p>C/N0 estimator per UT. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00344">344</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00353">353</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00246">CnoInfoUpdated()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00198">DoDispose()</a>, and <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00363">GetSchedulingObjectCno()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00253">CnoInfoUpdated()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00205">DoDispose()</a>, and <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00378">GetSchedulingObjectCno()</a>.</p>
 
 </div>
 </div>
@@ -1793,9 +1827,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Mode used for C/N0 estimator. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00349">349</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00358">358</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00380">CreateCnoEstimator()</a>, and <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00102">GetTypeId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00395">CreateCnoEstimator()</a>, and <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00107">GetTypeId()</a>.</p>
 
 </div>
 </div>
@@ -1822,9 +1856,9 @@ Protected Attributes</h2></td></tr>
 <p>Flag indicating if Dummy Frames are sent or not. </p>
 <p>false means that only transmission time is simulated without sending. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00301">301</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00310">310</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00109">ns3::SatFwdLinkSchedulerDefault::GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00145">ns3::SatFwdLinkSchedulerTimeSlicing::GetNextFrame()</a>, <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00105">ns3::SatScpcScheduler::GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00102">GetTypeId()</a>, and <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00279">SetDummyFrameSendingEnabled()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00112">ns3::SatFwdLinkSchedulerDefault::GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00150">ns3::SatFwdLinkSchedulerTimeSlicing::GetNextFrame()</a>, <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00108">ns3::SatScpcScheduler::GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00107">GetTypeId()</a>, and <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00286">SetDummyFrameSendingEnabled()</a>.</p>
 
 </div>
 </div>
@@ -1850,9 +1884,9 @@ Protected Attributes</h2></td></tr>
 
 <p>MAC address of the this instance (node) </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00295">295</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00304">304</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00109">ns3::SatFwdLinkSchedulerDefault::GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00145">ns3::SatFwdLinkSchedulerTimeSlicing::GetNextFrame()</a>, and <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00105">ns3::SatScpcScheduler::GetNextFrame()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00112">ns3::SatFwdLinkSchedulerDefault::GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00150">ns3::SatFwdLinkSchedulerTimeSlicing::GetNextFrame()</a>, and <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00108">ns3::SatScpcScheduler::GetNextFrame()</a>.</p>
 
 </div>
 </div>
@@ -1879,9 +1913,9 @@ Protected Attributes</h2></td></tr>
 <p>The interval for periodic scheduling timer. </p>
 <p>Timer is evaluated by scheduling calls to PeriodicTimerExpired. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00312">312</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00321">321</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00076">ns3::SatFwdLinkSchedulerDefault::SatFwdLinkSchedulerDefault()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00060">ns3::SatFwdLinkSchedulerTimeSlicing::SatFwdLinkSchedulerTimeSlicing()</a>, <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00074">ns3::SatScpcScheduler::SatScpcScheduler()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00428">ns3::SatFwdLinkSchedulerTimeSlicing::CanOpenBbFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00145">ns3::SatFwdLinkSchedulerTimeSlicing::GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00381">ns3::SatFwdLinkSchedulerTimeSlicing::GetSchedulingObjects()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00102">GetTypeId()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00169">ns3::SatFwdLinkSchedulerDefault::PeriodicTimerExpired()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00237">ns3::SatFwdLinkSchedulerTimeSlicing::PeriodicTimerExpired()</a>, <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00165">ns3::SatScpcScheduler::PeriodicTimerExpired()</a>, and <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00270">ns3::SatFwdLinkSchedulerTimeSlicing::ScheduleBbFrames()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00079">ns3::SatFwdLinkSchedulerDefault::SatFwdLinkSchedulerDefault()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00065">ns3::SatFwdLinkSchedulerTimeSlicing::SatFwdLinkSchedulerTimeSlicing()</a>, <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00077">ns3::SatScpcScheduler::SatScpcScheduler()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00445">ns3::SatFwdLinkSchedulerTimeSlicing::CanOpenBbFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00150">ns3::SatFwdLinkSchedulerTimeSlicing::GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00398">ns3::SatFwdLinkSchedulerTimeSlicing::GetSchedulingObjects()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00107">GetTypeId()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00180">ns3::SatFwdLinkSchedulerDefault::PeriodicTimerExpired()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00254">ns3::SatFwdLinkSchedulerTimeSlicing::PeriodicTimerExpired()</a>, <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00168">ns3::SatScpcScheduler::PeriodicTimerExpired()</a>, and <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00287">ns3::SatFwdLinkSchedulerTimeSlicing::ScheduleBbFrames()</a>.</p>
 
 </div>
 </div>
@@ -1907,9 +1941,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Random variable used in FWD link scheduling. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00306">306</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00315">315</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00175">SatFwdLinkScheduler()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00182">SatFwdLinkScheduler()</a>.</p>
 
 </div>
 </div>
@@ -1935,9 +1969,9 @@ Protected Attributes</h2></td></tr>
 
 <p>The scheduling context getter callback. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00334">334</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00343">343</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00198">DoDispose()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00257">ns3::SatFwdLinkSchedulerDefault::GetSchedulingObjects()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00381">ns3::SatFwdLinkSchedulerTimeSlicing::GetSchedulingObjects()</a>, <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00251">ns3::SatScpcScheduler::GetSchedulingObjects()</a>, and <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00208">SetSchedContextCallback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00205">DoDispose()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00268">ns3::SatFwdLinkSchedulerDefault::GetSchedulingObjects()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00398">ns3::SatFwdLinkSchedulerTimeSlicing::GetSchedulingObjects()</a>, <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00254">ns3::SatScpcScheduler::GetSchedulingObjects()</a>, and <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00215">SetSchedContextCallback()</a>.</p>
 
 </div>
 </div>
@@ -1963,9 +1997,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Traced callback for symbol rate, with flowId, requested Modcod info. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00364">364</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00373">373</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00102">GetTypeId()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00182">ns3::SatFwdLinkSchedulerDefault::SendAndClearSymbolsSentStat()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00250">ns3::SatFwdLinkSchedulerTimeSlicing::SendAndClearSymbolsSentStat()</a>, and <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00176">ns3::SatScpcScheduler::SendAndClearSymbolsSentStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00107">GetTypeId()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00193">ns3::SatFwdLinkSchedulerDefault::SendAndClearSymbolsSentStat()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00267">ns3::SatFwdLinkSchedulerTimeSlicing::SendAndClearSymbolsSentStat()</a>, and <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00179">ns3::SatScpcScheduler::SendAndClearSymbolsSentStat()</a>.</p>
 
 </div>
 </div>
@@ -1991,9 +2025,9 @@ Protected Attributes</h2></td></tr>
 
 <p>The control message sender callback. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00339">339</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00348">348</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00198">DoDispose()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00229">SendControlMsg()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00411">ns3::SatFwdLinkSchedulerTimeSlicing::SendTimeSliceSubscription()</a>, and <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00222">SetSendControlMsgCallback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00205">DoDispose()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00236">SendControlMsg()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00428">ns3::SatFwdLinkSchedulerTimeSlicing::SendTimeSliceSubscription()</a>, and <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00229">SetSendControlMsgCallback()</a>.</p>
 
 </div>
 </div>
@@ -2019,9 +2053,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Callback to notify the txOpportunity to upper layer Returns a packet Attributes: payload in bytes. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00329">329</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00338">338</a> of file <a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00198">DoDispose()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00192">ns3::SatFwdLinkSchedulerDefault::ScheduleBbFrames()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00270">ns3::SatFwdLinkSchedulerTimeSlicing::ScheduleBbFrames()</a>, <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00186">ns3::SatScpcScheduler::ScheduleBbFrames()</a>, and <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00215">SetTxOpportunityCallback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00205">DoDispose()</a>, <a class="el" href="satellite-fwd-link-scheduler-default_8cc_source.html#l00203">ns3::SatFwdLinkSchedulerDefault::ScheduleBbFrames()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00287">ns3::SatFwdLinkSchedulerTimeSlicing::ScheduleBbFrames()</a>, <a class="el" href="satellite-scpc-scheduler_8cc_source.html#l00189">ns3::SatScpcScheduler::ScheduleBbFrames()</a>, and <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00222">SetTxOpportunityCallback()</a>.</p>
 
 </div>
 </div>

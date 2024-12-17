@@ -254,7 +254,7 @@ $(document).ready(function(){initNavTree('satellite-arq-test_8cc_source.html',''
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_sat_rtn_arq_test_case.html#a59da2ab3d1873ba47897a1058b6a6e5d">m_rle</a>)</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    {</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <a class="code" href="class_sat_rtn_arq_test_case.html#a59da2ab3d1873ba47897a1058b6a6e5d">m_rle</a>-&gt;DoDispose();</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <a class="code" href="class_sat_rtn_arq_test_case.html#a59da2ab3d1873ba47897a1058b6a6e5d">m_rle</a> = NULL;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <a class="code" href="class_sat_rtn_arq_test_case.html#a59da2ab3d1873ba47897a1058b6a6e5d">m_rle</a> = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    }</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;}</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
@@ -516,7 +516,7 @@ $(document).ready(function(){initNavTree('satellite-arq-test_8cc_source.html',''
 <div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_sat_fwd_arq_test_case.html#ac9b9dcbb063815bc33a356f33c32450a">m_gse</a>)</div>
 <div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;    {</div>
 <div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;        <a class="code" href="class_sat_fwd_arq_test_case.html#ac9b9dcbb063815bc33a356f33c32450a">m_gse</a>-&gt;DoDispose();</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;        <a class="code" href="class_sat_fwd_arq_test_case.html#ac9b9dcbb063815bc33a356f33c32450a">m_gse</a> = NULL;</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;        <a class="code" href="class_sat_fwd_arq_test_case.html#ac9b9dcbb063815bc33a356f33c32450a">m_gse</a> = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    }</div>
 <div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;}</div>
 <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160; </div>
@@ -720,10 +720,10 @@ $(document).ready(function(){initNavTree('satellite-arq-test_8cc_source.html',''
 <div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;};</div>
 <div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160; </div>
 <div class="line"><a name="l00696"></a><span class="lineno"><a class="line" href="class_sat_arq_test_suite.html#a74924b196f510da7d5169959cce70049">  696</a></span>&#160;<a class="code" href="class_sat_arq_test_suite.html#a74924b196f510da7d5169959cce70049">SatArqTestSuite::SatArqTestSuite</a>()</div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    : TestSuite(<span class="stringliteral">&quot;sat-arq-test&quot;</span>, UNIT)</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    : TestSuite(<span class="stringliteral">&quot;sat-arq-test&quot;</span>, Type::UNIT)</div>
 <div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;{</div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;    AddTestCase(<span class="keyword">new</span> <a class="code" href="class_sat_rtn_arq_test_case.html">SatRtnArqTestCase</a>, TestCase::QUICK);</div>
-<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;    AddTestCase(<span class="keyword">new</span> <a class="code" href="class_sat_fwd_arq_test_case.html">SatFwdArqTestCase</a>, TestCase::QUICK);</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;    AddTestCase(<span class="keyword">new</span> <a class="code" href="class_sat_rtn_arq_test_case.html">SatRtnArqTestCase</a>, TestCase::Duration::QUICK);</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;    AddTestCase(<span class="keyword">new</span> <a class="code" href="class_sat_fwd_arq_test_case.html">SatFwdArqTestCase</a>, TestCase::Duration::QUICK);</div>
 <div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;}</div>
 <div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160; </div>
 <div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;<span class="comment">// Do allocate an instance of this TestSuite</span></div>
@@ -793,7 +793,7 @@ $(document).ready(function(){initNavTree('satellite-arq-test_8cc_source.html',''
 <div class="ttc" id="aclass_sat_rtn_arq_test_case_html_ad4960ecde4d5add23c4b0f41a4004238"><div class="ttname"><a href="class_sat_rtn_arq_test_case.html#ad4960ecde4d5add23c4b0f41a4004238">SatRtnArqTestCase::m_source</a></div><div class="ttdeci">Mac48Address m_source</div><div class="ttdef"><b>Definition:</b> <a href="satellite-arq-test_8cc_source.html#l00125">satellite-arq-test.cc:125</a></div></div>
 <div class="ttc" id="aclass_sat_rtn_arq_test_case_html_ae059ec428b497e83cbc1607c6d6540de"><div class="ttname"><a href="class_sat_rtn_arq_test_case.html#ae059ec428b497e83cbc1607c6d6540de">SatRtnArqTestCase::SatRtnArqTestCase</a></div><div class="ttdeci">SatRtnArqTestCase()</div><div class="ttdef"><b>Definition:</b> <a href="satellite-arq-test_8cc_source.html#l00174">satellite-arq-test.cc:174</a></div></div>
 <div class="ttc" id="aclass_sat_rtn_arq_test_case_html_af05fb6d36216ccb0eed64ab1c2755e51"><div class="ttname"><a href="class_sat_rtn_arq_test_case.html#af05fb6d36216ccb0eed64ab1c2755e51">SatRtnArqTestCase::m_txs</a></div><div class="ttdeci">uint32_t m_txs</div><div class="ttdef"><b>Definition:</b> <a href="satellite-arq-test_8cc_source.html#l00162">satellite-arq-test.cc:162</a></div></div>
-<div class="ttc" id="anamespacens3_html"><div class="ttname"><a href="namespacens3.html">ns3</a></div><div class="ttdoc">SatArqSequenceNumber is handling the sequence numbers for the ARQ process.</div><div class="ttdef"><b>Definition:</b> <a href="sat-link-results-plot_8cc_source.html#l00039">sat-link-results-plot.cc:40</a></div></div>
+<div class="ttc" id="anamespacens3_html"><div class="ttname"><a href="namespacens3.html">ns3</a></div><div class="ttdoc">SatArqSequenceNumber is handling the sequence numbers for the ARQ process.</div><div class="ttdef"><b>Definition:</b> <a href="sat-link-results-plot_8cc_source.html#l00040">sat-link-results-plot.cc:41</a></div></div>
 <div class="ttc" id="asatellite-arq-test_8cc_html_af19da51fa463e8833a243d0a92c2a4ce"><div class="ttname"><a href="satellite-arq-test_8cc.html#af19da51fa463e8833a243d0a92c2a4ce">satArqTestSuite</a></div><div class="ttdeci">static SatArqTestSuite satArqTestSuite</div><div class="ttdef"><b>Definition:</b> <a href="satellite-arq-test_8cc_source.html#l00704">satellite-arq-test.cc:704</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

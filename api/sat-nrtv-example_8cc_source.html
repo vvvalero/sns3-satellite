@@ -200,46 +200,45 @@ $(document).ready(function(){initNavTree('sat-nrtv-example_8cc_source.html','');
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">// GlobalValue::Bind (&quot;SimulatorImplementationType&quot;, StringValue</span></div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="comment">// (&quot;ns3::RealtimeSimulatorImpl&quot;));</span></div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">// Creating the reference system. Note, currently the satellite module supports</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="comment">// only one reference system, which is named as &quot;Scenario72&quot;. The string is utilized</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment">// in mapping the scenario to the needed reference system configuration files. Arbitrary</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">// scenario name results in fatal error.</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    Ptr&lt;SatHelper&gt; helper = simulationHelper-&gt;CreateSatScenario(satScenario);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">// get users</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    NodeContainer utUsers = helper-&gt;GetUtUsers();</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    NodeContainer gwUsers = helper-&gt;GetGwUsers();</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    NrtvHelper nrtvHelper(TypeId::LookupByName(<span class="stringliteral">&quot;ns3::TcpSocketFactory&quot;</span>));</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    nrtvHelper.InstallUsingIpv4(gwUsers.Get(0), utUsers);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    nrtvHelper.GetServer().Start(Seconds(1.0));</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keyword">auto</span> apps = nrtvHelper.GetClients();</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    apps.Start(Seconds(3.0));</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    uint32_t i = 0;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    std::vector&lt;Ptr&lt;ClientRxTracePlot&gt;&gt; plots;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> app = apps.Begin(); app != apps.End(); app++, i++)</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        std::stringstream plotName;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        plotName &lt;&lt; <span class="stringliteral">&quot;NRTV-TCP-client-&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;-trace&quot;</span>;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        plots.push_back(CreateObject&lt;ClientRxTracePlot&gt;(*app, plotName.str()));</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    NS_LOG_INFO(<span class="stringliteral">&quot;--- sat-nrtv-example ---&quot;</span>);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    NS_LOG_INFO(<span class="stringliteral">&quot;  Scenario used: &quot;</span> &lt;&lt; scenario);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    NS_LOG_INFO(<span class="stringliteral">&quot;  &quot;</span>);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    simulationHelper-&gt;RunSimulation();</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    plots.clear();</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;} <span class="comment">// end of `int main (int argc, char *argv[])`</span></div>
-<div class="ttc" id="aclassns3_1_1_sat_helper_html_a91bdbc19a43a4491ab85741d68e7c1e8"><div class="ttname"><a href="classns3_1_1_sat_helper.html#a91bdbc19a43a4491ab85741d68e7c1e8">ns3::SatHelper::PreDefinedScenario_t</a></div><div class="ttdeci">PreDefinedScenario_t</div><div class="ttdoc">Values for pre-defined scenarios to be used by helper when building satellite network topology base.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-helper_8h_source.html#l00067">satellite-helper.h:68</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_helper_html_a91bdbc19a43a4491ab85741d68e7c1e8a08bf98bcec28aed4d5d214d4e97b8745"><div class="ttname"><a href="classns3_1_1_sat_helper.html#a91bdbc19a43a4491ab85741d68e7c1e8a08bf98bcec28aed4d5d214d4e97b8745">ns3::SatHelper::LARGER</a></div><div class="ttdeci">@ LARGER</div><div class="ttdoc">LARGER Larger scenario used as base.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-helper_8h_source.html#l00071">satellite-helper.h:71</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_helper_html_a91bdbc19a43a4491ab85741d68e7c1e8a591e07887604acf3d84a570b633da543"><div class="ttname"><a href="classns3_1_1_sat_helper.html#a91bdbc19a43a4491ab85741d68e7c1e8a591e07887604acf3d84a570b633da543">ns3::SatHelper::FULL</a></div><div class="ttdeci">@ FULL</div><div class="ttdoc">FULL Full scenario used as base.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-helper_8h_source.html#l00073">satellite-helper.h:72</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_helper_html_a91bdbc19a43a4491ab85741d68e7c1e8aab11c805e5556363a4875fae3452e12c"><div class="ttname"><a href="classns3_1_1_sat_helper.html#a91bdbc19a43a4491ab85741d68e7c1e8aab11c805e5556363a4875fae3452e12c">ns3::SatHelper::SIMPLE</a></div><div class="ttdeci">@ SIMPLE</div><div class="ttdoc">SIMPLE Simple scenario used as base.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-helper_8h_source.html#l00070">satellite-helper.h:70</a></div></div>
-<div class="ttc" id="anamespacens3_html"><div class="ttname"><a href="namespacens3.html">ns3</a></div><div class="ttdoc">SatArqSequenceNumber is handling the sequence numbers for the ARQ process.</div><div class="ttdef"><b>Definition:</b> <a href="sat-link-results-plot_8cc_source.html#l00039">sat-link-results-plot.cc:40</a></div></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    simulationHelper-&gt;LoadScenario(<span class="stringliteral">&quot;geo-33E&quot;</span>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment">// Creating the reference system.</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    simulationHelper-&gt;CreateSatScenario(satScenario);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">// get users</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    NodeContainer utUsers = Singleton&lt;SatTopology&gt;::Get()-&gt;GetUtUserNodes();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    NodeContainer gwUsers = Singleton&lt;SatTopology&gt;::Get()-&gt;GetGwUserNodes();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    NrtvHelper nrtvHelper(TypeId::LookupByName(<span class="stringliteral">&quot;ns3::TcpSocketFactory&quot;</span>));</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    nrtvHelper.InstallUsingIpv4(gwUsers.Get(0), utUsers);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    nrtvHelper.GetServer().Start(Seconds(1.0));</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">auto</span> apps = nrtvHelper.GetClients();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    apps.Start(Seconds(3.0));</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    uint32_t i = 0;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    std::vector&lt;Ptr&lt;ClientRxTracePlot&gt;&gt; plots;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> app = apps.Begin(); app != apps.End(); app++, i++)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        std::stringstream plotName;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        plotName &lt;&lt; <span class="stringliteral">&quot;NRTV-TCP-client-&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;-trace&quot;</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        plots.push_back(CreateObject&lt;ClientRxTracePlot&gt;(*app, plotName.str()));</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    NS_LOG_INFO(<span class="stringliteral">&quot;--- sat-nrtv-example ---&quot;</span>);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    NS_LOG_INFO(<span class="stringliteral">&quot;  Scenario used: &quot;</span> &lt;&lt; scenario);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    NS_LOG_INFO(<span class="stringliteral">&quot;  &quot;</span>);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    simulationHelper-&gt;RunSimulation();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    plots.clear();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;} <span class="comment">// end of `int main (int argc, char *argv[])`</span></div>
+<div class="ttc" id="aclassns3_1_1_sat_helper_html_a91bdbc19a43a4491ab85741d68e7c1e8"><div class="ttname"><a href="classns3_1_1_sat_helper.html#a91bdbc19a43a4491ab85741d68e7c1e8">ns3::SatHelper::PreDefinedScenario_t</a></div><div class="ttdeci">PreDefinedScenario_t</div><div class="ttdoc">Values for pre-defined scenarios to be used by helper when building satellite network topology base.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-helper_8h_source.html#l00073">satellite-helper.h:74</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_helper_html_a91bdbc19a43a4491ab85741d68e7c1e8a08bf98bcec28aed4d5d214d4e97b8745"><div class="ttname"><a href="classns3_1_1_sat_helper.html#a91bdbc19a43a4491ab85741d68e7c1e8a08bf98bcec28aed4d5d214d4e97b8745">ns3::SatHelper::LARGER</a></div><div class="ttdeci">@ LARGER</div><div class="ttdoc">LARGER Larger scenario used as base.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-helper_8h_source.html#l00077">satellite-helper.h:77</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_helper_html_a91bdbc19a43a4491ab85741d68e7c1e8a591e07887604acf3d84a570b633da543"><div class="ttname"><a href="classns3_1_1_sat_helper.html#a91bdbc19a43a4491ab85741d68e7c1e8a591e07887604acf3d84a570b633da543">ns3::SatHelper::FULL</a></div><div class="ttdeci">@ FULL</div><div class="ttdoc">FULL Full scenario used as base.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-helper_8h_source.html#l00079">satellite-helper.h:78</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_helper_html_a91bdbc19a43a4491ab85741d68e7c1e8aab11c805e5556363a4875fae3452e12c"><div class="ttname"><a href="classns3_1_1_sat_helper.html#a91bdbc19a43a4491ab85741d68e7c1e8aab11c805e5556363a4875fae3452e12c">ns3::SatHelper::SIMPLE</a></div><div class="ttdeci">@ SIMPLE</div><div class="ttdoc">SIMPLE Simple scenario used as base.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-helper_8h_source.html#l00076">satellite-helper.h:76</a></div></div>
+<div class="ttc" id="anamespacens3_html"><div class="ttname"><a href="namespacens3.html">ns3</a></div><div class="ttdoc">SatArqSequenceNumber is handling the sequence numbers for the ARQ process.</div><div class="ttdef"><b>Definition:</b> <a href="sat-link-results-plot_8cc_source.html#l00040">sat-link-results-plot.cc:41</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 

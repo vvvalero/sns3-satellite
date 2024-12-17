@@ -180,6 +180,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acd58e0ad83985b394bd18f2a4ca8a1b6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_fwd_link_scheduler_time_slicing.html#acd58e0ad83985b394bd18f2a4ca8a1b6">~SatFwdLinkSchedulerTimeSlicing</a> ()</td></tr>
 <tr class="memdesc:acd58e0ad83985b394bd18f2a4ca8a1b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html" title="SatFwdLinkScheduler schedules BB frames for forward link.">SatFwdLinkScheduler</a>.  <a href="classns3_1_1_sat_fwd_link_scheduler_time_slicing.html#acd58e0ad83985b394bd18f2a4ca8a1b6">More...</a><br /></td></tr>
 <tr class="separator:acd58e0ad83985b394bd18f2a4ca8a1b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e87a587dfc22fcf4709feaeb73f2ca2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_fwd_link_scheduler_time_slicing.html#a4e87a587dfc22fcf4709feaeb73f2ca2">ClearAllPackets</a> ()</td></tr>
+<tr class="memdesc:a4e87a587dfc22fcf4709feaeb73f2ca2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all packets being treated.  <a href="classns3_1_1_sat_fwd_link_scheduler_time_slicing.html#a4e87a587dfc22fcf4709feaeb73f2ca2">More...</a><br /></td></tr>
+<tr class="separator:a4e87a587dfc22fcf4709feaeb73f2ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbc1cb240cfa107359f56049d2f2c23c"><td class="memItemLeft" align="right" valign="top">TypeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_fwd_link_scheduler_time_slicing.html#adbc1cb240cfa107359f56049d2f2c23c">GetInstanceTypeId</a> (void) const</td></tr>
 <tr class="memdesc:adbc1cb240cfa107359f56049d2f2c23c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type ID of instance.  <a href="classns3_1_1_sat_fwd_link_scheduler_time_slicing.html#adbc1cb240cfa107359f56049d2f2c23c">More...</a><br /></td></tr>
 <tr class="separator:adbc1cb240cfa107359f56049d2f2c23c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -387,7 +390,7 @@ Additional Inherited Members</h2></td></tr>
 <p>It classifies the packets into different time slices depending on its destination MAC address. </p><pre class="fragment">   SatFwdLinkSchedulerTimeSlicing communicated through callback functions to request
 </pre><p> scheduling objects and notifying TX opportunities. </p><pre class="fragment">   GW MAC requests frames from scheduler through method GetNextFrame.
 </pre> 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00043">43</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html">satellite-fwd-link-scheduler-time-slicing.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00048">48</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html">satellite-fwd-link-scheduler-time-slicing.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3ea51c8485aaf928d866c9044c6d1b20"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3ea51c8485aaf928d866c9044c6d1b20">&#9670;&nbsp;</a></span>SatFwdLinkSchedulerTimeSlicing() <span class="overload">[1/2]</span></h2>
@@ -407,7 +410,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Construct a <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html" title="SatFwdLinkScheduler schedules BB frames for forward link.">SatFwdLinkScheduler</a>. </p>
 <p>This the default constructor for the <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html" title="SatFwdLinkScheduler schedules BB frames for forward link.">SatFwdLinkScheduler</a> is not supported. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00053">53</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00058">58</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
 
 </div>
 </div>
@@ -453,9 +456,9 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00060">60</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00065">65</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00317">ns3::SatFwdLinkScheduler::m_bbFrameConf</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00148">m_bbFrameContainers</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00359">ns3::SatFwdLinkScheduler::m_carrierBandwidthInHz</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00164">m_numberOfSlices</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00312">ns3::SatFwdLinkScheduler::m_periodicInterval</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00159">m_symbolsSent</a>, <a class="el" href="satellite-enums_8h_source.html#l01748">ns3::SatEnums::NORMAL_FRAME</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00237">PeriodicTimerExpired()</a>, <a class="el" href="satellite-enums_8h_source.html#l00176">ns3::SatEnums::SAT_NONVALID_MODCOD</a>, and <a class="el" href="satellite-enums_8h_source.html#l01747">ns3::SatEnums::SHORT_FRAME</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00326">ns3::SatFwdLinkScheduler::m_bbFrameConf</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00158">m_bbFrameContainers</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00368">ns3::SatFwdLinkScheduler::m_carrierBandwidthInHz</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00174">m_numberOfSlices</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00321">ns3::SatFwdLinkScheduler::m_periodicInterval</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00169">m_symbolsSent</a>, <a class="el" href="satellite-enums_8h_source.html#l01749">ns3::SatEnums::NORMAL_FRAME</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00254">PeriodicTimerExpired()</a>, <a class="el" href="satellite-enums_8h_source.html#l00177">ns3::SatEnums::SAT_NONVALID_MODCOD</a>, and <a class="el" href="satellite-enums_8h_source.html#l01748">ns3::SatEnums::SHORT_FRAME</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -500,7 +503,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Destroy a <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html" title="SatFwdLinkScheduler schedules BB frames for forward link.">SatFwdLinkScheduler</a>. </p>
 <p>This is the destructor for the <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html" title="SatFwdLinkScheduler schedules BB frames for forward link.">SatFwdLinkScheduler</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00131">131</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00136">136</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
 
 </div>
 </div>
@@ -545,11 +548,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00428">428</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00445">445</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00477">GetSymbols()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00148">m_bbFrameContainers</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00312">ns3::SatFwdLinkScheduler::m_periodicInterval</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00154">m_slicesMapping</a>, and <a class="el" href="satellite-enums_8h_source.html#l00176">ns3::SatEnums::SAT_NONVALID_MODCOD</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00494">GetSymbols()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00158">m_bbFrameContainers</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00321">ns3::SatFwdLinkScheduler::m_periodicInterval</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00164">m_slicesMapping</a>, and <a class="el" href="satellite-enums_8h_source.html#l00177">ns3::SatEnums::SAT_NONVALID_MODCOD</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00270">ScheduleBbFrames()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00287">ScheduleBbFrames()</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -574,6 +577,39 @@ Additional Inherited Members</h2></td></tr>
 <area shape="rect" href="classns3_1_1_sat_fwd_link_scheduler_time_slicing.html#a2aaa3f65813b54883ca2bfc3930d0d93" title="Actual constructor of a SatFwdLinkScheduler." alt="" coords="5,5,251,61"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a4e87a587dfc22fcf4709feaeb73f2ca2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e87a587dfc22fcf4709feaeb73f2ca2">&#9670;&nbsp;</a></span>ClearAllPackets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ns3::SatFwdLinkSchedulerTimeSlicing::ClearAllPackets </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove all packets being treated. </p>
+
+<p>Reimplemented from <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html#a34d3129b5ad974b050e5dc106ca2506b">ns3::SatFwdLinkScheduler</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00242">242</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00158">m_bbFrameContainers</a>.</p>
 
 </div>
 </div>
@@ -603,9 +639,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Do dispose actions. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00137">137</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00142">142</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00198">ns3::SatFwdLinkScheduler::DoDispose()</a>, and <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00148">m_bbFrameContainers</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00205">ns3::SatFwdLinkScheduler::DoDispose()</a>, and <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00158">m_bbFrameContainers</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -649,9 +685,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html#ac5c1a6f696653a8ad7eb448b8c839a0b">ns3::SatFwdLinkScheduler</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00048">48</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00053">53</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00033">GetTypeId()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00038">GetTypeId()</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -694,9 +730,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html#aa401adf6cfbda6c7f5eb1e9541523f06">ns3::SatFwdLinkScheduler</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00145">145</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00150">150</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-enums_8h_source.html#l01749">ns3::SatEnums::DUMMY_FRAME</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00317">ns3::SatFwdLinkScheduler::m_bbFrameConf</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00148">m_bbFrameContainers</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00359">ns3::SatFwdLinkScheduler::m_carrierBandwidthInHz</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00301">ns3::SatFwdLinkScheduler::m_dummyFrameSendingEnabled</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00175">m_lastSliceDequeued</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00295">ns3::SatFwdLinkScheduler::m_macAddress</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00164">m_numberOfSlices</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00312">ns3::SatFwdLinkScheduler::m_periodicInterval</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00159">m_symbolsSent</a>, <a class="el" href="satellite-mac-tag_8cc_source.html#l00059">ns3::SatMacTag::SetDestAddress()</a>, <a class="el" href="satellite-mac-tag_8cc_source.html#l00158">ns3::SatAddressE2ETag::SetE2EDestAddress()</a>, <a class="el" href="satellite-mac-tag_8cc_source.html#l00172">ns3::SatAddressE2ETag::SetE2ESourceAddress()</a>, and <a class="el" href="satellite-mac-tag_8cc_source.html#l00073">ns3::SatMacTag::SetSourceAddress()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-enums_8h_source.html#l01750">ns3::SatEnums::DUMMY_FRAME</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00326">ns3::SatFwdLinkScheduler::m_bbFrameConf</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00158">m_bbFrameContainers</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00368">ns3::SatFwdLinkScheduler::m_carrierBandwidthInHz</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00310">ns3::SatFwdLinkScheduler::m_dummyFrameSendingEnabled</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00185">m_lastSliceDequeued</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00304">ns3::SatFwdLinkScheduler::m_macAddress</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00174">m_numberOfSlices</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00321">ns3::SatFwdLinkScheduler::m_periodicInterval</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00169">m_symbolsSent</a>, <a class="el" href="satellite-mac-tag_8cc_source.html#l00061">ns3::SatMacTag::SetDestAddress()</a>, <a class="el" href="satellite-mac-tag_8cc_source.html#l00160">ns3::SatAddressE2ETag::SetE2EDestAddress()</a>, <a class="el" href="satellite-mac-tag_8cc_source.html#l00174">ns3::SatAddressE2ETag::SetE2ESourceAddress()</a>, and <a class="el" href="satellite-mac-tag_8cc_source.html#l00075">ns3::SatMacTag::SetSourceAddress()</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -746,11 +782,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00381">381</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00398">398</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00395">GetTotalDuration()</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00312">ns3::SatFwdLinkScheduler::m_periodicInterval</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00334">ns3::SatFwdLinkScheduler::m_schedContextCallback</a>, and <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00309">ns3::SatFwdLinkScheduler::SortSchedulingObjects()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00412">GetTotalDuration()</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00321">ns3::SatFwdLinkScheduler::m_periodicInterval</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00343">ns3::SatFwdLinkScheduler::m_schedContextCallback</a>, and <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00324">ns3::SatFwdLinkScheduler::SortSchedulingObjects()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00270">ScheduleBbFrames()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00287">ScheduleBbFrames()</a>.</p>
 <div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
@@ -816,11 +852,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00477">477</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00494">494</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00148">m_bbFrameContainers</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00359">ns3::SatFwdLinkScheduler::m_carrierBandwidthInHz</a>, and <a class="el" href="satellite-enums_8h_source.html#l00176">ns3::SatEnums::SAT_NONVALID_MODCOD</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00158">m_bbFrameContainers</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00368">ns3::SatFwdLinkScheduler::m_carrierBandwidthInHz</a>, and <a class="el" href="satellite-enums_8h_source.html#l00177">ns3::SatEnums::SAT_NONVALID_MODCOD</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00428">CanOpenBbFrame()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00445">CanOpenBbFrame()</a>.</p>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -861,11 +897,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00395">395</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00412">412</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00148">m_bbFrameContainers</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00158">m_bbFrameContainers</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00381">GetSchedulingObjects()</a>, and <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00270">ScheduleBbFrames()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00398">GetSchedulingObjects()</a>, and <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00287">ScheduleBbFrames()</a>.</p>
 <div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">
@@ -910,11 +946,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Get the type ID. </p>
 <dl class="section return"><dt>Returns</dt><dd>the object TypeId </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00033">33</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00038">38</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00164">m_numberOfSlices</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00174">m_numberOfSlices</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00048">GetInstanceTypeId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00053">GetInstanceTypeId()</a>.</p>
 <div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-12-summary" class="dynsummary" style="display:block;">
@@ -954,11 +990,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Handles periodic timer timeouts. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00237">237</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00254">254</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00312">ns3::SatFwdLinkScheduler::m_periodicInterval</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00270">ScheduleBbFrames()</a>, and <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00250">SendAndClearSymbolsSentStat()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00321">ns3::SatFwdLinkScheduler::m_periodicInterval</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00287">ScheduleBbFrames()</a>, and <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00267">SendAndClearSymbolsSentStat()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00060">SatFwdLinkSchedulerTimeSlicing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00065">SatFwdLinkSchedulerTimeSlicing()</a>.</p>
 <div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-13-summary" class="dynsummary" style="display:block;">
@@ -1020,11 +1056,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Schedule BB Frames. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00270">270</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00287">287</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00428">CanOpenBbFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00363">ns3::SatFwdLinkScheduler::GetSchedulingObjectCno()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00381">GetSchedulingObjects()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00395">GetTotalDuration()</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00317">ns3::SatFwdLinkScheduler::m_bbFrameConf</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00148">m_bbFrameContainers</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00359">ns3::SatFwdLinkScheduler::m_carrierBandwidthInHz</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00170">m_lastSliceAssigned</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00164">m_numberOfSlices</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00312">ns3::SatFwdLinkScheduler::m_periodicInterval</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00154">m_slicesMapping</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00329">ns3::SatFwdLinkScheduler::m_txOpportunityCallback</a>, and <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00411">SendTimeSliceSubscription()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00445">CanOpenBbFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler_8cc_source.html#l00378">ns3::SatFwdLinkScheduler::GetSchedulingObjectCno()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00398">GetSchedulingObjects()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00412">GetTotalDuration()</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00326">ns3::SatFwdLinkScheduler::m_bbFrameConf</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00158">m_bbFrameContainers</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00368">ns3::SatFwdLinkScheduler::m_carrierBandwidthInHz</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00180">m_lastSliceAssigned</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00174">m_numberOfSlices</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00321">ns3::SatFwdLinkScheduler::m_periodicInterval</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00164">m_slicesMapping</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00338">ns3::SatFwdLinkScheduler::m_txOpportunityCallback</a>, and <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00428">SendTimeSliceSubscription()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00237">PeriodicTimerExpired()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00254">PeriodicTimerExpired()</a>.</p>
 <div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-15-summary" class="dynsummary" style="display:block;">
@@ -1087,11 +1123,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html#a50cf3b11e1c06fdac63db5721b14f0e1">ns3::SatFwdLinkScheduler</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00250">250</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00267">267</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00164">m_numberOfSlices</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00364">ns3::SatFwdLinkScheduler::m_schedulingSymbolRateTrace</a>, and <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00159">m_symbolsSent</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00174">m_numberOfSlices</a>, <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00373">ns3::SatFwdLinkScheduler::m_schedulingSymbolRateTrace</a>, and <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00169">m_symbolsSent</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00237">PeriodicTimerExpired()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00254">PeriodicTimerExpired()</a>.</p>
 <div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-17-summary" class="dynsummary" style="display:block;">
@@ -1141,11 +1177,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00411">411</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00428">428</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html">satellite-fwd-link-scheduler-time-slicing.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00339">ns3::SatFwdLinkScheduler::m_sendControlMsgCallback</a>.</p>
+<p class="reference">References <a class="el" href="satellite-fwd-link-scheduler_8h_source.html#l00348">ns3::SatFwdLinkScheduler::m_sendControlMsgCallback</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00270">ScheduleBbFrames()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00287">ScheduleBbFrames()</a>.</p>
 <div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-18-summary" class="dynsummary" style="display:block;">
@@ -1186,9 +1222,9 @@ Additional Inherited Members</h2></td></tr>
 <p>The containers for BBFrames. </p>
 <p>The keys are the slices and the values the associated container </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00148">148</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html">satellite-fwd-link-scheduler-time-slicing.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00158">158</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html">satellite-fwd-link-scheduler-time-slicing.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00060">SatFwdLinkSchedulerTimeSlicing()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00428">CanOpenBbFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00137">DoDispose()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00145">GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00477">GetSymbols()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00395">GetTotalDuration()</a>, and <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00270">ScheduleBbFrames()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00065">SatFwdLinkSchedulerTimeSlicing()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00445">CanOpenBbFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00242">ClearAllPackets()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00142">DoDispose()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00150">GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00494">GetSymbols()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00412">GetTotalDuration()</a>, and <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00287">ScheduleBbFrames()</a>.</p>
 
 </div>
 </div>
@@ -1215,9 +1251,9 @@ Additional Inherited Members</h2></td></tr>
 <p>The slice of the last MAC address discovered. </p>
 <p>Used to associated destination MAC address to a slice following a Round Robin law. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00170">170</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html">satellite-fwd-link-scheduler-time-slicing.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00180">180</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html">satellite-fwd-link-scheduler-time-slicing.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00270">ScheduleBbFrames()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00287">ScheduleBbFrames()</a>.</p>
 
 </div>
 </div>
@@ -1244,9 +1280,9 @@ Additional Inherited Members</h2></td></tr>
 <p>The last slice from which a BBFrame has been sent. </p>
 <p>used for Round Robin scheduling. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00175">175</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html">satellite-fwd-link-scheduler-time-slicing.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00185">185</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html">satellite-fwd-link-scheduler-time-slicing.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00145">GetNextFrame()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00150">GetNextFrame()</a>.</p>
 
 </div>
 </div>
@@ -1272,9 +1308,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>The number of slices. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00164">164</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html">satellite-fwd-link-scheduler-time-slicing.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00174">174</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html">satellite-fwd-link-scheduler-time-slicing.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00060">SatFwdLinkSchedulerTimeSlicing()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00145">GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00033">GetTypeId()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00270">ScheduleBbFrames()</a>, and <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00250">SendAndClearSymbolsSentStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00065">SatFwdLinkSchedulerTimeSlicing()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00150">GetNextFrame()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00038">GetTypeId()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00287">ScheduleBbFrames()</a>, and <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00267">SendAndClearSymbolsSentStat()</a>.</p>
 
 </div>
 </div>
@@ -1301,9 +1337,9 @@ Additional Inherited Members</h2></td></tr>
 <p>The association between a destination MAC address and its slice. </p>
 <p>Slice 0 is the container for control BBFrames that are broadcasted to all UT. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00154">154</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html">satellite-fwd-link-scheduler-time-slicing.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00164">164</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html">satellite-fwd-link-scheduler-time-slicing.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00428">CanOpenBbFrame()</a>, and <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00270">ScheduleBbFrames()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00445">CanOpenBbFrame()</a>, and <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00287">ScheduleBbFrames()</a>.</p>
 
 </div>
 </div>
@@ -1329,9 +1365,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>The number of symbols sent for each slice during an allocation cycle. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00159">159</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html">satellite-fwd-link-scheduler-time-slicing.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html#l00169">169</a> of file <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8h_source.html">satellite-fwd-link-scheduler-time-slicing.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00060">SatFwdLinkSchedulerTimeSlicing()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00145">GetNextFrame()</a>, and <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00250">SendAndClearSymbolsSentStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00065">SatFwdLinkSchedulerTimeSlicing()</a>, <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00150">GetNextFrame()</a>, and <a class="el" href="satellite-fwd-link-scheduler-time-slicing_8cc_source.html#l00267">SendAndClearSymbolsSentStat()</a>.</p>
 
 </div>
 </div>

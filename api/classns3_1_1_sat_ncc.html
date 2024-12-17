@@ -188,9 +188,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aacccd59790ab4ffb585659389b68ddef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_ncc.html#aacccd59790ab4ffb585659389b68ddef">~SatNcc</a> ()</td></tr>
 <tr class="memdesc:aacccd59790ab4ffb585659389b68ddef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a <a class="el" href="classns3_1_1_sat_ncc.html" title="class for module NCC used as shared module among Gateways (GWs).">SatNcc</a>.  <a href="classns3_1_1_sat_ncc.html#aacccd59790ab4ffb585659389b68ddef">More...</a><br /></td></tr>
 <tr class="separator:aacccd59790ab4ffb585659389b68ddef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af249626daa4dce21fdba2df049884eb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_ncc.html#af249626daa4dce21fdba2df049884eb3">AddBeam</a> (uint32_t satId, uint32_t beamId, <a class="el" href="classns3_1_1_sat_ncc.html#a0ba55710da9a3925d092458ce91d9518">SatNcc::SendCallback</a> cb, <a class="el" href="classns3_1_1_sat_ncc.html#a1e057ceff53ecbe7f91c8c1b1cff688c">SatNcc::SendTbtpCallback</a> tbtpCb, Ptr&lt; <a class="el" href="classns3_1_1_sat_superframe_seq.html">SatSuperframeSeq</a> &gt; seq, uint32_t maxFrameSizeInBytes, Address gwAddress)</td></tr>
-<tr class="memdesc:af249626daa4dce21fdba2df049884eb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for adding the beam.  <a href="classns3_1_1_sat_ncc.html#af249626daa4dce21fdba2df049884eb3">More...</a><br /></td></tr>
-<tr class="separator:af249626daa4dce21fdba2df049884eb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b6f8b696c716034b78a624902ade72f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_ncc.html#a3b6f8b696c716034b78a624902ade72f">AddBeam</a> (uint32_t satId, uint32_t beamId, Ptr&lt; <a class="el" href="classns3_1_1_sat_net_device.html">SatNetDevice</a> &gt; gwNetDevice, Ptr&lt; <a class="el" href="classns3_1_1_sat_orbiter_net_device.html">SatOrbiterNetDevice</a> &gt; orbiterNetDevice, <a class="el" href="classns3_1_1_sat_ncc.html#a0ba55710da9a3925d092458ce91d9518">SatNcc::SendCallback</a> cb, <a class="el" href="classns3_1_1_sat_ncc.html#a1e057ceff53ecbe7f91c8c1b1cff688c">SatNcc::SendTbtpCallback</a> tbtpCb, Ptr&lt; <a class="el" href="classns3_1_1_sat_superframe_seq.html">SatSuperframeSeq</a> &gt; seq, uint32_t maxFrameSizeInBytes, Address satAddress, Address gwAddress)</td></tr>
+<tr class="memdesc:a3b6f8b696c716034b78a624902ade72f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for adding the beam.  <a href="classns3_1_1_sat_ncc.html#a3b6f8b696c716034b78a624902ade72f">More...</a><br /></td></tr>
+<tr class="separator:a3b6f8b696c716034b78a624902ade72f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a210ac395d7c2a40b0f10a7897c50ec27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_ncc.html#a210ac395d7c2a40b0f10a7897c50ec27">AddUt</a> (Ptr&lt; <a class="el" href="classns3_1_1_sat_lower_layer_service_conf.html">SatLowerLayerServiceConf</a> &gt; llsConf, Address utId, uint32_t satId, uint32_t beamId, Callback&lt; void, uint32_t &gt; setRaChannelCallback, bool verifyExisting=false)</td></tr>
 <tr class="memdesc:a210ac395d7c2a40b0f10a7897c50ec27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for adding the UT.  <a href="classns3_1_1_sat_ncc.html#a210ac395d7c2a40b0f10a7897c50ec27">More...</a><br /></td></tr>
 <tr class="separator:a210ac395d7c2a40b0f10a7897c50ec27"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,9 +202,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2c1527cd358efc62dc5783c10f50cce3"><td class="memItemLeft" align="right" valign="top">virtual TypeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_ncc.html#a2c1527cd358efc62dc5783c10f50cce3">GetInstanceTypeId</a> (void) const</td></tr>
 <tr class="memdesc:a2c1527cd358efc62dc5783c10f50cce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type ID of instance.  <a href="classns3_1_1_sat_ncc.html#a2c1527cd358efc62dc5783c10f50cce3">More...</a><br /></td></tr>
 <tr class="separator:a2c1527cd358efc62dc5783c10f50cce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9edddd6d0aaf66661e9b0b0bdf575cb7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_ncc.html#a9edddd6d0aaf66661e9b0b0bdf575cb7">MoveUtBetweenBeams</a> (Address utId, uint32_t satId, uint32_t srcBeamId, uint32_t destBeamId)</td></tr>
-<tr class="memdesc:a9edddd6d0aaf66661e9b0b0bdf575cb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a terminal can be moved between two beams.  <a href="classns3_1_1_sat_ncc.html#a9edddd6d0aaf66661e9b0b0bdf575cb7">More...</a><br /></td></tr>
-<tr class="separator:a9edddd6d0aaf66661e9b0b0bdf575cb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35e4b7e739c0eaadbd0cfdbf67a42e15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_ncc.html#a35e4b7e739c0eaadbd0cfdbf67a42e15">MoveUtBetweenBeams</a> (Address utId, uint32_t srcSatId, uint32_t srcBeamId, uint32_t destSatId, uint32_t destBeamId)</td></tr>
+<tr class="memdesc:a35e4b7e739c0eaadbd0cfdbf67a42e15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a terminal can be moved between two beams.  <a href="classns3_1_1_sat_ncc.html#a35e4b7e739c0eaadbd0cfdbf67a42e15">More...</a><br /></td></tr>
+<tr class="separator:a35e4b7e739c0eaadbd0cfdbf67a42e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a152f069b19ed61e62713be02d0600a04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_ncc.html#a152f069b19ed61e62713be02d0600a04">ReceiveControlBurst</a> (Address utId, uint32_t satId, uint32_t beamId)</td></tr>
 <tr class="memdesc:a152f069b19ed61e62713be02d0600a04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to call when a control burst has been received.  <a href="classns3_1_1_sat_ncc.html#a152f069b19ed61e62713be02d0600a04">More...</a><br /></td></tr>
 <tr class="separator:a152f069b19ed61e62713be02d0600a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -262,9 +262,9 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:aaee711202d6e0e9b9691ed544f596c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17a36cdfc72ad11dd1f0c696b545a793"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_ncc.html#a17a36cdfc72ad11dd1f0c696b545a793">DoDispose</a> (void)</td></tr>
 <tr class="separator:a17a36cdfc72ad11dd1f0c696b545a793"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04d2874cbc7c33b8a7a8b4e81ffc94a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_ncc.html#a04d2874cbc7c33b8a7a8b4e81ffc94a5">DoMoveUtBetweenBeams</a> (Address utId, uint32_t satId, uint32_t srcBeamId, uint32_t destBeamId)</td></tr>
-<tr class="memdesc:a04d2874cbc7c33b8a7a8b4e81ffc94a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform terminal handover on the terestrial network.  <a href="classns3_1_1_sat_ncc.html#a04d2874cbc7c33b8a7a8b4e81ffc94a5">More...</a><br /></td></tr>
-<tr class="separator:a04d2874cbc7c33b8a7a8b4e81ffc94a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a603a1986380b9f1654ddd8e6fe5f0248"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_ncc.html#a603a1986380b9f1654ddd8e6fe5f0248">DoMoveUtBetweenBeams</a> (Address utId, uint32_t srcSatId, uint32_t srcBeamId, uint32_t destSatId, uint32_t destBeamId)</td></tr>
+<tr class="memdesc:a603a1986380b9f1654ddd8e6fe5f0248"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform terminal handover on the terestrial network.  <a href="classns3_1_1_sat_ncc.html#a603a1986380b9f1654ddd8e6fe5f0248">More...</a><br /></td></tr>
+<tr class="separator:a603a1986380b9f1654ddd8e6fe5f0248"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a3ba3a2f55da54f17492530bc744174"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classns3_1_1_sat_ncc.html">SatNcc</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_ncc.html#a8a3ba3a2f55da54f17492530bc744174">operator=</a> (const <a class="el" href="classns3_1_1_sat_ncc.html">SatNcc</a> &amp;)</td></tr>
 <tr class="separator:a8a3ba3a2f55da54f17492530bc744174"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -320,7 +320,7 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p>class for module NCC used as shared module among Gateways (GWs). </p>
 <p>This <a class="el" href="classns3_1_1_sat_ncc.html" title="class for module NCC used as shared module among Gateways (GWs).">SatNcc</a> class implements NCC functionality in Satellite network. It is shared module among GWs. Communication between NCC and GW is handled by callback functions. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00052">52</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00056">56</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a0ba55710da9a3925d092458ce91d9518"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0ba55710da9a3925d092458ce91d9518">&#9670;&nbsp;</a></span>SendCallback</h2>
@@ -336,7 +336,7 @@ Private Attributes</h2></td></tr>
 
 <p>Define type SendCallback. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00133">133</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00137">137</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
 
 </div>
 </div>
@@ -358,7 +358,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00138">138</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00142">142</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
 
 </div>
 </div>
@@ -384,7 +384,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00246">246</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00261">261</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
 
 </div>
 </div>
@@ -407,7 +407,7 @@ Private Attributes</h2></td></tr>
 <p>Construct a <a class="el" href="classns3_1_1_sat_ncc.html" title="class for module NCC used as shared module among Gateways (GWs).">SatNcc</a>. </p>
 <p>This is the constructor for the <a class="el" href="classns3_1_1_sat_ncc.html" title="class for module NCC used as shared module among Gateways (GWs).">SatNcc</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00079">79</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00083">83</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
 </div>
 </div>
@@ -429,7 +429,7 @@ Private Attributes</h2></td></tr>
 <p>Destroy a <a class="el" href="classns3_1_1_sat_ncc.html" title="class for module NCC used as shared module among Gateways (GWs).">SatNcc</a>. </p>
 <p>This is the destructor for the <a class="el" href="classns3_1_1_sat_ncc.html" title="class for module NCC used as shared module among Gateways (GWs).">SatNcc</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00088">88</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00092">92</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
 </div>
 </div>
@@ -460,8 +460,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af249626daa4dce21fdba2df049884eb3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af249626daa4dce21fdba2df049884eb3">&#9670;&nbsp;</a></span>AddBeam()</h2>
+<a id="a3b6f8b696c716034b78a624902ade72f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b6f8b696c716034b78a624902ade72f">&#9670;&nbsp;</a></span>AddBeam()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -477,6 +477,18 @@ Private Attributes</h2></td></tr>
           <td></td>
           <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>beamId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Ptr&lt; <a class="el" href="classns3_1_1_sat_net_device.html">SatNetDevice</a> &gt;&#160;</td>
+          <td class="paramname"><em>gwNetDevice</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Ptr&lt; <a class="el" href="classns3_1_1_sat_orbiter_net_device.html">SatOrbiterNetDevice</a> &gt;&#160;</td>
+          <td class="paramname"><em>orbiterNetDevice</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -506,6 +518,12 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Address&#160;</td>
+          <td class="paramname"><em>satAddress</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Address&#160;</td>
           <td class="paramname"><em>gwAddress</em>&#160;</td>
         </tr>
         <tr>
@@ -521,18 +539,21 @@ Private Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">satId</td><td>ID of the satellite which for callback is set </td></tr>
     <tr><td class="paramname">beamId</td><td>ID of the beam which for callback is set </td></tr>
+    <tr><td class="paramname">gwNetDevice</td><td>GW NetDevice linked to this beam </td></tr>
+    <tr><td class="paramname">orbiterNetDevice</td><td>OrbiterNetDevice on satellite linked to this beam </td></tr>
     <tr><td class="paramname">cb</td><td>callback to invoke whenever a TBTP is ready for sending and must be forwarded to the Beam UTs. </td></tr>
     <tr><td class="paramname">tbtpCb</td><td>callback to invoke whenever a TBTP has been sent </td></tr>
     <tr><td class="paramname">seq</td><td>Super frame sequence </td></tr>
     <tr><td class="paramname">maxFrameSizeInBytes</td><td>Maximum non fragmented BB frame size with most robust ModCod </td></tr>
+    <tr><td class="paramname">satAddress</td><td>Mac address of the satellite responsible for this beam </td></tr>
     <tr><td class="paramname">gwAddress</td><td>Mac address of the gateway responsible for this beam </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00317">317</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00321">321</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00320">m_beamSchedulers</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00337">m_beamSchedulers</a>, and <a class="el" href="satellite-ncc_8h_source.html#l00402">m_useLora</a>.</p>
 
 </div>
 </div>
@@ -598,9 +619,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00345">345</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00363">363</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00320">m_beamSchedulers</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00337">m_beamSchedulers</a>.</p>
 
 </div>
 </div>
@@ -654,11 +675,11 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00567">567</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00605">605</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00391">m_lastControlBurstReception</a>, <a class="el" href="satellite-ncc_8h_source.html#l00375">m_utTimeout</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00369">RemoveUt()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00408">m_lastControlBurstReception</a>, <a class="el" href="satellite-ncc_8h_source.html#l00392">m_utTimeout</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00387">RemoveUt()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00537">ReceiveControlBurst()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00569">ReceiveControlBurst()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -677,9 +698,9 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_ncc_ab141c2f28462d5296a53dcd1c1968a2c_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_ncc_ab141c2f28462d5296a53dcd1c1968a2c_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_ncc_ab141c2f28462d5296a53dcd1c1968a2c_icgraph" id="aclassns3_1_1_sat_ncc_ab141c2f28462d5296a53dcd1c1968a2c_icgraph">
-<area shape="rect" title="Check if a UT has not been receiving control bursts, and then need to logoff." alt="" coords="519,13,719,39"/>
-<area shape="rect" href="classns3_1_1_sat_ncc.html#a152f069b19ed61e62713be02d0600a04" title="Function to call when a control burst has been received." alt="" coords="265,5,471,47"/>
-<area shape="rect" href="classns3_1_1_sat_gw_helper.html#a2a75a698bf6363b870b58db3d2287eae" title=" " alt="" coords="5,13,217,39"/>
+<area shape="rect" title="Check if a UT has not been receiving control bursts, and then need to logoff." alt="" coords="471,13,671,39"/>
+<area shape="rect" href="classns3_1_1_sat_ncc.html#a152f069b19ed61e62713be02d0600a04" title="Function to call when a control burst has been received." alt="" coords="217,5,423,47"/>
+<area shape="rect" href="classns3_1_1_sat_gw_helper_dvb.html#a573eec0973ef4ea42194b791794b9d35" title=" " alt="" coords="5,5,169,47"/>
 </map>
 </div>
 
@@ -752,11 +773,11 @@ Private Attributes</h2></td></tr>
 <p>set the random access allocation channel this message affects</p>
 <p>attach the new load control parameters to the message</p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00277">277</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00281">281</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00320">m_beamSchedulers</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00337">m_beamSchedulers</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00125">DoRandomAccessDynamicLoadControl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00129">DoRandomAccessDynamicLoadControl()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -764,10 +785,10 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_ncc_aaee711202d6e0e9b9691ed544f596c57_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_ncc_aaee711202d6e0e9b9691ed544f596c57_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_ncc_aaee711202d6e0e9b9691ed544f596c57_icgraph" id="aclassns3_1_1_sat_ncc_aaee711202d6e0e9b9691ed544f596c57_icgraph">
-<area shape="rect" title="Function for creating the random access control message." alt="" coords="539,23,741,65"/>
-<area shape="rect" href="classns3_1_1_sat_ncc.html#a730378da3618dd89a71de3c9a1a020ae" title="Function for adjusting the random access allocation channel specific load." alt="" coords="268,23,491,65"/>
-<area shape="rect" href="classns3_1_1_sat_gw_helper.html#a2a75a698bf6363b870b58db3d2287eae" title=" " alt="" coords="7,5,219,32"/>
-<area shape="rect" href="classns3_1_1_sat_gw_helper.html#a0c246b76d3ea25ee9fa2ff672b859e88" title=" " alt="" coords="5,56,220,83"/>
+<area shape="rect" title="Function for creating the random access control message." alt="" coords="491,39,693,80"/>
+<area shape="rect" href="classns3_1_1_sat_ncc.html#a730378da3618dd89a71de3c9a1a020ae" title="Function for adjusting the random access allocation channel specific load." alt="" coords="220,39,443,80"/>
+<area shape="rect" href="classns3_1_1_sat_gw_helper_dvb.html#a573eec0973ef4ea42194b791794b9d35" title=" " alt="" coords="7,5,171,47"/>
+<area shape="rect" href="classns3_1_1_sat_gw_helper_lora.html#a62943a504d84e281bb43a15ab26b8c9c" title=" " alt="" coords="5,71,172,112"/>
 </map>
 </div>
 
@@ -797,14 +818,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00094">94</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00098">98</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00340">m_isLowRandomAccessLoad</a>, and <a class="el" href="satellite-ncc_8h_source.html#l00397">m_updateRoutingCallback</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00357">m_isLowRandomAccessLoad</a>, and <a class="el" href="satellite-ncc_8h_source.html#l00414">m_updateRoutingCallback</a>.</p>
 
 </div>
 </div>
-<a id="a04d2874cbc7c33b8a7a8b4e81ffc94a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04d2874cbc7c33b8a7a8b4e81ffc94a5">&#9670;&nbsp;</a></span>DoMoveUtBetweenBeams()</h2>
+<a id="a603a1986380b9f1654ddd8e6fe5f0248"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a603a1986380b9f1654ddd8e6fe5f0248">&#9670;&nbsp;</a></span>DoMoveUtBetweenBeams()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -822,13 +843,19 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>satId</em>, </td>
+          <td class="paramname"><em>srcSatId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>srcBeamId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>destSatId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -852,26 +879,27 @@ Private Attributes</h2></td></tr>
 <p>Perform terminal handover on the terestrial network. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">utId</td><td>the UT moving between beams </td></tr>
-    <tr><td class="paramname">satId</td><td>the sat ID. Does not change here </td></tr>
+    <tr><td class="paramname">utId</td><td>the UT wanting to move between beams </td></tr>
+    <tr><td class="paramname">srcSatId</td><td>the sat ID this UT is moving from </td></tr>
     <tr><td class="paramname">srcBeamId</td><td>the beam ID this UT is moving from </td></tr>
+    <tr><td class="paramname">destSatId</td><td>the sat ID this UT is moving to </td></tr>
     <tr><td class="paramname">destBeamId</td><td>the beam ID this UT is moving to </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00452">452</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00470">470</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8cc_source.html#l00434">GetBeamScheduler()</a>, and <a class="el" href="satellite-ncc_8h_source.html#l00397">m_updateRoutingCallback</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8cc_source.html#l00452">GetBeamScheduler()</a>, and <a class="el" href="satellite-ncc_8h_source.html#l00414">m_updateRoutingCallback</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00469">MoveUtBetweenBeams()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00496">MoveUtBetweenBeams()</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classns3_1_1_sat_ncc_a04d2874cbc7c33b8a7a8b4e81ffc94a5_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_ncc_a04d2874cbc7c33b8a7a8b4e81ffc94a5_cgraph" alt=""/></div>
-<map name="aclassns3_1_1_sat_ncc_a04d2874cbc7c33b8a7a8b4e81ffc94a5_cgraph" id="aclassns3_1_1_sat_ncc_a04d2874cbc7c33b8a7a8b4e81ffc94a5_cgraph">
+<div class="center"><img src="classns3_1_1_sat_ncc_a603a1986380b9f1654ddd8e6fe5f0248_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_ncc_a603a1986380b9f1654ddd8e6fe5f0248_cgraph" alt=""/></div>
+<map name="aclassns3_1_1_sat_ncc_a603a1986380b9f1654ddd8e6fe5f0248_cgraph" id="aclassns3_1_1_sat_ncc_a603a1986380b9f1654ddd8e6fe5f0248_cgraph">
 <area shape="rect" title="Perform terminal handover on the terestrial network." alt="" coords="5,5,237,47"/>
 <area shape="rect" href="classns3_1_1_sat_ncc.html#a6a96239f5dc7eca8cc7f32f870318c84" title=" " alt="" coords="285,13,516,39"/>
 </map>
@@ -881,11 +909,11 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classns3_1_1_sat_ncc_a04d2874cbc7c33b8a7a8b4e81ffc94a5_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_ncc_a04d2874cbc7c33b8a7a8b4e81ffc94a5_icgraph" alt=""/></div>
-<map name="aclassns3_1_1_sat_ncc_a04d2874cbc7c33b8a7a8b4e81ffc94a5_icgraph" id="aclassns3_1_1_sat_ncc_a04d2874cbc7c33b8a7a8b4e81ffc94a5_icgraph">
-<area shape="rect" title="Perform terminal handover on the terestrial network." alt="" coords="528,5,760,47"/>
-<area shape="rect" href="classns3_1_1_sat_ncc.html#a9edddd6d0aaf66661e9b0b0bdf575cb7" title="Check if a terminal can be moved between two beams." alt="" coords="265,5,480,47"/>
-<area shape="rect" href="classns3_1_1_sat_gw_helper.html#a2a75a698bf6363b870b58db3d2287eae" title=" " alt="" coords="5,13,217,39"/>
+<div class="center"><img src="classns3_1_1_sat_ncc_a603a1986380b9f1654ddd8e6fe5f0248_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_ncc_a603a1986380b9f1654ddd8e6fe5f0248_icgraph" alt=""/></div>
+<map name="aclassns3_1_1_sat_ncc_a603a1986380b9f1654ddd8e6fe5f0248_icgraph" id="aclassns3_1_1_sat_ncc_a603a1986380b9f1654ddd8e6fe5f0248_icgraph">
+<area shape="rect" title="Perform terminal handover on the terestrial network." alt="" coords="480,5,712,47"/>
+<area shape="rect" href="classns3_1_1_sat_ncc.html#a35e4b7e739c0eaadbd0cfdbf67a42e15" title="Check if a terminal can be moved between two beams." alt="" coords="217,5,432,47"/>
+<area shape="rect" href="classns3_1_1_sat_gw_helper_dvb.html#a573eec0973ef4ea42194b791794b9d35" title=" " alt="" coords="5,5,169,47"/>
 </map>
 </div>
 
@@ -956,11 +984,11 @@ Private Attributes</h2></td></tr>
 <p>use low load back off value</p>
 <p>flag RA load as low load</p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00125">125</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00129">129</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8cc_source.html#l00277">CreateRandomAccessLoadControlMessage()</a>, <a class="el" href="satellite-ncc_8h_source.html#l00355">m_highLoadBackOffProbability</a>, <a class="el" href="satellite-ncc_8h_source.html#l00365">m_highLoadBackOffTime</a>, <a class="el" href="satellite-ncc_8h_source.html#l00340">m_isLowRandomAccessLoad</a>, <a class="el" href="satellite-ncc_8h_source.html#l00350">m_lowLoadBackOffProbability</a>, <a class="el" href="satellite-ncc_8h_source.html#l00360">m_lowLoadBackOffTime</a>, and <a class="el" href="satellite-ncc_8h_source.html#l00345">m_randomAccessAverageNormalizedOfferedLoadThreshold</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8cc_source.html#l00281">CreateRandomAccessLoadControlMessage()</a>, <a class="el" href="satellite-ncc_8h_source.html#l00372">m_highLoadBackOffProbability</a>, <a class="el" href="satellite-ncc_8h_source.html#l00382">m_highLoadBackOffTime</a>, <a class="el" href="satellite-ncc_8h_source.html#l00357">m_isLowRandomAccessLoad</a>, <a class="el" href="satellite-ncc_8h_source.html#l00367">m_lowLoadBackOffProbability</a>, <a class="el" href="satellite-ncc_8h_source.html#l00377">m_lowLoadBackOffTime</a>, and <a class="el" href="satellite-ncc_8h_source.html#l00362">m_randomAccessAverageNormalizedOfferedLoadThreshold</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-gw-helper_8cc_source.html#l00289">ns3::SatGwHelper::InstallDvb()</a>, and <a class="el" href="satellite-gw-helper_8cc_source.html#l00556">ns3::SatGwHelper::InstallLora()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-gw-helper-dvb_8cc_source.html#l00106">ns3::SatGwHelperDvb::Install()</a>, and <a class="el" href="satellite-gw-helper-lora_8cc_source.html#l00093">ns3::SatGwHelperLora::Install()</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -979,9 +1007,9 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_ncc_a730378da3618dd89a71de3c9a1a020ae_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_ncc_a730378da3618dd89a71de3c9a1a020ae_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_ncc_a730378da3618dd89a71de3c9a1a020ae_icgraph" id="aclassns3_1_1_sat_ncc_a730378da3618dd89a71de3c9a1a020ae_icgraph">
-<area shape="rect" title="Function for adjusting the random access allocation channel specific load." alt="" coords="268,23,491,65"/>
-<area shape="rect" href="classns3_1_1_sat_gw_helper.html#a2a75a698bf6363b870b58db3d2287eae" title=" " alt="" coords="7,5,219,32"/>
-<area shape="rect" href="classns3_1_1_sat_gw_helper.html#a0c246b76d3ea25ee9fa2ff672b859e88" title=" " alt="" coords="5,56,220,83"/>
+<area shape="rect" title="Function for adjusting the random access allocation channel specific load." alt="" coords="220,39,443,80"/>
+<area shape="rect" href="classns3_1_1_sat_gw_helper_dvb.html#a573eec0973ef4ea42194b791794b9d35" title=" " alt="" coords="7,5,171,47"/>
+<area shape="rect" href="classns3_1_1_sat_gw_helper_lora.html#a62943a504d84e281bb43a15ab26b8c9c" title=" " alt="" coords="5,71,172,112"/>
 </map>
 </div>
 
@@ -1021,11 +1049,11 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>pointer to the beam scheduler, or zero if the beam is not found. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00434">434</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00452">452</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00320">m_beamSchedulers</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00337">m_beamSchedulers</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00452">DoMoveUtBetweenBeams()</a>, <a class="el" href="satellite-ut-helper_8cc_source.html#l00268">ns3::SatUtHelper::InstallDvb()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00469">MoveUtBetweenBeams()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00470">DoMoveUtBetweenBeams()</a>, <a class="el" href="satellite-gw-helper-dvb_8cc_source.html#l00106">ns3::SatGwHelperDvb::Install()</a>, <a class="el" href="satellite-ut-helper-dvb_8cc_source.html#l00107">ns3::SatUtHelperDvb::Install()</a>, <a class="el" href="satellite-ut-helper-lora_8cc_source.html#l00099">ns3::SatUtHelperLora::Install()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00496">MoveUtBetweenBeams()</a>.</p>
 <div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
@@ -1033,11 +1061,12 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_ncc_a6a96239f5dc7eca8cc7f32f870318c84_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_ncc_a6a96239f5dc7eca8cc7f32f870318c84_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_ncc_a6a96239f5dc7eca8cc7f32f870318c84_icgraph" id="aclassns3_1_1_sat_ncc_a6a96239f5dc7eca8cc7f32f870318c84_icgraph">
-<area shape="rect" title=" " alt="" coords="808,71,1039,98"/>
-<area shape="rect" href="classns3_1_1_sat_ncc.html#a04d2874cbc7c33b8a7a8b4e81ffc94a5" title="Perform terminal handover on the terestrial network." alt="" coords="528,5,760,47"/>
-<area shape="rect" href="classns3_1_1_sat_ncc.html#a9edddd6d0aaf66661e9b0b0bdf575cb7" title="Check if a terminal can be moved between two beams." alt="" coords="265,35,480,76"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="541,122,747,149"/>
-<area shape="rect" href="classns3_1_1_sat_gw_helper.html#a2a75a698bf6363b870b58db3d2287eae" title=" " alt="" coords="5,42,217,69"/>
+<area shape="rect" title=" " alt="" coords="760,122,991,149"/>
+<area shape="rect" href="classns3_1_1_sat_ncc.html#a603a1986380b9f1654ddd8e6fe5f0248" title="Perform terminal handover on the terestrial network." alt="" coords="480,5,712,47"/>
+<area shape="rect" href="classns3_1_1_sat_ncc.html#a35e4b7e739c0eaadbd0cfdbf67a42e15" title="Check if a terminal can be moved between two beams." alt="" coords="217,56,432,97"/>
+<area shape="rect" href="classns3_1_1_sat_gw_helper_dvb.html#a573eec0973ef4ea42194b791794b9d35" title=" " alt="" coords="5,85,169,127"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="517,173,675,215"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_lora.html#adc63d46feddc3ab005f367bf38d0b196" title=" " alt="" coords="516,239,676,280"/>
 </map>
 </div>
 
@@ -1070,9 +1099,9 @@ Private Attributes</h2></td></tr>
 <p>Get the type ID of instance. </p>
 <dl class="section return"><dt>Returns</dt><dd>the object TypeId </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00072">72</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00076">76</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8cc_source.html#l00041">GetTypeId()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8cc_source.html#l00045">GetTypeId()</a>.</p>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -1114,11 +1143,11 @@ Private Attributes</h2></td></tr>
 <p>Get the type ID. </p>
 <dl class="section return"><dt>Returns</dt><dd>the object TypeId </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00041">41</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00045">45</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00327">m_nccRxTrace</a>, <a class="el" href="satellite-ncc_8h_source.html#l00334">m_nccTxTrace</a>, <a class="el" href="satellite-ncc_8h_source.html#l00370">m_utHandoverDelay</a>, and <a class="el" href="satellite-ncc_8h_source.html#l00375">m_utTimeout</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00344">m_nccRxTrace</a>, <a class="el" href="satellite-ncc_8h_source.html#l00351">m_nccTxTrace</a>, <a class="el" href="satellite-ncc_8h_source.html#l00387">m_utHandoverDelay</a>, and <a class="el" href="satellite-ncc_8h_source.html#l00392">m_utTimeout</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00072">GetInstanceTypeId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00076">GetInstanceTypeId()</a>.</p>
 <div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">
@@ -1133,8 +1162,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a9edddd6d0aaf66661e9b0b0bdf575cb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9edddd6d0aaf66661e9b0b0bdf575cb7">&#9670;&nbsp;</a></span>MoveUtBetweenBeams()</h2>
+<a id="a35e4b7e739c0eaadbd0cfdbf67a42e15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e4b7e739c0eaadbd0cfdbf67a42e15">&#9670;&nbsp;</a></span>MoveUtBetweenBeams()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1149,13 +1178,19 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>satId</em>, </td>
+          <td class="paramname"><em>srcSatId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>srcBeamId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>destSatId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1175,27 +1210,28 @@ Private Attributes</h2></td></tr>
 <p>If yes, schedule the actual move at a later point in time. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">utId</td><td>the UT wanting to move between beams </td></tr>
-    <tr><td class="paramname">satId</td><td>the satellite ID. Does not change here </td></tr>
+    <tr><td class="paramname">srcSatId</td><td>the sat ID this UT is moving from </td></tr>
     <tr><td class="paramname">srcBeamId</td><td>the beam ID this UT is moving from </td></tr>
+    <tr><td class="paramname">destSatId</td><td>the sat ID this UT is moving to </td></tr>
     <tr><td class="paramname">destBeamId</td><td>the beam ID this UT is moving to </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00469">469</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00496">496</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8cc_source.html#l00452">DoMoveUtBetweenBeams()</a>, <a class="el" href="satellite-ncc_8cc_source.html#l00434">GetBeamScheduler()</a>, and <a class="el" href="satellite-ncc_8h_source.html#l00370">m_utHandoverDelay</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8cc_source.html#l00470">DoMoveUtBetweenBeams()</a>, <a class="el" href="satellite-ncc_8cc_source.html#l00452">GetBeamScheduler()</a>, and <a class="el" href="satellite-ncc_8h_source.html#l00387">m_utHandoverDelay</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-gw-helper_8cc_source.html#l00289">ns3::SatGwHelper::InstallDvb()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-gw-helper-dvb_8cc_source.html#l00106">ns3::SatGwHelperDvb::Install()</a>.</p>
 <div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-12-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classns3_1_1_sat_ncc_a9edddd6d0aaf66661e9b0b0bdf575cb7_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_ncc_a9edddd6d0aaf66661e9b0b0bdf575cb7_cgraph" alt=""/></div>
-<map name="aclassns3_1_1_sat_ncc_a9edddd6d0aaf66661e9b0b0bdf575cb7_cgraph" id="aclassns3_1_1_sat_ncc_a9edddd6d0aaf66661e9b0b0bdf575cb7_cgraph">
+<div class="center"><img src="classns3_1_1_sat_ncc_a35e4b7e739c0eaadbd0cfdbf67a42e15_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_ncc_a35e4b7e739c0eaadbd0cfdbf67a42e15_cgraph" alt=""/></div>
+<map name="aclassns3_1_1_sat_ncc_a35e4b7e739c0eaadbd0cfdbf67a42e15_cgraph" id="aclassns3_1_1_sat_ncc_a35e4b7e739c0eaadbd0cfdbf67a42e15_cgraph">
 <area shape="rect" title="Check if a terminal can be moved between two beams." alt="" coords="5,35,220,76"/>
-<area shape="rect" href="classns3_1_1_sat_ncc.html#a04d2874cbc7c33b8a7a8b4e81ffc94a5" title="Perform terminal handover on the terestrial network." alt="" coords="268,5,500,47"/>
+<area shape="rect" href="classns3_1_1_sat_ncc.html#a603a1986380b9f1654ddd8e6fe5f0248" title="Perform terminal handover on the terestrial network." alt="" coords="268,5,500,47"/>
 <area shape="rect" href="classns3_1_1_sat_ncc.html#a6a96239f5dc7eca8cc7f32f870318c84" title=" " alt="" coords="548,42,779,69"/>
 </map>
 </div>
@@ -1204,10 +1240,10 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-13-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classns3_1_1_sat_ncc_a9edddd6d0aaf66661e9b0b0bdf575cb7_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_ncc_a9edddd6d0aaf66661e9b0b0bdf575cb7_icgraph" alt=""/></div>
-<map name="aclassns3_1_1_sat_ncc_a9edddd6d0aaf66661e9b0b0bdf575cb7_icgraph" id="aclassns3_1_1_sat_ncc_a9edddd6d0aaf66661e9b0b0bdf575cb7_icgraph">
-<area shape="rect" title="Check if a terminal can be moved between two beams." alt="" coords="265,5,480,47"/>
-<area shape="rect" href="classns3_1_1_sat_gw_helper.html#a2a75a698bf6363b870b58db3d2287eae" title=" " alt="" coords="5,13,217,39"/>
+<div class="center"><img src="classns3_1_1_sat_ncc_a35e4b7e739c0eaadbd0cfdbf67a42e15_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_ncc_a35e4b7e739c0eaadbd0cfdbf67a42e15_icgraph" alt=""/></div>
+<map name="aclassns3_1_1_sat_ncc_a35e4b7e739c0eaadbd0cfdbf67a42e15_icgraph" id="aclassns3_1_1_sat_ncc_a35e4b7e739c0eaadbd0cfdbf67a42e15_icgraph">
+<area shape="rect" title="Check if a terminal can be moved between two beams." alt="" coords="217,5,432,47"/>
+<area shape="rect" href="classns3_1_1_sat_gw_helper_dvb.html#a573eec0973ef4ea42194b791794b9d35" title=" " alt="" coords="5,5,169,47"/>
 </map>
 </div>
 
@@ -1281,11 +1317,11 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00537">537</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00569">569</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8cc_source.html#l00567">CheckTimeout()</a>, <a class="el" href="satellite-ncc_8h_source.html#l00391">m_lastControlBurstReception</a>, <a class="el" href="satellite-ncc_8h_source.html#l00380">m_useLogon</a>, and <a class="el" href="satellite-ncc_8h_source.html#l00375">m_utTimeout</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8cc_source.html#l00605">CheckTimeout()</a>, <a class="el" href="satellite-ncc_8h_source.html#l00408">m_lastControlBurstReception</a>, <a class="el" href="satellite-ncc_8h_source.html#l00397">m_useLogon</a>, and <a class="el" href="satellite-ncc_8h_source.html#l00392">m_utTimeout</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-gw-helper_8cc_source.html#l00289">ns3::SatGwHelper::InstallDvb()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-gw-helper-dvb_8cc_source.html#l00106">ns3::SatGwHelperDvb::Install()</a>.</p>
 <div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-14-summary" class="dynsummary" style="display:block;">
@@ -1305,8 +1341,8 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-15-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_ncc_a152f069b19ed61e62713be02d0600a04_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_ncc_a152f069b19ed61e62713be02d0600a04_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_ncc_a152f069b19ed61e62713be02d0600a04_icgraph" id="aclassns3_1_1_sat_ncc_a152f069b19ed61e62713be02d0600a04_icgraph">
-<area shape="rect" title="Function to call when a control burst has been received." alt="" coords="265,5,471,47"/>
-<area shape="rect" href="classns3_1_1_sat_gw_helper.html#a2a75a698bf6363b870b58db3d2287eae" title=" " alt="" coords="5,13,217,39"/>
+<area shape="rect" title="Function to call when a control burst has been received." alt="" coords="217,5,423,47"/>
+<area shape="rect" href="classns3_1_1_sat_gw_helper_dvb.html#a573eec0973ef4ea42194b791794b9d35" title=" " alt="" coords="5,5,169,47"/>
 </map>
 </div>
 
@@ -1354,11 +1390,11 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00369">369</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00387">387</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00320">m_beamSchedulers</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00337">m_beamSchedulers</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00567">CheckTimeout()</a>, and <a class="el" href="satellite-gw-helper_8cc_source.html#l00289">ns3::SatGwHelper::InstallDvb()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00605">CheckTimeout()</a>, and <a class="el" href="satellite-gw-helper-dvb_8cc_source.html#l00106">ns3::SatGwHelperDvb::Install()</a>.</p>
 <div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-16-summary" class="dynsummary" style="display:block;">
@@ -1366,10 +1402,10 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-16-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_ncc_a254e98ab319c0716a1edbc4eea2a5f82_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_ncc_a254e98ab319c0716a1edbc4eea2a5f82_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_ncc_a254e98ab319c0716a1edbc4eea2a5f82_icgraph" id="aclassns3_1_1_sat_ncc_a254e98ab319c0716a1edbc4eea2a5f82_icgraph">
-<area shape="rect" title="Remove a UT." alt="" coords="767,46,941,73"/>
-<area shape="rect" href="classns3_1_1_sat_ncc.html#ab141c2f28462d5296a53dcd1c1968a2c" title="Check if a UT has not been receiving control bursts, and then need to logoff." alt="" coords="519,17,719,43"/>
-<area shape="rect" href="classns3_1_1_sat_gw_helper.html#a2a75a698bf6363b870b58db3d2287eae" title=" " alt="" coords="5,42,217,69"/>
-<area shape="rect" href="classns3_1_1_sat_ncc.html#a152f069b19ed61e62713be02d0600a04" title="Function to call when a control burst has been received." alt="" coords="265,5,471,47"/>
+<area shape="rect" title="Remove a UT." alt="" coords="719,46,893,73"/>
+<area shape="rect" href="classns3_1_1_sat_ncc.html#ab141c2f28462d5296a53dcd1c1968a2c" title="Check if a UT has not been receiving control bursts, and then need to logoff." alt="" coords="471,17,671,43"/>
+<area shape="rect" href="classns3_1_1_sat_gw_helper_dvb.html#a573eec0973ef4ea42194b791794b9d35" title=" " alt="" coords="5,35,169,76"/>
+<area shape="rect" href="classns3_1_1_sat_ncc.html#a152f069b19ed61e62713be02d0600a04" title="Function to call when a control burst has been received." alt="" coords="217,5,423,47"/>
 </map>
 </div>
 
@@ -1391,9 +1427,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00526">526</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00558">558</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00320">m_beamSchedulers</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00337">m_beamSchedulers</a>.</p>
 
 </div>
 </div>
@@ -1432,9 +1468,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00423">423</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00441">441</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00345">m_randomAccessAverageNormalizedOfferedLoadThreshold</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00362">m_randomAccessAverageNormalizedOfferedLoadThreshold</a>.</p>
 
 </div>
 </div>
@@ -1473,9 +1509,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00391">391</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00409">409</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00355">m_highLoadBackOffProbability</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00372">m_highLoadBackOffProbability</a>.</p>
 
 </div>
 </div>
@@ -1514,9 +1550,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00412">412</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00430">430</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00365">m_highLoadBackOffTime</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00382">m_highLoadBackOffTime</a>.</p>
 
 </div>
 </div>
@@ -1555,9 +1591,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00380">380</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00398">398</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00350">m_lowLoadBackOffProbability</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00367">m_lowLoadBackOffProbability</a>.</p>
 
 </div>
 </div>
@@ -1596,9 +1632,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00402">402</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00420">420</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00360">m_lowLoadBackOffTime</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00377">m_lowLoadBackOffTime</a>.</p>
 
 </div>
 </div>
@@ -1626,9 +1662,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00518">518</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00550">550</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00397">m_updateRoutingCallback</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00414">m_updateRoutingCallback</a>.</p>
 
 </div>
 </div>
@@ -1656,9 +1692,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00551">551</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00583">583</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00380">m_useLogon</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00397">m_useLogon</a>.</p>
 
 </div>
 </div>
@@ -1686,9 +1722,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00559">559</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00591">591</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00385">m_useLora</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00337">m_beamSchedulers</a>, and <a class="el" href="satellite-ncc_8h_source.html#l00402">m_useLora</a>.</p>
 
 </div>
 </div>
@@ -1756,11 +1792,11 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00105">105</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00109">109</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00320">m_beamSchedulers</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00337">m_beamSchedulers</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-gw-helper_8cc_source.html#l00289">ns3::SatGwHelper::InstallDvb()</a>, and <a class="el" href="satellite-gw-helper_8cc_source.html#l00556">ns3::SatGwHelper::InstallLora()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-gw-helper-dvb_8cc_source.html#l00106">ns3::SatGwHelperDvb::Install()</a>, and <a class="el" href="satellite-gw-helper-lora_8cc_source.html#l00093">ns3::SatGwHelperLora::Install()</a>.</p>
 <div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-17-summary" class="dynsummary" style="display:block;">
@@ -1768,9 +1804,9 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-17-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_ncc_aa376c6533a5bcdb2209af11d4267a58e_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_ncc_aa376c6533a5bcdb2209af11d4267a58e_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_ncc_aa376c6533a5bcdb2209af11d4267a58e_icgraph" id="aclassns3_1_1_sat_ncc_aa376c6533a5bcdb2209af11d4267a58e_icgraph">
-<area shape="rect" title="Update UT specific C/N0 information." alt="" coords="268,31,469,57"/>
-<area shape="rect" href="classns3_1_1_sat_gw_helper.html#a2a75a698bf6363b870b58db3d2287eae" title=" " alt="" coords="7,5,219,32"/>
-<area shape="rect" href="classns3_1_1_sat_gw_helper.html#a0c246b76d3ea25ee9fa2ff672b859e88" title=" " alt="" coords="5,56,220,83"/>
+<area shape="rect" title="Update UT specific C/N0 information." alt="" coords="220,46,421,73"/>
+<area shape="rect" href="classns3_1_1_sat_gw_helper_dvb.html#a573eec0973ef4ea42194b791794b9d35" title=" " alt="" coords="7,5,171,47"/>
+<area shape="rect" href="classns3_1_1_sat_gw_helper_lora.html#a62943a504d84e281bb43a15ab26b8c9c" title=" " alt="" coords="5,71,172,112"/>
 </map>
 </div>
 
@@ -1826,11 +1862,11 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00309">309</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8cc_source.html#l00313">313</a> of file <a class="el" href="satellite-ncc_8cc_source.html">satellite-ncc.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00320">m_beamSchedulers</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ncc_8h_source.html#l00337">m_beamSchedulers</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-gw-helper_8cc_source.html#l00289">ns3::SatGwHelper::InstallDvb()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-gw-helper-dvb_8cc_source.html#l00106">ns3::SatGwHelperDvb::Install()</a>.</p>
 <div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-18-summary" class="dynsummary" style="display:block;">
@@ -1838,8 +1874,8 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-18-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_ncc_a63b5565d8cd9c2a00e72a16f7e8aea8c_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_ncc_a63b5565d8cd9c2a00e72a16f7e8aea8c_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_ncc_a63b5565d8cd9c2a00e72a16f7e8aea8c_icgraph" id="aclassns3_1_1_sat_ncc_a63b5565d8cd9c2a00e72a16f7e8aea8c_icgraph">
-<area shape="rect" title="Capacity request receiver." alt="" coords="265,5,460,32"/>
-<area shape="rect" href="classns3_1_1_sat_gw_helper.html#a2a75a698bf6363b870b58db3d2287eae" title=" " alt="" coords="5,5,217,32"/>
+<area shape="rect" title="Capacity request receiver." alt="" coords="217,13,412,39"/>
+<area shape="rect" href="classns3_1_1_sat_gw_helper_dvb.html#a573eec0973ef4ea42194b791794b9d35" title=" " alt="" coords="5,5,169,47"/>
 </map>
 </div>
 
@@ -1868,9 +1904,9 @@ Private Attributes</h2></td></tr>
 
 <p>The map containing beams in use (set). </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00320">320</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00337">337</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00317">AddBeam()</a>, <a class="el" href="satellite-ncc_8cc_source.html#l00345">AddUt()</a>, <a class="el" href="satellite-ncc_8cc_source.html#l00277">CreateRandomAccessLoadControlMessage()</a>, <a class="el" href="satellite-ncc_8cc_source.html#l00434">GetBeamScheduler()</a>, <a class="el" href="satellite-ncc_8cc_source.html#l00369">RemoveUt()</a>, <a class="el" href="satellite-ncc_8cc_source.html#l00526">ReserveLogonChannel()</a>, <a class="el" href="satellite-ncc_8cc_source.html#l00105">UtCnoUpdated()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00309">UtCrReceived()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00321">AddBeam()</a>, <a class="el" href="satellite-ncc_8cc_source.html#l00363">AddUt()</a>, <a class="el" href="satellite-ncc_8cc_source.html#l00281">CreateRandomAccessLoadControlMessage()</a>, <a class="el" href="satellite-ncc_8cc_source.html#l00452">GetBeamScheduler()</a>, <a class="el" href="satellite-ncc_8cc_source.html#l00387">RemoveUt()</a>, <a class="el" href="satellite-ncc_8cc_source.html#l00558">ReserveLogonChannel()</a>, <a class="el" href="satellite-ncc_8cc_source.html#l00591">SetUseLora()</a>, <a class="el" href="satellite-ncc_8cc_source.html#l00109">UtCnoUpdated()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00313">UtCrReceived()</a>.</p>
 
 </div>
 </div>
@@ -1896,9 +1932,9 @@ Private Attributes</h2></td></tr>
 
 <p>Map for random access allocation channel specific high load backoff probabilities. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00355">355</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00372">372</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00125">DoRandomAccessDynamicLoadControl()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00391">SetRandomAccessHighLoadBackoffProbability()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00129">DoRandomAccessDynamicLoadControl()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00409">SetRandomAccessHighLoadBackoffProbability()</a>.</p>
 
 </div>
 </div>
@@ -1924,9 +1960,9 @@ Private Attributes</h2></td></tr>
 
 <p>Map for random access allocation channel specific high load backoff time. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00365">365</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00382">382</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00125">DoRandomAccessDynamicLoadControl()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00412">SetRandomAccessHighLoadBackoffTime()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00129">DoRandomAccessDynamicLoadControl()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00430">SetRandomAccessHighLoadBackoffTime()</a>.</p>
 
 </div>
 </div>
@@ -1952,9 +1988,9 @@ Private Attributes</h2></td></tr>
 
 <p>Map for keeping track of the load status of each random access allocation channel Tuple is (satId, beamId, allocationChannelId) </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00340">340</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00357">357</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00094">DoDispose()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00125">DoRandomAccessDynamicLoadControl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00098">DoDispose()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00129">DoRandomAccessDynamicLoadControl()</a>.</p>
 
 </div>
 </div>
@@ -1981,9 +2017,9 @@ Private Attributes</h2></td></tr>
 <p>List of reception time for all UTs. </p>
 <p>Used to trigger timeouts and logoff UTs. Tuple is (UT address, satId, beamId) </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00391">391</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00408">408</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00567">CheckTimeout()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00537">ReceiveControlBurst()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00605">CheckTimeout()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00569">ReceiveControlBurst()</a>.</p>
 
 </div>
 </div>
@@ -2009,9 +2045,9 @@ Private Attributes</h2></td></tr>
 
 <p>Map for random access allocation channel specific low load backoff probabilities. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00350">350</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00367">367</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00125">DoRandomAccessDynamicLoadControl()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00380">SetRandomAccessLowLoadBackoffProbability()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00129">DoRandomAccessDynamicLoadControl()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00398">SetRandomAccessLowLoadBackoffProbability()</a>.</p>
 
 </div>
 </div>
@@ -2037,9 +2073,9 @@ Private Attributes</h2></td></tr>
 
 <p>Map for random access allocation channel specific low load backoff time. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00360">360</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00377">377</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00125">DoRandomAccessDynamicLoadControl()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00402">SetRandomAccessLowLoadBackoffTime()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00129">DoRandomAccessDynamicLoadControl()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00420">SetRandomAccessLowLoadBackoffTime()</a>.</p>
 
 </div>
 </div>
@@ -2066,9 +2102,9 @@ Private Attributes</h2></td></tr>
 <p>The trace source fired for Capacity Requests (CRs) received by the NCC. </p>
 <dl class="section see"><dt>See also</dt><dd>class CallBackTraceSource </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00327">327</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00344">344</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00041">GetTypeId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00045">GetTypeId()</a>.</p>
 
 </div>
 </div>
@@ -2095,9 +2131,9 @@ Private Attributes</h2></td></tr>
 <p>The trace source fired for TBTPs sent by the NCC. </p>
 <dl class="section see"><dt>See also</dt><dd>class CallBackTraceSource </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00334">334</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00351">351</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00041">GetTypeId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00045">GetTypeId()</a>.</p>
 
 </div>
 </div>
@@ -2123,9 +2159,9 @@ Private Attributes</h2></td></tr>
 
 <p>Map for random access allocation channel specific load thresholds. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00345">345</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00362">362</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00125">DoRandomAccessDynamicLoadControl()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00423">SetRandomAccessAverageNormalizedOfferedLoadThreshold()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00129">DoRandomAccessDynamicLoadControl()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00441">SetRandomAccessAverageNormalizedOfferedLoadThreshold()</a>.</p>
 
 </div>
 </div>
@@ -2151,9 +2187,9 @@ Private Attributes</h2></td></tr>
 
 <p>Callback to update routing tables and ARP tables on gateways once a handover request has been accepted and treated. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00397">397</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00414">414</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00094">DoDispose()</a>, <a class="el" href="satellite-ncc_8cc_source.html#l00452">DoMoveUtBetweenBeams()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00518">SetUpdateRoutingCallback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00098">DoDispose()</a>, <a class="el" href="satellite-ncc_8cc_source.html#l00470">DoMoveUtBetweenBeams()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00550">SetUpdateRoutingCallback()</a>.</p>
 
 </div>
 </div>
@@ -2179,9 +2215,9 @@ Private Attributes</h2></td></tr>
 
 <p>Flag indicating if logon procedure is used. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00380">380</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00397">397</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00537">ReceiveControlBurst()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00551">SetUseLogon()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00569">ReceiveControlBurst()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00583">SetUseLogon()</a>.</p>
 
 </div>
 </div>
@@ -2207,9 +2243,9 @@ Private Attributes</h2></td></tr>
 
 <p>Flag indicating if lora standard is used. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00385">385</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00402">402</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00559">SetUseLora()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00321">AddBeam()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00591">SetUseLora()</a>.</p>
 
 </div>
 </div>
@@ -2235,9 +2271,9 @@ Private Attributes</h2></td></tr>
 
 <p>Delay between handover acceptance and effective information transfer. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00370">370</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00387">387</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00041">GetTypeId()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00469">MoveUtBetweenBeams()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00045">GetTypeId()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00496">MoveUtBetweenBeams()</a>.</p>
 
 </div>
 </div>
@@ -2263,9 +2299,9 @@ Private Attributes</h2></td></tr>
 
 <p>Timeout to logoff a UT, if logon procedure is used. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00375">375</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ncc_8h_source.html#l00392">392</a> of file <a class="el" href="satellite-ncc_8h_source.html">satellite-ncc.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00567">CheckTimeout()</a>, <a class="el" href="satellite-ncc_8cc_source.html#l00041">GetTypeId()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00537">ReceiveControlBurst()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ncc_8cc_source.html#l00605">CheckTimeout()</a>, <a class="el" href="satellite-ncc_8cc_source.html#l00045">GetTypeId()</a>, and <a class="el" href="satellite-ncc_8cc_source.html#l00569">ReceiveControlBurst()</a>.</p>
 
 </div>
 </div>

@@ -122,8 +122,6 @@ $(document).ready(function(){initNavTree('sat-constellation-example_8cc.html',''
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">sat-constellation-example.cc File Reference</div>  </div>
 </div><!--header-->
@@ -157,133 +155,12 @@ $(document).ready(function(){initNavTree('sat-constellation-example_8cc.html',''
 </div>
 </div>
 <p><a href="sat-constellation-example_8cc_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a15d365df19696854eef989a579c312a8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sat-constellation-example_8cc.html#a15d365df19696854eef989a579c312a8">mainGeoTwoSats</a> (uint32_t packetSize, std::string interval, std::string configurationFolder, std::string startDate, Ptr&lt; <a class="el" href="classns3_1_1_simulation_helper.html">SimulationHelper</a> &gt; simulationHelper)</td></tr>
-<tr class="separator:a15d365df19696854eef989a579c312a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a959e28cb334183966c2f8c2a354083ca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sat-constellation-example_8cc.html#a959e28cb334183966c2f8c2a354083ca">mainLeo</a> (uint32_t packetSize, std::string interval, std::string configurationFolder, std::string startDate, Ptr&lt; <a class="el" href="classns3_1_1_simulation_helper.html">SimulationHelper</a> &gt; simulationHelper)</td></tr>
-<tr class="separator:a959e28cb334183966c2f8c2a354083ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file gives an example of satellite constellations. </p>
-<p>User must choose which constellation to simulate from all available in satellite/data/constellations Two main methods are implemented depending on the use of GEO or LEO constellations (different parameters) </p>
+<p>User must choose which constellation to simulate from all available in satellite/data/scenarios. </p>
 
 <p class="definition">Definition in file <a class="el" href="sat-constellation-example_8cc_source.html">sat-constellation-example.cc</a>.</p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="a15d365df19696854eef989a579c312a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15d365df19696854eef989a579c312a8">&#9670;&nbsp;</a></span>mainGeoTwoSats()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int mainGeoTwoSats </td>
-          <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>packetSize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>interval</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>configurationFolder</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>startDate</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Ptr&lt; <a class="el" href="classns3_1_1_simulation_helper.html">SimulationHelper</a> &gt;&#160;</td>
-          <td class="paramname"><em>simulationHelper</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set regeneration mode</p>
-<p>Use constellation</p>
-<p>Enable ACM</p>
-<p>Set simulation output details</p>
-<p>Enable packet trace</p>
-
-<p class="definition">Definition at line <a class="el" href="sat-constellation-example_8cc_source.html#l00045">45</a> of file <a class="el" href="sat-constellation-example_8cc_source.html">sat-constellation-example.cc</a>.</p>
-
-<p class="reference">References <a class="el" href="simulation-helper_8h_source.html#l00506">ns3::SimulationHelper::CBR</a>, <a class="el" href="simulation-helper_8h_source.html#l00528">ns3::SimulationHelper::FWD_LINK</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00123">ns3::SatStatsHelper::OUTPUT_SCATTER_FILE</a>, <a class="el" href="satellite-enums_8h_source.html#l00101">ns3::SatEnums::REGENERATION_NETWORK</a>, <a class="el" href="simulation-helper_8h_source.html#l00527">ns3::SimulationHelper::RTN_LINK</a>, and <a class="el" href="simulation-helper_8h_source.html#l00521">ns3::SimulationHelper::UDP</a>.</p>
-
-</div>
-</div>
-<a id="a959e28cb334183966c2f8c2a354083ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a959e28cb334183966c2f8c2a354083ca">&#9670;&nbsp;</a></span>mainLeo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int mainLeo </td>
-          <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>packetSize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>interval</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>configurationFolder</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>startDate</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Ptr&lt; <a class="el" href="classns3_1_1_simulation_helper.html">SimulationHelper</a> &gt;&#160;</td>
-          <td class="paramname"><em>simulationHelper</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set regeneration mode</p>
-<p>Use constellation</p>
-<p>Use constellation with correctly centered beams (used for testing)</p>
-<p>When using 72 beams, we need a 72*nbSats network addresses for beams, so we take margin</p>
-<p>Enable ACM</p>
-<p>Set simulation output details</p>
-<p>Enable packet trace</p>
-
-<p class="definition">Definition at line <a class="el" href="sat-constellation-example_8cc_source.html#l00243">243</a> of file <a class="el" href="sat-constellation-example_8cc_source.html">sat-constellation-example.cc</a>.</p>
-
-<p class="reference">References <a class="el" href="satellite-traffic-helper_8h_source.html#l00068">ns3::SatTrafficHelper::FWD_LINK</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00123">ns3::SatStatsHelper::OUTPUT_SCATTER_FILE</a>, <a class="el" href="satellite-enums_8h_source.html#l00101">ns3::SatEnums::REGENERATION_NETWORK</a>, and <a class="el" href="satellite-traffic-helper_8h_source.html#l00067">ns3::SatTrafficHelper::RTN_LINK</a>.</p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 
     <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -206,7 +206,6 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 </li>
 <li>CBR
 : <a class="el" href="classns3_1_1_sat_traffic_helper.html#a9f1f9fc294f01a81436278c116b79579a5397ed29aa78e56bd4a1f09dffb9b8ad">ns3::SatTrafficHelper</a>
-, <a class="el" href="classns3_1_1_simulation_helper.html#a2e7e7e80ffd116eaf0e5eaf9307ca2eaa48e23ec27f1b9eea0bc5fbbc907dfed8">ns3::SimulationHelper</a>
 </li>
 <li>cc1
 : <a class="el" href="structelsetrec.html#ac1dcc03331afb37bd8a77aeb5cbad349">elsetrec</a>
@@ -246,6 +245,10 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 </li>
 <li>CcReqType_t
 : <a class="el" href="classns3_1_1_sat_frame_allocator_1_1_cc_req_compare.html#a14175c0a32f4bd6cb8c7177202c579b4">ns3::SatFrameAllocator::CcReqCompare</a>
+</li>
+<li>ChangeBeam()
+: <a class="el" href="classns3_1_1_lorawan_mac_end_device.html#ab8d56ec27a7c26881bd9e1db13028350">ns3::LorawanMacEndDevice</a>
+, <a class="el" href="classns3_1_1_sat_gw_mac.html#a422d7cd7cf5370843445cb51d40cc870">ns3::SatGwMac</a>
 </li>
 <li>ChangeCustomTraffic()
 : <a class="el" href="classns3_1_1_sat_traffic_helper.html#a178722d2b2d1c96a14ca9218a2af304a">ns3::SatTrafficHelper</a>
@@ -294,10 +297,13 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 : <a class="el" href="classns3_1_1_sat_cno_helper.html#a8f390974f7f3f55e9df33bef4c95159e">ns3::SatCnoHelper</a>
 </li>
 <li>CheckForHandoverRecommendation()
-: <a class="el" href="classns3_1_1_sat_ut_handover_module.html#a54a2ef4030224fa214670943cfd3476e">ns3::SatUtHandoverModule</a>
+: <a class="el" href="classns3_1_1_sat_handover_module.html#a7f020658dbe9b8d169af4a84f655c65e">ns3::SatHandoverModule</a>
 </li>
 <li>CheckForVolumeBacklogPersistence()
 : <a class="el" href="classns3_1_1_sat_request_manager.html#adce3625571d4dfa4392ec77fddb8b3eb">ns3::SatRequestManager</a>
+</li>
+<li>CheckHandovers()
+: <a class="el" href="classns3_1_1_lorawan_mac_end_device.html#acdb20b47948bc876aa6c7d7a87b48e1b">ns3::LorawanMacEndDevice</a>
 </li>
 <li>CheckMultiUtTestResults()
 : <a class="el" href="class_sat_frame_allocator_test_case.html#a1e5a3639bd16baebb6dce8658ae59e3f">SatFrameAllocatorTestCase</a>
@@ -324,7 +330,7 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 : <a class="el" href="classns3_1_1_sat_static_bstp.html#a433e37a7c8208b901761dd1325229120">ns3::SatStaticBstp</a>
 </li>
 <li>Classify()
-: <a class="el" href="classns3_1_1_sat_packet_classifier.html#a88f238bedb47825791348e2d3684a3ca">ns3::SatPacketClassifier</a>
+: <a class="el" href="classns3_1_1_sat_packet_classifier.html#a44a8f87bae9c546e0f372923d2e5c6a2">ns3::SatPacketClassifier</a>
 </li>
 <li>CleanOldPackets()
 : <a class="el" href="classns3_1_1_sat_phy_rx_carrier_per_window.html#a2eaa3f31c82f4aa3df112e20a081ec38">ns3::SatPhyRxCarrierPerWindow</a>
@@ -339,6 +345,14 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 </li>
 <li>Clear()
 : <a class="el" href="classns3_1_1_sat_tbtp_container.html#af2f582f3abfad0636d58d21b0911d31f">ns3::SatTbtpContainer</a>
+</li>
+<li>ClearAllFrames()
+: <a class="el" href="classns3_1_1_sat_bb_frame_container.html#abc5e5b12706c615867adf755e75eb42b">ns3::SatBbFrameContainer</a>
+</li>
+<li>ClearAllPackets()
+: <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html#a34d3129b5ad974b050e5dc106ca2506b">ns3::SatFwdLinkScheduler</a>
+, <a class="el" href="classns3_1_1_sat_fwd_link_scheduler_default.html#a8cecba12787c972106fe1715bb10ee53">ns3::SatFwdLinkSchedulerDefault</a>
+, <a class="el" href="classns3_1_1_sat_fwd_link_scheduler_time_slicing.html#a4e87a587dfc22fcf4709feaeb73f2ca2">ns3::SatFwdLinkSchedulerTimeSlicing</a>
 </li>
 <li>ClearChannel()
 : <a class="el" href="classns3_1_1_sat_phy_tx.html#a1e2385ebd7821d39af96fb4b1c8b2be9">ns3::SatPhyTx</a>
@@ -355,6 +369,13 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 </li>
 <li>ClearOutdatedSamples()
 : <a class="el" href="classns3_1_1_sat_basic_cno_estimator.html#a1f81e87571047c0fff0206309446b6cc">ns3::SatBasicCnoEstimator</a>
+</li>
+<li>ClearQueues()
+: <a class="el" href="classns3_1_1_sat_gw_llc.html#ad1ee71a1357052f36156a6db0162b901">ns3::SatGwLlc</a>
+, <a class="el" href="classns3_1_1_sat_orbiter_llc.html#a79182d99bb9ff01518b9c4271b2c97bf">ns3::SatOrbiterLlc</a>
+</li>
+<li>ClearQueuesCallback
+: <a class="el" href="classns3_1_1_sat_gw_mac.html#a0899615315aeead7e017364eeacf6379">ns3::SatGwMac</a>
 </li>
 <li>CloseFirstReceiveWindow()
 : <a class="el" href="classns3_1_1_lorawan_mac_end_device_class_a.html#a734babb154acd6c847b1ff0c96893fc8">ns3::LorawanMacEndDeviceClassA</a>
@@ -476,21 +497,34 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 , <a class="el" href="classns3_1_1_sat_sinr_probe.html#afdbc8a12223ff17391f3bb5b42f4fb99">ns3::SatSinrProbe</a>
 </li>
 <li>ConnectGw()
-: <a class="el" href="classns3_1_1_sat_geo_net_device.html#ae04c2c96d13ab32335e23bd8bf32ac31">ns3::SatGeoNetDevice</a>
+: <a class="el" href="classns3_1_1_sat_beam_scheduler.html#a564ad85ccf967096a604941c848aeb42">ns3::SatBeamScheduler</a>
+, <a class="el" href="classns3_1_1_sat_orbiter_net_device.html#a22dc2593ecd605c3a9b87d8592c0a739">ns3::SatOrbiterNetDevice</a>
+</li>
+<li>ConnectGwToBeam()
+: <a class="el" href="classns3_1_1_sat_topology.html#ab6bd4b47d2d46f73b663322e24c542fe">ns3::SatTopology</a>
+</li>
+<li>ConnectGwToUt()
+: <a class="el" href="classns3_1_1_sat_topology.html#a6050052dbcd66b7093f7bb6fc900f36e">ns3::SatTopology</a>
 </li>
 <li>ConnectProbeToCollector()
-: <a class="el" href="classns3_1_1_sat_stats_delay_helper.html#afd79e2e73c01b12767435a4af9040c84">ns3::SatStatsDelayHelper</a>
+: <a class="el" href="classns3_1_1_sat_stats_composite_sinr_helper.html#a3a4c3b834c26cc253a71eddf7988723b">ns3::SatStatsCompositeSinrHelper</a>
+, <a class="el" href="classns3_1_1_sat_stats_delay_helper.html#afd79e2e73c01b12767435a4af9040c84">ns3::SatStatsDelayHelper</a>
 , <a class="el" href="classns3_1_1_sat_stats_jitter_helper.html#a4dacae4e92d7657a303f474e347be989">ns3::SatStatsJitterHelper</a>
 , <a class="el" href="classns3_1_1_sat_stats_link_delay_helper.html#a883ff939cdd867ca010c90aa81fdfa23">ns3::SatStatsLinkDelayHelper</a>
 , <a class="el" href="classns3_1_1_sat_stats_link_jitter_helper.html#abe2b3aa8921ad1240899f234b96adc9d">ns3::SatStatsLinkJitterHelper</a>
 , <a class="el" href="classns3_1_1_sat_stats_link_modcod_helper.html#a4bafbbe1458ac533d539a6f87ec95627">ns3::SatStatsLinkModcodHelper</a>
 , <a class="el" href="classns3_1_1_sat_stats_link_rx_power_helper.html#a412e34c9c328b225190ee36071556911">ns3::SatStatsLinkRxPowerHelper</a>
 , <a class="el" href="classns3_1_1_sat_stats_link_sinr_helper.html#a65e1aeccb0a69fd31d6d5ff4a8f00a67">ns3::SatStatsLinkSinrHelper</a>
+, <a class="el" href="classns3_1_1_sat_stats_packet_error_helper.html#ae2c916e493e13a67208c814036221fd1">ns3::SatStatsPacketErrorHelper</a>
 , <a class="el" href="classns3_1_1_sat_stats_plt_helper.html#a46fdb3e0a99ddd14d30f48de253b26a6">ns3::SatStatsPltHelper</a>
 , <a class="el" href="classns3_1_1_sat_stats_satellite_queue_helper.html#a26990377f1335cbc7e491ed4c7ed5920">ns3::SatStatsSatelliteQueueHelper</a>
 </li>
 <li>ConnectUt()
-: <a class="el" href="classns3_1_1_sat_geo_net_device.html#a923a6a8b48ed0f6480c3542b6a478d6e">ns3::SatGeoNetDevice</a>
+: <a class="el" href="classns3_1_1_sat_beam_scheduler.html#a5450b11f5c03bb85c1362d351d28be0e">ns3::SatBeamScheduler</a>
+, <a class="el" href="classns3_1_1_sat_gw_mac.html#a463894897f8b4378aa20b3ec9747afcf">ns3::SatGwMac</a>
+, <a class="el" href="classns3_1_1_sat_orbiter_net_device.html#a14dfdde138e7b7f108d3bc28ec2d49fd">ns3::SatOrbiterNetDevice</a>
+, <a class="el" href="classns3_1_1_sat_orbiter_net_device_dvb.html#a51fc754811264a146214f496ad81040e">ns3::SatOrbiterNetDeviceDvb</a>
+, <a class="el" href="classns3_1_1_sat_orbiter_net_device_lora.html#afd6d818ce142592c01471c54181d685a">ns3::SatOrbiterNetDeviceLora</a>
 </li>
 <li>constant
 : <a class="el" href="structns3_1_1_sat_cno_helper_1_1cno_custom_params__s.html#afc1573c78fca17a6ba9f701f4b813a89">ns3::SatCnoHelper::cnoCustomParams_s</a>
@@ -666,9 +700,6 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 <li>CreateCollectorPerIdentifier()
 : <a class="el" href="classns3_1_1_sat_stats_helper.html#a9db72a646e12ebb38af79b69a977c9e2">ns3::SatStatsHelper</a>
 </li>
-<li>CreateConstellationScenario()
-: <a class="el" href="classns3_1_1_sat_helper.html#a04a88106dd655ff7bcdd15dd01eff11e">ns3::SatHelper</a>
-</li>
 <li>CreateCrdsaPacketInstances()
 : <a class="el" href="classns3_1_1_sat_ut_mac.html#abec43ce1752fcdcd7254461a087c2d2f">ns3::SatUtMac</a>
 </li>
@@ -682,11 +713,11 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 : <a class="el" href="structns3_1_1_sat_traffic_helper_1_1_custom_traffic_info__s.html#a262b3ad1f796d251535b9b9bf8a8d588">ns3::SatTrafficHelper::CustomTrafficInfo_s</a>
 </li>
 <li>CreateDecap()
-: <a class="el" href="classns3_1_1_sat_geo_feeder_llc.html#a9451ec48aafc9cdbe24a730de630ac05">ns3::SatGeoFeederLlc</a>
-, <a class="el" href="classns3_1_1_sat_geo_llc.html#a30cf61fb573b378aea7b23ceae71f230">ns3::SatGeoLlc</a>
-, <a class="el" href="classns3_1_1_sat_geo_user_llc.html#a742cf2d0c12497635b7824f1a7b48113">ns3::SatGeoUserLlc</a>
-, <a class="el" href="classns3_1_1_sat_gw_llc.html#a1181abf447768420329620b9fbc9e81c">ns3::SatGwLlc</a>
+: <a class="el" href="classns3_1_1_sat_gw_llc.html#a1181abf447768420329620b9fbc9e81c">ns3::SatGwLlc</a>
 , <a class="el" href="classns3_1_1_sat_llc.html#a775a02dcc23b2c7cebc5ddc288692f16">ns3::SatLlc</a>
+, <a class="el" href="classns3_1_1_sat_orbiter_feeder_llc.html#a169cb769bbe10a89cb053dddcb7f84e1">ns3::SatOrbiterFeederLlc</a>
+, <a class="el" href="classns3_1_1_sat_orbiter_llc.html#a3ea1a13283618355ecb44d950ac7181a">ns3::SatOrbiterLlc</a>
+, <a class="el" href="classns3_1_1_sat_orbiter_user_llc.html#a90d8293a8be2ab36cf1cc75767a5c417">ns3::SatOrbiterUserLlc</a>
 , <a class="el" href="classns3_1_1_sat_ut_llc.html#a4e60347d04fac527c9e69e298392e114">ns3::SatUtLlc</a>
 </li>
 <li>CreateDefaultFwdLinkStats()
@@ -702,12 +733,12 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 : <a class="el" href="classns3_1_1_sat_env_variables.html#a474256e139a72d4b95565bf3349bf4b2">ns3::SatEnvVariables</a>
 </li>
 <li>CreateEncap()
-: <a class="el" href="classns3_1_1_sat_geo_feeder_llc.html#a49eac3bc54da46349405201b396e8527">ns3::SatGeoFeederLlc</a>
-, <a class="el" href="classns3_1_1_sat_geo_llc.html#ad95d9627e8affe18c4bf23b1048f1640">ns3::SatGeoLlc</a>
-, <a class="el" href="classns3_1_1_sat_geo_user_llc.html#a0cced91a2f9774cb1b5d0c5766660dd2">ns3::SatGeoUserLlc</a>
-, <a class="el" href="classns3_1_1_sat_gw_llc.html#aec3a94fe8aabcb98ce74cde93a989554">ns3::SatGwLlc</a>
+: <a class="el" href="classns3_1_1_sat_gw_llc.html#aec3a94fe8aabcb98ce74cde93a989554">ns3::SatGwLlc</a>
 , <a class="el" href="classns3_1_1_sat_llc.html#a549e23acb44386093174ef8f09996016">ns3::SatLlc</a>
-, <a class="el" href="classns3_1_1_sat_ut_llc.html#abe903f198a58e11925c10c79ebac1cb6">ns3::SatUtLlc</a>
+, <a class="el" href="classns3_1_1_sat_orbiter_feeder_llc.html#a490145884fcaef312c6643c3d7cd7675">ns3::SatOrbiterFeederLlc</a>
+, <a class="el" href="classns3_1_1_sat_orbiter_llc.html#a05d511e832cd355e3b622e81ab04ad75">ns3::SatOrbiterLlc</a>
+, <a class="el" href="classns3_1_1_sat_orbiter_user_llc.html#a83bf16b509ba0077cf1c3b6964e97636">ns3::SatOrbiterUserLlc</a>
+, <a class="el" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10">ns3::SatUtLlc</a>
 </li>
 <li>CreateEstimator()
 : <a class="el" href="class_sat_estimator_base_test_case.html#a3a822af0a0ac268011776d79672da44b">SatEstimatorBaseTestCase</a>
@@ -747,6 +778,11 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 <li>CreateNewTbtp()
 : <a class="el" href="classns3_1_1_sat_frame_allocator.html#ac445244f3e41cf8edd72b10851f779af">ns3::SatFrameAllocator</a>
 </li>
+<li>CreateOrbiterNetDevice()
+: <a class="el" href="classns3_1_1_sat_orbiter_helper.html#a9594cce6d013822d9cdef8b3fab9b735">ns3::SatOrbiterHelper</a>
+, <a class="el" href="classns3_1_1_sat_orbiter_helper_dvb.html#a9a02595fb47d31467d44c14b95e03ca6">ns3::SatOrbiterHelperDvb</a>
+, <a class="el" href="classns3_1_1_sat_orbiter_helper_lora.html#a4b2d64791a8d6bb544de8e13474c449b">ns3::SatOrbiterHelperLora</a>
+</li>
 <li>CreatePredefinedScenario()
 : <a class="el" href="classns3_1_1_sat_helper.html#a1cf10c6680265a287b630fbc64263bd4">ns3::SatHelper</a>
 </li>
@@ -772,7 +808,7 @@ $(document).ready(function(){initNavTree('functions_c.html',''); initResizable()
 : <a class="el" href="classns3_1_1_sat_helper.html#aebcb0625d18104bee1cbc55346cb1bd5">ns3::SatHelper</a>
 </li>
 <li>CreateUserDefinedScenarioFromListPositions()
-: <a class="el" href="classns3_1_1_sat_helper.html#abd42918e7c10415c03601557ce99562c">ns3::SatHelper</a>
+: <a class="el" href="classns3_1_1_sat_helper.html#acd48ca3d269f1ec5c46ec084c7c708fc">ns3::SatHelper</a>
 </li>
 <li>CreateUtFadingTrace()
 : <a class="el" href="classns3_1_1_sat_fading_external_input_trace_container.html#a338a9a1ba3431d4d6056e5d48cd0a65b">ns3::SatFadingExternalInputTraceContainer</a>

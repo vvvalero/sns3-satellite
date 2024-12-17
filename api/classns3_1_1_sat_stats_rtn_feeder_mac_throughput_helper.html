@@ -156,16 +156,16 @@ $(document).ready(function(){initNavTree('classns3_1_1_sat_stats_rtn_feeder_mac_
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_stats_rtn_feeder_mac_throughput_helper__coll__graph.png" border="0" usemap="#ans3_1_1_sat_stats_rtn_feeder_mac_throughput_helper_coll__map" alt="Collaboration graph"/></div>
 <map name="ans3_1_1_sat_stats_rtn_feeder_mac_throughput_helper_coll__map" id="ans3_1_1_sat_stats_rtn_feeder_mac_throughput_helper_coll__map">
-<area shape="rect" title="Produce return feeder link MAC&#45;level throughput statistics from a satellite module simulation." alt="" coords="95,379,295,420"/>
-<area shape="rect" href="classns3_1_1_sat_stats_throughput_helper.html" title=" " alt="" coords="83,303,307,329"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html" title="Parent abstract class of all satellite statistics helpers." alt="" coords="23,206,174,233"/>
-<area shape="rect" title=" " alt="" coords="5,109,69,136"/>
-<area shape="rect" title=" " alt="" coords="94,109,181,136"/>
-<area shape="rect" title=" " alt="" coords="68,5,207,47"/>
-<area shape="rect" title=" " alt="" coords="199,199,388,240"/>
-<area shape="rect" title=" " alt="" coords="226,109,361,136"/>
-<area shape="rect" title=" " alt="" coords="253,13,291,39"/>
-<area shape="rect" title=" " alt="" coords="318,13,357,39"/>
+<area shape="rect" title="Produce return feeder link MAC&#45;level throughput statistics from a satellite module simulation." alt="" coords="37,455,237,496"/>
+<area shape="rect" href="classns3_1_1_sat_stats_throughput_helper.html" title=" " alt="" coords="25,379,249,405"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html" title="Parent abstract class of all satellite statistics helpers." alt="" coords="62,303,213,329"/>
+<area shape="rect" title=" " alt="" coords="5,206,69,233"/>
+<area shape="rect" title=" " alt="" coords="94,206,181,233"/>
+<area shape="rect" title=" " alt="" coords="68,95,207,136"/>
+<area shape="rect" title=" " alt="" coords="205,199,395,240"/>
+<area shape="rect" title=" " alt="" coords="233,102,367,129"/>
+<area shape="rect" title=" " alt="" coords="249,5,287,32"/>
+<area shape="rect" title=" " alt="" coords="314,5,353,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -218,6 +218,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2eb19b25f18ebb2abc388fd986d9cc80 inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97b7054c096118362f657a669d02c304 inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a97b7054c096118362f657a669d02c304">SetOutputType</a> (<a class="el" href="classns3_1_1_sat_stats_helper.html#aa8f3afc2c8c3b7200dd4b55f4c89b70e">OutputType_t</a> outputType)</td></tr>
 <tr class="separator:a97b7054c096118362f657a669d02c304 inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89bd4dcae67d3f6efb94cc3347807ad2 inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a89bd4dcae67d3f6efb94cc3347807ad2">UpdateAddressAndIdentifier</a> (Ptr&lt; Node &gt; utNode)</td></tr>
+<tr class="memdesc:a89bd4dcae67d3f6efb94cc3347807ad2 inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the address and the proper identifier from the given UT node.  <a href="classns3_1_1_sat_stats_helper.html#a89bd4dcae67d3f6efb94cc3347807ad2">More...</a><br /></td></tr>
+<tr class="separator:a89bd4dcae67d3f6efb94cc3347807ad2 inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a004d37ac17a7443b99b436d735355d8e inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a004d37ac17a7443b99b436d735355d8e">UpdateIdentifierOnProbes</a> ()</td></tr>
+<tr class="memdesc:a004d37ac17a7443b99b436d735355d8e inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change identifier used on probes, when handovers occur.  <a href="classns3_1_1_sat_stats_helper.html#a004d37ac17a7443b99b436d735355d8e">More...</a><br /></td></tr>
+<tr class="separator:a004d37ac17a7443b99b436d735355d8e inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -245,9 +251,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ae72a1a948473f308689d30e9d493e4f2 inherit pro_methods_classns3_1_1_sat_stats_throughput_helper"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_throughput_helper.html#ae72a1a948473f308689d30e9d493e4f2">DoInstall</a> ()</td></tr>
 <tr class="memdesc:ae72a1a948473f308689d30e9d493e4f2 inherit pro_methods_classns3_1_1_sat_stats_throughput_helper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Install the probes, collectors, and aggregators necessary to produce the statistics output.  <a href="classns3_1_1_sat_stats_throughput_helper.html#ae72a1a948473f308689d30e9d493e4f2">More...</a><br /></td></tr>
 <tr class="separator:ae72a1a948473f308689d30e9d493e4f2 inherit pro_methods_classns3_1_1_sat_stats_throughput_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae73a62b1cbf68131e750f94dbc98b533 inherit pro_methods_classns3_1_1_sat_stats_throughput_helper"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_throughput_helper.html#ae73a62b1cbf68131e750f94dbc98b533">SaveAddressAndIdentifier</a> (Ptr&lt; Node &gt; utNode)</td></tr>
-<tr class="memdesc:ae73a62b1cbf68131e750f94dbc98b533 inherit pro_methods_classns3_1_1_sat_stats_throughput_helper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the address and the proper identifier from the given UT node.  <a href="classns3_1_1_sat_stats_throughput_helper.html#ae73a62b1cbf68131e750f94dbc98b533">More...</a><br /></td></tr>
-<tr class="separator:ae73a62b1cbf68131e750f94dbc98b533 inherit pro_methods_classns3_1_1_sat_stats_throughput_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classns3_1_1_sat_stats_helper"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classns3_1_1_sat_stats_helper')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classns3_1_1_sat_stats_helper.html">ns3::SatStatsHelper</a></td></tr>
 <tr class="memitem:a822c7c47ed2eeab16eb49bd47725de3a inherit pro_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">Ptr&lt; DataCollectionObject &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a822c7c47ed2eeab16eb49bd47725de3a">CreateAggregator</a> (std::string aggregatorTypeId, std::string n1=&quot;&quot;, const AttributeValue &amp;v1=EmptyAttributeValue(), std::string n2=&quot;&quot;, const AttributeValue &amp;v2=EmptyAttributeValue(), std::string n3=&quot;&quot;, const AttributeValue &amp;v3=EmptyAttributeValue(), std::string n4=&quot;&quot;, const AttributeValue &amp;v4=EmptyAttributeValue(), std::string n5=&quot;&quot;, const AttributeValue &amp;v5=EmptyAttributeValue())</td></tr>
 <tr class="memdesc:a822c7c47ed2eeab16eb49bd47725de3a inherit pro_methods_classns3_1_1_sat_stats_helper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the aggregator according to the output type.  <a href="classns3_1_1_sat_stats_helper.html#a822c7c47ed2eeab16eb49bd47725de3a">More...</a><br /></td></tr>
@@ -288,6 +291,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a93e39c005ae0351b47a5fca8dcfad7e7 inherit pro_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae37e2e28674be92dcdfd00dbb03f3e2e inherit pro_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#ae37e2e28674be92dcdfd00dbb03f3e2e">GetUtUserId</a> (Ptr&lt; Node &gt; utUserNode) const</td></tr>
 <tr class="separator:ae37e2e28674be92dcdfd00dbb03f3e2e inherit pro_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a356a8bcd2f2a99403be1f6a801d53ede inherit pro_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a356a8bcd2f2a99403be1f6a801d53ede">SaveAddressAndIdentifier</a> (Ptr&lt; Node &gt; utNode)</td></tr>
+<tr class="memdesc:a356a8bcd2f2a99403be1f6a801d53ede inherit pro_methods_classns3_1_1_sat_stats_helper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the address and the proper identifier from the given UT node.  <a href="classns3_1_1_sat_stats_helper.html#a356a8bcd2f2a99403be1f6a801d53ede">More...</a><br /></td></tr>
+<tr class="separator:a356a8bcd2f2a99403be1f6a801d53ede inherit pro_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -329,8 +335,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_static_methods_classns3_1_1_sat_stats_helper"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classns3_1_1_sat_stats_helper')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classns3_1_1_sat_stats_helper.html">ns3::SatStatsHelper</a></td></tr>
 <tr class="memitem:a2b0c6cdb6baeef11889ed426cd8d9f46 inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">static NetDeviceContainer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a2b0c6cdb6baeef11889ed426cd8d9f46">GetGwSatNetDevice</a> (Ptr&lt; Node &gt; gwNode)</td></tr>
 <tr class="separator:a2b0c6cdb6baeef11889ed426cd8d9f46 inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a489e487004c59e47965c3bcfa53d1f55 inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">static Ptr&lt; NetDevice &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a489e487004c59e47965c3bcfa53d1f55">GetSatSatGeoNetDevice</a> (Ptr&lt; Node &gt; satNode)</td></tr>
-<tr class="separator:a489e487004c59e47965c3bcfa53d1f55 inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bddc4263f820ab84fd7d54baeb0f54b inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">static Ptr&lt; NetDevice &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a1bddc4263f820ab84fd7d54baeb0f54b">GetSatSatOrbiterNetDevice</a> (Ptr&lt; Node &gt; satNode)</td></tr>
+<tr class="separator:a1bddc4263f820ab84fd7d54baeb0f54b inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdeba1ca23ae3fd9415406334f58e885 inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">static Ptr&lt; NetDevice &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#abdeba1ca23ae3fd9415406334f58e885">GetUtSatNetDevice</a> (Ptr&lt; Node &gt; utNode)</td></tr>
 <tr class="separator:abdeba1ca23ae3fd9415406334f58e885 inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classns3_1_1_sat_stats_throughput_helper"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classns3_1_1_sat_stats_throughput_helper')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classns3_1_1_sat_stats_throughput_helper.html">ns3::SatStatsThroughputHelper</a></td></tr>
@@ -343,12 +349,13 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a0a7a27b30faf10c7760bce37945c67a6 inherit pro_attribs_classns3_1_1_sat_stats_throughput_helper"><td class="memItemLeft" align="right" valign="top">CollectorMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_throughput_helper.html#a0a7a27b30faf10c7760bce37945c67a6">m_conversionCollectors</a></td></tr>
 <tr class="memdesc:a0a7a27b30faf10c7760bce37945c67a6 inherit pro_attribs_classns3_1_1_sat_stats_throughput_helper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maintains a list of first-level collectors created by this helper.  <a href="classns3_1_1_sat_stats_throughput_helper.html#a0a7a27b30faf10c7760bce37945c67a6">More...</a><br /></td></tr>
 <tr class="separator:a0a7a27b30faf10c7760bce37945c67a6 inherit pro_attribs_classns3_1_1_sat_stats_throughput_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab85eefca486ced41042d7d122903c087 inherit pro_attribs_classns3_1_1_sat_stats_throughput_helper"><td class="memItemLeft" align="right" valign="top">std::map&lt; const Address, uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_throughput_helper.html#ab85eefca486ced41042d7d122903c087">m_identifierMap</a></td></tr>
-<tr class="memdesc:ab85eefca486ced41042d7d122903c087 inherit pro_attribs_classns3_1_1_sat_stats_throughput_helper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of address and the identifier associated with it (for return link).  <a href="classns3_1_1_sat_stats_throughput_helper.html#ab85eefca486ced41042d7d122903c087">More...</a><br /></td></tr>
-<tr class="separator:ab85eefca486ced41042d7d122903c087 inherit pro_attribs_classns3_1_1_sat_stats_throughput_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad99b361bf1e552b4139f08c44cc0120 inherit pro_attribs_classns3_1_1_sat_stats_throughput_helper"><td class="memItemLeft" align="right" valign="top">CollectorMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_throughput_helper.html#aad99b361bf1e552b4139f08c44cc0120">m_terminalCollectors</a></td></tr>
 <tr class="memdesc:aad99b361bf1e552b4139f08c44cc0120 inherit pro_attribs_classns3_1_1_sat_stats_throughput_helper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maintains a list of second-level collectors created by this helper.  <a href="classns3_1_1_sat_stats_throughput_helper.html#aad99b361bf1e552b4139f08c44cc0120">More...</a><br /></td></tr>
 <tr class="separator:aad99b361bf1e552b4139f08c44cc0120 inherit pro_attribs_classns3_1_1_sat_stats_throughput_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classns3_1_1_sat_stats_helper"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classns3_1_1_sat_stats_helper')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classns3_1_1_sat_stats_helper.html">ns3::SatStatsHelper</a></td></tr>
+<tr class="memitem:adbfb10e2a6c0b2dcb0d717cc1370c07a inherit pro_attribs_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">std::map&lt; const Address, uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#adbfb10e2a6c0b2dcb0d717cc1370c07a">m_identifierMap</a></td></tr>
+<tr class="memdesc:adbfb10e2a6c0b2dcb0d717cc1370c07a inherit pro_attribs_classns3_1_1_sat_stats_helper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of address and the identifier associated with it.  <a href="classns3_1_1_sat_stats_helper.html#adbfb10e2a6c0b2dcb0d717cc1370c07a">More...</a><br /></td></tr>
+<tr class="separator:adbfb10e2a6c0b2dcb0d717cc1370c07a inherit pro_attribs_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Produce return feeder link MAC-level throughput statistics from a satellite module simulation. </p>
@@ -357,11 +364,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="line">(satHelper); s-&gt;SetName (<span class="stringliteral">&quot;name&quot;</span>); s-&gt;SetIdentifierType (<a class="code" href="classns3_1_1_sat_stats_helper.html#ae114192b5b6011379e0f3a329661fa6ea957abf954d52c87476bc40ffa966d705">SatStatsHelper::IDENTIFIER_GLOBAL</a>);</div>
 <div class="line">s-&gt;SetOutputType (<a class="code" href="classns3_1_1_sat_stats_helper.html#aa8f3afc2c8c3b7200dd4b55f4c89b70ea63abe1d6cb880afd3309a4cdec4bd4d2">SatStatsHelper::OUTPUT_SCATTER_FILE</a>);</div>
 <div class="line">s-&gt;Install ();</div>
-<div class="ttc" id="aclassns3_1_1_sat_stats_helper_html_aa8f3afc2c8c3b7200dd4b55f4c89b70ea63abe1d6cb880afd3309a4cdec4bd4d2"><div class="ttname"><a href="classns3_1_1_sat_stats_helper.html#aa8f3afc2c8c3b7200dd4b55f4c89b70ea63abe1d6cb880afd3309a4cdec4bd4d2">ns3::SatStatsHelper::OUTPUT_SCATTER_FILE</a></div><div class="ttdeci">@ OUTPUT_SCATTER_FILE</div><div class="ttdef"><b>Definition:</b> <a href="satellite-stats-helper_8h_source.html#l00123">satellite-stats-helper.h:123</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_stats_helper_html_ae114192b5b6011379e0f3a329661fa6ea957abf954d52c87476bc40ffa966d705"><div class="ttname"><a href="classns3_1_1_sat_stats_helper.html#ae114192b5b6011379e0f3a329661fa6ea957abf954d52c87476bc40ffa966d705">ns3::SatStatsHelper::IDENTIFIER_GLOBAL</a></div><div class="ttdeci">@ IDENTIFIER_GLOBAL</div><div class="ttdef"><b>Definition:</b> <a href="satellite-stats-helper_8h_source.html#l00098">satellite-stats-helper.h:98</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_stats_helper_html_aa8f3afc2c8c3b7200dd4b55f4c89b70ea63abe1d6cb880afd3309a4cdec4bd4d2"><div class="ttname"><a href="classns3_1_1_sat_stats_helper.html#aa8f3afc2c8c3b7200dd4b55f4c89b70ea63abe1d6cb880afd3309a4cdec4bd4d2">ns3::SatStatsHelper::OUTPUT_SCATTER_FILE</a></div><div class="ttdeci">@ OUTPUT_SCATTER_FILE</div><div class="ttdef"><b>Definition:</b> <a href="satellite-stats-helper_8h_source.html#l00124">satellite-stats-helper.h:124</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_stats_helper_html_ae114192b5b6011379e0f3a329661fa6ea957abf954d52c87476bc40ffa966d705"><div class="ttname"><a href="classns3_1_1_sat_stats_helper.html#ae114192b5b6011379e0f3a329661fa6ea957abf954d52c87476bc40ffa966d705">ns3::SatStatsHelper::IDENTIFIER_GLOBAL</a></div><div class="ttdeci">@ IDENTIFIER_GLOBAL</div><div class="ttdef"><b>Definition:</b> <a href="satellite-stats-helper_8h_source.html#l00099">satellite-stats-helper.h:99</a></div></div>
 </div><!-- fragment --><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000056">Todo:</a></b></dt><dd>This statistics does not include control messages. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-throughput-helper_8h_source.html#l00613">613</a> of file <a class="el" href="satellite-stats-throughput-helper_8h_source.html">satellite-stats-throughput-helper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-throughput-helper_8h_source.html#l00608">608</a> of file <a class="el" href="satellite-stats-throughput-helper_8h_source.html">satellite-stats-throughput-helper.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aed7c58a7b47c80bacde353179b5cb7d2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aed7c58a7b47c80bacde353179b5cb7d2">&#9670;&nbsp;</a></span>SatStatsRtnFeederMacThroughputHelper()</h2>
@@ -379,7 +386,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-throughput-helper_8cc_source.html#l01498">1498</a> of file <a class="el" href="satellite-stats-throughput-helper_8cc_source.html">satellite-stats-throughput-helper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-throughput-helper_8cc_source.html#l01598">1598</a> of file <a class="el" href="satellite-stats-throughput-helper_8cc_source.html">satellite-stats-throughput-helper.cc</a>.</p>
 
 </div>
 </div>
@@ -408,7 +415,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>/ Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-throughput-helper_8cc_source.html#l01505">1505</a> of file <a class="el" href="satellite-stats-throughput-helper_8cc_source.html">satellite-stats-throughput-helper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-throughput-helper_8cc_source.html#l01605">1605</a> of file <a class="el" href="satellite-stats-throughput-helper_8cc_source.html">satellite-stats-throughput-helper.cc</a>.</p>
 
 </div>
 </div>
@@ -438,9 +445,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classns3_1_1_sat_stats_throughput_helper.html#a8291acf57c7e6ea02e81407262ac7c87">ns3::SatStatsThroughputHelper</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-throughput-helper_8cc_source.html#l01519">1519</a> of file <a class="el" href="satellite-stats-throughput-helper_8cc_source.html">satellite-stats-throughput-helper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-throughput-helper_8cc_source.html#l01619">1619</a> of file <a class="el" href="satellite-stats-throughput-helper_8cc_source.html">satellite-stats-throughput-helper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-stats-helper_8cc_source.html#l01017">ns3::SatStatsHelper::GetGwSatNetDevice()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00288">ns3::SatStatsHelper::GetSatHelper()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l01060">ns3::SatStatsHelper::GetSatSatGeoNetDevice()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l01042">ns3::SatStatsHelper::GetUtSatNetDevice()</a>, <a class="el" href="satellite-stats-throughput-helper_8cc_source.html#l00396">ns3::SatStatsThroughputHelper::RxCallback()</a>, and <a class="el" href="satellite-stats-throughput-helper_8cc_source.html#l00436">ns3::SatStatsThroughputHelper::SaveAddressAndIdentifier()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-stats-helper_8cc_source.html#l01024">ns3::SatStatsHelper::GetGwSatNetDevice()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l01067">ns3::SatStatsHelper::GetSatSatOrbiterNetDevice()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l01049">ns3::SatStatsHelper::GetUtSatNetDevice()</a>, <a class="el" href="satellite-stats-throughput-helper_8cc_source.html#l00400">ns3::SatStatsThroughputHelper::RxCallback()</a>, and <a class="el" href="satellite-stats-helper_8cc_source.html#l01081">ns3::SatStatsHelper::SaveAddressAndIdentifier()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -448,21 +455,20 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_stats_rtn_feeder_mac_throughput_helper_af3e475e2f310c566201551401c1aea56_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_stats_rtn_feeder_mac_throughput_helper_af3e475e2f310c566201551401c1aea56_cgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_stats_rtn_feeder_mac_throughput_helper_af3e475e2f310c566201551401c1aea56_cgraph" id="aclassns3_1_1_sat_stats_rtn_feeder_mac_throughput_helper_af3e475e2f310c566201551401c1aea56_cgraph">
-<area shape="rect" title=" " alt="" coords="5,169,255,211"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a2b0c6cdb6baeef11889ed426cd8d9f46" title=" " alt="" coords="333,5,496,47"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a1d63ffd6ebacd9f2d2db32580b1bfadb" title=" " alt="" coords="339,71,490,112"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a489e487004c59e47965c3bcfa53d1f55" title=" " alt="" coords="320,136,509,177"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#abdeba1ca23ae3fd9415406334f58e885" title=" " alt="" coords="336,201,493,243"/>
-<area shape="rect" href="classns3_1_1_sat_stats_throughput_helper.html#a4c523c282af3cca3d83ab63382752bfa" title="Receive inputs from trace sources and determine the right collector to forward the inputs to." alt="" coords="303,267,527,308"/>
-<area shape="rect" href="classns3_1_1_sat_stats_throughput_helper.html#ae73a62b1cbf68131e750f94dbc98b533" title="Save the address and the proper identifier from the given UT node." alt="" coords="303,332,527,373"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#ada8b440db63c67048f066b1049d4a898" title=" " alt="" coords="575,244,725,285"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#af3a42178e8d687643c54cf473e008901" title=" " alt="" coords="1027,372,1235,413"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#a3174ce104d98c7f37b69256d573255da" title="Function for getting the beam ID with MAC." alt="" coords="774,48,978,89"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#af7c2802b2da9140f72b9f91943eca400" title="Function for getting the group ID with MAC." alt="" coords="773,113,979,155"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a7be2bafa3875d1efa0367ed09efa5d71" title=" " alt="" coords="786,179,966,220"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#a451689de1096fda8d49f803c93a23696" title="Function for getting the SAT ID with MAC." alt="" coords="783,244,969,285"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a93e39c005ae0351b47a5fca8dcfad7e7" title=" " alt="" coords="801,309,951,351"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#ac9620fca48baf58b821b57220d11ea39" title="Function for getting the UT ID with MAC." alt="" coords="1034,307,1227,348"/>
+<area shape="rect" title=" " alt="" coords="5,159,255,200"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a2b0c6cdb6baeef11889ed426cd8d9f46" title=" " alt="" coords="333,28,496,69"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a1bddc4263f820ab84fd7d54baeb0f54b" title=" " alt="" coords="311,93,519,135"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#abdeba1ca23ae3fd9415406334f58e885" title=" " alt="" coords="336,159,493,200"/>
+<area shape="rect" href="classns3_1_1_sat_stats_throughput_helper.html#a4c523c282af3cca3d83ab63382752bfa" title="Receive inputs from trace sources and determine the right collector to forward the inputs to." alt="" coords="303,224,527,265"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a356a8bcd2f2a99403be1f6a801d53ede" title="Save the address and the proper identifier from the given UT node." alt="" coords="316,289,513,331"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#ada8b440db63c67048f066b1049d4a898" title=" " alt="" coords="575,201,725,243"/>
+<area shape="rect" href="classns3_1_1_sat_id_mapper.html#af3a42178e8d687643c54cf473e008901" title=" " alt="" coords="1027,329,1235,371"/>
+<area shape="rect" href="classns3_1_1_sat_id_mapper.html#a3174ce104d98c7f37b69256d573255da" title="Function for getting the beam ID with MAC." alt="" coords="774,5,978,47"/>
+<area shape="rect" href="classns3_1_1_sat_id_mapper.html#af7c2802b2da9140f72b9f91943eca400" title="Function for getting the group ID with MAC." alt="" coords="773,71,979,112"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a7be2bafa3875d1efa0367ed09efa5d71" title=" " alt="" coords="786,136,966,177"/>
+<area shape="rect" href="classns3_1_1_sat_id_mapper.html#a451689de1096fda8d49f803c93a23696" title="Function for getting the SAT ID with MAC." alt="" coords="783,201,969,243"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a93e39c005ae0351b47a5fca8dcfad7e7" title=" " alt="" coords="801,267,951,308"/>
+<area shape="rect" href="classns3_1_1_sat_id_mapper.html#ac9620fca48baf58b821b57220d11ea39" title="Function for getting the UT ID with MAC." alt="" coords="1034,264,1227,305"/>
 </map>
 </div>
 
@@ -494,7 +500,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>inherited from ObjectBase base class </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-throughput-helper_8cc_source.html#l01511">1511</a> of file <a class="el" href="satellite-stats-throughput-helper_8cc_source.html">satellite-stats-throughput-helper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-throughput-helper_8cc_source.html#l01611">1611</a> of file <a class="el" href="satellite-stats-throughput-helper_8cc_source.html">satellite-stats-throughput-helper.cc</a>.</p>
 
 </div>
 </div>

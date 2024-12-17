@@ -85,6 +85,10 @@ var dir_3f14f6767c31cb4a1d22c13c18cc6fc3 =
     [ "lora-tag.h", "lora-tag_8h.html", [
       [ "LoraTag", "classns3_1_1_lora_tag.html", "classns3_1_1_lora_tag" ]
     ] ],
+    [ "lorawan-ground-mac-gateway.cc", "lorawan-ground-mac-gateway_8cc.html", null ],
+    [ "lorawan-ground-mac-gateway.h", "lorawan-ground-mac-gateway_8h.html", [
+      [ "LorawanGroundMacGateway", "classns3_1_1_lorawan_ground_mac_gateway.html", "classns3_1_1_lorawan_ground_mac_gateway" ]
+    ] ],
     [ "lorawan-mac-command.cc", "lorawan-mac-command_8cc.html", null ],
     [ "lorawan-mac-command.h", "lorawan-mac-command_8h.html", "lorawan-mac-command_8h" ],
     [ "lorawan-mac-end-device-class-a.cc", "lorawan-mac-end-device-class-a_8cc.html", null ],
@@ -107,6 +111,10 @@ var dir_3f14f6767c31cb4a1d22c13c18cc6fc3 =
     [ "lorawan-mac.cc", "lorawan-mac_8cc.html", null ],
     [ "lorawan-mac.h", "lorawan-mac_8h.html", [
       [ "LorawanMac", "classns3_1_1_lorawan_mac.html", "classns3_1_1_lorawan_mac" ]
+    ] ],
+    [ "lorawan-orbiter-mac-gateway.cc", "lorawan-orbiter-mac-gateway_8cc.html", null ],
+    [ "lorawan-orbiter-mac-gateway.h", "lorawan-orbiter-mac-gateway_8h.html", [
+      [ "LorawanOrbiterMacGateway", "classns3_1_1_lorawan_orbiter_mac_gateway.html", "classns3_1_1_lorawan_orbiter_mac_gateway" ]
     ] ],
     [ "satellite-address-tag.cc", "satellite-address-tag_8cc.html", null ],
     [ "satellite-address-tag.h", "satellite-address-tag_8h.html", [
@@ -319,42 +327,6 @@ var dir_3f14f6767c31cb4a1d22c13c18cc6fc3 =
     [ "satellite-generic-stream-encapsulator.h", "satellite-generic-stream-encapsulator_8h.html", [
       [ "SatGenericStreamEncapsulator", "classns3_1_1_sat_generic_stream_encapsulator.html", "classns3_1_1_sat_generic_stream_encapsulator" ]
     ] ],
-    [ "satellite-geo-feeder-llc.cc", "satellite-geo-feeder-llc_8cc.html", null ],
-    [ "satellite-geo-feeder-llc.h", "satellite-geo-feeder-llc_8h.html", [
-      [ "SatGeoFeederLlc", "classns3_1_1_sat_geo_feeder_llc.html", "classns3_1_1_sat_geo_feeder_llc" ]
-    ] ],
-    [ "satellite-geo-feeder-mac.cc", "satellite-geo-feeder-mac_8cc.html", null ],
-    [ "satellite-geo-feeder-mac.h", "satellite-geo-feeder-mac_8h.html", [
-      [ "SatGeoFeederMac", "classns3_1_1_sat_geo_feeder_mac.html", "classns3_1_1_sat_geo_feeder_mac" ]
-    ] ],
-    [ "satellite-geo-feeder-phy.cc", "satellite-geo-feeder-phy_8cc.html", null ],
-    [ "satellite-geo-feeder-phy.h", "satellite-geo-feeder-phy_8h.html", [
-      [ "SatGeoFeederPhy", "classns3_1_1_sat_geo_feeder_phy.html", "classns3_1_1_sat_geo_feeder_phy" ]
-    ] ],
-    [ "satellite-geo-llc.cc", "satellite-geo-llc_8cc.html", null ],
-    [ "satellite-geo-llc.h", "satellite-geo-llc_8h.html", [
-      [ "SatGeoLlc", "classns3_1_1_sat_geo_llc.html", "classns3_1_1_sat_geo_llc" ]
-    ] ],
-    [ "satellite-geo-mac.cc", "satellite-geo-mac_8cc.html", null ],
-    [ "satellite-geo-mac.h", "satellite-geo-mac_8h.html", [
-      [ "SatGeoMac", "classns3_1_1_sat_geo_mac.html", "classns3_1_1_sat_geo_mac" ]
-    ] ],
-    [ "satellite-geo-net-device.cc", "satellite-geo-net-device_8cc.html", null ],
-    [ "satellite-geo-net-device.h", "satellite-geo-net-device_8h.html", [
-      [ "SatGeoNetDevice", "classns3_1_1_sat_geo_net_device.html", "classns3_1_1_sat_geo_net_device" ]
-    ] ],
-    [ "satellite-geo-user-llc.cc", "satellite-geo-user-llc_8cc.html", null ],
-    [ "satellite-geo-user-llc.h", "satellite-geo-user-llc_8h.html", [
-      [ "SatGeoUserLlc", "classns3_1_1_sat_geo_user_llc.html", "classns3_1_1_sat_geo_user_llc" ]
-    ] ],
-    [ "satellite-geo-user-mac.cc", "satellite-geo-user-mac_8cc.html", null ],
-    [ "satellite-geo-user-mac.h", "satellite-geo-user-mac_8h.html", [
-      [ "SatGeoUserMac", "classns3_1_1_sat_geo_user_mac.html", "classns3_1_1_sat_geo_user_mac" ]
-    ] ],
-    [ "satellite-geo-user-phy.cc", "satellite-geo-user-phy_8cc.html", null ],
-    [ "satellite-geo-user-phy.h", "satellite-geo-user-phy_8h.html", [
-      [ "SatGeoUserPhy", "classns3_1_1_sat_geo_user_phy.html", "classns3_1_1_sat_geo_user_phy" ]
-    ] ],
     [ "satellite-ground-station-address-tag.cc", "satellite-ground-station-address-tag_8cc.html", null ],
     [ "satellite-ground-station-address-tag.h", "satellite-ground-station-address-tag_8h.html", [
       [ "SatGroundStationAddressTag", "classns3_1_1_sat_ground_station_address_tag.html", "classns3_1_1_sat_ground_station_address_tag" ]
@@ -374,6 +346,10 @@ var dir_3f14f6767c31cb4a1d22c13c18cc6fc3 =
     [ "satellite-gw-phy.cc", "satellite-gw-phy_8cc.html", null ],
     [ "satellite-gw-phy.h", "satellite-gw-phy_8h.html", [
       [ "SatGwPhy", "classns3_1_1_sat_gw_phy.html", "classns3_1_1_sat_gw_phy" ]
+    ] ],
+    [ "satellite-handover-module.cc", "satellite-handover-module_8cc.html", null ],
+    [ "satellite-handover-module.h", "satellite-handover-module_8h.html", [
+      [ "SatHandoverModule", "classns3_1_1_sat_handover_module.html", "classns3_1_1_sat_handover_module" ]
     ] ],
     [ "satellite-id-mapper.cc", "satellite-id-mapper_8cc.html", null ],
     [ "satellite-id-mapper.h", "satellite-id-mapper_8h.html", [
@@ -502,6 +478,50 @@ var dir_3f14f6767c31cb4a1d22c13c18cc6fc3 =
     [ "satellite-on-off-application.h", "satellite-on-off-application_8h.html", [
       [ "SatOnOffApplication", "classns3_1_1_sat_on_off_application.html", "classns3_1_1_sat_on_off_application" ]
     ] ],
+    [ "satellite-orbiter-feeder-llc.cc", "satellite-orbiter-feeder-llc_8cc.html", null ],
+    [ "satellite-orbiter-feeder-llc.h", "satellite-orbiter-feeder-llc_8h.html", [
+      [ "SatOrbiterFeederLlc", "classns3_1_1_sat_orbiter_feeder_llc.html", "classns3_1_1_sat_orbiter_feeder_llc" ]
+    ] ],
+    [ "satellite-orbiter-feeder-mac.cc", "satellite-orbiter-feeder-mac_8cc.html", null ],
+    [ "satellite-orbiter-feeder-mac.h", "satellite-orbiter-feeder-mac_8h.html", [
+      [ "SatOrbiterFeederMac", "classns3_1_1_sat_orbiter_feeder_mac.html", "classns3_1_1_sat_orbiter_feeder_mac" ]
+    ] ],
+    [ "satellite-orbiter-feeder-phy.cc", "satellite-orbiter-feeder-phy_8cc.html", null ],
+    [ "satellite-orbiter-feeder-phy.h", "satellite-orbiter-feeder-phy_8h.html", [
+      [ "SatOrbiterFeederPhy", "classns3_1_1_sat_orbiter_feeder_phy.html", "classns3_1_1_sat_orbiter_feeder_phy" ]
+    ] ],
+    [ "satellite-orbiter-llc.cc", "satellite-orbiter-llc_8cc.html", null ],
+    [ "satellite-orbiter-llc.h", "satellite-orbiter-llc_8h.html", [
+      [ "SatOrbiterLlc", "classns3_1_1_sat_orbiter_llc.html", "classns3_1_1_sat_orbiter_llc" ]
+    ] ],
+    [ "satellite-orbiter-mac.cc", "satellite-orbiter-mac_8cc.html", null ],
+    [ "satellite-orbiter-mac.h", "satellite-orbiter-mac_8h.html", [
+      [ "SatOrbiterMac", "classns3_1_1_sat_orbiter_mac.html", "classns3_1_1_sat_orbiter_mac" ]
+    ] ],
+    [ "satellite-orbiter-net-device-dvb.cc", "satellite-orbiter-net-device-dvb_8cc.html", null ],
+    [ "satellite-orbiter-net-device-dvb.h", "satellite-orbiter-net-device-dvb_8h.html", [
+      [ "SatOrbiterNetDeviceDvb", "classns3_1_1_sat_orbiter_net_device_dvb.html", "classns3_1_1_sat_orbiter_net_device_dvb" ]
+    ] ],
+    [ "satellite-orbiter-net-device-lora.cc", "satellite-orbiter-net-device-lora_8cc.html", null ],
+    [ "satellite-orbiter-net-device-lora.h", "satellite-orbiter-net-device-lora_8h.html", [
+      [ "SatOrbiterNetDeviceLora", "classns3_1_1_sat_orbiter_net_device_lora.html", "classns3_1_1_sat_orbiter_net_device_lora" ]
+    ] ],
+    [ "satellite-orbiter-net-device.cc", "satellite-orbiter-net-device_8cc.html", null ],
+    [ "satellite-orbiter-net-device.h", "satellite-orbiter-net-device_8h.html", [
+      [ "SatOrbiterNetDevice", "classns3_1_1_sat_orbiter_net_device.html", "classns3_1_1_sat_orbiter_net_device" ]
+    ] ],
+    [ "satellite-orbiter-user-llc.cc", "satellite-orbiter-user-llc_8cc.html", null ],
+    [ "satellite-orbiter-user-llc.h", "satellite-orbiter-user-llc_8h.html", [
+      [ "SatOrbiterUserLlc", "classns3_1_1_sat_orbiter_user_llc.html", "classns3_1_1_sat_orbiter_user_llc" ]
+    ] ],
+    [ "satellite-orbiter-user-mac.cc", "satellite-orbiter-user-mac_8cc.html", null ],
+    [ "satellite-orbiter-user-mac.h", "satellite-orbiter-user-mac_8h.html", [
+      [ "SatOrbiterUserMac", "classns3_1_1_sat_orbiter_user_mac.html", "classns3_1_1_sat_orbiter_user_mac" ]
+    ] ],
+    [ "satellite-orbiter-user-phy.cc", "satellite-orbiter-user-phy_8cc.html", null ],
+    [ "satellite-orbiter-user-phy.h", "satellite-orbiter-user-phy_8h.html", [
+      [ "SatOrbiterUserPhy", "classns3_1_1_sat_orbiter_user_phy.html", "classns3_1_1_sat_orbiter_user_phy" ]
+    ] ],
     [ "satellite-packet-classifier.cc", "satellite-packet-classifier_8cc.html", null ],
     [ "satellite-packet-classifier.h", "satellite-packet-classifier_8h.html", [
       [ "SatPacketClassifier", "classns3_1_1_sat_packet_classifier.html", "classns3_1_1_sat_packet_classifier" ]
@@ -546,7 +566,9 @@ var dir_3f14f6767c31cb4a1d22c13c18cc6fc3 =
       [ "SatPhyRxCarrierPerWindow", "classns3_1_1_sat_phy_rx_carrier_per_window.html", "classns3_1_1_sat_phy_rx_carrier_per_window" ]
     ] ],
     [ "satellite-phy-rx-carrier-uplink.cc", "satellite-phy-rx-carrier-uplink_8cc.html", null ],
-    [ "satellite-phy-rx-carrier-uplink.h", "satellite-phy-rx-carrier-uplink_8h.html", "satellite-phy-rx-carrier-uplink_8h" ],
+    [ "satellite-phy-rx-carrier-uplink.h", "satellite-phy-rx-carrier-uplink_8h.html", [
+      [ "SatPhyRxCarrierUplink", "classns3_1_1_sat_phy_rx_carrier_uplink.html", "classns3_1_1_sat_phy_rx_carrier_uplink" ]
+    ] ],
     [ "satellite-phy-rx-carrier.cc", "satellite-phy-rx-carrier_8cc.html", "satellite-phy-rx-carrier_8cc" ],
     [ "satellite-phy-rx-carrier.h", "satellite-phy-rx-carrier_8h.html", [
       [ "rxParams_s", "structns3_1_1_sat_phy_rx_carrier_1_1rx_params__s.html", "structns3_1_1_sat_phy_rx_carrier_1_1rx_params__s" ],
@@ -713,6 +735,13 @@ var dir_3f14f6767c31cb4a1d22c13c18cc6fc3 =
       [ "SatPhyTimeTag", "classns3_1_1_sat_phy_time_tag.html", "classns3_1_1_sat_phy_time_tag" ],
       [ "SatTimeTag", "classns3_1_1_sat_time_tag.html", "classns3_1_1_sat_time_tag" ]
     ] ],
+    [ "satellite-topology.cc", "satellite-topology_8cc.html", null ],
+    [ "satellite-topology.h", "satellite-topology_8h.html", [
+      [ "GwLayers_s", "structns3_1_1_sat_topology_1_1_gw_layers__s.html", "structns3_1_1_sat_topology_1_1_gw_layers__s" ],
+      [ "OrbiterLayers_s", "structns3_1_1_sat_topology_1_1_orbiter_layers__s.html", "structns3_1_1_sat_topology_1_1_orbiter_layers__s" ],
+      [ "SatTopology", "classns3_1_1_sat_topology.html", "classns3_1_1_sat_topology" ],
+      [ "UtLayers_s", "structns3_1_1_sat_topology_1_1_ut_layers__s.html", "structns3_1_1_sat_topology_1_1_ut_layers__s" ]
+    ] ],
     [ "satellite-traced-interference.cc", "satellite-traced-interference_8cc.html", null ],
     [ "satellite-traced-interference.h", "satellite-traced-interference_8h.html", [
       [ "SatTracedInterference", "classns3_1_1_sat_traced_interference.html", "classns3_1_1_sat_traced_interference" ]
@@ -727,10 +756,6 @@ var dir_3f14f6767c31cb4a1d22c13c18cc6fc3 =
     [ "satellite-uplink-info-tag.cc", "satellite-uplink-info-tag_8cc.html", null ],
     [ "satellite-uplink-info-tag.h", "satellite-uplink-info-tag_8h.html", [
       [ "SatUplinkInfoTag", "classns3_1_1_sat_uplink_info_tag.html", "classns3_1_1_sat_uplink_info_tag" ]
-    ] ],
-    [ "satellite-ut-handover-module.cc", "satellite-ut-handover-module_8cc.html", null ],
-    [ "satellite-ut-handover-module.h", "satellite-ut-handover-module_8h.html", [
-      [ "SatUtHandoverModule", "classns3_1_1_sat_ut_handover_module.html", "classns3_1_1_sat_ut_handover_module" ]
     ] ],
     [ "satellite-ut-llc.cc", "satellite-ut-llc_8cc.html", null ],
     [ "satellite-ut-llc.h", "satellite-ut-llc_8h.html", [

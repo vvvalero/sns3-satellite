@@ -1,11 +1,13 @@
 var classns3_1_1_sat_antenna_gain_pattern_container =
 [
     [ "BeamUserInfoMap_t", "classns3_1_1_sat_antenna_gain_pattern_container.html#a99386d61917a8aff8922d36dd930b4db", null ],
-    [ "SatAntennaGainPatternContainer", "classns3_1_1_sat_antenna_gain_pattern_container.html#abdae11f1ed620be30d5179b451d1ddb7", null ],
+    [ "SatAntennaGainPatternContainer", "classns3_1_1_sat_antenna_gain_pattern_container.html#a520216ca59e5268817cdf83fd26be065", null ],
+    [ "SatAntennaGainPatternContainer", "classns3_1_1_sat_antenna_gain_pattern_container.html#a9dde146c488475c6bb5a8a33fb8bb14e", null ],
     [ "~SatAntennaGainPatternContainer", "classns3_1_1_sat_antenna_gain_pattern_container.html#a9368cb86efe07be6b1e75a0fccb44602", null ],
     [ "ConfigureBeamsMobility", "classns3_1_1_sat_antenna_gain_pattern_container.html#ab95dd89bbc92a5eb0faabdb765e51c7d", null ],
     [ "GetAntennaGainPattern", "classns3_1_1_sat_antenna_gain_pattern_container.html#a48a7f9d17366477c7e540043d4547121", null ],
     [ "GetAntennaMobility", "classns3_1_1_sat_antenna_gain_pattern_container.html#abbf73379325cb0fb61d50787af001466", null ],
+    [ "GetBeamGain", "classns3_1_1_sat_antenna_gain_pattern_container.html#a0ba1e8fad15c5c5f73fda6d77ea937e3", null ],
     [ "GetBestBeamId", "classns3_1_1_sat_antenna_gain_pattern_container.html#a598cf153cc4c403fde36c221d9b831a7", null ],
     [ "GetDefaultGeoPosition", "classns3_1_1_sat_antenna_gain_pattern_container.html#a4f2593e8b78a759495253f2dad4f07a5", null ],
     [ "GetInstanceTypeId", "classns3_1_1_sat_antenna_gain_pattern_container.html#ab3e45f84c6fd655a67f5646451433775", null ],

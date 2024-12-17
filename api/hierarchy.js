@@ -28,6 +28,7 @@ var hierarchy =
     [ "ns3::SatPhyRxCarrierPerWindow::essaPacketRxParams_s", "structns3_1_1_sat_phy_rx_carrier_per_window_1_1essa_packet_rx_params__s.html", null ],
     [ "ns3::GeoCoordinate", "classns3_1_1_geo_coordinate.html", null ],
     [ "GeoCoordinateValue", "classns3_1_1_geo_coordinate_value.html", null ],
+    [ "ns3::SatTopology::GwLayers_s", "structns3_1_1_sat_topology_1_1_gw_layers__s.html", null ],
     [ "Header", null, [
       [ "ns3::LoraFrameHeader", "classns3_1_1_lora_frame_header.html", null ],
       [ "ns3::LorawanMacHeader", "classns3_1_1_lorawan_mac_header.html", null ],
@@ -51,9 +52,12 @@ var hierarchy =
     ] ],
     [ "NetDevice", null, [
       [ "ns3::PointToPointIslNetDevice", "classns3_1_1_point_to_point_isl_net_device.html", null ],
-      [ "ns3::SatGeoNetDevice", "classns3_1_1_sat_geo_net_device.html", null ],
       [ "ns3::SatNetDevice", "classns3_1_1_sat_net_device.html", [
         [ "ns3::SatLorawanNetDevice", "classns3_1_1_sat_lorawan_net_device.html", null ]
+      ] ],
+      [ "ns3::SatOrbiterNetDevice", "classns3_1_1_sat_orbiter_net_device.html", [
+        [ "ns3::SatOrbiterNetDeviceDvb", "classns3_1_1_sat_orbiter_net_device_dvb.html", null ],
+        [ "ns3::SatOrbiterNetDeviceLora", "classns3_1_1_sat_orbiter_net_device_lora.html", null ]
       ] ],
       [ "ns3::SatSimpleNetDevice", "classns3_1_1_sat_simple_net_device.html", null ]
     ] ],
@@ -163,9 +167,12 @@ var hierarchy =
         [ "ns3::SatFwdLinkSchedulerTimeSlicing", "classns3_1_1_sat_fwd_link_scheduler_time_slicing.html", null ],
         [ "ns3::SatScpcScheduler", "classns3_1_1_sat_scpc_scheduler.html", null ]
       ] ],
-      [ "ns3::SatGeoHelper", "classns3_1_1_sat_geo_helper.html", null ],
       [ "ns3::SatGroupHelper", "classns3_1_1_sat_group_helper.html", null ],
-      [ "ns3::SatGwHelper", "classns3_1_1_sat_gw_helper.html", null ],
+      [ "ns3::SatGwHelper", "classns3_1_1_sat_gw_helper.html", [
+        [ "ns3::SatGwHelperDvb", "classns3_1_1_sat_gw_helper_dvb.html", null ],
+        [ "ns3::SatGwHelperLora", "classns3_1_1_sat_gw_helper_lora.html", null ]
+      ] ],
+      [ "ns3::SatHandoverModule", "classns3_1_1_sat_handover_module.html", null ],
       [ "ns3::SatHelper", "classns3_1_1_sat_helper.html", null ],
       [ "ns3::SatIdMapper", "classns3_1_1_sat_id_mapper.html", null ],
       [ "ns3::SatInputFileStreamTimeDoubleContainer", "classns3_1_1_sat_input_file_stream_time_double_container.html", null ],
@@ -198,11 +205,11 @@ var hierarchy =
         ] ]
       ] ],
       [ "ns3::SatLlc", "classns3_1_1_sat_llc.html", [
-        [ "ns3::SatGeoLlc", "classns3_1_1_sat_geo_llc.html", [
-          [ "ns3::SatGeoFeederLlc", "classns3_1_1_sat_geo_feeder_llc.html", null ],
-          [ "ns3::SatGeoUserLlc", "classns3_1_1_sat_geo_user_llc.html", null ]
-        ] ],
         [ "ns3::SatGwLlc", "classns3_1_1_sat_gw_llc.html", null ],
+        [ "ns3::SatOrbiterLlc", "classns3_1_1_sat_orbiter_llc.html", [
+          [ "ns3::SatOrbiterFeederLlc", "classns3_1_1_sat_orbiter_feeder_llc.html", null ],
+          [ "ns3::SatOrbiterUserLlc", "classns3_1_1_sat_orbiter_user_llc.html", null ]
+        ] ],
         [ "ns3::SatUtLlc", "classns3_1_1_sat_ut_llc.html", null ]
       ] ],
       [ "ns3::SatLog", "classns3_1_1_sat_log.html", null ],
@@ -214,13 +221,16 @@ var hierarchy =
           [ "ns3::LorawanMacEndDevice", "classns3_1_1_lorawan_mac_end_device.html", [
             [ "ns3::LorawanMacEndDeviceClassA", "classns3_1_1_lorawan_mac_end_device_class_a.html", null ]
           ] ],
-          [ "ns3::LorawanMacGateway", "classns3_1_1_lorawan_mac_gateway.html", null ]
-        ] ],
-        [ "ns3::SatGeoMac", "classns3_1_1_sat_geo_mac.html", [
-          [ "ns3::SatGeoFeederMac", "classns3_1_1_sat_geo_feeder_mac.html", null ],
-          [ "ns3::SatGeoUserMac", "classns3_1_1_sat_geo_user_mac.html", null ]
+          [ "ns3::LorawanMacGateway", "classns3_1_1_lorawan_mac_gateway.html", [
+            [ "ns3::LorawanGroundMacGateway", "classns3_1_1_lorawan_ground_mac_gateway.html", null ],
+            [ "ns3::LorawanOrbiterMacGateway", "classns3_1_1_lorawan_orbiter_mac_gateway.html", null ]
+          ] ]
         ] ],
         [ "ns3::SatGwMac", "classns3_1_1_sat_gw_mac.html", null ],
+        [ "ns3::SatOrbiterMac", "classns3_1_1_sat_orbiter_mac.html", [
+          [ "ns3::SatOrbiterFeederMac", "classns3_1_1_sat_orbiter_feeder_mac.html", null ],
+          [ "ns3::SatOrbiterUserMac", "classns3_1_1_sat_orbiter_user_mac.html", null ]
+        ] ],
         [ "ns3::SatUtMac", "classns3_1_1_sat_ut_mac.html", null ]
       ] ],
       [ "ns3::SatMarkovConf", "classns3_1_1_sat_markov_conf.html", null ],
@@ -229,14 +239,18 @@ var hierarchy =
       [ "ns3::SatMobilityObserver", "classns3_1_1_sat_mobility_observer.html", null ],
       [ "ns3::SatMutualInformationTable", "classns3_1_1_sat_mutual_information_table.html", null ],
       [ "ns3::SatNcc", "classns3_1_1_sat_ncc.html", null ],
+      [ "ns3::SatOrbiterHelper", "classns3_1_1_sat_orbiter_helper.html", [
+        [ "ns3::SatOrbiterHelperDvb", "classns3_1_1_sat_orbiter_helper_dvb.html", null ],
+        [ "ns3::SatOrbiterHelperLora", "classns3_1_1_sat_orbiter_helper_lora.html", null ]
+      ] ],
       [ "ns3::SatOutputFileStreamDoubleContainer", "classns3_1_1_sat_output_file_stream_double_container.html", null ],
       [ "ns3::SatOutputFileStreamLongDoubleContainer", "classns3_1_1_sat_output_file_stream_long_double_container.html", null ],
       [ "ns3::SatOutputFileStreamStringContainer", "classns3_1_1_sat_output_file_stream_string_container.html", null ],
       [ "ns3::SatPacketTrace", "classns3_1_1_sat_packet_trace.html", null ],
       [ "ns3::SatPhy", "classns3_1_1_sat_phy.html", [
-        [ "ns3::SatGeoFeederPhy", "classns3_1_1_sat_geo_feeder_phy.html", null ],
-        [ "ns3::SatGeoUserPhy", "classns3_1_1_sat_geo_user_phy.html", null ],
         [ "ns3::SatGwPhy", "classns3_1_1_sat_gw_phy.html", null ],
+        [ "ns3::SatOrbiterFeederPhy", "classns3_1_1_sat_orbiter_feeder_phy.html", null ],
+        [ "ns3::SatOrbiterUserPhy", "classns3_1_1_sat_orbiter_user_phy.html", null ],
         [ "ns3::SatUtPhy", "classns3_1_1_sat_ut_phy.html", null ]
       ] ],
       [ "ns3::SatPhyRx", "classns3_1_1_sat_phy_rx.html", [
@@ -429,10 +443,14 @@ var hierarchy =
       ] ],
       [ "ns3::SatSuperframeSeq", "classns3_1_1_sat_superframe_seq.html", null ],
       [ "ns3::SatTbtpContainer", "classns3_1_1_sat_tbtp_container.html", null ],
+      [ "ns3::SatTopology", "classns3_1_1_sat_topology.html", null ],
       [ "ns3::SatTrafficHelper", "classns3_1_1_sat_traffic_helper.html", null ],
+      [ "ns3::SatTrafficHelperConf", "classns3_1_1_sat_traffic_helper_conf.html", null ],
       [ "ns3::SatUserHelper", "classns3_1_1_sat_user_helper.html", null ],
-      [ "ns3::SatUtHandoverModule", "classns3_1_1_sat_ut_handover_module.html", null ],
-      [ "ns3::SatUtHelper", "classns3_1_1_sat_ut_helper.html", null ],
+      [ "ns3::SatUtHelper", "classns3_1_1_sat_ut_helper.html", [
+        [ "ns3::SatUtHelperDvb", "classns3_1_1_sat_ut_helper_dvb.html", null ],
+        [ "ns3::SatUtHelperLora", "classns3_1_1_sat_ut_helper_lora.html", null ]
+      ] ],
       [ "ns3::SatUtMacState", "classns3_1_1_sat_ut_mac_state.html", null ],
       [ "ns3::SatUtScheduler", "classns3_1_1_sat_ut_scheduler.html", null ],
       [ "ns3::SatWaveformConf", "classns3_1_1_sat_waveform_conf.html", null ],
@@ -442,6 +460,7 @@ var hierarchy =
     [ "OnOffApplication", null, [
       [ "ns3::SatOnOffApplication", "classns3_1_1_sat_on_off_application.html", null ]
     ] ],
+    [ "ns3::SatTopology::OrbiterLayers_s", "structns3_1_1_sat_topology_1_1_orbiter_layers__s.html", null ],
     [ "ns3::LoraEndDeviceStatus::PacketInfoPerGw", "structns3_1_1_lora_end_device_status_1_1_packet_info_per_gw.html", null ],
     [ "PointToPoinIsltNetDevice", "class_point_to_poin_islt_net_device.html", null ],
     [ "PositionAllocator", null, [
@@ -462,8 +481,8 @@ var hierarchy =
       [ "ns3::SatConstantPropagationDelayModel", "classns3_1_1_sat_constant_propagation_delay_model.html", null ]
     ] ],
     [ "ns3::SatQueue::QueueStats_t", "structns3_1_1_sat_queue_1_1_queue_stats__t.html", null ],
-    [ "ns3::SatGeoHelper::RandomAccessSettings_s", "structns3_1_1_sat_geo_helper_1_1_random_access_settings__s.html", null ],
     [ "ns3::SatGwHelper::RandomAccessSettings_s", "structns3_1_1_sat_gw_helper_1_1_random_access_settings__s.html", null ],
+    [ "ns3::SatOrbiterHelper::RandomAccessSettings_s", "structns3_1_1_sat_orbiter_helper_1_1_random_access_settings__s.html", null ],
     [ "ns3::SatUtHelper::RandomAccessSettings_s", "structns3_1_1_sat_ut_helper_1_1_random_access_settings__s.html", null ],
     [ "ns3::SatRandomAccess::RandomAccessTxOpportunities_s", "structns3_1_1_sat_random_access_1_1_random_access_tx_opportunities__s.html", null ],
     [ "ns3::LoraEndDeviceStatus::ReceivedPacketInfo", "structns3_1_1_lora_end_device_status_1_1_received_packet_info.html", null ],
@@ -568,10 +587,19 @@ var hierarchy =
       [ "SatFwdArqTestCase", "class_sat_fwd_arq_test_case.html", null ],
       [ "SatFwdChannelEstimationErrorTestCase", "class_sat_fwd_channel_estimation_error_test_case.html", null ],
       [ "SatGseTestCase", "class_sat_gse_test_case.html", null ],
+      [ "SatHandoverTest1", "class_sat_handover_test1.html", null ],
+      [ "SatHandoverTest2", "class_sat_handover_test2.html", null ],
       [ "SatLoraCbrTestCase", "class_sat_lora_cbr_test_case.html", null ],
+      [ "SatLoraConstellationFirstWindowTestCase", "class_sat_lora_constellation_first_window_test_case.html", null ],
+      [ "SatLoraConstellationHandoverTestCase", "class_sat_lora_constellation_handover_test_case.html", null ],
       [ "SatLoraFirstWindowTestCase", "class_sat_lora_first_window_test_case.html", null ],
       [ "SatLoraOutOfWindowWindowNoRetransmissionTestCase", "class_sat_lora_out_of_window_window_no_retransmission_test_case.html", null ],
       [ "SatLoraOutOfWindowWindowTestCase", "class_sat_lora_out_of_window_window_test_case.html", null ],
+      [ "SatLoraRegenerativeCbrTestCase", "class_sat_lora_regenerative_cbr_test_case.html", null ],
+      [ "SatLoraRegenerativeFirstWindowTestCase", "class_sat_lora_regenerative_first_window_test_case.html", null ],
+      [ "SatLoraRegenerativeOutOfWindowWindowNoRetransmissionTestCase", "class_sat_lora_regenerative_out_of_window_window_no_retransmission_test_case.html", null ],
+      [ "SatLoraRegenerativeOutOfWindowWindowTestCase", "class_sat_lora_regenerative_out_of_window_window_test_case.html", null ],
+      [ "SatLoraRegenerativeSecondWindowTestCase", "class_sat_lora_regenerative_second_window_test_case.html", null ],
       [ "SatLoraSecondWindowTestCase", "class_sat_lora_second_window_test_case.html", null ],
       [ "SatMobilityList1TestCase", "class_sat_mobility_list1_test_case.html", null ],
       [ "SatMobilityList2TestCase", "class_sat_mobility_list2_test_case.html", null ],
@@ -631,7 +659,9 @@ var hierarchy =
       [ "SatFrameAllocatorTestSuite", "class_sat_frame_allocator_test_suite.html", null ],
       [ "SatFreeSpaceLossTestSuite", "class_sat_free_space_loss_test_suite.html", null ],
       [ "SatGseTraceSuite", "class_sat_gse_trace_suite.html", null ],
+      [ "SatHandoverTestSuite", "class_sat_handover_test_suite.html", null ],
       [ "SatInterferenceTestSuite", "class_sat_interference_test_suite.html", null ],
+      [ "SatLoraRegenerativeTestSuite", "class_sat_lora_regenerative_test_suite.html", null ],
       [ "SatLoraTestSuite", "class_sat_lora_test_suite.html", null ],
       [ "SatMobilityObserverTestSuite", "class_sat_mobility_observer_test_suite.html", null ],
       [ "SatMobilityTestSuite", "class_sat_mobility_test_suite.html", null ],
@@ -649,5 +679,6 @@ var hierarchy =
     ] ],
     [ "TrafficConfiguration_t", "struct_traffic_configuration__t.html", null ],
     [ "ns3::SatSignalParameters::txInfo_s", "structns3_1_1_sat_signal_parameters_1_1tx_info__s.html", null ],
-    [ "ns3::SatFrameAllocator::UtAllocItem_t", "structns3_1_1_sat_frame_allocator_1_1_ut_alloc_item__t.html", null ]
+    [ "ns3::SatFrameAllocator::UtAllocItem_t", "structns3_1_1_sat_frame_allocator_1_1_ut_alloc_item__t.html", null ],
+    [ "ns3::SatTopology::UtLayers_s", "structns3_1_1_sat_topology_1_1_ut_layers__s.html", null ]
 ];

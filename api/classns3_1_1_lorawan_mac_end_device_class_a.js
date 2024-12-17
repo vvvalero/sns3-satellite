@@ -1,12 +1,13 @@
 var classns3_1_1_lorawan_mac_end_device_class_a =
 [
     [ "LorawanMacEndDeviceClassA", "classns3_1_1_lorawan_mac_end_device_class_a.html#a028960a2d20277f31d3d23fe1c8f763c", null ],
-    [ "LorawanMacEndDeviceClassA", "classns3_1_1_lorawan_mac_end_device_class_a.html#a44a532c96da72ac8cf649ff36375b678", null ],
+    [ "LorawanMacEndDeviceClassA", "classns3_1_1_lorawan_mac_end_device_class_a.html#a202e4d1341bb6d44b0c56c73860e3df5", null ],
     [ "~LorawanMacEndDeviceClassA", "classns3_1_1_lorawan_mac_end_device_class_a.html#a604c7e1f042a8b4ddc3b4f53f21d43be", null ],
     [ "CloseFirstReceiveWindow", "classns3_1_1_lorawan_mac_end_device_class_a.html#a734babb154acd6c847b1ff0c96893fc8", null ],
     [ "CloseSecondReceiveWindow", "classns3_1_1_lorawan_mac_end_device_class_a.html#aa525fc02c39b7dbc1cd7b875c3196aeb", null ],
     [ "FailedReception", "classns3_1_1_lorawan_mac_end_device_class_a.html#a9f1627b9246567213c4d981445c83ebc", null ],
     [ "GetFirstReceiveWindowDataRate", "classns3_1_1_lorawan_mac_end_device_class_a.html#a0c15205087a873a12f56d92132d9bbb0", null ],
+    [ "GetInstanceTypeId", "classns3_1_1_lorawan_mac_end_device_class_a.html#a51b388412ad7639252a6e6b310093da6", null ],
     [ "GetNextClassTransmissionDelay", "classns3_1_1_lorawan_mac_end_device_class_a.html#a4e958a37dfb9cb46fc51d340361fac10", null ],
     [ "GetSecondReceiveWindowDataRate", "classns3_1_1_lorawan_mac_end_device_class_a.html#ad3be5d40b1f9cb84af954ee50f67bcd9", null ],
     [ "GetSecondReceiveWindowFrequency", "classns3_1_1_lorawan_mac_end_device_class_a.html#a51df081541b77a365bd2f405f75d5d7c", null ],

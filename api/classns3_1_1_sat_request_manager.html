@@ -234,9 +234,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a32bbd692fbee055f0eba1f495d383272"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272">ReceiveQueueEvent</a> (<a class="el" href="classns3_1_1_sat_queue.html#a6d47440012e0a5b491ce33cb4b37815c">SatQueue::QueueEvent_t</a> event, uint8_t rcIndex)</td></tr>
 <tr class="memdesc:a32bbd692fbee055f0eba1f495d383272"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive a queue event.  <a href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272">More...</a><br /></td></tr>
 <tr class="separator:a32bbd692fbee055f0eba1f495d383272"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86a1282604eb2e9b02ac227b24a004c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_request_manager.html#a86a1282604eb2e9b02ac227b24a004c4">SendHandoverRecommendation</a> (uint32_t beamId)</td></tr>
-<tr class="memdesc:a86a1282604eb2e9b02ac227b24a004c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a handover recommendation message to the gateway.  <a href="classns3_1_1_sat_request_manager.html#a86a1282604eb2e9b02ac227b24a004c4">More...</a><br /></td></tr>
-<tr class="separator:a86a1282604eb2e9b02ac227b24a004c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af94dc276df2e7cb6169de908cda5bc8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_request_manager.html#af94dc276df2e7cb6169de908cda5bc8d">SendHandoverRecommendation</a> (uint32_t satId, uint32_t beamId)</td></tr>
+<tr class="memdesc:af94dc276df2e7cb6169de908cda5bc8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a handover recommendation message to the gateway.  <a href="classns3_1_1_sat_request_manager.html#af94dc276df2e7cb6169de908cda5bc8d">More...</a><br /></td></tr>
+<tr class="separator:af94dc276df2e7cb6169de908cda5bc8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bc890e93980b6e6335e8f6c071f4c8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_request_manager.html#a2bc890e93980b6e6335e8f6c071f4c8c">SendLogonMessage</a> ()</td></tr>
 <tr class="memdesc:a2bc890e93980b6e6335e8f6c071f4c8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a logon message to the gateway.  <a href="classns3_1_1_sat_request_manager.html#a2bc890e93980b6e6335e8f6c071f4c8c">More...</a><br /></td></tr>
 <tr class="separator:a2bc890e93980b6e6335e8f6c071f4c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -443,7 +443,7 @@ Static Private Attributes</h2></td></tr>
 <div class="textblock"><p><a class="el" href="classns3_1_1_sat_request_manager.html" title="SatRequestManager analyzes periodically or on-a-need-basis UT&#39;s buffer status for different RC indice...">SatRequestManager</a> analyzes periodically or on-a-need-basis UT's buffer status for different RC indices (= queues), and sends Capacity Requests to NCC according to need and lower layer service configuration. </p>
 <p>Request manager supports currently RBDC, AVBDC and VBDC request classes. However, RBDC and VBDC may not be configured in the same simulation for the same RC index. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00048">48</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00053">53</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a0f7ef5ef408cee3b86c825fe096441c1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0f7ef5ef408cee3b86c825fe096441c1">&#9670;&nbsp;</a></span>AvbdcTraceCallback</h2>
@@ -465,7 +465,7 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00224">224</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00229">229</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
 </div>
 </div>
@@ -489,7 +489,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00244">244</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00250">250</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
 </div>
 </div>
@@ -515,7 +515,7 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00190">190</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00195">195</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
 </div>
 </div>
@@ -547,7 +547,7 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00206">206</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00211">211</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
 </div>
 </div>
@@ -566,7 +566,7 @@ Static Private Attributes</h2></td></tr>
 <p>Callback to check whether control msg transmission is possible. </p>
 <dl class="section return"><dt>Returns</dt><dd>boolean indicating whether control msg transmission is possible </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00096">96</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00101">101</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
 </div>
 </div>
@@ -585,7 +585,7 @@ Static Private Attributes</h2></td></tr>
 <p>Callback to check whether logon msg transmission is possible. </p>
 <dl class="section return"><dt>Returns</dt><dd>boolean indicating whether logon msg transmission is possible </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00102">102</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00107">107</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
 </div>
 </div>
@@ -603,7 +603,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Container for the pending RBDC requests. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00107">107</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00112">112</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
 </div>
 </div>
@@ -621,7 +621,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Callback to fetch queue statistics. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00082">82</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00087">87</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
 </div>
 </div>
@@ -645,7 +645,7 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00212">212</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00217">217</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
 </div>
 </div>
@@ -671,7 +671,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>boolean indicating whether the send was successful </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00090">90</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00095">95</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
 </div>
 </div>
@@ -695,7 +695,7 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00218">218</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00223">223</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
 </div>
 </div>
@@ -717,7 +717,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Default constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00048">48</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00053">53</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
 </div>
 </div>
@@ -746,7 +746,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Destructor for <a class="el" href="classns3_1_1_sat_request_manager.html" title="SatRequestManager analyzes periodically or on-a-need-basis UT&#39;s buffer status for different RC indice...">SatRequestManager</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00073">73</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00078">78</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
 </div>
 </div>
@@ -786,9 +786,9 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00386">386</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00393">393</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00395">m_queueCallbacks</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00401">m_queueCallbacks</a>.</p>
 
 </div>
 </div>
@@ -827,11 +827,11 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00933">933</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00941">941</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00505">m_assignedDaResourcesBytes</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00511">m_assignedDaResourcesBytes</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ut-helper_8cc_source.html#l00268">ns3::SatUtHelper::InstallDvb()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ut-helper-dvb_8cc_source.html#l00107">ns3::SatUtHelperDvb::Install()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -839,8 +839,8 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_a1ea48e306a317148bf2ce567a1edae30_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_a1ea48e306a317148bf2ce567a1edae30_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_a1ea48e306a317148bf2ce567a1edae30_icgraph" id="aclassns3_1_1_sat_request_manager_a1ea48e306a317148bf2ce567a1edae30_icgraph">
-<area shape="rect" title="Sat UT MAC informs that certain amount of resources have been received in TBTP." alt="" coords="260,5,444,47"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,13,212,39"/>
+<area shape="rect" title="Sat UT MAC informs that certain amount of resources have been received in TBTP." alt="" coords="212,5,396,47"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="5,5,164,47"/>
 </map>
 </div>
 
@@ -871,11 +871,11 @@ Static Private Attributes</h2></td></tr>
 
 <p>Check whether VBDC volume backlog persistence shall expire and whether UT should update request by AVBDC due pending requests. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00703">703</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00710">710</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00522">m_forcedAvbdcUpdate</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00510">m_lastVbdcCrSent</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00440">m_llsConf</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00490">m_pendingVbdcBytes</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00515">m_superFrameDuration</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00528">m_forcedAvbdcUpdate</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00516">m_lastVbdcCrSent</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00446">m_llsConf</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00496">m_pendingVbdcBytes</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00521">m_superFrameDuration</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00235">DoEvaluation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00242">DoEvaluation()</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -883,13 +883,13 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_adce3625571d4dfa4392ec77fddb8b3eb_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_adce3625571d4dfa4392ec77fddb8b3eb_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_adce3625571d4dfa4392ec77fddb8b3eb_icgraph" id="aclassns3_1_1_sat_request_manager_adce3625571d4dfa4392ec77fddb8b3eb_icgraph">
-<area shape="rect" title="Check whether VBDC volume backlog persistence shall expire and whether UT should update request by AV..." alt="" coords="724,39,991,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="492,39,676,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="260,5,444,47"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="260,71,444,112"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="17,5,201,47"/>
-<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="10,74,207,101"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,125,212,151"/>
+<area shape="rect" title="Check whether VBDC volume backlog persistence shall expire and whether UT should update request by AV..." alt="" coords="715,39,981,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="483,39,667,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="251,5,435,47"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="251,71,435,112"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="12,5,196,47"/>
+<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="5,74,203,101"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="25,125,183,167"/>
 </map>
 </div>
 
@@ -959,11 +959,11 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00429">429</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00436">436</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00428">m_lastCno</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00434">m_lastSatelliteCno</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00422">m_satAddress</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00434">m_lastCno</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00440">m_lastSatelliteCno</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00428">m_satAddress</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ut-helper_8cc_source.html#l00268">ns3::SatUtHelper::InstallDvb()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ut-helper-dvb_8cc_source.html#l00107">ns3::SatUtHelperDvb::Install()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -971,8 +971,8 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_aee0b2c884567512b115e43c823abb647_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_aee0b2c884567512b115e43c823abb647_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_aee0b2c884567512b115e43c823abb647_icgraph" id="aclassns3_1_1_sat_request_manager_aee0b2c884567512b115e43c823abb647_icgraph">
-<area shape="rect" title="Update C/N0 information from lower layer." alt="" coords="260,5,444,47"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,13,212,39"/>
+<area shape="rect" title="Update C/N0 information from lower layer." alt="" coords="212,5,396,47"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="5,5,164,47"/>
 </map>
 </div>
 
@@ -1004,9 +1004,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Dispose of this class instance. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00184">184</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00191">191</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00400">m_ctrlCallback</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00406">m_ctrlMsgTxPossibleCallback</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00440">m_llsConf</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00412">m_logonMsgTxPossibleCallback</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00395">m_queueCallbacks</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00406">m_ctrlCallback</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00412">m_ctrlMsgTxPossibleCallback</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00446">m_llsConf</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00418">m_logonMsgTxPossibleCallback</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00401">m_queueCallbacks</a>.</p>
 
 </div>
 </div>
@@ -1036,11 +1036,11 @@ Static Private Attributes</h2></td></tr>
 <p>Do evaluation of the buffer status and decide whether or not to send CRs. </p>
 <p>TODO: Add the functionality here which handles a RC with both RBDC and VBDC enabled at the same time!</p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00235">235</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00242">242</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8cc_source.html#l00703">CheckForVolumeBacklogPersistence()</a>, <a class="el" href="satellite-enums_8h_source.html#l01811">ns3::SatEnums::DA_AVBDC</a>, <a class="el" href="satellite-enums_8h_source.html#l01809">ns3::SatEnums::DA_RBDC</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00452">DoRbdc()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00548">DoVbdc()</a>, <a class="el" href="satellite-enums_8h_source.html#l01814">ns3::SatEnums::GetCapacityAllocationCategory()</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00546">m_aVbdcTrace</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00536">m_crTraceLog</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00406">m_ctrlMsgTxPossibleCallback</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00562">m_headerOffsetVbcd</a>, <a class="el" href="satellite-queue_8h_source.html#l00069">ns3::SatQueue::QueueStats_t::m_incomingRateKbps</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00510">m_lastVbdcCrSent</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00440">m_llsConf</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00500">m_nodeInfo</a>, <a class="el" href="satellite-queue_8h_source.html#l00070">ns3::SatQueue::QueueStats_t::m_outgoingRateKbps</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00495">m_previousEvaluationTime</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00395">m_queueCallbacks</a>, <a class="el" href="satellite-queue_8h_source.html#l00073">ns3::SatQueue::QueueStats_t::m_queueSizeBytes</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00544">m_rbdcTrace</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00545">m_vbdcTrace</a>, <a class="el" href="satellite-queue_8h_source.html#l00071">ns3::SatQueue::QueueStats_t::m_volumeInBytes</a>, <a class="el" href="satellite-queue_8h_source.html#l00072">ns3::SatQueue::QueueStats_t::m_volumeOutBytes</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00943">ResetAssignedResources()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00826">SendCapacityRequest()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00791">UpdatePendingVbdcCounters()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8cc_source.html#l00710">CheckForVolumeBacklogPersistence()</a>, <a class="el" href="satellite-enums_8h_source.html#l01812">ns3::SatEnums::DA_AVBDC</a>, <a class="el" href="satellite-enums_8h_source.html#l01810">ns3::SatEnums::DA_RBDC</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00459">DoRbdc()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00555">DoVbdc()</a>, <a class="el" href="satellite-enums_8h_source.html#l01815">ns3::SatEnums::GetCapacityAllocationCategory()</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00552">m_aVbdcTrace</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00542">m_crTraceLog</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00412">m_ctrlMsgTxPossibleCallback</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00568">m_headerOffsetVbcd</a>, <a class="el" href="satellite-queue_8h_source.html#l00072">ns3::SatQueue::QueueStats_t::m_incomingRateKbps</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00516">m_lastVbdcCrSent</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00446">m_llsConf</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00506">m_nodeInfo</a>, <a class="el" href="satellite-queue_8h_source.html#l00073">ns3::SatQueue::QueueStats_t::m_outgoingRateKbps</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00501">m_previousEvaluationTime</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00401">m_queueCallbacks</a>, <a class="el" href="satellite-queue_8h_source.html#l00076">ns3::SatQueue::QueueStats_t::m_queueSizeBytes</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00550">m_rbdcTrace</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00551">m_vbdcTrace</a>, <a class="el" href="satellite-queue_8h_source.html#l00074">ns3::SatQueue::QueueStats_t::m_volumeInBytes</a>, <a class="el" href="satellite-queue_8h_source.html#l00075">ns3::SatQueue::QueueStats_t::m_volumeOutBytes</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00951">ResetAssignedResources()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00833">SendCapacityRequest()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00798">UpdatePendingVbdcCounters()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00224">DoPeriodicalEvaluation()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00206">ReceiveQueueEvent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00231">DoPeriodicalEvaluation()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00213">ReceiveQueueEvent()</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -1076,12 +1076,12 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_ab12ed4f35a1d3c25bd13dd9921989a99_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_ab12ed4f35a1d3c25bd13dd9921989a99_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_ab12ed4f35a1d3c25bd13dd9921989a99_icgraph" id="aclassns3_1_1_sat_request_manager_ab12ed4f35a1d3c25bd13dd9921989a99_icgraph">
-<area shape="rect" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="492,39,676,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="260,5,444,47"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="260,71,444,112"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="17,5,201,47"/>
-<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="10,74,207,101"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,125,212,151"/>
+<area shape="rect" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="483,39,667,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="251,5,435,47"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="251,71,435,112"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="12,5,196,47"/>
+<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="5,74,203,101"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="25,125,183,167"/>
 </map>
 </div>
 
@@ -1112,11 +1112,11 @@ Static Private Attributes</h2></td></tr>
 
 <p>Periodically check the buffer status and whether a new CR is needed to be sent. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00224">224</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00231">231</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8cc_source.html#l00235">DoEvaluation()</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00445">m_evaluationInterval</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8cc_source.html#l00242">DoEvaluation()</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00451">m_evaluationInterval</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00078">Initialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00083">Initialize()</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -1204,11 +1204,11 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>uint32_t Requested bytes </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00452">452</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00459">459</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-enums_8h_source.html#l02205">ns3::SatEnums::CR_RBDC_LEGACY</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00471">DoRbdcLegacy()</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00551">m_rbdcCapacityRequestAlgorithm</a>.</p>
+<p class="reference">References <a class="el" href="satellite-enums_8h_source.html#l02206">ns3::SatEnums::CR_RBDC_LEGACY</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00478">DoRbdcLegacy()</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00557">m_rbdcCapacityRequestAlgorithm</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00235">DoEvaluation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00242">DoEvaluation()</a>.</p>
 <div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
@@ -1231,13 +1231,13 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_ab793ec45c4e077b4d73c6be65f33d386_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_ab793ec45c4e077b4d73c6be65f33d386_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_ab793ec45c4e077b4d73c6be65f33d386_icgraph" id="aclassns3_1_1_sat_request_manager_ab793ec45c4e077b4d73c6be65f33d386_icgraph">
-<area shape="rect" title="Do RBDC calculation for a RC." alt="" coords="724,39,908,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="492,39,676,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="260,5,444,47"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="260,71,444,112"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="17,5,201,47"/>
-<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="10,74,207,101"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,125,212,151"/>
+<area shape="rect" title="Do RBDC calculation for a RC." alt="" coords="715,39,899,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="483,39,667,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="251,5,435,47"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="251,71,435,112"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="12,5,196,47"/>
+<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="5,74,203,101"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="25,125,183,167"/>
 </map>
 </div>
 
@@ -1287,11 +1287,11 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>uint32_t Requested bytes </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00471">471</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00478">478</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-const-variables_8h_source.html#l00055">ns3::SatConstVariables::BITS_IN_KBIT</a>, <a class="el" href="satellite-const-variables_8h_source.html#l00045">ns3::SatConstVariables::BITS_PER_BYTE</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00734">GetPendingRbdcSumKbps()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00963">GetQuantizedRbdcValue()</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00460">m_gainValueK</a>, <a class="el" href="satellite-queue_8h_source.html#l00069">ns3::SatQueue::QueueStats_t::m_incomingRateKbps</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00440">m_llsConf</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00473">m_overEstimationFactor</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00495">m_previousEvaluationTime</a>, <a class="el" href="satellite-queue_8h_source.html#l00073">ns3::SatQueue::QueueStats_t::m_queueSizeBytes</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00756">UpdatePendingRbdcCounters()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-const-variables_8h_source.html#l00058">ns3::SatConstVariables::BITS_IN_KBIT</a>, <a class="el" href="satellite-const-variables_8h_source.html#l00048">ns3::SatConstVariables::BITS_PER_BYTE</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00741">GetPendingRbdcSumKbps()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00971">GetQuantizedRbdcValue()</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00466">m_gainValueK</a>, <a class="el" href="satellite-queue_8h_source.html#l00072">ns3::SatQueue::QueueStats_t::m_incomingRateKbps</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00446">m_llsConf</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00479">m_overEstimationFactor</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00501">m_previousEvaluationTime</a>, <a class="el" href="satellite-queue_8h_source.html#l00076">ns3::SatQueue::QueueStats_t::m_queueSizeBytes</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00763">UpdatePendingRbdcCounters()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00452">DoRbdc()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00459">DoRbdc()</a>.</p>
 <div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">
@@ -1313,14 +1313,14 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-12-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_ab331c8c2cb86ff520cf6adbb2c397bee_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_ab331c8c2cb86ff520cf6adbb2c397bee_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_ab331c8c2cb86ff520cf6adbb2c397bee_icgraph" id="aclassns3_1_1_sat_request_manager_ab331c8c2cb86ff520cf6adbb2c397bee_icgraph">
-<area shape="rect" title="Legacy algorithm to do RBDC calculation for a RC." alt="" coords="956,39,1140,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab793ec45c4e077b4d73c6be65f33d386" title="Do RBDC calculation for a RC." alt="" coords="724,39,908,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="492,39,676,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="260,5,444,47"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="260,71,444,112"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="17,5,201,47"/>
-<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="10,74,207,101"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,125,212,151"/>
+<area shape="rect" title="Legacy algorithm to do RBDC calculation for a RC." alt="" coords="947,39,1131,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab793ec45c4e077b4d73c6be65f33d386" title="Do RBDC calculation for a RC." alt="" coords="715,39,899,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="483,39,667,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="251,5,435,47"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="251,71,435,112"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="12,5,196,47"/>
+<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="5,74,203,101"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="25,125,183,167"/>
 </map>
 </div>
 
@@ -1377,11 +1377,11 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>SatCapacityAllocationCategory_t Capacity allocation category </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00548">548</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00555">555</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-enums_8h_source.html#l02233">ns3::SatEnums::CR_VBDC_LEGACY</a>, <a class="el" href="satellite-enums_8h_source.html#l01808">ns3::SatEnums::DA_UNKNOWN</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00567">DoVbdcLegacy()</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00556">m_vbdcCapacityRequestAlgorithm</a>.</p>
+<p class="reference">References <a class="el" href="satellite-enums_8h_source.html#l02234">ns3::SatEnums::CR_VBDC_LEGACY</a>, <a class="el" href="satellite-enums_8h_source.html#l01809">ns3::SatEnums::DA_UNKNOWN</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00574">DoVbdcLegacy()</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00562">m_vbdcCapacityRequestAlgorithm</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00235">DoEvaluation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00242">DoEvaluation()</a>.</p>
 <div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-13-summary" class="dynsummary" style="display:block;">
@@ -1404,13 +1404,13 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-14-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_a82311063695097faa7c15171ac31b332_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_a82311063695097faa7c15171ac31b332_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_a82311063695097faa7c15171ac31b332_icgraph" id="aclassns3_1_1_sat_request_manager_a82311063695097faa7c15171ac31b332_icgraph">
-<area shape="rect" title="Do VBDC calculation for a RC." alt="" coords="724,39,908,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="492,39,676,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="260,5,444,47"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="260,71,444,112"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="17,5,201,47"/>
-<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="10,74,207,101"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,125,212,151"/>
+<area shape="rect" title="Do VBDC calculation for a RC." alt="" coords="715,39,899,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="483,39,667,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="251,5,435,47"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="251,71,435,112"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="12,5,196,47"/>
+<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="5,74,203,101"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="25,125,183,167"/>
 </map>
 </div>
 
@@ -1467,11 +1467,11 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>SatCapacityAllocationCategory_t Capacity allocation category </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00567">567</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00574">574</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-enums_8h_source.html#l01811">ns3::SatEnums::DA_AVBDC</a>, <a class="el" href="satellite-enums_8h_source.html#l01810">ns3::SatEnums::DA_VBDC</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00611">GetAvbdcBytes()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00656">GetVbdcBytes()</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00522">m_forcedAvbdcUpdate</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00490">m_pendingVbdcBytes</a>, and <a class="el" href="satellite-queue_8h_source.html#l00071">ns3::SatQueue::QueueStats_t::m_volumeInBytes</a>.</p>
+<p class="reference">References <a class="el" href="satellite-enums_8h_source.html#l01812">ns3::SatEnums::DA_AVBDC</a>, <a class="el" href="satellite-enums_8h_source.html#l01811">ns3::SatEnums::DA_VBDC</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00618">GetAvbdcBytes()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00663">GetVbdcBytes()</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00528">m_forcedAvbdcUpdate</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00496">m_pendingVbdcBytes</a>, and <a class="el" href="satellite-queue_8h_source.html#l00074">ns3::SatQueue::QueueStats_t::m_volumeInBytes</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00548">DoVbdc()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00555">DoVbdc()</a>.</p>
 <div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-15-summary" class="dynsummary" style="display:block;">
@@ -1493,14 +1493,14 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-16-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_a13af6fd797c8af394edf8262bc5b56e6_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_a13af6fd797c8af394edf8262bc5b56e6_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_a13af6fd797c8af394edf8262bc5b56e6_icgraph" id="aclassns3_1_1_sat_request_manager_a13af6fd797c8af394edf8262bc5b56e6_icgraph">
-<area shape="rect" title="Legacy algorithm to do VBDC calculation for a RC." alt="" coords="956,39,1140,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a82311063695097faa7c15171ac31b332" title="Do VBDC calculation for a RC." alt="" coords="724,39,908,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="492,39,676,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="260,5,444,47"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="260,71,444,112"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="17,5,201,47"/>
-<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="10,74,207,101"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,125,212,151"/>
+<area shape="rect" title="Legacy algorithm to do VBDC calculation for a RC." alt="" coords="947,39,1131,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a82311063695097faa7c15171ac31b332" title="Do VBDC calculation for a RC." alt="" coords="715,39,899,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="483,39,667,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="251,5,435,47"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="251,71,435,112"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="12,5,196,47"/>
+<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="5,74,203,101"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="25,125,183,167"/>
 </map>
 </div>
 
@@ -1550,11 +1550,11 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Requested AVBDC kilobytes </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00611">611</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00618">618</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-const-variables_8h_source.html#l00055">ns3::SatConstVariables::BITS_IN_KBIT</a>, <a class="el" href="satellite-const-variables_8h_source.html#l00045">ns3::SatConstVariables::BITS_PER_BYTE</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00994">GetQuantizedVbdcValue()</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00440">m_llsConf</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00473">m_overEstimationFactor</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00490">m_pendingVbdcBytes</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00495">m_previousEvaluationTime</a>, <a class="el" href="satellite-queue_8h_source.html#l00073">ns3::SatQueue::QueueStats_t::m_queueSizeBytes</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00954">Reset()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-const-variables_8h_source.html#l00058">ns3::SatConstVariables::BITS_IN_KBIT</a>, <a class="el" href="satellite-const-variables_8h_source.html#l00048">ns3::SatConstVariables::BITS_PER_BYTE</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l01002">GetQuantizedVbdcValue()</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00446">m_llsConf</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00479">m_overEstimationFactor</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00496">m_pendingVbdcBytes</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00501">m_previousEvaluationTime</a>, <a class="el" href="satellite-queue_8h_source.html#l00076">ns3::SatQueue::QueueStats_t::m_queueSizeBytes</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00962">Reset()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00567">DoVbdcLegacy()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00574">DoVbdcLegacy()</a>.</p>
 <div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-17-summary" class="dynsummary" style="display:block;">
@@ -1574,15 +1574,15 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-18-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_a9d2a78210846a57905fc359bd374bc36_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_a9d2a78210846a57905fc359bd374bc36_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_a9d2a78210846a57905fc359bd374bc36_icgraph" id="aclassns3_1_1_sat_request_manager_a9d2a78210846a57905fc359bd374bc36_icgraph">
-<area shape="rect" title="Calculate the needed AVBDC bytes for a RC." alt="" coords="1188,39,1372,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a13af6fd797c8af394edf8262bc5b56e6" title="Legacy algorithm to do VBDC calculation for a RC." alt="" coords="956,39,1140,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a82311063695097faa7c15171ac31b332" title="Do VBDC calculation for a RC." alt="" coords="724,39,908,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="492,39,676,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="260,5,444,47"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="260,71,444,112"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="17,5,201,47"/>
-<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="10,74,207,101"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,125,212,151"/>
+<area shape="rect" title="Calculate the needed AVBDC bytes for a RC." alt="" coords="1179,39,1363,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a13af6fd797c8af394edf8262bc5b56e6" title="Legacy algorithm to do VBDC calculation for a RC." alt="" coords="947,39,1131,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a82311063695097faa7c15171ac31b332" title="Do VBDC calculation for a RC." alt="" coords="715,39,899,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="483,39,667,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="251,5,435,47"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="251,71,435,112"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="12,5,196,47"/>
+<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="5,74,203,101"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="25,125,183,167"/>
 </map>
 </div>
 
@@ -1615,9 +1615,9 @@ Static Private Attributes</h2></td></tr>
 <p>Get the type ID of instance. </p>
 <dl class="section return"><dt>Returns</dt><dd>the object TypeId </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00176">176</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00183">183</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8cc_source.html#l00106">GetTypeId()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8cc_source.html#l00111">GetTypeId()</a>.</p>
 <div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-19-summary" class="dynsummary" style="display:block;">
@@ -1665,11 +1665,11 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pending sum in kbps or Bytes </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00734">734</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00741">741</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00485">m_pendingRbdcRequestsKbps</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00769">RemoveOldEntriesFromPendingRbdcContainer()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00491">m_pendingRbdcRequestsKbps</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00776">RemoveOldEntriesFromPendingRbdcContainer()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00471">DoRbdcLegacy()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00478">DoRbdcLegacy()</a>.</p>
 <div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-20-summary" class="dynsummary" style="display:block;">
@@ -1688,15 +1688,15 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-21-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_a70182f84652b4cea769c4e40fb1cefd9_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_a70182f84652b4cea769c4e40fb1cefd9_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_a70182f84652b4cea769c4e40fb1cefd9_icgraph" id="aclassns3_1_1_sat_request_manager_a70182f84652b4cea769c4e40fb1cefd9_icgraph">
-<area shape="rect" title="Calculate the pending RBDC requests related to a specific RC." alt="" coords="1188,39,1387,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab331c8c2cb86ff520cf6adbb2c397bee" title="Legacy algorithm to do RBDC calculation for a RC." alt="" coords="956,39,1140,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab793ec45c4e077b4d73c6be65f33d386" title="Do RBDC calculation for a RC." alt="" coords="724,39,908,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="492,39,676,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="260,5,444,47"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="260,71,444,112"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="17,5,201,47"/>
-<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="10,74,207,101"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,125,212,151"/>
+<area shape="rect" title="Calculate the pending RBDC requests related to a specific RC." alt="" coords="1179,39,1377,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab331c8c2cb86ff520cf6adbb2c397bee" title="Legacy algorithm to do RBDC calculation for a RC." alt="" coords="947,39,1131,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab793ec45c4e077b4d73c6be65f33d386" title="Do RBDC calculation for a RC." alt="" coords="715,39,899,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="483,39,667,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="251,5,435,47"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="251,71,435,112"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="12,5,196,47"/>
+<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="5,74,203,101"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="25,125,183,167"/>
 </map>
 </div>
 
@@ -1746,11 +1746,11 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>uint16_t Quantized RBDC value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00963">963</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00971">971</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00440">m_llsConf</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00524">m_numValues</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00525">m_rbdcScalingFactors</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00446">m_llsConf</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00530">m_numValues</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00531">m_rbdcScalingFactors</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00471">DoRbdcLegacy()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00478">DoRbdcLegacy()</a>.</p>
 <div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-22-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-22-summary" class="dynsummary" style="display:block;">
@@ -1758,15 +1758,15 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-22-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_a44e2cc78c819185d64de84efae047e83_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_a44e2cc78c819185d64de84efae047e83_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_a44e2cc78c819185d64de84efae047e83_icgraph" id="aclassns3_1_1_sat_request_manager_a44e2cc78c819185d64de84efae047e83_icgraph">
-<area shape="rect" title="The RBDC value is signalled with 8 bits, which means that to be able to signal larger than 256 values..." alt="" coords="1188,39,1375,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab331c8c2cb86ff520cf6adbb2c397bee" title="Legacy algorithm to do RBDC calculation for a RC." alt="" coords="956,39,1140,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab793ec45c4e077b4d73c6be65f33d386" title="Do RBDC calculation for a RC." alt="" coords="724,39,908,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="492,39,676,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="260,5,444,47"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="260,71,444,112"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="17,5,201,47"/>
-<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="10,74,207,101"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,125,212,151"/>
+<area shape="rect" title="The RBDC value is signalled with 8 bits, which means that to be able to signal larger than 256 values..." alt="" coords="1179,39,1365,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab331c8c2cb86ff520cf6adbb2c397bee" title="Legacy algorithm to do RBDC calculation for a RC." alt="" coords="947,39,1131,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab793ec45c4e077b4d73c6be65f33d386" title="Do RBDC calculation for a RC." alt="" coords="715,39,899,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="483,39,667,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="251,5,435,47"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="251,71,435,112"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="12,5,196,47"/>
+<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="5,74,203,101"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="25,125,183,167"/>
 </map>
 </div>
 
@@ -1816,11 +1816,11 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>uint16_t Quantized VBDC value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00994">994</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l01002">1002</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-const-variables_8h_source.html#l00050">ns3::SatConstVariables::BYTES_IN_KBYTE</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00440">m_llsConf</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00524">m_numValues</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00526">m_vbdcScalingFactors</a>.</p>
+<p class="reference">References <a class="el" href="satellite-const-variables_8h_source.html#l00053">ns3::SatConstVariables::BYTES_IN_KBYTE</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00446">m_llsConf</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00530">m_numValues</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00532">m_vbdcScalingFactors</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00611">GetAvbdcBytes()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00656">GetVbdcBytes()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00618">GetAvbdcBytes()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00663">GetVbdcBytes()</a>.</p>
 <div id="dynsection-23" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-23-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-23-summary" class="dynsummary" style="display:block;">
@@ -1828,17 +1828,17 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-23-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_a9e7c3c9234a97bc6e1b37c6ac04fc002_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_a9e7c3c9234a97bc6e1b37c6ac04fc002_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_a9e7c3c9234a97bc6e1b37c6ac04fc002_icgraph" id="aclassns3_1_1_sat_request_manager_a9e7c3c9234a97bc6e1b37c6ac04fc002_icgraph">
-<area shape="rect" title="The RBDC value is signalled with 8 bits, which means that to be able to signal larger than 256 values..." alt="" coords="1420,39,1607,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a9d2a78210846a57905fc359bd374bc36" title="Calculate the needed AVBDC bytes for a RC." alt="" coords="1188,5,1372,47"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a3eaaba278fc58f9d85a1b1a98b3c2bea" title="Calculate the needed VBDC bytes for a RC." alt="" coords="1188,71,1372,112"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a13af6fd797c8af394edf8262bc5b56e6" title="Legacy algorithm to do VBDC calculation for a RC." alt="" coords="956,39,1140,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a82311063695097faa7c15171ac31b332" title="Do VBDC calculation for a RC." alt="" coords="724,39,908,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="492,39,676,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="260,5,444,47"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="260,71,444,112"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="17,5,201,47"/>
-<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="10,74,207,101"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,125,212,151"/>
+<area shape="rect" title="The RBDC value is signalled with 8 bits, which means that to be able to signal larger than 256 values..." alt="" coords="1411,39,1597,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a9d2a78210846a57905fc359bd374bc36" title="Calculate the needed AVBDC bytes for a RC." alt="" coords="1179,5,1363,47"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a3eaaba278fc58f9d85a1b1a98b3c2bea" title="Calculate the needed VBDC bytes for a RC." alt="" coords="1179,71,1363,112"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a13af6fd797c8af394edf8262bc5b56e6" title="Legacy algorithm to do VBDC calculation for a RC." alt="" coords="947,39,1131,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a82311063695097faa7c15171ac31b332" title="Do VBDC calculation for a RC." alt="" coords="715,39,899,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="483,39,667,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="251,5,435,47"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="251,71,435,112"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="12,5,196,47"/>
+<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="5,74,203,101"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="25,125,183,167"/>
 </map>
 </div>
 
@@ -1870,11 +1870,11 @@ Static Private Attributes</h2></td></tr>
 
 <p>inherited from Object </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00106">106</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00111">111</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-enums_8h_source.html#l02205">ns3::SatEnums::CR_RBDC_LEGACY</a>, <a class="el" href="satellite-enums_8h_source.html#l02233">ns3::SatEnums::CR_VBDC_LEGACY</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00546">m_aVbdcTrace</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00450">m_cnoReportInterval</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00531">m_crTrace</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00536">m_crTraceLog</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00478">m_enableOnDemandEvaluation</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00445">m_evaluationInterval</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00460">m_gainValueK</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00473">m_overEstimationFactor</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00551">m_rbdcCapacityRequestAlgorithm</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00544">m_rbdcTrace</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00466">m_rttEstimate</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00556">m_vbdcCapacityRequestAlgorithm</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00545">m_vbdcTrace</a>.</p>
+<p class="reference">References <a class="el" href="satellite-enums_8h_source.html#l02206">ns3::SatEnums::CR_RBDC_LEGACY</a>, <a class="el" href="satellite-enums_8h_source.html#l02234">ns3::SatEnums::CR_VBDC_LEGACY</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00552">m_aVbdcTrace</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00456">m_cnoReportInterval</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00537">m_crTrace</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00542">m_crTraceLog</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00484">m_enableOnDemandEvaluation</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00451">m_evaluationInterval</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00466">m_gainValueK</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00479">m_overEstimationFactor</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00557">m_rbdcCapacityRequestAlgorithm</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00550">m_rbdcTrace</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00472">m_rttEstimate</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00562">m_vbdcCapacityRequestAlgorithm</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00551">m_vbdcTrace</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00176">GetInstanceTypeId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00183">GetInstanceTypeId()</a>.</p>
 <div id="dynsection-24" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-24-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-24-summary" class="dynsummary" style="display:block;">
@@ -1933,11 +1933,11 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Requested VBDC kilobytes </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00656">656</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00663">663</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-const-variables_8h_source.html#l00055">ns3::SatConstVariables::BITS_IN_KBIT</a>, <a class="el" href="satellite-const-variables_8h_source.html#l00045">ns3::SatConstVariables::BITS_PER_BYTE</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00994">GetQuantizedVbdcValue()</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00440">m_llsConf</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00473">m_overEstimationFactor</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00490">m_pendingVbdcBytes</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00495">m_previousEvaluationTime</a>, and <a class="el" href="satellite-queue_8h_source.html#l00071">ns3::SatQueue::QueueStats_t::m_volumeInBytes</a>.</p>
+<p class="reference">References <a class="el" href="satellite-const-variables_8h_source.html#l00058">ns3::SatConstVariables::BITS_IN_KBIT</a>, <a class="el" href="satellite-const-variables_8h_source.html#l00048">ns3::SatConstVariables::BITS_PER_BYTE</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l01002">GetQuantizedVbdcValue()</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00446">m_llsConf</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00479">m_overEstimationFactor</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00496">m_pendingVbdcBytes</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00501">m_previousEvaluationTime</a>, and <a class="el" href="satellite-queue_8h_source.html#l00074">ns3::SatQueue::QueueStats_t::m_volumeInBytes</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00567">DoVbdcLegacy()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00574">DoVbdcLegacy()</a>.</p>
 <div id="dynsection-25" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-25-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-25-summary" class="dynsummary" style="display:block;">
@@ -1956,15 +1956,15 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-26-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_a3eaaba278fc58f9d85a1b1a98b3c2bea_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_a3eaaba278fc58f9d85a1b1a98b3c2bea_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_a3eaaba278fc58f9d85a1b1a98b3c2bea_icgraph" id="aclassns3_1_1_sat_request_manager_a3eaaba278fc58f9d85a1b1a98b3c2bea_icgraph">
-<area shape="rect" title="Calculate the needed VBDC bytes for a RC." alt="" coords="1188,39,1372,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a13af6fd797c8af394edf8262bc5b56e6" title="Legacy algorithm to do VBDC calculation for a RC." alt="" coords="956,39,1140,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a82311063695097faa7c15171ac31b332" title="Do VBDC calculation for a RC." alt="" coords="724,39,908,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="492,39,676,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="260,5,444,47"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="260,71,444,112"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="17,5,201,47"/>
-<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="10,74,207,101"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,125,212,151"/>
+<area shape="rect" title="Calculate the needed VBDC bytes for a RC." alt="" coords="1179,39,1363,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a13af6fd797c8af394edf8262bc5b56e6" title="Legacy algorithm to do VBDC calculation for a RC." alt="" coords="947,39,1131,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a82311063695097faa7c15171ac31b332" title="Do VBDC calculation for a RC." alt="" coords="715,39,899,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="483,39,667,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="251,5,435,47"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="251,71,435,112"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="12,5,196,47"/>
+<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="5,74,203,101"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="25,125,183,167"/>
 </map>
 </div>
 
@@ -1996,9 +1996,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00078">78</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00083">83</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8cc_source.html#l00224">DoPeriodicalEvaluation()</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00505">m_assignedDaResourcesBytes</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00455">m_cnoReportEvent</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00450">m_cnoReportInterval</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00445">m_evaluationInterval</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00440">m_llsConf</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00500">m_nodeInfo</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00485">m_pendingRbdcRequestsKbps</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00490">m_pendingVbdcBytes</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00495">m_previousEvaluationTime</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00515">m_superFrameDuration</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00855">SendCnoReport()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8cc_source.html#l00231">DoPeriodicalEvaluation()</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00511">m_assignedDaResourcesBytes</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00461">m_cnoReportEvent</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00456">m_cnoReportInterval</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00451">m_evaluationInterval</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00446">m_llsConf</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00506">m_nodeInfo</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00491">m_pendingRbdcRequestsKbps</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00496">m_pendingVbdcBytes</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00501">m_previousEvaluationTime</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00521">m_superFrameDuration</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00862">SendCnoReport()</a>.</p>
 <div id="dynsection-27" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-27-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-27-summary" class="dynsummary" style="display:block;">
@@ -2067,11 +2067,11 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00206">206</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00213">213</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8cc_source.html#l00235">DoEvaluation()</a>, <a class="el" href="satellite-queue_8h_source.html#l00078">ns3::SatQueue::FIRST_BUFFERED_PKT</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00478">m_enableOnDemandEvaluation</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8cc_source.html#l00242">DoEvaluation()</a>, <a class="el" href="satellite-queue_8h_source.html#l00081">ns3::SatQueue::FIRST_BUFFERED_PKT</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00484">m_enableOnDemandEvaluation</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ut-llc_8cc_source.html#l00295">ns3::SatUtLlc::CreateEncap()</a>, and <a class="el" href="satellite-ut-helper_8cc_source.html#l00268">ns3::SatUtHelper::InstallDvb()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ut-llc_8cc_source.html#l00290">ns3::SatUtLlc::CreateEncap()</a>, and <a class="el" href="satellite-ut-helper-dvb_8cc_source.html#l00107">ns3::SatUtHelperDvb::Install()</a>.</p>
 <div id="dynsection-28" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-28-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-28-summary" class="dynsummary" style="display:block;">
@@ -2108,9 +2108,9 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-29-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_a32bbd692fbee055f0eba1f495d383272_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_a32bbd692fbee055f0eba1f495d383272_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_a32bbd692fbee055f0eba1f495d383272_icgraph" id="aclassns3_1_1_sat_request_manager_a32bbd692fbee055f0eba1f495d383272_icgraph">
-<area shape="rect" title="Receive a queue event." alt="" coords="260,23,444,65"/>
-<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="10,5,207,32"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,56,212,83"/>
+<area shape="rect" title="Receive a queue event." alt="" coords="251,27,435,69"/>
+<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="5,5,203,32"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="25,57,183,98"/>
 </map>
 </div>
 
@@ -2148,11 +2148,11 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00769">769</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00776">776</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00485">m_pendingRbdcRequestsKbps</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00466">m_rttEstimate</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00491">m_pendingRbdcRequestsKbps</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00472">m_rttEstimate</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00734">GetPendingRbdcSumKbps()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00741">GetPendingRbdcSumKbps()</a>.</p>
 <div id="dynsection-30" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-30-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-30-summary" class="dynsummary" style="display:block;">
@@ -2160,16 +2160,16 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-30-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_a36dedbc840129bf4a3c13c6e2bd0b550_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_a36dedbc840129bf4a3c13c6e2bd0b550_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_a36dedbc840129bf4a3c13c6e2bd0b550_icgraph" id="aclassns3_1_1_sat_request_manager_a36dedbc840129bf4a3c13c6e2bd0b550_icgraph">
-<area shape="rect" title="Clean&#45;up the pending RBDC container from old samples." alt="" coords="1435,31,1671,87"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a70182f84652b4cea769c4e40fb1cefd9" title="Calculate the pending RBDC requests related to a specific RC." alt="" coords="1188,39,1387,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab331c8c2cb86ff520cf6adbb2c397bee" title="Legacy algorithm to do RBDC calculation for a RC." alt="" coords="956,39,1140,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab793ec45c4e077b4d73c6be65f33d386" title="Do RBDC calculation for a RC." alt="" coords="724,39,908,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="492,39,676,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="260,5,444,47"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="260,71,444,112"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="17,5,201,47"/>
-<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="10,74,207,101"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,125,212,151"/>
+<area shape="rect" title="Clean&#45;up the pending RBDC container from old samples." alt="" coords="1425,31,1661,87"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a70182f84652b4cea769c4e40fb1cefd9" title="Calculate the pending RBDC requests related to a specific RC." alt="" coords="1179,39,1377,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab331c8c2cb86ff520cf6adbb2c397bee" title="Legacy algorithm to do RBDC calculation for a RC." alt="" coords="947,39,1131,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab793ec45c4e077b4d73c6be65f33d386" title="Do RBDC calculation for a RC." alt="" coords="715,39,899,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="483,39,667,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="251,5,435,47"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="251,71,435,112"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="12,5,196,47"/>
+<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="5,74,203,101"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="25,125,183,167"/>
 </map>
 </div>
 
@@ -2207,11 +2207,11 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00954">954</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00962">962</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00505">m_assignedDaResourcesBytes</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00490">m_pendingVbdcBytes</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00511">m_assignedDaResourcesBytes</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00496">m_pendingVbdcBytes</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00611">GetAvbdcBytes()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00618">GetAvbdcBytes()</a>.</p>
 <div id="dynsection-31" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-31-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-31-summary" class="dynsummary" style="display:block;">
@@ -2219,16 +2219,16 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-31-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_a170ae51c54d51632b8fd289cdd10a3e8_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_a170ae51c54d51632b8fd289cdd10a3e8_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_a170ae51c54d51632b8fd289cdd10a3e8_icgraph" id="aclassns3_1_1_sat_request_manager_a170ae51c54d51632b8fd289cdd10a3e8_icgraph">
-<area shape="rect" title="Reset RC index counters." alt="" coords="1420,39,1604,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a9d2a78210846a57905fc359bd374bc36" title="Calculate the needed AVBDC bytes for a RC." alt="" coords="1188,39,1372,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a13af6fd797c8af394edf8262bc5b56e6" title="Legacy algorithm to do VBDC calculation for a RC." alt="" coords="956,39,1140,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a82311063695097faa7c15171ac31b332" title="Do VBDC calculation for a RC." alt="" coords="724,39,908,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="492,39,676,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="260,5,444,47"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="260,71,444,112"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="17,5,201,47"/>
-<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="10,74,207,101"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,125,212,151"/>
+<area shape="rect" title="Reset RC index counters." alt="" coords="1411,39,1595,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a9d2a78210846a57905fc359bd374bc36" title="Calculate the needed AVBDC bytes for a RC." alt="" coords="1179,39,1363,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a13af6fd797c8af394edf8262bc5b56e6" title="Legacy algorithm to do VBDC calculation for a RC." alt="" coords="947,39,1131,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a82311063695097faa7c15171ac31b332" title="Do VBDC calculation for a RC." alt="" coords="715,39,899,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="483,39,667,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="251,5,435,47"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="251,71,435,112"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="12,5,196,47"/>
+<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="5,74,203,101"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="25,125,183,167"/>
 </map>
 </div>
 
@@ -2259,11 +2259,11 @@ Static Private Attributes</h2></td></tr>
 
 <p>Reset the assigned resources counter. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00943">943</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00951">951</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00505">m_assignedDaResourcesBytes</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00440">m_llsConf</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00511">m_assignedDaResourcesBytes</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00446">m_llsConf</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00235">DoEvaluation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00242">DoEvaluation()</a>.</p>
 <div id="dynsection-32" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-32-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-32-summary" class="dynsummary" style="display:block;">
@@ -2271,13 +2271,13 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-32-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_a987fba8916e832f988a86e1c0477664b_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_a987fba8916e832f988a86e1c0477664b_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_a987fba8916e832f988a86e1c0477664b_icgraph" id="aclassns3_1_1_sat_request_manager_a987fba8916e832f988a86e1c0477664b_icgraph">
-<area shape="rect" title="Reset the assigned resources counter." alt="" coords="724,39,917,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="492,39,676,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="260,5,444,47"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="260,71,444,112"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="17,5,201,47"/>
-<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="10,74,207,101"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,125,212,151"/>
+<area shape="rect" title="Reset the assigned resources counter." alt="" coords="715,39,908,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="483,39,667,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="251,5,435,47"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="251,71,435,112"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="12,5,196,47"/>
+<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="5,74,203,101"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="25,125,183,167"/>
 </map>
 </div>
 
@@ -2315,11 +2315,11 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00826">826</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00833">833</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00455">m_cnoReportEvent</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00450">m_cnoReportInterval</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00531">m_crTrace</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00400">m_ctrlCallback</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00417">m_gwAddress</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00428">m_lastCno</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00500">m_nodeInfo</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00855">SendCnoReport()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00461">m_cnoReportEvent</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00456">m_cnoReportInterval</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00537">m_crTrace</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00406">m_ctrlCallback</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00423">m_gwAddress</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00434">m_lastCno</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00506">m_nodeInfo</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00862">SendCnoReport()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00235">DoEvaluation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00242">DoEvaluation()</a>.</p>
 <div id="dynsection-33" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-33-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-33-summary" class="dynsummary" style="display:block;">
@@ -2338,13 +2338,13 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-34-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_ad641719817ed7f59877fcde6a3b19ae1_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_ad641719817ed7f59877fcde6a3b19ae1_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_ad641719817ed7f59877fcde6a3b19ae1_icgraph" id="aclassns3_1_1_sat_request_manager_ad641719817ed7f59877fcde6a3b19ae1_icgraph">
-<area shape="rect" title="Send the capacity request control msg via txCallback to SatNetDevice." alt="" coords="724,39,908,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="492,39,676,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="260,5,444,47"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="260,71,444,112"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="17,5,201,47"/>
-<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="10,74,207,101"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,125,212,151"/>
+<area shape="rect" title="Send the capacity request control msg via txCallback to SatNetDevice." alt="" coords="715,39,899,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="483,39,667,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="251,5,435,47"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="251,71,435,112"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="12,5,196,47"/>
+<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="5,74,203,101"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="25,125,183,167"/>
 </map>
 </div>
 
@@ -2375,11 +2375,11 @@ Static Private Attributes</h2></td></tr>
 
 <p>Send the C/N0 report message via txCallback to <a class="el" href="classns3_1_1_sat_net_device.html" title="SatNetDevice to be utilized in the UT and GW nodes.">SatNetDevice</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00855">855</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00862">862</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00455">m_cnoReportEvent</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00450">m_cnoReportInterval</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00400">m_ctrlCallback</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00406">m_ctrlMsgTxPossibleCallback</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00417">m_gwAddress</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00428">m_lastCno</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00434">m_lastSatelliteCno</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00422">m_satAddress</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00461">m_cnoReportEvent</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00456">m_cnoReportInterval</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00406">m_ctrlCallback</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00412">m_ctrlMsgTxPossibleCallback</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00423">m_gwAddress</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00434">m_lastCno</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00440">m_lastSatelliteCno</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00428">m_satAddress</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00078">Initialize()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00826">SendCapacityRequest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00083">Initialize()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00833">SendCapacityRequest()</a>.</p>
 <div id="dynsection-35" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-35-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-35-summary" class="dynsummary" style="display:block;">
@@ -2387,21 +2387,21 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-35-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_a8db4765a79b1729996f5354c814ad0b6_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_a8db4765a79b1729996f5354c814ad0b6_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_a8db4765a79b1729996f5354c814ad0b6_icgraph" id="aclassns3_1_1_sat_request_manager_a8db4765a79b1729996f5354c814ad0b6_icgraph">
-<area shape="rect" title="Send the C/N0 report message via txCallback to SatNetDevice." alt="" coords="956,16,1140,57"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="17,5,201,47"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ad641719817ed7f59877fcde6a3b19ae1" title="Send the capacity request control msg via txCallback to SatNetDevice." alt="" coords="724,45,908,87"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="492,45,676,87"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="260,45,444,87"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="260,111,444,152"/>
-<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="10,89,207,115"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,139,212,166"/>
+<area shape="rect" title="Send the C/N0 report message via txCallback to SatNetDevice." alt="" coords="947,19,1131,60"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="12,5,196,47"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ad641719817ed7f59877fcde6a3b19ae1" title="Send the capacity request control msg via txCallback to SatNetDevice." alt="" coords="715,48,899,89"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="483,48,667,89"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="251,48,435,89"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="251,113,435,155"/>
+<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="5,87,203,114"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="25,139,183,180"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a86a1282604eb2e9b02ac227b24a004c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86a1282604eb2e9b02ac227b24a004c4">&#9670;&nbsp;</a></span>SendHandoverRecommendation()</h2>
+<a id="af94dc276df2e7cb6169de908cda5bc8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af94dc276df2e7cb6169de908cda5bc8d">&#9670;&nbsp;</a></span>SendHandoverRecommendation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2410,8 +2410,18 @@ Static Private Attributes</h2></td></tr>
           <td class="memname">void ns3::SatRequestManager::SendHandoverRecommendation </td>
           <td>(</td>
           <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>beamId</em></td><td>)</td>
+          <td class="paramname"><em>satId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>beamId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2419,25 +2429,26 @@ Static Private Attributes</h2></td></tr>
 <p>Send a handover recommendation message to the gateway. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">satId</td><td>The sat ID to switch to </td></tr>
     <tr><td class="paramname">beamId</td><td>The beam ID to switch to </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00893">893</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00900">900</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00400">m_ctrlCallback</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00406">m_ctrlMsgTxPossibleCallback</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00417">m_gwAddress</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00406">m_ctrlCallback</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00412">m_ctrlMsgTxPossibleCallback</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00423">m_gwAddress</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ut-helper_8cc_source.html#l00268">ns3::SatUtHelper::InstallDvb()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ut-helper-dvb_8cc_source.html#l00107">ns3::SatUtHelperDvb::Install()</a>.</p>
 <div id="dynsection-36" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-36-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-36-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-36-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classns3_1_1_sat_request_manager_a86a1282604eb2e9b02ac227b24a004c4_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_a86a1282604eb2e9b02ac227b24a004c4_icgraph" alt=""/></div>
-<map name="aclassns3_1_1_sat_request_manager_a86a1282604eb2e9b02ac227b24a004c4_icgraph" id="aclassns3_1_1_sat_request_manager_a86a1282604eb2e9b02ac227b24a004c4_icgraph">
-<area shape="rect" title="Send a handover recommendation message to the gateway." alt="" coords="260,5,500,47"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,13,212,39"/>
+<div class="center"><img src="classns3_1_1_sat_request_manager_af94dc276df2e7cb6169de908cda5bc8d_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_af94dc276df2e7cb6169de908cda5bc8d_icgraph" alt=""/></div>
+<map name="aclassns3_1_1_sat_request_manager_af94dc276df2e7cb6169de908cda5bc8d_icgraph" id="aclassns3_1_1_sat_request_manager_af94dc276df2e7cb6169de908cda5bc8d_icgraph">
+<area shape="rect" title="Send a handover recommendation message to the gateway." alt="" coords="212,5,452,47"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="5,5,164,47"/>
 </map>
 </div>
 
@@ -2460,11 +2471,11 @@ Static Private Attributes</h2></td></tr>
 
 <p>Send a logon message to the gateway. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00911">911</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00919">919</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00400">m_ctrlCallback</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00417">m_gwAddress</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00412">m_logonMsgTxPossibleCallback</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00406">m_ctrlCallback</a>, <a class="el" href="satellite-request-manager_8h_source.html#l00423">m_gwAddress</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00418">m_logonMsgTxPossibleCallback</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ut-helper_8cc_source.html#l00268">ns3::SatUtHelper::InstallDvb()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ut-helper-dvb_8cc_source.html#l00107">ns3::SatUtHelperDvb::Install()</a>.</p>
 <div id="dynsection-37" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-37-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-37-summary" class="dynsummary" style="display:block;">
@@ -2472,8 +2483,8 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-37-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_a2bc890e93980b6e6335e8f6c071f4c8c_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_a2bc890e93980b6e6335e8f6c071f4c8c_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_a2bc890e93980b6e6335e8f6c071f4c8c_icgraph" id="aclassns3_1_1_sat_request_manager_a2bc890e93980b6e6335e8f6c071f4c8c_icgraph">
-<area shape="rect" title="Send a logon message to the gateway." alt="" coords="260,5,444,47"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,13,212,39"/>
+<area shape="rect" title="Send a logon message to the gateway." alt="" coords="212,5,396,47"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="5,5,164,47"/>
 </map>
 </div>
 
@@ -2503,9 +2514,9 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00393">393</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00400">400</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00400">m_ctrlCallback</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00406">m_ctrlCallback</a>.</p>
 
 </div>
 </div>
@@ -2533,9 +2544,9 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00400">400</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00407">407</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00406">m_ctrlMsgTxPossibleCallback</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00412">m_ctrlMsgTxPossibleCallback</a>.</p>
 
 </div>
 </div>
@@ -2563,11 +2574,11 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00414">414</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00421">421</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00417">m_gwAddress</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00423">m_gwAddress</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-ut-helper_8cc_source.html#l00268">ns3::SatUtHelper::InstallDvb()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-ut-helper-dvb_8cc_source.html#l00107">ns3::SatUtHelperDvb::Install()</a>.</p>
 <div id="dynsection-38" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-38-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-38-summary" class="dynsummary" style="display:block;">
@@ -2575,8 +2586,8 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-38-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_ad3ed87ffc21ec6aa1a16396bdb68a86b_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_ad3ed87ffc21ec6aa1a16396bdb68a86b_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_ad3ed87ffc21ec6aa1a16396bdb68a86b_icgraph" id="aclassns3_1_1_sat_request_manager_ad3ed87ffc21ec6aa1a16396bdb68a86b_icgraph">
-<area shape="rect" title="Set the GW address needed for CR transmission." alt="" coords="260,5,444,47"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,13,212,39"/>
+<area shape="rect" title="Set the GW address needed for CR transmission." alt="" coords="212,5,396,47"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="5,5,164,47"/>
 </map>
 </div>
 
@@ -2606,9 +2617,9 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00927">927</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00935">935</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00562">m_headerOffsetVbcd</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00568">m_headerOffsetVbcd</a>.</p>
 
 </div>
 </div>
@@ -2636,9 +2647,9 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00407">407</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00414">414</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00412">m_logonMsgTxPossibleCallback</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00418">m_logonMsgTxPossibleCallback</a>.</p>
 
 </div>
 </div>
@@ -2666,9 +2677,9 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00421">421</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00428">428</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00500">m_nodeInfo</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00506">m_nodeInfo</a>.</p>
 
 </div>
 </div>
@@ -2715,11 +2726,11 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00756">756</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00763">763</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00485">m_pendingRbdcRequestsKbps</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00491">m_pendingRbdcRequestsKbps</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00471">DoRbdcLegacy()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00478">DoRbdcLegacy()</a>.</p>
 <div id="dynsection-39" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-39-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-39-summary" class="dynsummary" style="display:block;">
@@ -2727,15 +2738,15 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-39-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_a519ca50d43887eaeccaf5912b1b052f5_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_a519ca50d43887eaeccaf5912b1b052f5_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_a519ca50d43887eaeccaf5912b1b052f5_icgraph" id="aclassns3_1_1_sat_request_manager_a519ca50d43887eaeccaf5912b1b052f5_icgraph">
-<area shape="rect" title="Update the pending RBDC counters with new request information." alt="" coords="1188,39,1407,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab331c8c2cb86ff520cf6adbb2c397bee" title="Legacy algorithm to do RBDC calculation for a RC." alt="" coords="956,39,1140,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab793ec45c4e077b4d73c6be65f33d386" title="Do RBDC calculation for a RC." alt="" coords="724,39,908,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="492,39,676,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="260,5,444,47"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="260,71,444,112"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="17,5,201,47"/>
-<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="10,74,207,101"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,125,212,151"/>
+<area shape="rect" title="Update the pending RBDC counters with new request information." alt="" coords="1179,39,1397,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab331c8c2cb86ff520cf6adbb2c397bee" title="Legacy algorithm to do RBDC calculation for a RC." alt="" coords="947,39,1131,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab793ec45c4e077b4d73c6be65f33d386" title="Do RBDC calculation for a RC." alt="" coords="715,39,899,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="483,39,667,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="251,5,435,47"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="251,71,435,112"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="12,5,196,47"/>
+<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="5,74,203,101"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="25,125,183,167"/>
 </map>
 </div>
 
@@ -2766,11 +2777,11 @@ Static Private Attributes</h2></td></tr>
 
 <p>Update pending VBDC counters for all RCs. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00791">791</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00798">798</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00440">m_llsConf</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00446">m_llsConf</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00235">DoEvaluation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00242">DoEvaluation()</a>.</p>
 <div id="dynsection-40" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-40-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-40-summary" class="dynsummary" style="display:block;">
@@ -2778,13 +2789,13 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-40-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_request_manager_a5ffabbfa5d53732efb73f7be3d2087c7_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_request_manager_a5ffabbfa5d53732efb73f7be3d2087c7_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_request_manager_a5ffabbfa5d53732efb73f7be3d2087c7_icgraph" id="aclassns3_1_1_sat_request_manager_a5ffabbfa5d53732efb73f7be3d2087c7_icgraph">
-<area shape="rect" title="Update pending VBDC counters for all RCs." alt="" coords="724,39,943,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="492,39,676,80"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="260,5,444,47"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="260,71,444,112"/>
-<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="17,5,201,47"/>
-<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="10,74,207,101"/>
-<area shape="rect" href="classns3_1_1_sat_ut_helper.html#ae8a72f8c6e038285ad70eae24b219eef" title=" " alt="" coords="5,125,212,151"/>
+<area shape="rect" title="Update pending VBDC counters for all RCs." alt="" coords="715,39,933,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#ab12ed4f35a1d3c25bd13dd9921989a99" title="Do evaluation of the buffer status and decide whether or not to send CRs." alt="" coords="483,39,667,80"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a793894c24883e2ce02436720004dd566" title="Periodically check the buffer status and whether a new CR is needed to be sent." alt="" coords="251,5,435,47"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a32bbd692fbee055f0eba1f495d383272" title="Receive a queue event." alt="" coords="251,71,435,112"/>
+<area shape="rect" href="classns3_1_1_sat_request_manager.html#a384ef915e9641e36d7be6528f4021d88" title=" " alt="" coords="12,5,196,47"/>
+<area shape="rect" href="classns3_1_1_sat_ut_llc.html#a659f81bada6965a1fa507440bd14ee10" title="Virtual method to create a new encapsulator &#39;on&#45;a&#45;need&#45;basis&#39; dynamically." alt="" coords="5,74,203,101"/>
+<area shape="rect" href="classns3_1_1_sat_ut_helper_dvb.html#a3839c50e6e2e57d869bc69ebb8ae155b" title=" " alt="" coords="25,125,183,167"/>
 </map>
 </div>
 
@@ -2822,9 +2833,9 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00802">802</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8cc_source.html#l00809">809</a> of file <a class="el" href="satellite-request-manager_8cc_source.html">satellite-request-manager.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00505">m_assignedDaResourcesBytes</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00490">m_pendingVbdcBytes</a>.</p>
+<p class="reference">References <a class="el" href="satellite-request-manager_8h_source.html#l00511">m_assignedDaResourcesBytes</a>, and <a class="el" href="satellite-request-manager_8h_source.html#l00496">m_pendingVbdcBytes</a>.</p>
 
 </div>
 </div>
@@ -2851,9 +2862,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Dedicated assignments received within the previous superframe. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00505">505</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00511">511</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00933">AssignedDaResources()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00078">Initialize()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00954">Reset()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00943">ResetAssignedResources()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00802">UpdatePendingVbdcCounters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00941">AssignedDaResources()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00083">Initialize()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00962">Reset()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00951">ResetAssignedResources()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00809">UpdatePendingVbdcCounters()</a>.</p>
 
 </div>
 </div>
@@ -2877,9 +2888,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00546">546</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00552">552</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00235">DoEvaluation()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00106">GetTypeId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00242">DoEvaluation()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00111">GetTypeId()</a>.</p>
 
 </div>
 </div>
@@ -2905,9 +2916,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Event id for the C/NO report. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00455">455</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00461">461</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00078">Initialize()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00826">SendCapacityRequest()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00855">SendCnoReport()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00083">Initialize()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00833">SendCapacityRequest()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00862">SendCnoReport()</a>.</p>
 
 </div>
 </div>
@@ -2933,9 +2944,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Interval to send C/N0 report. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00450">450</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00456">456</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00106">GetTypeId()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00078">Initialize()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00826">SendCapacityRequest()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00855">SendCnoReport()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00111">GetTypeId()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00083">Initialize()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00833">SendCapacityRequest()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00862">SendCnoReport()</a>.</p>
 
 </div>
 </div>
@@ -2961,9 +2972,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Trace callback used for CR tracing. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00531">531</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00537">537</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00106">GetTypeId()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00826">SendCapacityRequest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00111">GetTypeId()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00833">SendCapacityRequest()</a>.</p>
 
 </div>
 </div>
@@ -2989,9 +3000,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Trace callback used for CR tracing. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00536">536</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00542">542</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00235">DoEvaluation()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00106">GetTypeId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00242">DoEvaluation()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00111">GetTypeId()</a>.</p>
 
 </div>
 </div>
@@ -3017,9 +3028,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Callback to send control messages. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00400">400</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00406">406</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00184">DoDispose()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00826">SendCapacityRequest()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00855">SendCnoReport()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00893">SendHandoverRecommendation()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00911">SendLogonMessage()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00393">SetCtrlMsgCallback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00191">DoDispose()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00833">SendCapacityRequest()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00862">SendCnoReport()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00900">SendHandoverRecommendation()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00919">SendLogonMessage()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00400">SetCtrlMsgCallback()</a>.</p>
 
 </div>
 </div>
@@ -3045,9 +3056,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Callback to check from MAC if a control msg may be transmitted in the near future. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00406">406</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00412">412</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00184">DoDispose()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00235">DoEvaluation()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00855">SendCnoReport()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00893">SendHandoverRecommendation()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00400">SetCtrlMsgTxPossibleCallback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00191">DoDispose()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00242">DoEvaluation()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00862">SendCnoReport()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00900">SendHandoverRecommendation()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00407">SetCtrlMsgTxPossibleCallback()</a>.</p>
 
 </div>
 </div>
@@ -3073,9 +3084,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Enable on demand / ad hoc CR evaluation. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00478">478</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00484">484</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00106">GetTypeId()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00206">ReceiveQueueEvent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00111">GetTypeId()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00213">ReceiveQueueEvent()</a>.</p>
 
 </div>
 </div>
@@ -3101,9 +3112,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Interval to do the periodical CR evaluation. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00445">445</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00451">451</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00224">DoPeriodicalEvaluation()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00106">GetTypeId()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00078">Initialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00231">DoPeriodicalEvaluation()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00111">GetTypeId()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00083">Initialize()</a>.</p>
 
 </div>
 </div>
@@ -3129,9 +3140,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Flag indicating that UT should send a forced AVBDC request, since the volume backlog persistence shall expire and UT still has pending requested bytes. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00522">522</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00528">528</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00703">CheckForVolumeBacklogPersistence()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00567">DoVbdcLegacy()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00710">CheckForVolumeBacklogPersistence()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00574">DoVbdcLegacy()</a>.</p>
 
 </div>
 </div>
@@ -3157,9 +3168,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Gain value K for the RBDC calculation. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00460">460</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00466">466</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00471">DoRbdcLegacy()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00106">GetTypeId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00478">DoRbdcLegacy()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00111">GetTypeId()</a>.</p>
 
 </div>
 </div>
@@ -3185,9 +3196,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>GW address. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00417">417</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00423">423</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00826">SendCapacityRequest()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00855">SendCnoReport()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00893">SendHandoverRecommendation()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00911">SendLogonMessage()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00414">SetGwAddress()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00833">SendCapacityRequest()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00862">SendCnoReport()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00900">SendHandoverRecommendation()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00919">SendLogonMessage()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00421">SetGwAddress()</a>.</p>
 
 </div>
 </div>
@@ -3213,9 +3224,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Additional VBDC to add to take into account E2E header in regenerative LINK or NETWORK, and in worst case. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00562">562</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00568">568</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00235">DoEvaluation()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00927">SetHeaderOffsetVbdc()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00242">DoEvaluation()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00935">SetHeaderOffsetVbdc()</a>.</p>
 
 </div>
 </div>
@@ -3241,9 +3252,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>The last received on E2E C/N0 information from lower layer in linear format. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00428">428</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00434">434</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00429">CnoUpdated()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00826">SendCapacityRequest()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00855">SendCnoReport()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00436">CnoUpdated()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00833">SendCapacityRequest()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00862">SendCnoReport()</a>.</p>
 
 </div>
 </div>
@@ -3269,9 +3280,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>The last received user link C/N0 information from lower layer in linear format. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00434">434</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00440">440</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00429">CnoUpdated()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00855">SendCnoReport()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00436">CnoUpdated()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00862">SendCnoReport()</a>.</p>
 
 </div>
 </div>
@@ -3297,9 +3308,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Time when the last CR including VBDC request was sent. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00510">510</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00516">516</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00703">CheckForVolumeBacklogPersistence()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00235">DoEvaluation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00710">CheckForVolumeBacklogPersistence()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00242">DoEvaluation()</a>.</p>
 
 </div>
 </div>
@@ -3325,9 +3336,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Lower layer services conf pointer, which holds the configurations for RCs and capacity allocation categories. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00440">440</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00446">446</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00703">CheckForVolumeBacklogPersistence()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00184">DoDispose()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00235">DoEvaluation()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00471">DoRbdcLegacy()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00611">GetAvbdcBytes()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00963">GetQuantizedRbdcValue()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00994">GetQuantizedVbdcValue()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00656">GetVbdcBytes()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00078">Initialize()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00943">ResetAssignedResources()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00791">UpdatePendingVbdcCounters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00710">CheckForVolumeBacklogPersistence()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00191">DoDispose()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00242">DoEvaluation()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00478">DoRbdcLegacy()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00618">GetAvbdcBytes()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00971">GetQuantizedRbdcValue()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l01002">GetQuantizedVbdcValue()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00663">GetVbdcBytes()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00083">Initialize()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00951">ResetAssignedResources()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00798">UpdatePendingVbdcCounters()</a>.</p>
 
 </div>
 </div>
@@ -3353,9 +3364,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Callback to check from MAC if a logon msg may be transmitted in the near future. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00412">412</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00418">418</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00184">DoDispose()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00911">SendLogonMessage()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00407">SetLogonMsgTxPossibleCallback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00191">DoDispose()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00919">SendLogonMessage()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00414">SetLogonMsgTxPossibleCallback()</a>.</p>
 
 </div>
 </div>
@@ -3381,9 +3392,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Node information. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00500">500</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00506">506</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00235">DoEvaluation()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00078">Initialize()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00826">SendCapacityRequest()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00421">SetNodeInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00242">DoEvaluation()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00083">Initialize()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00833">SendCapacityRequest()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00428">SetNodeInfo()</a>.</p>
 
 </div>
 </div>
@@ -3407,9 +3418,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00524">524</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00530">530</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00963">GetQuantizedRbdcValue()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00994">GetQuantizedVbdcValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00971">GetQuantizedRbdcValue()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l01002">GetQuantizedVbdcValue()</a>.</p>
 
 </div>
 </div>
@@ -3436,9 +3447,9 @@ Static Private Attributes</h2></td></tr>
 <p>Over-estimation factor used for estimating a bit more resources than there are in the buffers. </p>
 <p>The purpose is to compensate the RLE and FPDU header overhead. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00473">473</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00479">479</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00471">DoRbdcLegacy()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00611">GetAvbdcBytes()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00106">GetTypeId()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00656">GetVbdcBytes()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00478">DoRbdcLegacy()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00618">GetAvbdcBytes()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00111">GetTypeId()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00663">GetVbdcBytes()</a>.</p>
 
 </div>
 </div>
@@ -3464,9 +3475,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Key = RC index Value -&gt; Key = Time when the request was sent Value -&gt; Value = Requested bitrate or bytes. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00485">485</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00491">491</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00734">GetPendingRbdcSumKbps()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00078">Initialize()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00769">RemoveOldEntriesFromPendingRbdcContainer()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00756">UpdatePendingRbdcCounters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00741">GetPendingRbdcSumKbps()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00083">Initialize()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00776">RemoveOldEntriesFromPendingRbdcContainer()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00763">UpdatePendingRbdcCounters()</a>.</p>
 
 </div>
 </div>
@@ -3492,9 +3503,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Pending VBDC counter for each RC index. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00490">490</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00496">496</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00703">CheckForVolumeBacklogPersistence()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00567">DoVbdcLegacy()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00611">GetAvbdcBytes()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00656">GetVbdcBytes()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00078">Initialize()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00954">Reset()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00802">UpdatePendingVbdcCounters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00710">CheckForVolumeBacklogPersistence()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00574">DoVbdcLegacy()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00618">GetAvbdcBytes()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00663">GetVbdcBytes()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00083">Initialize()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00962">Reset()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00809">UpdatePendingVbdcCounters()</a>.</p>
 
 </div>
 </div>
@@ -3520,9 +3531,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Time when CR evaluation was previously done. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00495">495</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00501">501</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00235">DoEvaluation()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00471">DoRbdcLegacy()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00611">GetAvbdcBytes()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00656">GetVbdcBytes()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00078">Initialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00242">DoEvaluation()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00478">DoRbdcLegacy()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00618">GetAvbdcBytes()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00663">GetVbdcBytes()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00083">Initialize()</a>.</p>
 
 </div>
 </div>
@@ -3548,9 +3559,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>The queue enque/deque rate getter callback. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00395">395</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00401">401</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00386">AddQueueCallback()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00184">DoDispose()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00235">DoEvaluation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00393">AddQueueCallback()</a>, <a class="el" href="satellite-request-manager_8cc_source.html#l00191">DoDispose()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00242">DoEvaluation()</a>.</p>
 
 </div>
 </div>
@@ -3576,9 +3587,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>The RBDC capacity algorithm to use. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00551">551</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00557">557</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00452">DoRbdc()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00106">GetTypeId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00459">DoRbdc()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00111">GetTypeId()</a>.</p>
 
 </div>
 </div>
@@ -3602,9 +3613,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00525">525</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00531">531</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00963">GetQuantizedRbdcValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00971">GetQuantizedRbdcValue()</a>.</p>
 
 </div>
 </div>
@@ -3631,9 +3642,9 @@ Static Private Attributes</h2></td></tr>
 <p>Traced callbacks for all sent RBDC and VBDC capacity requests. </p>
 <p>Note, that the RC indices are not identified! Thus, if you have two RC indices using the same CAC, the requests may be mixed up at the receiving side. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00544">544</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00550">550</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00235">DoEvaluation()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00106">GetTypeId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00242">DoEvaluation()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00111">GetTypeId()</a>.</p>
 
 </div>
 </div>
@@ -3660,9 +3671,9 @@ Static Private Attributes</h2></td></tr>
 <p>Round trip time estimate. </p>
 <p>Used to estimate the amount of capacity requests on the air. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00466">466</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00472">472</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00106">GetTypeId()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00769">RemoveOldEntriesFromPendingRbdcContainer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00111">GetTypeId()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00776">RemoveOldEntriesFromPendingRbdcContainer()</a>.</p>
 
 </div>
 </div>
@@ -3688,9 +3699,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>SAT address. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00422">422</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00428">428</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00429">CnoUpdated()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00855">SendCnoReport()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00436">CnoUpdated()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00862">SendCnoReport()</a>.</p>
 
 </div>
 </div>
@@ -3716,9 +3727,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>Superframe duration used for updating the volume backlog persistence. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00515">515</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00521">521</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00703">CheckForVolumeBacklogPersistence()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00078">Initialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00710">CheckForVolumeBacklogPersistence()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00083">Initialize()</a>.</p>
 
 </div>
 </div>
@@ -3744,9 +3755,9 @@ Static Private Attributes</h2></td></tr>
 
 <p>The VBDC capacity algorithm to use. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00556">556</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00562">562</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00548">DoVbdc()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00106">GetTypeId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00555">DoVbdc()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00111">GetTypeId()</a>.</p>
 
 </div>
 </div>
@@ -3770,9 +3781,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00526">526</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00532">532</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00994">GetQuantizedVbdcValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l01002">GetQuantizedVbdcValue()</a>.</p>
 
 </div>
 </div>
@@ -3796,9 +3807,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00545">545</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-request-manager_8h_source.html#l00551">551</a> of file <a class="el" href="satellite-request-manager_8h_source.html">satellite-request-manager.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00235">DoEvaluation()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00106">GetTypeId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-request-manager_8cc_source.html#l00242">DoEvaluation()</a>, and <a class="el" href="satellite-request-manager_8cc_source.html#l00111">GetTypeId()</a>.</p>
 
 </div>
 </div>

@@ -162,15 +162,15 @@ $(document).ready(function(){initNavTree('classns3_1_1_sat_stats_packet_collisio
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_stats_packet_collision_helper__coll__graph.png" border="0" usemap="#ans3_1_1_sat_stats_packet_collision_helper_coll__map" alt="Collaboration graph"/></div>
 <map name="ans3_1_1_sat_stats_packet_collision_helper_coll__map" id="ans3_1_1_sat_stats_packet_collision_helper_coll__map">
-<area shape="rect" title=" " alt="" coords="102,303,307,344"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html" title="Parent abstract class of all satellite statistics helpers." alt="" coords="5,206,156,233"/>
-<area shape="rect" title=" " alt="" coords="47,109,111,136"/>
-<area shape="rect" title=" " alt="" coords="149,109,236,136"/>
-<area shape="rect" title=" " alt="" coords="123,5,262,47"/>
-<area shape="rect" title=" " alt="" coords="370,199,559,240"/>
-<area shape="rect" title=" " alt="" coords="397,109,532,136"/>
-<area shape="rect" title=" " alt="" coords="412,13,451,39"/>
-<area shape="rect" title=" " alt="" coords="477,13,516,39"/>
+<area shape="rect" title=" " alt="" coords="5,379,211,420"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html" title="Parent abstract class of all satellite statistics helpers." alt="" coords="258,303,409,329"/>
+<area shape="rect" title=" " alt="" coords="432,206,496,233"/>
+<area shape="rect" title=" " alt="" coords="87,206,174,233"/>
+<area shape="rect" title=" " alt="" coords="61,95,200,136"/>
+<area shape="rect" title=" " alt="" coords="219,199,408,240"/>
+<area shape="rect" title=" " alt="" coords="246,102,381,129"/>
+<area shape="rect" title=" " alt="" coords="262,5,301,32"/>
+<area shape="rect" title=" " alt="" coords="327,5,366,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -215,6 +215,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2eb19b25f18ebb2abc388fd986d9cc80 inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97b7054c096118362f657a669d02c304 inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a97b7054c096118362f657a669d02c304">SetOutputType</a> (<a class="el" href="classns3_1_1_sat_stats_helper.html#aa8f3afc2c8c3b7200dd4b55f4c89b70e">OutputType_t</a> outputType)</td></tr>
 <tr class="separator:a97b7054c096118362f657a669d02c304 inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89bd4dcae67d3f6efb94cc3347807ad2 inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a89bd4dcae67d3f6efb94cc3347807ad2">UpdateAddressAndIdentifier</a> (Ptr&lt; Node &gt; utNode)</td></tr>
+<tr class="memdesc:a89bd4dcae67d3f6efb94cc3347807ad2 inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the address and the proper identifier from the given UT node.  <a href="classns3_1_1_sat_stats_helper.html#a89bd4dcae67d3f6efb94cc3347807ad2">More...</a><br /></td></tr>
+<tr class="separator:a89bd4dcae67d3f6efb94cc3347807ad2 inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a004d37ac17a7443b99b436d735355d8e inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a004d37ac17a7443b99b436d735355d8e">UpdateIdentifierOnProbes</a> ()</td></tr>
+<tr class="memdesc:a004d37ac17a7443b99b436d735355d8e inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change identifier used on probes, when handovers occur.  <a href="classns3_1_1_sat_stats_helper.html#a004d37ac17a7443b99b436d735355d8e">More...</a><br /></td></tr>
+<tr class="separator:a004d37ac17a7443b99b436d735355d8e inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -232,9 +238,6 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a291c4fe1cf077679469a3bcc60d6c0d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_packet_collision_helper.html#a291c4fe1cf077679469a3bcc60d6c0d6">SaveAddressAndIdentifier</a> (Ptr&lt; Node &gt; utNode)</td></tr>
-<tr class="memdesc:a291c4fe1cf077679469a3bcc60d6c0d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the address and the proper identifier from the given UT node.  <a href="classns3_1_1_sat_stats_packet_collision_helper.html#a291c4fe1cf077679469a3bcc60d6c0d6">More...</a><br /></td></tr>
-<tr class="separator:a291c4fe1cf077679469a3bcc60d6c0d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c674db75d9212f41d90c32c5c604a7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_packet_collision_helper.html#a1c674db75d9212f41d90c32c5c604a7b">SetTraceSourceName</a> (std::string traceSourceName)</td></tr>
 <tr class="separator:a1c674db75d9212f41d90c32c5c604a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57b04067d7d7cd53014a2bf46851506b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_packet_collision_helper.html#a57b04067d7d7cd53014a2bf46851506b">SetValidCarrierType</a> (<a class="el" href="classns3_1_1_sat_phy_rx_carrier.html#a46d023e41d9c633727cb023814532196">SatPhyRxCarrier::CarrierType</a> carrierType)</td></tr>
@@ -283,15 +286,19 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a93e39c005ae0351b47a5fca8dcfad7e7 inherit pro_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae37e2e28674be92dcdfd00dbb03f3e2e inherit pro_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#ae37e2e28674be92dcdfd00dbb03f3e2e">GetUtUserId</a> (Ptr&lt; Node &gt; utUserNode) const</td></tr>
 <tr class="separator:ae37e2e28674be92dcdfd00dbb03f3e2e inherit pro_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a356a8bcd2f2a99403be1f6a801d53ede inherit pro_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a356a8bcd2f2a99403be1f6a801d53ede">SaveAddressAndIdentifier</a> (Ptr&lt; Node &gt; utNode)</td></tr>
+<tr class="memdesc:a356a8bcd2f2a99403be1f6a801d53ede inherit pro_methods_classns3_1_1_sat_stats_helper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the address and the proper identifier from the given UT node.  <a href="classns3_1_1_sat_stats_helper.html#a356a8bcd2f2a99403be1f6a801d53ede">More...</a><br /></td></tr>
+<tr class="separator:a356a8bcd2f2a99403be1f6a801d53ede inherit pro_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a7dd2383ccc85a4cb2324724b81492121"><td class="memItemLeft" align="right" valign="top">std::map&lt; const Address, uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_packet_collision_helper.html#a7dd2383ccc85a4cb2324724b81492121">m_identifierMap</a></td></tr>
-<tr class="memdesc:a7dd2383ccc85a4cb2324724b81492121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of address and the identifier associated with it (for forward link).  <a href="classns3_1_1_sat_stats_packet_collision_helper.html#a7dd2383ccc85a4cb2324724b81492121">More...</a><br /></td></tr>
-<tr class="separator:a7dd2383ccc85a4cb2324724b81492121"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1b596fc88ecfb789fa6963c3ee22dfd"><td class="memItemLeft" align="right" valign="top">CollectorMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_packet_collision_helper.html#ac1b596fc88ecfb789fa6963c3ee22dfd">m_terminalCollectors</a></td></tr>
 <tr class="memdesc:ac1b596fc88ecfb789fa6963c3ee22dfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maintains a list of collectors created by this helper.  <a href="classns3_1_1_sat_stats_packet_collision_helper.html#ac1b596fc88ecfb789fa6963c3ee22dfd">More...</a><br /></td></tr>
 <tr class="separator:ac1b596fc88ecfb789fa6963c3ee22dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classns3_1_1_sat_stats_helper"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classns3_1_1_sat_stats_helper')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classns3_1_1_sat_stats_helper.html">ns3::SatStatsHelper</a></td></tr>
+<tr class="memitem:adbfb10e2a6c0b2dcb0d717cc1370c07a inherit pro_attribs_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">std::map&lt; const Address, uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#adbfb10e2a6c0b2dcb0d717cc1370c07a">m_identifierMap</a></td></tr>
+<tr class="memdesc:adbfb10e2a6c0b2dcb0d717cc1370c07a inherit pro_attribs_classns3_1_1_sat_stats_helper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of address and the identifier associated with it.  <a href="classns3_1_1_sat_stats_helper.html#adbfb10e2a6c0b2dcb0d717cc1370c07a">More...</a><br /></td></tr>
+<tr class="separator:adbfb10e2a6c0b2dcb0d717cc1370c07a inherit pro_attribs_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -340,14 +347,14 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_static_methods_classns3_1_1_sat_stats_helper"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classns3_1_1_sat_stats_helper')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classns3_1_1_sat_stats_helper.html">ns3::SatStatsHelper</a></td></tr>
 <tr class="memitem:a2b0c6cdb6baeef11889ed426cd8d9f46 inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">static NetDeviceContainer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a2b0c6cdb6baeef11889ed426cd8d9f46">GetGwSatNetDevice</a> (Ptr&lt; Node &gt; gwNode)</td></tr>
 <tr class="separator:a2b0c6cdb6baeef11889ed426cd8d9f46 inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a489e487004c59e47965c3bcfa53d1f55 inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">static Ptr&lt; NetDevice &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a489e487004c59e47965c3bcfa53d1f55">GetSatSatGeoNetDevice</a> (Ptr&lt; Node &gt; satNode)</td></tr>
-<tr class="separator:a489e487004c59e47965c3bcfa53d1f55 inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bddc4263f820ab84fd7d54baeb0f54b inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">static Ptr&lt; NetDevice &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a1bddc4263f820ab84fd7d54baeb0f54b">GetSatSatOrbiterNetDevice</a> (Ptr&lt; Node &gt; satNode)</td></tr>
+<tr class="separator:a1bddc4263f820ab84fd7d54baeb0f54b inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdeba1ca23ae3fd9415406334f58e885 inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">static Ptr&lt; NetDevice &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#abdeba1ca23ae3fd9415406334f58e885">GetUtSatNetDevice</a> (Ptr&lt; Node &gt; utNode)</td></tr>
 <tr class="separator:abdeba1ca23ae3fd9415406334f58e885 inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00046">46</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html">satellite-stats-packet-collision-helper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00048">48</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html">satellite-stats-packet-collision-helper.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8e7b72521990696539376fc7815efdc8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8e7b72521990696539376fc7815efdc8">&#9670;&nbsp;</a></span>SatStatsPacketCollisionHelper()</h2>
@@ -365,7 +372,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00057">57</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html">satellite-stats-packet-collision-helper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00060">60</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html">satellite-stats-packet-collision-helper.cc</a>.</p>
 
 </div>
 </div>
@@ -394,7 +401,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>/ Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00063">63</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html">satellite-stats-packet-collision-helper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00066">66</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html">satellite-stats-packet-collision-helper.cc</a>.</p>
 
 </div>
 </div>
@@ -441,11 +448,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00089">89</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html">satellite-stats-packet-collision-helper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00092">92</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html">satellite-stats-packet-collision-helper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-stats-helper_8cc_source.html#l00276">ns3::SatStatsHelper::GetOutputType()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00085">ns3::SatStatsHelper::GetOutputTypeName()</a>, <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00113">m_identifierMap</a>, <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00110">m_terminalCollectors</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00122">ns3::SatStatsHelper::OUTPUT_SCALAR_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00127">ns3::SatStatsHelper::OUTPUT_SCALAR_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00123">ns3::SatStatsHelper::OUTPUT_SCATTER_FILE</a>, and <a class="el" href="satellite-stats-helper_8h_source.html#l00128">ns3::SatStatsHelper::OUTPUT_SCATTER_PLOT</a>.</p>
+<p class="reference">References <a class="el" href="satellite-stats-helper_8cc_source.html#l00283">ns3::SatStatsHelper::GetOutputType()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00090">ns3::SatStatsHelper::GetOutputTypeName()</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00422">ns3::SatStatsHelper::m_identifierMap</a>, <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00103">m_terminalCollectors</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00123">ns3::SatStatsHelper::OUTPUT_SCALAR_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00128">ns3::SatStatsHelper::OUTPUT_SCALAR_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00124">ns3::SatStatsHelper::OUTPUT_SCATTER_FILE</a>, and <a class="el" href="satellite-stats-helper_8h_source.html#l00129">ns3::SatStatsHelper::OUTPUT_SCATTER_PLOT</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00195">ns3::SatStatsFeederPacketCollisionHelper::DoInstall()</a>, and <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00410">ns3::SatStatsUserPacketCollisionHelper::DoInstall()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00178">ns3::SatStatsFeederPacketCollisionHelper::DoInstall()</a>, and <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00393">ns3::SatStatsUserPacketCollisionHelper::DoInstall()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -489,11 +496,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00083">83</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html">satellite-stats-packet-collision-helper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00086">86</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html">satellite-stats-packet-collision-helper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00118">m_traceSourceName</a>.</p>
+<p class="reference">References <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00108">m_traceSourceName</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00195">ns3::SatStatsFeederPacketCollisionHelper::DoInstall()</a>, and <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00410">ns3::SatStatsUserPacketCollisionHelper::DoInstall()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00178">ns3::SatStatsFeederPacketCollisionHelper::DoInstall()</a>, and <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00393">ns3::SatStatsUserPacketCollisionHelper::DoInstall()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -535,7 +542,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>inherited from ObjectBase base class </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00069">69</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html">satellite-stats-packet-collision-helper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00072">72</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html">satellite-stats-packet-collision-helper.cc</a>.</p>
 
 </div>
 </div>
@@ -565,11 +572,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Get the valid carrier type. </p>
 <dl class="section return"><dt>Returns</dt><dd>the valid carrier type </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00080">80</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html">satellite-stats-packet-collision-helper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00082">82</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html">satellite-stats-packet-collision-helper.h</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00116">m_carrierType</a>.</p>
+<p class="reference">References <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00106">m_carrierType</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00195">ns3::SatStatsFeederPacketCollisionHelper::DoInstall()</a>, and <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00410">ns3::SatStatsUserPacketCollisionHelper::DoInstall()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00178">ns3::SatStatsFeederPacketCollisionHelper::DoInstall()</a>, and <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00393">ns3::SatStatsUserPacketCollisionHelper::DoInstall()</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -578,77 +585,6 @@ Additional Inherited Members</h2></td></tr>
 <div class="center"><img src="classns3_1_1_sat_stats_packet_collision_helper_a955947e3405e14e2facc2b13526a4d6c_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_stats_packet_collision_helper_a955947e3405e14e2facc2b13526a4d6c_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_stats_packet_collision_helper_a955947e3405e14e2facc2b13526a4d6c_icgraph" id="aclassns3_1_1_sat_stats_packet_collision_helper_a955947e3405e14e2facc2b13526a4d6c_icgraph">
 <area shape="rect" title="Get the valid carrier type." alt="" coords="288,39,493,80"/>
-<area shape="rect" href="classns3_1_1_sat_stats_feeder_packet_collision_helper.html#ac7fa450f3da1545b22feadf313cf55ea" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="26,5,219,47"/>
-<area shape="rect" href="classns3_1_1_sat_stats_user_packet_collision_helper.html#a7a265e985b08b2fa50d32763535f75b0" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="5,71,240,112"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a291c4fe1cf077679469a3bcc60d6c0d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a291c4fe1cf077679469a3bcc60d6c0d6">&#9670;&nbsp;</a></span>SaveAddressAndIdentifier()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ns3::SatStatsPacketCollisionHelper::SaveAddressAndIdentifier </td>
-          <td>(</td>
-          <td class="paramtype">Ptr&lt; Node &gt;&#160;</td>
-          <td class="paramname"><em>utNode</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Save the address and the proper identifier from the given UT node. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">utNode</td><td>a UT node.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>The address of the given node will be saved in the <a class="el" href="classns3_1_1_sat_stats_packet_collision_helper.html#a7dd2383ccc85a4cb2324724b81492121" title="Map of address and the identifier associated with it (for forward link).">m_identifierMap</a> member variable. </p>
-
-<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00151">151</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html">satellite-stats-packet-collision-helper.cc</a>.</p>
-
-<p class="reference">References <a class="el" href="satellite-stats-helper_8cc_source.html#l00803">ns3::SatStatsHelper::GetIdentifierForUt()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00558">ns3::SatIdMapper::GetUtMacWithNode()</a>, and <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00113">m_identifierMap</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00195">ns3::SatStatsFeederPacketCollisionHelper::DoInstall()</a>, and <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00410">ns3::SatStatsUserPacketCollisionHelper::DoInstall()</a>.</p>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classns3_1_1_sat_stats_packet_collision_helper_a291c4fe1cf077679469a3bcc60d6c0d6_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_stats_packet_collision_helper_a291c4fe1cf077679469a3bcc60d6c0d6_cgraph" alt=""/></div>
-<map name="aclassns3_1_1_sat_stats_packet_collision_helper_a291c4fe1cf077679469a3bcc60d6c0d6_cgraph" id="aclassns3_1_1_sat_stats_packet_collision_helper_a291c4fe1cf077679469a3bcc60d6c0d6_cgraph">
-<area shape="rect" title="Save the address and the proper identifier from the given UT node." alt="" coords="5,289,245,331"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#ada8b440db63c67048f066b1049d4a898" title=" " alt="" coords="293,201,444,243"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#af3a42178e8d687643c54cf473e008901" title=" " alt="" coords="745,329,953,371"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#a3174ce104d98c7f37b69256d573255da" title="Function for getting the beam ID with MAC." alt="" coords="493,5,697,47"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#af7c2802b2da9140f72b9f91943eca400" title="Function for getting the group ID with MAC." alt="" coords="492,71,697,112"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a7be2bafa3875d1efa0367ed09efa5d71" title=" " alt="" coords="505,136,685,177"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#a451689de1096fda8d49f803c93a23696" title="Function for getting the SAT ID with MAC." alt="" coords="501,201,688,243"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a93e39c005ae0351b47a5fca8dcfad7e7" title=" " alt="" coords="519,267,670,308"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#ac9620fca48baf58b821b57220d11ea39" title="Function for getting the UT ID with MAC." alt="" coords="753,264,946,305"/>
-</map>
-</div>
-<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classns3_1_1_sat_stats_packet_collision_helper_a291c4fe1cf077679469a3bcc60d6c0d6_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_stats_packet_collision_helper_a291c4fe1cf077679469a3bcc60d6c0d6_icgraph" alt=""/></div>
-<map name="aclassns3_1_1_sat_stats_packet_collision_helper_a291c4fe1cf077679469a3bcc60d6c0d6_icgraph" id="aclassns3_1_1_sat_stats_packet_collision_helper_a291c4fe1cf077679469a3bcc60d6c0d6_icgraph">
-<area shape="rect" title="Save the address and the proper identifier from the given UT node." alt="" coords="288,39,528,80"/>
 <area shape="rect" href="classns3_1_1_sat_stats_feeder_packet_collision_helper.html#ac7fa450f3da1545b22feadf313cf55ea" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="26,5,219,47"/>
 <area shape="rect" href="classns3_1_1_sat_stats_user_packet_collision_helper.html#a7a265e985b08b2fa50d32763535f75b0" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="5,71,240,112"/>
 </map>
@@ -686,16 +622,16 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00076">76</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html">satellite-stats-packet-collision-helper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00079">79</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html">satellite-stats-packet-collision-helper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00118">m_traceSourceName</a>.</p>
+<p class="reference">References <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00108">m_traceSourceName</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00635">ns3::SatStatsFeederCrdsaPacketCollisionHelper::SatStatsFeederCrdsaPacketCollisionHelper()</a>, <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00661">ns3::SatStatsFeederEssaPacketCollisionHelper::SatStatsFeederEssaPacketCollisionHelper()</a>, <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00609">ns3::SatStatsFeederSlottedAlohaPacketCollisionHelper::SatStatsFeederSlottedAlohaPacketCollisionHelper()</a>, <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00713">ns3::SatStatsUserCrdsaPacketCollisionHelper::SatStatsUserCrdsaPacketCollisionHelper()</a>, <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00739">ns3::SatStatsUserEssaPacketCollisionHelper::SatStatsUserEssaPacketCollisionHelper()</a>, and <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00687">ns3::SatStatsUserSlottedAlohaPacketCollisionHelper::SatStatsUserSlottedAlohaPacketCollisionHelper()</a>.</p>
-<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00618">ns3::SatStatsFeederCrdsaPacketCollisionHelper::SatStatsFeederCrdsaPacketCollisionHelper()</a>, <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00644">ns3::SatStatsFeederEssaPacketCollisionHelper::SatStatsFeederEssaPacketCollisionHelper()</a>, <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00592">ns3::SatStatsFeederSlottedAlohaPacketCollisionHelper::SatStatsFeederSlottedAlohaPacketCollisionHelper()</a>, <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00696">ns3::SatStatsUserCrdsaPacketCollisionHelper::SatStatsUserCrdsaPacketCollisionHelper()</a>, <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00722">ns3::SatStatsUserEssaPacketCollisionHelper::SatStatsUserEssaPacketCollisionHelper()</a>, and <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00670">ns3::SatStatsUserSlottedAlohaPacketCollisionHelper::SatStatsUserSlottedAlohaPacketCollisionHelper()</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_stats_packet_collision_helper_a1c674db75d9212f41d90c32c5c604a7b_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_stats_packet_collision_helper_a1c674db75d9212f41d90c32c5c604a7b_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_stats_packet_collision_helper_a1c674db75d9212f41d90c32c5c604a7b_icgraph" id="aclassns3_1_1_sat_stats_packet_collision_helper_a1c674db75d9212f41d90c32c5c604a7b_icgraph">
 <area shape="rect" title=" " alt="" coords="316,240,527,281"/>
@@ -742,16 +678,16 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00104">104</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html">satellite-stats-packet-collision-helper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00097">97</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html">satellite-stats-packet-collision-helper.h</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00116">m_carrierType</a>.</p>
+<p class="reference">References <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00106">m_carrierType</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00635">ns3::SatStatsFeederCrdsaPacketCollisionHelper::SatStatsFeederCrdsaPacketCollisionHelper()</a>, <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00661">ns3::SatStatsFeederEssaPacketCollisionHelper::SatStatsFeederEssaPacketCollisionHelper()</a>, <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00609">ns3::SatStatsFeederSlottedAlohaPacketCollisionHelper::SatStatsFeederSlottedAlohaPacketCollisionHelper()</a>, <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00713">ns3::SatStatsUserCrdsaPacketCollisionHelper::SatStatsUserCrdsaPacketCollisionHelper()</a>, <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00739">ns3::SatStatsUserEssaPacketCollisionHelper::SatStatsUserEssaPacketCollisionHelper()</a>, and <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00687">ns3::SatStatsUserSlottedAlohaPacketCollisionHelper::SatStatsUserSlottedAlohaPacketCollisionHelper()</a>.</p>
-<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00618">ns3::SatStatsFeederCrdsaPacketCollisionHelper::SatStatsFeederCrdsaPacketCollisionHelper()</a>, <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00644">ns3::SatStatsFeederEssaPacketCollisionHelper::SatStatsFeederEssaPacketCollisionHelper()</a>, <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00592">ns3::SatStatsFeederSlottedAlohaPacketCollisionHelper::SatStatsFeederSlottedAlohaPacketCollisionHelper()</a>, <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00696">ns3::SatStatsUserCrdsaPacketCollisionHelper::SatStatsUserCrdsaPacketCollisionHelper()</a>, <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00722">ns3::SatStatsUserEssaPacketCollisionHelper::SatStatsUserEssaPacketCollisionHelper()</a>, and <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00670">ns3::SatStatsUserSlottedAlohaPacketCollisionHelper::SatStatsUserSlottedAlohaPacketCollisionHelper()</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_stats_packet_collision_helper_a57b04067d7d7cd53014a2bf46851506b_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_stats_packet_collision_helper_a57b04067d7d7cd53014a2bf46851506b_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_stats_packet_collision_helper_a57b04067d7d7cd53014a2bf46851506b_icgraph" id="aclassns3_1_1_sat_stats_packet_collision_helper_a57b04067d7d7cd53014a2bf46851506b_icgraph">
 <area shape="rect" title="Set valid carrier type for this statistics helper type." alt="" coords="316,240,521,281"/>
@@ -787,37 +723,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00116">116</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html">satellite-stats-packet-collision-helper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00106">106</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html">satellite-stats-packet-collision-helper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00080">GetValidCarrierType()</a>, and <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00104">SetValidCarrierType()</a>.</p>
-
-</div>
-</div>
-<a id="a7dd2383ccc85a4cb2324724b81492121"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7dd2383ccc85a4cb2324724b81492121">&#9670;&nbsp;</a></span>m_identifierMap</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::map&lt;const Address, uint32_t&gt; ns3::SatStatsPacketCollisionHelper::m_identifierMap</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Map of address and the identifier associated with it (for forward link). </p>
-
-<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00113">113</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html">satellite-stats-packet-collision-helper.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00089">CollisionRxCallback()</a>, and <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00151">SaveAddressAndIdentifier()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00082">GetValidCarrierType()</a>, and <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00097">SetValidCarrierType()</a>.</p>
 
 </div>
 </div>
@@ -843,9 +751,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Maintains a list of collectors created by this helper. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00110">110</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html">satellite-stats-packet-collision-helper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00103">103</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html">satellite-stats-packet-collision-helper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00089">CollisionRxCallback()</a>, <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00195">ns3::SatStatsFeederPacketCollisionHelper::DoInstall()</a>, and <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00410">ns3::SatStatsUserPacketCollisionHelper::DoInstall()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00092">CollisionRxCallback()</a>, <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00178">ns3::SatStatsFeederPacketCollisionHelper::DoInstall()</a>, and <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00393">ns3::SatStatsUserPacketCollisionHelper::DoInstall()</a>.</p>
 
 </div>
 </div>
@@ -869,9 +777,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00118">118</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html">satellite-stats-packet-collision-helper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html#l00108">108</a> of file <a class="el" href="satellite-stats-packet-collision-helper_8h_source.html">satellite-stats-packet-collision-helper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00083">GetTraceSourceName()</a>, and <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00076">SetTraceSourceName()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00086">GetTraceSourceName()</a>, and <a class="el" href="satellite-stats-packet-collision-helper_8cc_source.html#l00079">SetTraceSourceName()</a>.</p>
 
 </div>
 </div>

@@ -132,14 +132,16 @@ $(document).ready(function(){initNavTree('satellite-fsl-test_8cc.html',''); init
 
 <p>Test cases to unit test Satellite Free Space Loss model.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="satellite-helper_8h_source.html">../helper/satellite-helper.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="satellite-free-space-loss_8h_source.html">../model/satellite-free-space-loss.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="satellite-mobility-model_8h_source.html">../model/satellite-mobility-model.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="satellite-env-variables_8h_source.html">../utils/satellite-env-variables.h</a>&quot;</code><br />
-<code>#include &quot;ns3/log.h&quot;</code><br />
-<code>#include &quot;ns3/simulator.h&quot;</code><br />
-<code>#include &quot;ns3/singleton.h&quot;</code><br />
-<code>#include &quot;ns3/test.h&quot;</code><br />
+<div class="textblock"><code>#include &lt;ns3/log.h&gt;</code><br />
+<code>#include &lt;ns3/satellite-env-variables.h&gt;</code><br />
+<code>#include &lt;ns3/satellite-free-space-loss.h&gt;</code><br />
+<code>#include &lt;ns3/satellite-helper.h&gt;</code><br />
+<code>#include &lt;ns3/satellite-mobility-model.h&gt;</code><br />
+<code>#include &lt;ns3/satellite-topology.h&gt;</code><br />
+<code>#include &lt;ns3/simulator.h&gt;</code><br />
+<code>#include &lt;ns3/singleton.h&gt;</code><br />
+<code>#include &lt;ns3/test.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for satellite-fsl-test.cc:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -147,56 +149,17 @@ $(document).ready(function(){initNavTree('satellite-fsl-test_8cc.html',''); init
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="satellite-fsl-test_8cc__incl.png" border="0" usemap="#a_2builds_2sns3_2satellite_2satellite_2test_2satellite-fsl-test_8cc" alt=""/></div>
 <map name="a_2builds_2sns3_2satellite_2satellite_2test_2satellite-fsl-test_8cc" id="a_2builds_2sns3_2satellite_2satellite_2test_2satellite-fsl-test_8cc">
-<area shape="rect" title="Test cases to unit test Satellite Free Space Loss model." alt="" coords="5302,5,5468,61"/>
-<area shape="rect" href="satellite-helper_8h.html" title=" " alt="" coords="3246,109,3378,151"/>
-<area shape="rect" href="satellite-free-space-loss_8h.html" title=" " alt="" coords="4810,109,4949,151"/>
-<area shape="rect" href="satellite-mobility-model_8h.html" title=" " alt="" coords="4981,109,5120,151"/>
-<area shape="rect" href="satellite-env-variables_8h.html" title=" " alt="" coords="5271,109,5398,151"/>
-<area shape="rect" title=" " alt="" coords="5395,206,5476,233"/>
-<area shape="rect" title=" " alt="" coords="5501,206,5624,233"/>
-<area shape="rect" title=" " alt="" coords="5524,117,5646,143"/>
-<area shape="rect" title=" " alt="" coords="5670,117,5756,143"/>
-<area shape="rect" href="satellite-beam-helper_8h.html" title=" " alt="" coords="1240,206,1415,233"/>
-<area shape="rect" title=" " alt="" coords="1551,385,1710,411"/>
-<area shape="rect" title=" " alt="" coords="1817,385,2028,411"/>
-<area shape="rect" title=" " alt="" coords="1734,385,1793,411"/>
-<area shape="rect" title=" " alt="" coords="2036,295,2227,322"/>
-<area shape="rect" title=" " alt="" coords="1777,288,1961,329"/>
-<area shape="rect" href="satellite-beam-user-info_8h.html" title=" " alt="" coords="4420,199,4571,240"/>
-<area shape="rect" href="satellite-conf_8h.html" title=" " alt="" coords="2878,206,2996,233"/>
-<area shape="rect" title=" " alt="" coords="4710,295,4812,322"/>
-<area shape="rect" href="satellite-group-helper_8h.html" title=" " alt="" coords="2627,206,2802,233"/>
-<area shape="rect" title=" " alt="" coords="2806,288,2964,329"/>
-<area shape="rect" href="satellite-user-helper_8h.html" title=" " alt="" coords="2437,206,2602,233"/>
-<area shape="rect" title=" " alt="" coords="2346,295,2488,322"/>
-<area shape="rect" title=" " alt="" coords="3020,199,3195,240"/>
-<area shape="rect" title=" " alt="" coords="3220,199,3404,240"/>
-<area shape="rect" title=" " alt="" coords="3428,199,3614,240"/>
-<area shape="rect" title=" " alt="" coords="3638,199,3825,240"/>
-<area shape="rect" title=" " alt="" coords="3850,199,4024,240"/>
-<area shape="rect" title=" " alt="" coords="4049,199,4233,240"/>
-<area shape="rect" title=" " alt="" coords="4257,206,4396,233"/>
-<area shape="rect" href="satellite-geo-helper_8h.html" title=" " alt="" coords="1540,295,1702,322"/>
-<area shape="rect" title=" " alt="" coords="1148,377,1331,419"/>
-<area shape="rect" title=" " alt="" coords="581,385,757,411"/>
-<area shape="rect" href="satellite-gw-helper_8h.html" title=" " alt="" coords="42,295,198,322"/>
-<area shape="rect" title=" " alt="" coords="49,385,190,411"/>
-<area shape="rect" href="satellite-ut-helper_8h.html" title=" " alt="" coords="1366,295,1516,322"/>
-<area shape="rect" title=" " alt="" coords="273,288,417,329"/>
-<area shape="rect" title=" " alt="" coords="442,288,576,329"/>
-<area shape="rect" title=" " alt="" coords="600,288,756,329"/>
-<area shape="rect" title=" " alt="" coords="780,288,942,329"/>
-<area shape="rect" title=" " alt="" coords="966,288,1116,329"/>
-<area shape="rect" title=" " alt="" coords="1141,288,1290,329"/>
-<area shape="rect" title=" " alt="" coords="2562,295,2613,322"/>
-<area shape="rect" title=" " alt="" coords="2688,295,2730,322"/>
-<area shape="rect" title=" " alt="" coords="2251,295,2322,322"/>
-<area shape="rect" title=" " alt="" coords="2988,295,3051,322"/>
-<area shape="rect" title=" " alt="" coords="1356,385,1526,411"/>
-<area shape="rect" title=" " alt="" coords="3178,295,3336,322"/>
-<area shape="rect" title=" " alt="" coords="4799,206,4960,233"/>
-<area shape="rect" href="geo-coordinate_8h.html" title=" " alt="" coords="4984,206,5116,233"/>
-<area shape="rect" href="satellite-output-fstream-string-container_8h.html" title=" " alt="" coords="5141,199,5320,240"/>
+<area shape="rect" title="Test cases to unit test Satellite Free Space Loss model." alt="" coords="777,5,942,61"/>
+<area shape="rect" title=" " alt="" coords="5,117,87,143"/>
+<area shape="rect" title=" " alt="" coords="111,117,317,143"/>
+<area shape="rect" title=" " alt="" coords="342,109,475,151"/>
+<area shape="rect" title=" " alt="" coords="500,117,659,143"/>
+<area shape="rect" title=" " alt="" coords="683,109,844,151"/>
+<area shape="rect" title=" " alt="" coords="868,117,1043,143"/>
+<area shape="rect" title=" " alt="" coords="1067,117,1190,143"/>
+<area shape="rect" title=" " alt="" coords="1215,117,1336,143"/>
+<area shape="rect" title=" " alt="" coords="1360,117,1447,143"/>
+<area shape="rect" title=" " alt="" coords="1471,117,1541,143"/>
 </map>
 </div>
 </div>
@@ -241,7 +204,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-fsl-test_8cc_source.html#l00146">146</a> of file <a class="el" href="satellite-fsl-test_8cc_source.html">satellite-fsl-test.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-fsl-test_8cc_source.html#l00149">149</a> of file <a class="el" href="satellite-fsl-test_8cc_source.html">satellite-fsl-test.cc</a>.</p>
 
 </div>
 </div>

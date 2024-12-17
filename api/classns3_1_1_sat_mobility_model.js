@@ -8,6 +8,7 @@ var classns3_1_1_sat_mobility_model =
     [ "DoSetCartesianPosition", "classns3_1_1_sat_mobility_model.html#a683cb10a47d828dbf0cab5c46e2e040e", null ],
     [ "DoSetGeoPosition", "classns3_1_1_sat_mobility_model.html#a6832e249f2a8d6015b7f952df8291559", null ],
     [ "DoSetPosition", "classns3_1_1_sat_mobility_model.html#a99ec3689bee3f454199021de4e4d907d", null ],
+    [ "GetDistanceFrom", "classns3_1_1_sat_mobility_model.html#a6a1d58f50abde4373aa8bcf63862d5ee", null ],
     [ "GetGeoPosition", "classns3_1_1_sat_mobility_model.html#a7c98b030b2c2f5719e38b0837fceeec3", null ],
     [ "GetInstanceTypeId", "classns3_1_1_sat_mobility_model.html#a1fa09f7327de5acc760e0041f308312e", null ],
     [ "GetTypeId", "classns3_1_1_sat_mobility_model.html#a67f6310fcc6c2bf37cee6a882691bc49", null ],

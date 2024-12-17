@@ -242,7 +242,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Tag used to save various data about a packet, like its Spreading Factor and data about interference. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8h_source.html#l00037">37</a> of file <a class="el" href="lora-tag_8h_source.html">lora-tag.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8h_source.html#l00040">40</a> of file <a class="el" href="lora-tag_8h_source.html">lora-tag.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac22a27b11c36e96e9b981af7dbbd846e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac22a27b11c36e96e9b981af7dbbd846e">&#9670;&nbsp;</a></span>LoraTag()</h2>
@@ -279,7 +279,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00046">46</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00048">48</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
 
 </div>
 </div>
@@ -306,7 +306,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00056">56</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00058">58</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
 
 </div>
 </div>
@@ -335,9 +335,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00080">80</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00082">82</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00149">m_dataRate</a>, <a class="el" href="lora-tag_8h_source.html#l00147">m_destroyedBy</a>, <a class="el" href="lora-tag_8h_source.html#l00151">m_frequency</a>, <a class="el" href="lora-tag_8h_source.html#l00146">m_modcod</a>, <a class="el" href="lora-tag_8h_source.html#l00148">m_receivePower</a>, and <a class="el" href="lora-tag_8h_source.html#l00145">m_sf</a>.</p>
+<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00152">m_dataRate</a>, <a class="el" href="lora-tag_8h_source.html#l00150">m_destroyedBy</a>, <a class="el" href="lora-tag_8h_source.html#l00154">m_frequency</a>, <a class="el" href="lora-tag_8h_source.html#l00149">m_modcod</a>, <a class="el" href="lora-tag_8h_source.html#l00151">m_receivePower</a>, and <a class="el" href="lora-tag_8h_source.html#l00148">m_sf</a>.</p>
 
 </div>
 </div>
@@ -360,11 +360,11 @@ Private Attributes</h2></td></tr>
 <p>Get the data rate for this packet. </p>
 <dl class="section return"><dt>Returns</dt><dd>The data rate that needs to be employed for this packet. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00146">146</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00148">148</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00149">m_dataRate</a>.</p>
+<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00152">m_dataRate</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00065">ns3::LorawanMacGateway::Send()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lorawan-ground-mac-gateway_8cc_source.html#l00067">ns3::LorawanGroundMacGateway::Send()</a>, <a class="el" href="lorawan-orbiter-mac-gateway_8cc_source.html#l00067">ns3::LorawanOrbiterMacGateway::Send()</a>, and <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00064">ns3::LorawanMacGateway::Send()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -372,8 +372,10 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_lora_tag_a575e8c6961c5435badbdb4696a8888e9_icgraph.png" border="0" usemap="#aclassns3_1_1_lora_tag_a575e8c6961c5435badbdb4696a8888e9_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_lora_tag_a575e8c6961c5435badbdb4696a8888e9_icgraph" id="aclassns3_1_1_lora_tag_a575e8c6961c5435badbdb4696a8888e9_icgraph">
-<area shape="rect" title="Get the data rate for this packet." alt="" coords="247,13,441,39"/>
-<area shape="rect" href="classns3_1_1_lorawan_mac_gateway.html#a39cdd35af385aab373fb689ddc8e4fe5" title="Send a packet." alt="" coords="5,5,199,47"/>
+<area shape="rect" title="Get the data rate for this packet." alt="" coords="293,78,488,105"/>
+<area shape="rect" href="classns3_1_1_lorawan_ground_mac_gateway.html#a1e8766987037466231fdbf48fddcfdd6" title="Send a packet." alt="" coords="5,5,245,47"/>
+<area shape="rect" href="classns3_1_1_lorawan_orbiter_mac_gateway.html#a278d73e17736e715d1ac525733a575b0" title="Send a packet." alt="" coords="6,71,245,112"/>
+<area shape="rect" href="classns3_1_1_lorawan_mac_gateway.html#a730919f7fe6cc4035a70d0d5125196f2" title="Send a packet." alt="" coords="29,136,222,177"/>
 </map>
 </div>
 
@@ -397,9 +399,9 @@ Private Attributes</h2></td></tr>
 <p>Read which Spreading Factor this packet was destroyed by. </p>
 <dl class="section return"><dt>Returns</dt><dd>The SF this packet was destroyed by. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00104">104</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00106">106</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00147">m_destroyedBy</a>.</p>
+<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00150">m_destroyedBy</a>.</p>
 
 </div>
 </div>
@@ -421,11 +423,11 @@ Private Attributes</h2></td></tr>
 
 <p>Get the frequency of the packet. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00140">140</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00142">142</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00151">m_frequency</a>.</p>
+<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00154">m_frequency</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00274">ns3::LoraEndDeviceStatus::InsertReceivedPacket()</a>, and <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00065">ns3::LorawanMacGateway::Send()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00291">ns3::LoraEndDeviceStatus::InsertReceivedPacket()</a>, <a class="el" href="lorawan-ground-mac-gateway_8cc_source.html#l00067">ns3::LorawanGroundMacGateway::Send()</a>, <a class="el" href="lorawan-orbiter-mac-gateway_8cc_source.html#l00067">ns3::LorawanOrbiterMacGateway::Send()</a>, and <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00064">ns3::LorawanMacGateway::Send()</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -433,9 +435,11 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_lora_tag_a028e874633dd39b0a2dd03149fe9fe71_icgraph.png" border="0" usemap="#aclassns3_1_1_lora_tag_a028e874633dd39b0a2dd03149fe9fe71_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_lora_tag_a028e874633dd39b0a2dd03149fe9fe71_icgraph" id="aclassns3_1_1_lora_tag_a028e874633dd39b0a2dd03149fe9fe71_icgraph">
-<area shape="rect" title="Get the frequency of the packet." alt="" coords="247,46,448,73"/>
-<area shape="rect" href="classns3_1_1_lora_end_device_status.html#ad3e8a0a5264023bc350eab2b77ad8f56" title="Insert a received packet in the packet list." alt="" coords="7,5,197,47"/>
-<area shape="rect" href="classns3_1_1_lorawan_mac_gateway.html#a39cdd35af385aab373fb689ddc8e4fe5" title="Send a packet." alt="" coords="5,71,199,112"/>
+<area shape="rect" title="Get the frequency of the packet." alt="" coords="293,111,495,138"/>
+<area shape="rect" href="classns3_1_1_lora_end_device_status.html#ad3e8a0a5264023bc350eab2b77ad8f56" title="Insert a received packet in the packet list." alt="" coords="30,5,221,47"/>
+<area shape="rect" href="classns3_1_1_lorawan_ground_mac_gateway.html#a1e8766987037466231fdbf48fddcfdd6" title="Send a packet." alt="" coords="5,71,245,112"/>
+<area shape="rect" href="classns3_1_1_lorawan_orbiter_mac_gateway.html#a278d73e17736e715d1ac525733a575b0" title="Send a packet." alt="" coords="6,136,245,177"/>
+<area shape="rect" href="classns3_1_1_lorawan_mac_gateway.html#a730919f7fe6cc4035a70d0d5125196f2" title="Send a packet." alt="" coords="29,201,222,243"/>
 </map>
 </div>
 
@@ -465,9 +469,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00041">41</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00043">43</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-tag_8cc_source.html#l00034">GetTypeId()</a>.</p>
+<p class="reference">References <a class="el" href="lora-tag_8cc_source.html#l00036">GetTypeId()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -501,11 +505,11 @@ Private Attributes</h2></td></tr>
 <p>Get the modcod for this packet. </p>
 <dl class="section return"><dt>Returns</dt><dd>The data modcod needs to be employed for this packet. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00158">158</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00160">160</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00146">m_modcod</a>.</p>
+<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00149">m_modcod</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00274">ns3::LoraEndDeviceStatus::InsertReceivedPacket()</a>, and <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00065">ns3::LorawanMacGateway::Send()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00291">ns3::LoraEndDeviceStatus::InsertReceivedPacket()</a>, <a class="el" href="lorawan-ground-mac-gateway_8cc_source.html#l00067">ns3::LorawanGroundMacGateway::Send()</a>, <a class="el" href="lorawan-orbiter-mac-gateway_8cc_source.html#l00067">ns3::LorawanOrbiterMacGateway::Send()</a>, and <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00064">ns3::LorawanMacGateway::Send()</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -513,9 +517,11 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_lora_tag_a6f9f59974021abe819805745bde5bed2_icgraph.png" border="0" usemap="#aclassns3_1_1_lora_tag_a6f9f59974021abe819805745bde5bed2_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_lora_tag_a6f9f59974021abe819805745bde5bed2_icgraph" id="aclassns3_1_1_lora_tag_a6f9f59974021abe819805745bde5bed2_icgraph">
-<area shape="rect" title="Get the modcod for this packet." alt="" coords="247,46,432,73"/>
-<area shape="rect" href="classns3_1_1_lora_end_device_status.html#ad3e8a0a5264023bc350eab2b77ad8f56" title="Insert a received packet in the packet list." alt="" coords="7,5,197,47"/>
-<area shape="rect" href="classns3_1_1_lorawan_mac_gateway.html#a39cdd35af385aab373fb689ddc8e4fe5" title="Send a packet." alt="" coords="5,71,199,112"/>
+<area shape="rect" title="Get the modcod for this packet." alt="" coords="293,111,479,138"/>
+<area shape="rect" href="classns3_1_1_lora_end_device_status.html#ad3e8a0a5264023bc350eab2b77ad8f56" title="Insert a received packet in the packet list." alt="" coords="30,5,221,47"/>
+<area shape="rect" href="classns3_1_1_lorawan_ground_mac_gateway.html#a1e8766987037466231fdbf48fddcfdd6" title="Send a packet." alt="" coords="5,71,245,112"/>
+<area shape="rect" href="classns3_1_1_lorawan_orbiter_mac_gateway.html#a278d73e17736e715d1ac525733a575b0" title="Send a packet." alt="" coords="6,136,245,177"/>
+<area shape="rect" href="classns3_1_1_lorawan_mac_gateway.html#a730919f7fe6cc4035a70d0d5125196f2" title="Send a packet." alt="" coords="29,201,222,243"/>
 </map>
 </div>
 
@@ -539,11 +545,11 @@ Private Attributes</h2></td></tr>
 <p>Read the power this packet arrived with. </p>
 <dl class="section return"><dt>Returns</dt><dd>This tag's packet received power. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00110">110</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00112">112</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00148">m_receivePower</a>.</p>
+<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00151">m_receivePower</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00274">ns3::LoraEndDeviceStatus::InsertReceivedPacket()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00291">ns3::LoraEndDeviceStatus::InsertReceivedPacket()</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -582,7 +588,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00061">61</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00063">63</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
 
 </div>
 </div>
@@ -604,11 +610,11 @@ Private Attributes</h2></td></tr>
 <p>Read which Spreading Factor this packet was transmitted with. </p>
 <dl class="section return"><dt>Returns</dt><dd>This tag's packet's SF. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00098">98</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00100">100</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00145">m_sf</a>.</p>
+<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00148">m_sf</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00274">ns3::LoraEndDeviceStatus::InsertReceivedPacket()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00291">ns3::LoraEndDeviceStatus::InsertReceivedPacket()</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -647,9 +653,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00034">34</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00036">36</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-tag_8cc_source.html#l00041">GetInstanceTypeId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-tag_8cc_source.html#l00043">GetInstanceTypeId()</a>.</p>
 <div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
@@ -688,9 +694,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00091">91</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00093">93</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00149">m_dataRate</a>, <a class="el" href="lora-tag_8h_source.html#l00147">m_destroyedBy</a>, <a class="el" href="lora-tag_8h_source.html#l00146">m_modcod</a>, <a class="el" href="lora-tag_8h_source.html#l00148">m_receivePower</a>, and <a class="el" href="lora-tag_8h_source.html#l00145">m_sf</a>.</p>
+<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00152">m_dataRate</a>, <a class="el" href="lora-tag_8h_source.html#l00150">m_destroyedBy</a>, <a class="el" href="lora-tag_8h_source.html#l00149">m_modcod</a>, <a class="el" href="lora-tag_8h_source.html#l00151">m_receivePower</a>, and <a class="el" href="lora-tag_8h_source.html#l00148">m_sf</a>.</p>
 
 </div>
 </div>
@@ -718,9 +724,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00069">69</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00071">71</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00149">m_dataRate</a>, <a class="el" href="lora-tag_8h_source.html#l00147">m_destroyedBy</a>, <a class="el" href="lora-tag_8h_source.html#l00151">m_frequency</a>, <a class="el" href="lora-tag_8h_source.html#l00146">m_modcod</a>, <a class="el" href="lora-tag_8h_source.html#l00148">m_receivePower</a>, and <a class="el" href="lora-tag_8h_source.html#l00145">m_sf</a>.</p>
+<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00152">m_dataRate</a>, <a class="el" href="lora-tag_8h_source.html#l00150">m_destroyedBy</a>, <a class="el" href="lora-tag_8h_source.html#l00154">m_frequency</a>, <a class="el" href="lora-tag_8h_source.html#l00149">m_modcod</a>, <a class="el" href="lora-tag_8h_source.html#l00151">m_receivePower</a>, and <a class="el" href="lora-tag_8h_source.html#l00148">m_sf</a>.</p>
 
 </div>
 </div>
@@ -748,11 +754,11 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00152">152</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00154">154</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00149">m_dataRate</a>.</p>
+<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00152">m_dataRate</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-network-status_8cc_source.html#l00180">ns3::LoraNetworkStatus::GetReplyForDevice()</a>, and <a class="el" href="lorawan-mac-end-device-class-a_8cc_source.html#l00114">ns3::LorawanMacEndDeviceClassA::SendToPhy()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-network-status_8cc_source.html#l00237">ns3::LoraNetworkStatus::GetReplyForDevice()</a>, and <a class="el" href="lorawan-mac-end-device-class-a_8cc_source.html#l00127">ns3::LorawanMacEndDeviceClassA::SendToPhy()</a>.</p>
 <div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
@@ -792,9 +798,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00116">116</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00118">118</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00147">m_destroyedBy</a>.</p>
+<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00150">m_destroyedBy</a>.</p>
 
 </div>
 </div>
@@ -820,11 +826,11 @@ Private Attributes</h2></td></tr>
 <li>It is used by the NS to signal to the GW the freqeuncy of a downlink packet </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00134">134</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00136">136</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00151">m_frequency</a>.</p>
+<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00154">m_frequency</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-network-status_8cc_source.html#l00180">ns3::LoraNetworkStatus::GetReplyForDevice()</a>, and <a class="el" href="lorawan-mac-end-device-class-a_8cc_source.html#l00114">ns3::LorawanMacEndDeviceClassA::SendToPhy()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-network-status_8cc_source.html#l00237">ns3::LoraNetworkStatus::GetReplyForDevice()</a>, and <a class="el" href="lorawan-mac-end-device-class-a_8cc_source.html#l00127">ns3::LorawanMacEndDeviceClassA::SendToPhy()</a>.</p>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -864,11 +870,11 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00164">164</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00166">166</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00146">m_modcod</a>.</p>
+<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00149">m_modcod</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-network-status_8cc_source.html#l00180">ns3::LoraNetworkStatus::GetReplyForDevice()</a>, and <a class="el" href="lorawan-mac-end-device-class-a_8cc_source.html#l00114">ns3::LorawanMacEndDeviceClassA::SendToPhy()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-network-status_8cc_source.html#l00237">ns3::LoraNetworkStatus::GetReplyForDevice()</a>, and <a class="el" href="lorawan-mac-end-device-class-a_8cc_source.html#l00127">ns3::LorawanMacEndDeviceClassA::SendToPhy()</a>.</p>
 <div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">
@@ -908,9 +914,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00128">128</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00130">130</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00148">m_receivePower</a>.</p>
+<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00151">m_receivePower</a>.</p>
 
 </div>
 </div>
@@ -938,9 +944,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00122">122</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8cc_source.html#l00124">124</a> of file <a class="el" href="lora-tag_8cc_source.html">lora-tag.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00145">m_sf</a>.</p>
+<p class="reference">References <a class="el" href="lora-tag_8h_source.html#l00148">m_sf</a>.</p>
 
 </div>
 </div>
@@ -967,9 +973,9 @@ Private Attributes</h2></td></tr>
 
 <p>The Data Rate that needs to be used to send this. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8h_source.html#l00149">149</a> of file <a class="el" href="lora-tag_8h_source.html">lora-tag.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8h_source.html#l00152">152</a> of file <a class="el" href="lora-tag_8h_source.html">lora-tag.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-tag_8cc_source.html#l00080">Deserialize()</a>, <a class="el" href="lora-tag_8cc_source.html#l00146">GetDataRate()</a>, <a class="el" href="lora-tag_8cc_source.html#l00091">Print()</a>, <a class="el" href="lora-tag_8cc_source.html#l00069">Serialize()</a>, and <a class="el" href="lora-tag_8cc_source.html#l00152">SetDataRate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-tag_8cc_source.html#l00082">Deserialize()</a>, <a class="el" href="lora-tag_8cc_source.html#l00148">GetDataRate()</a>, <a class="el" href="lora-tag_8cc_source.html#l00093">Print()</a>, <a class="el" href="lora-tag_8cc_source.html#l00071">Serialize()</a>, and <a class="el" href="lora-tag_8cc_source.html#l00154">SetDataRate()</a>.</p>
 
 </div>
 </div>
@@ -995,9 +1001,9 @@ Private Attributes</h2></td></tr>
 
 <p>The Spreading Factor that destroyed the packet. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8h_source.html#l00147">147</a> of file <a class="el" href="lora-tag_8h_source.html">lora-tag.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8h_source.html#l00150">150</a> of file <a class="el" href="lora-tag_8h_source.html">lora-tag.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-tag_8cc_source.html#l00080">Deserialize()</a>, <a class="el" href="lora-tag_8cc_source.html#l00104">GetDestroyedBy()</a>, <a class="el" href="lora-tag_8cc_source.html#l00091">Print()</a>, <a class="el" href="lora-tag_8cc_source.html#l00069">Serialize()</a>, and <a class="el" href="lora-tag_8cc_source.html#l00116">SetDestroyedBy()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-tag_8cc_source.html#l00082">Deserialize()</a>, <a class="el" href="lora-tag_8cc_source.html#l00106">GetDestroyedBy()</a>, <a class="el" href="lora-tag_8cc_source.html#l00093">Print()</a>, <a class="el" href="lora-tag_8cc_source.html#l00071">Serialize()</a>, and <a class="el" href="lora-tag_8cc_source.html#l00118">SetDestroyedBy()</a>.</p>
 
 </div>
 </div>
@@ -1024,9 +1030,9 @@ Private Attributes</h2></td></tr>
 <p>packet. </p>
 <p>The frequency of this packet </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8h_source.html#l00151">151</a> of file <a class="el" href="lora-tag_8h_source.html">lora-tag.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8h_source.html#l00154">154</a> of file <a class="el" href="lora-tag_8h_source.html">lora-tag.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-tag_8cc_source.html#l00080">Deserialize()</a>, <a class="el" href="lora-tag_8cc_source.html#l00140">GetFrequency()</a>, <a class="el" href="lora-tag_8cc_source.html#l00069">Serialize()</a>, and <a class="el" href="lora-tag_8cc_source.html#l00134">SetFrequency()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-tag_8cc_source.html#l00082">Deserialize()</a>, <a class="el" href="lora-tag_8cc_source.html#l00142">GetFrequency()</a>, <a class="el" href="lora-tag_8cc_source.html#l00071">Serialize()</a>, and <a class="el" href="lora-tag_8cc_source.html#l00136">SetFrequency()</a>.</p>
 
 </div>
 </div>
@@ -1052,9 +1058,9 @@ Private Attributes</h2></td></tr>
 
 <p>The Modcod ID used by the packet. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8h_source.html#l00146">146</a> of file <a class="el" href="lora-tag_8h_source.html">lora-tag.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8h_source.html#l00149">149</a> of file <a class="el" href="lora-tag_8h_source.html">lora-tag.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-tag_8cc_source.html#l00080">Deserialize()</a>, <a class="el" href="lora-tag_8cc_source.html#l00158">GetModcod()</a>, <a class="el" href="lora-tag_8cc_source.html#l00091">Print()</a>, <a class="el" href="lora-tag_8cc_source.html#l00069">Serialize()</a>, and <a class="el" href="lora-tag_8cc_source.html#l00164">SetModcod()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-tag_8cc_source.html#l00082">Deserialize()</a>, <a class="el" href="lora-tag_8cc_source.html#l00160">GetModcod()</a>, <a class="el" href="lora-tag_8cc_source.html#l00093">Print()</a>, <a class="el" href="lora-tag_8cc_source.html#l00071">Serialize()</a>, and <a class="el" href="lora-tag_8cc_source.html#l00166">SetModcod()</a>.</p>
 
 </div>
 </div>
@@ -1080,9 +1086,9 @@ Private Attributes</h2></td></tr>
 
 <p>The reception power of this packet. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8h_source.html#l00148">148</a> of file <a class="el" href="lora-tag_8h_source.html">lora-tag.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8h_source.html#l00151">151</a> of file <a class="el" href="lora-tag_8h_source.html">lora-tag.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-tag_8cc_source.html#l00080">Deserialize()</a>, <a class="el" href="lora-tag_8cc_source.html#l00110">GetReceivePower()</a>, <a class="el" href="lora-tag_8cc_source.html#l00091">Print()</a>, <a class="el" href="lora-tag_8cc_source.html#l00069">Serialize()</a>, and <a class="el" href="lora-tag_8cc_source.html#l00128">SetReceivePower()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-tag_8cc_source.html#l00082">Deserialize()</a>, <a class="el" href="lora-tag_8cc_source.html#l00112">GetReceivePower()</a>, <a class="el" href="lora-tag_8cc_source.html#l00093">Print()</a>, <a class="el" href="lora-tag_8cc_source.html#l00071">Serialize()</a>, and <a class="el" href="lora-tag_8cc_source.html#l00130">SetReceivePower()</a>.</p>
 
 </div>
 </div>
@@ -1108,9 +1114,9 @@ Private Attributes</h2></td></tr>
 
 <p>The Spreading Factor used by the packet. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-tag_8h_source.html#l00145">145</a> of file <a class="el" href="lora-tag_8h_source.html">lora-tag.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-tag_8h_source.html#l00148">148</a> of file <a class="el" href="lora-tag_8h_source.html">lora-tag.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-tag_8cc_source.html#l00080">Deserialize()</a>, <a class="el" href="lora-tag_8cc_source.html#l00098">GetSpreadingFactor()</a>, <a class="el" href="lora-tag_8cc_source.html#l00091">Print()</a>, <a class="el" href="lora-tag_8cc_source.html#l00069">Serialize()</a>, and <a class="el" href="lora-tag_8cc_source.html#l00122">SetSpreadingFactor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-tag_8cc_source.html#l00082">Deserialize()</a>, <a class="el" href="lora-tag_8cc_source.html#l00100">GetSpreadingFactor()</a>, <a class="el" href="lora-tag_8cc_source.html#l00093">Print()</a>, <a class="el" href="lora-tag_8cc_source.html#l00071">Serialize()</a>, and <a class="el" href="lora-tag_8cc_source.html#l00124">SetSpreadingFactor()</a>.</p>
 
 </div>
 </div>

@@ -155,12 +155,16 @@ $(document).ready(function(){initNavTree('classns3_1_1_sat_ut_mac_1_1_sat_timu_i
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1f3ce6787169a4d3b7b3a25a15cca1cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_ut_mac_1_1_sat_timu_info.html#a1f3ce6787169a4d3b7b3a25a15cca1cc">SatTimuInfo</a> (uint32_t beamId, Address address)</td></tr>
-<tr class="separator:a1f3ce6787169a4d3b7b3a25a15cca1cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2a95cda2565af5874565be3fe88716b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_ut_mac_1_1_sat_timu_info.html#ae2a95cda2565af5874565be3fe88716b">SatTimuInfo</a> (uint32_t beamId, uint32_t satId, Address satAddress, Address gwAddress)</td></tr>
+<tr class="separator:ae2a95cda2565af5874565be3fe88716b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7944ce6bd955dc85c1586b0b5427bad"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_ut_mac_1_1_sat_timu_info.html#ab7944ce6bd955dc85c1586b0b5427bad">GetBeamId</a> () const</td></tr>
 <tr class="separator:ab7944ce6bd955dc85c1586b0b5427bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3129abf449fc64f8a038c85b96217cd3"><td class="memItemLeft" align="right" valign="top">Address&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_ut_mac_1_1_sat_timu_info.html#a3129abf449fc64f8a038c85b96217cd3">GetGwAddress</a> () const</td></tr>
 <tr class="separator:a3129abf449fc64f8a038c85b96217cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fabe53cb536830a3854aa31a257d48c"><td class="memItemLeft" align="right" valign="top">Address&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_ut_mac_1_1_sat_timu_info.html#a7fabe53cb536830a3854aa31a257d48c">GetSatAddress</a> () const</td></tr>
+<tr class="separator:a7fabe53cb536830a3854aa31a257d48c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec715f1882f96ada6cbecab8a87b61ee"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_ut_mac_1_1_sat_timu_info.html#aec715f1882f96ada6cbecab8a87b61ee">GetSatId</a> () const</td></tr>
+<tr class="separator:aec715f1882f96ada6cbecab8a87b61ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -168,13 +172,17 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a06889383fab5cdf9386d20514e438cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b4a4c1f0c7fc0c045663ecc25f3a5c7"><td class="memItemLeft" align="right" valign="top">Address&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_ut_mac_1_1_sat_timu_info.html#a8b4a4c1f0c7fc0c045663ecc25f3a5c7">m_gwAddress</a></td></tr>
 <tr class="separator:a8b4a4c1f0c7fc0c045663ecc25f3a5c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2f2015ed174d31aada7c8efcdbde6a3"><td class="memItemLeft" align="right" valign="top">Address&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_ut_mac_1_1_sat_timu_info.html#ab2f2015ed174d31aada7c8efcdbde6a3">m_satAddress</a></td></tr>
+<tr class="separator:ab2f2015ed174d31aada7c8efcdbde6a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a537eb503c5c2de3e7bc0434a1674f123"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_ut_mac_1_1_sat_timu_info.html#a537eb503c5c2de3e7bc0434a1674f123">m_satId</a></td></tr>
+<tr class="separator:a537eb503c5c2de3e7bc0434a1674f123"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="satellite-ut-mac_8h_source.html#l00749">749</a> of file <a class="el" href="satellite-ut-mac_8h_source.html">satellite-ut-mac.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ut-mac_8h_source.html#l00729">729</a> of file <a class="el" href="satellite-ut-mac_8h_source.html">satellite-ut-mac.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a1f3ce6787169a4d3b7b3a25a15cca1cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f3ce6787169a4d3b7b3a25a15cca1cc">&#9670;&nbsp;</a></span>SatTimuInfo()</h2>
+<a id="ae2a95cda2565af5874565be3fe88716b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2a95cda2565af5874565be3fe88716b">&#9670;&nbsp;</a></span>SatTimuInfo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,8 +196,20 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>satId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">Address&#160;</td>
-          <td class="paramname"><em>address</em>&#160;</td>
+          <td class="paramname"><em>satAddress</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Address&#160;</td>
+          <td class="paramname"><em>gwAddress</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -199,7 +219,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-ut-mac_8cc_source.html#l02087">2087</a> of file <a class="el" href="satellite-ut-mac_8cc_source.html">satellite-ut-mac.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ut-mac_8cc_source.html#l02148">2148</a> of file <a class="el" href="satellite-ut-mac_8cc_source.html">satellite-ut-mac.cc</a>.</p>
 
 </div>
 </div>
@@ -220,9 +240,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-ut-mac_8cc_source.html#l02095">2095</a> of file <a class="el" href="satellite-ut-mac_8cc_source.html">satellite-ut-mac.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ut-mac_8cc_source.html#l02161">2161</a> of file <a class="el" href="satellite-ut-mac_8cc_source.html">satellite-ut-mac.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ut-mac_8h_source.html#l00629">ns3::SatUtMac::m_beamId</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ut-mac_8h_source.html#l00609">ns3::SatUtMac::m_beamId</a>.</p>
 
 </div>
 </div>
@@ -242,9 +262,51 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-ut-mac_8cc_source.html#l02102">2102</a> of file <a class="el" href="satellite-ut-mac_8cc_source.html">satellite-ut-mac.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ut-mac_8cc_source.html#l02182">2182</a> of file <a class="el" href="satellite-ut-mac_8cc_source.html">satellite-ut-mac.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-ut-mac_8h_source.html#l00765">ns3::SatUtMac::m_gwAddress</a>.</p>
+<p class="reference">References <a class="el" href="satellite-ut-mac_8h_source.html#l00751">ns3::SatUtMac::m_gwAddress</a>.</p>
+
+</div>
+</div>
+<a id="a7fabe53cb536830a3854aa31a257d48c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fabe53cb536830a3854aa31a257d48c">&#9670;&nbsp;</a></span>GetSatAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Address ns3::SatUtMac::SatTimuInfo::GetSatAddress </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="satellite-ut-mac_8cc_source.html#l02175">2175</a> of file <a class="el" href="satellite-ut-mac_8cc_source.html">satellite-ut-mac.cc</a>.</p>
+
+</div>
+</div>
+<a id="aec715f1882f96ada6cbecab8a87b61ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec715f1882f96ada6cbecab8a87b61ee">&#9670;&nbsp;</a></span>GetSatId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ns3::SatUtMac::SatTimuInfo::GetSatId </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="satellite-ut-mac_8cc_source.html#l02168">2168</a> of file <a class="el" href="satellite-ut-mac_8cc_source.html">satellite-ut-mac.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="satellite-ut-mac_8h_source.html#l00604">ns3::SatUtMac::m_satId</a>.</p>
 
 </div>
 </div>
@@ -269,7 +331,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-ut-mac_8h_source.html#l00759">759</a> of file <a class="el" href="satellite-ut-mac_8h_source.html">satellite-ut-mac.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ut-mac_8h_source.html#l00743">743</a> of file <a class="el" href="satellite-ut-mac_8h_source.html">satellite-ut-mac.h</a>.</p>
 
 </div>
 </div>
@@ -293,7 +355,55 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-ut-mac_8h_source.html#l00760">760</a> of file <a class="el" href="satellite-ut-mac_8h_source.html">satellite-ut-mac.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-ut-mac_8h_source.html#l00746">746</a> of file <a class="el" href="satellite-ut-mac_8h_source.html">satellite-ut-mac.h</a>.</p>
+
+</div>
+</div>
+<a id="ab2f2015ed174d31aada7c8efcdbde6a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2f2015ed174d31aada7c8efcdbde6a3">&#9670;&nbsp;</a></span>m_satAddress</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Address ns3::SatUtMac::SatTimuInfo::m_satAddress</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="satellite-ut-mac_8h_source.html#l00745">745</a> of file <a class="el" href="satellite-ut-mac_8h_source.html">satellite-ut-mac.h</a>.</p>
+
+</div>
+</div>
+<a id="a537eb503c5c2de3e7bc0434a1674f123"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a537eb503c5c2de3e7bc0434a1674f123">&#9670;&nbsp;</a></span>m_satId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ns3::SatUtMac::SatTimuInfo::m_satId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="satellite-ut-mac_8h_source.html#l00744">744</a> of file <a class="el" href="satellite-ut-mac_8h_source.html">satellite-ut-mac.h</a>.</p>
 
 </div>
 </div>

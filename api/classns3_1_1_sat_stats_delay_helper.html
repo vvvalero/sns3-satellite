@@ -165,15 +165,15 @@ $(document).ready(function(){initNavTree('classns3_1_1_sat_stats_delay_helper.ht
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_stats_delay_helper__coll__graph.png" border="0" usemap="#ans3_1_1_sat_stats_delay_helper_coll__map" alt="Collaboration graph"/></div>
 <map name="ans3_1_1_sat_stats_delay_helper_coll__map" id="ans3_1_1_sat_stats_delay_helper_coll__map">
-<area shape="rect" title="Base class for delay statistics helpers." alt="" coords="101,303,289,329"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html" title="Parent abstract class of all satellite statistics helpers." alt="" coords="23,206,174,233"/>
-<area shape="rect" title=" " alt="" coords="5,109,69,136"/>
-<area shape="rect" title=" " alt="" coords="94,109,181,136"/>
-<area shape="rect" title=" " alt="" coords="68,5,207,47"/>
-<area shape="rect" title=" " alt="" coords="199,199,388,240"/>
-<area shape="rect" title=" " alt="" coords="226,109,361,136"/>
-<area shape="rect" title=" " alt="" coords="253,13,291,39"/>
-<area shape="rect" title=" " alt="" coords="318,13,357,39"/>
+<area shape="rect" title="Base class for delay statistics helpers." alt="" coords="43,379,231,405"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html" title="Parent abstract class of all satellite statistics helpers." alt="" coords="62,303,213,329"/>
+<area shape="rect" title=" " alt="" coords="5,206,69,233"/>
+<area shape="rect" title=" " alt="" coords="94,206,181,233"/>
+<area shape="rect" title=" " alt="" coords="68,95,207,136"/>
+<area shape="rect" title=" " alt="" coords="205,199,395,240"/>
+<area shape="rect" title=" " alt="" coords="233,102,367,129"/>
+<area shape="rect" title=" " alt="" coords="249,5,287,32"/>
+<area shape="rect" title=" " alt="" coords="314,5,353,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -220,6 +220,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2eb19b25f18ebb2abc388fd986d9cc80 inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97b7054c096118362f657a669d02c304 inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a97b7054c096118362f657a669d02c304">SetOutputType</a> (<a class="el" href="classns3_1_1_sat_stats_helper.html#aa8f3afc2c8c3b7200dd4b55f4c89b70e">OutputType_t</a> outputType)</td></tr>
 <tr class="separator:a97b7054c096118362f657a669d02c304 inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89bd4dcae67d3f6efb94cc3347807ad2 inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a89bd4dcae67d3f6efb94cc3347807ad2">UpdateAddressAndIdentifier</a> (Ptr&lt; Node &gt; utNode)</td></tr>
+<tr class="memdesc:a89bd4dcae67d3f6efb94cc3347807ad2 inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the address and the proper identifier from the given UT node.  <a href="classns3_1_1_sat_stats_helper.html#a89bd4dcae67d3f6efb94cc3347807ad2">More...</a><br /></td></tr>
+<tr class="separator:a89bd4dcae67d3f6efb94cc3347807ad2 inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a004d37ac17a7443b99b436d735355d8e inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a004d37ac17a7443b99b436d735355d8e">UpdateIdentifierOnProbes</a> ()</td></tr>
+<tr class="memdesc:a004d37ac17a7443b99b436d735355d8e inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change identifier used on probes, when handovers occur.  <a href="classns3_1_1_sat_stats_helper.html#a004d37ac17a7443b99b436d735355d8e">More...</a><br /></td></tr>
+<tr class="separator:a004d37ac17a7443b99b436d735355d8e inherit pub_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -240,6 +246,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:afd79e2e73c01b12767435a4af9040c84"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_delay_helper.html#afd79e2e73c01b12767435a4af9040c84">ConnectProbeToCollector</a> (Ptr&lt; Probe &gt; probe, uint32_t identifier)</td></tr>
 <tr class="memdesc:afd79e2e73c01b12767435a4af9040c84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect the probe to the right collector.  <a href="classns3_1_1_sat_stats_delay_helper.html#afd79e2e73c01b12767435a4af9040c84">More...</a><br /></td></tr>
 <tr class="separator:afd79e2e73c01b12767435a4af9040c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacd411511f3d7f5d0834d5df4bfc1c14"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_delay_helper.html#aacd411511f3d7f5d0834d5df4bfc1c14">DisconnectProbeFromCollector</a> (Ptr&lt; Probe &gt; probe, uint32_t identifier)</td></tr>
+<tr class="memdesc:aacd411511f3d7f5d0834d5df4bfc1c14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect the probe from the right collector.  <a href="classns3_1_1_sat_stats_delay_helper.html#aacd411511f3d7f5d0834d5df4bfc1c14">More...</a><br /></td></tr>
+<tr class="separator:aacd411511f3d7f5d0834d5df4bfc1c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c65f6af74e1994d756143f24924fa8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_delay_helper.html#a6c65f6af74e1994d756143f24924fa8b">DoInstall</a> ()</td></tr>
 <tr class="memdesc:a6c65f6af74e1994d756143f24924fa8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Install the probes, collectors, and aggregators necessary to produce the statistics output.  <a href="classns3_1_1_sat_stats_delay_helper.html#a6c65f6af74e1994d756143f24924fa8b">More...</a><br /></td></tr>
 <tr class="separator:a6c65f6af74e1994d756143f24924fa8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -248,9 +257,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a7f41ec39073c840c23890b48d3e1a173"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_delay_helper.html#a7f41ec39073c840c23890b48d3e1a173">PassSampleToCollector</a> (const Time &amp;delay, uint32_t identifier)</td></tr>
 <tr class="memdesc:a7f41ec39073c840c23890b48d3e1a173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a collector with the right identifier and pass a sample data to it.  <a href="classns3_1_1_sat_stats_delay_helper.html#a7f41ec39073c840c23890b48d3e1a173">More...</a><br /></td></tr>
 <tr class="separator:a7f41ec39073c840c23890b48d3e1a173"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e69820df607af91042c697b43c987e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_delay_helper.html#a9e69820df607af91042c697b43c987e6">SaveAddressAndIdentifier</a> (Ptr&lt; Node &gt; utNode)</td></tr>
-<tr class="memdesc:a9e69820df607af91042c697b43c987e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the address and the proper identifier from the given UT node.  <a href="classns3_1_1_sat_stats_delay_helper.html#a9e69820df607af91042c697b43c987e6">More...</a><br /></td></tr>
-<tr class="separator:a9e69820df607af91042c697b43c987e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classns3_1_1_sat_stats_helper"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classns3_1_1_sat_stats_helper')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classns3_1_1_sat_stats_helper.html">ns3::SatStatsHelper</a></td></tr>
 <tr class="memitem:a822c7c47ed2eeab16eb49bd47725de3a inherit pro_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">Ptr&lt; DataCollectionObject &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a822c7c47ed2eeab16eb49bd47725de3a">CreateAggregator</a> (std::string aggregatorTypeId, std::string n1=&quot;&quot;, const AttributeValue &amp;v1=EmptyAttributeValue(), std::string n2=&quot;&quot;, const AttributeValue &amp;v2=EmptyAttributeValue(), std::string n3=&quot;&quot;, const AttributeValue &amp;v3=EmptyAttributeValue(), std::string n4=&quot;&quot;, const AttributeValue &amp;v4=EmptyAttributeValue(), std::string n5=&quot;&quot;, const AttributeValue &amp;v5=EmptyAttributeValue())</td></tr>
 <tr class="memdesc:a822c7c47ed2eeab16eb49bd47725de3a inherit pro_methods_classns3_1_1_sat_stats_helper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the aggregator according to the output type.  <a href="classns3_1_1_sat_stats_helper.html#a822c7c47ed2eeab16eb49bd47725de3a">More...</a><br /></td></tr>
@@ -291,6 +297,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a93e39c005ae0351b47a5fca8dcfad7e7 inherit pro_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae37e2e28674be92dcdfd00dbb03f3e2e inherit pro_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#ae37e2e28674be92dcdfd00dbb03f3e2e">GetUtUserId</a> (Ptr&lt; Node &gt; utUserNode) const</td></tr>
 <tr class="separator:ae37e2e28674be92dcdfd00dbb03f3e2e inherit pro_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a356a8bcd2f2a99403be1f6a801d53ede inherit pro_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a356a8bcd2f2a99403be1f6a801d53ede">SaveAddressAndIdentifier</a> (Ptr&lt; Node &gt; utNode)</td></tr>
+<tr class="memdesc:a356a8bcd2f2a99403be1f6a801d53ede inherit pro_methods_classns3_1_1_sat_stats_helper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the address and the proper identifier from the given UT node.  <a href="classns3_1_1_sat_stats_helper.html#a356a8bcd2f2a99403be1f6a801d53ede">More...</a><br /></td></tr>
+<tr class="separator:a356a8bcd2f2a99403be1f6a801d53ede inherit pro_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -300,12 +309,13 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:aa70171e4f535c2592adc29d158b747cb"><td class="memItemLeft" align="right" valign="top">Ptr&lt; DistributionCollector &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_delay_helper.html#aa70171e4f535c2592adc29d158b747cb">m_averagingCollector</a></td></tr>
 <tr class="memdesc:aa70171e4f535c2592adc29d158b747cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The final collector utilized in averaged output (histogram, PDF, and CDF).  <a href="classns3_1_1_sat_stats_delay_helper.html#aa70171e4f535c2592adc29d158b747cb">More...</a><br /></td></tr>
 <tr class="separator:aa70171e4f535c2592adc29d158b747cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8950ffbd480b181717cd971b71b925bd"><td class="memItemLeft" align="right" valign="top">std::map&lt; const Address, uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_delay_helper.html#a8950ffbd480b181717cd971b71b925bd">m_identifierMap</a></td></tr>
-<tr class="memdesc:a8950ffbd480b181717cd971b71b925bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of address and the identifier associated with it (for return link).  <a href="classns3_1_1_sat_stats_delay_helper.html#a8950ffbd480b181717cd971b71b925bd">More...</a><br /></td></tr>
-<tr class="separator:a8950ffbd480b181717cd971b71b925bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04ef6ca7ea34c253971d017f340259a4"><td class="memItemLeft" align="right" valign="top">CollectorMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_delay_helper.html#a04ef6ca7ea34c253971d017f340259a4">m_terminalCollectors</a></td></tr>
 <tr class="memdesc:a04ef6ca7ea34c253971d017f340259a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maintains a list of collectors created by this helper.  <a href="classns3_1_1_sat_stats_delay_helper.html#a04ef6ca7ea34c253971d017f340259a4">More...</a><br /></td></tr>
 <tr class="separator:a04ef6ca7ea34c253971d017f340259a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classns3_1_1_sat_stats_helper"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classns3_1_1_sat_stats_helper')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classns3_1_1_sat_stats_helper.html">ns3::SatStatsHelper</a></td></tr>
+<tr class="memitem:adbfb10e2a6c0b2dcb0d717cc1370c07a inherit pro_attribs_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">std::map&lt; const Address, uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#adbfb10e2a6c0b2dcb0d717cc1370c07a">m_identifierMap</a></td></tr>
+<tr class="memdesc:adbfb10e2a6c0b2dcb0d717cc1370c07a inherit pro_attribs_classns3_1_1_sat_stats_helper"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of address and the identifier associated with it.  <a href="classns3_1_1_sat_stats_helper.html#adbfb10e2a6c0b2dcb0d717cc1370c07a">More...</a><br /></td></tr>
+<tr class="separator:adbfb10e2a6c0b2dcb0d717cc1370c07a inherit pro_attribs_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -353,15 +363,15 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_static_methods_classns3_1_1_sat_stats_helper"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classns3_1_1_sat_stats_helper')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classns3_1_1_sat_stats_helper.html">ns3::SatStatsHelper</a></td></tr>
 <tr class="memitem:a2b0c6cdb6baeef11889ed426cd8d9f46 inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">static NetDeviceContainer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a2b0c6cdb6baeef11889ed426cd8d9f46">GetGwSatNetDevice</a> (Ptr&lt; Node &gt; gwNode)</td></tr>
 <tr class="separator:a2b0c6cdb6baeef11889ed426cd8d9f46 inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a489e487004c59e47965c3bcfa53d1f55 inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">static Ptr&lt; NetDevice &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a489e487004c59e47965c3bcfa53d1f55">GetSatSatGeoNetDevice</a> (Ptr&lt; Node &gt; satNode)</td></tr>
-<tr class="separator:a489e487004c59e47965c3bcfa53d1f55 inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bddc4263f820ab84fd7d54baeb0f54b inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">static Ptr&lt; NetDevice &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#a1bddc4263f820ab84fd7d54baeb0f54b">GetSatSatOrbiterNetDevice</a> (Ptr&lt; Node &gt; satNode)</td></tr>
+<tr class="separator:a1bddc4263f820ab84fd7d54baeb0f54b inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdeba1ca23ae3fd9415406334f58e885 inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memItemLeft" align="right" valign="top">static Ptr&lt; NetDevice &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_stats_helper.html#abdeba1ca23ae3fd9415406334f58e885">GetUtSatNetDevice</a> (Ptr&lt; Node &gt; utNode)</td></tr>
 <tr class="separator:abdeba1ca23ae3fd9415406334f58e885 inherit pro_static_methods_classns3_1_1_sat_stats_helper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for delay statistics helpers. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00048">48</a> of file <a class="el" href="satellite-stats-delay-helper_8h_source.html">satellite-stats-delay-helper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00050">50</a> of file <a class="el" href="satellite-stats-delay-helper_8h_source.html">satellite-stats-delay-helper.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab47ff1205c0239e07f120eb7e30b7b66"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab47ff1205c0239e07f120eb7e30b7b66">&#9670;&nbsp;</a></span>SatStatsDelayHelper()</h2>
@@ -379,7 +389,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00063">63</a> of file <a class="el" href="satellite-stats-delay-helper_8cc_source.html">satellite-stats-delay-helper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00067">67</a> of file <a class="el" href="satellite-stats-delay-helper_8cc_source.html">satellite-stats-delay-helper.cc</a>.</p>
 
 </div>
 </div>
@@ -408,7 +418,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>/ Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00070">70</a> of file <a class="el" href="satellite-stats-delay-helper_8cc_source.html">satellite-stats-delay-helper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00074">74</a> of file <a class="el" href="satellite-stats-delay-helper_8cc_source.html">satellite-stats-delay-helper.cc</a>.</p>
 
 </div>
 </div>
@@ -456,11 +466,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00467">467</a> of file <a class="el" href="satellite-stats-delay-helper_8cc_source.html">satellite-stats-delay-helper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00451">451</a> of file <a class="el" href="satellite-stats-delay-helper_8cc_source.html">satellite-stats-delay-helper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-stats-helper_8cc_source.html#l00276">ns3::SatStatsHelper::GetOutputType()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00085">ns3::SatStatsHelper::GetOutputTypeName()</a>, <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00140">m_averagingMode</a>, <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00128">m_terminalCollectors</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00126">ns3::SatStatsHelper::OUTPUT_CDF_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00131">ns3::SatStatsHelper::OUTPUT_CDF_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00124">ns3::SatStatsHelper::OUTPUT_HISTOGRAM_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00129">ns3::SatStatsHelper::OUTPUT_HISTOGRAM_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00125">ns3::SatStatsHelper::OUTPUT_PDF_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00130">ns3::SatStatsHelper::OUTPUT_PDF_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00122">ns3::SatStatsHelper::OUTPUT_SCALAR_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00127">ns3::SatStatsHelper::OUTPUT_SCALAR_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00123">ns3::SatStatsHelper::OUTPUT_SCATTER_FILE</a>, and <a class="el" href="satellite-stats-helper_8h_source.html#l00128">ns3::SatStatsHelper::OUTPUT_SCATTER_PLOT</a>.</p>
+<p class="reference">References <a class="el" href="satellite-stats-helper_8cc_source.html#l00283">ns3::SatStatsHelper::GetOutputType()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00090">ns3::SatStatsHelper::GetOutputTypeName()</a>, <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00134">m_averagingMode</a>, <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00125">m_terminalCollectors</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00127">ns3::SatStatsHelper::OUTPUT_CDF_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00132">ns3::SatStatsHelper::OUTPUT_CDF_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00125">ns3::SatStatsHelper::OUTPUT_HISTOGRAM_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00130">ns3::SatStatsHelper::OUTPUT_HISTOGRAM_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00126">ns3::SatStatsHelper::OUTPUT_PDF_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00131">ns3::SatStatsHelper::OUTPUT_PDF_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00123">ns3::SatStatsHelper::OUTPUT_SCALAR_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00128">ns3::SatStatsHelper::OUTPUT_SCALAR_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00124">ns3::SatStatsHelper::OUTPUT_SCATTER_FILE</a>, and <a class="el" href="satellite-stats-helper_8h_source.html#l00129">ns3::SatStatsHelper::OUTPUT_SCATTER_PLOT</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00610">ns3::SatStatsFwdAppDelayHelper::DoInstallProbes()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00773">ns3::SatStatsFwdDevDelayHelper::DoInstallProbes()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00846">ns3::SatStatsFwdMacDelayHelper::DoInstallProbes()</a>, and <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00929">ns3::SatStatsFwdPhyDelayHelper::DoInstallProbes()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00660">ns3::SatStatsFwdAppDelayHelper::DoInstallProbes()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00853">ns3::SatStatsFwdDevDelayHelper::DoInstallProbes()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00956">ns3::SatStatsFwdMacDelayHelper::DoInstallProbes()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l01069">ns3::SatStatsFwdPhyDelayHelper::DoInstallProbes()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00802">ns3::SatStatsFwdAppDelayHelper::UpdateIdentifierOnProbes()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00905">ns3::SatStatsFwdDevDelayHelper::UpdateIdentifierOnProbes()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l01018">ns3::SatStatsFwdMacDelayHelper::UpdateIdentifierOnProbes()</a>, and <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l01160">ns3::SatStatsFwdPhyDelayHelper::UpdateIdentifierOnProbes()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -480,11 +490,92 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_stats_delay_helper_afd79e2e73c01b12767435a4af9040c84_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_stats_delay_helper_afd79e2e73c01b12767435a4af9040c84_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_stats_delay_helper_afd79e2e73c01b12767435a4af9040c84_icgraph" id="aclassns3_1_1_sat_stats_delay_helper_afd79e2e73c01b12767435a4af9040c84_icgraph">
-<area shape="rect" title="Connect the probe to the right collector." alt="" coords="252,104,444,145"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a3297c03ab2dc81c5467ba311cb948d21" title=" " alt="" coords="6,5,203,47"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_dev_delay_helper.html#ae97db4d8d39bb32499d1ba20654c6892" title=" " alt="" coords="5,71,204,112"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_mac_delay_helper.html#ace1c3b69fe78ce07e14b7fac2a2185a7" title=" " alt="" coords="5,136,204,177"/>
-<area shape="rect" href="classns3_1_1_sat_stats_fwd_phy_delay_helper.html#adcc7e7dc476bd81790156dfb75e8e932" title=" " alt="" coords="7,201,203,243"/>
+<area shape="rect" title="Connect the probe to the right collector." alt="" coords="293,235,485,276"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a3297c03ab2dc81c5467ba311cb948d21" title=" " alt="" coords="27,5,224,47"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_dev_delay_helper.html#ae97db4d8d39bb32499d1ba20654c6892" title=" " alt="" coords="26,71,225,112"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_mac_delay_helper.html#ace1c3b69fe78ce07e14b7fac2a2185a7" title=" " alt="" coords="26,136,225,177"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_phy_delay_helper.html#adcc7e7dc476bd81790156dfb75e8e932" title=" " alt="" coords="27,201,223,243"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a0705d12a6f7b9820b21e963af194ca08" title="Change identifier used on probes, when handovers occur." alt="" coords="5,267,245,308"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_dev_delay_helper.html#a9b229054674649ad241987452edd7bbe" title="Change identifier used on probes, when handovers occur." alt="" coords="5,332,245,373"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_mac_delay_helper.html#a9b751984038838b01d6d236933589787" title="Change identifier used on probes, when handovers occur." alt="" coords="5,397,245,439"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_phy_delay_helper.html#a03f57cd43565e9e1ce371d2a8fed484d" title="Change identifier used on probes, when handovers occur." alt="" coords="5,463,245,504"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aacd411511f3d7f5d0834d5df4bfc1c14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacd411511f3d7f5d0834d5df4bfc1c14">&#9670;&nbsp;</a></span>DisconnectProbeFromCollector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ns3::SatStatsDelayHelper::DisconnectProbeFromCollector </td>
+          <td>(</td>
+          <td class="paramtype">Ptr&lt; Probe &gt;&#160;</td>
+          <td class="paramname"><em>probe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>identifier</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Disconnect the probe from the right collector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">probe</td><td></td></tr>
+    <tr><td class="paramname">identifier</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00517">517</a> of file <a class="el" href="satellite-stats-delay-helper_8cc_source.html">satellite-stats-delay-helper.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="satellite-stats-helper_8cc_source.html#l00283">ns3::SatStatsHelper::GetOutputType()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00090">ns3::SatStatsHelper::GetOutputTypeName()</a>, <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00134">m_averagingMode</a>, <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00125">m_terminalCollectors</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00127">ns3::SatStatsHelper::OUTPUT_CDF_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00132">ns3::SatStatsHelper::OUTPUT_CDF_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00125">ns3::SatStatsHelper::OUTPUT_HISTOGRAM_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00130">ns3::SatStatsHelper::OUTPUT_HISTOGRAM_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00126">ns3::SatStatsHelper::OUTPUT_PDF_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00131">ns3::SatStatsHelper::OUTPUT_PDF_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00123">ns3::SatStatsHelper::OUTPUT_SCALAR_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00128">ns3::SatStatsHelper::OUTPUT_SCALAR_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00124">ns3::SatStatsHelper::OUTPUT_SCATTER_FILE</a>, and <a class="el" href="satellite-stats-helper_8h_source.html#l00129">ns3::SatStatsHelper::OUTPUT_SCATTER_PLOT</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00802">ns3::SatStatsFwdAppDelayHelper::UpdateIdentifierOnProbes()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00905">ns3::SatStatsFwdDevDelayHelper::UpdateIdentifierOnProbes()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l01018">ns3::SatStatsFwdMacDelayHelper::UpdateIdentifierOnProbes()</a>, and <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l01160">ns3::SatStatsFwdPhyDelayHelper::UpdateIdentifierOnProbes()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classns3_1_1_sat_stats_delay_helper_aacd411511f3d7f5d0834d5df4bfc1c14_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_stats_delay_helper_aacd411511f3d7f5d0834d5df4bfc1c14_cgraph" alt=""/></div>
+<map name="aclassns3_1_1_sat_stats_delay_helper_aacd411511f3d7f5d0834d5df4bfc1c14_cgraph" id="aclassns3_1_1_sat_stats_delay_helper_aacd411511f3d7f5d0834d5df4bfc1c14_cgraph">
+<area shape="rect" title="Disconnect the probe from the right collector." alt="" coords="5,39,236,80"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#ad81036cbcd3734d36ad70d2899ca923b" title=" " alt="" coords="292,5,443,47"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a411c6b7b3e64097cc86f8a1ad2da868c" title=" " alt="" coords="284,71,451,112"/>
+</map>
+</div>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classns3_1_1_sat_stats_delay_helper_aacd411511f3d7f5d0834d5df4bfc1c14_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_stats_delay_helper_aacd411511f3d7f5d0834d5df4bfc1c14_icgraph" alt=""/></div>
+<map name="aclassns3_1_1_sat_stats_delay_helper_aacd411511f3d7f5d0834d5df4bfc1c14_icgraph" id="aclassns3_1_1_sat_stats_delay_helper_aacd411511f3d7f5d0834d5df4bfc1c14_icgraph">
+<area shape="rect" title="Disconnect the probe from the right collector." alt="" coords="293,104,524,145"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a0705d12a6f7b9820b21e963af194ca08" title="Change identifier used on probes, when handovers occur." alt="" coords="5,5,245,47"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_dev_delay_helper.html#a9b229054674649ad241987452edd7bbe" title="Change identifier used on probes, when handovers occur." alt="" coords="5,71,245,112"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_mac_delay_helper.html#a9b751984038838b01d6d236933589787" title="Change identifier used on probes, when handovers occur." alt="" coords="5,136,245,177"/>
+<area shape="rect" href="classns3_1_1_sat_stats_fwd_phy_delay_helper.html#a03f57cd43565e9e1ce371d2a8fed484d" title="Change identifier used on probes, when handovers occur." alt="" coords="5,201,245,243"/>
 </map>
 </div>
 
@@ -521,45 +612,44 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classns3_1_1_sat_stats_helper.html#aa4898427eabe2217bc2f86ff300c6304">ns3::SatStatsHelper</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00105">105</a> of file <a class="el" href="satellite-stats-delay-helper_8cc_source.html">satellite-stats-delay-helper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00109">109</a> of file <a class="el" href="satellite-stats-delay-helper_8cc_source.html">satellite-stats-delay-helper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-stats-helper_8cc_source.html#l00294">ns3::SatStatsHelper::CreateAggregator()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00320">ns3::SatStatsHelper::CreateCollectorPerIdentifier()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00532">ns3::SatStatsHelper::GetDistributionHeading()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00487">ns3::SatStatsHelper::GetIdentifierHeading()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00230">ns3::SatStatsHelper::GetName()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00481">ns3::SatStatsHelper::GetOutputFileName()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00475">ns3::SatStatsHelper::GetOutputPath()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00276">ns3::SatStatsHelper::GetOutputType()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00085">ns3::SatStatsHelper::GetOutputTypeName()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00526">ns3::SatStatsHelper::GetTimeHeading()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00411">InstallProbes()</a>, <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00134">m_aggregator</a>, <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00131">m_averagingCollector</a>, <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00140">m_averagingMode</a>, <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00128">m_terminalCollectors</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00126">ns3::SatStatsHelper::OUTPUT_CDF_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00131">ns3::SatStatsHelper::OUTPUT_CDF_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00124">ns3::SatStatsHelper::OUTPUT_HISTOGRAM_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00129">ns3::SatStatsHelper::OUTPUT_HISTOGRAM_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00121">ns3::SatStatsHelper::OUTPUT_NONE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00125">ns3::SatStatsHelper::OUTPUT_PDF_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00130">ns3::SatStatsHelper::OUTPUT_PDF_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00122">ns3::SatStatsHelper::OUTPUT_SCALAR_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00127">ns3::SatStatsHelper::OUTPUT_SCALAR_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00123">ns3::SatStatsHelper::OUTPUT_SCATTER_FILE</a>, and <a class="el" href="satellite-stats-helper_8h_source.html#l00128">ns3::SatStatsHelper::OUTPUT_SCATTER_PLOT</a>.</p>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="satellite-stats-helper_8cc_source.html#l00301">ns3::SatStatsHelper::CreateAggregator()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00327">ns3::SatStatsHelper::CreateCollectorPerIdentifier()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00539">ns3::SatStatsHelper::GetDistributionHeading()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00494">ns3::SatStatsHelper::GetIdentifierHeading()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00237">ns3::SatStatsHelper::GetName()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00488">ns3::SatStatsHelper::GetOutputFileName()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00482">ns3::SatStatsHelper::GetOutputPath()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00283">ns3::SatStatsHelper::GetOutputType()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00090">ns3::SatStatsHelper::GetOutputTypeName()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00533">ns3::SatStatsHelper::GetTimeHeading()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00415">InstallProbes()</a>, <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00131">m_aggregator</a>, <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00128">m_averagingCollector</a>, <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00134">m_averagingMode</a>, <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00125">m_terminalCollectors</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00127">ns3::SatStatsHelper::OUTPUT_CDF_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00132">ns3::SatStatsHelper::OUTPUT_CDF_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00125">ns3::SatStatsHelper::OUTPUT_HISTOGRAM_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00130">ns3::SatStatsHelper::OUTPUT_HISTOGRAM_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00122">ns3::SatStatsHelper::OUTPUT_NONE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00126">ns3::SatStatsHelper::OUTPUT_PDF_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00131">ns3::SatStatsHelper::OUTPUT_PDF_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00123">ns3::SatStatsHelper::OUTPUT_SCALAR_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00128">ns3::SatStatsHelper::OUTPUT_SCALAR_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00124">ns3::SatStatsHelper::OUTPUT_SCATTER_FILE</a>, and <a class="el" href="satellite-stats-helper_8h_source.html#l00129">ns3::SatStatsHelper::OUTPUT_SCATTER_PLOT</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_stats_delay_helper_a6c65f6af74e1994d756143f24924fa8b_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_stats_delay_helper_a6c65f6af74e1994d756143f24924fa8b_cgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_stats_delay_helper_a6c65f6af74e1994d756143f24924fa8b_cgraph" id="aclassns3_1_1_sat_stats_delay_helper_a6c65f6af74e1994d756143f24924fa8b_cgraph">
-<area shape="rect" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="5,567,193,608"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a822c7c47ed2eeab16eb49bd47725de3a" title="Create the aggregator according to the output type." alt="" coords="271,243,422,284"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a9db72a646e12ebb38af79b69a977c9e2" title="Create one collector instance for each identifier in the simulation." alt="" coords="241,308,452,349"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#affe396c68f7c3b8930cf498632433da0" title=" " alt="" coords="255,384,438,425"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a5004c77332a7a46c276c032813950a16" title=" " alt="" coords="264,449,429,491"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#aec5673f640fb8ddf509d77241531c22b" title=" " alt="" coords="519,560,670,601"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a854586e56afd6d71ebdebc1fc70cd609" title="Compute the path and file name where statistics output should be written to." alt="" coords="267,567,426,608"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a63b43baed2947a7029a1fe278c390e29" title=" " alt="" coords="519,625,670,667"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#ad81036cbcd3734d36ad70d2899ca923b" title=" " alt="" coords="271,684,422,725"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a411c6b7b3e64097cc86f8a1ad2da868c" title=" " alt="" coords="263,749,430,791"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#afa8d91e2580d8263fd20eef9952e1ee6" title=" " alt="" coords="271,815,422,856"/>
-<area shape="rect" href="classns3_1_1_sat_stats_delay_helper.html#a28f92b765564809ea471565cc2d48b26" title="Set up several probes or other means of listeners and connect them to the collectors." alt="" coords="253,880,441,921"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#af5e321bd861848fa527514e40015d771" title=" " alt="" coords="519,37,670,79"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a3af25a9c2115f0beadf4dfa7a37558fa" title=" " alt="" coords="519,495,670,536"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a7be2bafa3875d1efa0367ed09efa5d71" title=" " alt="" coords="505,103,685,144"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a1d63ffd6ebacd9f2d2db32580b1bfadb" title=" " alt="" coords="519,168,670,209"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a19596c7a9d76347944aedba7838b6a5c" title=" " alt="" coords="519,233,670,275"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a489e487004c59e47965c3bcfa53d1f55" title=" " alt="" coords="500,299,689,340"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a93e39c005ae0351b47a5fca8dcfad7e7" title=" " alt="" coords="519,364,670,405"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#ae37e2e28674be92dcdfd00dbb03f3e2e" title=" " alt="" coords="519,429,670,471"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#a91ffa1b95f3c472ed5d2719d96353cd2" title="Function for getting the GW ID with MAC." alt="" coords="745,5,944,47"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#ad952eef75cb89ac9d3a12ed3dcfdb84b" title=" " alt="" coords="737,71,952,112"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#a451689de1096fda8d49f803c93a23696" title="Function for getting the SAT ID with MAC." alt="" coords="751,168,938,209"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#a5989a57a0d2c7a1c7cf1d6b04fdb3ab3" title=" " alt="" coords="751,233,938,275"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#ac9620fca48baf58b821b57220d11ea39" title="Function for getting the UT ID with MAC." alt="" coords="748,299,941,340"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#af3a42178e8d687643c54cf473e008901" title=" " alt="" coords="741,364,949,405"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#a440866ec6938c1b3a8dca8fafe980c65" title="Function for getting the UT user ID with MAC." alt="" coords="739,429,950,471"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#af5f2f1f6f9297b6481d4dce9fbd91ae5" title=" " alt="" coords="739,495,950,536"/>
-<area shape="rect" href="classns3_1_1_sat_stats_delay_helper.html#a7af1143d09f04d1679ee0aa9d80b7ebc" title=" " alt="" coords="501,880,689,921"/>
+<area shape="rect" title="Install the probes, collectors, and aggregators necessary to produce the statistics output." alt="" coords="5,573,193,615"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a822c7c47ed2eeab16eb49bd47725de3a" title="Create the aggregator according to the output type." alt="" coords="271,260,422,301"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a9db72a646e12ebb38af79b69a977c9e2" title="Create one collector instance for each identifier in the simulation." alt="" coords="241,325,452,367"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#affe396c68f7c3b8930cf498632433da0" title=" " alt="" coords="255,391,438,432"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a5004c77332a7a46c276c032813950a16" title=" " alt="" coords="264,456,429,497"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#aec5673f640fb8ddf509d77241531c22b" title=" " alt="" coords="529,539,679,580"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a854586e56afd6d71ebdebc1fc70cd609" title="Compute the path and file name where statistics output should be written to." alt="" coords="267,573,426,615"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a63b43baed2947a7029a1fe278c390e29" title=" " alt="" coords="529,627,679,668"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#ad81036cbcd3734d36ad70d2899ca923b" title=" " alt="" coords="271,691,422,732"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a411c6b7b3e64097cc86f8a1ad2da868c" title=" " alt="" coords="263,756,430,797"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#afa8d91e2580d8263fd20eef9952e1ee6" title=" " alt="" coords="271,821,422,863"/>
+<area shape="rect" href="classns3_1_1_sat_stats_delay_helper.html#a28f92b765564809ea471565cc2d48b26" title="Set up several probes or other means of listeners and connect them to the collectors." alt="" coords="253,887,441,928"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#af5e321bd861848fa527514e40015d771" title=" " alt="" coords="529,71,679,112"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a3af25a9c2115f0beadf4dfa7a37558fa" title=" " alt="" coords="529,463,679,504"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a7be2bafa3875d1efa0367ed09efa5d71" title=" " alt="" coords="514,136,694,177"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a19596c7a9d76347944aedba7838b6a5c" title=" " alt="" coords="529,201,679,243"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a1bddc4263f820ab84fd7d54baeb0f54b" title=" " alt="" coords="500,267,708,308"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a93e39c005ae0351b47a5fca8dcfad7e7" title=" " alt="" coords="529,332,679,373"/>
+<area shape="rect" href="classns3_1_1_sat_stats_helper.html#ae37e2e28674be92dcdfd00dbb03f3e2e" title=" " alt="" coords="529,397,679,439"/>
+<area shape="rect" href="classns3_1_1_sat_id_mapper.html#a91ffa1b95f3c472ed5d2719d96353cd2" title="Function for getting the GW ID with MAC." alt="" coords="764,5,963,47"/>
+<area shape="rect" href="classns3_1_1_sat_id_mapper.html#ad952eef75cb89ac9d3a12ed3dcfdb84b" title=" " alt="" coords="756,71,971,112"/>
+<area shape="rect" href="classns3_1_1_sat_id_mapper.html#a451689de1096fda8d49f803c93a23696" title="Function for getting the SAT ID with MAC." alt="" coords="770,136,957,177"/>
+<area shape="rect" href="classns3_1_1_sat_id_mapper.html#a5989a57a0d2c7a1c7cf1d6b04fdb3ab3" title=" " alt="" coords="770,201,957,243"/>
+<area shape="rect" href="classns3_1_1_sat_id_mapper.html#ac9620fca48baf58b821b57220d11ea39" title="Function for getting the UT ID with MAC." alt="" coords="767,267,960,308"/>
+<area shape="rect" href="classns3_1_1_sat_id_mapper.html#af3a42178e8d687643c54cf473e008901" title=" " alt="" coords="759,332,967,373"/>
+<area shape="rect" href="classns3_1_1_sat_id_mapper.html#a440866ec6938c1b3a8dca8fafe980c65" title="Function for getting the UT user ID with MAC." alt="" coords="758,397,969,439"/>
+<area shape="rect" href="classns3_1_1_sat_id_mapper.html#af5f2f1f6f9297b6481d4dce9fbd91ae5" title=" " alt="" coords="758,463,969,504"/>
+<area shape="rect" href="classns3_1_1_sat_stats_delay_helper.html#a7af1143d09f04d1679ee0aa9d80b7ebc" title=" " alt="" coords="510,887,698,928"/>
 </map>
 </div>
 
@@ -590,12 +680,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classns3_1_1_sat_stats_rtn_phy_delay_helper.html#a2218402f178c62376124d6f7a5e0b2e0">ns3::SatStatsRtnPhyDelayHelper</a>, <a class="el" href="classns3_1_1_sat_stats_rtn_mac_delay_helper.html#a057fd6fdffb5c8fd9e145ecf4f8c5449">ns3::SatStatsRtnMacDelayHelper</a>, <a class="el" href="classns3_1_1_sat_stats_rtn_dev_delay_helper.html#a236315f8b75a5dfaa44b8322f2964d39">ns3::SatStatsRtnDevDelayHelper</a>, <a class="el" href="classns3_1_1_sat_stats_rtn_app_delay_helper.html#a6927aa74525d63c7030973b65daaa815">ns3::SatStatsRtnAppDelayHelper</a>, <a class="el" href="classns3_1_1_sat_stats_fwd_phy_delay_helper.html#adcc7e7dc476bd81790156dfb75e8e932">ns3::SatStatsFwdPhyDelayHelper</a>, <a class="el" href="classns3_1_1_sat_stats_fwd_mac_delay_helper.html#ace1c3b69fe78ce07e14b7fac2a2185a7">ns3::SatStatsFwdMacDelayHelper</a>, <a class="el" href="classns3_1_1_sat_stats_fwd_dev_delay_helper.html#ae97db4d8d39bb32499d1ba20654c6892">ns3::SatStatsFwdDevDelayHelper</a>, and <a class="el" href="classns3_1_1_sat_stats_fwd_app_delay_helper.html#a3297c03ab2dc81c5467ba311cb948d21">ns3::SatStatsFwdAppDelayHelper</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00411">InstallProbes()</a>.</p>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00415">InstallProbes()</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_stats_delay_helper_a7af1143d09f04d1679ee0aa9d80b7ebc_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_stats_delay_helper_a7af1143d09f04d1679ee0aa9d80b7ebc_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_stats_delay_helper_a7af1143d09f04d1679ee0aa9d80b7ebc_icgraph" id="aclassns3_1_1_sat_stats_delay_helper_a7af1143d09f04d1679ee0aa9d80b7ebc_icgraph">
 <area shape="rect" title=" " alt="" coords="477,5,665,47"/>
@@ -622,16 +712,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the currently active averaging mode. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00099">99</a> of file <a class="el" href="satellite-stats-delay-helper_8cc_source.html">satellite-stats-delay-helper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00103">103</a> of file <a class="el" href="satellite-stats-delay-helper_8cc_source.html">satellite-stats-delay-helper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00140">m_averagingMode</a>.</p>
+<p class="reference">References <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00134">m_averagingMode</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00076">GetTypeId()</a>.</p>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00080">GetTypeId()</a>.</p>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_stats_delay_helper_af31c249d511d470f324f73614cb76a2e_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_stats_delay_helper_af31c249d511d470f324f73614cb76a2e_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_stats_delay_helper_af31c249d511d470f324f73614cb76a2e_icgraph" id="aclassns3_1_1_sat_stats_delay_helper_af31c249d511d470f324f73614cb76a2e_icgraph">
 <area shape="rect" title=" " alt="" coords="241,5,429,47"/>
@@ -667,14 +757,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>inherited from ObjectBase base class </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00076">76</a> of file <a class="el" href="satellite-stats-delay-helper_8cc_source.html">satellite-stats-delay-helper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00080">80</a> of file <a class="el" href="satellite-stats-delay-helper_8cc_source.html">satellite-stats-delay-helper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00099">GetAveragingMode()</a>, and <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00092">SetAveragingMode()</a>.</p>
-<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00103">GetAveragingMode()</a>, and <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00096">SetAveragingMode()</a>.</p>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_stats_delay_helper_a8e1235085627a745b118c63c8d8eb317_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_stats_delay_helper_a8e1235085627a745b118c63c8d8eb317_cgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_stats_delay_helper_a8e1235085627a745b118c63c8d8eb317_cgraph" id="aclassns3_1_1_sat_stats_delay_helper_a8e1235085627a745b118c63c8d8eb317_cgraph">
 <area shape="rect" title="inherited from ObjectBase base class" alt="" coords="5,39,193,80"/>
@@ -702,27 +792,27 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set up several probes or other means of listeners and connect them to the collectors. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00411">411</a> of file <a class="el" href="satellite-stats-delay-helper_8cc_source.html">satellite-stats-delay-helper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00415">415</a> of file <a class="el" href="satellite-stats-delay-helper_8cc_source.html">satellite-stats-delay-helper.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="classns3_1_1_sat_stats_delay_helper.html#a7af1143d09f04d1679ee0aa9d80b7ebc">DoInstallProbes()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00105">DoInstall()</a>.</p>
-<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00109">DoInstall()</a>.</p>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_stats_delay_helper_a28f92b765564809ea471565cc2d48b26_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_stats_delay_helper_a28f92b765564809ea471565cc2d48b26_cgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_stats_delay_helper_a28f92b765564809ea471565cc2d48b26_cgraph" id="aclassns3_1_1_sat_stats_delay_helper_a28f92b765564809ea471565cc2d48b26_cgraph">
 <area shape="rect" title="Set up several probes or other means of listeners and connect them to the collectors." alt="" coords="5,5,193,47"/>
 <area shape="rect" href="classns3_1_1_sat_stats_delay_helper.html#a7af1143d09f04d1679ee0aa9d80b7ebc" title=" " alt="" coords="241,5,429,47"/>
 </map>
 </div>
-<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_stats_delay_helper_a28f92b765564809ea471565cc2d48b26_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_stats_delay_helper_a28f92b765564809ea471565cc2d48b26_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_stats_delay_helper_a28f92b765564809ea471565cc2d48b26_icgraph" id="aclassns3_1_1_sat_stats_delay_helper_a28f92b765564809ea471565cc2d48b26_icgraph">
 <area shape="rect" title="Set up several probes or other means of listeners and connect them to the collectors." alt="" coords="241,5,429,47"/>
@@ -775,16 +865,16 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00533">533</a> of file <a class="el" href="satellite-stats-delay-helper_8cc_source.html">satellite-stats-delay-helper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00583">583</a> of file <a class="el" href="satellite-stats-delay-helper_8cc_source.html">satellite-stats-delay-helper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-stats-helper_8cc_source.html#l00276">ns3::SatStatsHelper::GetOutputType()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00085">ns3::SatStatsHelper::GetOutputTypeName()</a>, <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00140">m_averagingMode</a>, <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00128">m_terminalCollectors</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00126">ns3::SatStatsHelper::OUTPUT_CDF_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00131">ns3::SatStatsHelper::OUTPUT_CDF_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00124">ns3::SatStatsHelper::OUTPUT_HISTOGRAM_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00129">ns3::SatStatsHelper::OUTPUT_HISTOGRAM_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00125">ns3::SatStatsHelper::OUTPUT_PDF_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00130">ns3::SatStatsHelper::OUTPUT_PDF_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00122">ns3::SatStatsHelper::OUTPUT_SCALAR_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00127">ns3::SatStatsHelper::OUTPUT_SCALAR_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00123">ns3::SatStatsHelper::OUTPUT_SCATTER_FILE</a>, and <a class="el" href="satellite-stats-helper_8h_source.html#l00128">ns3::SatStatsHelper::OUTPUT_SCATTER_PLOT</a>.</p>
+<p class="reference">References <a class="el" href="satellite-stats-helper_8cc_source.html#l00283">ns3::SatStatsHelper::GetOutputType()</a>, <a class="el" href="satellite-stats-helper_8cc_source.html#l00090">ns3::SatStatsHelper::GetOutputTypeName()</a>, <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00134">m_averagingMode</a>, <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00125">m_terminalCollectors</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00127">ns3::SatStatsHelper::OUTPUT_CDF_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00132">ns3::SatStatsHelper::OUTPUT_CDF_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00125">ns3::SatStatsHelper::OUTPUT_HISTOGRAM_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00130">ns3::SatStatsHelper::OUTPUT_HISTOGRAM_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00126">ns3::SatStatsHelper::OUTPUT_PDF_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00131">ns3::SatStatsHelper::OUTPUT_PDF_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00123">ns3::SatStatsHelper::OUTPUT_SCALAR_FILE</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00128">ns3::SatStatsHelper::OUTPUT_SCALAR_PLOT</a>, <a class="el" href="satellite-stats-helper_8h_source.html#l00124">ns3::SatStatsHelper::OUTPUT_SCATTER_FILE</a>, and <a class="el" href="satellite-stats-helper_8h_source.html#l00129">ns3::SatStatsHelper::OUTPUT_SCATTER_PLOT</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l01170">ns3::SatStatsRtnAppDelayHelper::Ipv4Callback()</a>, and <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00418">RxDelayCallback()</a>.</p>
-<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l01340">ns3::SatStatsRtnAppDelayHelper::Ipv4Callback()</a>, and <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00422">RxDelayCallback()</a>.</p>
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_stats_delay_helper_a7f41ec39073c840c23890b48d3e1a173_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_stats_delay_helper_a7f41ec39073c840c23890b48d3e1a173_cgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_stats_delay_helper_a7f41ec39073c840c23890b48d3e1a173_cgraph" id="aclassns3_1_1_sat_stats_delay_helper_a7f41ec39073c840c23890b48d3e1a173_cgraph">
 <area shape="rect" title="Find a collector with the right identifier and pass a sample data to it." alt="" coords="5,39,193,80"/>
@@ -792,11 +882,11 @@ Additional Inherited Members</h2></td></tr>
 <area shape="rect" href="classns3_1_1_sat_stats_helper.html#a411c6b7b3e64097cc86f8a1ad2da868c" title=" " alt="" coords="241,71,408,112"/>
 </map>
 </div>
-<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_stats_delay_helper_a7f41ec39073c840c23890b48d3e1a173_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_stats_delay_helper_a7f41ec39073c840c23890b48d3e1a173_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_stats_delay_helper_a7f41ec39073c840c23890b48d3e1a173_icgraph" id="aclassns3_1_1_sat_stats_delay_helper_a7f41ec39073c840c23890b48d3e1a173_icgraph">
 <area shape="rect" title="Find a collector with the right identifier and pass a sample data to it." alt="" coords="728,100,916,141"/>
@@ -848,16 +938,16 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <p>Used in return link statistics. <a class="el" href="classns3_1_1_sat_stats_delay_helper.html#a7af1143d09f04d1679ee0aa9d80b7ebc">DoInstallProbes()</a> is expected to connect the right trace sources to this method. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00418">418</a> of file <a class="el" href="satellite-stats-delay-helper_8cc_source.html">satellite-stats-delay-helper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00422">422</a> of file <a class="el" href="satellite-stats-delay-helper_8cc_source.html">satellite-stats-delay-helper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00137">m_identifierMap</a>, and <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00533">PassSampleToCollector()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-stats-helper_8h_source.html#l00422">ns3::SatStatsHelper::m_identifierMap</a>, and <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00583">PassSampleToCollector()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l01256">ns3::SatStatsRtnDevDelayHelper::DoInstallProbes()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l01329">ns3::SatStatsRtnMacDelayHelper::DoInstallProbes()</a>, and <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l01412">ns3::SatStatsRtnPhyDelayHelper::DoInstallProbes()</a>.</p>
-<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l01426">ns3::SatStatsRtnDevDelayHelper::DoInstallProbes()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l01499">ns3::SatStatsRtnMacDelayHelper::DoInstallProbes()</a>, and <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l01582">ns3::SatStatsRtnPhyDelayHelper::DoInstallProbes()</a>.</p>
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_stats_delay_helper_a70954847f73a4334fb9607c93932814f_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_stats_delay_helper_a70954847f73a4334fb9607c93932814f_cgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_stats_delay_helper_a70954847f73a4334fb9607c93932814f_cgraph" id="aclassns3_1_1_sat_stats_delay_helper_a70954847f73a4334fb9607c93932814f_cgraph">
 <area shape="rect" title="Receive inputs from trace sources and determine the right collector to forward the inputs to." alt="" coords="5,39,193,80"/>
@@ -866,87 +956,14 @@ Additional Inherited Members</h2></td></tr>
 <area shape="rect" href="classns3_1_1_sat_stats_helper.html#a411c6b7b3e64097cc86f8a1ad2da868c" title=" " alt="" coords="477,71,644,112"/>
 </map>
 </div>
-<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-13-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classns3_1_1_sat_stats_delay_helper_a70954847f73a4334fb9607c93932814f_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_stats_delay_helper_a70954847f73a4334fb9607c93932814f_icgraph" alt=""/></div>
-<map name="aclassns3_1_1_sat_stats_delay_helper_a70954847f73a4334fb9607c93932814f_icgraph" id="aclassns3_1_1_sat_stats_delay_helper_a70954847f73a4334fb9607c93932814f_icgraph">
-<area shape="rect" title="Receive inputs from trace sources and determine the right collector to forward the inputs to." alt="" coords="248,71,436,112"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_dev_delay_helper.html#a236315f8b75a5dfaa44b8322f2964d39" title=" " alt="" coords="6,5,199,47"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_mac_delay_helper.html#a057fd6fdffb5c8fd9e145ecf4f8c5449" title=" " alt="" coords="5,71,200,112"/>
-<area shape="rect" href="classns3_1_1_sat_stats_rtn_phy_delay_helper.html#a2218402f178c62376124d6f7a5e0b2e0" title=" " alt="" coords="7,136,198,177"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a9e69820df607af91042c697b43c987e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e69820df607af91042c697b43c987e6">&#9670;&nbsp;</a></span>SaveAddressAndIdentifier()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ns3::SatStatsDelayHelper::SaveAddressAndIdentifier </td>
-          <td>(</td>
-          <td class="paramtype">Ptr&lt; Node &gt;&#160;</td>
-          <td class="paramname"><em>utNode</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Save the address and the proper identifier from the given UT node. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">utNode</td><td>a UT node.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>The address of the given node will be saved in the <a class="el" href="classns3_1_1_sat_stats_delay_helper.html#a8950ffbd480b181717cd971b71b925bd" title="Map of address and the identifier associated with it (for return link).">m_identifierMap</a> member variable.</p>
-<p>Used in return link statistics. <a class="el" href="classns3_1_1_sat_stats_delay_helper.html#a7af1143d09f04d1679ee0aa9d80b7ebc">DoInstallProbes()</a> is expected to pass the the UT node of interest into this method. </p>
-
-<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00447">447</a> of file <a class="el" href="satellite-stats-delay-helper_8cc_source.html">satellite-stats-delay-helper.cc</a>.</p>
-
-<p class="reference">References <a class="el" href="satellite-stats-helper_8cc_source.html#l00803">ns3::SatStatsHelper::GetIdentifierForUt()</a>, <a class="el" href="satellite-id-mapper_8cc_source.html#l00558">ns3::SatIdMapper::GetUtMacWithNode()</a>, and <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00137">m_identifierMap</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l01256">ns3::SatStatsRtnDevDelayHelper::DoInstallProbes()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l01329">ns3::SatStatsRtnMacDelayHelper::DoInstallProbes()</a>, and <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l01412">ns3::SatStatsRtnPhyDelayHelper::DoInstallProbes()</a>.</p>
-<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-14-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classns3_1_1_sat_stats_delay_helper_a9e69820df607af91042c697b43c987e6_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_stats_delay_helper_a9e69820df607af91042c697b43c987e6_cgraph" alt=""/></div>
-<map name="aclassns3_1_1_sat_stats_delay_helper_a9e69820df607af91042c697b43c987e6_cgraph" id="aclassns3_1_1_sat_stats_delay_helper_a9e69820df607af91042c697b43c987e6_cgraph">
-<area shape="rect" title="Save the address and the proper identifier from the given UT node." alt="" coords="5,289,203,331"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#ada8b440db63c67048f066b1049d4a898" title=" " alt="" coords="251,201,401,243"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#af3a42178e8d687643c54cf473e008901" title=" " alt="" coords="703,329,911,371"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#a3174ce104d98c7f37b69256d573255da" title="Function for getting the beam ID with MAC." alt="" coords="450,5,654,47"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#af7c2802b2da9140f72b9f91943eca400" title="Function for getting the group ID with MAC." alt="" coords="449,71,655,112"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a7be2bafa3875d1efa0367ed09efa5d71" title=" " alt="" coords="462,136,642,177"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#a451689de1096fda8d49f803c93a23696" title="Function for getting the SAT ID with MAC." alt="" coords="459,201,645,243"/>
-<area shape="rect" href="classns3_1_1_sat_stats_helper.html#a93e39c005ae0351b47a5fca8dcfad7e7" title=" " alt="" coords="477,267,627,308"/>
-<area shape="rect" href="classns3_1_1_sat_id_mapper.html#ac9620fca48baf58b821b57220d11ea39" title="Function for getting the UT ID with MAC." alt="" coords="710,264,903,305"/>
-</map>
-</div>
 <div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-15-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-15-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classns3_1_1_sat_stats_delay_helper_a9e69820df607af91042c697b43c987e6_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_stats_delay_helper_a9e69820df607af91042c697b43c987e6_icgraph" alt=""/></div>
-<map name="aclassns3_1_1_sat_stats_delay_helper_a9e69820df607af91042c697b43c987e6_icgraph" id="aclassns3_1_1_sat_stats_delay_helper_a9e69820df607af91042c697b43c987e6_icgraph">
-<area shape="rect" title="Save the address and the proper identifier from the given UT node." alt="" coords="248,71,445,112"/>
+<div class="center"><img src="classns3_1_1_sat_stats_delay_helper_a70954847f73a4334fb9607c93932814f_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_stats_delay_helper_a70954847f73a4334fb9607c93932814f_icgraph" alt=""/></div>
+<map name="aclassns3_1_1_sat_stats_delay_helper_a70954847f73a4334fb9607c93932814f_icgraph" id="aclassns3_1_1_sat_stats_delay_helper_a70954847f73a4334fb9607c93932814f_icgraph">
+<area shape="rect" title="Receive inputs from trace sources and determine the right collector to forward the inputs to." alt="" coords="248,71,436,112"/>
 <area shape="rect" href="classns3_1_1_sat_stats_rtn_dev_delay_helper.html#a236315f8b75a5dfaa44b8322f2964d39" title=" " alt="" coords="6,5,199,47"/>
 <area shape="rect" href="classns3_1_1_sat_stats_rtn_mac_delay_helper.html#a057fd6fdffb5c8fd9e145ecf4f8c5449" title=" " alt="" coords="5,71,200,112"/>
 <area shape="rect" href="classns3_1_1_sat_stats_rtn_phy_delay_helper.html#a2218402f178c62376124d6f7a5e0b2e0" title=" " alt="" coords="7,136,198,177"/>
@@ -977,11 +994,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00092">92</a> of file <a class="el" href="satellite-stats-delay-helper_8cc_source.html">satellite-stats-delay-helper.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00096">96</a> of file <a class="el" href="satellite-stats-delay-helper_8cc_source.html">satellite-stats-delay-helper.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00140">m_averagingMode</a>.</p>
+<p class="reference">References <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00134">m_averagingMode</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00076">GetTypeId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00080">GetTypeId()</a>.</p>
 <div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-16-summary" class="dynsummary" style="display:block;">
@@ -1019,9 +1036,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>The aggregator created by this helper. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00134">134</a> of file <a class="el" href="satellite-stats-delay-helper_8h_source.html">satellite-stats-delay-helper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00131">131</a> of file <a class="el" href="satellite-stats-delay-helper_8h_source.html">satellite-stats-delay-helper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00105">DoInstall()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00109">DoInstall()</a>.</p>
 
 </div>
 </div>
@@ -1047,9 +1064,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>The final collector utilized in averaged output (histogram, PDF, and CDF). </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00131">131</a> of file <a class="el" href="satellite-stats-delay-helper_8h_source.html">satellite-stats-delay-helper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00128">128</a> of file <a class="el" href="satellite-stats-delay-helper_8h_source.html">satellite-stats-delay-helper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00105">DoInstall()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00109">DoInstall()</a>.</p>
 
 </div>
 </div>
@@ -1075,37 +1092,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p><code>AveragingMode</code> attribute. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00140">140</a> of file <a class="el" href="satellite-stats-delay-helper_8h_source.html">satellite-stats-delay-helper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00134">134</a> of file <a class="el" href="satellite-stats-delay-helper_8h_source.html">satellite-stats-delay-helper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00467">ConnectProbeToCollector()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00105">DoInstall()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00099">GetAveragingMode()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00533">PassSampleToCollector()</a>, and <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00092">SetAveragingMode()</a>.</p>
-
-</div>
-</div>
-<a id="a8950ffbd480b181717cd971b71b925bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8950ffbd480b181717cd971b71b925bd">&#9670;&nbsp;</a></span>m_identifierMap</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::map&lt;const Address, uint32_t&gt; ns3::SatStatsDelayHelper::m_identifierMap</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Map of address and the identifier associated with it (for return link). </p>
-
-<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00137">137</a> of file <a class="el" href="satellite-stats-delay-helper_8h_source.html">satellite-stats-delay-helper.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l01170">ns3::SatStatsRtnAppDelayHelper::Ipv4Callback()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00418">RxDelayCallback()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00447">SaveAddressAndIdentifier()</a>, and <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l01201">ns3::SatStatsRtnAppDelayHelper::SaveIpv4AddressAndIdentifier()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00451">ConnectProbeToCollector()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00517">DisconnectProbeFromCollector()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00109">DoInstall()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00103">GetAveragingMode()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00583">PassSampleToCollector()</a>, and <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00096">SetAveragingMode()</a>.</p>
 
 </div>
 </div>
@@ -1131,9 +1120,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Maintains a list of collectors created by this helper. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00128">128</a> of file <a class="el" href="satellite-stats-delay-helper_8h_source.html">satellite-stats-delay-helper.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-delay-helper_8h_source.html#l00125">125</a> of file <a class="el" href="satellite-stats-delay-helper_8h_source.html">satellite-stats-delay-helper.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00467">ConnectProbeToCollector()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00105">DoInstall()</a>, and <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00533">PassSampleToCollector()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00451">ConnectProbeToCollector()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00517">DisconnectProbeFromCollector()</a>, <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00109">DoInstall()</a>, and <a class="el" href="satellite-stats-delay-helper_8cc_source.html#l00583">PassSampleToCollector()</a>.</p>
 
 </div>
 </div>

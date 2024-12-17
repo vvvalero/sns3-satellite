@@ -162,69 +162,69 @@ $(document).ready(function(){initNavTree('sat-fwd-link-beam-hopping-example_8cc_
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    uint32_t endUsersPerUt(1);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">bool</span> enableBeamHopping(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    Time simLength(Seconds(3.0));</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">bool</span> scaleDown(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    std::string simulationName(<span class="stringliteral">&quot;sat-fwd-link-beam-hopping-example&quot;</span>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    Ptr&lt;SimulationHelper&gt; simulationHelper = CreateObject&lt;SimulationHelper&gt;(simulationName);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">// read command line parameters given by user</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    CommandLine cmd;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    cmd.AddValue(<span class="stringliteral">&quot;enableBeamHopping&quot;</span>, <span class="stringliteral">&quot;Enable FWD link beam hopping&quot;</span>, enableBeamHopping);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    cmd.AddValue(<span class="stringliteral">&quot;simTime&quot;</span>, <span class="stringliteral">&quot;Length of simulation&quot;</span>, simLength);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    cmd.AddValue(<span class="stringliteral">&quot;scaleDown&quot;</span>,</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                 <span class="stringliteral">&quot;Scale down the bandwidth to see differences with less traffic&quot;</span>,</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                 scaleDown);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    simulationHelper-&gt;AddDefaultUiArguments(cmd);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    cmd.Parse(argc, argv);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    simulationHelper-&gt;SetDefaultValues();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    simulationHelper-&gt;SetUserCountPerUt(endUsersPerUt);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span> (enableBeamHopping)</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        simulationHelper-&gt;ConfigureFwdLinkBeamHopping();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">if</span> (scaleDown)</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        Config::SetDefault(<span class="stringliteral">&quot;ns3::SatConf::FwdCarrierAllocatedBandwidth&quot;</span>,</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                           DoubleValue(enableBeamHopping ? 1e+08 : 2.5e+07));</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    simulationHelper-&gt;SetSimulationTime(simLength.GetSeconds());</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">// All spot-beams of GW-1 (14 in total)</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    simulationHelper-&gt;SetBeams(<span class="stringliteral">&quot;1 2 3 4 11 12 13 14 25 26 27 28 40 41&quot;</span>);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    std::map&lt;uint32_t, uint32_t&gt; utsInBeam = {{1, 30},</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                                              {2, 9},</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                                              {3, 15},</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                                              {4, 30},</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                              {11, 15},</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                                              {12, 30},</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                                              {13, 9},</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                                              {14, 18},</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                              {25, 9},</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                                              {26, 15},</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                                              {27, 18},</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                              {28, 30},</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                                              {40, 9},</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                                              {41, 15}};</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">// Set users unevenly in different beams</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> it : utsInBeam)</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        simulationHelper-&gt;SetUtCountPerBeam(it.first, it.second);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="comment">// Create the scenario</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    simulationHelper-&gt;CreateSatScenario();</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="comment">// Install traffic model</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    Config::SetDefault(<span class="stringliteral">&quot;ns3::CbrApplication::Interval&quot;</span>, TimeValue(MilliSeconds(1)));</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    Config::SetDefault(<span class="stringliteral">&quot;ns3::CbrApplication::PacketSize&quot;</span>, UintegerValue(512));</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    simulationHelper-&gt;InstallTrafficModel(<a class="code" href="classns3_1_1_simulation_helper.html#a2e7e7e80ffd116eaf0e5eaf9307ca2eaa48e23ec27f1b9eea0bc5fbbc907dfed8">SimulationHelper::CBR</a>,</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                                          <a class="code" href="classns3_1_1_simulation_helper.html#ace1b7fe6575e4f44ef13c2890ed982f4ae62a5c46852170ec23778e447dc91720">SimulationHelper::UDP</a>,</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                                          <a class="code" href="classns3_1_1_simulation_helper.html#a8b86c00ea977318601f1f369d969fe61ad181b81164db8f65868c0f22d09a792b">SimulationHelper::FWD_LINK</a>,</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                                          Seconds(0.001),</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                                          simLength,</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                                          Seconds(0.001));</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    Time simLength(Seconds(3.0));</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">bool</span> scaleDown(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    std::string simulationName(<span class="stringliteral">&quot;sat-fwd-link-beam-hopping-example&quot;</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    Ptr&lt;SimulationHelper&gt; simulationHelper = CreateObject&lt;SimulationHelper&gt;(simulationName);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// read command line parameters given by user</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    CommandLine cmd;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    cmd.AddValue(<span class="stringliteral">&quot;simTime&quot;</span>, <span class="stringliteral">&quot;Length of simulation&quot;</span>, simLength);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    cmd.AddValue(<span class="stringliteral">&quot;scaleDown&quot;</span>,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                 <span class="stringliteral">&quot;Scale down the bandwidth to see differences with less traffic&quot;</span>,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                 scaleDown);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    simulationHelper-&gt;AddDefaultUiArguments(cmd);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    cmd.Parse(argc, argv);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    simulationHelper-&gt;SetDefaultValues();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    simulationHelper-&gt;SetUserCountPerUt(endUsersPerUt);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    simulationHelper-&gt;ConfigureFwdLinkBeamHopping();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span> (scaleDown)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        Config::SetDefault(<span class="stringliteral">&quot;ns3::SatConf::FwdCarrierAllocatedBandwidth&quot;</span>, DoubleValue(1e+08));</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    simulationHelper-&gt;SetSimulationTime(simLength.GetSeconds());</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">// All spot-beams of GW-1 (14 in total)</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    simulationHelper-&gt;SetBeams(<span class="stringliteral">&quot;1 2 3 4 11 12 13 14 25 26 27 28 40 41&quot;</span>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    std::map&lt;uint32_t, uint32_t&gt; utsInBeam = {{1, 30},</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                                              {2, 9},</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                                              {3, 15},</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                                              {4, 30},</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                                              {11, 15},</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                                              {12, 30},</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                                              {13, 9},</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                                              {14, 18},</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                              {25, 9},</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                                              {26, 15},</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                                              {27, 18},</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                                              {28, 30},</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                              {40, 9},</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                                              {41, 15}};</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">// Set users unevenly in different beams</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; it : utsInBeam)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        simulationHelper-&gt;SetUtCountPerBeam(it.first, it.second);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    simulationHelper-&gt;LoadScenario(<span class="stringliteral">&quot;geo-33E-beam-hopping&quot;</span>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment">// Create the scenario</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    simulationHelper-&gt;CreateSatScenario();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="comment">// Install traffic model</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    simulationHelper-&gt;GetTrafficHelper()-&gt;AddCbrTraffic(</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <a class="code" href="classns3_1_1_sat_traffic_helper.html#aa567bdf2842ee4255d96524091b52682a3b0d0927fa9ed8f266b9ed98ccefe12e">SatTrafficHelper::FWD_LINK</a>,</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="classns3_1_1_sat_traffic_helper.html#ad23815f9b109df6ebf0c6da55950faacad169aed17b2d39853f541bb72b01136e">SatTrafficHelper::UDP</a>,</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        MilliSeconds(1),</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        512,</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        NodeContainer(Singleton&lt;SatTopology&gt;::Get()-&gt;GetGwUserNode(0)),</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        Singleton&lt;SatTopology&gt;::Get()-&gt;GetUtUserNodes(),</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        MilliSeconds(1),</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        simLength,</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        MilliSeconds(1));</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">auto</span> stats = simulationHelper-&gt;GetStatisticsContainer();</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    stats-&gt;AddGlobalFwdAppThroughput(<a class="code" href="classns3_1_1_sat_stats_helper.html#aa8f3afc2c8c3b7200dd4b55f4c89b70eae1bc718911a7f678ac157b87afd49378">SatStatsHelper::OUTPUT_SCALAR_FILE</a>);</div>
@@ -238,12 +238,11 @@ $(document).ready(function(){initNavTree('sat-fwd-link-beam-hopping-example_8cc_
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
-<div class="ttc" id="aclassns3_1_1_sat_stats_helper_html_aa8f3afc2c8c3b7200dd4b55f4c89b70eaa318f13f992d067d3f5974affc01c760"><div class="ttname"><a href="classns3_1_1_sat_stats_helper.html#aa8f3afc2c8c3b7200dd4b55f4c89b70eaa318f13f992d067d3f5974affc01c760">ns3::SatStatsHelper::OUTPUT_CDF_FILE</a></div><div class="ttdeci">@ OUTPUT_CDF_FILE</div><div class="ttdef"><b>Definition:</b> <a href="satellite-stats-helper_8h_source.html#l00126">satellite-stats-helper.h:126</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_stats_helper_html_aa8f3afc2c8c3b7200dd4b55f4c89b70eae1bc718911a7f678ac157b87afd49378"><div class="ttname"><a href="classns3_1_1_sat_stats_helper.html#aa8f3afc2c8c3b7200dd4b55f4c89b70eae1bc718911a7f678ac157b87afd49378">ns3::SatStatsHelper::OUTPUT_SCALAR_FILE</a></div><div class="ttdeci">@ OUTPUT_SCALAR_FILE</div><div class="ttdef"><b>Definition:</b> <a href="satellite-stats-helper_8h_source.html#l00122">satellite-stats-helper.h:122</a></div></div>
-<div class="ttc" id="aclassns3_1_1_simulation_helper_html_a2e7e7e80ffd116eaf0e5eaf9307ca2eaa48e23ec27f1b9eea0bc5fbbc907dfed8"><div class="ttname"><a href="classns3_1_1_simulation_helper.html#a2e7e7e80ffd116eaf0e5eaf9307ca2eaa48e23ec27f1b9eea0bc5fbbc907dfed8">ns3::SimulationHelper::CBR</a></div><div class="ttdeci">@ CBR</div><div class="ttdef"><b>Definition:</b> <a href="simulation-helper_8h_source.html#l00506">simulation-helper.h:506</a></div></div>
-<div class="ttc" id="aclassns3_1_1_simulation_helper_html_a8b86c00ea977318601f1f369d969fe61ad181b81164db8f65868c0f22d09a792b"><div class="ttname"><a href="classns3_1_1_simulation_helper.html#a8b86c00ea977318601f1f369d969fe61ad181b81164db8f65868c0f22d09a792b">ns3::SimulationHelper::FWD_LINK</a></div><div class="ttdeci">@ FWD_LINK</div><div class="ttdef"><b>Definition:</b> <a href="simulation-helper_8h_source.html#l00529">simulation-helper.h:528</a></div></div>
-<div class="ttc" id="aclassns3_1_1_simulation_helper_html_ace1b7fe6575e4f44ef13c2890ed982f4ae62a5c46852170ec23778e447dc91720"><div class="ttname"><a href="classns3_1_1_simulation_helper.html#ace1b7fe6575e4f44ef13c2890ed982f4ae62a5c46852170ec23778e447dc91720">ns3::SimulationHelper::UDP</a></div><div class="ttdeci">@ UDP</div><div class="ttdef"><b>Definition:</b> <a href="simulation-helper_8h_source.html#l00521">simulation-helper.h:521</a></div></div>
-<div class="ttc" id="anamespacens3_html"><div class="ttname"><a href="namespacens3.html">ns3</a></div><div class="ttdoc">SatArqSequenceNumber is handling the sequence numbers for the ARQ process.</div><div class="ttdef"><b>Definition:</b> <a href="sat-link-results-plot_8cc_source.html#l00039">sat-link-results-plot.cc:40</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_stats_helper_html_aa8f3afc2c8c3b7200dd4b55f4c89b70eaa318f13f992d067d3f5974affc01c760"><div class="ttname"><a href="classns3_1_1_sat_stats_helper.html#aa8f3afc2c8c3b7200dd4b55f4c89b70eaa318f13f992d067d3f5974affc01c760">ns3::SatStatsHelper::OUTPUT_CDF_FILE</a></div><div class="ttdeci">@ OUTPUT_CDF_FILE</div><div class="ttdef"><b>Definition:</b> <a href="satellite-stats-helper_8h_source.html#l00127">satellite-stats-helper.h:127</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_stats_helper_html_aa8f3afc2c8c3b7200dd4b55f4c89b70eae1bc718911a7f678ac157b87afd49378"><div class="ttname"><a href="classns3_1_1_sat_stats_helper.html#aa8f3afc2c8c3b7200dd4b55f4c89b70eae1bc718911a7f678ac157b87afd49378">ns3::SatStatsHelper::OUTPUT_SCALAR_FILE</a></div><div class="ttdeci">@ OUTPUT_SCALAR_FILE</div><div class="ttdef"><b>Definition:</b> <a href="satellite-stats-helper_8h_source.html#l00123">satellite-stats-helper.h:123</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_traffic_helper_html_aa567bdf2842ee4255d96524091b52682a3b0d0927fa9ed8f266b9ed98ccefe12e"><div class="ttname"><a href="classns3_1_1_sat_traffic_helper.html#aa567bdf2842ee4255d96524091b52682a3b0d0927fa9ed8f266b9ed98ccefe12e">ns3::SatTrafficHelper::FWD_LINK</a></div><div class="ttdeci">@ FWD_LINK</div><div class="ttdef"><b>Definition:</b> <a href="satellite-traffic-helper_8h_source.html#l00069">satellite-traffic-helper.h:68</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_traffic_helper_html_ad23815f9b109df6ebf0c6da55950faacad169aed17b2d39853f541bb72b01136e"><div class="ttname"><a href="classns3_1_1_sat_traffic_helper.html#ad23815f9b109df6ebf0c6da55950faacad169aed17b2d39853f541bb72b01136e">ns3::SatTrafficHelper::UDP</a></div><div class="ttdeci">@ UDP</div><div class="ttdef"><b>Definition:</b> <a href="satellite-traffic-helper_8h_source.html#l00073">satellite-traffic-helper.h:73</a></div></div>
+<div class="ttc" id="anamespacens3_html"><div class="ttname"><a href="namespacens3.html">ns3</a></div><div class="ttdoc">SatArqSequenceNumber is handling the sequence numbers for the ARQ process.</div><div class="ttdef"><b>Definition:</b> <a href="sat-link-results-plot_8cc_source.html#l00040">sat-link-results-plot.cc:41</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 

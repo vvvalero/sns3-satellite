@@ -129,6 +129,7 @@ $(document).ready(function(){initNavTree('satellite-sgp4io_8cc.html',''); initRe
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="satellite-sgp4io_8h_source.html">satellite-sgp4io.h</a>&quot;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for satellite-sgp4io.cc:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -136,8 +137,9 @@ $(document).ready(function(){initNavTree('satellite-sgp4io_8cc.html',''); initRe
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="satellite-sgp4io_8cc__incl.png" border="0" usemap="#a_2builds_2sns3_2satellite_2satellite_2model_2satellite-sgp4io_8cc" alt=""/></div>
 <map name="a_2builds_2sns3_2satellite_2satellite_2model_2satellite-sgp4io_8cc" id="a_2builds_2sns3_2satellite_2satellite_2model_2satellite-sgp4io_8cc">
-<area shape="rect" title=" " alt="" coords="94,5,275,61"/>
+<area shape="rect" title=" " alt="" coords="157,5,338,61"/>
 <area shape="rect" href="satellite-sgp4io_8h.html" title=" " alt="" coords="117,109,252,136"/>
+<area shape="rect" title=" " alt="" coords="276,109,347,136"/>
 <area shape="rect" href="satellite-sgp4ext_8h.html" title=" " alt="" coords="46,184,190,211"/>
 <area shape="rect" href="satellite-sgp4unit_8h.html" title=" " alt="" coords="172,259,320,285"/>
 <area shape="rect" title=" " alt="" coords="5,333,73,360"/>
@@ -228,11 +230,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-sgp4io_8cc_source.html#l00071">71</a> of file <a class="el" href="satellite-sgp4io_8cc_source.html">satellite-sgp4io.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-sgp4io_8cc_source.html#l00073">73</a> of file <a class="el" href="satellite-sgp4io_8cc_source.html">satellite-sgp4io.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-sgp4unit_8h_source.html#l00089">elsetrec::a</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00089">elsetrec::alta</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00089">elsetrec::altp</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00090">elsetrec::argpo</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00089">elsetrec::bstar</a>, <a class="el" href="satellite-sgp4ext_8cc_source.html#l00596">days2mdhms()</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00089">elsetrec::ecco</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00089">elsetrec::epochdays</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00072">elsetrec::epochyr</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00073">elsetrec::error</a>, <a class="el" href="satellite-sgp4unit_8cc_source.html#l02683">getgravconst()</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00089">elsetrec::inclo</a>, <a class="el" href="satellite-sgp4ext_8cc_source.html#l00551">jday()</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00089">elsetrec::jdsatepoch</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00090">elsetrec::mo</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00089">elsetrec::nddot</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00089">elsetrec::ndot</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00090">elsetrec::no</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00089">elsetrec::nodeo</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00059">pi</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00071">elsetrec::satnum</a>, and <a class="el" href="satellite-sgp4unit_8cc_source.html#l01693">sgp4init()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-sgp4unit_8h_source.html#l00089">elsetrec::a</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00089">elsetrec::alta</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00089">elsetrec::altp</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00090">elsetrec::argpo</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00089">elsetrec::bstar</a>, <a class="el" href="satellite-sgp4ext_8cc_source.html#l00598">days2mdhms()</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00089">elsetrec::ecco</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00089">elsetrec::epochdays</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00072">elsetrec::epochyr</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00073">elsetrec::error</a>, <a class="el" href="satellite-sgp4unit_8cc_source.html#l02685">getgravconst()</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00089">elsetrec::inclo</a>, <a class="el" href="satellite-sgp4ext_8cc_source.html#l00553">jday()</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00089">elsetrec::jdsatepoch</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00090">elsetrec::mo</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00089">elsetrec::nddot</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00089">elsetrec::ndot</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00090">elsetrec::no</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00089">elsetrec::nodeo</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00059">pi</a>, <a class="el" href="satellite-sgp4unit_8h_source.html#l00071">elsetrec::satnum</a>, and <a class="el" href="satellite-sgp4unit_8cc_source.html#l01695">sgp4init()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-sgp4-mobility-model_8cc_source.html#l00204">ns3::SatSGP4MobilityModel::SetTleInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-sgp4-mobility-model_8cc_source.html#l00211">ns3::SatSGP4MobilityModel::SetTleInfo()</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">

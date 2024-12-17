@@ -152,54 +152,55 @@ $(document).ready(function(){initNavTree('satellite-input-fstream-wrapper_8cc_so
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;ns3/log.h&quot;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;NS_LOG_COMPONENT_DEFINE(<span class="stringliteral">&quot;SatInputFileStreamWrapper&quot;</span>);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacens3.html">ns3</a></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_input_file_stream_wrapper.html#a3170e291e49a08bdbf6fe005bb2c4f18">   33</a></span>&#160;<a class="code" href="classns3_1_1_sat_input_file_stream_wrapper.html#a3170e291e49a08bdbf6fe005bb2c4f18">SatInputFileStreamWrapper::SatInputFileStreamWrapper</a>(std::string filename,</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                                     std::ios::openmode filemode)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    : m_destroyable(true)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span> &lt;&lt; filename &lt;&lt; filemode);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    std::ifstream* ifs = <span class="keyword">new</span> std::ifstream(filename.c_str(), filemode);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    NS_ABORT_MSG_UNLESS(ifs-&gt;is_open(),</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                        <span class="stringliteral">&quot;SatInputFileStreamWrapper::SatInputFileStreamWrapper():  &quot;</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                            &lt;&lt; <span class="stringliteral">&quot;Unable to Open &quot;</span> &lt;&lt; filename &lt;&lt; <span class="stringliteral">&quot; for mode &quot;</span> &lt;&lt; filemode);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classns3_1_1_sat_input_file_stream_wrapper.html#a70754a57fd65086febb756e5b750c3c8">m_ifstream</a> = ifs;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_input_file_stream_wrapper.html#a4417787b954ea44746426334bafcc338">   48</a></span>&#160;<a class="code" href="classns3_1_1_sat_input_file_stream_wrapper.html#a4417787b954ea44746426334bafcc338">SatInputFileStreamWrapper::~SatInputFileStreamWrapper</a>()</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classns3_1_1_sat_input_file_stream_wrapper.html#ad25dd69a46c6135ea8e4dccdace0ce78">m_destroyable</a>)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">delete</span> <a class="code" href="classns3_1_1_sat_input_file_stream_wrapper.html#a70754a57fd65086febb756e5b750c3c8">m_ifstream</a>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="classns3_1_1_sat_input_file_stream_wrapper.html#a70754a57fd65086febb756e5b750c3c8">m_ifstream</a> = 0;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classns3_1_1_sat_input_file_stream_wrapper.html#ad25dd69a46c6135ea8e4dccdace0ce78">m_destroyable</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;std::ifstream*</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_input_file_stream_wrapper.html#a050a0b640be12ffc1bfec8b955540ad9">   61</a></span>&#160;<a class="code" href="classns3_1_1_sat_input_file_stream_wrapper.html#a050a0b640be12ffc1bfec8b955540ad9">SatInputFileStreamWrapper::GetStream</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns3_1_1_sat_input_file_stream_wrapper.html#a70754a57fd65086febb756e5b750c3c8">m_ifstream</a>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;} <span class="comment">// namespace ns3</span></div>
-<div class="ttc" id="aclassns3_1_1_sat_input_file_stream_wrapper_html_a050a0b640be12ffc1bfec8b955540ad9"><div class="ttname"><a href="classns3_1_1_sat_input_file_stream_wrapper.html#a050a0b640be12ffc1bfec8b955540ad9">ns3::SatInputFileStreamWrapper::GetStream</a></div><div class="ttdeci">std::ifstream * GetStream(void)</div><div class="ttdoc">Return a pointer to an ifstream previously set in the wrapper.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-input-fstream-wrapper_8cc_source.html#l00061">satellite-input-fstream-wrapper.cc:61</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_input_file_stream_wrapper_html_a3170e291e49a08bdbf6fe005bb2c4f18"><div class="ttname"><a href="classns3_1_1_sat_input_file_stream_wrapper.html#a3170e291e49a08bdbf6fe005bb2c4f18">ns3::SatInputFileStreamWrapper::SatInputFileStreamWrapper</a></div><div class="ttdeci">SatInputFileStreamWrapper(std::string filename, std::ios::openmode filemode)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-input-fstream-wrapper_8cc_source.html#l00033">satellite-input-fstream-wrapper.cc:33</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_input_file_stream_wrapper_html_a4417787b954ea44746426334bafcc338"><div class="ttname"><a href="classns3_1_1_sat_input_file_stream_wrapper.html#a4417787b954ea44746426334bafcc338">ns3::SatInputFileStreamWrapper::~SatInputFileStreamWrapper</a></div><div class="ttdeci">~SatInputFileStreamWrapper()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-input-fstream-wrapper_8cc_source.html#l00048">satellite-input-fstream-wrapper.cc:48</a></div></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;NS_LOG_COMPONENT_DEFINE(<span class="stringliteral">&quot;SatInputFileStreamWrapper&quot;</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacens3.html">ns3</a></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_input_file_stream_wrapper.html#a3170e291e49a08bdbf6fe005bb2c4f18">   34</a></span>&#160;<a class="code" href="classns3_1_1_sat_input_file_stream_wrapper.html#a3170e291e49a08bdbf6fe005bb2c4f18">SatInputFileStreamWrapper::SatInputFileStreamWrapper</a>(std::string filename,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                                     std::ios::openmode filemode)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    : m_destroyable(true)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span> &lt;&lt; filename &lt;&lt; filemode);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    std::ifstream* ifs = <span class="keyword">new</span> std::ifstream(filename.c_str(), filemode);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    NS_ABORT_MSG_UNLESS(ifs-&gt;is_open(),</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                        <span class="stringliteral">&quot;SatInputFileStreamWrapper::SatInputFileStreamWrapper():  &quot;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                            &lt;&lt; <span class="stringliteral">&quot;Unable to Open &quot;</span> &lt;&lt; filename &lt;&lt; <span class="stringliteral">&quot; for mode &quot;</span> &lt;&lt; filemode);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="classns3_1_1_sat_input_file_stream_wrapper.html#a70754a57fd65086febb756e5b750c3c8">m_ifstream</a> = ifs;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_input_file_stream_wrapper.html#a4417787b954ea44746426334bafcc338">   49</a></span>&#160;<a class="code" href="classns3_1_1_sat_input_file_stream_wrapper.html#a4417787b954ea44746426334bafcc338">SatInputFileStreamWrapper::~SatInputFileStreamWrapper</a>()</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classns3_1_1_sat_input_file_stream_wrapper.html#ad25dd69a46c6135ea8e4dccdace0ce78">m_destroyable</a>)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">delete</span> <a class="code" href="classns3_1_1_sat_input_file_stream_wrapper.html#a70754a57fd65086febb756e5b750c3c8">m_ifstream</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="classns3_1_1_sat_input_file_stream_wrapper.html#a70754a57fd65086febb756e5b750c3c8">m_ifstream</a> = 0;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="classns3_1_1_sat_input_file_stream_wrapper.html#ad25dd69a46c6135ea8e4dccdace0ce78">m_destroyable</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;std::ifstream*</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_input_file_stream_wrapper.html#a050a0b640be12ffc1bfec8b955540ad9">   62</a></span>&#160;<a class="code" href="classns3_1_1_sat_input_file_stream_wrapper.html#a050a0b640be12ffc1bfec8b955540ad9">SatInputFileStreamWrapper::GetStream</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns3_1_1_sat_input_file_stream_wrapper.html#a70754a57fd65086febb756e5b750c3c8">m_ifstream</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;} <span class="comment">// namespace ns3</span></div>
+<div class="ttc" id="aclassns3_1_1_sat_input_file_stream_wrapper_html_a050a0b640be12ffc1bfec8b955540ad9"><div class="ttname"><a href="classns3_1_1_sat_input_file_stream_wrapper.html#a050a0b640be12ffc1bfec8b955540ad9">ns3::SatInputFileStreamWrapper::GetStream</a></div><div class="ttdeci">std::ifstream * GetStream(void)</div><div class="ttdoc">Return a pointer to an ifstream previously set in the wrapper.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-input-fstream-wrapper_8cc_source.html#l00062">satellite-input-fstream-wrapper.cc:62</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_input_file_stream_wrapper_html_a3170e291e49a08bdbf6fe005bb2c4f18"><div class="ttname"><a href="classns3_1_1_sat_input_file_stream_wrapper.html#a3170e291e49a08bdbf6fe005bb2c4f18">ns3::SatInputFileStreamWrapper::SatInputFileStreamWrapper</a></div><div class="ttdeci">SatInputFileStreamWrapper(std::string filename, std::ios::openmode filemode)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-input-fstream-wrapper_8cc_source.html#l00034">satellite-input-fstream-wrapper.cc:34</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_input_file_stream_wrapper_html_a4417787b954ea44746426334bafcc338"><div class="ttname"><a href="classns3_1_1_sat_input_file_stream_wrapper.html#a4417787b954ea44746426334bafcc338">ns3::SatInputFileStreamWrapper::~SatInputFileStreamWrapper</a></div><div class="ttdeci">~SatInputFileStreamWrapper()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-input-fstream-wrapper_8cc_source.html#l00049">satellite-input-fstream-wrapper.cc:49</a></div></div>
 <div class="ttc" id="aclassns3_1_1_sat_input_file_stream_wrapper_html_a70754a57fd65086febb756e5b750c3c8"><div class="ttname"><a href="classns3_1_1_sat_input_file_stream_wrapper.html#a70754a57fd65086febb756e5b750c3c8">ns3::SatInputFileStreamWrapper::m_ifstream</a></div><div class="ttdeci">std::ifstream * m_ifstream</div><div class="ttdoc">Input file stream.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-input-fstream-wrapper_8h_source.html#l00066">satellite-input-fstream-wrapper.h:66</a></div></div>
 <div class="ttc" id="aclassns3_1_1_sat_input_file_stream_wrapper_html_ad25dd69a46c6135ea8e4dccdace0ce78"><div class="ttname"><a href="classns3_1_1_sat_input_file_stream_wrapper.html#ad25dd69a46c6135ea8e4dccdace0ce78">ns3::SatInputFileStreamWrapper::m_destroyable</a></div><div class="ttdeci">bool m_destroyable</div><div class="ttdoc">Is the stream destroyable.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-input-fstream-wrapper_8h_source.html#l00071">satellite-input-fstream-wrapper.h:71</a></div></div>
-<div class="ttc" id="anamespacens3_html"><div class="ttname"><a href="namespacens3.html">ns3</a></div><div class="ttdoc">SatArqSequenceNumber is handling the sequence numbers for the ARQ process.</div><div class="ttdef"><b>Definition:</b> <a href="sat-link-results-plot_8cc_source.html#l00039">sat-link-results-plot.cc:40</a></div></div>
+<div class="ttc" id="anamespacens3_html"><div class="ttname"><a href="namespacens3.html">ns3</a></div><div class="ttdoc">SatArqSequenceNumber is handling the sequence numbers for the ARQ process.</div><div class="ttdef"><b>Definition:</b> <a href="sat-link-results-plot_8cc_source.html#l00040">sat-link-results-plot.cc:41</a></div></div>
 <div class="ttc" id="asatellite-input-fstream-wrapper_8h_html"><div class="ttname"><a href="satellite-input-fstream-wrapper_8h.html">satellite-input-fstream-wrapper.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

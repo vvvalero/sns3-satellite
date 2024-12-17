@@ -150,94 +150,96 @@ $(document).ready(function(){initNavTree('satellite-address-tag_8cc_source.html'
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;ns3/log.h&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;NS_LOG_COMPONENT_DEFINE(<span class="stringliteral">&quot;SatAddressTag&quot;</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacens3.html">ns3</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;NS_OBJECT_ENSURE_REGISTERED(SatAddressTag);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;NS_LOG_COMPONENT_DEFINE(<span class="stringliteral">&quot;SatAddressTag&quot;</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacens3.html">ns3</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_address_tag.html#a9d579c63e4e30ca190ad080224a4551f">   32</a></span>&#160;<a class="code" href="classns3_1_1_sat_address_tag.html#a9d579c63e4e30ca190ad080224a4551f">SatAddressTag::SatAddressTag</a>()</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    : Tag()</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_address_tag.html#a8cfda6b57ea41a669fa50d4a3d37ac92">   38</a></span>&#160;<a class="code" href="classns3_1_1_sat_address_tag.html#a9d579c63e4e30ca190ad080224a4551f">SatAddressTag::SatAddressTag</a>(Address addr)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    : Tag(),</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      m_sourceAddress(addr)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;TypeId</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_address_tag.html#a5a35d054a782f49153095b63be3a3d46">   46</a></span>&#160;<a class="code" href="classns3_1_1_sat_address_tag.html#a5a35d054a782f49153095b63be3a3d46">SatAddressTag::GetTypeId</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">static</span> TypeId tid =</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        TypeId(<span class="stringliteral">&quot;ns3::SatAddressTag&quot;</span>).SetParent&lt;Tag&gt;().AddConstructor&lt;SatAddressTag&gt;();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> tid;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;TypeId</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_address_tag.html#a902dd1dae5c87a9e8cf2f6c6413f1569">   54</a></span>&#160;<a class="code" href="classns3_1_1_sat_address_tag.html#a902dd1dae5c87a9e8cf2f6c6413f1569">SatAddressTag::GetInstanceTypeId</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns3_1_1_sat_address_tag.html#a5a35d054a782f49153095b63be3a3d46">GetTypeId</a>();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;uint32_t</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_address_tag.html#a2c837ae0b4a55ac9fe6813649d59e93a">   60</a></span>&#160;<a class="code" href="classns3_1_1_sat_address_tag.html#a2c837ae0b4a55ac9fe6813649d59e93a">SatAddressTag::GetSerializedSize</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns3_1_1_sat_address_tag.html#abcd453b2ee6d187e5f0dd1d35d044c0a">m_sourceAddress</a>.GetSerializedSize();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_address_tag.html#a0ec17ea18fc1033826193910c847b9c3">   66</a></span>&#160;<a class="code" href="classns3_1_1_sat_address_tag.html#a0ec17ea18fc1033826193910c847b9c3">SatAddressTag::Serialize</a>(TagBuffer i)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span> &lt;&lt; &amp;i);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classns3_1_1_sat_address_tag.html#abcd453b2ee6d187e5f0dd1d35d044c0a">m_sourceAddress</a>.Serialize(i);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_address_tag.html#a8ed40a9a5c67c70666081b22a2e83e0d">   74</a></span>&#160;<a class="code" href="classns3_1_1_sat_address_tag.html#a8ed40a9a5c67c70666081b22a2e83e0d">SatAddressTag::Deserialize</a>(TagBuffer i)</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span> &lt;&lt; &amp;i);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="classns3_1_1_sat_address_tag.html#abcd453b2ee6d187e5f0dd1d35d044c0a">m_sourceAddress</a>.Deserialize(i);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_address_tag.html#a89bd0b7cf91582dadcb6ab34a304e716">   82</a></span>&#160;<a class="code" href="classns3_1_1_sat_address_tag.html#a89bd0b7cf91582dadcb6ab34a304e716">SatAddressTag::Print</a>(std::ostream&amp; os)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span> &lt;&lt; &amp;os);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    os &lt;&lt; <span class="stringliteral">&quot;(SourceAddress=&quot;</span> &lt;&lt; <a class="code" href="classns3_1_1_sat_address_tag.html#abcd453b2ee6d187e5f0dd1d35d044c0a">m_sourceAddress</a> &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_address_tag.html#a6d2fdcc85311bd16da04e602f82d9852">   89</a></span>&#160;<a class="code" href="classns3_1_1_sat_address_tag.html#a6d2fdcc85311bd16da04e602f82d9852">SatAddressTag::SetSourceAddress</a>(Address addr)</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span> &lt;&lt; addr);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="classns3_1_1_sat_address_tag.html#abcd453b2ee6d187e5f0dd1d35d044c0a">m_sourceAddress</a> = addr;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;Address</div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_address_tag.html#a72834e721e79d0c24e84128c3fa7977d">   96</a></span>&#160;<a class="code" href="classns3_1_1_sat_address_tag.html#a72834e721e79d0c24e84128c3fa7977d">SatAddressTag::GetSourceAddress</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns3_1_1_sat_address_tag.html#abcd453b2ee6d187e5f0dd1d35d044c0a">m_sourceAddress</a>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;} <span class="comment">// namespace ns3</span></div>
-<div class="ttc" id="aclassns3_1_1_sat_address_tag_html_a0ec17ea18fc1033826193910c847b9c3"><div class="ttname"><a href="classns3_1_1_sat_address_tag.html#a0ec17ea18fc1033826193910c847b9c3">ns3::SatAddressTag::Serialize</a></div><div class="ttdeci">virtual void Serialize(TagBuffer buf) const</div><div class="ttdoc">Serializes information to buffer from this instance of Inherited.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-address-tag_8cc_source.html#l00066">satellite-address-tag.cc:66</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_address_tag_html_a2c837ae0b4a55ac9fe6813649d59e93a"><div class="ttname"><a href="classns3_1_1_sat_address_tag.html#a2c837ae0b4a55ac9fe6813649d59e93a">ns3::SatAddressTag::GetSerializedSize</a></div><div class="ttdeci">virtual uint32_t GetSerializedSize() const</div><div class="ttdoc">Inherited from Tag base class.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-address-tag_8cc_source.html#l00060">satellite-address-tag.cc:60</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_address_tag_html_a5a35d054a782f49153095b63be3a3d46"><div class="ttname"><a href="classns3_1_1_sat_address_tag.html#a5a35d054a782f49153095b63be3a3d46">ns3::SatAddressTag::GetTypeId</a></div><div class="ttdeci">static TypeId GetTypeId()</div><div class="ttdoc">Inherited from ObjectBase base class.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-address-tag_8cc_source.html#l00046">satellite-address-tag.cc:46</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_address_tag_html_a6d2fdcc85311bd16da04e602f82d9852"><div class="ttname"><a href="classns3_1_1_sat_address_tag.html#a6d2fdcc85311bd16da04e602f82d9852">ns3::SatAddressTag::SetSourceAddress</a></div><div class="ttdeci">void SetSourceAddress(Address addr)</div><div class="ttdoc">Set the source address.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-address-tag_8cc_source.html#l00089">satellite-address-tag.cc:89</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_address_tag_html_a72834e721e79d0c24e84128c3fa7977d"><div class="ttname"><a href="classns3_1_1_sat_address_tag.html#a72834e721e79d0c24e84128c3fa7977d">ns3::SatAddressTag::GetSourceAddress</a></div><div class="ttdeci">Address GetSourceAddress() const</div><div class="ttdoc">Get the source address.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-address-tag_8cc_source.html#l00096">satellite-address-tag.cc:96</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_address_tag_html_a89bd0b7cf91582dadcb6ab34a304e716"><div class="ttname"><a href="classns3_1_1_sat_address_tag.html#a89bd0b7cf91582dadcb6ab34a304e716">ns3::SatAddressTag::Print</a></div><div class="ttdeci">virtual void Print(std::ostream &amp;os) const</div><div class="ttdoc">Print time stamp of this instance of Inherited.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-address-tag_8cc_source.html#l00082">satellite-address-tag.cc:82</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_address_tag_html_a8ed40a9a5c67c70666081b22a2e83e0d"><div class="ttname"><a href="classns3_1_1_sat_address_tag.html#a8ed40a9a5c67c70666081b22a2e83e0d">ns3::SatAddressTag::Deserialize</a></div><div class="ttdeci">virtual void Deserialize(TagBuffer buf)</div><div class="ttdoc">Deserializes information from buffer to this instance of Inherited.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-address-tag_8cc_source.html#l00074">satellite-address-tag.cc:74</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_address_tag_html_a902dd1dae5c87a9e8cf2f6c6413f1569"><div class="ttname"><a href="classns3_1_1_sat_address_tag.html#a902dd1dae5c87a9e8cf2f6c6413f1569">ns3::SatAddressTag::GetInstanceTypeId</a></div><div class="ttdeci">virtual TypeId GetInstanceTypeId() const</div><div class="ttdoc">Get the type ID of instance.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-address-tag_8cc_source.html#l00054">satellite-address-tag.cc:54</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_address_tag_html_a9d579c63e4e30ca190ad080224a4551f"><div class="ttname"><a href="classns3_1_1_sat_address_tag.html#a9d579c63e4e30ca190ad080224a4551f">ns3::SatAddressTag::SatAddressTag</a></div><div class="ttdeci">SatAddressTag()</div><div class="ttdoc">/ Creates a SatAddressTag instance with an invalid source address.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-address-tag_8cc_source.html#l00032">satellite-address-tag.cc:32</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_address_tag_html_abcd453b2ee6d187e5f0dd1d35d044c0a"><div class="ttname"><a href="classns3_1_1_sat_address_tag.html#abcd453b2ee6d187e5f0dd1d35d044c0a">ns3::SatAddressTag::m_sourceAddress</a></div><div class="ttdeci">Address m_sourceAddress</div><div class="ttdoc">The source address.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-address-tag_8h_source.html#l00096">satellite-address-tag.h:96</a></div></div>
-<div class="ttc" id="anamespacens3_html"><div class="ttname"><a href="namespacens3.html">ns3</a></div><div class="ttdoc">SatArqSequenceNumber is handling the sequence numbers for the ARQ process.</div><div class="ttdef"><b>Definition:</b> <a href="sat-link-results-plot_8cc_source.html#l00039">sat-link-results-plot.cc:40</a></div></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;NS_OBJECT_ENSURE_REGISTERED(SatAddressTag);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_address_tag.html#a9d579c63e4e30ca190ad080224a4551f">   34</a></span>&#160;<a class="code" href="classns3_1_1_sat_address_tag.html#a9d579c63e4e30ca190ad080224a4551f">SatAddressTag::SatAddressTag</a>()</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    : Tag()</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_address_tag.html#a8cfda6b57ea41a669fa50d4a3d37ac92">   40</a></span>&#160;<a class="code" href="classns3_1_1_sat_address_tag.html#a9d579c63e4e30ca190ad080224a4551f">SatAddressTag::SatAddressTag</a>(Address addr)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    : Tag(),</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      m_sourceAddress(addr)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;TypeId</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_address_tag.html#a5a35d054a782f49153095b63be3a3d46">   48</a></span>&#160;<a class="code" href="classns3_1_1_sat_address_tag.html#a5a35d054a782f49153095b63be3a3d46">SatAddressTag::GetTypeId</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">static</span> TypeId tid =</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        TypeId(<span class="stringliteral">&quot;ns3::SatAddressTag&quot;</span>).SetParent&lt;Tag&gt;().AddConstructor&lt;SatAddressTag&gt;();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> tid;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;TypeId</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_address_tag.html#a902dd1dae5c87a9e8cf2f6c6413f1569">   56</a></span>&#160;<a class="code" href="classns3_1_1_sat_address_tag.html#a902dd1dae5c87a9e8cf2f6c6413f1569">SatAddressTag::GetInstanceTypeId</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns3_1_1_sat_address_tag.html#a5a35d054a782f49153095b63be3a3d46">GetTypeId</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;uint32_t</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_address_tag.html#a2c837ae0b4a55ac9fe6813649d59e93a">   62</a></span>&#160;<a class="code" href="classns3_1_1_sat_address_tag.html#a2c837ae0b4a55ac9fe6813649d59e93a">SatAddressTag::GetSerializedSize</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns3_1_1_sat_address_tag.html#abcd453b2ee6d187e5f0dd1d35d044c0a">m_sourceAddress</a>.GetSerializedSize();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_address_tag.html#a0ec17ea18fc1033826193910c847b9c3">   68</a></span>&#160;<a class="code" href="classns3_1_1_sat_address_tag.html#a0ec17ea18fc1033826193910c847b9c3">SatAddressTag::Serialize</a>(TagBuffer i)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span> &lt;&lt; &amp;i);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="classns3_1_1_sat_address_tag.html#abcd453b2ee6d187e5f0dd1d35d044c0a">m_sourceAddress</a>.Serialize(i);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_address_tag.html#a8ed40a9a5c67c70666081b22a2e83e0d">   76</a></span>&#160;<a class="code" href="classns3_1_1_sat_address_tag.html#a8ed40a9a5c67c70666081b22a2e83e0d">SatAddressTag::Deserialize</a>(TagBuffer i)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span> &lt;&lt; &amp;i);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="classns3_1_1_sat_address_tag.html#abcd453b2ee6d187e5f0dd1d35d044c0a">m_sourceAddress</a>.Deserialize(i);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_address_tag.html#a89bd0b7cf91582dadcb6ab34a304e716">   84</a></span>&#160;<a class="code" href="classns3_1_1_sat_address_tag.html#a89bd0b7cf91582dadcb6ab34a304e716">SatAddressTag::Print</a>(std::ostream&amp; os)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span> &lt;&lt; &amp;os);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    os &lt;&lt; <span class="stringliteral">&quot;(SourceAddress=&quot;</span> &lt;&lt; <a class="code" href="classns3_1_1_sat_address_tag.html#abcd453b2ee6d187e5f0dd1d35d044c0a">m_sourceAddress</a> &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_address_tag.html#a6d2fdcc85311bd16da04e602f82d9852">   91</a></span>&#160;<a class="code" href="classns3_1_1_sat_address_tag.html#a6d2fdcc85311bd16da04e602f82d9852">SatAddressTag::SetSourceAddress</a>(Address addr)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    NS_LOG_FUNCTION(<span class="keyword">this</span> &lt;&lt; addr);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="classns3_1_1_sat_address_tag.html#abcd453b2ee6d187e5f0dd1d35d044c0a">m_sourceAddress</a> = addr;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;Address</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_address_tag.html#a72834e721e79d0c24e84128c3fa7977d">   98</a></span>&#160;<a class="code" href="classns3_1_1_sat_address_tag.html#a72834e721e79d0c24e84128c3fa7977d">SatAddressTag::GetSourceAddress</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns3_1_1_sat_address_tag.html#abcd453b2ee6d187e5f0dd1d35d044c0a">m_sourceAddress</a>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;} <span class="comment">// namespace ns3</span></div>
+<div class="ttc" id="aclassns3_1_1_sat_address_tag_html_a0ec17ea18fc1033826193910c847b9c3"><div class="ttname"><a href="classns3_1_1_sat_address_tag.html#a0ec17ea18fc1033826193910c847b9c3">ns3::SatAddressTag::Serialize</a></div><div class="ttdeci">virtual void Serialize(TagBuffer buf) const</div><div class="ttdoc">Serializes information to buffer from this instance of Inherited.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-address-tag_8cc_source.html#l00068">satellite-address-tag.cc:68</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_address_tag_html_a2c837ae0b4a55ac9fe6813649d59e93a"><div class="ttname"><a href="classns3_1_1_sat_address_tag.html#a2c837ae0b4a55ac9fe6813649d59e93a">ns3::SatAddressTag::GetSerializedSize</a></div><div class="ttdeci">virtual uint32_t GetSerializedSize() const</div><div class="ttdoc">Inherited from Tag base class.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-address-tag_8cc_source.html#l00062">satellite-address-tag.cc:62</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_address_tag_html_a5a35d054a782f49153095b63be3a3d46"><div class="ttname"><a href="classns3_1_1_sat_address_tag.html#a5a35d054a782f49153095b63be3a3d46">ns3::SatAddressTag::GetTypeId</a></div><div class="ttdeci">static TypeId GetTypeId()</div><div class="ttdoc">Inherited from ObjectBase base class.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-address-tag_8cc_source.html#l00048">satellite-address-tag.cc:48</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_address_tag_html_a6d2fdcc85311bd16da04e602f82d9852"><div class="ttname"><a href="classns3_1_1_sat_address_tag.html#a6d2fdcc85311bd16da04e602f82d9852">ns3::SatAddressTag::SetSourceAddress</a></div><div class="ttdeci">void SetSourceAddress(Address addr)</div><div class="ttdoc">Set the source address.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-address-tag_8cc_source.html#l00091">satellite-address-tag.cc:91</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_address_tag_html_a72834e721e79d0c24e84128c3fa7977d"><div class="ttname"><a href="classns3_1_1_sat_address_tag.html#a72834e721e79d0c24e84128c3fa7977d">ns3::SatAddressTag::GetSourceAddress</a></div><div class="ttdeci">Address GetSourceAddress() const</div><div class="ttdoc">Get the source address.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-address-tag_8cc_source.html#l00098">satellite-address-tag.cc:98</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_address_tag_html_a89bd0b7cf91582dadcb6ab34a304e716"><div class="ttname"><a href="classns3_1_1_sat_address_tag.html#a89bd0b7cf91582dadcb6ab34a304e716">ns3::SatAddressTag::Print</a></div><div class="ttdeci">virtual void Print(std::ostream &amp;os) const</div><div class="ttdoc">Print time stamp of this instance of Inherited.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-address-tag_8cc_source.html#l00084">satellite-address-tag.cc:84</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_address_tag_html_a8ed40a9a5c67c70666081b22a2e83e0d"><div class="ttname"><a href="classns3_1_1_sat_address_tag.html#a8ed40a9a5c67c70666081b22a2e83e0d">ns3::SatAddressTag::Deserialize</a></div><div class="ttdeci">virtual void Deserialize(TagBuffer buf)</div><div class="ttdoc">Deserializes information from buffer to this instance of Inherited.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-address-tag_8cc_source.html#l00076">satellite-address-tag.cc:76</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_address_tag_html_a902dd1dae5c87a9e8cf2f6c6413f1569"><div class="ttname"><a href="classns3_1_1_sat_address_tag.html#a902dd1dae5c87a9e8cf2f6c6413f1569">ns3::SatAddressTag::GetInstanceTypeId</a></div><div class="ttdeci">virtual TypeId GetInstanceTypeId() const</div><div class="ttdoc">Get the type ID of instance.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-address-tag_8cc_source.html#l00056">satellite-address-tag.cc:56</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_address_tag_html_a9d579c63e4e30ca190ad080224a4551f"><div class="ttname"><a href="classns3_1_1_sat_address_tag.html#a9d579c63e4e30ca190ad080224a4551f">ns3::SatAddressTag::SatAddressTag</a></div><div class="ttdeci">SatAddressTag()</div><div class="ttdoc">/ Creates a SatAddressTag instance with an invalid source address.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-address-tag_8cc_source.html#l00034">satellite-address-tag.cc:34</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_address_tag_html_abcd453b2ee6d187e5f0dd1d35d044c0a"><div class="ttname"><a href="classns3_1_1_sat_address_tag.html#abcd453b2ee6d187e5f0dd1d35d044c0a">ns3::SatAddressTag::m_sourceAddress</a></div><div class="ttdeci">Address m_sourceAddress</div><div class="ttdoc">The source address.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-address-tag_8h_source.html#l00099">satellite-address-tag.h:99</a></div></div>
+<div class="ttc" id="anamespacens3_html"><div class="ttname"><a href="namespacens3.html">ns3</a></div><div class="ttdoc">SatArqSequenceNumber is handling the sequence numbers for the ARQ process.</div><div class="ttdef"><b>Definition:</b> <a href="sat-link-results-plot_8cc_source.html#l00040">sat-link-results-plot.cc:41</a></div></div>
 <div class="ttc" id="asatellite-address-tag_8h_html"><div class="ttname"><a href="satellite-address-tag_8h.html">satellite-address-tag.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

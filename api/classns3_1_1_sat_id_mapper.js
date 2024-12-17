@@ -32,6 +32,8 @@ var classns3_1_1_sat_id_mapper =
     [ "RemoveMacToSatIdIsl", "classns3_1_1_sat_id_mapper.html#a7bee4d1601480a982878553f7930017b", null ],
     [ "Reset", "classns3_1_1_sat_id_mapper.html#a08ac42d95ee559eccf92e2ced6402431", null ],
     [ "ShowIslMap", "classns3_1_1_sat_id_mapper.html#a55476a54a4e0413cc869da4cda18f8fb", null ],
+    [ "UpdateMacToBeamId", "classns3_1_1_sat_id_mapper.html#aceaf2758af05021fffa6c9f7753eb10c", null ],
+    [ "UpdateMacToSatId", "classns3_1_1_sat_id_mapper.html#a35d9d5bb62c56f6fcbf9aa04aa1ad87a", null ],
     [ "m_enableMapPrint", "classns3_1_1_sat_id_mapper.html#a4515ab9a34b184d35901bf5e78a9aea3", null ],
     [ "m_gwUserIdIndex", "classns3_1_1_sat_id_mapper.html#a82ef189026178a54dfa8c9c845fafad3", null ],
     [ "m_macToBeamIdMap", "classns3_1_1_sat_id_mapper.html#a64a6725022e142a72f9921fdbb030a93", null ],
@@ -45,5 +47,6 @@ var classns3_1_1_sat_id_mapper =
     [ "m_macToUtUserIdMap", "classns3_1_1_sat_id_mapper.html#a656e6318a7c4c58b6284b70c0d157ff8", null ],
     [ "m_traceIdIndex", "classns3_1_1_sat_id_mapper.html#a6f8019cf838999e3fe0cb2f455bbb8af", null ],
     [ "m_utIdIndex", "classns3_1_1_sat_id_mapper.html#a6967effb296c4eddee1b3a3cd8d48f9b", null ],
+    [ "m_utNodeToGwAddressMap", "classns3_1_1_sat_id_mapper.html#ab4f1e10a2760d597d9d917942b6e0d94", null ],
     [ "m_utUserIdIndex", "classns3_1_1_sat_id_mapper.html#a3d0f0830f8a00fed6177f5a009cb282b", null ]
 ];

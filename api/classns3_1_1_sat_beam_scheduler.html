@@ -218,17 +218,35 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae70391cfbcb05a7e8a0719211c722a3c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#ae70391cfbcb05a7e8a0719211c722a3c">AddUt</a> (Address utId, Ptr&lt; <a class="el" href="classns3_1_1_sat_lower_layer_service_conf.html">SatLowerLayerServiceConf</a> &gt; llsConf)</td></tr>
 <tr class="memdesc:ae70391cfbcb05a7e8a0719211c722a3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add UT to scheduler.  <a href="classns3_1_1_sat_beam_scheduler.html#ae70391cfbcb05a7e8a0719211c722a3c">More...</a><br /></td></tr>
 <tr class="separator:ae70391cfbcb05a7e8a0719211c722a3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a564ad85ccf967096a604941c848aeb42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#a564ad85ccf967096a604941c848aeb42">ConnectGw</a> (Mac48Address address)</td></tr>
+<tr class="memdesc:a564ad85ccf967096a604941c848aeb42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect a new GW address to this scheduler.  <a href="classns3_1_1_sat_beam_scheduler.html#a564ad85ccf967096a604941c848aeb42">More...</a><br /></td></tr>
+<tr class="separator:a564ad85ccf967096a604941c848aeb42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5450b11f5c03bb85c1362d351d28be0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#a5450b11f5c03bb85c1362d351d28be0e">ConnectUt</a> (Mac48Address address)</td></tr>
+<tr class="memdesc:a5450b11f5c03bb85c1362d351d28be0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect a new UT address to this scheduler.  <a href="classns3_1_1_sat_beam_scheduler.html#a5450b11f5c03bb85c1362d351d28be0e">More...</a><br /></td></tr>
+<tr class="separator:a5450b11f5c03bb85c1362d351d28be0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaefbd6d4f121624ed8af663c11a163eb"><td class="memItemLeft" align="right" valign="top">Ptr&lt; <a class="el" href="classns3_1_1_sat_timu_message.html">SatTimuMessage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#aaefbd6d4f121624ed8af663c11a163eb">CreateTimu</a> () const</td></tr>
 <tr class="memdesc:aaefbd6d4f121624ed8af663c11a163eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a TIM unicast message containing enough data for a terminal to connect to the beam handled by this <a class="el" href="classns3_1_1_sat_beam_scheduler.html" title="class for module Beam Scheduler.">SatBeamScheduler</a>.  <a href="classns3_1_1_sat_beam_scheduler.html#aaefbd6d4f121624ed8af663c11a163eb">More...</a><br /></td></tr>
 <tr class="separator:aaefbd6d4f121624ed8af663c11a163eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a026f4b44b74867813d5dac88072e9804"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#a026f4b44b74867813d5dac88072e9804">DisconnectGw</a> (Mac48Address address)</td></tr>
+<tr class="memdesc:a026f4b44b74867813d5dac88072e9804"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect a new GW address from this scheduler.  <a href="classns3_1_1_sat_beam_scheduler.html#a026f4b44b74867813d5dac88072e9804">More...</a><br /></td></tr>
+<tr class="separator:a026f4b44b74867813d5dac88072e9804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17748733e1145ab5b935d391ba84a35c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#a17748733e1145ab5b935d391ba84a35c">DisconnectUt</a> (Mac48Address address)</td></tr>
+<tr class="memdesc:a17748733e1145ab5b935d391ba84a35c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect a new UT address from this scheduler.  <a href="classns3_1_1_sat_beam_scheduler.html#a17748733e1145ab5b935d391ba84a35c">More...</a><br /></td></tr>
+<tr class="separator:a17748733e1145ab5b935d391ba84a35c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50f6dc6ae24665a1266a3a8d7fb2a231"><td class="memItemLeft" align="right" valign="top">Address&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#a50f6dc6ae24665a1266a3a8d7fb2a231">GetGwAddress</a> (void) const</td></tr>
 <tr class="memdesc:a50f6dc6ae24665a1266a3a8d7fb2a231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the address of the gateway responsible of this beam.  <a href="classns3_1_1_sat_beam_scheduler.html#a50f6dc6ae24665a1266a3a8d7fb2a231">More...</a><br /></td></tr>
 <tr class="separator:a50f6dc6ae24665a1266a3a8d7fb2a231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac96a9435eeef5592e5639545c8a5eef0"><td class="memItemLeft" align="right" valign="top">Address&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#ac96a9435eeef5592e5639545c8a5eef0">GetSatAddress</a> (void) const</td></tr>
+<tr class="memdesc:ac96a9435eeef5592e5639545c8a5eef0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the address of the satellite responsible of this beam.  <a href="classns3_1_1_sat_beam_scheduler.html#ac96a9435eeef5592e5639545c8a5eef0">More...</a><br /></td></tr>
+<tr class="separator:ac96a9435eeef5592e5639545c8a5eef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a882282ae29f24380041524da042d654d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#a882282ae29f24380041524da042d654d">HasUt</a> ()</td></tr>
+<tr class="memdesc:a882282ae29f24380041524da042d654d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether an UT is handled by this scheduler.  <a href="classns3_1_1_sat_beam_scheduler.html#a882282ae29f24380041524da042d654d">More...</a><br /></td></tr>
+<tr class="separator:a882282ae29f24380041524da042d654d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa72b909bea1138869aec833ffe8c75ce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#aa72b909bea1138869aec833ffe8c75ce">HasUt</a> (Address utId)</td></tr>
 <tr class="memdesc:aa72b909bea1138869aec833ffe8c75ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether an UT is handled by this scheduler.  <a href="classns3_1_1_sat_beam_scheduler.html#aa72b909bea1138869aec833ffe8c75ce">More...</a><br /></td></tr>
 <tr class="separator:aa72b909bea1138869aec833ffe8c75ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf734ce63cc5f721c67806ccbf7b3333"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#aaf734ce63cc5f721c67806ccbf7b3333">Initialize</a> (uint32_t beamId, <a class="el" href="classns3_1_1_sat_beam_scheduler.html#a1fb8ffc32309448283226bfd6ea0390a">SatBeamScheduler::SendCtrlMsgCallback</a> cb, Ptr&lt; <a class="el" href="classns3_1_1_sat_superframe_seq.html">SatSuperframeSeq</a> &gt; seq, uint32_t maxFrameSizeInBytes, Address gwAddress)</td></tr>
-<tr class="separator:aaf734ce63cc5f721c67806ccbf7b3333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84d07c49abd27838b4d1e26a95990382"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#a84d07c49abd27838b4d1e26a95990382">Initialize</a> (uint32_t satId, uint32_t beamId, Ptr&lt; <a class="el" href="classns3_1_1_sat_net_device.html">SatNetDevice</a> &gt; gwNetDevice, Ptr&lt; <a class="el" href="classns3_1_1_sat_orbiter_net_device.html">SatOrbiterNetDevice</a> &gt; orbiterNetDevice, <a class="el" href="classns3_1_1_sat_beam_scheduler.html#a1fb8ffc32309448283226bfd6ea0390a">SatBeamScheduler::SendCtrlMsgCallback</a> cb, Ptr&lt; <a class="el" href="classns3_1_1_sat_superframe_seq.html">SatSuperframeSeq</a> &gt; seq, uint32_t maxFrameSizeInBytes, Address satAddress, Address gwAddress)</td></tr>
+<tr class="separator:a84d07c49abd27838b4d1e26a95990382"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf721a86f301d07fff6cdc4862d959f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#aaf721a86f301d07fff6cdc4862d959f8">RemoveUt</a> (Address utId)</td></tr>
 <tr class="memdesc:aaf721a86f301d07fff6cdc4862d959f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a UT from its <a class="el" href="classns3_1_1_sat_beam_scheduler.html" title="class for module Beam Scheduler.">SatBeamScheduler</a>.  <a href="classns3_1_1_sat_beam_scheduler.html#aaf721a86f301d07fff6cdc4862d959f8">More...</a><br /></td></tr>
 <tr class="separator:aaf721a86f301d07fff6cdc4862d959f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,6 +264,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a56bfd5c1dc9cb5593c4f23ee87147564"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#a56bfd5c1dc9cb5593c4f23ee87147564">SetSendTbtpCallback</a> (<a class="el" href="classns3_1_1_sat_beam_scheduler.html#a36f7fea7e8e5f8172afc92dbd7c5057b">SendTbtpCallback</a> cb)</td></tr>
 <tr class="memdesc:a56bfd5c1dc9cb5593c4f23ee87147564"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the callback to inform NCC a TBTP has been sent.  <a href="classns3_1_1_sat_beam_scheduler.html#a56bfd5c1dc9cb5593c4f23ee87147564">More...</a><br /></td></tr>
 <tr class="separator:a56bfd5c1dc9cb5593c4f23ee87147564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac153222823074ccc3732c96937b64190"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#ac153222823074ccc3732c96937b64190">SetUseLora</a> (bool useLora)</td></tr>
+<tr class="memdesc:ac153222823074ccc3732c96937b64190"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if SNS-3 is used with Lora standard.  <a href="classns3_1_1_sat_beam_scheduler.html#ac153222823074ccc3732c96937b64190">More...</a><br /></td></tr>
+<tr class="separator:ac153222823074ccc3732c96937b64190"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f01a4ec600d4507bed4bcfdce229058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#a9f01a4ec600d4507bed4bcfdce229058">TransferUtToBeam</a> (Address utId, Ptr&lt; <a class="el" href="classns3_1_1_sat_beam_scheduler.html">SatBeamScheduler</a> &gt; destination)</td></tr>
 <tr class="memdesc:a9f01a4ec600d4507bed4bcfdce229058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer ownership of a terminal to the given <a class="el" href="classns3_1_1_sat_beam_scheduler.html" title="class for module Beam Scheduler.">SatBeamScheduler</a>.  <a href="classns3_1_1_sat_beam_scheduler.html#a9f01a4ec600d4507bed4bcfdce229058">More...</a><br /></td></tr>
 <tr class="separator:a9f01a4ec600d4507bed4bcfdce229058"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -339,6 +360,9 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a876310cf4788922f643338aa11566fc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab73e118e5aa35e104963356fc512cbf7"><td class="memItemLeft" align="right" valign="top">Address&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#ab73e118e5aa35e104963356fc512cbf7">m_gwAddress</a></td></tr>
 <tr class="separator:ab73e118e5aa35e104963356fc512cbf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af66cd293cd354d528808a2b9c7d7569c"><td class="memItemLeft" align="right" valign="top">Ptr&lt; <a class="el" href="classns3_1_1_sat_gw_mac.html">SatGwMac</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#af66cd293cd354d528808a2b9c7d7569c">m_gwMac</a></td></tr>
+<tr class="memdesc:af66cd293cd354d528808a2b9c7d7569c"><td class="mdescLeft">&#160;</td><td class="mdescRight">GW MAC linked to this beam.  <a href="classns3_1_1_sat_beam_scheduler.html#af66cd293cd354d528808a2b9c7d7569c">More...</a><br /></td></tr>
+<tr class="separator:af66cd293cd354d528808a2b9c7d7569c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03b791c597695cf4f9f2f79c59e0f3a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#a55008dd5d2973009638bcae7f08d9568">HandoverInformationForward_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#a03b791c597695cf4f9f2f79c59e0f3a3">m_handoverStrategy</a></td></tr>
 <tr class="separator:a03b791c597695cf4f9f2f79c59e0f3a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5187cca36c91faaddb42a95408e7f513"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#a5187cca36c91faaddb42a95408e7f513">m_logonChannelIndex</a></td></tr>
@@ -353,18 +377,26 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a2b6d03bb2c14ae3e4f997e732b451648"><td class="memItemLeft" align="right" valign="top">Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#a2b6d03bb2c14ae3e4f997e732b451648">m_maxTwoWayPropagationDelay</a></td></tr>
 <tr class="memdesc:a2b6d03bb2c14ae3e4f997e732b451648"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum two-way propagation delay estimate between GW-SAT-UT-SAT-GW.  <a href="classns3_1_1_sat_beam_scheduler.html#a2b6d03bb2c14ae3e4f997e732b451648">More...</a><br /></td></tr>
 <tr class="separator:a2b6d03bb2c14ae3e4f997e732b451648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a896e1c27864c88d42f7805b10852d99d"><td class="memItemLeft" align="right" valign="top">Ptr&lt; <a class="el" href="classns3_1_1_sat_orbiter_net_device.html">SatOrbiterNetDevice</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#a896e1c27864c88d42f7805b10852d99d">m_orbiterNetDevice</a></td></tr>
+<tr class="memdesc:a896e1c27864c88d42f7805b10852d99d"><td class="mdescLeft">&#160;</td><td class="mdescRight">OrbiterNetDevice on satellite linked to this beam.  <a href="classns3_1_1_sat_beam_scheduler.html#a896e1c27864c88d42f7805b10852d99d">More...</a><br /></td></tr>
+<tr class="separator:a896e1c27864c88d42f7805b10852d99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ae8ee4471e5f7e2c14763fdf2b7f85f"><td class="memItemLeft" align="right" valign="top">Ptr&lt; RandomVariableStream &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#a8ae8ee4471e5f7e2c14763fdf2b7f85f">m_raChRandomIndex</a></td></tr>
 <tr class="memdesc:a8ae8ee4471e5f7e2c14763fdf2b7f85f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Random variable stream to select RA channel for a UT.  <a href="classns3_1_1_sat_beam_scheduler.html#a8ae8ee4471e5f7e2c14763fdf2b7f85f">More...</a><br /></td></tr>
 <tr class="separator:a8ae8ee4471e5f7e2c14763fdf2b7f85f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a3217296a2826325e131c09815d40f0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#a1a3217296a2826325e131c09815d40f0">m_receivedSatelliteCnoSample</a></td></tr>
 <tr class="memdesc:a1a3217296a2826325e131c09815d40f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates if Cno sample have been received since last C/N0 control message sent.  <a href="classns3_1_1_sat_beam_scheduler.html#a1a3217296a2826325e131c09815d40f0">More...</a><br /></td></tr>
 <tr class="separator:a1a3217296a2826325e131c09815d40f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bb4abb55204c28f631901c472218c1e"><td class="memItemLeft" align="right" valign="top">Address&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#a5bb4abb55204c28f631901c472218c1e">m_satAddress</a></td></tr>
+<tr class="separator:a5bb4abb55204c28f631901c472218c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a108c1c3aa075265237a1d8b45dc4baab"><td class="memItemLeft" align="right" valign="top">Ptr&lt; <a class="el" href="classns3_1_1_sat_cno_estimator.html">SatCnoEstimator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#a108c1c3aa075265237a1d8b45dc4baab">m_satelliteCnoEstimator</a></td></tr>
 <tr class="memdesc:a108c1c3aa075265237a1d8b45dc4baab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimator for the C/N0 from satellite.  <a href="classns3_1_1_sat_beam_scheduler.html#a108c1c3aa075265237a1d8b45dc4baab">More...</a><br /></td></tr>
 <tr class="separator:a108c1c3aa075265237a1d8b45dc4baab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab11694fff2550df369640e18f9107254"><td class="memItemLeft" align="right" valign="top">Address&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#ab11694fff2550df369640e18f9107254">m_satelliteMac</a></td></tr>
 <tr class="memdesc:ab11694fff2550df369640e18f9107254"><td class="mdescLeft">&#160;</td><td class="mdescRight">MAC address of the satellite (used when regenerative)  <a href="classns3_1_1_sat_beam_scheduler.html#ab11694fff2550df369640e18f9107254">More...</a><br /></td></tr>
 <tr class="separator:ab11694fff2550df369640e18f9107254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9adf3ccd623f55707167fff899def8a9"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#a9adf3ccd623f55707167fff899def8a9">m_satId</a></td></tr>
+<tr class="memdesc:a9adf3ccd623f55707167fff899def8a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the satellite using this beam.  <a href="classns3_1_1_sat_beam_scheduler.html#a9adf3ccd623f55707167fff899def8a9">More...</a><br /></td></tr>
+<tr class="separator:a9adf3ccd623f55707167fff899def8a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76321a57f65ed67d832a5273b19c672f"><td class="memItemLeft" align="right" valign="top">Ptr&lt; <a class="el" href="classns3_1_1_sat_superframe_allocator.html">SatSuperframeAllocator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#a76321a57f65ed67d832a5273b19c672f">m_superframeAllocator</a></td></tr>
 <tr class="memdesc:a76321a57f65ed67d832a5273b19c672f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Superframe allocator to maintain load information of the frames and their configurations.  <a href="classns3_1_1_sat_beam_scheduler.html#a76321a57f65ed67d832a5273b19c672f">More...</a><br /></td></tr>
 <tr class="separator:a76321a57f65ed67d832a5273b19c672f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -389,6 +421,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a43f1ea14f7cb95e0af5d57612c63fa4b"><td class="memItemLeft" align="right" valign="top">TracedCallback&lt; uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#a43f1ea14f7cb95e0af5d57612c63fa4b">m_usableCapacityTrace</a></td></tr>
 <tr class="memdesc:a43f1ea14f7cb95e0af5d57612c63fa4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trace usable capacity.  <a href="classns3_1_1_sat_beam_scheduler.html#a43f1ea14f7cb95e0af5d57612c63fa4b">More...</a><br /></td></tr>
 <tr class="separator:a43f1ea14f7cb95e0af5d57612c63fa4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc7095b3ba82116753cd665496a283a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#adc7095b3ba82116753cd665496a283a3">m_useLora</a></td></tr>
+<tr class="memdesc:adc7095b3ba82116753cd665496a283a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating if lora standard is used.  <a href="classns3_1_1_sat_beam_scheduler.html#adc7095b3ba82116753cd665496a283a3">More...</a><br /></td></tr>
+<tr class="separator:adc7095b3ba82116753cd665496a283a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af30b2a380c66c9c0e2bef6af0d667c8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#a68408153198aa53b8c7bc65cae8b4977">UtInfoMap_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_beam_scheduler.html#af30b2a380c66c9c0e2bef6af0d667c8b">m_utInfos</a></td></tr>
 <tr class="memdesc:af30b2a380c66c9c0e2bef6af0d667c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map to store UT information in beam for updating purposes.  <a href="classns3_1_1_sat_beam_scheduler.html#af30b2a380c66c9c0e2bef6af0d667c8b">More...</a><br /></td></tr>
 <tr class="separator:af30b2a380c66c9c0e2bef6af0d667c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -414,7 +449,7 @@ Private Attributes</h2></td></tr>
 </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00073">73</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00080">80</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a92f046d31cd1b7d1d903d35086d2fe6b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a92f046d31cd1b7d1d903d35086d2fe6b">&#9670;&nbsp;</a></span>BacklogRequestsTraceCallback</h2>
@@ -443,7 +478,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00221">221</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00243">243</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
 </div>
 </div>
@@ -467,7 +502,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00251">251</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00273">273</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
 </div>
 </div>
@@ -491,7 +526,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Result of sending, true success or false failure </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00112">112</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00119">119</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
 </div>
 </div>
@@ -513,7 +548,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00117">117</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00124">124</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
 </div>
 </div>
@@ -536,7 +571,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00123">123</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00130">130</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
 </div>
 </div>
@@ -560,7 +595,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00243">243</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00265">265</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
 </div>
 </div>
@@ -584,7 +619,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00235">235</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00257">257</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
 </div>
 </div>
@@ -610,7 +645,7 @@ Private Attributes</h2></td></tr>
 
 <p>Map container to store UT information. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00399">399</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00463">463</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
 </div>
 </div>
@@ -636,7 +671,7 @@ Private Attributes</h2></td></tr>
 
 <p>Container to store capacity request information for the UTs. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00404">404</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00468">468</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
 </div>
 </div>
@@ -662,7 +697,7 @@ Private Attributes</h2></td></tr>
 
 <p>Pair to store capacity request information for the UT. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00394">394</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00458">458</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
 </div>
 </div>
@@ -686,7 +721,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00228">228</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00250">250</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
 </div>
 </div>
@@ -709,7 +744,7 @@ Private Attributes</h2></td></tr>
 <tr><td class="fieldname"><a id="a55008dd5d2973009638bcae7f08d9568a40722a9279177bd9ffe75d87574c6ccd"></a>CHECK_GATEWAY&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00080">80</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00087">87</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
 </div>
 </div>
@@ -732,7 +767,7 @@ Private Attributes</h2></td></tr>
 <p>Construct a <a class="el" href="classns3_1_1_sat_beam_scheduler.html" title="class for module Beam Scheduler.">SatBeamScheduler</a>. </p>
 <p>This is the constructor for the <a class="el" href="classns3_1_1_sat_beam_scheduler.html" title="class for module Beam Scheduler.">SatBeamScheduler</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00277">277</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00282">282</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
 </div>
 </div>
@@ -754,7 +789,7 @@ Private Attributes</h2></td></tr>
 <p>Destroy a <a class="el" href="classns3_1_1_sat_beam_scheduler.html" title="class for module Beam Scheduler.">SatBeamScheduler</a>. </p>
 <p>This is the destructor for the <a class="el" href="classns3_1_1_sat_beam_scheduler.html" title="class for module Beam Scheduler.">SatBeamScheduler</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00292">292</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00298">298</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
 </div>
 </div>
@@ -791,11 +826,11 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00686">686</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00715">715</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00535">m_maxBbFrameSize</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00466">m_superframeSeq</a>, and <a class="el" href="satellite-const-variables_8h_source.html#l00065">ns3::SatConstVariables::SUPERFRAME_SEQUENCE</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00614">m_maxBbFrameSize</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00545">m_superframeSeq</a>, and <a class="el" href="satellite-const-variables_8h_source.html#l00068">ns3::SatConstVariables::SUPERFRAME_SEQUENCE</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00603">Schedule()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00627">Schedule()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -805,7 +840,7 @@ Private Attributes</h2></td></tr>
 <map name="aclassns3_1_1_sat_beam_scheduler_a2867b358cc33a29f1813328b12bf0958_icgraph" id="aclassns3_1_1_sat_beam_scheduler_a2867b358cc33a29f1813328b12bf0958_icgraph">
 <area shape="rect" title="Add RA channel information to TBTP(s)." alt="" coords="453,5,629,47"/>
 <area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#ac1131def0bd2ad51c533f486952bace3" title="Schedule UTs added (registered) to scheduler." alt="" coords="229,5,405,47"/>
-<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#aaf734ce63cc5f721c67806ccbf7b3333" title=" " alt="" coords="5,5,181,47"/>
+<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#a84d07c49abd27838b4d1e26a95990382" title=" " alt="" coords="5,5,181,47"/>
 </map>
 </div>
 
@@ -847,9 +882,9 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Index of the RA channel allocated to added UT </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00431">431</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00447">447</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00468">AddUtInfo()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00564">CreateCnoEstimator()</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00540">m_controlSlotInterval</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00545">m_controlSlotsEnabled</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00501">m_logonChannelIndex</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00496">m_raChRandomIndex</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00466">m_superframeSeq</a>, and <a class="el" href="satellite-const-variables_8h_source.html#l00065">ns3::SatConstVariables::SUPERFRAME_SEQUENCE</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00484">AddUtInfo()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00588">CreateCnoEstimator()</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00619">m_controlSlotInterval</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00624">m_controlSlotsEnabled</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00580">m_logonChannelIndex</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00575">m_raChRandomIndex</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00545">m_superframeSeq</a>, and <a class="el" href="satellite-const-variables_8h_source.html#l00068">ns3::SatConstVariables::SUPERFRAME_SEQUENCE</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -899,11 +934,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00468">468</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00484">484</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-frame-allocator_8h_source.html#l00115">ns3::SatFrameAllocator::SatFrameAllocReq::m_address</a>, <a class="el" href="satellite-frame-allocator_8h_source.html#l00114">ns3::SatFrameAllocator::SatFrameAllocReq::m_cno</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00545">m_controlSlotsEnabled</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00516">m_superframeAllocator</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00486">m_utInfos</a>, and <a class="el" href="satellite-beam-scheduler_8h_source.html#l00491">m_utRequestInfos</a>.</p>
+<p class="reference">References <a class="el" href="satellite-frame-allocator_8h_source.html#l00121">ns3::SatFrameAllocator::SatFrameAllocReq::m_address</a>, <a class="el" href="satellite-frame-allocator_8h_source.html#l00120">ns3::SatFrameAllocator::SatFrameAllocReq::m_cno</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00624">m_controlSlotsEnabled</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00595">m_superframeAllocator</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00565">m_utInfos</a>, and <a class="el" href="satellite-beam-scheduler_8h_source.html#l00570">m_utRequestInfos</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00431">AddUt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00447">AddUt()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -915,6 +950,66 @@ Private Attributes</h2></td></tr>
 <area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#ae70391cfbcb05a7e8a0719211c722a3c" title="Add UT to scheduler." alt="" coords="5,5,181,47"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a564ad85ccf967096a604941c848aeb42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a564ad85ccf967096a604941c848aeb42">&#9670;&nbsp;</a></span>ConnectGw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ns3::SatBeamScheduler::ConnectGw </td>
+          <td>(</td>
+          <td class="paramtype">Mac48Address&#160;</td>
+          <td class="paramname"><em>address</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Connect a new GW address to this scheduler. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>The GW address to connect </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01037">1037</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00530">m_beamId</a>, and <a class="el" href="satellite-beam-scheduler_8h_source.html#l00540">m_orbiterNetDevice</a>.</p>
+
+</div>
+</div>
+<a id="a5450b11f5c03bb85c1362d351d28be0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5450b11f5c03bb85c1362d351d28be0e">&#9670;&nbsp;</a></span>ConnectUt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ns3::SatBeamScheduler::ConnectUt </td>
+          <td>(</td>
+          <td class="paramtype">Mac48Address&#160;</td>
+          <td class="paramname"><em>address</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Connect a new UT address to this scheduler. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>The UT address to connect </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01019">1019</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00530">m_beamId</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00535">m_gwMac</a>, and <a class="el" href="satellite-beam-scheduler_8h_source.html#l00540">m_orbiterNetDevice</a>.</p>
 
 </div>
 </div>
@@ -944,11 +1039,11 @@ Private Attributes</h2></td></tr>
 <p>Create estimator for the UT according to set attributes. </p>
 <dl class="section return"><dt>Returns</dt><dd>pointer to created estimator </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00564">564</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00588">588</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-cno-estimator_8h_source.html#l00049">ns3::SatCnoEstimator::AVERAGE</a>, <a class="el" href="satellite-cno-estimator_8h_source.html#l00047">ns3::SatCnoEstimator::LAST</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00511">m_cnoEstimationWindow</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00506">m_cnoEstimatorMode</a>, and <a class="el" href="satellite-cno-estimator_8h_source.html#l00048">ns3::SatCnoEstimator::MINIMUM</a>.</p>
+<p class="reference">References <a class="el" href="satellite-cno-estimator_8h_source.html#l00051">ns3::SatCnoEstimator::AVERAGE</a>, <a class="el" href="satellite-cno-estimator_8h_source.html#l00049">ns3::SatCnoEstimator::LAST</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00590">m_cnoEstimationWindow</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00585">m_cnoEstimatorMode</a>, and <a class="el" href="satellite-cno-estimator_8h_source.html#l00050">ns3::SatCnoEstimator::MINIMUM</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00431">AddUt()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00344">Initialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00447">AddUt()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00352">Initialize()</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -958,7 +1053,7 @@ Private Attributes</h2></td></tr>
 <map name="aclassns3_1_1_sat_beam_scheduler_a734be32fc953864654bf94f705ddea27_icgraph" id="aclassns3_1_1_sat_beam_scheduler_a734be32fc953864654bf94f705ddea27_icgraph">
 <area shape="rect" title="Create estimator for the UT according to set attributes." alt="" coords="229,39,405,80"/>
 <area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#ae70391cfbcb05a7e8a0719211c722a3c" title="Add UT to scheduler." alt="" coords="5,5,181,47"/>
-<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#aaf734ce63cc5f721c67806ccbf7b3333" title=" " alt="" coords="5,71,181,112"/>
+<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#a84d07c49abd27838b4d1e26a95990382" title=" " alt="" coords="5,71,181,112"/>
 </map>
 </div>
 
@@ -981,9 +1076,69 @@ Private Attributes</h2></td></tr>
 
 <p>Create a TIM unicast message containing enough data for a terminal to connect to the beam handled by this <a class="el" href="classns3_1_1_sat_beam_scheduler.html" title="class for module Beam Scheduler.">SatBeamScheduler</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01005">1005</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01069">1069</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00461">m_beamId</a>, and <a class="el" href="satellite-beam-scheduler_8h_source.html#l00630">m_gwAddress</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00530">m_beamId</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00711">m_gwAddress</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00709">m_satAddress</a>, and <a class="el" href="satellite-beam-scheduler_8h_source.html#l00525">m_satId</a>.</p>
+
+</div>
+</div>
+<a id="a026f4b44b74867813d5dac88072e9804"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a026f4b44b74867813d5dac88072e9804">&#9670;&nbsp;</a></span>DisconnectGw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ns3::SatBeamScheduler::DisconnectGw </td>
+          <td>(</td>
+          <td class="paramtype">Mac48Address&#160;</td>
+          <td class="paramname"><em>address</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disconnect a new GW address from this scheduler. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>The GW address to disconnect </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01045">1045</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00530">m_beamId</a>, and <a class="el" href="satellite-beam-scheduler_8h_source.html#l00540">m_orbiterNetDevice</a>.</p>
+
+</div>
+</div>
+<a id="a17748733e1145ab5b935d391ba84a35c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17748733e1145ab5b935d391ba84a35c">&#9670;&nbsp;</a></span>DisconnectUt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ns3::SatBeamScheduler::DisconnectUt </td>
+          <td>(</td>
+          <td class="paramtype">Mac48Address&#160;</td>
+          <td class="paramname"><em>address</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disconnect a new UT address from this scheduler. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>The UT address to disconnect </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01028">1028</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00530">m_beamId</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00535">m_gwMac</a>, and <a class="el" href="satellite-beam-scheduler_8h_source.html#l00540">m_orbiterNetDevice</a>.</p>
 
 </div>
 </div>
@@ -1013,9 +1168,9 @@ Private Attributes</h2></td></tr>
 
 <p>Dispose actions for <a class="el" href="classns3_1_1_sat_beam_scheduler.html" title="class for module Beam Scheduler.">SatBeamScheduler</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00298">298</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00304">304</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00476">m_txCallback</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00555">m_txCallback</a>.</p>
 
 </div>
 </div>
@@ -1044,11 +1199,11 @@ Private Attributes</h2></td></tr>
 
 <p>Do pre-allocation of the symbols per UT/RC, before time slot generation. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00837">837</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00866">866</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00516">m_superframeAllocator</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00486">m_utInfos</a>, and <a class="el" href="satellite-beam-scheduler_8h_source.html#l00491">m_utRequestInfos</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00595">m_superframeAllocator</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00565">m_utInfos</a>, and <a class="el" href="satellite-beam-scheduler_8h_source.html#l00570">m_utRequestInfos</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00603">Schedule()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00627">Schedule()</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -1058,7 +1213,7 @@ Private Attributes</h2></td></tr>
 <map name="aclassns3_1_1_sat_beam_scheduler_a2a8a2d78eba488f8cba46eca0e6b1030_icgraph" id="aclassns3_1_1_sat_beam_scheduler_a2a8a2d78eba488f8cba46eca0e6b1030_icgraph">
 <area shape="rect" title="Do pre&#45;allocation of the symbols per UT/RC, before time slot generation." alt="" coords="453,5,648,47"/>
 <area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#ac1131def0bd2ad51c533f486952bace3" title="Schedule UTs added (registered) to scheduler." alt="" coords="229,5,405,47"/>
-<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#aaf734ce63cc5f721c67806ccbf7b3333" title=" " alt="" coords="5,5,181,47"/>
+<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#a84d07c49abd27838b4d1e26a95990382" title=" " alt="" coords="5,5,181,47"/>
 </map>
 </div>
 
@@ -1090,9 +1245,41 @@ Private Attributes</h2></td></tr>
 
 <p>Return the address of the gateway responsible of this beam. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00277">277</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00335">335</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00630">m_gwAddress</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00711">m_gwAddress</a>.</p>
+
+</div>
+</div>
+<a id="ac96a9435eeef5592e5639545c8a5eef0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac96a9435eeef5592e5639545c8a5eef0">&#9670;&nbsp;</a></span>GetSatAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Address ns3::SatBeamScheduler::GetSatAddress </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the address of the satellite responsible of this beam. </p>
+
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00327">327</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00709">m_satAddress</a>.</p>
 
 </div>
 </div>
@@ -1123,14 +1310,53 @@ Private Attributes</h2></td></tr>
 <p>Get the type ID. </p>
 <dl class="section return"><dt>Returns</dt><dd>the object TypeId </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00190">190</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00192">192</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-cno-estimator_8h_source.html#l00049">ns3::SatCnoEstimator::AVERAGE</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00082">BASIC</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00083">CHECK_GATEWAY</a>, <a class="el" href="satellite-enums_8h_source.html#l02260">ns3::SatEnums::DEFAULT_SUPERFRAME_ALLOCATOR</a>, <a class="el" href="satellite-cno-estimator_8h_source.html#l00047">ns3::SatCnoEstimator::LAST</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00550">m_backlogRequestsTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00511">m_cnoEstimationWindow</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00506">m_cnoEstimatorMode</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00540">m_controlSlotInterval</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00545">m_controlSlotsEnabled</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00580">m_exceedingCapacityTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00565">m_frameLoadTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00560">m_frameUtLoadTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00632">m_handoverStrategy</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00530">m_maxTbtpTxAndProcessingDelay</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00523">m_maxTwoWayPropagationDelay</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00637">m_superframeAllocatorType</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00575">m_unmetCapacityTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00570">m_usableCapacityTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00555">m_waveformTrace</a>, and <a class="el" href="satellite-cno-estimator_8h_source.html#l00048">ns3::SatCnoEstimator::MINIMUM</a>.</p>
+<p class="reference">References <a class="el" href="satellite-cno-estimator_8h_source.html#l00051">ns3::SatCnoEstimator::AVERAGE</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00089">BASIC</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00090">CHECK_GATEWAY</a>, <a class="el" href="satellite-enums_8h_source.html#l02261">ns3::SatEnums::DEFAULT_SUPERFRAME_ALLOCATOR</a>, <a class="el" href="satellite-cno-estimator_8h_source.html#l00049">ns3::SatCnoEstimator::LAST</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00629">m_backlogRequestsTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00590">m_cnoEstimationWindow</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00585">m_cnoEstimatorMode</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00619">m_controlSlotInterval</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00624">m_controlSlotsEnabled</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00659">m_exceedingCapacityTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00644">m_frameLoadTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00639">m_frameUtLoadTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00713">m_handoverStrategy</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00609">m_maxTbtpTxAndProcessingDelay</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00602">m_maxTwoWayPropagationDelay</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00718">m_superframeAllocatorType</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00654">m_unmetCapacityTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00649">m_usableCapacityTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00634">m_waveformTrace</a>, and <a class="el" href="satellite-cno-estimator_8h_source.html#l00050">ns3::SatCnoEstimator::MINIMUM</a>.</p>
+
+</div>
+</div>
+<a id="a882282ae29f24380041524da042d654d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a882282ae29f24380041524da042d654d">&#9670;&nbsp;</a></span>HasUt() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ns3::SatBeamScheduler::HasUt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check whether an UT is handled by this scheduler. </p>
+<dl class="section return"><dt>Returns</dt><dd>Whether or not at least one UT is handled by this beam </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00547">547</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00565">m_utInfos</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00321">SendTo()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00555">UpdateUtCno()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00577">UtCrReceived()</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classns3_1_1_sat_beam_scheduler_a882282ae29f24380041524da042d654d_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_beam_scheduler_a882282ae29f24380041524da042d654d_icgraph" alt=""/></div>
+<map name="aclassns3_1_1_sat_beam_scheduler_a882282ae29f24380041524da042d654d_icgraph" id="aclassns3_1_1_sat_beam_scheduler_a882282ae29f24380041524da042d654d_icgraph">
+<area shape="rect" title="Check whether an UT is handled by this scheduler." alt="" coords="229,71,405,112"/>
+<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#a6840587a007880aa6ba3b4990407cecd" title="Send control message to an UT into the beam." alt="" coords="5,5,181,47"/>
+<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#ad7f36c311b772323afa31e811d84dee9" title="Update UT C/N0 info with the latest value." alt="" coords="5,71,181,112"/>
+<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#a0526595235f5ff92eb90bccf2270dc0e" title="Receive capacity requests from UTs." alt="" coords="5,136,181,177"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="aa72b909bea1138869aec833ffe8c75ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa72b909bea1138869aec833ffe8c75ce">&#9670;&nbsp;</a></span>HasUt()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa72b909bea1138869aec833ffe8c75ce">&#9670;&nbsp;</a></span>HasUt() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1154,29 +1380,14 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether or not this UT is in this beam </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00522">522</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00538">538</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00486">m_utInfos</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00315">SendTo()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00531">UpdateUtCno()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00553">UtCrReceived()</a>.</p>
-<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classns3_1_1_sat_beam_scheduler_aa72b909bea1138869aec833ffe8c75ce_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_beam_scheduler_aa72b909bea1138869aec833ffe8c75ce_icgraph" alt=""/></div>
-<map name="aclassns3_1_1_sat_beam_scheduler_aa72b909bea1138869aec833ffe8c75ce_icgraph" id="aclassns3_1_1_sat_beam_scheduler_aa72b909bea1138869aec833ffe8c75ce_icgraph">
-<area shape="rect" title="Check whether an UT is handled by this scheduler." alt="" coords="229,71,405,112"/>
-<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#a6840587a007880aa6ba3b4990407cecd" title="Send control message to an UT into the beam." alt="" coords="5,5,181,47"/>
-<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#ad7f36c311b772323afa31e811d84dee9" title="Update UT C/N0 info with the latest value." alt="" coords="5,71,181,112"/>
-<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#a0526595235f5ff92eb90bccf2270dc0e" title="Receive capacity requests from UTs." alt="" coords="5,136,181,177"/>
-</map>
-</div>
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00565">m_utInfos</a>.</p>
 
 </div>
 </div>
-<a id="aaf734ce63cc5f721c67806ccbf7b3333"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf734ce63cc5f721c67806ccbf7b3333">&#9670;&nbsp;</a></span>Initialize()</h2>
+<a id="a84d07c49abd27838b4d1e26a95990382"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84d07c49abd27838b4d1e26a95990382">&#9670;&nbsp;</a></span>Initialize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1185,7 +1396,25 @@ Private Attributes</h2></td></tr>
           <td class="memname">void ns3::SatBeamScheduler::Initialize </td>
           <td>(</td>
           <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>satId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>beamId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Ptr&lt; <a class="el" href="classns3_1_1_sat_net_device.html">SatNetDevice</a> &gt;&#160;</td>
+          <td class="paramname"><em>gwNetDevice</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Ptr&lt; <a class="el" href="classns3_1_1_sat_orbiter_net_device.html">SatOrbiterNetDevice</a> &gt;&#160;</td>
+          <td class="paramname"><em>orbiterNetDevice</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1209,6 +1438,12 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Address&#160;</td>
+          <td class="paramname"><em>satAddress</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Address&#160;</td>
           <td class="paramname"><em>gwAddress</em>&#160;</td>
         </tr>
         <tr>
@@ -1221,9 +1456,13 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">beamId</td><td>ID of the beam which for callback is set </td></tr>
+    <tr><td class="paramname">satId</td><td>ID of the satellite using the beam which for callback is set </td></tr>
+    <tr><td class="paramname">gwNetDevice</td><td>GW NetDevice linked to this beam </td></tr>
+    <tr><td class="paramname">orbiterNetDevice</td><td>OrbiterNetDevice on satellite linked to this beam </td></tr>
     <tr><td class="paramname">cb</td><td>callback to invoke whenever a TBTP is ready for sending and must be forwarded to the Beam UTs. </td></tr>
     <tr><td class="paramname">seq</td><td>Superframe sequence. </td></tr>
     <tr><td class="paramname">maxFrameSizeInBytes</td><td>Maximum non fragmented BB frame size with most robust ModCod </td></tr>
+    <tr><td class="paramname">satAddress</td><td>Mac address of the satellite responsible for this beam </td></tr>
     <tr><td class="paramname">gwAddress</td><td>Mac address of the gateway responsible for this beam </td></tr>
   </table>
   </dd>
@@ -1231,16 +1470,16 @@ Private Attributes</h2></td></tr>
 <p>Calculating to start time for super frame counts to start the scheduling from. The offset is calculated by estimating the maximum delay between GW and UT, so that the sent TBTP will be received by UT in time to be able to still send the packet in time.</p>
 <p>It is assumed currently, that a random RA channel index is selected for each UT. If there is only one RA possible RA channel, then all UTs shall be using the same channel.</p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00344">344</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00352">352</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00564">CreateCnoEstimator()</a>, <a class="el" href="satellite-enums_8h_source.html#l02260">ns3::SatEnums::DEFAULT_SUPERFRAME_ALLOCATOR</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00461">m_beamId</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00630">m_gwAddress</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00501">m_logonChannelIndex</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00535">m_maxBbFrameSize</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00530">m_maxTbtpTxAndProcessingDelay</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00523">m_maxTwoWayPropagationDelay</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00496">m_raChRandomIndex</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00642">m_satelliteCnoEstimator</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00516">m_superframeAllocator</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00637">m_superframeAllocatorType</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00471">m_superFrameCounter</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00466">m_superframeSeq</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00476">m_txCallback</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00603">Schedule()</a>, and <a class="el" href="satellite-const-variables_8h_source.html#l00065">ns3::SatConstVariables::SUPERFRAME_SEQUENCE</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00588">CreateCnoEstimator()</a>, <a class="el" href="satellite-enums_8h_source.html#l02261">ns3::SatEnums::DEFAULT_SUPERFRAME_ALLOCATOR</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00530">m_beamId</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00711">m_gwAddress</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00535">m_gwMac</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00580">m_logonChannelIndex</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00614">m_maxBbFrameSize</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00609">m_maxTbtpTxAndProcessingDelay</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00602">m_maxTwoWayPropagationDelay</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00540">m_orbiterNetDevice</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00575">m_raChRandomIndex</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00709">m_satAddress</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00723">m_satelliteCnoEstimator</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00525">m_satId</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00595">m_superframeAllocator</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00718">m_superframeAllocatorType</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00550">m_superFrameCounter</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00545">m_superframeSeq</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00555">m_txCallback</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00627">Schedule()</a>, and <a class="el" href="satellite-const-variables_8h_source.html#l00068">ns3::SatConstVariables::SUPERFRAME_SEQUENCE</a>.</p>
 <div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-8-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classns3_1_1_sat_beam_scheduler_aaf734ce63cc5f721c67806ccbf7b3333_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_beam_scheduler_aaf734ce63cc5f721c67806ccbf7b3333_cgraph" alt=""/></div>
-<map name="aclassns3_1_1_sat_beam_scheduler_aaf734ce63cc5f721c67806ccbf7b3333_cgraph" id="aclassns3_1_1_sat_beam_scheduler_aaf734ce63cc5f721c67806ccbf7b3333_cgraph">
+<div class="center"><img src="classns3_1_1_sat_beam_scheduler_a84d07c49abd27838b4d1e26a95990382_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_beam_scheduler_a84d07c49abd27838b4d1e26a95990382_cgraph" alt=""/></div>
+<map name="aclassns3_1_1_sat_beam_scheduler_a84d07c49abd27838b4d1e26a95990382_cgraph" id="aclassns3_1_1_sat_beam_scheduler_a84d07c49abd27838b4d1e26a95990382_cgraph">
 <area shape="rect" title=" " alt="" coords="5,137,181,179"/>
 <area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#a734be32fc953864654bf94f705ddea27" title="Create estimator for the UT according to set attributes." alt="" coords="229,104,405,145"/>
 <area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#ac1131def0bd2ad51c533f486952bace3" title="Schedule UTs added (registered) to scheduler." alt="" coords="229,169,405,211"/>
@@ -1280,9 +1519,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00989">989</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01053">1053</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00486">m_utInfos</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00499">RemoveUtInfo()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00565">m_utInfos</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00515">RemoveUtInfo()</a>.</p>
 <div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
@@ -1321,11 +1560,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00499">499</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00515">515</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00545">m_controlSlotsEnabled</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00516">m_superframeAllocator</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00486">m_utInfos</a>, and <a class="el" href="satellite-beam-scheduler_8h_source.html#l00491">m_utRequestInfos</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00624">m_controlSlotsEnabled</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00595">m_superframeAllocator</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00565">m_utInfos</a>, and <a class="el" href="satellite-beam-scheduler_8h_source.html#l00570">m_utRequestInfos</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00989">RemoveUt()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00951">TransferUtToBeam()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01053">RemoveUt()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00980">TransferUtToBeam()</a>.</p>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -1357,9 +1596,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01016">1016</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01082">1082</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00501">m_logonChannelIndex</a>, and <a class="el" href="satellite-beam-scheduler_8h_source.html#l00496">m_raChRandomIndex</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00580">m_logonChannelIndex</a>, and <a class="el" href="satellite-beam-scheduler_8h_source.html#l00575">m_raChRandomIndex</a>.</p>
 
 </div>
 </div>
@@ -1388,11 +1627,11 @@ Private Attributes</h2></td></tr>
 
 <p>Schedule UTs added (registered) to scheduler. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00603">603</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00627">627</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00686">AddRaChannels()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00837">DoPreResourceAllocation()</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00580">m_exceedingCapacityTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00565">m_frameLoadTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00560">m_frameUtLoadTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00535">m_maxBbFrameSize</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00516">m_superframeAllocator</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00471">m_superFrameCounter</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00466">m_superframeSeq</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00481">m_txTbtpCallback</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00575">m_unmetCapacityTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00570">m_usableCapacityTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00486">m_utInfos</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00555">m_waveformTrace</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00306">Send()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00587">SendCnoToSatellite()</a>, <a class="el" href="satellite-const-variables_8h_source.html#l00065">ns3::SatConstVariables::SUPERFRAME_SEQUENCE</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00861">UpdateDamaEntriesWithAllocs()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00748">UpdateDamaEntriesWithReqs()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00715">AddRaChannels()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00866">DoPreResourceAllocation()</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00659">m_exceedingCapacityTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00644">m_frameLoadTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00639">m_frameUtLoadTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00614">m_maxBbFrameSize</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00595">m_superframeAllocator</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00550">m_superFrameCounter</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00545">m_superframeSeq</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00560">m_txTbtpCallback</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00654">m_unmetCapacityTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00649">m_usableCapacityTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00738">m_useLora</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00565">m_utInfos</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00634">m_waveformTrace</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00312">Send()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00611">SendCnoToSatellite()</a>, <a class="el" href="satellite-const-variables_8h_source.html#l00068">ns3::SatConstVariables::SUPERFRAME_SEQUENCE</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00890">UpdateDamaEntriesWithAllocs()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00777">UpdateDamaEntriesWithReqs()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00344">Initialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00352">Initialize()</a>.</p>
 <div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">
@@ -1418,7 +1657,7 @@ Private Attributes</h2></td></tr>
 <div class="center"><img src="classns3_1_1_sat_beam_scheduler_ac1131def0bd2ad51c533f486952bace3_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_beam_scheduler_ac1131def0bd2ad51c533f486952bace3_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_beam_scheduler_ac1131def0bd2ad51c533f486952bace3_icgraph" id="aclassns3_1_1_sat_beam_scheduler_ac1131def0bd2ad51c533f486952bace3_icgraph">
 <area shape="rect" title="Schedule UTs added (registered) to scheduler." alt="" coords="229,5,405,47"/>
-<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#aaf734ce63cc5f721c67806ccbf7b3333" title=" " alt="" coords="5,5,181,47"/>
+<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#a84d07c49abd27838b4d1e26a95990382" title=" " alt="" coords="5,5,181,47"/>
 </map>
 </div>
 
@@ -1449,11 +1688,11 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if sending is success, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00306">306</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00312">312</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00476">m_txCallback</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00555">m_txCallback</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00603">Schedule()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00627">Schedule()</a>.</p>
 <div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-13-summary" class="dynsummary" style="display:block;">
@@ -1463,7 +1702,7 @@ Private Attributes</h2></td></tr>
 <map name="aclassns3_1_1_sat_beam_scheduler_a5e440aab5f1e1a8d9ae3f79da8c98245_icgraph" id="aclassns3_1_1_sat_beam_scheduler_a5e440aab5f1e1a8d9ae3f79da8c98245_icgraph">
 <area shape="rect" title="Send control messages to the beam." alt="" coords="453,5,629,47"/>
 <area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#ac1131def0bd2ad51c533f486952bace3" title="Schedule UTs added (registered) to scheduler." alt="" coords="229,5,405,47"/>
-<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#aaf734ce63cc5f721c67806ccbf7b3333" title=" " alt="" coords="5,5,181,47"/>
+<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#a84d07c49abd27838b4d1e26a95990382" title=" " alt="" coords="5,5,181,47"/>
 </map>
 </div>
 
@@ -1494,11 +1733,11 @@ Private Attributes</h2></td></tr>
 
 <p>Send an estimation of cno to satellite, if samples have been received. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00587">587</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00611">611</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00652">m_receivedSatelliteCnoSample</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00642">m_satelliteCnoEstimator</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00647">m_satelliteMac</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00329">SendToSatellite()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00733">m_receivedSatelliteCnoSample</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00723">m_satelliteCnoEstimator</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00728">m_satelliteMac</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00335">SendToSatellite()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00603">Schedule()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00627">Schedule()</a>.</p>
 <div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-14-summary" class="dynsummary" style="display:block;">
@@ -1519,7 +1758,7 @@ Private Attributes</h2></td></tr>
 <map name="aclassns3_1_1_sat_beam_scheduler_a9c52ad984023978e1a30598d97a825b0_icgraph" id="aclassns3_1_1_sat_beam_scheduler_a9c52ad984023978e1a30598d97a825b0_icgraph">
 <area shape="rect" title="Send an estimation of cno to satellite, if samples have been received." alt="" coords="453,5,629,47"/>
 <area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#ac1131def0bd2ad51c533f486952bace3" title="Schedule UTs added (registered) to scheduler." alt="" coords="229,5,405,47"/>
-<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#aaf734ce63cc5f721c67806ccbf7b3333" title=" " alt="" coords="5,5,181,47"/>
+<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#a84d07c49abd27838b4d1e26a95990382" title=" " alt="" coords="5,5,181,47"/>
 </map>
 </div>
 
@@ -1561,9 +1800,9 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if sending is success, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00315">315</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00321">321</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00522">HasUt()</a>, and <a class="el" href="satellite-beam-scheduler_8h_source.html#l00476">m_txCallback</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00547">HasUt()</a>, and <a class="el" href="satellite-beam-scheduler_8h_source.html#l00555">m_txCallback</a>.</p>
 <div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-16-summary" class="dynsummary" style="display:block;">
@@ -1572,7 +1811,7 @@ Private Attributes</h2></td></tr>
 <div class="center"><img src="classns3_1_1_sat_beam_scheduler_a6840587a007880aa6ba3b4990407cecd_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_beam_scheduler_a6840587a007880aa6ba3b4990407cecd_cgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_beam_scheduler_a6840587a007880aa6ba3b4990407cecd_cgraph" id="aclassns3_1_1_sat_beam_scheduler_a6840587a007880aa6ba3b4990407cecd_cgraph">
 <area shape="rect" title="Send control message to an UT into the beam." alt="" coords="5,5,181,47"/>
-<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#aa72b909bea1138869aec833ffe8c75ce" title="Check whether an UT is handled by this scheduler." alt="" coords="229,5,405,47"/>
+<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#a882282ae29f24380041524da042d654d" title="Check whether an UT is handled by this scheduler." alt="" coords="229,5,405,47"/>
 </map>
 </div>
 
@@ -1614,11 +1853,11 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if sending is success, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00329">329</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00335">335</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00476">m_txCallback</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00555">m_txCallback</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00587">SendCnoToSatellite()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00611">SendCnoToSatellite()</a>.</p>
 <div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-17-summary" class="dynsummary" style="display:block;">
@@ -1629,7 +1868,7 @@ Private Attributes</h2></td></tr>
 <area shape="rect" title="Send control message to the satellite." alt="" coords="677,5,853,47"/>
 <area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#a9c52ad984023978e1a30598d97a825b0" title="Send an estimation of cno to satellite, if samples have been received." alt="" coords="453,5,629,47"/>
 <area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#ac1131def0bd2ad51c533f486952bace3" title="Schedule UTs added (registered) to scheduler." alt="" coords="229,5,405,47"/>
-<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#aaf734ce63cc5f721c67806ccbf7b3333" title=" " alt="" coords="5,5,181,47"/>
+<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#a84d07c49abd27838b4d1e26a95990382" title=" " alt="" coords="5,5,181,47"/>
 </map>
 </div>
 
@@ -1653,9 +1892,39 @@ Private Attributes</h2></td></tr>
 
 <p>Set the callback to inform NCC a TBTP has been sent. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00338">338</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00344">344</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00481">m_txTbtpCallback</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00560">m_txTbtpCallback</a>.</p>
+
+</div>
+</div>
+<a id="ac153222823074ccc3732c96937b64190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac153222823074ccc3732c96937b64190">&#9670;&nbsp;</a></span>SetUseLora()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ns3::SatBeamScheduler::SetUseLora </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useLora</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set if SNS-3 is used with Lora standard. </p>
+<p>TBTPs are not sent in this mode. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">useLora</td><td>boolean indicating if lora is used. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01105">1105</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00738">m_useLora</a>.</p>
 
 </div>
 </div>
@@ -1694,9 +1963,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00951">951</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00980">980</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00082">BASIC</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00083">CHECK_GATEWAY</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00630">m_gwAddress</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00632">m_handoverStrategy</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00486">m_utInfos</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00499">RemoveUtInfo()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00089">BASIC</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00090">CHECK_GATEWAY</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00711">m_gwAddress</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00713">m_handoverStrategy</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00709">m_satAddress</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00565">m_utInfos</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00515">RemoveUtInfo()</a>.</p>
 <div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-18-summary" class="dynsummary" style="display:block;">
@@ -1743,11 +2012,11 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00861">861</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00890">890</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-const-variables_8h_source.html#l00055">ns3::SatConstVariables::BITS_IN_KBIT</a>, <a class="el" href="satellite-const-variables_8h_source.html#l00045">ns3::SatConstVariables::BITS_PER_BYTE</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00540">m_controlSlotInterval</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00466">m_superframeSeq</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00486">m_utInfos</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00491">m_utRequestInfos</a>, and <a class="el" href="satellite-const-variables_8h_source.html#l00065">ns3::SatConstVariables::SUPERFRAME_SEQUENCE</a>.</p>
+<p class="reference">References <a class="el" href="satellite-const-variables_8h_source.html#l00058">ns3::SatConstVariables::BITS_IN_KBIT</a>, <a class="el" href="satellite-const-variables_8h_source.html#l00048">ns3::SatConstVariables::BITS_PER_BYTE</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00619">m_controlSlotInterval</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00545">m_superframeSeq</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00565">m_utInfos</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00570">m_utRequestInfos</a>, and <a class="el" href="satellite-const-variables_8h_source.html#l00068">ns3::SatConstVariables::SUPERFRAME_SEQUENCE</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00603">Schedule()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00627">Schedule()</a>.</p>
 <div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-19-summary" class="dynsummary" style="display:block;">
@@ -1757,7 +2026,7 @@ Private Attributes</h2></td></tr>
 <map name="aclassns3_1_1_sat_beam_scheduler_a076b54d21b6c41b7f26b3503f9b4cd9d_icgraph" id="aclassns3_1_1_sat_beam_scheduler_a076b54d21b6c41b7f26b3503f9b4cd9d_icgraph">
 <area shape="rect" title="Update dama entries with given allocations at end of the scheduling." alt="" coords="453,5,684,47"/>
 <area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#ac1131def0bd2ad51c533f486952bace3" title="Schedule UTs added (registered) to scheduler." alt="" coords="229,5,405,47"/>
-<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#aaf734ce63cc5f721c67806ccbf7b3333" title=" " alt="" coords="5,5,181,47"/>
+<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#a84d07c49abd27838b4d1e26a95990382" title=" " alt="" coords="5,5,181,47"/>
 </map>
 </div>
 
@@ -1788,11 +2057,11 @@ Private Attributes</h2></td></tr>
 
 <p>Update dama entries with received requests at beginning of the scheduling. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00748">748</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00777">777</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-const-variables_8h_source.html#l00055">ns3::SatConstVariables::BITS_IN_KBIT</a>, <a class="el" href="satellite-const-variables_8h_source.html#l00045">ns3::SatConstVariables::BITS_PER_BYTE</a>, <a class="el" href="satellite-enums_8h_source.html#l01809">ns3::SatEnums::DA_RBDC</a>, <a class="el" href="satellite-enums_8h_source.html#l01810">ns3::SatEnums::DA_VBDC</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00550">m_backlogRequestsTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00461">m_beamId</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00466">m_superframeSeq</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00486">m_utInfos</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00491">m_utRequestInfos</a>, and <a class="el" href="satellite-const-variables_8h_source.html#l00065">ns3::SatConstVariables::SUPERFRAME_SEQUENCE</a>.</p>
+<p class="reference">References <a class="el" href="satellite-const-variables_8h_source.html#l00058">ns3::SatConstVariables::BITS_IN_KBIT</a>, <a class="el" href="satellite-const-variables_8h_source.html#l00048">ns3::SatConstVariables::BITS_PER_BYTE</a>, <a class="el" href="satellite-enums_8h_source.html#l01810">ns3::SatEnums::DA_RBDC</a>, <a class="el" href="satellite-enums_8h_source.html#l01811">ns3::SatEnums::DA_VBDC</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00629">m_backlogRequestsTrace</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00530">m_beamId</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00545">m_superframeSeq</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00565">m_utInfos</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00570">m_utRequestInfos</a>, and <a class="el" href="satellite-const-variables_8h_source.html#l00068">ns3::SatConstVariables::SUPERFRAME_SEQUENCE</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00603">Schedule()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00627">Schedule()</a>.</p>
 <div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-20-summary" class="dynsummary" style="display:block;">
@@ -1802,7 +2071,7 @@ Private Attributes</h2></td></tr>
 <map name="aclassns3_1_1_sat_beam_scheduler_ad6f1984ca8bc31b9a851e50d18cdc87e_icgraph" id="aclassns3_1_1_sat_beam_scheduler_ad6f1984ca8bc31b9a851e50d18cdc87e_icgraph">
 <area shape="rect" title="Update dama entries with received requests at beginning of the scheduling." alt="" coords="453,5,676,47"/>
 <area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#ac1131def0bd2ad51c533f486952bace3" title="Schedule UTs added (registered) to scheduler." alt="" coords="229,5,405,47"/>
-<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#aaf734ce63cc5f721c67806ccbf7b3333" title=" " alt="" coords="5,5,181,47"/>
+<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#a84d07c49abd27838b4d1e26a95990382" title=" " alt="" coords="5,5,181,47"/>
 </map>
 </div>
 
@@ -1843,9 +2112,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00542">542</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00566">566</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00652">m_receivedSatelliteCnoSample</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00642">m_satelliteCnoEstimator</a>, and <a class="el" href="satellite-beam-scheduler_8h_source.html#l00647">m_satelliteMac</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8h_source.html#l00733">m_receivedSatelliteCnoSample</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00723">m_satelliteCnoEstimator</a>, and <a class="el" href="satellite-beam-scheduler_8h_source.html#l00728">m_satelliteMac</a>.</p>
 
 </div>
 </div>
@@ -1884,9 +2153,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00531">531</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00555">555</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00522">HasUt()</a>, and <a class="el" href="satellite-beam-scheduler_8h_source.html#l00486">m_utInfos</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00547">HasUt()</a>, and <a class="el" href="satellite-beam-scheduler_8h_source.html#l00565">m_utInfos</a>.</p>
 <div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-21-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-21-summary" class="dynsummary" style="display:block;">
@@ -1895,7 +2164,7 @@ Private Attributes</h2></td></tr>
 <div class="center"><img src="classns3_1_1_sat_beam_scheduler_ad7f36c311b772323afa31e811d84dee9_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_beam_scheduler_ad7f36c311b772323afa31e811d84dee9_cgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_beam_scheduler_ad7f36c311b772323afa31e811d84dee9_cgraph" id="aclassns3_1_1_sat_beam_scheduler_ad7f36c311b772323afa31e811d84dee9_cgraph">
 <area shape="rect" title="Update UT C/N0 info with the latest value." alt="" coords="5,5,181,47"/>
-<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#aa72b909bea1138869aec833ffe8c75ce" title="Check whether an UT is handled by this scheduler." alt="" coords="229,5,405,47"/>
+<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#a882282ae29f24380041524da042d654d" title="Check whether an UT is handled by this scheduler." alt="" coords="229,5,405,47"/>
 </map>
 </div>
 
@@ -1936,9 +2205,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00553">553</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00577">577</a> of file <a class="el" href="satellite-beam-scheduler_8cc_source.html">satellite-beam-scheduler.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00522">HasUt()</a>, and <a class="el" href="satellite-beam-scheduler_8h_source.html#l00486">m_utInfos</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00547">HasUt()</a>, and <a class="el" href="satellite-beam-scheduler_8h_source.html#l00565">m_utInfos</a>.</p>
 <div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-22-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-22-summary" class="dynsummary" style="display:block;">
@@ -1947,7 +2216,7 @@ Private Attributes</h2></td></tr>
 <div class="center"><img src="classns3_1_1_sat_beam_scheduler_a0526595235f5ff92eb90bccf2270dc0e_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_beam_scheduler_a0526595235f5ff92eb90bccf2270dc0e_cgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_beam_scheduler_a0526595235f5ff92eb90bccf2270dc0e_cgraph" id="aclassns3_1_1_sat_beam_scheduler_a0526595235f5ff92eb90bccf2270dc0e_cgraph">
 <area shape="rect" title="Receive capacity requests from UTs." alt="" coords="5,5,181,47"/>
-<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#aa72b909bea1138869aec833ffe8c75ce" title="Check whether an UT is handled by this scheduler." alt="" coords="229,5,405,47"/>
+<area shape="rect" href="classns3_1_1_sat_beam_scheduler.html#a882282ae29f24380041524da042d654d" title="Check whether an UT is handled by this scheduler." alt="" coords="229,5,405,47"/>
 </map>
 </div>
 
@@ -1976,9 +2245,9 @@ Private Attributes</h2></td></tr>
 
 <p>Trace for backlog requests done to beam scheduler. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00550">550</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00629">629</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00190">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00748">UpdateDamaEntriesWithReqs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00192">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00777">UpdateDamaEntriesWithReqs()</a>.</p>
 
 </div>
 </div>
@@ -2004,9 +2273,9 @@ Private Attributes</h2></td></tr>
 
 <p>ID of the beam. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00461">461</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00530">530</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01005">CreateTimu()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00344">Initialize()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00748">UpdateDamaEntriesWithReqs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01037">ConnectGw()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01019">ConnectUt()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01069">CreateTimu()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01045">DisconnectGw()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01028">DisconnectUt()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00352">Initialize()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00777">UpdateDamaEntriesWithReqs()</a>.</p>
 
 </div>
 </div>
@@ -2032,9 +2301,9 @@ Private Attributes</h2></td></tr>
 
 <p>Time window for C/N0 estimation. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00511">511</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00590">590</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00564">CreateCnoEstimator()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00190">GetTypeId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00588">CreateCnoEstimator()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00192">GetTypeId()</a>.</p>
 
 </div>
 </div>
@@ -2060,9 +2329,9 @@ Private Attributes</h2></td></tr>
 
 <p>Mode used for C/N0 estimator. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00506">506</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00585">585</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00564">CreateCnoEstimator()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00190">GetTypeId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00588">CreateCnoEstimator()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00192">GetTypeId()</a>.</p>
 
 </div>
 </div>
@@ -2088,9 +2357,9 @@ Private Attributes</h2></td></tr>
 
 <p>Interval to generate control time slots. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00540">540</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00619">619</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00431">AddUt()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00190">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00861">UpdateDamaEntriesWithAllocs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00447">AddUt()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00192">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00890">UpdateDamaEntriesWithAllocs()</a>.</p>
 
 </div>
 </div>
@@ -2116,9 +2385,9 @@ Private Attributes</h2></td></tr>
 
 <p>Flag to indicated if control time slots generation is enabled. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00545">545</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00624">624</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00431">AddUt()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00468">AddUtInfo()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00190">GetTypeId()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00163">ns3::SatBeamScheduler::SatUtInfo::IsControlSlotGenerationTime()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00499">RemoveUtInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00447">AddUt()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00484">AddUtInfo()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00192">GetTypeId()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00165">ns3::SatBeamScheduler::SatUtInfo::IsControlSlotGenerationTime()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00515">RemoveUtInfo()</a>.</p>
 
 </div>
 </div>
@@ -2144,9 +2413,9 @@ Private Attributes</h2></td></tr>
 
 <p>Trace exceeding capacity. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00580">580</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00659">659</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00190">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00603">Schedule()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00192">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00627">Schedule()</a>.</p>
 
 </div>
 </div>
@@ -2172,9 +2441,9 @@ Private Attributes</h2></td></tr>
 
 <p>Trace frame load ratio. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00565">565</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00644">644</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00190">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00603">Schedule()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00192">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00627">Schedule()</a>.</p>
 
 </div>
 </div>
@@ -2200,9 +2469,9 @@ Private Attributes</h2></td></tr>
 
 <p>Trace count of UTs scheduled per Frame. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00560">560</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00639">639</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00190">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00603">Schedule()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00192">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00627">Schedule()</a>.</p>
 
 </div>
 </div>
@@ -2226,9 +2495,37 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00630">630</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00711">711</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01005">CreateTimu()</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00277">GetGwAddress()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00344">Initialize()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00951">TransferUtToBeam()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01069">CreateTimu()</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00335">GetGwAddress()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00352">Initialize()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00980">TransferUtToBeam()</a>.</p>
+
+</div>
+</div>
+<a id="af66cd293cd354d528808a2b9c7d7569c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af66cd293cd354d528808a2b9c7d7569c">&#9670;&nbsp;</a></span>m_gwMac</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ptr&lt;<a class="el" href="classns3_1_1_sat_gw_mac.html">SatGwMac</a>&gt; ns3::SatBeamScheduler::m_gwMac</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>GW MAC linked to this beam. </p>
+
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00535">535</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01019">ConnectUt()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01028">DisconnectUt()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00352">Initialize()</a>.</p>
 
 </div>
 </div>
@@ -2252,9 +2549,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00632">632</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00713">713</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00190">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00951">TransferUtToBeam()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00192">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00980">TransferUtToBeam()</a>.</p>
 
 </div>
 </div>
@@ -2280,9 +2577,9 @@ Private Attributes</h2></td></tr>
 
 <p>Logon channel ID to exclude it from the RA channel selection. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00501">501</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00580">580</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00431">AddUt()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00344">Initialize()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01016">ReserveLogonChannel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00447">AddUt()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00352">Initialize()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01082">ReserveLogonChannel()</a>.</p>
 
 </div>
 </div>
@@ -2308,9 +2605,9 @@ Private Attributes</h2></td></tr>
 
 <p>Maximum size of the BB frame. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00535">535</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00614">614</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00686">AddRaChannels()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00344">Initialize()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00603">Schedule()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00715">AddRaChannels()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00352">Initialize()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00627">Schedule()</a>.</p>
 
 </div>
 </div>
@@ -2337,9 +2634,9 @@ Private Attributes</h2></td></tr>
 <p>Maximum TBTP tx and processing delay estimate at the GW (scheduler). </p>
 <p>This is used to estimate how much time into the future the scheduler has to schedule the super frames. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00530">530</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00609">609</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00190">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00344">Initialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00192">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00352">Initialize()</a>.</p>
 
 </div>
 </div>
@@ -2366,9 +2663,37 @@ Private Attributes</h2></td></tr>
 <p>Maximum two-way propagation delay estimate between GW-SAT-UT-SAT-GW. </p>
 <p>This is used to estimate how much time into the future the scheduler has to schedule the super frames. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00523">523</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00602">602</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00190">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00344">Initialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00192">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00352">Initialize()</a>.</p>
+
+</div>
+</div>
+<a id="a896e1c27864c88d42f7805b10852d99d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a896e1c27864c88d42f7805b10852d99d">&#9670;&nbsp;</a></span>m_orbiterNetDevice</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ptr&lt;<a class="el" href="classns3_1_1_sat_orbiter_net_device.html">SatOrbiterNetDevice</a>&gt; ns3::SatBeamScheduler::m_orbiterNetDevice</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>OrbiterNetDevice on satellite linked to this beam. </p>
+
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00540">540</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01037">ConnectGw()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01019">ConnectUt()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01045">DisconnectGw()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01028">DisconnectUt()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00352">Initialize()</a>.</p>
 
 </div>
 </div>
@@ -2394,9 +2719,9 @@ Private Attributes</h2></td></tr>
 
 <p>Random variable stream to select RA channel for a UT. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00496">496</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00575">575</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00431">AddUt()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00344">Initialize()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01016">ReserveLogonChannel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00447">AddUt()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00352">Initialize()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01082">ReserveLogonChannel()</a>.</p>
 
 </div>
 </div>
@@ -2422,9 +2747,35 @@ Private Attributes</h2></td></tr>
 
 <p>Indicates if Cno sample have been received since last C/N0 control message sent. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00652">652</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00733">733</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00587">SendCnoToSatellite()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00542">UpdateSatelliteCno()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00611">SendCnoToSatellite()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00566">UpdateSatelliteCno()</a>.</p>
+
+</div>
+</div>
+<a id="a5bb4abb55204c28f631901c472218c1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bb4abb55204c28f631901c472218c1e">&#9670;&nbsp;</a></span>m_satAddress</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Address ns3::SatBeamScheduler::m_satAddress</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00709">709</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01069">CreateTimu()</a>, <a class="el" href="satellite-beam-scheduler_8h_source.html#l00327">GetSatAddress()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00352">Initialize()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00980">TransferUtToBeam()</a>.</p>
 
 </div>
 </div>
@@ -2450,9 +2801,9 @@ Private Attributes</h2></td></tr>
 
 <p>Estimator for the C/N0 from satellite. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00642">642</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00723">723</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00344">Initialize()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00587">SendCnoToSatellite()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00542">UpdateSatelliteCno()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00352">Initialize()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00611">SendCnoToSatellite()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00566">UpdateSatelliteCno()</a>.</p>
 
 </div>
 </div>
@@ -2478,9 +2829,37 @@ Private Attributes</h2></td></tr>
 
 <p>MAC address of the satellite (used when regenerative) </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00647">647</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00728">728</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00587">SendCnoToSatellite()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00542">UpdateSatelliteCno()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00611">SendCnoToSatellite()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00566">UpdateSatelliteCno()</a>.</p>
+
+</div>
+</div>
+<a id="a9adf3ccd623f55707167fff899def8a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9adf3ccd623f55707167fff899def8a9">&#9670;&nbsp;</a></span>m_satId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ns3::SatBeamScheduler::m_satId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ID of the satellite using this beam. </p>
+
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00525">525</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01069">CreateTimu()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00352">Initialize()</a>.</p>
 
 </div>
 </div>
@@ -2506,9 +2885,9 @@ Private Attributes</h2></td></tr>
 
 <p>Superframe allocator to maintain load information of the frames and their configurations. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00516">516</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00595">595</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00468">AddUtInfo()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00837">DoPreResourceAllocation()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00344">Initialize()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00499">RemoveUtInfo()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00603">Schedule()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00484">AddUtInfo()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00866">DoPreResourceAllocation()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00352">Initialize()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00515">RemoveUtInfo()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00627">Schedule()</a>.</p>
 
 </div>
 </div>
@@ -2534,9 +2913,9 @@ Private Attributes</h2></td></tr>
 
 <p>Type of <a class="el" href="classns3_1_1_sat_superframe_allocator.html" title="helper class for Satellite Beam Scheduler.">SatSuperframeAllocator</a> class to use. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00637">637</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00718">718</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00190">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00344">Initialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00192">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00352">Initialize()</a>.</p>
 
 </div>
 </div>
@@ -2562,9 +2941,9 @@ Private Attributes</h2></td></tr>
 
 <p>Counter for super frame sequence. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00471">471</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00550">550</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00344">Initialize()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00603">Schedule()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00352">Initialize()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00627">Schedule()</a>.</p>
 
 </div>
 </div>
@@ -2590,9 +2969,9 @@ Private Attributes</h2></td></tr>
 
 <p>Pointer to super frame sequence. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00466">466</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00545">545</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00686">AddRaChannels()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00431">AddUt()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00344">Initialize()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00603">Schedule()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00861">UpdateDamaEntriesWithAllocs()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00748">UpdateDamaEntriesWithReqs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00715">AddRaChannels()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00447">AddUt()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00352">Initialize()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00627">Schedule()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00890">UpdateDamaEntriesWithAllocs()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00777">UpdateDamaEntriesWithReqs()</a>.</p>
 
 </div>
 </div>
@@ -2618,9 +2997,9 @@ Private Attributes</h2></td></tr>
 
 <p>The control message send callback. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00476">476</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00555">555</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00298">DoDispose()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00344">Initialize()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00306">Send()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00315">SendTo()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00329">SendToSatellite()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00304">DoDispose()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00352">Initialize()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00312">Send()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00321">SendTo()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00335">SendToSatellite()</a>.</p>
 
 </div>
 </div>
@@ -2646,9 +3025,9 @@ Private Attributes</h2></td></tr>
 
 <p>The TBTP send callback to inform GW Mac. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00481">481</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00560">560</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00603">Schedule()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00338">SetSendTbtpCallback()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00627">Schedule()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00344">SetSendTbtpCallback()</a>.</p>
 
 </div>
 </div>
@@ -2674,9 +3053,9 @@ Private Attributes</h2></td></tr>
 
 <p>Trace unmet capacity. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00575">575</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00654">654</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00190">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00603">Schedule()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00192">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00627">Schedule()</a>.</p>
 
 </div>
 </div>
@@ -2702,9 +3081,37 @@ Private Attributes</h2></td></tr>
 
 <p>Trace usable capacity. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00570">570</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00649">649</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00190">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00603">Schedule()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00192">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00627">Schedule()</a>.</p>
+
+</div>
+</div>
+<a id="adc7095b3ba82116753cd665496a283a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc7095b3ba82116753cd665496a283a3">&#9670;&nbsp;</a></span>m_useLora</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ns3::SatBeamScheduler::m_useLora</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flag indicating if lora standard is used. </p>
+
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00738">738</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00627">Schedule()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01105">SetUseLora()</a>.</p>
 
 </div>
 </div>
@@ -2730,9 +3137,9 @@ Private Attributes</h2></td></tr>
 
 <p>Map to store UT information in beam for updating purposes. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00486">486</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00565">565</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00468">AddUtInfo()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00837">DoPreResourceAllocation()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00522">HasUt()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00989">RemoveUt()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00499">RemoveUtInfo()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00603">Schedule()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00951">TransferUtToBeam()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00861">UpdateDamaEntriesWithAllocs()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00748">UpdateDamaEntriesWithReqs()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00531">UpdateUtCno()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00553">UtCrReceived()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00484">AddUtInfo()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00866">DoPreResourceAllocation()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00538">HasUt()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l01053">RemoveUt()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00515">RemoveUtInfo()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00627">Schedule()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00980">TransferUtToBeam()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00890">UpdateDamaEntriesWithAllocs()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00777">UpdateDamaEntriesWithReqs()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00555">UpdateUtCno()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00577">UtCrReceived()</a>.</p>
 
 </div>
 </div>
@@ -2758,9 +3165,9 @@ Private Attributes</h2></td></tr>
 
 <p>Container including every UT's allocation requests. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00491">491</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00570">570</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00468">AddUtInfo()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00837">DoPreResourceAllocation()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00499">RemoveUtInfo()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00861">UpdateDamaEntriesWithAllocs()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00748">UpdateDamaEntriesWithReqs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00484">AddUtInfo()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00866">DoPreResourceAllocation()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00515">RemoveUtInfo()</a>, <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00890">UpdateDamaEntriesWithAllocs()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00777">UpdateDamaEntriesWithReqs()</a>.</p>
 
 </div>
 </div>
@@ -2786,9 +3193,9 @@ Private Attributes</h2></td></tr>
 
 <p>Trace first wave form scheduled for the UT. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00555">555</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-scheduler_8h_source.html#l00634">634</a> of file <a class="el" href="satellite-beam-scheduler_8h_source.html">satellite-beam-scheduler.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00190">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00603">Schedule()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00192">GetTypeId()</a>, and <a class="el" href="satellite-beam-scheduler_8cc_source.html#l00627">Schedule()</a>.</p>
 
 </div>
 </div>

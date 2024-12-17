@@ -219,7 +219,7 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p>Probe to translate from a TraceSource to two more easily parsed TraceSources. </p>
 <p>This class is designed to probe an underlying <a class="el" href="namespacens3.html" title="SatArqSequenceNumber is handling the sequence numbers for the ARQ process.">ns3</a> TraceSource exporting a SINR information and a socket address. This probe exports a trace source "Output" with arguments of type double and const Address&amp;. This probe exports another trace source "OutputSinr" with arguments of type double, which is the SINR in dB. The trace sources emit values when either the probed trace source emits a new value, or when SetValue () is called. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8h_source.html#l00050">50</a> of file <a class="el" href="satellite-sinr-probe_8h_source.html">satellite-sinr-probe.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8h_source.html#l00052">52</a> of file <a class="el" href="satellite-sinr-probe_8h_source.html">satellite-sinr-probe.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ab427e6bbc2b512c794cfe403b4b7686c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab427e6bbc2b512c794cfe403b4b7686c">&#9670;&nbsp;</a></span>SinrCallback</h2>
@@ -242,7 +242,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8h_source.html#l00110">110</a> of file <a class="el" href="satellite-sinr-probe_8h_source.html">satellite-sinr-probe.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8h_source.html#l00112">112</a> of file <a class="el" href="satellite-sinr-probe_8h_source.html">satellite-sinr-probe.h</a>.</p>
 
 </div>
 </div>
@@ -264,7 +264,7 @@ Private Attributes</h2></td></tr>
 
 <p>Default constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8cc_source.html#l00063">63</a> of file <a class="el" href="satellite-sinr-probe_8cc_source.html">satellite-sinr-probe.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8cc_source.html#l00066">66</a> of file <a class="el" href="satellite-sinr-probe_8cc_source.html">satellite-sinr-probe.cc</a>.</p>
 
 </div>
 </div>
@@ -293,7 +293,7 @@ Private Attributes</h2></td></tr>
 
 <p>Destructor for <a class="el" href="classns3_1_1_sat_sinr_probe.html" title="Probe to translate from a TraceSource to two more easily parsed TraceSources.">SatSinrProbe</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8cc_source.html#l00068">68</a> of file <a class="el" href="satellite-sinr-probe_8cc_source.html">satellite-sinr-probe.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8cc_source.html#l00071">71</a> of file <a class="el" href="satellite-sinr-probe_8cc_source.html">satellite-sinr-probe.cc</a>.</p>
 
 </div>
 </div>
@@ -342,9 +342,9 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the trace source was successfully connected </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8cc_source.html#l00093">93</a> of file <a class="el" href="satellite-sinr-probe_8cc_source.html">satellite-sinr-probe.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8cc_source.html#l00096">96</a> of file <a class="el" href="satellite-sinr-probe_8cc_source.html">satellite-sinr-probe.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-sinr-probe_8cc_source.html#l00112">TraceSink()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-sinr-probe_8cc_source.html#l00115">TraceSink()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -392,9 +392,9 @@ Private Attributes</h2></td></tr>
 </dl>
 <p>Note, if an invalid path is provided, the probe will not be connected to anything. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8cc_source.html#l00104">104</a> of file <a class="el" href="satellite-sinr-probe_8cc_source.html">satellite-sinr-probe.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8cc_source.html#l00107">107</a> of file <a class="el" href="satellite-sinr-probe_8cc_source.html">satellite-sinr-probe.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-sinr-probe_8cc_source.html#l00112">TraceSink()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-sinr-probe_8cc_source.html#l00115">TraceSink()</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -436,9 +436,9 @@ Private Attributes</h2></td></tr>
 <p>Get the type ID. </p>
 <dl class="section return"><dt>Returns</dt><dd>the object TypeId </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8cc_source.html#l00045">45</a> of file <a class="el" href="satellite-sinr-probe_8cc_source.html">satellite-sinr-probe.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8cc_source.html#l00048">48</a> of file <a class="el" href="satellite-sinr-probe_8cc_source.html">satellite-sinr-probe.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-sinr-probe_8h_source.html#l00124">m_output</a>, and <a class="el" href="satellite-sinr-probe_8h_source.html#l00126">m_outputSinr</a>.</p>
+<p class="reference">References <a class="el" href="satellite-sinr-probe_8h_source.html#l00126">m_output</a>, and <a class="el" href="satellite-sinr-probe_8h_source.html#l00128">m_outputSinr</a>.</p>
 
 </div>
 </div>
@@ -477,9 +477,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8cc_source.html#l00074">74</a> of file <a class="el" href="satellite-sinr-probe_8cc_source.html">satellite-sinr-probe.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8cc_source.html#l00077">77</a> of file <a class="el" href="satellite-sinr-probe_8cc_source.html">satellite-sinr-probe.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-sinr-probe_8h_source.html#l00132">m_address</a>, <a class="el" href="satellite-sinr-probe_8h_source.html#l00124">m_output</a>, <a class="el" href="satellite-sinr-probe_8h_source.html#l00126">m_outputSinr</a>, and <a class="el" href="satellite-sinr-probe_8h_source.html#l00129">m_sinr</a>.</p>
+<p class="reference">References <a class="el" href="satellite-sinr-probe_8h_source.html#l00134">m_address</a>, <a class="el" href="satellite-sinr-probe_8h_source.html#l00126">m_output</a>, <a class="el" href="satellite-sinr-probe_8h_source.html#l00128">m_outputSinr</a>, and <a class="el" href="satellite-sinr-probe_8h_source.html#l00131">m_sinr</a>.</p>
 
 </div>
 </div>
@@ -533,7 +533,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8cc_source.html#l00084">84</a> of file <a class="el" href="satellite-sinr-probe_8cc_source.html">satellite-sinr-probe.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8cc_source.html#l00087">87</a> of file <a class="el" href="satellite-sinr-probe_8cc_source.html">satellite-sinr-probe.cc</a>.</p>
 
 </div>
 </div>
@@ -580,11 +580,11 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8cc_source.html#l00112">112</a> of file <a class="el" href="satellite-sinr-probe_8cc_source.html">satellite-sinr-probe.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8cc_source.html#l00115">115</a> of file <a class="el" href="satellite-sinr-probe_8cc_source.html">satellite-sinr-probe.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-sinr-probe_8h_source.html#l00132">m_address</a>, <a class="el" href="satellite-sinr-probe_8h_source.html#l00124">m_output</a>, <a class="el" href="satellite-sinr-probe_8h_source.html#l00126">m_outputSinr</a>, and <a class="el" href="satellite-sinr-probe_8h_source.html#l00129">m_sinr</a>.</p>
+<p class="reference">References <a class="el" href="satellite-sinr-probe_8h_source.html#l00134">m_address</a>, <a class="el" href="satellite-sinr-probe_8h_source.html#l00126">m_output</a>, <a class="el" href="satellite-sinr-probe_8h_source.html#l00128">m_outputSinr</a>, and <a class="el" href="satellite-sinr-probe_8h_source.html#l00131">m_sinr</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-sinr-probe_8cc_source.html#l00093">ConnectByObject()</a>, and <a class="el" href="satellite-sinr-probe_8cc_source.html#l00104">ConnectByPath()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-sinr-probe_8cc_source.html#l00096">ConnectByObject()</a>, and <a class="el" href="satellite-sinr-probe_8cc_source.html#l00107">ConnectByPath()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -623,9 +623,9 @@ Private Attributes</h2></td></tr>
 
 <p>The socket address for the traced packet. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8h_source.html#l00132">132</a> of file <a class="el" href="satellite-sinr-probe_8h_source.html">satellite-sinr-probe.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8h_source.html#l00134">134</a> of file <a class="el" href="satellite-sinr-probe_8h_source.html">satellite-sinr-probe.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-sinr-probe_8cc_source.html#l00074">SetValue()</a>, and <a class="el" href="satellite-sinr-probe_8cc_source.html#l00112">TraceSink()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-sinr-probe_8cc_source.html#l00077">SetValue()</a>, and <a class="el" href="satellite-sinr-probe_8cc_source.html#l00115">TraceSink()</a>.</p>
 
 </div>
 </div>
@@ -651,9 +651,9 @@ Private Attributes</h2></td></tr>
 
 <p>Output trace, the SINR and source address. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8h_source.html#l00124">124</a> of file <a class="el" href="satellite-sinr-probe_8h_source.html">satellite-sinr-probe.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8h_source.html#l00126">126</a> of file <a class="el" href="satellite-sinr-probe_8h_source.html">satellite-sinr-probe.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-sinr-probe_8cc_source.html#l00045">GetTypeId()</a>, <a class="el" href="satellite-sinr-probe_8cc_source.html#l00074">SetValue()</a>, and <a class="el" href="satellite-sinr-probe_8cc_source.html#l00112">TraceSink()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-sinr-probe_8cc_source.html#l00048">GetTypeId()</a>, <a class="el" href="satellite-sinr-probe_8cc_source.html#l00077">SetValue()</a>, and <a class="el" href="satellite-sinr-probe_8cc_source.html#l00115">TraceSink()</a>.</p>
 
 </div>
 </div>
@@ -679,9 +679,9 @@ Private Attributes</h2></td></tr>
 
 <p>Output trace, previous SINR and current SINR. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8h_source.html#l00126">126</a> of file <a class="el" href="satellite-sinr-probe_8h_source.html">satellite-sinr-probe.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8h_source.html#l00128">128</a> of file <a class="el" href="satellite-sinr-probe_8h_source.html">satellite-sinr-probe.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-sinr-probe_8cc_source.html#l00045">GetTypeId()</a>, <a class="el" href="satellite-sinr-probe_8cc_source.html#l00074">SetValue()</a>, and <a class="el" href="satellite-sinr-probe_8cc_source.html#l00112">TraceSink()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-sinr-probe_8cc_source.html#l00048">GetTypeId()</a>, <a class="el" href="satellite-sinr-probe_8cc_source.html#l00077">SetValue()</a>, and <a class="el" href="satellite-sinr-probe_8cc_source.html#l00115">TraceSink()</a>.</p>
 
 </div>
 </div>
@@ -707,9 +707,9 @@ Private Attributes</h2></td></tr>
 
 <p>The traced SINR. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8h_source.html#l00129">129</a> of file <a class="el" href="satellite-sinr-probe_8h_source.html">satellite-sinr-probe.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-sinr-probe_8h_source.html#l00131">131</a> of file <a class="el" href="satellite-sinr-probe_8h_source.html">satellite-sinr-probe.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-sinr-probe_8cc_source.html#l00074">SetValue()</a>, and <a class="el" href="satellite-sinr-probe_8cc_source.html#l00112">TraceSink()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-sinr-probe_8cc_source.html#l00077">SetValue()</a>, and <a class="el" href="satellite-sinr-probe_8cc_source.html#l00115">TraceSink()</a>.</p>
 
 </div>
 </div>

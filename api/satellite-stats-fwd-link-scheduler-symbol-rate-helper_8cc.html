@@ -146,10 +146,13 @@ $(document).ready(function(){initNavTree('satellite-stats-fwd-link-scheduler-sym
 <code>#include &lt;ns3/satellite-helper.h&gt;</code><br />
 <code>#include &lt;ns3/satellite-mac.h&gt;</code><br />
 <code>#include &lt;ns3/satellite-net-device.h&gt;</code><br />
+<code>#include &lt;ns3/satellite-topology.h&gt;</code><br />
 <code>#include &lt;ns3/scalar-collector.h&gt;</code><br />
+<code>#include &lt;ns3/singleton.h&gt;</code><br />
 <code>#include &lt;ns3/string.h&gt;</code><br />
 <code>#include &lt;ns3/unit-conversion-collector.h&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for satellite-stats-fwd-link-scheduler-symbol-rate-helper.cc:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -157,34 +160,41 @@ $(document).ready(function(){initNavTree('satellite-stats-fwd-link-scheduler-sym
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="satellite-stats-fwd-link-scheduler-symbol-rate-helper_8cc__incl.png" border="0" usemap="#a_2builds_2sns3_2satellite_2satellite_2stats_2satellite-stats-fwd-link-scheduler-symbol-rate-helper_8cc" alt=""/></div>
 <map name="a_2builds_2sns3_2satellite_2satellite_2stats_2satellite-stats-fwd-link-scheduler-symbol-rate-helper_8cc" id="a_2builds_2sns3_2satellite_2satellite_2stats_2satellite-stats-fwd-link-scheduler-symbol-rate-helper_8cc">
-<area shape="rect" title=" " alt="" coords="2096,5,2280,76"/>
-<area shape="rect" href="satellite-stats-fwd-link-scheduler-symbol-rate-helper_8h.html" title=" " alt="" coords="273,124,445,180"/>
-<area shape="rect" title=" " alt="" coords="469,139,582,165"/>
-<area shape="rect" title=" " alt="" coords="607,131,753,173"/>
-<area shape="rect" title=" " alt="" coords="777,139,972,165"/>
-<area shape="rect" title=" " alt="" coords="996,139,1095,165"/>
-<area shape="rect" title=" " alt="" coords="1119,139,1321,165"/>
-<area shape="rect" title=" " alt="" coords="1346,139,1427,165"/>
-<area shape="rect" title=" " alt="" coords="1451,131,1613,173"/>
-<area shape="rect" title=" " alt="" coords="1637,139,1832,165"/>
-<area shape="rect" title=" " alt="" coords="1857,139,2015,165"/>
-<area shape="rect" title=" " alt="" coords="2039,139,2174,165"/>
-<area shape="rect" title=" " alt="" coords="2198,139,2343,165"/>
-<area shape="rect" title=" " alt="" coords="2368,139,2475,165"/>
-<area shape="rect" title=" " alt="" coords="2499,131,2658,173"/>
-<area shape="rect" title=" " alt="" coords="2683,139,2853,165"/>
-<area shape="rect" title=" " alt="" coords="2878,139,3037,165"/>
-<area shape="rect" title=" " alt="" coords="3061,139,3208,165"/>
-<area shape="rect" title=" " alt="" coords="3233,139,3421,165"/>
-<area shape="rect" title=" " alt="" coords="3445,139,3605,165"/>
-<area shape="rect" title=" " alt="" coords="3629,139,3728,165"/>
-<area shape="rect" title=" " alt="" coords="3753,131,3903,173"/>
-<area shape="rect" title=" " alt="" coords="3928,139,4003,165"/>
-<area shape="rect" title=" " alt="" coords="5,235,120,262"/>
-<area shape="rect" title=" " alt="" coords="145,235,295,262"/>
-<area shape="rect" title=" " alt="" coords="319,235,398,262"/>
-<area shape="rect" title=" " alt="" coords="423,235,585,262"/>
-<area shape="rect" title=" " alt="" coords="609,228,748,269"/>
+<area shape="rect" title=" " alt="" coords="2540,5,2724,76"/>
+<area shape="rect" href="satellite-stats-fwd-link-scheduler-symbol-rate-helper_8h.html" title=" " alt="" coords="244,124,416,180"/>
+<area shape="rect" title=" " alt="" coords="822,303,880,329"/>
+<area shape="rect" title=" " alt="" coords="830,139,944,165"/>
+<area shape="rect" title=" " alt="" coords="968,131,1115,173"/>
+<area shape="rect" title=" " alt="" coords="1139,139,1334,165"/>
+<area shape="rect" title=" " alt="" coords="1358,139,1456,165"/>
+<area shape="rect" title=" " alt="" coords="1480,139,1683,165"/>
+<area shape="rect" title=" " alt="" coords="1708,139,1789,165"/>
+<area shape="rect" title=" " alt="" coords="1813,131,1974,173"/>
+<area shape="rect" title=" " alt="" coords="1999,139,2194,165"/>
+<area shape="rect" title=" " alt="" coords="2218,139,2377,165"/>
+<area shape="rect" title=" " alt="" coords="2401,139,2536,165"/>
+<area shape="rect" title=" " alt="" coords="2560,139,2705,165"/>
+<area shape="rect" title=" " alt="" coords="2730,139,2836,165"/>
+<area shape="rect" title=" " alt="" coords="2861,131,3020,173"/>
+<area shape="rect" title=" " alt="" coords="3044,139,3215,165"/>
+<area shape="rect" title=" " alt="" coords="3240,139,3398,165"/>
+<area shape="rect" title=" " alt="" coords="3423,139,3570,165"/>
+<area shape="rect" title=" " alt="" coords="3594,139,3782,165"/>
+<area shape="rect" title=" " alt="" coords="3806,139,3981,165"/>
+<area shape="rect" title=" " alt="" coords="4006,139,4166,165"/>
+<area shape="rect" title=" " alt="" coords="4190,139,4312,165"/>
+<area shape="rect" title=" " alt="" coords="4336,139,4435,165"/>
+<area shape="rect" title=" " alt="" coords="4460,131,4610,173"/>
+<area shape="rect" title=" " alt="" coords="4635,139,4710,165"/>
+<area shape="rect" href="satellite-stats-helper_8h.html" title=" " alt="" coords="526,228,696,255"/>
+<area shape="rect" title=" " alt="" coords="98,303,177,329"/>
+<area shape="rect" title=" " alt="" coords="24,228,139,255"/>
+<area shape="rect" title=" " alt="" coords="164,228,314,255"/>
+<area shape="rect" title=" " alt="" coords="339,228,502,255"/>
+<area shape="rect" title=" " alt="" coords="462,303,579,329"/>
+<area shape="rect" title=" " alt="" coords="603,303,798,329"/>
+<area shape="rect" title=" " alt="" coords="262,303,363,329"/>
+<area shape="rect" title=" " alt="" coords="387,303,438,329"/>
 </map>
 </div>
 </div>

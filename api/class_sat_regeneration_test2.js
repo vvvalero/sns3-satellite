@@ -3,7 +3,7 @@ var class_sat_regeneration_test2 =
     [ "SatRegenerationTest2", "class_sat_regeneration_test2.html#a0819c347ca2bdc60c85b09e2fb12a91e", null ],
     [ "~SatRegenerationTest2", "class_sat_regeneration_test2.html#a16ed246a1b1d2da9696fd02023e9a6f1", null ],
     [ "DoRun", "class_sat_regeneration_test2.html#ae18c1f31953946b4c83c00d94a41e3da", null ],
-    [ "GeoPhyTraceCb", "class_sat_regeneration_test2.html#a5a22706f84366156c608ac6013e5de25", null ],
+    [ "OrbiterPhyTraceCb", "class_sat_regeneration_test2.html#a6c3e9a9a5544422a705a6b35405f42f6", null ],
     [ "PhyTraceCb", "class_sat_regeneration_test2.html#a5cb54a8726f842ef6aa6bfb25a88959b", null ],
     [ "m_helper", "class_sat_regeneration_test2.html#ab4589cd6bfa8011e8192ab76a489cbcc", null ],
     [ "m_packetsDroppedFeeder", "class_sat_regeneration_test2.html#ac1aef6adbe48606f15240d7ff18cd3e4", null ],

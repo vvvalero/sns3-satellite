@@ -1,6 +1,6 @@
 var classns3_1_1_sat_stats_helper_container =
 [
-    [ "SatStatsHelperContainer", "classns3_1_1_sat_stats_helper_container.html#a22fa773342d52a8ab5ffd1d612520dce", null ],
+    [ "SatStatsHelperContainer", "classns3_1_1_sat_stats_helper_container.html#a20526393da1e67f8fdaf52112a7a5fbe", null ],
     [ "AddAverageBeamAntennaGain", "classns3_1_1_sat_stats_helper_container.html#a9140667188a455ebf7cf6b5505e14d2f", null ],
     [ "AddAverageBeamFwdAppDelay", "classns3_1_1_sat_stats_helper_container.html#a15f1f924f432ef4786295b7d227378f8", null ],
     [ "AddAverageBeamFwdAppJitter", "classns3_1_1_sat_stats_helper_container.html#a23ae7d5e64a5825654bef4b11198da07", null ],
@@ -318,8 +318,9 @@ var classns3_1_1_sat_stats_helper_container =
     [ "GetOutputTypeSuffix", "classns3_1_1_sat_stats_helper_container.html#af99c9ebe293218aaf896065f3f298f48", null ],
     [ "GetTypeId", "classns3_1_1_sat_stats_helper_container.html#a0a6b4f016b994d1ba7025b87e951e276", null ],
     [ "SetName", "classns3_1_1_sat_stats_helper_container.html#ae67c73d49258302d1d79825be622072e", null ],
+    [ "UpdateAddressAndIdentifier", "classns3_1_1_sat_stats_helper_container.html#a8f71bc3530d5c78c07caedebc545769f", null ],
     [ "m_name", "classns3_1_1_sat_stats_helper_container.html#a8a66ee05328e96e05002c99bd0a3b13d", null ],
     [ "m_names", "classns3_1_1_sat_stats_helper_container.html#acb48745b0594226732687a88687c9ad7", null ],
-    [ "m_satHelper", "classns3_1_1_sat_stats_helper_container.html#a742f8986cb8f43461062250a60dd4dc8", null ],
-    [ "m_stats", "classns3_1_1_sat_stats_helper_container.html#a079d4a973b1cebe6426bccf0d68980f3", null ]
+    [ "m_satHelper", "classns3_1_1_sat_stats_helper_container.html#afe888c58fffbbe11dfdf575b7dece640", null ],
+    [ "m_stats", "classns3_1_1_sat_stats_helper_container.html#aa79e805baa1bc893ea2aa5ae5c43b8e5", null ]
 ];

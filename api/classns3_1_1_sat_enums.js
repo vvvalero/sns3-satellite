@@ -117,9 +117,10 @@ var classns3_1_1_sat_enums =
     [ "SatLoraNodeType_t", "classns3_1_1_sat_enums.html#a1fea8513b60960e6a373619dbab712c7", [
       [ "DVB_GW", "classns3_1_1_sat_enums.html#a1fea8513b60960e6a373619dbab712c7aeed88637e51d63cf699473f684c4ad4b", null ],
       [ "DVB_UT", "classns3_1_1_sat_enums.html#a1fea8513b60960e6a373619dbab712c7a4078fee98d65939fa250964141898858", null ],
+      [ "DVB_ORBITER", "classns3_1_1_sat_enums.html#a1fea8513b60960e6a373619dbab712c7a87dbb48e805205f2310519537d59f251", null ],
       [ "LORA_GW", "classns3_1_1_sat_enums.html#a1fea8513b60960e6a373619dbab712c7ae3610d76f0398ef6fda261238202515e", null ],
       [ "LORA_UT", "classns3_1_1_sat_enums.html#a1fea8513b60960e6a373619dbab712c7af68f329703af9c3b9164886cd73a3655", null ],
-      [ "GEO", "classns3_1_1_sat_enums.html#a1fea8513b60960e6a373619dbab712c7a3d8adf438cb9a64aefacbc4a93c22f9c", null ]
+      [ "LORA_ORBITER", "classns3_1_1_sat_enums.html#a1fea8513b60960e6a373619dbab712c7a6a0e2b4f8439e60a7bba46392d692b3e", null ]
     ] ],
     [ "SatModcod_t", "classns3_1_1_sat_enums.html#a38e377c51f9be266eea5f0c3b092d6d0", [
       [ "SAT_NONVALID_MODCOD", "classns3_1_1_sat_enums.html#a38e377c51f9be266eea5f0c3b092d6d0aed2fceec9cace4fa8b8669d16c51e853", null ],

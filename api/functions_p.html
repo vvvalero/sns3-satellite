@@ -199,6 +199,9 @@ $(document).ready(function(){initNavTree('functions_p.html',''); initResizable()
 <li>ParseCommands()
 : <a class="el" href="classns3_1_1_lorawan_mac_end_device.html#acd0ea511bf7f8ad0c7e4b20f66000a04">ns3::LorawanMacEndDevice</a>
 </li>
+<li>ParseScenarioFolder()
+: <a class="el" href="classns3_1_1_simulation_helper.html#a29554f4a14f7a5a67ef6142b5b8cf523">ns3::SimulationHelper</a>
+</li>
 <li>PassSampleToCollector()
 : <a class="el" href="classns3_1_1_sat_stats_delay_helper.html#a7f41ec39073c840c23890b48d3e1a173">ns3::SatStatsDelayHelper</a>
 , <a class="el" href="classns3_1_1_sat_stats_jitter_helper.html#a413cecaae441d4c791844e9c7c5ee231">ns3::SatStatsJitterHelper</a>
@@ -241,7 +244,8 @@ $(document).ready(function(){initNavTree('functions_p.html',''); initResizable()
 : <a class="el" href="class_perf_mem_test_suite.html#ae2493e8e8268806781842b525c6e5666">PerfMemTestSuite</a>
 </li>
 <li>PerformHandover()
-: <a class="el" href="classns3_1_1_sat_ut_phy.html#a5d5b97497d9c0f5fe0c2a210eae37753">ns3::SatUtPhy</a>
+: <a class="el" href="classns3_1_1_sat_gw_phy.html#ab32760c6c88a8520d8824c7d466bcb83">ns3::SatGwPhy</a>
+, <a class="el" href="classns3_1_1_sat_ut_phy.html#aa3129a62f1a6e10fad39cfc2447cc3d2">ns3::SatUtPhy</a>
 </li>
 <li>PerformMarsala()
 : <a class="el" href="classns3_1_1_sat_phy_rx_carrier_marsala.html#a93ffa733f6ab91b9a4938fe8caa833af">ns3::SatPhyRxCarrierMarsala</a>
@@ -249,9 +253,6 @@ $(document).ready(function(){initNavTree('functions_p.html',''); initResizable()
 <li>PerformSicCycles()
 : <a class="el" href="classns3_1_1_sat_phy_rx_carrier_marsala.html#a309aed541ee9ce0cedf33f8f9087e09b">ns3::SatPhyRxCarrierMarsala</a>
 , <a class="el" href="classns3_1_1_sat_phy_rx_carrier_per_frame.html#a64cabda73a96e0e825a57e8a83f64832">ns3::SatPhyRxCarrierPerFrame</a>
-</li>
-<li>PERIODIC
-: <a class="el" href="classns3_1_1_simulation_helper.html#aff377ffe7a331525403527b8d63733b2a59a132fe6d2ccfdbd3ee01bec6bf35a8">ns3::SimulationHelper</a>
 </li>
 <li>PeriodicTimerExpired()
 : <a class="el" href="classns3_1_1_sat_fwd_link_scheduler.html#a47a2d886916b7ce2626291a5b47b7bca">ns3::SatFwdLinkScheduler</a>
@@ -264,6 +265,9 @@ $(document).ready(function(){initNavTree('functions_p.html',''); initResizable()
 </li>
 <li>pho
 : <a class="el" href="structelsetrec.html#ac920ed92d16dd26049fb035d822c4a7e">elsetrec</a>
+</li>
+<li>PhyBeamCallback
+: <a class="el" href="classns3_1_1_sat_gw_mac.html#ad3964a4fe35b51b8e4fe7e22b8ed59de">ns3::SatGwMac</a>
 </li>
 <li>PhyDelayTraceCb()
 : <a class="el" href="class_sat_regeneration_test1.html#ab2e289a1929ef8399cb0ccd33d80b405">SatRegenerationTest1</a>
@@ -286,6 +290,8 @@ $(document).ready(function(){initNavTree('functions_p.html',''); initResizable()
 <li>PhyTraceCb()
 : <a class="el" href="class_sat_lora_out_of_window_window_no_retransmission_test_case.html#a96d3757e869cabc4e9d017ed6c77fcf1">SatLoraOutOfWindowWindowNoRetransmissionTestCase</a>
 , <a class="el" href="class_sat_lora_out_of_window_window_test_case.html#af9adcd571e6fa3570a42c55ebe9924d4">SatLoraOutOfWindowWindowTestCase</a>
+, <a class="el" href="class_sat_lora_regenerative_out_of_window_window_no_retransmission_test_case.html#a0b5a25342272bfd7562fed9fb0bb4d70">SatLoraRegenerativeOutOfWindowWindowNoRetransmissionTestCase</a>
+, <a class="el" href="class_sat_lora_regenerative_out_of_window_window_test_case.html#afa86b9dea544d34cda10ac1f9cd9ce06">SatLoraRegenerativeOutOfWindowWindowTestCase</a>
 , <a class="el" href="class_sat_regeneration_test2.html#a5cb54a8726f842ef6aa6bfb25a88959b">SatRegenerationTest2</a>
 </li>
 <li>pinco
@@ -426,7 +432,7 @@ $(document).ready(function(){initNavTree('functions_p.html',''); initResizable()
 : <a class="el" href="classns3_1_1_sat_packet_trace.html#ad364f4b079e93045766d0108917659ef">ns3::SatPacketTrace</a>
 </li>
 <li>PrintTopology()
-: <a class="el" href="classns3_1_1_sat_helper.html#a015c87ad437c6cb7e1c0997dddce56ae">ns3::SatHelper</a>
+: <a class="el" href="classns3_1_1_sat_topology.html#a3f7b56f35f854bf81b16914ccb17130c">ns3::SatTopology</a>
 </li>
 <li>PrintTraceInfo()
 : <a class="el" href="class_sat_per_packet_base_test_case.html#a0ec20f55cea61a2e39eebccd667a24af">SatPerPacketBaseTestCase</a>
@@ -485,13 +491,13 @@ $(document).ready(function(){initNavTree('functions_p.html',''); initResizable()
 : <a class="el" href="classns3_1_1_lorawan_mac_header.html#a352f1cb4e6947cac7457b05495aa3133ad6b55560c73ff12d5a2cd138a19d6702">ns3::LorawanMacHeader</a>
 </li>
 <li>PROTOCOL_BOTH
-: <a class="el" href="classns3_1_1_simulation_helper_conf.html#a8dfd76192a85666bbb753730e97e899bacde584cebab57430a3ff64e8caa8d664">ns3::SimulationHelperConf</a>
+: <a class="el" href="classns3_1_1_sat_traffic_helper_conf.html#a4582a5e8ed60a4dc745ea8977e9a2c9ea59f3d87056864ca0aa07e31247ed4bde">ns3::SatTrafficHelperConf</a>
 </li>
 <li>PROTOCOL_TCP
-: <a class="el" href="classns3_1_1_simulation_helper_conf.html#a8dfd76192a85666bbb753730e97e899ba223a0de59b7d930715936461748a140f">ns3::SimulationHelperConf</a>
+: <a class="el" href="classns3_1_1_sat_traffic_helper_conf.html#a4582a5e8ed60a4dc745ea8977e9a2c9ea8a900322581f25cae5120ed23b442626">ns3::SatTrafficHelperConf</a>
 </li>
 <li>PROTOCOL_UDP
-: <a class="el" href="classns3_1_1_simulation_helper_conf.html#a8dfd76192a85666bbb753730e97e899ba071dbe007f61ede495e0391d25420324">ns3::SimulationHelperConf</a>
+: <a class="el" href="classns3_1_1_sat_traffic_helper_conf.html#a4582a5e8ed60a4dc745ea8977e9a2c9eaed387ffff8cc0bd0a81ea62e61fb4d70">ns3::SatTrafficHelperConf</a>
 </li>
 <li>PushFront()
 : <a class="el" href="classns3_1_1_sat_queue.html#a49a98d8ca63af0456f0c33166818b627">ns3::SatQueue</a>

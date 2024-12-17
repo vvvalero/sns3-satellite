@@ -146,19 +146,23 @@ $(document).ready(function(){initNavTree('satellite-stats-link-delay-helper_8cc.
 <code>#include &lt;ns3/node-container.h&gt;</code><br />
 <code>#include &lt;ns3/nstime.h&gt;</code><br />
 <code>#include &lt;ns3/probe.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-geo-net-device.h&gt;</code><br />
 <code>#include &lt;ns3/satellite-helper.h&gt;</code><br />
 <code>#include &lt;ns3/satellite-id-mapper.h&gt;</code><br />
 <code>#include &lt;ns3/satellite-mac.h&gt;</code><br />
 <code>#include &lt;ns3/satellite-net-device.h&gt;</code><br />
+<code>#include &lt;ns3/satellite-orbiter-net-device.h&gt;</code><br />
 <code>#include &lt;ns3/satellite-phy.h&gt;</code><br />
 <code>#include &lt;ns3/satellite-time-tag.h&gt;</code><br />
+<code>#include &lt;ns3/satellite-topology.h&gt;</code><br />
 <code>#include &lt;ns3/scalar-collector.h&gt;</code><br />
 <code>#include &lt;ns3/singleton.h&gt;</code><br />
 <code>#include &lt;ns3/string.h&gt;</code><br />
 <code>#include &lt;ns3/traffic-time-tag.h&gt;</code><br />
 <code>#include &lt;ns3/unit-conversion-collector.h&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for satellite-stats-link-delay-helper.cc:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -166,44 +170,50 @@ $(document).ready(function(){initNavTree('satellite-stats-link-delay-helper_8cc.
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="satellite-stats-link-delay-helper_8cc__incl.png" border="0" usemap="#a_2builds_2sns3_2satellite_2satellite_2stats_2satellite-stats-link-delay-helper_8cc" alt=""/></div>
 <map name="a_2builds_2sns3_2satellite_2satellite_2stats_2satellite-stats-link-delay-helper_8cc" id="a_2builds_2sns3_2satellite_2satellite_2stats_2satellite-stats-link-delay-helper_8cc">
-<area shape="rect" title=" " alt="" coords="2812,5,3004,61"/>
-<area shape="rect" href="satellite-stats-link-delay-helper_8h.html" title=" " alt="" coords="352,109,493,151"/>
-<area shape="rect" title=" " alt="" coords="517,109,680,151"/>
-<area shape="rect" title=" " alt="" coords="704,117,837,143"/>
-<area shape="rect" title=" " alt="" coords="862,117,975,143"/>
-<area shape="rect" title=" " alt="" coords="1000,117,1115,143"/>
-<area shape="rect" title=" " alt="" coords="1139,109,1285,151"/>
-<area shape="rect" title=" " alt="" coords="1309,117,1504,143"/>
-<area shape="rect" title=" " alt="" coords="1528,117,1627,143"/>
-<area shape="rect" title=" " alt="" coords="1651,117,1840,143"/>
-<area shape="rect" title=" " alt="" coords="1865,117,1954,143"/>
-<area shape="rect" title=" " alt="" coords="1978,117,2059,143"/>
-<area shape="rect" title=" " alt="" coords="2083,117,2245,143"/>
-<area shape="rect" title=" " alt="" coords="2269,109,2430,151"/>
-<area shape="rect" title=" " alt="" coords="2455,117,2649,143"/>
-<area shape="rect" title=" " alt="" coords="2673,117,2804,143"/>
-<area shape="rect" title=" " alt="" coords="2829,117,2987,143"/>
-<area shape="rect" title=" " alt="" coords="3012,117,3119,143"/>
-<area shape="rect" title=" " alt="" coords="3143,117,3241,143"/>
-<area shape="rect" title=" " alt="" coords="3265,109,3423,151"/>
-<area shape="rect" title=" " alt="" coords="3447,117,3606,143"/>
-<area shape="rect" title=" " alt="" coords="3630,117,3815,143"/>
-<area shape="rect" title=" " alt="" coords="3840,117,3987,143"/>
-<area shape="rect" title=" " alt="" coords="4011,117,4199,143"/>
-<area shape="rect" title=" " alt="" coords="4224,117,4365,143"/>
-<area shape="rect" title=" " alt="" coords="4390,109,4527,151"/>
-<area shape="rect" title=" " alt="" coords="4552,117,4712,143"/>
-<area shape="rect" title=" " alt="" coords="4737,117,4858,143"/>
-<area shape="rect" title=" " alt="" coords="4883,117,4981,143"/>
-<area shape="rect" title=" " alt="" coords="5005,117,5165,143"/>
-<area shape="rect" title=" " alt="" coords="5190,109,5341,151"/>
-<area shape="rect" title=" " alt="" coords="5365,117,5440,143"/>
-<area shape="rect" title=" " alt="" coords="5,206,117,233"/>
-<area shape="rect" title=" " alt="" coords="142,206,293,233"/>
-<area shape="rect" title=" " alt="" coords="317,206,395,233"/>
-<area shape="rect" title=" " alt="" coords="420,199,559,240"/>
-<area shape="rect" title=" " alt="" coords="583,206,625,233"/>
-<area shape="rect" title=" " alt="" coords="649,206,700,233"/>
+<area shape="rect" title=" " alt="" coords="3017,5,3209,61"/>
+<area shape="rect" href="satellite-stats-link-delay-helper_8h.html" title=" " alt="" coords="384,109,525,151"/>
+<area shape="rect" title=" " alt="" coords="677,273,728,300"/>
+<area shape="rect" title=" " alt="" coords="5,273,64,300"/>
+<area shape="rect" title=" " alt="" coords="757,199,817,225"/>
+<area shape="rect" title=" " alt="" coords="892,109,1055,151"/>
+<area shape="rect" title=" " alt="" coords="1079,117,1212,143"/>
+<area shape="rect" title=" " alt="" coords="1237,117,1350,143"/>
+<area shape="rect" title=" " alt="" coords="1375,117,1489,143"/>
+<area shape="rect" title=" " alt="" coords="1513,109,1660,151"/>
+<area shape="rect" title=" " alt="" coords="1684,117,1879,143"/>
+<area shape="rect" title=" " alt="" coords="1903,117,2001,143"/>
+<area shape="rect" title=" " alt="" coords="2025,117,2215,143"/>
+<area shape="rect" title=" " alt="" coords="2239,117,2329,143"/>
+<area shape="rect" title=" " alt="" coords="2353,117,2434,143"/>
+<area shape="rect" title=" " alt="" coords="2458,117,2619,143"/>
+<area shape="rect" title=" " alt="" coords="2643,109,2805,151"/>
+<area shape="rect" title=" " alt="" coords="2829,117,3024,143"/>
+<area shape="rect" title=" " alt="" coords="3048,117,3179,143"/>
+<area shape="rect" title=" " alt="" coords="3203,117,3362,143"/>
+<area shape="rect" title=" " alt="" coords="3387,117,3493,143"/>
+<area shape="rect" title=" " alt="" coords="3517,117,3616,143"/>
+<area shape="rect" title=" " alt="" coords="3641,117,3799,143"/>
+<area shape="rect" title=" " alt="" coords="3823,117,4009,143"/>
+<area shape="rect" title=" " alt="" coords="4033,117,4180,143"/>
+<area shape="rect" title=" " alt="" coords="4205,117,4393,143"/>
+<area shape="rect" title=" " alt="" coords="4417,109,4567,151"/>
+<area shape="rect" title=" " alt="" coords="4592,117,4733,143"/>
+<area shape="rect" title=" " alt="" coords="4758,109,4895,151"/>
+<area shape="rect" title=" " alt="" coords="4919,117,5094,143"/>
+<area shape="rect" title=" " alt="" coords="5119,117,5279,143"/>
+<area shape="rect" title=" " alt="" coords="5303,117,5425,143"/>
+<area shape="rect" title=" " alt="" coords="5449,117,5548,143"/>
+<area shape="rect" title=" " alt="" coords="5572,117,5732,143"/>
+<area shape="rect" title=" " alt="" coords="5757,109,5907,151"/>
+<area shape="rect" title=" " alt="" coords="5932,117,6007,143"/>
+<area shape="rect" href="satellite-stats-helper_8h.html" title=" " alt="" coords="201,199,370,225"/>
+<area shape="rect" title=" " alt="" coords="89,273,167,300"/>
+<area shape="rect" title=" " alt="" coords="445,199,557,225"/>
+<area shape="rect" title=" " alt="" coords="582,199,733,225"/>
+<area shape="rect" title=" " alt="" coords="83,199,125,225"/>
+<area shape="rect" title=" " alt="" coords="536,273,653,300"/>
+<area shape="rect" title=" " alt="" coords="192,273,387,300"/>
+<area shape="rect" title=" " alt="" coords="411,273,512,300"/>
 </map>
 </div>
 </div>

@@ -166,16 +166,16 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a1dc1f121e388e0120ced5588ab8d3090"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sat-mobility-beam-tracer_8cc.html#a1dc1f121e388e0120ced5588ab8d3090">relativeSpeeds</a></td></tr>
-<tr class="separator:a1dc1f121e388e0120ced5588ab8d3090"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f4645b443a29c73c177e4cfc98fca2"><td class="memItemLeft" align="right" valign="top">std::map&lt; uint32_t, std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sat-mobility-beam-tracer_8cc.html#a34f4645b443a29c73c177e4cfc98fca2">relativeSpeeds</a></td></tr>
+<tr class="separator:a34f4645b443a29c73c177e4cfc98fca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ede35bbcd03a17d7b843bb593eb8e10"><td class="memItemLeft" align="right" valign="top">Ptr&lt; <a class="el" href="classns3_1_1_sat_mobility_model.html">SatMobilityModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sat-mobility-beam-tracer_8cc.html#a2ede35bbcd03a17d7b843bb593eb8e10">satMobility</a> = nullptr</td></tr>
 <tr class="separator:a2ede35bbcd03a17d7b843bb593eb8e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb958fc187502f27084873808ea7ed4c"><td class="memItemLeft" align="right" valign="top">std::set&lt; uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sat-mobility-beam-tracer_8cc.html#abb958fc187502f27084873808ea7ed4c">visitedBeams</a></td></tr>
-<tr class="separator:abb958fc187502f27084873808ea7ed4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad026685d5b8605eb2bb4d1ae933b6d63"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::pair&lt; uint32_t, uint32_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sat-mobility-beam-tracer_8cc.html#ad026685d5b8605eb2bb4d1ae933b6d63">visitedBeams</a></td></tr>
+<tr class="separator:ad026685d5b8605eb2bb4d1ae933b6d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Simulation script to run example simulation results with a high degree of customization through XML file. </p>
-<p>execute command -&gt; ./waf &ndash;run "sat-mobility-beam-tracer --PrintHelp" </p>
+<p>execute command -&gt; ./ns3 run "sat-mobility-beam-tracer --PrintHelp" </p>
 
 <p class="definition">Definition in file <a class="el" href="sat-mobility-beam-tracer_8cc_source.html">sat-mobility-beam-tracer.cc</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
@@ -220,14 +220,14 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a1dc1f121e388e0120ced5588ab8d3090"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1dc1f121e388e0120ced5588ab8d3090">&#9670;&nbsp;</a></span>relativeSpeeds</h2>
+<a id="a34f4645b443a29c73c177e4cfc98fca2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34f4645b443a29c73c177e4cfc98fca2">&#9670;&nbsp;</a></span>relativeSpeeds</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;double&gt; relativeSpeeds</td>
+          <td class="memname">std::map&lt;uint32_t, std::vector&lt;double&gt; &gt; relativeSpeeds</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -252,18 +252,18 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="sat-mobility-beam-tracer_8cc_source.html#l00032">32</a> of file <a class="el" href="sat-mobility-beam-tracer_8cc_source.html">sat-mobility-beam-tracer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-helper_8cc_source.html#l01262">ns3::SatHelper::InstallMobilityObserver()</a>, and <a class="el" href="sat-mobility-beam-tracer_8cc_source.html#l00037">SatCourseChange()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-handover-module_8cc_source.html#l00221">ns3::SatHandoverModule::GetNClosestSats()</a>, <a class="el" href="satellite-helper_8cc_source.html#l01347">ns3::SatHelper::InstallMobilityObserver()</a>, and <a class="el" href="sat-mobility-beam-tracer_8cc_source.html#l00037">SatCourseChange()</a>.</p>
 
 </div>
 </div>
-<a id="abb958fc187502f27084873808ea7ed4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb958fc187502f27084873808ea7ed4c">&#9670;&nbsp;</a></span>visitedBeams</h2>
+<a id="ad026685d5b8605eb2bb4d1ae933b6d63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad026685d5b8605eb2bb4d1ae933b6d63">&#9670;&nbsp;</a></span>visitedBeams</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::set&lt;uint32_t&gt; visitedBeams</td>
+          <td class="memname">std::set&lt;std::pair&lt;uint32_t, uint32_t&gt; &gt; visitedBeams</td>
         </tr>
       </table>
 </div><div class="memdoc">

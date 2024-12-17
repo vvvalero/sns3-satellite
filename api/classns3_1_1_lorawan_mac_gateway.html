@@ -127,7 +127,7 @@ $(document).ready(function(){initNavTree('classns3_1_1_lorawan_mac_gateway.html'
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classns3_1_1_lorawan_mac_gateway-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ns3::LorawanMacGateway Class Reference</div>  </div>
+<div class="title">ns3::LorawanMacGateway Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -139,10 +139,12 @@ $(document).ready(function(){initNavTree('classns3_1_1_lorawan_mac_gateway.html'
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_lorawan_mac_gateway__inherit__graph.png" border="0" usemap="#ans3_1_1_lorawan_mac_gateway_inherit__map" alt="Inheritance graph"/></div>
 <map name="ans3_1_1_lorawan_mac_gateway_inherit__map" id="ans3_1_1_lorawan_mac_gateway_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,229,199,256"/>
-<area shape="rect" href="classns3_1_1_lorawan_mac.html" title="Class representing the LoRaWAN MAC layer." alt="" coords="35,155,169,181"/>
-<area shape="rect" href="classns3_1_1_sat_mac.html" title="Base MAC class for SatNetDevices." alt="" coords="51,80,153,107"/>
-<area shape="rect" title=" " alt="" coords="70,5,134,32"/>
+<area shape="rect" title=" " alt="" coords="161,229,354,256"/>
+<area shape="rect" href="classns3_1_1_lorawan_ground_mac_gateway.html" title=" " alt="" coords="5,304,245,331"/>
+<area shape="rect" href="classns3_1_1_lorawan_orbiter_mac_gateway.html" title=" " alt="" coords="270,304,509,331"/>
+<area shape="rect" href="classns3_1_1_lorawan_mac.html" title="Class representing the LoRaWAN MAC layer." alt="" coords="190,155,325,181"/>
+<area shape="rect" href="classns3_1_1_sat_mac.html" title="Base MAC class for SatNetDevices." alt="" coords="207,80,308,107"/>
+<area shape="rect" title=" " alt="" coords="225,5,289,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -189,12 +191,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6e902fcccd78371c1842e6b26c851196"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a826653eb034e461525f9c078b3ab81ca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_lorawan_mac_gateway.html#a826653eb034e461525f9c078b3ab81ca">IsTransmitting</a> (void)</td></tr>
 <tr class="separator:a826653eb034e461525f9c078b3ab81ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ecde16c5a9486e19bed4011f4a4cc0e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_lorawan_mac_gateway.html#a5ecde16c5a9486e19bed4011f4a4cc0e">Receive</a> (<a class="el" href="classns3_1_1_sat_phy.html#adc7c55a2b67edb142208144326c3a12f">SatPhy::PacketContainer_t</a> packets, Ptr&lt; <a class="el" href="classns3_1_1_sat_signal_parameters.html">SatSignalParameters</a> &gt;)</td></tr>
-<tr class="memdesc:a5ecde16c5a9486e19bed4011f4a4cc0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive a packet from the lower layer.  <a href="classns3_1_1_lorawan_mac_gateway.html#a5ecde16c5a9486e19bed4011f4a4cc0e">More...</a><br /></td></tr>
-<tr class="separator:a5ecde16c5a9486e19bed4011f4a4cc0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39cdd35af385aab373fb689ddc8e4fe5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_lorawan_mac_gateway.html#a39cdd35af385aab373fb689ddc8e4fe5">Send</a> (Ptr&lt; Packet &gt; packet)</td></tr>
-<tr class="memdesc:a39cdd35af385aab373fb689ddc8e4fe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a packet.  <a href="classns3_1_1_lorawan_mac_gateway.html#a39cdd35af385aab373fb689ddc8e4fe5">More...</a><br /></td></tr>
-<tr class="separator:a39cdd35af385aab373fb689ddc8e4fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e5b7033fd55e85cc8cf8a7d4398b6f9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_lorawan_mac_gateway.html#a1e5b7033fd55e85cc8cf8a7d4398b6f9">Receive</a> (<a class="el" href="classns3_1_1_sat_phy.html#adc7c55a2b67edb142208144326c3a12f">SatPhy::PacketContainer_t</a> packets, Ptr&lt; <a class="el" href="classns3_1_1_sat_signal_parameters.html">SatSignalParameters</a> &gt;)=0</td></tr>
+<tr class="memdesc:a1e5b7033fd55e85cc8cf8a7d4398b6f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive a packet from the lower layer.  <a href="classns3_1_1_lorawan_mac_gateway.html#a1e5b7033fd55e85cc8cf8a7d4398b6f9">More...</a><br /></td></tr>
+<tr class="separator:a1e5b7033fd55e85cc8cf8a7d4398b6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a730919f7fe6cc4035a70d0d5125196f2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_lorawan_mac_gateway.html#a730919f7fe6cc4035a70d0d5125196f2">Send</a> (Ptr&lt; Packet &gt; packet)=0</td></tr>
+<tr class="memdesc:a730919f7fe6cc4035a70d0d5125196f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a packet.  <a href="classns3_1_1_lorawan_mac_gateway.html#a730919f7fe6cc4035a70d0d5125196f2">More...</a><br /></td></tr>
+<tr class="separator:a730919f7fe6cc4035a70d0d5125196f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b09e694e8fae233ce09913a7f05f350"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_lorawan_mac_gateway.html#a8b09e694e8fae233ce09913a7f05f350">TxFinished</a> ()</td></tr>
 <tr class="memdesc:a8b09e694e8fae233ce09913a7f05f350"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform actions after sending a packet.  <a href="classns3_1_1_lorawan_mac_gateway.html#a8b09e694e8fae233ce09913a7f05f350">More...</a><br /></td></tr>
 <tr class="separator:a8b09e694e8fae233ce09913a7f05f350"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -272,9 +274,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab2cf8ba5322da064e625ec1718432d60 inherit pub_methods_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#ab2cf8ba5322da064e625ec1718432d60">SatMac</a> ()</td></tr>
 <tr class="memdesc:ab2cf8ba5322da064e625ec1718432d60 inherit pub_methods_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classns3_1_1_sat_mac.html" title="Base MAC class for SatNetDevices.">SatMac</a>.  <a href="classns3_1_1_sat_mac.html#ab2cf8ba5322da064e625ec1718432d60">More...</a><br /></td></tr>
 <tr class="separator:ab2cf8ba5322da064e625ec1718432d60 inherit pub_methods_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bfa4047169aafc0f04cfd2b1daf41fd inherit pub_methods_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#a1bfa4047169aafc0f04cfd2b1daf41fd">SatMac</a> (uint32_t satId, uint32_t beamId, <a class="el" href="classns3_1_1_sat_enums.html#ae1323e94664d2248445952d05080df7a">SatEnums::RegenerationMode_t</a> forwardLinkRegenerationMode, <a class="el" href="classns3_1_1_sat_enums.html#ae1323e94664d2248445952d05080df7a">SatEnums::RegenerationMode_t</a> returnLinkRegenerationMode)</td></tr>
-<tr class="memdesc:a1bfa4047169aafc0f04cfd2b1daf41fd inherit pub_methods_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classns3_1_1_sat_mac.html" title="Base MAC class for SatNetDevices.">SatMac</a>.  <a href="classns3_1_1_sat_mac.html#a1bfa4047169aafc0f04cfd2b1daf41fd">More...</a><br /></td></tr>
-<tr class="separator:a1bfa4047169aafc0f04cfd2b1daf41fd inherit pub_methods_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42e4c1bc79cc32a5d63dde5298e32b05 inherit pub_methods_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#a42e4c1bc79cc32a5d63dde5298e32b05">SatMac</a> (uint32_t satId, uint32_t beamId)</td></tr>
+<tr class="memdesc:a42e4c1bc79cc32a5d63dde5298e32b05 inherit pub_methods_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classns3_1_1_sat_mac.html" title="Base MAC class for SatNetDevices.">SatMac</a>.  <a href="classns3_1_1_sat_mac.html#a42e4c1bc79cc32a5d63dde5298e32b05">More...</a><br /></td></tr>
+<tr class="separator:a42e4c1bc79cc32a5d63dde5298e32b05 inherit pub_methods_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dd28832ee374767d8041a10f120cde6 inherit pub_methods_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#a8dd28832ee374767d8041a10f120cde6">~SatMac</a> ()</td></tr>
 <tr class="memdesc:a8dd28832ee374767d8041a10f120cde6 inherit pub_methods_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a <a class="el" href="classns3_1_1_sat_mac.html" title="Base MAC class for SatNetDevices.">SatMac</a>.  <a href="classns3_1_1_sat_mac.html#a8dd28832ee374767d8041a10f120cde6">More...</a><br /></td></tr>
 <tr class="separator:a8dd28832ee374767d8041a10f120cde6 inherit pub_methods_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -302,6 +304,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac270589a2d869c3b381cbfea69423232 inherit pub_methods_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#ac270589a2d869c3b381cbfea69423232">SendCtrlMsgFromContainer</a> (uint32_t sendId)</td></tr>
 <tr class="memdesc:ac270589a2d869c3b381cbfea69423232 inherit pub_methods_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send the control message from the container.  <a href="classns3_1_1_sat_mac.html#ac270589a2d869c3b381cbfea69423232">More...</a><br /></td></tr>
 <tr class="separator:ac270589a2d869c3b381cbfea69423232 inherit pub_methods_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dd50da3a64dc5d15db48c5af2be0f25 inherit pub_methods_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#a0dd50da3a64dc5d15db48c5af2be0f25">SetBeamId</a> (uint32_t beamId)</td></tr>
+<tr class="memdesc:a0dd50da3a64dc5d15db48c5af2be0f25 inherit pub_methods_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set beam ID of the object.  <a href="classns3_1_1_sat_mac.html#a0dd50da3a64dc5d15db48c5af2be0f25">More...</a><br /></td></tr>
+<tr class="separator:a0dd50da3a64dc5d15db48c5af2be0f25 inherit pub_methods_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b950242e7dd1b76d22abb5528ef0a34 inherit pub_methods_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#a0b950242e7dd1b76d22abb5528ef0a34">SetBeamSchedulerCallback</a> (<a class="el" href="classns3_1_1_sat_mac.html#a37f5089899cad8b266acf60c4f6b68d6">SatMac::BeamSchedulerCallback</a> cb)</td></tr>
+<tr class="memdesc:a0b950242e7dd1b76d22abb5528ef0a34 inherit pub_methods_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the beam scheduler callback.  <a href="classns3_1_1_sat_mac.html#a0b950242e7dd1b76d22abb5528ef0a34">More...</a><br /></td></tr>
+<tr class="separator:a0b950242e7dd1b76d22abb5528ef0a34 inherit pub_methods_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab149a03206a95287419703c0cfaec5bf inherit pub_methods_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#ab149a03206a95287419703c0cfaec5bf">SetHandoverModule</a> (Ptr&lt; <a class="el" href="classns3_1_1_sat_handover_module.html">SatHandoverModule</a> &gt; handoverModule)</td></tr>
+<tr class="memdesc:ab149a03206a95287419703c0cfaec5bf inherit pub_methods_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the handover module.  <a href="classns3_1_1_sat_mac.html#ab149a03206a95287419703c0cfaec5bf">More...</a><br /></td></tr>
+<tr class="separator:ab149a03206a95287419703c0cfaec5bf inherit pub_methods_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abccacc5e219b30732077880713b05245 inherit pub_methods_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#abccacc5e219b30732077880713b05245">SetLoraReceiveCallback</a> (<a class="el" href="classns3_1_1_sat_mac.html#a7f9b673806d52ee593f91fbd1100ef49">SatMac::LoraReceiveCallback</a> cb)</td></tr>
 <tr class="memdesc:abccacc5e219b30732077880713b05245 inherit pub_methods_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to set receive callback.  <a href="classns3_1_1_sat_mac.html#abccacc5e219b30732077880713b05245">More...</a><br /></td></tr>
 <tr class="separator:abccacc5e219b30732077880713b05245 inherit pub_methods_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -323,12 +334,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1d30abdff0d7390793cda4ac8871ebd5 inherit pub_methods_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#a1d30abdff0d7390793cda4ac8871ebd5">SetSatelliteAddress</a> (Address satelliteAddress)</td></tr>
 <tr class="memdesc:a1d30abdff0d7390793cda4ac8871ebd5 inherit pub_methods_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the satellite MAC address on the other side of this link (if regenerative satellite).  <a href="classns3_1_1_sat_mac.html#a1d30abdff0d7390793cda4ac8871ebd5">More...</a><br /></td></tr>
 <tr class="separator:a1d30abdff0d7390793cda4ac8871ebd5 inherit pub_methods_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8842fbd6425ae363bc09fe80af2e164 inherit pub_methods_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#aa8842fbd6425ae363bc09fe80af2e164">SetSatId</a> (uint32_t satId)</td></tr>
+<tr class="memdesc:aa8842fbd6425ae363bc09fe80af2e164 inherit pub_methods_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set sat ID of the object.  <a href="classns3_1_1_sat_mac.html#aa8842fbd6425ae363bc09fe80af2e164">More...</a><br /></td></tr>
+<tr class="separator:aa8842fbd6425ae363bc09fe80af2e164 inherit pub_methods_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f6169a573b2f91902784bd1351b9c10 inherit pub_methods_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#a5f6169a573b2f91902784bd1351b9c10">SetSendCtrlCallback</a> (<a class="el" href="classns3_1_1_sat_mac.html#ab229de9b5d5aeca7fe26b9475c0b477c">SatMac::SendCtrlMsgCallback</a> cb)</td></tr>
 <tr class="memdesc:a5f6169a573b2f91902784bd1351b9c10 inherit pub_methods_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to set send control message callback.  <a href="classns3_1_1_sat_mac.html#a5f6169a573b2f91902784bd1351b9c10">More...</a><br /></td></tr>
 <tr class="separator:a5f6169a573b2f91902784bd1351b9c10 inherit pub_methods_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a386753ea4ce63bcab0d9a16e30e73aed inherit pub_methods_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#a386753ea4ce63bcab0d9a16e30e73aed">SetTransmitCallback</a> (<a class="el" href="classns3_1_1_sat_mac.html#a27a11a151e2031a549d4d63d2e9a98be">SatMac::TransmitCallback</a> cb)</td></tr>
 <tr class="memdesc:a386753ea4ce63bcab0d9a16e30e73aed inherit pub_methods_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to set transmit callback.  <a href="classns3_1_1_sat_mac.html#a386753ea4ce63bcab0d9a16e30e73aed">More...</a><br /></td></tr>
 <tr class="separator:a386753ea4ce63bcab0d9a16e30e73aed inherit pub_methods_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98c7f98ef724b763cae2df21419d50c6 inherit pub_methods_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#a98c7f98ef724b763cae2df21419d50c6">SetUpdateIslCallback</a> (<a class="el" href="classns3_1_1_sat_mac.html#a006ed5b03c1fa864d01abb015c29be50">SatMac::UpdateIslCallback</a> cb)</td></tr>
+<tr class="memdesc:a98c7f98ef724b763cae2df21419d50c6 inherit pub_methods_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to set update ISL callback.  <a href="classns3_1_1_sat_mac.html#a98c7f98ef724b763cae2df21419d50c6">More...</a><br /></td></tr>
+<tr class="separator:a98c7f98ef724b763cae2df21419d50c6 inherit pub_methods_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -348,6 +365,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:afb309b39715e7976983da35e8092b9b1 inherit pub_types_classns3_1_1_lorawan_mac"><td class="memItemLeft" align="right" valign="top">typedef std::array&lt; std::array&lt; uint8_t, 6 &gt;, 8 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_lorawan_mac.html#afb309b39715e7976983da35e8092b9b1">ReplyDataRateMatrix</a></td></tr>
 <tr class="separator:afb309b39715e7976983da35e8092b9b1 inherit pub_types_classns3_1_1_lorawan_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classns3_1_1_sat_mac"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classns3_1_1_sat_mac')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classns3_1_1_sat_mac.html">ns3::SatMac</a></td></tr>
+<tr class="memitem:a37f5089899cad8b266acf60c4f6b68d6 inherit pub_types_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">typedef Callback&lt; Ptr&lt; <a class="el" href="classns3_1_1_sat_beam_scheduler.html">SatBeamScheduler</a> &gt;, uint32_t, uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#a37f5089899cad8b266acf60c4f6b68d6">BeamSchedulerCallback</a></td></tr>
+<tr class="memdesc:a37f5089899cad8b266acf60c4f6b68d6 inherit pub_types_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback to get the <a class="el" href="classns3_1_1_sat_beam_scheduler.html" title="class for module Beam Scheduler.">SatBeamScheduler</a> from the beam ID for handover.  <a href="classns3_1_1_sat_mac.html#a37f5089899cad8b266acf60c4f6b68d6">More...</a><br /></td></tr>
+<tr class="separator:a37f5089899cad8b266acf60c4f6b68d6 inherit pub_types_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f9b673806d52ee593f91fbd1100ef49 inherit pub_types_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">typedef Callback&lt; void, Ptr&lt; const Packet &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#a7f9b673806d52ee593f91fbd1100ef49">LoraReceiveCallback</a></td></tr>
 <tr class="memdesc:a7f9b673806d52ee593f91fbd1100ef49 inherit pub_types_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback to receive packet by upper layer.  <a href="classns3_1_1_sat_mac.html#a7f9b673806d52ee593f91fbd1100ef49">More...</a><br /></td></tr>
 <tr class="separator:a7f9b673806d52ee593f91fbd1100ef49 inherit pub_types_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -369,6 +389,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a27a11a151e2031a549d4d63d2e9a98be inherit pub_types_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">typedef Callback&lt; void, <a class="el" href="classns3_1_1_sat_phy.html#adc7c55a2b67edb142208144326c3a12f">SatPhy::PacketContainer_t</a>, uint32_t, Time, <a class="el" href="structns3_1_1_sat_signal_parameters_1_1tx_info__s.html">SatSignalParameters::txInfo_s</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#a27a11a151e2031a549d4d63d2e9a98be">TransmitCallback</a></td></tr>
 <tr class="memdesc:a27a11a151e2031a549d4d63d2e9a98be inherit pub_types_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback to send packet to lower layer.  <a href="classns3_1_1_sat_mac.html#a27a11a151e2031a549d4d63d2e9a98be">More...</a><br /></td></tr>
 <tr class="separator:a27a11a151e2031a549d4d63d2e9a98be inherit pub_types_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a006ed5b03c1fa864d01abb015c29be50 inherit pub_types_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">typedef Callback&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#a006ed5b03c1fa864d01abb015c29be50">UpdateIslCallback</a></td></tr>
+<tr class="memdesc:a006ed5b03c1fa864d01abb015c29be50 inherit pub_types_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback to update ISL routes when handovers are performed.  <a href="classns3_1_1_sat_mac.html#a006ed5b03c1fa864d01abb015c29be50">More...</a><br /></td></tr>
+<tr class="separator:a006ed5b03c1fa864d01abb015c29be50 inherit pub_types_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classns3_1_1_sat_mac"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classns3_1_1_sat_mac')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classns3_1_1_sat_mac.html">ns3::SatMac</a></td></tr>
 <tr class="memitem:a6ec79f1e1e6d501fdff3fb36c3b9b480 inherit pro_methods_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#a6ec79f1e1e6d501fdff3fb36c3b9b480">DoDispose</a> (void)</td></tr>
 <tr class="memdesc:a6ec79f1e1e6d501fdff3fb36c3b9b480 inherit pro_methods_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispose of <a class="el" href="classns3_1_1_sat_mac.html" title="Base MAC class for SatNetDevices.">SatMac</a>.  <a href="classns3_1_1_sat_mac.html#a6ec79f1e1e6d501fdff3fb36c3b9b480">More...</a><br /></td></tr>
@@ -432,12 +455,18 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a1101ce9dd73f52d16a53c2f2a0ecc01d inherit pro_attribs_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#a1101ce9dd73f52d16a53c2f2a0ecc01d">m_beamId</a></td></tr>
 <tr class="memdesc:a1101ce9dd73f52d16a53c2f2a0ecc01d inherit pro_attribs_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ID of the beam where mac belongs.  <a href="classns3_1_1_sat_mac.html#a1101ce9dd73f52d16a53c2f2a0ecc01d">More...</a><br /></td></tr>
 <tr class="separator:a1101ce9dd73f52d16a53c2f2a0ecc01d inherit pro_attribs_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b7048b360406e0439a1f86f9041b3d2 inherit pro_attribs_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classns3_1_1_sat_mac.html#a37f5089899cad8b266acf60c4f6b68d6">SatMac::BeamSchedulerCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#a2b7048b360406e0439a1f86f9041b3d2">m_beamSchedulerCallback</a></td></tr>
+<tr class="memdesc:a2b7048b360406e0439a1f86f9041b3d2 inherit pro_attribs_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback to get the <a class="el" href="classns3_1_1_sat_beam_scheduler.html" title="class for module Beam Scheduler.">SatBeamScheduler</a> linked to a beam ID.  <a href="classns3_1_1_sat_mac.html#a2b7048b360406e0439a1f86f9041b3d2">More...</a><br /></td></tr>
+<tr class="separator:a2b7048b360406e0439a1f86f9041b3d2 inherit pro_attribs_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10ebb0e1879a95c52a6b9079dd9b5ac3 inherit pro_attribs_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">TracedCallback&lt; Time &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#a10ebb0e1879a95c52a6b9079dd9b5ac3">m_beamServiceTrace</a></td></tr>
 <tr class="memdesc:a10ebb0e1879a95c52a6b9079dd9b5ac3 inherit pro_attribs_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Traced callback for beam being disabled and including service time.  <a href="classns3_1_1_sat_mac.html#a10ebb0e1879a95c52a6b9079dd9b5ac3">More...</a><br /></td></tr>
 <tr class="separator:a10ebb0e1879a95c52a6b9079dd9b5ac3 inherit pro_attribs_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab69c2122cb565ab162be72040897a0dc inherit pro_attribs_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classns3_1_1_sat_enums.html#ae1323e94664d2248445952d05080df7a">SatEnums::RegenerationMode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#ab69c2122cb565ab162be72040897a0dc">m_forwardLinkRegenerationMode</a></td></tr>
 <tr class="memdesc:ab69c2122cb565ab162be72040897a0dc inherit pro_attribs_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Regeneration mode on forward link.  <a href="classns3_1_1_sat_mac.html#ab69c2122cb565ab162be72040897a0dc">More...</a><br /></td></tr>
 <tr class="separator:ab69c2122cb565ab162be72040897a0dc inherit pro_attribs_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa339806a59ed0d5b79970af956ed51d inherit pro_attribs_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">Ptr&lt; <a class="el" href="classns3_1_1_sat_handover_module.html">SatHandoverModule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#aaa339806a59ed0d5b79970af956ed51d">m_handoverModule</a></td></tr>
+<tr class="memdesc:aaa339806a59ed0d5b79970af956ed51d inherit pro_attribs_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Module used to perform handovers.  <a href="classns3_1_1_sat_mac.html#aaa339806a59ed0d5b79970af956ed51d">More...</a><br /></td></tr>
+<tr class="separator:aaa339806a59ed0d5b79970af956ed51d inherit pro_attribs_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c77e629096533bb6cb318863c9580e2 inherit pro_attribs_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#a9c77e629096533bb6cb318863c9580e2">m_isRegenerative</a></td></tr>
 <tr class="memdesc:a9c77e629096533bb6cb318863c9580e2 inherit pro_attribs_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate if satellite is regeneration (at least LINK level) for TX.  <a href="classns3_1_1_sat_mac.html#a9c77e629096533bb6cb318863c9580e2">More...</a><br /></td></tr>
 <tr class="separator:a9c77e629096533bb6cb318863c9580e2 inherit pro_attribs_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -513,10 +542,13 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:ab18d89c409a7689f8b7e997e75f55ef1 inherit pro_attribs_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#ab18d89c409a7689f8b7e997e75f55ef1">m_txEnabled</a></td></tr>
 <tr class="memdesc:ab18d89c409a7689f8b7e997e75f55ef1 inherit pro_attribs_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating whether the MAC is enabled, i.e.  <a href="classns3_1_1_sat_mac.html#ab18d89c409a7689f8b7e997e75f55ef1">More...</a><br /></td></tr>
 <tr class="separator:ab18d89c409a7689f8b7e997e75f55ef1 inherit pro_attribs_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcb8ae3e24fa24918fe8030198489eab inherit pro_attribs_classns3_1_1_sat_mac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classns3_1_1_sat_mac.html#a006ed5b03c1fa864d01abb015c29be50">SatMac::UpdateIslCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mac.html#afcb8ae3e24fa24918fe8030198489eab">m_updateIslCallback</a></td></tr>
+<tr class="memdesc:afcb8ae3e24fa24918fe8030198489eab inherit pro_attribs_classns3_1_1_sat_mac"><td class="mdescLeft">&#160;</td><td class="mdescRight">The update ISL routes callback.  <a href="classns3_1_1_sat_mac.html#afcb8ae3e24fa24918fe8030198489eab">More...</a><br /></td></tr>
+<tr class="separator:afcb8ae3e24fa24918fe8030198489eab inherit pro_attribs_classns3_1_1_sat_mac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="lorawan-mac-gateway_8h_source.html#l00033">33</a> of file <a class="el" href="lorawan-mac-gateway_8h_source.html">lorawan-mac-gateway.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lorawan-mac-gateway_8h_source.html#l00035">35</a> of file <a class="el" href="lorawan-mac-gateway_8h_source.html">lorawan-mac-gateway.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6f75fdc3f3044226f32f49bec283033b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f75fdc3f3044226f32f49bec283033b">&#9670;&nbsp;</a></span>LorawanMacGateway() <span class="overload">[1/2]</span></h2>
@@ -533,7 +565,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00048">48</a> of file <a class="el" href="lorawan-mac-gateway_8cc_source.html">lorawan-mac-gateway.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00047">47</a> of file <a class="el" href="lorawan-mac-gateway_8cc_source.html">lorawan-mac-gateway.cc</a>.</p>
 
 </div>
 </div>
@@ -563,7 +595,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00053">53</a> of file <a class="el" href="lorawan-mac-gateway_8cc_source.html">lorawan-mac-gateway.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00052">52</a> of file <a class="el" href="lorawan-mac-gateway_8cc_source.html">lorawan-mac-gateway.cc</a>.</p>
 
 </div>
 </div>
@@ -590,7 +622,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00059">59</a> of file <a class="el" href="lorawan-mac-gateway_8cc_source.html">lorawan-mac-gateway.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00058">58</a> of file <a class="el" href="lorawan-mac-gateway_8cc_source.html">lorawan-mac-gateway.cc</a>.</p>
 
 </div>
 </div>
@@ -657,7 +689,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00040">40</a> of file <a class="el" href="lorawan-mac-gateway_8cc_source.html">lorawan-mac-gateway.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00041">41</a> of file <a class="el" href="lorawan-mac-gateway_8cc_source.html">lorawan-mac-gateway.cc</a>.</p>
 
 </div>
 </div>
@@ -682,7 +714,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00209">209</a> of file <a class="el" href="lorawan-mac-gateway_8cc_source.html">lorawan-mac-gateway.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-logical-channel-helper_8cc_source.html#l00203">ns3::LoraLogicalChannelHelper::GetWaitingTime()</a>, and <a class="el" href="lorawan-mac_8h_source.html#l00289">ns3::LorawanMac::m_channelHelper</a>.</p>
+<p class="reference">References <a class="el" href="lora-logical-channel-helper_8cc_source.html#l00208">ns3::LoraLogicalChannelHelper::GetWaitingTime()</a>, and <a class="el" href="lorawan-mac_8h_source.html#l00291">ns3::LorawanMac::m_channelHelper</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -715,11 +747,11 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00154">154</a> of file <a class="el" href="lorawan-mac-gateway_8cc_source.html">lorawan-mac-gateway.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00153">153</a> of file <a class="el" href="lorawan-mac-gateway_8cc_source.html">lorawan-mac-gateway.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lorawan-mac_8h_source.html#l00279">ns3::LorawanMac::m_phy</a>.</p>
+<p class="reference">References <a class="el" href="lorawan-mac_8h_source.html#l00281">ns3::LorawanMac::m_phy</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00065">Send()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lorawan-ground-mac-gateway_8cc_source.html#l00067">ns3::LorawanGroundMacGateway::Send()</a>, <a class="el" href="lorawan-orbiter-mac-gateway_8cc_source.html#l00067">ns3::LorawanOrbiterMacGateway::Send()</a>, and <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00064">Send()</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -727,15 +759,17 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_lorawan_mac_gateway_a826653eb034e461525f9c078b3ab81ca_icgraph.png" border="0" usemap="#aclassns3_1_1_lorawan_mac_gateway_a826653eb034e461525f9c078b3ab81ca_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_lorawan_mac_gateway_a826653eb034e461525f9c078b3ab81ca_icgraph" id="aclassns3_1_1_lorawan_mac_gateway_a826653eb034e461525f9c078b3ab81ca_icgraph">
-<area shape="rect" title=" " alt="" coords="247,5,440,47"/>
-<area shape="rect" href="classns3_1_1_lorawan_mac_gateway.html#a39cdd35af385aab373fb689ddc8e4fe5" title="Send a packet." alt="" coords="5,5,199,47"/>
+<area shape="rect" title=" " alt="" coords="293,71,487,112"/>
+<area shape="rect" href="classns3_1_1_lorawan_ground_mac_gateway.html#a1e8766987037466231fdbf48fddcfdd6" title="Send a packet." alt="" coords="5,5,245,47"/>
+<area shape="rect" href="classns3_1_1_lorawan_orbiter_mac_gateway.html#a278d73e17736e715d1ac525733a575b0" title="Send a packet." alt="" coords="6,71,245,112"/>
+<area shape="rect" href="classns3_1_1_lorawan_mac_gateway.html#a730919f7fe6cc4035a70d0d5125196f2" title="Send a packet." alt="" coords="29,136,222,177"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a5ecde16c5a9486e19bed4011f4a4cc0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ecde16c5a9486e19bed4011f4a4cc0e">&#9670;&nbsp;</a></span>Receive()</h2>
+<a id="a1e5b7033fd55e85cc8cf8a7d4398b6f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e5b7033fd55e85cc8cf8a7d4398b6f9">&#9670;&nbsp;</a></span>Receive()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -763,7 +797,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -778,31 +812,37 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classns3_1_1_lorawan_mac.html#ab3d67bf29b41baad210836579630e037">ns3::LorawanMac</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00160">160</a> of file <a class="el" href="lorawan-mac-gateway_8cc_source.html">lorawan-mac-gateway.cc</a>.</p>
+<p>Implemented in <a class="el" href="classns3_1_1_lorawan_orbiter_mac_gateway.html#aecc9646380c05143286c5ad34c628953">ns3::LorawanOrbiterMacGateway</a>, and <a class="el" href="classns3_1_1_lorawan_ground_mac_gateway.html#a26faded9ca1beae1f5c79703a54a225c">ns3::LorawanGroundMacGateway</a>.</p>
 
-<p class="reference">References <a class="el" href="lorawan-mac-header_8cc_source.html#l00146">ns3::LorawanMacHeader::IsUplink()</a>, <a class="el" href="lorawan-mac_8h_source.html#l00284">ns3::LorawanMac::m_device</a>, <a class="el" href="lorawan-mac_8h_source.html#l00268">ns3::LorawanMac::m_receivedPacket</a>, and <a class="el" href="satellite-mac_8cc_source.html#l00323">ns3::SatMac::RxTraces()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00159">159</a> of file <a class="el" href="lorawan-mac-gateway_8cc_source.html">lorawan-mac-gateway.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="lorawan-mac-header_8cc_source.html#l00148">ns3::LorawanMacHeader::IsUplink()</a>, <a class="el" href="lorawan-mac_8h_source.html#l00286">ns3::LorawanMac::m_device</a>, <a class="el" href="lorawan-mac_8h_source.html#l00270">ns3::LorawanMac::m_receivedPacket</a>, <a class="el" href="satellite-lorawan-net-device_8cc_source.html#l00068">ns3::SatLorawanNetDevice::Receive()</a>, and <a class="el" href="satellite-mac_8cc_source.html#l00329">ns3::SatMac::RxTraces()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classns3_1_1_lorawan_mac_gateway_a5ecde16c5a9486e19bed4011f4a4cc0e_cgraph.png" border="0" usemap="#aclassns3_1_1_lorawan_mac_gateway_a5ecde16c5a9486e19bed4011f4a4cc0e_cgraph" alt=""/></div>
-<map name="aclassns3_1_1_lorawan_mac_gateway_a5ecde16c5a9486e19bed4011f4a4cc0e_cgraph" id="aclassns3_1_1_lorawan_mac_gateway_a5ecde16c5a9486e19bed4011f4a4cc0e_cgraph">
-<area shape="rect" title="Receive a packet from the lower layer." alt="" coords="5,93,199,134"/>
-<area shape="rect" href="classns3_1_1_lorawan_mac_header.html#a4e495691eb3084d80ff1a1b2049e3c7b" title="Check whether this header is for an uplink message." alt="" coords="247,63,429,105"/>
-<area shape="rect" href="classns3_1_1_sat_mac.html#a063a893d7cf3306845dc548d0725676f" title="Invoke the Rx trace source for each received packet." alt="" coords="255,129,421,156"/>
-<area shape="rect" href="classns3_1_1_sat_mac_tag.html#ad6acc757343e43578c67bcad27aae54c" title="Get destination MAC address." alt="" coords="477,5,713,32"/>
-<area shape="rect" href="classns3_1_1_sat_mac_link_time_tag.html#abfbaf11dc60441521ec6cf9021ff35c8" title="Get sender time stamp of this tag." alt="" coords="496,57,695,98"/>
-<area shape="rect" href="classns3_1_1_sat_mac_time_tag.html#afa18741d63dbdc3a3932dca41486831f" title="Get sender time stamp of this tag." alt="" coords="509,122,681,163"/>
-<area shape="rect" href="classns3_1_1_sat_address_tag.html#a72834e721e79d0c24e84128c3fa7977d" title="Get the source address." alt="" coords="521,187,670,229"/>
-<area shape="rect" href="classns3_1_1_sat_address_tag.html#a5a35d054a782f49153095b63be3a3d46" title="Inherited from ObjectBase base class." alt="" coords="521,253,669,294"/>
+<div class="center"><img src="classns3_1_1_lorawan_mac_gateway_a1e5b7033fd55e85cc8cf8a7d4398b6f9_cgraph.png" border="0" usemap="#aclassns3_1_1_lorawan_mac_gateway_a1e5b7033fd55e85cc8cf8a7d4398b6f9_cgraph" alt=""/></div>
+<map name="aclassns3_1_1_lorawan_mac_gateway_a1e5b7033fd55e85cc8cf8a7d4398b6f9_cgraph" id="aclassns3_1_1_lorawan_mac_gateway_a1e5b7033fd55e85cc8cf8a7d4398b6f9_cgraph">
+<area shape="rect" title="Receive a packet from the lower layer." alt="" coords="5,123,199,164"/>
+<area shape="rect" href="classns3_1_1_lorawan_mac_header.html#a4e495691eb3084d80ff1a1b2049e3c7b" title="Check whether this header is for an uplink message." alt="" coords="254,57,437,99"/>
+<area shape="rect" href="classns3_1_1_sat_lorawan_net_device.html#a23db17901ddf0ac1ad0dfb3e28136aa1" title=" " alt="" coords="247,123,444,164"/>
+<area shape="rect" href="classns3_1_1_sat_mac.html#a063a893d7cf3306845dc548d0725676f" title="Invoke the Rx trace source for each received packet." alt="" coords="262,225,429,251"/>
+<area shape="rect" href="classns3_1_1_sat_utils.html#af6f84553eaa4b877521b1ce2c2683b55" title="Get packet information in std::string for printing purposes." alt="" coords="492,71,695,98"/>
+<area shape="rect" href="classns3_1_1_sat_dev_time_tag.html#affa544a6d7c1e930b0dae49d44a050ca" title="Get sender time stamp of this tag." alt="" coords="507,5,679,47"/>
+<area shape="rect" href="classns3_1_1_sat_address_tag.html#a72834e721e79d0c24e84128c3fa7977d" title="Get the source address." alt="" coords="519,188,668,229"/>
+<area shape="rect" href="classns3_1_1_sat_address_tag.html#a5a35d054a782f49153095b63be3a3d46" title="Inherited from ObjectBase base class." alt="" coords="519,123,667,164"/>
+<area shape="rect" href="classns3_1_1_sat_mac_tag.html#ad6acc757343e43578c67bcad27aae54c" title="Get destination MAC address." alt="" coords="743,191,979,218"/>
+<area shape="rect" href="classns3_1_1_sat_mac_tag.html#ad5218540f7638f7b5949fe9b791ecc47" title="Get source MAC address." alt="" coords="761,64,960,105"/>
+<area shape="rect" href="classns3_1_1_sat_mac_link_time_tag.html#abfbaf11dc60441521ec6cf9021ff35c8" title="Get sender time stamp of this tag." alt="" coords="494,305,693,347"/>
+<area shape="rect" href="classns3_1_1_sat_mac_time_tag.html#afa18741d63dbdc3a3932dca41486831f" title="Get sender time stamp of this tag." alt="" coords="507,371,679,412"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a39cdd35af385aab373fb689ddc8e4fe5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39cdd35af385aab373fb689ddc8e4fe5">&#9670;&nbsp;</a></span>Send()</h2>
+<a id="a730919f7fe6cc4035a70d0d5125196f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a730919f7fe6cc4035a70d0d5125196f2">&#9670;&nbsp;</a></span>Send()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -820,7 +860,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -835,16 +875,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classns3_1_1_lorawan_mac.html#a1bec518e1be3d795d191c57d6b56c268">ns3::LorawanMac</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00065">65</a> of file <a class="el" href="lorawan-mac-gateway_8cc_source.html">lorawan-mac-gateway.cc</a>.</p>
+<p>Implemented in <a class="el" href="classns3_1_1_lorawan_orbiter_mac_gateway.html#a278d73e17736e715d1ac525733a575b0">ns3::LorawanOrbiterMacGateway</a>, and <a class="el" href="classns3_1_1_lorawan_ground_mac_gateway.html#a1e8766987037466231fdbf48fddcfdd6">ns3::LorawanGroundMacGateway</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-logical-channel-helper_8cc_source.html#l00220">ns3::LoraLogicalChannelHelper::AddEvent()</a>, <a class="el" href="satellite-lora-phy-tx_8h_source.html#l00038">ns3::LoraTxParameters::bandwidthHz</a>, <a class="el" href="satellite-lora-phy-tx_8h_source.html#l00037">ns3::LoraTxParameters::codingRate</a>, <a class="el" href="satellite-lora-phy-tx_8h_source.html#l00040">ns3::LoraTxParameters::crcEnabled</a>, <a class="el" href="satellite-signal-parameters_8h_source.html#l00131">ns3::SatSignalParameters::txInfo_s::frameType</a>, <a class="el" href="lorawan-mac_8cc_source.html#l00137">ns3::LorawanMac::GetBandwidthFromDataRate()</a>, <a class="el" href="satellite-utils_8h_source.html#l00540">ns3::SatUtils::GetCodingRate()</a>, <a class="el" href="lora-tag_8cc_source.html#l00146">ns3::LoraTag::GetDataRate()</a>, <a class="el" href="lora-tag_8cc_source.html#l00140">ns3::LoraTag::GetFrequency()</a>, <a class="el" href="lora-tag_8cc_source.html#l00158">ns3::LoraTag::GetModcod()</a>, <a class="el" href="lorawan-mac_8cc_source.html#l00164">ns3::LorawanMac::GetOnAirTime()</a>, <a class="el" href="lorawan-mac_8cc_source.html#l00123">ns3::LorawanMac::GetSfFromDataRate()</a>, <a class="el" href="lora-logical-channel-helper_8cc_source.html#l00203">ns3::LoraLogicalChannelHelper::GetWaitingTime()</a>, <a class="el" href="satellite-lora-phy-tx_8h_source.html#l00036">ns3::LoraTxParameters::headerDisabled</a>, <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00154">IsTransmitting()</a>, <a class="el" href="satellite-lora-phy-tx_8h_source.html#l00041">ns3::LoraTxParameters::lowDataRateOptimizationEnabled</a>, <a class="el" href="lorawan-mac_8h_source.html#l00289">ns3::LorawanMac::m_channelHelper</a>, <a class="el" href="lorawan-mac_8h_source.html#l00284">ns3::LorawanMac::m_device</a>, <a class="el" href="satellite-mac_8h_source.html#l00327">ns3::SatMac::m_isStatisticsTagsEnabled</a>, <a class="el" href="satellite-mac_8h_source.html#l00393">ns3::SatMac::m_nodeInfo</a>, <a class="el" href="lorawan-mac_8h_source.html#l00279">ns3::LorawanMac::m_phy</a>, <a class="el" href="lorawan-mac_8h_source.html#l00274">ns3::LorawanMac::m_sentNewPacket</a>, <a class="el" href="satellite-signal-parameters_8h_source.html#l00128">ns3::SatSignalParameters::txInfo_s::modCod</a>, <a class="el" href="satellite-enums_8h_source.html#l01748">ns3::SatEnums::NORMAL_FRAME</a>, <a class="el" href="satellite-lora-phy-tx_8h_source.html#l00039">ns3::LoraTxParameters::nPreamble</a>, <a class="el" href="satellite-enums_8h_source.html#l02166">ns3::SatEnums::PACKET_TYPE_DEDICATED_ACCESS</a>, <a class="el" href="satellite-signal-parameters_8h_source.html#l00127">ns3::SatSignalParameters::txInfo_s::packetType</a>, <a class="el" href="satellite-mac-tag_8cc_source.html#l00059">ns3::SatMacTag::SetDestAddress()</a>, <a class="el" href="satellite-mac-tag_8cc_source.html#l00158">ns3::SatAddressE2ETag::SetE2EDestAddress()</a>, <a class="el" href="satellite-mac-tag_8cc_source.html#l00172">ns3::SatAddressE2ETag::SetE2ESourceAddress()</a>, <a class="el" href="satellite-mac-tag_8cc_source.html#l00073">ns3::SatMacTag::SetSourceAddress()</a>, <a class="el" href="satellite-lora-phy-tx_8h_source.html#l00035">ns3::LoraTxParameters::sf</a>, <a class="el" href="satellite-signal-parameters_8h_source.html#l00129">ns3::SatSignalParameters::txInfo_s::sliceId</a>, and <a class="el" href="satellite-signal-parameters_8h_source.html#l00132">ns3::SatSignalParameters::txInfo_s::waveformId</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00064">64</a> of file <a class="el" href="lorawan-mac-gateway_8cc_source.html">lorawan-mac-gateway.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="lora-logical-channel-helper_8cc_source.html#l00225">ns3::LoraLogicalChannelHelper::AddEvent()</a>, <a class="el" href="satellite-lora-phy-tx_8h_source.html#l00040">ns3::LoraTxParameters::bandwidthHz</a>, <a class="el" href="satellite-lora-phy-tx_8h_source.html#l00039">ns3::LoraTxParameters::codingRate</a>, <a class="el" href="satellite-lora-phy-tx_8h_source.html#l00042">ns3::LoraTxParameters::crcEnabled</a>, <a class="el" href="satellite-signal-parameters_8h_source.html#l00135">ns3::SatSignalParameters::txInfo_s::frameType</a>, <a class="el" href="lorawan-mac_8cc_source.html#l00142">ns3::LorawanMac::GetBandwidthFromDataRate()</a>, <a class="el" href="satellite-utils_8h_source.html#l00544">ns3::SatUtils::GetCodingRate()</a>, <a class="el" href="lora-tag_8cc_source.html#l00148">ns3::LoraTag::GetDataRate()</a>, <a class="el" href="lora-tag_8cc_source.html#l00142">ns3::LoraTag::GetFrequency()</a>, <a class="el" href="lora-tag_8cc_source.html#l00160">ns3::LoraTag::GetModcod()</a>, <a class="el" href="lorawan-mac_8cc_source.html#l00169">ns3::LorawanMac::GetOnAirTime()</a>, <a class="el" href="lorawan-mac_8cc_source.html#l00128">ns3::LorawanMac::GetSfFromDataRate()</a>, <a class="el" href="lora-logical-channel-helper_8cc_source.html#l00208">ns3::LoraLogicalChannelHelper::GetWaitingTime()</a>, <a class="el" href="satellite-lora-phy-tx_8h_source.html#l00038">ns3::LoraTxParameters::headerDisabled</a>, <a class="el" href="lorawan-mac-gateway_8cc_source.html#l00153">IsTransmitting()</a>, <a class="el" href="satellite-lora-phy-tx_8h_source.html#l00043">ns3::LoraTxParameters::lowDataRateOptimizationEnabled</a>, <a class="el" href="lorawan-mac_8h_source.html#l00291">ns3::LorawanMac::m_channelHelper</a>, <a class="el" href="lorawan-mac_8h_source.html#l00286">ns3::LorawanMac::m_device</a>, <a class="el" href="satellite-mac_8h_source.html#l00384">ns3::SatMac::m_isStatisticsTagsEnabled</a>, <a class="el" href="satellite-mac_8h_source.html#l00450">ns3::SatMac::m_nodeInfo</a>, <a class="el" href="lorawan-mac_8h_source.html#l00281">ns3::LorawanMac::m_phy</a>, <a class="el" href="lorawan-mac_8h_source.html#l00276">ns3::LorawanMac::m_sentNewPacket</a>, <a class="el" href="satellite-signal-parameters_8h_source.html#l00132">ns3::SatSignalParameters::txInfo_s::modCod</a>, <a class="el" href="satellite-enums_8h_source.html#l01749">ns3::SatEnums::NORMAL_FRAME</a>, <a class="el" href="satellite-lora-phy-tx_8h_source.html#l00041">ns3::LoraTxParameters::nPreamble</a>, <a class="el" href="satellite-enums_8h_source.html#l02167">ns3::SatEnums::PACKET_TYPE_DEDICATED_ACCESS</a>, <a class="el" href="satellite-signal-parameters_8h_source.html#l00131">ns3::SatSignalParameters::txInfo_s::packetType</a>, <a class="el" href="satellite-mac-tag_8cc_source.html#l00061">ns3::SatMacTag::SetDestAddress()</a>, <a class="el" href="satellite-mac-tag_8cc_source.html#l00160">ns3::SatAddressE2ETag::SetE2EDestAddress()</a>, <a class="el" href="satellite-mac-tag_8cc_source.html#l00174">ns3::SatAddressE2ETag::SetE2ESourceAddress()</a>, <a class="el" href="satellite-mac-tag_8cc_source.html#l00075">ns3::SatMacTag::SetSourceAddress()</a>, <a class="el" href="satellite-lora-phy-tx_8h_source.html#l00037">ns3::LoraTxParameters::sf</a>, <a class="el" href="satellite-signal-parameters_8h_source.html#l00133">ns3::SatSignalParameters::txInfo_s::sliceId</a>, and <a class="el" href="satellite-signal-parameters_8h_source.html#l00136">ns3::SatSignalParameters::txInfo_s::waveformId</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classns3_1_1_lorawan_mac_gateway_a39cdd35af385aab373fb689ddc8e4fe5_cgraph.png" border="0" usemap="#aclassns3_1_1_lorawan_mac_gateway_a39cdd35af385aab373fb689ddc8e4fe5_cgraph" alt=""/></div>
-<map name="aclassns3_1_1_lorawan_mac_gateway_a39cdd35af385aab373fb689ddc8e4fe5_cgraph" id="aclassns3_1_1_lorawan_mac_gateway_a39cdd35af385aab373fb689ddc8e4fe5_cgraph">
+<div class="center"><img src="classns3_1_1_lorawan_mac_gateway_a730919f7fe6cc4035a70d0d5125196f2_cgraph.png" border="0" usemap="#aclassns3_1_1_lorawan_mac_gateway_a730919f7fe6cc4035a70d0d5125196f2_cgraph" alt=""/></div>
+<map name="aclassns3_1_1_lorawan_mac_gateway_a730919f7fe6cc4035a70d0d5125196f2_cgraph" id="aclassns3_1_1_lorawan_mac_gateway_a730919f7fe6cc4035a70d0d5125196f2_cgraph">
 <area shape="rect" title="Send a packet." alt="" coords="5,361,199,403"/>
 <area shape="rect" href="classns3_1_1_lora_logical_channel_helper.html#a58fa3a4da240308f17c7a5711d6ad5d5" title="Register the transmission of a packet." alt="" coords="253,5,475,47"/>
 <area shape="rect" href="classns3_1_1_lorawan_mac.html#af94fc6bc17ede5ba96fdfbe7fe26adc5" title="Get the BW corresponding to a data rate, based on this MAC&#39;s region." alt="" coords="247,71,481,112"/>

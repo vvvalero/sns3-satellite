@@ -2,6 +2,8 @@ var classns3_1_1_sat_stats_composite_sinr_helper =
 [
     [ "SatStatsCompositeSinrHelper", "classns3_1_1_sat_stats_composite_sinr_helper.html#afe20439605d36d5d4b74c0e47afc9ad6", null ],
     [ "~SatStatsCompositeSinrHelper", "classns3_1_1_sat_stats_composite_sinr_helper.html#af89b696e6d6abfea77ee74d2c0284f7a", null ],
+    [ "ConnectProbeToCollector", "classns3_1_1_sat_stats_composite_sinr_helper.html#a3a4c3b834c26cc253a71eddf7988723b", null ],
+    [ "DisconnectProbeFromCollector", "classns3_1_1_sat_stats_composite_sinr_helper.html#ac59866e6345c2d905ab5e5d3017a6d0d", null ],
     [ "DoInstall", "classns3_1_1_sat_stats_composite_sinr_helper.html#ac4163e0490c639eca97b6d527e4203de", null ],
     [ "DoInstallProbes", "classns3_1_1_sat_stats_composite_sinr_helper.html#af40b38c2d25e0ddf5aa3470e91bf0fea", null ],
     [ "GetTypeId", "classns3_1_1_sat_stats_composite_sinr_helper.html#a1cf98de438d0ad3760528244b5ade992", null ],

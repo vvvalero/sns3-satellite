@@ -152,32 +152,35 @@ $(document).ready(function(){initNavTree('satellite-base-fader-conf_8h_source.ht
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;ns3/simulator.h&gt;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;ns3/uinteger.h&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacens3.html">ns3</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_base_fader_conf.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="classns3_1_1_sat_base_fader_conf.html">SatBaseFaderConf</a> : <span class="keyword">public</span> Object</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classns3_1_1_sat_base_fader_conf.html#afc8160b3de0e1a9127b21bde39424526">SatBaseFaderConf</a>();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classns3_1_1_sat_base_fader_conf.html#a71dfb8dd50d1dc459651ea70fbf9263e">~SatBaseFaderConf</a>();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">static</span> TypeId <a class="code" href="classns3_1_1_sat_base_fader_conf.html#a6a1d624c386f00f31dd957fafc46f072">GetTypeId</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_base_fader_conf.html#a96d0406e2cf5eca0a1909efeb17289c3">   63</a></span>&#160;    <span class="keyword">virtual</span> std::vector&lt;std::vector&lt;double&gt;&gt; <a class="code" href="classns3_1_1_sat_base_fader_conf.html#a96d0406e2cf5eca0a1909efeb17289c3">GetParameters</a>(uint32_t set) = 0;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacens3.html">ns3</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_base_fader_conf.html">   42</a></span>&#160;<span class="keyword">class </span><a class="code" href="classns3_1_1_sat_base_fader_conf.html">SatBaseFaderConf</a> : <span class="keyword">public</span> Object</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classns3_1_1_sat_base_fader_conf.html#afc8160b3de0e1a9127b21bde39424526">SatBaseFaderConf</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classns3_1_1_sat_base_fader_conf.html#a71dfb8dd50d1dc459651ea70fbf9263e">~SatBaseFaderConf</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">static</span> TypeId <a class="code" href="classns3_1_1_sat_base_fader_conf.html#a6a1d624c386f00f31dd957fafc46f072">GetTypeId</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classns3_1_1_sat_base_fader_conf.html#a96d0406e2cf5eca0a1909efeb17289c3">   66</a></span>&#160;    <span class="keyword">virtual</span> std::vector&lt;std::vector&lt;double&gt;&gt; <a class="code" href="classns3_1_1_sat_base_fader_conf.html#a96d0406e2cf5eca0a1909efeb17289c3">GetParameters</a>(uint32_t set) = 0;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;} <span class="comment">// namespace ns3</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SATELLITE_BASE_FADER_CONF_H */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="aclassns3_1_1_sat_base_fader_conf_html"><div class="ttname"><a href="classns3_1_1_sat_base_fader_conf.html">ns3::SatBaseFaderConf</a></div><div class="ttdoc">Base class for fader configuration classes.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-base-fader-conf_8h_source.html#l00039">satellite-base-fader-conf.h:40</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_base_fader_conf_html_a6a1d624c386f00f31dd957fafc46f072"><div class="ttname"><a href="classns3_1_1_sat_base_fader_conf.html#a6a1d624c386f00f31dd957fafc46f072">ns3::SatBaseFaderConf::GetTypeId</a></div><div class="ttdeci">static TypeId GetTypeId(void)</div><div class="ttdoc">NS-3 type id function.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-base-fader-conf_8cc_source.html#l00033">satellite-base-fader-conf.cc:33</a></div></div>
-<div class="ttc" id="aclassns3_1_1_sat_base_fader_conf_html_a71dfb8dd50d1dc459651ea70fbf9263e"><div class="ttname"><a href="classns3_1_1_sat_base_fader_conf.html#a71dfb8dd50d1dc459651ea70fbf9263e">ns3::SatBaseFaderConf::~SatBaseFaderConf</a></div><div class="ttdeci">virtual ~SatBaseFaderConf()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-base-fader-conf_8cc_source.html#l00044">satellite-base-fader-conf.cc:44</a></div></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;} <span class="comment">// namespace ns3</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SATELLITE_BASE_FADER_CONF_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassns3_1_1_sat_base_fader_conf_html"><div class="ttname"><a href="classns3_1_1_sat_base_fader_conf.html">ns3::SatBaseFaderConf</a></div><div class="ttdoc">Base class for fader configuration classes.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-base-fader-conf_8h_source.html#l00042">satellite-base-fader-conf.h:43</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_base_fader_conf_html_a6a1d624c386f00f31dd957fafc46f072"><div class="ttname"><a href="classns3_1_1_sat_base_fader_conf.html#a6a1d624c386f00f31dd957fafc46f072">ns3::SatBaseFaderConf::GetTypeId</a></div><div class="ttdeci">static TypeId GetTypeId(void)</div><div class="ttdoc">NS-3 type id function.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-base-fader-conf_8cc_source.html#l00035">satellite-base-fader-conf.cc:35</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_base_fader_conf_html_a71dfb8dd50d1dc459651ea70fbf9263e"><div class="ttname"><a href="classns3_1_1_sat_base_fader_conf.html#a71dfb8dd50d1dc459651ea70fbf9263e">ns3::SatBaseFaderConf::~SatBaseFaderConf</a></div><div class="ttdeci">virtual ~SatBaseFaderConf()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-base-fader-conf_8cc_source.html#l00046">satellite-base-fader-conf.cc:46</a></div></div>
 <div class="ttc" id="aclassns3_1_1_sat_base_fader_conf_html_a96d0406e2cf5eca0a1909efeb17289c3"><div class="ttname"><a href="classns3_1_1_sat_base_fader_conf.html#a96d0406e2cf5eca0a1909efeb17289c3">ns3::SatBaseFaderConf::GetParameters</a></div><div class="ttdeci">virtual std::vector&lt; std::vector&lt; double &gt; &gt; GetParameters(uint32_t set)=0</div><div class="ttdoc">Function for getting the fading value.</div></div>
-<div class="ttc" id="aclassns3_1_1_sat_base_fader_conf_html_afc8160b3de0e1a9127b21bde39424526"><div class="ttname"><a href="classns3_1_1_sat_base_fader_conf.html#afc8160b3de0e1a9127b21bde39424526">ns3::SatBaseFaderConf::SatBaseFaderConf</a></div><div class="ttdeci">SatBaseFaderConf()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-base-fader-conf_8cc_source.html#l00039">satellite-base-fader-conf.cc:39</a></div></div>
-<div class="ttc" id="anamespacens3_html"><div class="ttname"><a href="namespacens3.html">ns3</a></div><div class="ttdoc">SatArqSequenceNumber is handling the sequence numbers for the ARQ process.</div><div class="ttdef"><b>Definition:</b> <a href="sat-link-results-plot_8cc_source.html#l00039">sat-link-results-plot.cc:40</a></div></div>
+<div class="ttc" id="aclassns3_1_1_sat_base_fader_conf_html_afc8160b3de0e1a9127b21bde39424526"><div class="ttname"><a href="classns3_1_1_sat_base_fader_conf.html#afc8160b3de0e1a9127b21bde39424526">ns3::SatBaseFaderConf::SatBaseFaderConf</a></div><div class="ttdeci">SatBaseFaderConf()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="satellite-base-fader-conf_8cc_source.html#l00041">satellite-base-fader-conf.cc:41</a></div></div>
+<div class="ttc" id="anamespacens3_html"><div class="ttname"><a href="namespacens3.html">ns3</a></div><div class="ttdoc">SatArqSequenceNumber is handling the sequence numbers for the ARQ process.</div><div class="ttdef"><b>Definition:</b> <a href="sat-link-results-plot_8cc_source.html#l00040">sat-link-results-plot.cc:41</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 

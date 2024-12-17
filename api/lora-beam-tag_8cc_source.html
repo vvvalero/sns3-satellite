@@ -150,85 +150,87 @@ $(document).ready(function(){initNavTree('lora-beam-tag_8cc_source.html',''); in
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;ns3/log.h&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;NS_LOG_COMPONENT_DEFINE(<span class="stringliteral">&quot;LoraBeamTag&quot;</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacens3.html">ns3</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;NS_OBJECT_ENSURE_REGISTERED(LoraBeamTag);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;NS_LOG_COMPONENT_DEFINE(<span class="stringliteral">&quot;LoraBeamTag&quot;</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacens3.html">ns3</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;TypeId</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_beam_tag.html#a9d580978d29985bd281c0ea108a3da11">   33</a></span>&#160;<a class="code" href="classns3_1_1_lora_beam_tag.html#a9d580978d29985bd281c0ea108a3da11">LoraBeamTag::GetTypeId</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">static</span> TypeId tid = TypeId(<span class="stringliteral">&quot;ns3::LoraBeamTag&quot;</span>).SetParent&lt;Tag&gt;().AddConstructor&lt;LoraBeamTag&gt;();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> tid;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;TypeId</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_beam_tag.html#a34c094f42df513be35a5188b9bd147f0">   40</a></span>&#160;<a class="code" href="classns3_1_1_lora_beam_tag.html#a34c094f42df513be35a5188b9bd147f0">LoraBeamTag::GetInstanceTypeId</a>(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns3_1_1_lora_beam_tag.html#a9d580978d29985bd281c0ea108a3da11">GetTypeId</a>();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_beam_tag.html#af08ddcca4f5c52d228d2049eceec2eac">   45</a></span>&#160;<a class="code" href="classns3_1_1_lora_beam_tag.html#af08ddcca4f5c52d228d2049eceec2eac">LoraBeamTag::LoraBeamTag</a>(uint8_t beamId)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    : m_beamId(beamId)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_beam_tag.html#ab9d439694d3b101d523ebd684fbd2d07">   50</a></span>&#160;<a class="code" href="classns3_1_1_lora_beam_tag.html#ab9d439694d3b101d523ebd684fbd2d07">LoraBeamTag::~LoraBeamTag</a>()</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;uint32_t</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_beam_tag.html#ad46fca035dd092552926b3d582c88d7b">   55</a></span>&#160;<a class="code" href="classns3_1_1_lora_beam_tag.html#ad46fca035dd092552926b3d582c88d7b">LoraBeamTag::GetSerializedSize</a>(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_beam_tag.html#aacbf40685dc1fd6c39ed97affa3acb32">   61</a></span>&#160;<a class="code" href="classns3_1_1_lora_beam_tag.html#aacbf40685dc1fd6c39ed97affa3acb32">LoraBeamTag::Serialize</a>(TagBuffer i)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    i.WriteU8(<a class="code" href="classns3_1_1_lora_beam_tag.html#aa9f55a4a396a57f456dc1257a095106f">m_beamId</a>);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_beam_tag.html#af1f508657ff36a6494131d98926ecda4">   67</a></span>&#160;<a class="code" href="classns3_1_1_lora_beam_tag.html#af1f508657ff36a6494131d98926ecda4">LoraBeamTag::Deserialize</a>(TagBuffer i)</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classns3_1_1_lora_beam_tag.html#aa9f55a4a396a57f456dc1257a095106f">m_beamId</a> = i.ReadU8();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_beam_tag.html#ae5d352d644c9d3e3483ac36e572340ed">   73</a></span>&#160;<a class="code" href="classns3_1_1_lora_beam_tag.html#ae5d352d644c9d3e3483ac36e572340ed">LoraBeamTag::Print</a>(std::ostream&amp; os)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    os &lt;&lt; <a class="code" href="classns3_1_1_lora_beam_tag.html#aa9f55a4a396a57f456dc1257a095106f">m_beamId</a>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;uint8_t</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_beam_tag.html#a7e1528d198382bf4dd1904c1b4769fac">   79</a></span>&#160;<a class="code" href="classns3_1_1_lora_beam_tag.html#a7e1528d198382bf4dd1904c1b4769fac">LoraBeamTag::GetBeamId</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns3_1_1_lora_beam_tag.html#aa9f55a4a396a57f456dc1257a095106f">m_beamId</a>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_beam_tag.html#a3809ebad9352dde42df4c92a2c33fce2">   85</a></span>&#160;<a class="code" href="classns3_1_1_lora_beam_tag.html#a3809ebad9352dde42df4c92a2c33fce2">LoraBeamTag::SetBeamId</a>(uint8_t beamId)</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="classns3_1_1_lora_beam_tag.html#aa9f55a4a396a57f456dc1257a095106f">m_beamId</a> = beamId;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;} <span class="comment">// namespace ns3</span></div>
-<div class="ttc" id="aclassns3_1_1_lora_beam_tag_html_a34c094f42df513be35a5188b9bd147f0"><div class="ttname"><a href="classns3_1_1_lora_beam_tag.html#a34c094f42df513be35a5188b9bd147f0">ns3::LoraBeamTag::GetInstanceTypeId</a></div><div class="ttdeci">virtual TypeId GetInstanceTypeId(void) const</div><div class="ttdef"><b>Definition:</b> <a href="lora-beam-tag_8cc_source.html#l00040">lora-beam-tag.cc:40</a></div></div>
-<div class="ttc" id="aclassns3_1_1_lora_beam_tag_html_a3809ebad9352dde42df4c92a2c33fce2"><div class="ttname"><a href="classns3_1_1_lora_beam_tag.html#a3809ebad9352dde42df4c92a2c33fce2">ns3::LoraBeamTag::SetBeamId</a></div><div class="ttdeci">void SetBeamId(uint8_t beamId)</div><div class="ttdoc">Set which beamId this packet was transmitted with.</div><div class="ttdef"><b>Definition:</b> <a href="lora-beam-tag_8cc_source.html#l00085">lora-beam-tag.cc:85</a></div></div>
-<div class="ttc" id="aclassns3_1_1_lora_beam_tag_html_a7e1528d198382bf4dd1904c1b4769fac"><div class="ttname"><a href="classns3_1_1_lora_beam_tag.html#a7e1528d198382bf4dd1904c1b4769fac">ns3::LoraBeamTag::GetBeamId</a></div><div class="ttdeci">uint8_t GetBeamId() const</div><div class="ttdoc">Read which beam ID this packet was transmitted with.</div><div class="ttdef"><b>Definition:</b> <a href="lora-beam-tag_8cc_source.html#l00079">lora-beam-tag.cc:79</a></div></div>
-<div class="ttc" id="aclassns3_1_1_lora_beam_tag_html_a9d580978d29985bd281c0ea108a3da11"><div class="ttname"><a href="classns3_1_1_lora_beam_tag.html#a9d580978d29985bd281c0ea108a3da11">ns3::LoraBeamTag::GetTypeId</a></div><div class="ttdeci">static TypeId GetTypeId(void)</div><div class="ttdef"><b>Definition:</b> <a href="lora-beam-tag_8cc_source.html#l00033">lora-beam-tag.cc:33</a></div></div>
-<div class="ttc" id="aclassns3_1_1_lora_beam_tag_html_aa9f55a4a396a57f456dc1257a095106f"><div class="ttname"><a href="classns3_1_1_lora_beam_tag.html#aa9f55a4a396a57f456dc1257a095106f">ns3::LoraBeamTag::m_beamId</a></div><div class="ttdeci">uint8_t m_beamId</div><div class="ttdoc">The beam ID used by the packet.</div><div class="ttdef"><b>Definition:</b> <a href="lora-beam-tag_8h_source.html#l00068">lora-beam-tag.h:68</a></div></div>
-<div class="ttc" id="aclassns3_1_1_lora_beam_tag_html_aacbf40685dc1fd6c39ed97affa3acb32"><div class="ttname"><a href="classns3_1_1_lora_beam_tag.html#aacbf40685dc1fd6c39ed97affa3acb32">ns3::LoraBeamTag::Serialize</a></div><div class="ttdeci">virtual void Serialize(TagBuffer i) const</div><div class="ttdef"><b>Definition:</b> <a href="lora-beam-tag_8cc_source.html#l00061">lora-beam-tag.cc:61</a></div></div>
-<div class="ttc" id="aclassns3_1_1_lora_beam_tag_html_ab9d439694d3b101d523ebd684fbd2d07"><div class="ttname"><a href="classns3_1_1_lora_beam_tag.html#ab9d439694d3b101d523ebd684fbd2d07">ns3::LoraBeamTag::~LoraBeamTag</a></div><div class="ttdeci">virtual ~LoraBeamTag()</div><div class="ttdef"><b>Definition:</b> <a href="lora-beam-tag_8cc_source.html#l00050">lora-beam-tag.cc:50</a></div></div>
-<div class="ttc" id="aclassns3_1_1_lora_beam_tag_html_ad46fca035dd092552926b3d582c88d7b"><div class="ttname"><a href="classns3_1_1_lora_beam_tag.html#ad46fca035dd092552926b3d582c88d7b">ns3::LoraBeamTag::GetSerializedSize</a></div><div class="ttdeci">virtual uint32_t GetSerializedSize() const</div><div class="ttdef"><b>Definition:</b> <a href="lora-beam-tag_8cc_source.html#l00055">lora-beam-tag.cc:55</a></div></div>
-<div class="ttc" id="aclassns3_1_1_lora_beam_tag_html_ae5d352d644c9d3e3483ac36e572340ed"><div class="ttname"><a href="classns3_1_1_lora_beam_tag.html#ae5d352d644c9d3e3483ac36e572340ed">ns3::LoraBeamTag::Print</a></div><div class="ttdeci">virtual void Print(std::ostream &amp;os) const</div><div class="ttdef"><b>Definition:</b> <a href="lora-beam-tag_8cc_source.html#l00073">lora-beam-tag.cc:73</a></div></div>
-<div class="ttc" id="aclassns3_1_1_lora_beam_tag_html_af08ddcca4f5c52d228d2049eceec2eac"><div class="ttname"><a href="classns3_1_1_lora_beam_tag.html#af08ddcca4f5c52d228d2049eceec2eac">ns3::LoraBeamTag::LoraBeamTag</a></div><div class="ttdeci">LoraBeamTag(uint8_t beamId=0)</div><div class="ttdoc">Create a LoraBeamTag with a given beam ID.</div><div class="ttdef"><b>Definition:</b> <a href="lora-beam-tag_8cc_source.html#l00045">lora-beam-tag.cc:45</a></div></div>
-<div class="ttc" id="aclassns3_1_1_lora_beam_tag_html_af1f508657ff36a6494131d98926ecda4"><div class="ttname"><a href="classns3_1_1_lora_beam_tag.html#af1f508657ff36a6494131d98926ecda4">ns3::LoraBeamTag::Deserialize</a></div><div class="ttdeci">virtual void Deserialize(TagBuffer i)</div><div class="ttdef"><b>Definition:</b> <a href="lora-beam-tag_8cc_source.html#l00067">lora-beam-tag.cc:67</a></div></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;NS_OBJECT_ENSURE_REGISTERED(LoraBeamTag);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;TypeId</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_beam_tag.html#a9d580978d29985bd281c0ea108a3da11">   35</a></span>&#160;<a class="code" href="classns3_1_1_lora_beam_tag.html#a9d580978d29985bd281c0ea108a3da11">LoraBeamTag::GetTypeId</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">static</span> TypeId tid = TypeId(<span class="stringliteral">&quot;ns3::LoraBeamTag&quot;</span>).SetParent&lt;Tag&gt;().AddConstructor&lt;LoraBeamTag&gt;();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> tid;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;TypeId</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_beam_tag.html#a34c094f42df513be35a5188b9bd147f0">   42</a></span>&#160;<a class="code" href="classns3_1_1_lora_beam_tag.html#a34c094f42df513be35a5188b9bd147f0">LoraBeamTag::GetInstanceTypeId</a>(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns3_1_1_lora_beam_tag.html#a9d580978d29985bd281c0ea108a3da11">GetTypeId</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_beam_tag.html#af08ddcca4f5c52d228d2049eceec2eac">   47</a></span>&#160;<a class="code" href="classns3_1_1_lora_beam_tag.html#af08ddcca4f5c52d228d2049eceec2eac">LoraBeamTag::LoraBeamTag</a>(uint8_t beamId)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    : m_beamId(beamId)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_beam_tag.html#ab9d439694d3b101d523ebd684fbd2d07">   52</a></span>&#160;<a class="code" href="classns3_1_1_lora_beam_tag.html#ab9d439694d3b101d523ebd684fbd2d07">LoraBeamTag::~LoraBeamTag</a>()</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;uint32_t</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_beam_tag.html#ad46fca035dd092552926b3d582c88d7b">   57</a></span>&#160;<a class="code" href="classns3_1_1_lora_beam_tag.html#ad46fca035dd092552926b3d582c88d7b">LoraBeamTag::GetSerializedSize</a>(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_beam_tag.html#aacbf40685dc1fd6c39ed97affa3acb32">   63</a></span>&#160;<a class="code" href="classns3_1_1_lora_beam_tag.html#aacbf40685dc1fd6c39ed97affa3acb32">LoraBeamTag::Serialize</a>(TagBuffer i)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    i.WriteU8(<a class="code" href="classns3_1_1_lora_beam_tag.html#aa9f55a4a396a57f456dc1257a095106f">m_beamId</a>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_beam_tag.html#af1f508657ff36a6494131d98926ecda4">   69</a></span>&#160;<a class="code" href="classns3_1_1_lora_beam_tag.html#af1f508657ff36a6494131d98926ecda4">LoraBeamTag::Deserialize</a>(TagBuffer i)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="classns3_1_1_lora_beam_tag.html#aa9f55a4a396a57f456dc1257a095106f">m_beamId</a> = i.ReadU8();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_beam_tag.html#ae5d352d644c9d3e3483ac36e572340ed">   75</a></span>&#160;<a class="code" href="classns3_1_1_lora_beam_tag.html#ae5d352d644c9d3e3483ac36e572340ed">LoraBeamTag::Print</a>(std::ostream&amp; os)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    os &lt;&lt; <a class="code" href="classns3_1_1_lora_beam_tag.html#aa9f55a4a396a57f456dc1257a095106f">m_beamId</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;uint8_t</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_beam_tag.html#a7e1528d198382bf4dd1904c1b4769fac">   81</a></span>&#160;<a class="code" href="classns3_1_1_lora_beam_tag.html#a7e1528d198382bf4dd1904c1b4769fac">LoraBeamTag::GetBeamId</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classns3_1_1_lora_beam_tag.html#aa9f55a4a396a57f456dc1257a095106f">m_beamId</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classns3_1_1_lora_beam_tag.html#a3809ebad9352dde42df4c92a2c33fce2">   87</a></span>&#160;<a class="code" href="classns3_1_1_lora_beam_tag.html#a3809ebad9352dde42df4c92a2c33fce2">LoraBeamTag::SetBeamId</a>(uint8_t beamId)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="classns3_1_1_lora_beam_tag.html#aa9f55a4a396a57f456dc1257a095106f">m_beamId</a> = beamId;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;} <span class="comment">// namespace ns3</span></div>
+<div class="ttc" id="aclassns3_1_1_lora_beam_tag_html_a34c094f42df513be35a5188b9bd147f0"><div class="ttname"><a href="classns3_1_1_lora_beam_tag.html#a34c094f42df513be35a5188b9bd147f0">ns3::LoraBeamTag::GetInstanceTypeId</a></div><div class="ttdeci">virtual TypeId GetInstanceTypeId(void) const</div><div class="ttdef"><b>Definition:</b> <a href="lora-beam-tag_8cc_source.html#l00042">lora-beam-tag.cc:42</a></div></div>
+<div class="ttc" id="aclassns3_1_1_lora_beam_tag_html_a3809ebad9352dde42df4c92a2c33fce2"><div class="ttname"><a href="classns3_1_1_lora_beam_tag.html#a3809ebad9352dde42df4c92a2c33fce2">ns3::LoraBeamTag::SetBeamId</a></div><div class="ttdeci">void SetBeamId(uint8_t beamId)</div><div class="ttdoc">Set which beamId this packet was transmitted with.</div><div class="ttdef"><b>Definition:</b> <a href="lora-beam-tag_8cc_source.html#l00087">lora-beam-tag.cc:87</a></div></div>
+<div class="ttc" id="aclassns3_1_1_lora_beam_tag_html_a7e1528d198382bf4dd1904c1b4769fac"><div class="ttname"><a href="classns3_1_1_lora_beam_tag.html#a7e1528d198382bf4dd1904c1b4769fac">ns3::LoraBeamTag::GetBeamId</a></div><div class="ttdeci">uint8_t GetBeamId() const</div><div class="ttdoc">Read which beam ID this packet was transmitted with.</div><div class="ttdef"><b>Definition:</b> <a href="lora-beam-tag_8cc_source.html#l00081">lora-beam-tag.cc:81</a></div></div>
+<div class="ttc" id="aclassns3_1_1_lora_beam_tag_html_a9d580978d29985bd281c0ea108a3da11"><div class="ttname"><a href="classns3_1_1_lora_beam_tag.html#a9d580978d29985bd281c0ea108a3da11">ns3::LoraBeamTag::GetTypeId</a></div><div class="ttdeci">static TypeId GetTypeId(void)</div><div class="ttdef"><b>Definition:</b> <a href="lora-beam-tag_8cc_source.html#l00035">lora-beam-tag.cc:35</a></div></div>
+<div class="ttc" id="aclassns3_1_1_lora_beam_tag_html_aa9f55a4a396a57f456dc1257a095106f"><div class="ttname"><a href="classns3_1_1_lora_beam_tag.html#aa9f55a4a396a57f456dc1257a095106f">ns3::LoraBeamTag::m_beamId</a></div><div class="ttdeci">uint8_t m_beamId</div><div class="ttdoc">The beam ID used by the packet.</div><div class="ttdef"><b>Definition:</b> <a href="lora-beam-tag_8h_source.html#l00071">lora-beam-tag.h:71</a></div></div>
+<div class="ttc" id="aclassns3_1_1_lora_beam_tag_html_aacbf40685dc1fd6c39ed97affa3acb32"><div class="ttname"><a href="classns3_1_1_lora_beam_tag.html#aacbf40685dc1fd6c39ed97affa3acb32">ns3::LoraBeamTag::Serialize</a></div><div class="ttdeci">virtual void Serialize(TagBuffer i) const</div><div class="ttdef"><b>Definition:</b> <a href="lora-beam-tag_8cc_source.html#l00063">lora-beam-tag.cc:63</a></div></div>
+<div class="ttc" id="aclassns3_1_1_lora_beam_tag_html_ab9d439694d3b101d523ebd684fbd2d07"><div class="ttname"><a href="classns3_1_1_lora_beam_tag.html#ab9d439694d3b101d523ebd684fbd2d07">ns3::LoraBeamTag::~LoraBeamTag</a></div><div class="ttdeci">virtual ~LoraBeamTag()</div><div class="ttdef"><b>Definition:</b> <a href="lora-beam-tag_8cc_source.html#l00052">lora-beam-tag.cc:52</a></div></div>
+<div class="ttc" id="aclassns3_1_1_lora_beam_tag_html_ad46fca035dd092552926b3d582c88d7b"><div class="ttname"><a href="classns3_1_1_lora_beam_tag.html#ad46fca035dd092552926b3d582c88d7b">ns3::LoraBeamTag::GetSerializedSize</a></div><div class="ttdeci">virtual uint32_t GetSerializedSize() const</div><div class="ttdef"><b>Definition:</b> <a href="lora-beam-tag_8cc_source.html#l00057">lora-beam-tag.cc:57</a></div></div>
+<div class="ttc" id="aclassns3_1_1_lora_beam_tag_html_ae5d352d644c9d3e3483ac36e572340ed"><div class="ttname"><a href="classns3_1_1_lora_beam_tag.html#ae5d352d644c9d3e3483ac36e572340ed">ns3::LoraBeamTag::Print</a></div><div class="ttdeci">virtual void Print(std::ostream &amp;os) const</div><div class="ttdef"><b>Definition:</b> <a href="lora-beam-tag_8cc_source.html#l00075">lora-beam-tag.cc:75</a></div></div>
+<div class="ttc" id="aclassns3_1_1_lora_beam_tag_html_af08ddcca4f5c52d228d2049eceec2eac"><div class="ttname"><a href="classns3_1_1_lora_beam_tag.html#af08ddcca4f5c52d228d2049eceec2eac">ns3::LoraBeamTag::LoraBeamTag</a></div><div class="ttdeci">LoraBeamTag(uint8_t beamId=0)</div><div class="ttdoc">Create a LoraBeamTag with a given beam ID.</div><div class="ttdef"><b>Definition:</b> <a href="lora-beam-tag_8cc_source.html#l00047">lora-beam-tag.cc:47</a></div></div>
+<div class="ttc" id="aclassns3_1_1_lora_beam_tag_html_af1f508657ff36a6494131d98926ecda4"><div class="ttname"><a href="classns3_1_1_lora_beam_tag.html#af1f508657ff36a6494131d98926ecda4">ns3::LoraBeamTag::Deserialize</a></div><div class="ttdeci">virtual void Deserialize(TagBuffer i)</div><div class="ttdef"><b>Definition:</b> <a href="lora-beam-tag_8cc_source.html#l00069">lora-beam-tag.cc:69</a></div></div>
 <div class="ttc" id="alora-beam-tag_8h_html"><div class="ttname"><a href="lora-beam-tag_8h.html">lora-beam-tag.h</a></div></div>
-<div class="ttc" id="anamespacens3_html"><div class="ttname"><a href="namespacens3.html">ns3</a></div><div class="ttdoc">SatArqSequenceNumber is handling the sequence numbers for the ARQ process.</div><div class="ttdef"><b>Definition:</b> <a href="sat-link-results-plot_8cc_source.html#l00039">sat-link-results-plot.cc:40</a></div></div>
+<div class="ttc" id="anamespacens3_html"><div class="ttname"><a href="namespacens3.html">ns3</a></div><div class="ttdoc">SatArqSequenceNumber is handling the sequence numbers for the ARQ process.</div><div class="ttdef"><b>Definition:</b> <a href="sat-link-results-plot_8cc_source.html#l00040">sat-link-results-plot.cc:41</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 

@@ -328,6 +328,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a69c1cb86e973851ac1f3ded937f11ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fcf8804317b8479ac5204029e17bf79"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_lora_end_device_status.html#a6fcf8804317b8479ac5204029e17bf79">m_secondReceiveWindowOffset</a> = 0</td></tr>
 <tr class="separator:a6fcf8804317b8479ac5204029e17bf79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4cf68168266b82d9b472ef997c7cbe6"><td class="memItemLeft" align="right" valign="top">Address&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_lora_end_device_status.html#aa4cf68168266b82d9b472ef997c7cbe6">m_utAddress</a></td></tr>
+<tr class="separator:aa4cf68168266b82d9b472ef997c7cbe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -338,7 +340,7 @@ Friends</h2></td></tr>
 <div class="textblock"><p>This class represents the Network Server's knowledge about an End Device in the LoRaWAN network it is administering. </p>
 <p>The Network Server's NetworkStatus component contains a list of instances of this class, one for each device in the network. Each instance contains all the parameters and information of the end device and the packets received from it. Furthermore, this class holds the reply packet that the network server will send to this device at the first available receive window. Upon new packet arrivals at the Network Server, the OnReceivedPacket method is called to update the information regarding the last received packet and its parameters. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00085">85</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00090">90</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a9b3d0a27baab90795748715e2cc7f3ee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9b3d0a27baab90795748715e2cc7f3ee">&#9670;&nbsp;</a></span>GatewayList</h2>
@@ -352,7 +354,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00165">165</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00170">170</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
 
 </div>
 </div>
@@ -368,7 +370,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00179">179</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00184">184</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
 
 </div>
 </div>
@@ -388,9 +390,9 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00063">63</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00071">71</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00351">m_receivedPacketList</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00335">m_reply</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00357">m_receivedPacketList</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00340">m_reply</a>.</p>
 
 </div>
 </div>
@@ -420,7 +422,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00053">53</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00060">60</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
 </div>
 </div>
@@ -447,7 +449,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00072">72</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00080">80</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
 </div>
 </div>
@@ -470,9 +472,9 @@ Friends</h2></td></tr>
 
 <p>Add MAC command to the list. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00402">402</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00419">419</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-frame-header_8cc_source.html#l00579">ns3::LoraFrameHeader::AddCommand()</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00102">ns3::LoraEndDeviceStatus::Reply::frameHeader</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00335">m_reply</a>.</p>
+<p class="reference">References <a class="el" href="lora-frame-header_8cc_source.html#l00582">ns3::LoraFrameHeader::AddCommand()</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00107">ns3::LoraEndDeviceStatus::Reply::frameHeader</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00340">m_reply</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -506,9 +508,9 @@ Friends</h2></td></tr>
 <p>Get the beam ID this device is using. </p>
 <dl class="section return"><dt>Returns</dt><dd>An unsigned 8-bit integer containing the beam ID index. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00089">89</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00097">97</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00344">m_beamId</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00349">m_beamId</a>.</p>
 
 </div>
 </div>
@@ -531,9 +533,9 @@ Friends</h2></td></tr>
 <p>Get the reply packet. </p>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the packet reply (data + headers). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00127">127</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00135">135</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00102">ns3::LoraEndDeviceStatus::Reply::frameHeader</a>, <a class="el" href="lora-frame-header_8cc_source.html#l00425">ns3::LoraFrameHeader::GetFCnt()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00379">GetLastPacketReceivedFromDevice()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00364">GetLastReceivedPacketInfo()</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00337">m_endDeviceAddress</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00335">m_reply</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00099">ns3::LoraEndDeviceStatus::Reply::macHeader</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00105">ns3::LoraEndDeviceStatus::Reply::payload</a>, <a class="el" href="lora-frame-header_8cc_source.html#l00344">ns3::LoraFrameHeader::SetAddress()</a>, <a class="el" href="lora-frame-header_8cc_source.html#l00316">ns3::LoraFrameHeader::SetAsUplink()</a>, <a class="el" href="lora-frame-header_8cc_source.html#l00419">ns3::LoraFrameHeader::SetFCnt()</a>, <a class="el" href="lorawan-mac-header_8cc_source.html#l00112">ns3::LorawanMacHeader::SetMType()</a>, and <a class="el" href="lorawan-mac-header_8h_source.html#l00046">ns3::LorawanMacHeader::UNCONFIRMED_DATA_DOWN</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00107">ns3::LoraEndDeviceStatus::Reply::frameHeader</a>, <a class="el" href="lora-frame-header_8cc_source.html#l00428">ns3::LoraFrameHeader::GetFCnt()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00396">GetLastPacketReceivedFromDevice()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00381">GetLastReceivedPacketInfo()</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00342">m_endDeviceAddress</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00340">m_reply</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00350">m_utAddress</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00104">ns3::LoraEndDeviceStatus::Reply::macHeader</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00110">ns3::LoraEndDeviceStatus::Reply::payload</a>, <a class="el" href="satellite-enums_8h_source.html#l00101">ns3::SatEnums::REGENERATION_NETWORK</a>, <a class="el" href="lora-frame-header_8cc_source.html#l00347">ns3::LoraFrameHeader::SetAddress()</a>, <a class="el" href="lora-frame-header_8cc_source.html#l00319">ns3::LoraFrameHeader::SetAsUplink()</a>, <a class="el" href="lora-frame-header_8cc_source.html#l00422">ns3::LoraFrameHeader::SetFCnt()</a>, <a class="el" href="lorawan-mac-header_8cc_source.html#l00114">ns3::LorawanMacHeader::SetMType()</a>, and <a class="el" href="lorawan-mac-header_8h_source.html#l00049">ns3::LorawanMacHeader::UNCONFIRMED_DATA_DOWN</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -572,9 +574,9 @@ Friends</h2></td></tr>
 
 <p>Get the first window frequency of this device. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00104">104</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00112">112</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00346">m_firstReceiveWindowFrequency</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00352">m_firstReceiveWindowFrequency</a>.</p>
 
 </div>
 </div>
@@ -597,9 +599,9 @@ Friends</h2></td></tr>
 <p>Get the spreading factor this device is using in the first receive window. </p>
 <dl class="section return"><dt>Returns</dt><dd>An unsigned 8-bit integer containing the spreading factor. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00096">96</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00104">104</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00345">m_firstReceiveWindowSpreadingFactor</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00351">m_firstReceiveWindowSpreadingFactor</a>.</p>
 
 </div>
 </div>
@@ -621,11 +623,11 @@ Friends</h2></td></tr>
 
 <p>Return the last packet that was received from this device. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00379">379</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00396">396</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00351">m_receivedPacketList</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00357">m_receivedPacketList</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00127">GetCompleteReplyPacket()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00135">GetCompleteReplyPacket()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -658,11 +660,11 @@ Friends</h2></td></tr>
 
 <p>Return the information about the last packet that was received from the device. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00364">364</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00381">381</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00351">m_receivedPacketList</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00357">m_receivedPacketList</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00127">GetCompleteReplyPacket()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00135">GetCompleteReplyPacket()</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -693,9 +695,9 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00194">194</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00210">210</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00355">m_mac</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00361">m_mac</a>.</p>
 
 </div>
 </div>
@@ -718,9 +720,9 @@ Friends</h2></td></tr>
 <p>Get the modcod this device is using. </p>
 <dl class="section return"><dt>Returns</dt><dd>An unsigned 8-bit integer containing the modcod index. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00082">82</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00090">90</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00343">m_modcod</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00348">m_modcod</a>.</p>
 
 </div>
 </div>
@@ -742,9 +744,9 @@ Friends</h2></td></tr>
 
 <p>Return an ordered list of the best gateways. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00426">426</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00443">443</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00174">ns3::LoraEndDeviceStatus::ReceivedPacketInfo::gwList</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00351">m_receivedPacketList</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00179">ns3::LoraEndDeviceStatus::ReceivedPacketInfo::gwList</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00357">m_receivedPacketList</a>.</p>
 
 </div>
 </div>
@@ -767,9 +769,9 @@ Friends</h2></td></tr>
 <p>Get the received packet list. </p>
 <dl class="section return"><dt>Returns</dt><dd>The received packet list. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00200">200</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00216">216</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00351">m_receivedPacketList</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00357">m_receivedPacketList</a>.</p>
 
 </div>
 </div>
@@ -792,9 +794,9 @@ Friends</h2></td></tr>
 <p>Get the reply packet frame header. </p>
 <dl class="section return"><dt>Returns</dt><dd>The packet reply frame header. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00180">180</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00196">196</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00102">ns3::LoraEndDeviceStatus::Reply::frameHeader</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00335">m_reply</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00107">ns3::LoraEndDeviceStatus::Reply::frameHeader</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00340">m_reply</a>.</p>
 
 </div>
 </div>
@@ -817,9 +819,9 @@ Friends</h2></td></tr>
 <p>Get the reply packet mac header. </p>
 <dl class="section return"><dt>Returns</dt><dd>The packet reply mac header. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00173">173</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00189">189</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00335">m_reply</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00099">ns3::LoraEndDeviceStatus::Reply::macHeader</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00340">m_reply</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00104">ns3::LoraEndDeviceStatus::Reply::macHeader</a>.</p>
 
 </div>
 </div>
@@ -842,9 +844,9 @@ Friends</h2></td></tr>
 <p>Get the data of the reply packet. </p>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the packet reply. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00187">187</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00203">203</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00335">m_reply</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00105">ns3::LoraEndDeviceStatus::Reply::payload</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00340">m_reply</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00110">ns3::LoraEndDeviceStatus::Reply::payload</a>.</p>
 
 </div>
 </div>
@@ -866,9 +868,9 @@ Friends</h2></td></tr>
 
 <p>Return the second window frequency of this device. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00120">120</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00128">128</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00348">m_secondReceiveWindowFrequency</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00354">m_secondReceiveWindowFrequency</a>.</p>
 
 </div>
 </div>
@@ -891,9 +893,9 @@ Friends</h2></td></tr>
 <p>Get the offset of spreading factor this device is using in the second receive window with respect to the first receive window. </p>
 <dl class="section return"><dt>Returns</dt><dd>An unsigned 8-bit integer containing the spreading factor. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00112">112</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00120">120</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00347">m_secondReceiveWindowOffset</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00353">m_secondReceiveWindowOffset</a>.</p>
 
 </div>
 </div>
@@ -921,7 +923,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00045">45</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00052">52</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
 </div>
 </div>
@@ -942,9 +944,9 @@ Friends</h2></td></tr>
 
 <p>Returns whether we already decided we will schedule a transmission to this ED. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00408">408</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00425">425</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00349">m_receiveWindowEvent</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00355">m_receiveWindowEvent</a>.</p>
 
 </div>
 </div>
@@ -966,9 +968,9 @@ Friends</h2></td></tr>
 
 <p>Initialize reply. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00394">394</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00411">411</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00335">m_reply</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00108">ns3::LoraEndDeviceStatus::Reply::needsReply</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00340">m_reply</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00113">ns3::LoraEndDeviceStatus::Reply::needsReply</a>.</p>
 
 </div>
 </div>
@@ -1000,9 +1002,9 @@ Friends</h2></td></tr>
 
 <p>Insert a received packet in the packet list. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00274">274</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00291">291</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00176">ns3::LoraEndDeviceStatus::ReceivedPacketInfo::frequency</a>, <a class="el" href="lora-beam-tag_8cc_source.html#l00079">ns3::LoraBeamTag::GetBeamId()</a>, <a class="el" href="lora-frame-header_8cc_source.html#l00425">ns3::LoraFrameHeader::GetFCnt()</a>, <a class="el" href="lora-tag_8cc_source.html#l00140">ns3::LoraTag::GetFrequency()</a>, <a class="el" href="lora-tag_8cc_source.html#l00158">ns3::LoraTag::GetModcod()</a>, <a class="el" href="lora-tag_8cc_source.html#l00110">ns3::LoraTag::GetReceivePower()</a>, <a class="el" href="lora-tag_8cc_source.html#l00098">ns3::LoraTag::GetSpreadingFactor()</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00159">ns3::LoraEndDeviceStatus::PacketInfoPerGw::gwAddress</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00174">ns3::LoraEndDeviceStatus::ReceivedPacketInfo::gwList</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00351">m_receivedPacketList</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00173">ns3::LoraEndDeviceStatus::ReceivedPacketInfo::packet</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00160">ns3::LoraEndDeviceStatus::PacketInfoPerGw::receivedTime</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00161">ns3::LoraEndDeviceStatus::PacketInfoPerGw::rxPower</a>, <a class="el" href="lora-frame-header_8cc_source.html#l00316">ns3::LoraFrameHeader::SetAsUplink()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00214">SetBeamId()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00228">SetFirstReceiveWindowFrequency()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00221">SetFirstReceiveWindowSpreadingFactor()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00207">SetModcod()</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00175">ns3::LoraEndDeviceStatus::ReceivedPacketInfo::sf</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00181">ns3::LoraEndDeviceStatus::ReceivedPacketInfo::frequency</a>, <a class="el" href="lora-beam-tag_8cc_source.html#l00081">ns3::LoraBeamTag::GetBeamId()</a>, <a class="el" href="lora-frame-header_8cc_source.html#l00428">ns3::LoraFrameHeader::GetFCnt()</a>, <a class="el" href="lora-tag_8cc_source.html#l00142">ns3::LoraTag::GetFrequency()</a>, <a class="el" href="lora-tag_8cc_source.html#l00160">ns3::LoraTag::GetModcod()</a>, <a class="el" href="lora-tag_8cc_source.html#l00112">ns3::LoraTag::GetReceivePower()</a>, <a class="el" href="lora-tag_8cc_source.html#l00100">ns3::LoraTag::GetSpreadingFactor()</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00164">ns3::LoraEndDeviceStatus::PacketInfoPerGw::gwAddress</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00179">ns3::LoraEndDeviceStatus::ReceivedPacketInfo::gwList</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00357">m_receivedPacketList</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00178">ns3::LoraEndDeviceStatus::ReceivedPacketInfo::packet</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00165">ns3::LoraEndDeviceStatus::PacketInfoPerGw::receivedTime</a>, <a class="el" href="lora-end-device-status_8h_source.html#l00166">ns3::LoraEndDeviceStatus::PacketInfoPerGw::rxPower</a>, <a class="el" href="lora-frame-header_8cc_source.html#l00319">ns3::LoraFrameHeader::SetAsUplink()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00230">SetBeamId()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00245">SetFirstReceiveWindowFrequency()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00238">SetFirstReceiveWindowSpreadingFactor()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00223">SetModcod()</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00180">ns3::LoraEndDeviceStatus::ReceivedPacketInfo::sf</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -1047,9 +1049,9 @@ Friends</h2></td></tr>
 <p>This is determined by looking at headers and payload of the <a class="el" href="structns3_1_1_lora_end_device_status_1_1_reply.html" title="Structure representing the reply that the network server will send this device at the first opportuni...">Reply</a> structure: if they are empty, no reply should be needed.</p>
 <dl class="section return"><dt>Returns</dt><dd>A boolean value signaling if the end device needs a reply. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00165">165</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00181">181</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00335">m_reply</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00108">ns3::LoraEndDeviceStatus::Reply::needsReply</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00340">m_reply</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00113">ns3::LoraEndDeviceStatus::Reply::needsReply</a>.</p>
 
 </div>
 </div>
@@ -1069,9 +1071,9 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00420">420</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00437">437</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00349">m_receiveWindowEvent</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00355">m_receiveWindowEvent</a>.</p>
 
 </div>
 </div>
@@ -1093,11 +1095,11 @@ Friends</h2></td></tr>
 
 <p>Set the beam ID this device is using. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00214">214</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00230">230</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00344">m_beamId</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00349">m_beamId</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00274">InsertReceivedPacket()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00291">InsertReceivedPacket()</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -1130,11 +1132,11 @@ Friends</h2></td></tr>
 
 <p>Set the first window frequency of this device. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00228">228</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00245">245</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00346">m_firstReceiveWindowFrequency</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00352">m_firstReceiveWindowFrequency</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00274">InsertReceivedPacket()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00291">InsertReceivedPacket()</a>.</p>
 <div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
@@ -1167,11 +1169,11 @@ Friends</h2></td></tr>
 
 <p>Set the spreading factor this device is using in the first receive window. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00221">221</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00238">238</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00345">m_firstReceiveWindowSpreadingFactor</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00351">m_firstReceiveWindowSpreadingFactor</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00274">InsertReceivedPacket()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00291">InsertReceivedPacket()</a>.</p>
 <div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
@@ -1204,11 +1206,11 @@ Friends</h2></td></tr>
 
 <p>Set the modcod this device is using. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00207">207</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00223">223</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00343">m_modcod</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00348">m_modcod</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00274">InsertReceivedPacket()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00291">InsertReceivedPacket()</a>.</p>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -1239,9 +1241,9 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00414">414</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00431">431</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00349">m_receiveWindowEvent</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00355">m_receiveWindowEvent</a>.</p>
 
 </div>
 </div>
@@ -1263,9 +1265,9 @@ Friends</h2></td></tr>
 
 <p>Set the reply packet frame header. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00256">256</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00273">273</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00102">ns3::LoraEndDeviceStatus::Reply::frameHeader</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00335">m_reply</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00107">ns3::LoraEndDeviceStatus::Reply::frameHeader</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00340">m_reply</a>.</p>
 
 </div>
 </div>
@@ -1287,9 +1289,9 @@ Friends</h2></td></tr>
 
 <p>Set the reply packet mac header. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00249">249</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00266">266</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00335">m_reply</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00099">ns3::LoraEndDeviceStatus::Reply::macHeader</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00340">m_reply</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00104">ns3::LoraEndDeviceStatus::Reply::macHeader</a>.</p>
 
 </div>
 </div>
@@ -1311,9 +1313,9 @@ Friends</h2></td></tr>
 
 <p>Set the packet reply payload. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00263">263</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00280">280</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00335">m_reply</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00105">ns3::LoraEndDeviceStatus::Reply::payload</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00340">m_reply</a>, and <a class="el" href="lora-end-device-status_8h_source.html#l00110">ns3::LoraEndDeviceStatus::Reply::payload</a>.</p>
 
 </div>
 </div>
@@ -1335,9 +1337,9 @@ Friends</h2></td></tr>
 
 <p>Set the second window frequency of this device. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00242">242</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00259">259</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00348">m_secondReceiveWindowFrequency</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00354">m_secondReceiveWindowFrequency</a>.</p>
 
 </div>
 </div>
@@ -1359,9 +1361,9 @@ Friends</h2></td></tr>
 
 <p>Set the spreading factor this device is using in the first receive window. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00235">235</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00252">252</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00347">m_secondReceiveWindowOffset</a>.</p>
+<p class="reference">References <a class="el" href="lora-end-device-status_8h_source.html#l00353">m_secondReceiveWindowOffset</a>.</p>
 
 </div>
 </div>
@@ -1436,7 +1438,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00446">446</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8cc_source.html#l00463">463</a> of file <a class="el" href="lora-end-device-status_8cc_source.html">lora-end-device-status.cc</a>.</p>
 
 </div>
 </div>
@@ -1461,9 +1463,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00344">344</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00349">349</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00089">GetBeamId()</a>, and <a class="el" href="lora-end-device-status_8cc_source.html#l00214">SetBeamId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00097">GetBeamId()</a>, and <a class="el" href="lora-end-device-status_8cc_source.html#l00230">SetBeamId()</a>.</p>
 
 </div>
 </div>
@@ -1479,9 +1481,9 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00337">337</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00342">342</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00127">GetCompleteReplyPacket()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00135">GetCompleteReplyPacket()</a>.</p>
 
 </div>
 </div>
@@ -1505,9 +1507,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00346">346</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00352">352</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00104">GetFirstReceiveWindowFrequency()</a>, and <a class="el" href="lora-end-device-status_8cc_source.html#l00228">SetFirstReceiveWindowFrequency()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00112">GetFirstReceiveWindowFrequency()</a>, and <a class="el" href="lora-end-device-status_8cc_source.html#l00245">SetFirstReceiveWindowFrequency()</a>.</p>
 
 </div>
 </div>
@@ -1531,9 +1533,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00345">345</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00351">351</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00096">GetFirstReceiveWindowSpreadingFactor()</a>, and <a class="el" href="lora-end-device-status_8cc_source.html#l00221">SetFirstReceiveWindowSpreadingFactor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00104">GetFirstReceiveWindowSpreadingFactor()</a>, and <a class="el" href="lora-end-device-status_8cc_source.html#l00238">SetFirstReceiveWindowSpreadingFactor()</a>.</p>
 
 </div>
 </div>
@@ -1559,9 +1561,9 @@ Friends</h2></td></tr>
 
 <p>Pointer to the MAC layer of this device. </p>
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00355">355</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00361">361</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00194">GetMac()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00210">GetMac()</a>.</p>
 
 </div>
 </div>
@@ -1585,9 +1587,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00343">343</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00348">348</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00082">GetModcod()</a>, and <a class="el" href="lora-end-device-status_8cc_source.html#l00207">SetModcod()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00090">GetModcod()</a>, and <a class="el" href="lora-end-device-status_8cc_source.html#l00223">SetModcod()</a>.</p>
 
 </div>
 </div>
@@ -1611,9 +1613,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00351">351</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00357">357</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00063">LoraEndDeviceStatus()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00379">GetLastPacketReceivedFromDevice()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00364">GetLastReceivedPacketInfo()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00426">GetPowerGatewayMap()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00200">GetReceivedPacketList()</a>, and <a class="el" href="lora-end-device-status_8cc_source.html#l00274">InsertReceivedPacket()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00071">LoraEndDeviceStatus()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00396">GetLastPacketReceivedFromDevice()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00381">GetLastReceivedPacketInfo()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00443">GetPowerGatewayMap()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00216">GetReceivedPacketList()</a>, and <a class="el" href="lora-end-device-status_8cc_source.html#l00291">InsertReceivedPacket()</a>.</p>
 
 </div>
 </div>
@@ -1637,9 +1639,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00349">349</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00355">355</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00408">HasReceiveWindowOpportunityScheduled()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00420">RemoveReceiveWindowOpportunity()</a>, and <a class="el" href="lora-end-device-status_8cc_source.html#l00414">SetReceiveWindowOpportunity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00425">HasReceiveWindowOpportunityScheduled()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00437">RemoveReceiveWindowOpportunity()</a>, and <a class="el" href="lora-end-device-status_8cc_source.html#l00431">SetReceiveWindowOpportunity()</a>.</p>
 
 </div>
 </div>
@@ -1655,9 +1657,9 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00333">333</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00338">338</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00063">LoraEndDeviceStatus()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00402">AddMACCommand()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00127">GetCompleteReplyPacket()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00180">GetReplyFrameHeader()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00173">GetReplyMacHeader()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00187">GetReplyPayload()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00394">InitializeReply()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00165">NeedsReply()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00256">SetReplyFrameHeader()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00249">SetReplyMacHeader()</a>, and <a class="el" href="lora-end-device-status_8cc_source.html#l00263">SetReplyPayload()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00071">LoraEndDeviceStatus()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00419">AddMACCommand()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00135">GetCompleteReplyPacket()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00196">GetReplyFrameHeader()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00189">GetReplyMacHeader()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00203">GetReplyPayload()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00411">InitializeReply()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00181">NeedsReply()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00273">SetReplyFrameHeader()</a>, <a class="el" href="lora-end-device-status_8cc_source.html#l00266">SetReplyMacHeader()</a>, and <a class="el" href="lora-end-device-status_8cc_source.html#l00280">SetReplyPayload()</a>.</p>
 
 </div>
 </div>
@@ -1681,9 +1683,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00348">348</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00354">354</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00120">GetSecondReceiveWindowFrequency()</a>, and <a class="el" href="lora-end-device-status_8cc_source.html#l00242">SetSecondReceiveWindowFrequency()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00128">GetSecondReceiveWindowFrequency()</a>, and <a class="el" href="lora-end-device-status_8cc_source.html#l00259">SetSecondReceiveWindowFrequency()</a>.</p>
 
 </div>
 </div>
@@ -1707,9 +1709,35 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00347">347</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00353">353</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00112">GetSecondReceiveWindowOffset()</a>, and <a class="el" href="lora-end-device-status_8cc_source.html#l00235">SetSecondReceiveWindowOffset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00120">GetSecondReceiveWindowOffset()</a>, and <a class="el" href="lora-end-device-status_8cc_source.html#l00252">SetSecondReceiveWindowOffset()</a>.</p>
+
+</div>
+</div>
+<a id="aa4cf68168266b82d9b472ef997c7cbe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4cf68168266b82d9b472ef997c7cbe6">&#9670;&nbsp;</a></span>m_utAddress</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Address ns3::LoraEndDeviceStatus::m_utAddress</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="lora-end-device-status_8h_source.html#l00350">350</a> of file <a class="el" href="lora-end-device-status_8h_source.html">lora-end-device-status.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="lora-end-device-status_8cc_source.html#l00135">GetCompleteReplyPacket()</a>.</p>
 
 </div>
 </div>

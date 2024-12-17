@@ -217,7 +217,7 @@ Private Attributes</h2></td></tr>
 <p>As a Satellite channel is mapped into a frequency band and act as data transmitter in a single direction, a pair of Satellite channels represent a bidirectionnal link between either an UT and the Satellite or a GW and the Satellite.</p>
 <p>The main task of the <a class="el" href="classns3_1_1_sat_channel_pair.html" title="Container of Satellite channels pairs.">SatChannelPair</a> is to store such bidirectionnal link information on a per-beam basis. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00047">47</a> of file <a class="el" href="satellite-beam-channel-pair_8h_source.html">satellite-beam-channel-pair.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00049">49</a> of file <a class="el" href="satellite-beam-channel-pair_8h_source.html">satellite-beam-channel-pair.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="abc0bb734c37576c72945fa17fb2d120d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abc0bb734c37576c72945fa17fb2d120d">&#9670;&nbsp;</a></span>ChannelPair_t</h2>
@@ -231,7 +231,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00051">51</a> of file <a class="el" href="satellite-beam-channel-pair_8h_source.html">satellite-beam-channel-pair.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00053">53</a> of file <a class="el" href="satellite-beam-channel-pair_8h_source.html">satellite-beam-channel-pair.h</a>.</p>
 
 </div>
 </div>
@@ -253,7 +253,7 @@ Private Attributes</h2></td></tr>
 
 <p>Default constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00043">43</a> of file <a class="el" href="satellite-beam-channel-pair_8cc_source.html">satellite-beam-channel-pair.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00046">46</a> of file <a class="el" href="satellite-beam-channel-pair_8cc_source.html">satellite-beam-channel-pair.cc</a>.</p>
 
 </div>
 </div>
@@ -282,9 +282,9 @@ Private Attributes</h2></td></tr>
 
 <p>Destructor for <a class="el" href="classns3_1_1_sat_channel.html" title="Satellite channel implementation.">SatChannel</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00051">51</a> of file <a class="el" href="satellite-beam-channel-pair_8cc_source.html">satellite-beam-channel-pair.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00054">54</a> of file <a class="el" href="satellite-beam-channel-pair_8cc_source.html">satellite-beam-channel-pair.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00119">m_frequencies</a>, <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00120">m_fwdChannels</a>, and <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00121">m_rtnChannels</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00121">m_frequencies</a>, <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00122">m_fwdChannels</a>, and <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00123">m_rtnChannels</a>.</p>
 
 </div>
 </div>
@@ -325,11 +325,11 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a pair of <a class="el" href="classns3_1_1_sat_channel.html" title="Satellite channel implementation.">SatChannel</a> that has been associated to this beam </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00060">60</a> of file <a class="el" href="satellite-beam-channel-pair_8cc_source.html">satellite-beam-channel-pair.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00063">63</a> of file <a class="el" href="satellite-beam-channel-pair_8cc_source.html">satellite-beam-channel-pair.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00078">GetForwardChannel()</a>, <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00092">GetReturnChannel()</a>, and <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00119">m_frequencies</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00081">GetForwardChannel()</a>, <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00095">GetReturnChannel()</a>, and <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00121">m_frequencies</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-helper_8cc_source.html#l00789">ns3::SatBeamHelper::InstallUser()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-helper_8cc_source.html#l00735">ns3::SatBeamHelper::InstallFeeder()</a>, and <a class="el" href="satellite-beam-helper_8cc_source.html#l00886">ns3::SatBeamHelper::InstallUser()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -349,9 +349,10 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_channel_pair_abe801d3b05d161a9e6f4301f5857ff27_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_channel_pair_abe801d3b05d161a9e6f4301f5857ff27_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_channel_pair_abe801d3b05d161a9e6f4301f5857ff27_icgraph" id="aclassns3_1_1_sat_channel_pair_abe801d3b05d161a9e6f4301f5857ff27_icgraph">
-<area shape="rect" title="Retrieve the channel pair associated to a beam." alt="" coords="411,5,561,47"/>
-<area shape="rect" href="classns3_1_1_sat_beam_helper.html#addd5b1bd6a526f9b9a19bfe0ab07f104" title=" " alt="" coords="208,5,363,47"/>
-<area shape="rect" href="classns3_1_1_sat_beam_helper.html#aba58272a92b1b5fe6e5b609a598c5d3a" title=" " alt="" coords="5,5,160,47"/>
+<area shape="rect" title="Retrieve the channel pair associated to a beam." alt="" coords="411,39,561,80"/>
+<area shape="rect" href="classns3_1_1_sat_beam_helper.html#a99dc54dc37948505ba882e8ff949f98d" title=" " alt="" coords="208,5,363,47"/>
+<area shape="rect" href="classns3_1_1_sat_beam_helper.html#a6b31b1c2ab15b0204468fc748939fea5" title=" " alt="" coords="208,71,363,112"/>
+<area shape="rect" href="classns3_1_1_sat_beam_helper.html#a62be1e5be1c969a1b5b999a77f742d35" title=" " alt="" coords="5,39,160,80"/>
 </map>
 </div>
 
@@ -383,11 +384,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00078">78</a> of file <a class="el" href="satellite-beam-channel-pair_8cc_source.html">satellite-beam-channel-pair.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00081">81</a> of file <a class="el" href="satellite-beam-channel-pair_8cc_source.html">satellite-beam-channel-pair.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00120">m_fwdChannels</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00122">m_fwdChannels</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00060">GetChannelPair()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00063">GetChannelPair()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -395,10 +396,11 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_channel_pair_a320a67030eab41fc1583b56dc6c2c380_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_channel_pair_a320a67030eab41fc1583b56dc6c2c380_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_channel_pair_a320a67030eab41fc1583b56dc6c2c380_icgraph" id="aclassns3_1_1_sat_channel_pair_a320a67030eab41fc1583b56dc6c2c380_icgraph">
-<area shape="rect" title=" " alt="" coords="609,5,768,47"/>
-<area shape="rect" href="classns3_1_1_sat_channel_pair.html#abe801d3b05d161a9e6f4301f5857ff27" title="Retrieve the channel pair associated to a beam." alt="" coords="411,5,561,47"/>
-<area shape="rect" href="classns3_1_1_sat_beam_helper.html#addd5b1bd6a526f9b9a19bfe0ab07f104" title=" " alt="" coords="208,5,363,47"/>
-<area shape="rect" href="classns3_1_1_sat_beam_helper.html#aba58272a92b1b5fe6e5b609a598c5d3a" title=" " alt="" coords="5,5,160,47"/>
+<area shape="rect" title=" " alt="" coords="609,39,768,80"/>
+<area shape="rect" href="classns3_1_1_sat_channel_pair.html#abe801d3b05d161a9e6f4301f5857ff27" title="Retrieve the channel pair associated to a beam." alt="" coords="411,39,561,80"/>
+<area shape="rect" href="classns3_1_1_sat_beam_helper.html#a99dc54dc37948505ba882e8ff949f98d" title=" " alt="" coords="208,5,363,47"/>
+<area shape="rect" href="classns3_1_1_sat_beam_helper.html#a6b31b1c2ab15b0204468fc748939fea5" title=" " alt="" coords="208,71,363,112"/>
+<area shape="rect" href="classns3_1_1_sat_beam_helper.html#a62be1e5be1c969a1b5b999a77f742d35" title=" " alt="" coords="5,39,160,80"/>
 </map>
 </div>
 
@@ -430,11 +432,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00092">92</a> of file <a class="el" href="satellite-beam-channel-pair_8cc_source.html">satellite-beam-channel-pair.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00095">95</a> of file <a class="el" href="satellite-beam-channel-pair_8cc_source.html">satellite-beam-channel-pair.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00121">m_rtnChannels</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00123">m_rtnChannels</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00060">GetChannelPair()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00063">GetChannelPair()</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -442,10 +444,11 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_channel_pair_a3f3d0d9de0ec855a65bc1d27ad52fca3_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_channel_pair_a3f3d0d9de0ec855a65bc1d27ad52fca3_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_channel_pair_a3f3d0d9de0ec855a65bc1d27ad52fca3_icgraph" id="aclassns3_1_1_sat_channel_pair_a3f3d0d9de0ec855a65bc1d27ad52fca3_icgraph">
-<area shape="rect" title=" " alt="" coords="609,5,760,47"/>
-<area shape="rect" href="classns3_1_1_sat_channel_pair.html#abe801d3b05d161a9e6f4301f5857ff27" title="Retrieve the channel pair associated to a beam." alt="" coords="411,5,561,47"/>
-<area shape="rect" href="classns3_1_1_sat_beam_helper.html#addd5b1bd6a526f9b9a19bfe0ab07f104" title=" " alt="" coords="208,5,363,47"/>
-<area shape="rect" href="classns3_1_1_sat_beam_helper.html#aba58272a92b1b5fe6e5b609a598c5d3a" title=" " alt="" coords="5,5,160,47"/>
+<area shape="rect" title=" " alt="" coords="609,39,760,80"/>
+<area shape="rect" href="classns3_1_1_sat_channel_pair.html#abe801d3b05d161a9e6f4301f5857ff27" title="Retrieve the channel pair associated to a beam." alt="" coords="411,39,561,80"/>
+<area shape="rect" href="classns3_1_1_sat_beam_helper.html#a99dc54dc37948505ba882e8ff949f98d" title=" " alt="" coords="208,5,363,47"/>
+<area shape="rect" href="classns3_1_1_sat_beam_helper.html#a6b31b1c2ab15b0204468fc748939fea5" title=" " alt="" coords="208,71,363,112"/>
+<area shape="rect" href="classns3_1_1_sat_beam_helper.html#a62be1e5be1c969a1b5b999a77f742d35" title=" " alt="" coords="5,39,160,80"/>
 </map>
 </div>
 
@@ -478,7 +481,7 @@ Private Attributes</h2></td></tr>
 <p>Get the type ID. </p>
 <dl class="section return"><dt>Returns</dt><dd>the object TypeId </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00036">36</a> of file <a class="el" href="satellite-beam-channel-pair_8cc_source.html">satellite-beam-channel-pair.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00039">39</a> of file <a class="el" href="satellite-beam-channel-pair_8cc_source.html">satellite-beam-channel-pair.cc</a>.</p>
 
 </div>
 </div>
@@ -518,9 +521,9 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>whether or not this color already stores a pair of <a class="el" href="classns3_1_1_sat_channel.html" title="Satellite channel implementation.">SatChannel</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00106">106</a> of file <a class="el" href="satellite-beam-channel-pair_8cc_source.html">satellite-beam-channel-pair.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00109">109</a> of file <a class="el" href="satellite-beam-channel-pair_8cc_source.html">satellite-beam-channel-pair.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00120">m_fwdChannels</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00122">m_fwdChannels</a>.</p>
 
 </div>
 </div>
@@ -550,9 +553,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00116">116</a> of file <a class="el" href="satellite-beam-channel-pair_8cc_source.html">satellite-beam-channel-pair.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00119">119</a> of file <a class="el" href="satellite-beam-channel-pair_8cc_source.html">satellite-beam-channel-pair.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00121">m_rtnChannels</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00123">m_rtnChannels</a>.</p>
 
 </div>
 </div>
@@ -617,9 +620,9 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00146">146</a> of file <a class="el" href="satellite-beam-channel-pair_8cc_source.html">satellite-beam-channel-pair.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00149">149</a> of file <a class="el" href="satellite-beam-channel-pair_8cc_source.html">satellite-beam-channel-pair.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00120">m_fwdChannels</a>, <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00121">m_rtnChannels</a>, and <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00126">UpdateBeamsForFrequency()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00122">m_fwdChannels</a>, <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00123">m_rtnChannels</a>, and <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00129">UpdateBeamsForFrequency()</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -682,11 +685,11 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00126">126</a> of file <a class="el" href="satellite-beam-channel-pair_8cc_source.html">satellite-beam-channel-pair.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00129">129</a> of file <a class="el" href="satellite-beam-channel-pair_8cc_source.html">satellite-beam-channel-pair.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00119">m_frequencies</a>.</p>
+<p class="reference">References <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00121">m_frequencies</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00146">StoreChannelPair()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00149">StoreChannelPair()</a>.</p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -722,9 +725,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00119">119</a> of file <a class="el" href="satellite-beam-channel-pair_8h_source.html">satellite-beam-channel-pair.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00121">121</a> of file <a class="el" href="satellite-beam-channel-pair_8h_source.html">satellite-beam-channel-pair.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00051">~SatChannelPair()</a>, <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00060">GetChannelPair()</a>, and <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00126">UpdateBeamsForFrequency()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00054">~SatChannelPair()</a>, <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00063">GetChannelPair()</a>, and <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00129">UpdateBeamsForFrequency()</a>.</p>
 
 </div>
 </div>
@@ -748,9 +751,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00120">120</a> of file <a class="el" href="satellite-beam-channel-pair_8h_source.html">satellite-beam-channel-pair.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00122">122</a> of file <a class="el" href="satellite-beam-channel-pair_8h_source.html">satellite-beam-channel-pair.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00051">~SatChannelPair()</a>, <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00078">GetForwardChannel()</a>, <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00106">HasFwdChannel()</a>, and <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00146">StoreChannelPair()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00054">~SatChannelPair()</a>, <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00081">GetForwardChannel()</a>, <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00109">HasFwdChannel()</a>, and <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00149">StoreChannelPair()</a>.</p>
 
 </div>
 </div>
@@ -774,9 +777,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00121">121</a> of file <a class="el" href="satellite-beam-channel-pair_8h_source.html">satellite-beam-channel-pair.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-beam-channel-pair_8h_source.html#l00123">123</a> of file <a class="el" href="satellite-beam-channel-pair_8h_source.html">satellite-beam-channel-pair.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00051">~SatChannelPair()</a>, <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00092">GetReturnChannel()</a>, <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00116">HasRtnChannel()</a>, and <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00146">StoreChannelPair()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00054">~SatChannelPair()</a>, <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00095">GetReturnChannel()</a>, <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00119">HasRtnChannel()</a>, and <a class="el" href="satellite-beam-channel-pair_8cc_source.html#l00149">StoreChannelPair()</a>.</p>
 
 </div>
 </div>

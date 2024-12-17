@@ -125,7 +125,6 @@ $(document).ready(function(){initNavTree('class_sat_constellation_test4.html',''
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_sat_constellation_test4-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SatConstellationTest4 Class Reference</div>  </div>
@@ -168,18 +167,13 @@ Public Member Functions</h2></td></tr>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:aa421aae0699ccb47a5651d12aa342f9e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sat_constellation_test4.html#aa421aae0699ccb47a5651d12aa342f9e">DoRun</a> (void)</td></tr>
 <tr class="separator:aa421aae0699ccb47a5651d12aa342f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:aa89079ac3543ec16bb305099c00d1a37"><td class="memItemLeft" align="right" valign="top">Ptr&lt; <a class="el" href="classns3_1_1_sat_helper.html">SatHelper</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sat_constellation_test4.html#aa89079ac3543ec16bb305099c00d1a37">m_helper</a></td></tr>
-<tr class="separator:aa89079ac3543ec16bb305099c00d1a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>'Constellation, test 4' test case implementation. </p>
 <p>This case tests that a topology with hundreds of LEO satellites is correctly loaded. It load the telesat-351-sats configuration</p>
 <p>Expected result: Correct number of entities: 351 satellites, 3 GWs, 3 UTs, 702 ISLs Each satellite has 4 ISL interfaces All satellites know on which interface to send a packet depending on a target satellite </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-constellation-test_8cc_source.html#l00782">782</a> of file <a class="el" href="satellite-constellation-test_8cc_source.html">satellite-constellation-test.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-constellation-test_8cc_source.html#l00783">783</a> of file <a class="el" href="satellite-constellation-test_8cc_source.html">satellite-constellation-test.cc</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abb6184c9ae1d9274d99770f3baf9c802"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb6184c9ae1d9274d99770f3baf9c802">&#9670;&nbsp;</a></span>SatConstellationTest4()</h2>
@@ -196,7 +190,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-constellation-test_8cc_source.html#l00795">795</a> of file <a class="el" href="satellite-constellation-test_8cc_source.html">satellite-constellation-test.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-constellation-test_8cc_source.html#l00794">794</a> of file <a class="el" href="satellite-constellation-test_8cc_source.html">satellite-constellation-test.cc</a>.</p>
 
 </div>
 </div>
@@ -223,7 +217,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-constellation-test_8cc_source.html#l00803">803</a> of file <a class="el" href="satellite-constellation-test_8cc_source.html">satellite-constellation-test.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-constellation-test_8cc_source.html#l00802">802</a> of file <a class="el" href="satellite-constellation-test_8cc_source.html">satellite-constellation-test.cc</a>.</p>
 
 </div>
 </div>
@@ -253,39 +247,9 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Set regeneration mode</p>
 <p>Use constellation</p>
-<p>Use constellation with correctly centered beams (used for testing)</p>
 <p>When using 72 beams, we need a 72*nbSats network addresses for beams, so we take margin</p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-constellation-test_8cc_source.html#l00811">811</a> of file <a class="el" href="satellite-constellation-test_8cc_source.html">satellite-constellation-test.cc</a>.</p>
-
-<p class="reference">References <a class="el" href="satellite-constellation-test_8cc_source.html#l00791">m_helper</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="aa89079ac3543ec16bb305099c00d1a37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa89079ac3543ec16bb305099c00d1a37">&#9670;&nbsp;</a></span>m_helper</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Ptr&lt;<a class="el" href="classns3_1_1_sat_helper.html">SatHelper</a>&gt; SatConstellationTest4::m_helper</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="satellite-constellation-test_8cc_source.html#l00791">791</a> of file <a class="el" href="satellite-constellation-test_8cc_source.html">satellite-constellation-test.cc</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="satellite-constellation-test_8cc_source.html#l00811">DoRun()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-constellation-test_8cc_source.html#l00810">810</a> of file <a class="el" href="satellite-constellation-test_8cc_source.html">satellite-constellation-test.cc</a>.</p>
 
 </div>
 </div>

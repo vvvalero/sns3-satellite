@@ -178,6 +178,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a14aa3352eef33ac7b2d48c6948873c0e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mobility_model.html#a14aa3352eef33ac7b2d48c6948873c0e">~SatMobilityModel</a> ()=0</td></tr>
 <tr class="memdesc:a14aa3352eef33ac7b2d48c6948873c0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for <a class="el" href="classns3_1_1_sat_mobility_model.html" title="Keep track of the current position and velocity of an object in satellite network.">SatMobilityModel</a>.  <a href="classns3_1_1_sat_mobility_model.html#a14aa3352eef33ac7b2d48c6948873c0e">More...</a><br /></td></tr>
 <tr class="separator:a14aa3352eef33ac7b2d48c6948873c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a1d58f50abde4373aa8bcf63862d5ee"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mobility_model.html#a6a1d58f50abde4373aa8bcf63862d5ee">GetDistanceFrom</a> (Ptr&lt; const <a class="el" href="classns3_1_1_sat_mobility_model.html">SatMobilityModel</a> &gt; position) const</td></tr>
+<tr class="separator:a6a1d58f50abde4373aa8bcf63862d5ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c98b030b2c2f5719e38b0837fceeec3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classns3_1_1_geo_coordinate.html">GeoCoordinate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mobility_model.html#a7c98b030b2c2f5719e38b0837fceeec3">GetGeoPosition</a> (void) const</td></tr>
 <tr class="separator:a7c98b030b2c2f5719e38b0837fceeec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fa09f7327de5acc760e0041f308312e"><td class="memItemLeft" align="right" valign="top">TypeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classns3_1_1_sat_mobility_model.html#a1fa09f7327de5acc760e0041f308312e">GetInstanceTypeId</a> (void) const</td></tr>
@@ -246,7 +248,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8h_source.html#l00077">77</a> of file <a class="el" href="satellite-mobility-model_8h_source.html">satellite-mobility-model.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8h_source.html#l00083">83</a> of file <a class="el" href="satellite-mobility-model_8h_source.html">satellite-mobility-model.h</a>.</p>
 
 </div>
 </div>
@@ -268,7 +270,7 @@ Private Attributes</h2></td></tr>
 
 <p>Default constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8cc_source.html#l00066">66</a> of file <a class="el" href="satellite-mobility-model_8cc_source.html">satellite-mobility-model.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8cc_source.html#l00067">67</a> of file <a class="el" href="satellite-mobility-model_8cc_source.html">satellite-mobility-model.cc</a>.</p>
 
 </div>
 </div>
@@ -297,7 +299,7 @@ Private Attributes</h2></td></tr>
 
 <p>Destructor for <a class="el" href="classns3_1_1_sat_mobility_model.html" title="Keep track of the current position and velocity of an object in satellite network.">SatMobilityModel</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8cc_source.html#l00072">72</a> of file <a class="el" href="satellite-mobility-model_8cc_source.html">satellite-mobility-model.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8cc_source.html#l00073">73</a> of file <a class="el" href="satellite-mobility-model_8cc_source.html">satellite-mobility-model.cc</a>.</p>
 
 </div>
 </div>
@@ -330,7 +332,7 @@ Private Attributes</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classns3_1_1_sat_traced_mobility_model.html#ad1cd629136fbbece43f3fca8d1e42e54">ns3::SatTracedMobilityModel</a>, <a class="el" href="classns3_1_1_sat_constant_position_mobility_model.html#a8d3e218fbc7c0df0daa3a7186684798d">ns3::SatConstantPositionMobilityModel</a>, and <a class="el" href="classns3_1_1_sat_s_g_p4_mobility_model.html#abeac6cee6347c0006c98a2bb6640f97c">ns3::SatSGP4MobilityModel</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-mobility-model_8cc_source.html#l00097">DoGetPosition()</a>, and <a class="el" href="satellite-mobility-model_8cc_source.html#l00077">GetGeoPosition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-mobility-model_8cc_source.html#l00106">DoGetPosition()</a>, <a class="el" href="satellite-mobility-model_8cc_source.html#l00091">GetDistanceFrom()</a>, and <a class="el" href="satellite-mobility-model_8cc_source.html#l00078">GetGeoPosition()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -338,11 +340,15 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_mobility_model_a273ef591698a8084aeb555a0a72074b1_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_mobility_model_a273ef591698a8084aeb555a0a72074b1_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_mobility_model_a273ef591698a8084aeb555a0a72074b1_icgraph" id="aclassns3_1_1_sat_mobility_model_a273ef591698a8084aeb555a0a72074b1_icgraph">
-<area shape="rect" title=" " alt="" coords="649,39,816,80"/>
-<area shape="rect" href="classns3_1_1_sat_mobility_model.html#a6d4d457c6b143bbb89716b250a90f50e" title=" " alt="" coords="435,5,601,47"/>
-<area shape="rect" href="classns3_1_1_sat_mobility_model.html#a7c98b030b2c2f5719e38b0837fceeec3" title=" " alt="" coords="435,71,601,112"/>
-<area shape="rect" href="classns3_1_1_sat_mobility_model.html#a67f6310fcc6c2bf37cee6a882691bc49" title="Get the type ID." alt="" coords="220,71,387,112"/>
-<area shape="rect" href="classns3_1_1_sat_mobility_model.html#a1fa09f7327de5acc760e0041f308312e" title=" " alt="" coords="5,71,172,112"/>
+<area shape="rect" title=" " alt="" coords="1003,71,1169,112"/>
+<area shape="rect" href="classns3_1_1_sat_mobility_model.html#a6d4d457c6b143bbb89716b250a90f50e" title=" " alt="" coords="788,5,955,47"/>
+<area shape="rect" href="classns3_1_1_sat_mobility_model.html#a6a1d58f50abde4373aa8bcf63862d5ee" title=" " alt="" coords="788,71,955,112"/>
+<area shape="rect" href="classns3_1_1_sat_mobility_model.html#a7c98b030b2c2f5719e38b0837fceeec3" title=" " alt="" coords="788,136,955,177"/>
+<area shape="rect" href="classns3_1_1_sat_handover_module.html#ae8f7d5cce13e148a0f1058c09301ddbd" title="Get the N closest satellites to the UT node." alt="" coords="555,71,740,112"/>
+<area shape="rect" href="classns3_1_1_sat_handover_module.html#ab48dab1c597f4280f809c87ba0034fac" title="Handover algorithm choosing best beam between N closest satellites." alt="" coords="321,71,507,112"/>
+<area shape="rect" href="classns3_1_1_sat_handover_module.html#a7f020658dbe9b8d169af4a84f655c65e" title="Inspect whether or not the given beam is still suitable for the underlying mobility model." alt="" coords="5,71,273,112"/>
+<area shape="rect" href="classns3_1_1_sat_mobility_model.html#a67f6310fcc6c2bf37cee6a882691bc49" title="Get the type ID." alt="" coords="564,136,731,177"/>
+<area shape="rect" href="classns3_1_1_sat_mobility_model.html#a1fa09f7327de5acc760e0041f308312e" title=" " alt="" coords="331,136,497,177"/>
 </map>
 </div>
 
@@ -376,9 +382,9 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classns3_1_1_sat_s_g_p4_mobility_model.html#acc574a669e2b9d059f164bd847bc3e15">ns3::SatSGP4MobilityModel</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8cc_source.html#l00097">97</a> of file <a class="el" href="satellite-mobility-model_8cc_source.html">satellite-mobility-model.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8cc_source.html#l00106">106</a> of file <a class="el" href="satellite-mobility-model_8cc_source.html">satellite-mobility-model.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="classns3_1_1_sat_mobility_model.html#a273ef591698a8084aeb555a0a72074b1">DoGetGeoPosition()</a>, <a class="el" href="satellite-mobility-model_8cc_source.html#l00125">DoSetCartesianPosition()</a>, <a class="el" href="satellite-mobility-model_8h_source.html#l00128">m_cartesianPosition</a>, <a class="el" href="satellite-mobility-model_8h_source.html#l00131">m_cartesianPositionOutdated</a>, and <a class="el" href="geo-coordinate_8cc_source.html#l00139">ns3::GeoCoordinate::ToVector()</a>.</p>
+<p class="reference">References <a class="el" href="classns3_1_1_sat_mobility_model.html#a273ef591698a8084aeb555a0a72074b1">DoGetGeoPosition()</a>, <a class="el" href="satellite-mobility-model_8cc_source.html#l00134">DoSetCartesianPosition()</a>, <a class="el" href="satellite-mobility-model_8h_source.html#l00134">m_cartesianPosition</a>, <a class="el" href="satellite-mobility-model_8h_source.html#l00137">m_cartesianPositionOutdated</a>, and <a class="el" href="geo-coordinate_8cc_source.html#l00143">ns3::GeoCoordinate::ToVector()</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -430,11 +436,11 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8cc_source.html#l00125">125</a> of file <a class="el" href="satellite-mobility-model_8cc_source.html">satellite-mobility-model.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8cc_source.html#l00134">134</a> of file <a class="el" href="satellite-mobility-model_8cc_source.html">satellite-mobility-model.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-mobility-model_8h_source.html#l00128">m_cartesianPosition</a>, and <a class="el" href="satellite-mobility-model_8h_source.html#l00131">m_cartesianPositionOutdated</a>.</p>
+<p class="reference">References <a class="el" href="satellite-mobility-model_8h_source.html#l00134">m_cartesianPosition</a>, and <a class="el" href="satellite-mobility-model_8h_source.html#l00137">m_cartesianPositionOutdated</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-mobility-model_8cc_source.html#l00097">DoGetPosition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-mobility-model_8cc_source.html#l00106">DoGetPosition()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -482,7 +488,7 @@ Private Attributes</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classns3_1_1_sat_traced_mobility_model.html#ad9d844480fc9ad55b987b5b3960e66db">ns3::SatTracedMobilityModel</a>, <a class="el" href="classns3_1_1_sat_s_g_p4_mobility_model.html#a1f984eca6dc5dc448facacf7d68bb179">ns3::SatSGP4MobilityModel</a>, and <a class="el" href="classns3_1_1_sat_constant_position_mobility_model.html#aaed241e75aace32a714a9c6412bd45d9">ns3::SatConstantPositionMobilityModel</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-mobility-model_8cc_source.html#l00109">DoSetPosition()</a>, and <a class="el" href="satellite-mobility-model_8cc_source.html#l00083">SetGeoPosition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-mobility-model_8cc_source.html#l00118">DoSetPosition()</a>, and <a class="el" href="satellite-mobility-model_8cc_source.html#l00084">SetGeoPosition()</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -534,9 +540,9 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classns3_1_1_sat_s_g_p4_mobility_model.html#a25cb0a218c32ef1d4a84ff8886fb239d">ns3::SatSGP4MobilityModel</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8cc_source.html#l00109">109</a> of file <a class="el" href="satellite-mobility-model_8cc_source.html">satellite-mobility-model.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8cc_source.html#l00118">118</a> of file <a class="el" href="satellite-mobility-model_8cc_source.html">satellite-mobility-model.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="classns3_1_1_sat_mobility_model.html#a6832e249f2a8d6015b7f952df8291559">DoSetGeoPosition()</a>, <a class="el" href="satellite-mobility-model_8h_source.html#l00128">m_cartesianPosition</a>, <a class="el" href="satellite-mobility-model_8h_source.html#l00131">m_cartesianPositionOutdated</a>, and <a class="el" href="satellite-mobility-model_8h_source.html#l00138">m_GetAsGeoCoordinates</a>.</p>
+<p class="reference">References <a class="el" href="classns3_1_1_sat_mobility_model.html#a6832e249f2a8d6015b7f952df8291559">DoSetGeoPosition()</a>, <a class="el" href="satellite-mobility-model_8h_source.html#l00134">m_cartesianPosition</a>, <a class="el" href="satellite-mobility-model_8h_source.html#l00137">m_cartesianPositionOutdated</a>, and <a class="el" href="satellite-mobility-model_8h_source.html#l00144">m_GetAsGeoCoordinates</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -546,6 +552,64 @@ Private Attributes</h2></td></tr>
 <map name="aclassns3_1_1_sat_mobility_model_a99ec3689bee3f454199021de4e4d907d_cgraph" id="aclassns3_1_1_sat_mobility_model_a99ec3689bee3f454199021de4e4d907d_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,172,47"/>
 <area shape="rect" href="classns3_1_1_sat_mobility_model.html#a6832e249f2a8d6015b7f952df8291559" title=" " alt="" coords="220,5,387,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6a1d58f50abde4373aa8bcf63862d5ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a1d58f50abde4373aa8bcf63862d5ee">&#9670;&nbsp;</a></span>GetDistanceFrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ns3::SatMobilityModel::GetDistanceFrom </td>
+          <td>(</td>
+          <td class="paramtype">Ptr&lt; const <a class="el" href="classns3_1_1_sat_mobility_model.html">SatMobilityModel</a> &gt;&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>a reference to another mobility model </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the distance between the two objects. Unit is meters. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8cc_source.html#l00091">91</a> of file <a class="el" href="satellite-mobility-model_8cc_source.html">satellite-mobility-model.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="classns3_1_1_sat_mobility_model.html#a273ef591698a8084aeb555a0a72074b1">DoGetGeoPosition()</a>, and <a class="el" href="geo-coordinate_8cc_source.html#l00143">ns3::GeoCoordinate::ToVector()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="satellite-handover-module_8cc_source.html#l00221">ns3::SatHandoverModule::GetNClosestSats()</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classns3_1_1_sat_mobility_model_a6a1d58f50abde4373aa8bcf63862d5ee_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_mobility_model_a6a1d58f50abde4373aa8bcf63862d5ee_cgraph" alt=""/></div>
+<map name="aclassns3_1_1_sat_mobility_model_a6a1d58f50abde4373aa8bcf63862d5ee_cgraph" id="aclassns3_1_1_sat_mobility_model_a6a1d58f50abde4373aa8bcf63862d5ee_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,172,80"/>
+<area shape="rect" href="classns3_1_1_sat_mobility_model.html#a273ef591698a8084aeb555a0a72074b1" title=" " alt="" coords="220,5,387,47"/>
+<area shape="rect" href="classns3_1_1_geo_coordinate.html#aa5340b5c6958bb152df3604f16ed943a" title="Converts Geodetic coordinates to Cartesian coordinates." alt="" coords="228,71,379,112"/>
+<area shape="rect" href="classns3_1_1_sat_utils.html#a7aeb112fd24ee52ec0517c07234815bf" title="Converts degrees to radians." alt="" coords="435,37,615,79"/>
+<area shape="rect" href="classns3_1_1_geo_coordinate.html#ac7e29c96dae0fb1277499f0c54fe255b" title="Gets the radius of curvature in the prime vertical." alt="" coords="444,103,605,144"/>
+</map>
+</div>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classns3_1_1_sat_mobility_model_a6a1d58f50abde4373aa8bcf63862d5ee_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_mobility_model_a6a1d58f50abde4373aa8bcf63862d5ee_icgraph" alt=""/></div>
+<map name="aclassns3_1_1_sat_mobility_model_a6a1d58f50abde4373aa8bcf63862d5ee_icgraph" id="aclassns3_1_1_sat_mobility_model_a6a1d58f50abde4373aa8bcf63862d5ee_icgraph">
+<area shape="rect" title=" " alt="" coords="788,5,955,47"/>
+<area shape="rect" href="classns3_1_1_sat_handover_module.html#ae8f7d5cce13e148a0f1058c09301ddbd" title="Get the N closest satellites to the UT node." alt="" coords="555,5,740,47"/>
+<area shape="rect" href="classns3_1_1_sat_handover_module.html#ab48dab1c597f4280f809c87ba0034fac" title="Handover algorithm choosing best beam between N closest satellites." alt="" coords="321,5,507,47"/>
+<area shape="rect" href="classns3_1_1_sat_handover_module.html#a7f020658dbe9b8d169af4a84f655c65e" title="Inspect whether or not the given beam is still suitable for the underlying mobility model." alt="" coords="5,5,273,47"/>
 </map>
 </div>
 
@@ -568,27 +632,27 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the current satellite position </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8cc_source.html#l00077">77</a> of file <a class="el" href="satellite-mobility-model_8cc_source.html">satellite-mobility-model.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8cc_source.html#l00078">78</a> of file <a class="el" href="satellite-mobility-model_8cc_source.html">satellite-mobility-model.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="classns3_1_1_sat_mobility_model.html#a273ef591698a8084aeb555a0a72074b1">DoGetGeoPosition()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-mobility-model_8cc_source.html#l00035">GetTypeId()</a>.</p>
-<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="satellite-mobility-model_8cc_source.html#l00036">GetTypeId()</a>.</p>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_mobility_model_a7c98b030b2c2f5719e38b0837fceeec3_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_mobility_model_a7c98b030b2c2f5719e38b0837fceeec3_cgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_mobility_model_a7c98b030b2c2f5719e38b0837fceeec3_cgraph" id="aclassns3_1_1_sat_mobility_model_a7c98b030b2c2f5719e38b0837fceeec3_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,172,47"/>
 <area shape="rect" href="classns3_1_1_sat_mobility_model.html#a273ef591698a8084aeb555a0a72074b1" title=" " alt="" coords="220,5,387,47"/>
 </map>
 </div>
-<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_mobility_model_a7c98b030b2c2f5719e38b0837fceeec3_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_mobility_model_a7c98b030b2c2f5719e38b0837fceeec3_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_mobility_model_a7c98b030b2c2f5719e38b0837fceeec3_icgraph" id="aclassns3_1_1_sat_mobility_model_a7c98b030b2c2f5719e38b0837fceeec3_icgraph">
 <area shape="rect" title=" " alt="" coords="435,5,601,47"/>
@@ -615,14 +679,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8cc_source.html#l00061">61</a> of file <a class="el" href="satellite-mobility-model_8cc_source.html">satellite-mobility-model.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8cc_source.html#l00062">62</a> of file <a class="el" href="satellite-mobility-model_8cc_source.html">satellite-mobility-model.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-mobility-model_8cc_source.html#l00035">GetTypeId()</a>.</p>
-<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+<p class="reference">References <a class="el" href="satellite-mobility-model_8cc_source.html#l00036">GetTypeId()</a>.</p>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_mobility_model_a1fa09f7327de5acc760e0041f308312e_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_mobility_model_a1fa09f7327de5acc760e0041f308312e_cgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_mobility_model_a1fa09f7327de5acc760e0041f308312e_cgraph" id="aclassns3_1_1_sat_mobility_model_a1fa09f7327de5acc760e0041f308312e_cgraph">
 <area shape="rect" title=" " alt="" coords="5,64,172,105"/>
@@ -664,16 +728,16 @@ Private Attributes</h2></td></tr>
 <p>Get the type ID. </p>
 <dl class="section return"><dt>Returns</dt><dd>the object TypeId </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8cc_source.html#l00035">35</a> of file <a class="el" href="satellite-mobility-model_8cc_source.html">satellite-mobility-model.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8cc_source.html#l00036">36</a> of file <a class="el" href="satellite-mobility-model_8cc_source.html">satellite-mobility-model.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-mobility-model_8cc_source.html#l00077">GetGeoPosition()</a>, <a class="el" href="satellite-mobility-model_8h_source.html#l00138">m_GetAsGeoCoordinates</a>, <a class="el" href="satellite-mobility-model_8h_source.html#l00123">m_satCourseChangeTrace</a>, <a class="el" href="namespacens3.html#a597777375ee4683b04cfbd447dc5f81a">ns3::MakeGeoCoordinateChecker()</a>, and <a class="el" href="satellite-mobility-model_8cc_source.html#l00083">SetGeoPosition()</a>.</p>
+<p class="reference">References <a class="el" href="satellite-mobility-model_8cc_source.html#l00078">GetGeoPosition()</a>, <a class="el" href="satellite-mobility-model_8h_source.html#l00144">m_GetAsGeoCoordinates</a>, <a class="el" href="satellite-mobility-model_8h_source.html#l00129">m_satCourseChangeTrace</a>, <a class="el" href="namespacens3.html#a597777375ee4683b04cfbd447dc5f81a">ns3::MakeGeoCoordinateChecker()</a>, and <a class="el" href="satellite-mobility-model_8cc_source.html#l00084">SetGeoPosition()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-mobility-model_8cc_source.html#l00061">GetInstanceTypeId()</a>.</p>
-<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="satellite-mobility-model_8cc_source.html#l00062">GetInstanceTypeId()</a>.</p>
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_mobility_model_a67f6310fcc6c2bf37cee6a882691bc49_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_mobility_model_a67f6310fcc6c2bf37cee6a882691bc49_cgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_mobility_model_a67f6310fcc6c2bf37cee6a882691bc49_cgraph" id="aclassns3_1_1_sat_mobility_model_a67f6310fcc6c2bf37cee6a882691bc49_cgraph">
 <area shape="rect" title="Get the type ID." alt="" coords="5,64,172,105"/>
@@ -684,11 +748,11 @@ Private Attributes</h2></td></tr>
 <area shape="rect" href="classns3_1_1_sat_mobility_model.html#a6832e249f2a8d6015b7f952df8291559" title=" " alt="" coords="505,123,672,164"/>
 </map>
 </div>
-<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_mobility_model_a67f6310fcc6c2bf37cee6a882691bc49_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_mobility_model_a67f6310fcc6c2bf37cee6a882691bc49_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_mobility_model_a67f6310fcc6c2bf37cee6a882691bc49_icgraph" id="aclassns3_1_1_sat_mobility_model_a67f6310fcc6c2bf37cee6a882691bc49_icgraph">
 <area shape="rect" title="Get the type ID." alt="" coords="220,5,387,47"/>
@@ -714,16 +778,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8cc_source.html#l00090">90</a> of file <a class="el" href="satellite-mobility-model_8cc_source.html">satellite-mobility-model.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8cc_source.html#l00099">99</a> of file <a class="el" href="satellite-mobility-model_8cc_source.html">satellite-mobility-model.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="satellite-mobility-model_8h_source.html#l00123">m_satCourseChangeTrace</a>.</p>
+<p class="reference">References <a class="el" href="satellite-mobility-model_8h_source.html#l00129">m_satCourseChangeTrace</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-constant-position-mobility-model_8cc_source.html#l00060">ns3::SatConstantPositionMobilityModel::DoSetGeoPosition()</a>, <a class="el" href="satellite-sgp4-mobility-model_8cc_source.html#l00176">ns3::SatSGP4MobilityModel::DoSetGeoPosition()</a>, and <a class="el" href="satellite-traced-mobility-model_8cc_source.html#l00112">ns3::SatTracedMobilityModel::DoSetGeoPosition()</a>.</p>
-<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="satellite-constant-position-mobility-model_8cc_source.html#l00062">ns3::SatConstantPositionMobilityModel::DoSetGeoPosition()</a>, <a class="el" href="satellite-sgp4-mobility-model_8cc_source.html#l00183">ns3::SatSGP4MobilityModel::DoSetGeoPosition()</a>, and <a class="el" href="satellite-traced-mobility-model_8cc_source.html#l00115">ns3::SatTracedMobilityModel::DoSetGeoPosition()</a>.</p>
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_mobility_model_ad73cab33799559f7e23d0eb707d9d594_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_mobility_model_ad73cab33799559f7e23d0eb707d9d594_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_mobility_model_ad73cab33799559f7e23d0eb707d9d594_icgraph" id="aclassns3_1_1_sat_mobility_model_ad73cab33799559f7e23d0eb707d9d594_icgraph">
 <area shape="rect" title=" " alt="" coords="809,71,999,112"/>
@@ -760,27 +824,27 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8cc_source.html#l00083">83</a> of file <a class="el" href="satellite-mobility-model_8cc_source.html">satellite-mobility-model.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8cc_source.html#l00084">84</a> of file <a class="el" href="satellite-mobility-model_8cc_source.html">satellite-mobility-model.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="classns3_1_1_sat_mobility_model.html#a6832e249f2a8d6015b7f952df8291559">DoSetGeoPosition()</a>, and <a class="el" href="satellite-mobility-model_8h_source.html#l00131">m_cartesianPositionOutdated</a>.</p>
+<p class="reference">References <a class="el" href="classns3_1_1_sat_mobility_model.html#a6832e249f2a8d6015b7f952df8291559">DoSetGeoPosition()</a>, and <a class="el" href="satellite-mobility-model_8h_source.html#l00137">m_cartesianPositionOutdated</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-fsl-test_8cc_source.html#l00073">SatFreeSpaceLossTestCase::DoRun()</a>, and <a class="el" href="satellite-mobility-model_8cc_source.html#l00035">GetTypeId()</a>.</p>
-<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+<p class="reference">Referenced by <a class="el" href="satellite-fsl-test_8cc_source.html#l00075">SatFreeSpaceLossTestCase::DoRun()</a>, and <a class="el" href="satellite-mobility-model_8cc_source.html#l00036">GetTypeId()</a>.</p>
+<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div id="dynsection-15-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_mobility_model_ab1c57db7c42af0b8099c50294f333fd2_cgraph.png" border="0" usemap="#aclassns3_1_1_sat_mobility_model_ab1c57db7c42af0b8099c50294f333fd2_cgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_mobility_model_ab1c57db7c42af0b8099c50294f333fd2_cgraph" id="aclassns3_1_1_sat_mobility_model_ab1c57db7c42af0b8099c50294f333fd2_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,172,47"/>
 <area shape="rect" href="classns3_1_1_sat_mobility_model.html#a6832e249f2a8d6015b7f952df8291559" title=" " alt="" coords="220,5,387,47"/>
 </map>
 </div>
-<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div id="dynsection-16-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classns3_1_1_sat_mobility_model_ab1c57db7c42af0b8099c50294f333fd2_icgraph.png" border="0" usemap="#aclassns3_1_1_sat_mobility_model_ab1c57db7c42af0b8099c50294f333fd2_icgraph" alt=""/></div>
 <map name="aclassns3_1_1_sat_mobility_model_ab1c57db7c42af0b8099c50294f333fd2_icgraph" id="aclassns3_1_1_sat_mobility_model_ab1c57db7c42af0b8099c50294f333fd2_icgraph">
 <area shape="rect" title=" " alt="" coords="465,39,632,80"/>
@@ -813,9 +877,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8h_source.html#l00128">128</a> of file <a class="el" href="satellite-mobility-model_8h_source.html">satellite-mobility-model.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8h_source.html#l00134">134</a> of file <a class="el" href="satellite-mobility-model_8h_source.html">satellite-mobility-model.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-mobility-model_8cc_source.html#l00097">DoGetPosition()</a>, <a class="el" href="satellite-mobility-model_8cc_source.html#l00125">DoSetCartesianPosition()</a>, and <a class="el" href="satellite-mobility-model_8cc_source.html#l00109">DoSetPosition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-mobility-model_8cc_source.html#l00106">DoGetPosition()</a>, <a class="el" href="satellite-mobility-model_8cc_source.html#l00134">DoSetCartesianPosition()</a>, and <a class="el" href="satellite-mobility-model_8cc_source.html#l00118">DoSetPosition()</a>.</p>
 
 </div>
 </div>
@@ -839,9 +903,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8h_source.html#l00131">131</a> of file <a class="el" href="satellite-mobility-model_8h_source.html">satellite-mobility-model.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8h_source.html#l00137">137</a> of file <a class="el" href="satellite-mobility-model_8h_source.html">satellite-mobility-model.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-mobility-model_8cc_source.html#l00097">DoGetPosition()</a>, <a class="el" href="satellite-mobility-model_8cc_source.html#l00125">DoSetCartesianPosition()</a>, <a class="el" href="satellite-mobility-model_8cc_source.html#l00109">DoSetPosition()</a>, and <a class="el" href="satellite-mobility-model_8cc_source.html#l00083">SetGeoPosition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-mobility-model_8cc_source.html#l00106">DoGetPosition()</a>, <a class="el" href="satellite-mobility-model_8cc_source.html#l00134">DoSetCartesianPosition()</a>, <a class="el" href="satellite-mobility-model_8cc_source.html#l00118">DoSetPosition()</a>, and <a class="el" href="satellite-mobility-model_8cc_source.html#l00084">SetGeoPosition()</a>.</p>
 
 </div>
 </div>
@@ -865,9 +929,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8h_source.html#l00138">138</a> of file <a class="el" href="satellite-mobility-model_8h_source.html">satellite-mobility-model.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8h_source.html#l00144">144</a> of file <a class="el" href="satellite-mobility-model_8h_source.html">satellite-mobility-model.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-mobility-model_8cc_source.html#l00109">DoSetPosition()</a>, and <a class="el" href="satellite-mobility-model_8cc_source.html#l00035">GetTypeId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-mobility-model_8cc_source.html#l00118">DoSetPosition()</a>, and <a class="el" href="satellite-mobility-model_8cc_source.html#l00036">GetTypeId()</a>.</p>
 
 </div>
 </div>
@@ -893,9 +957,9 @@ Private Attributes</h2></td></tr>
 
 <p>Used to alert subscribers that a change in direction, velocity, or position has occurred. </p>
 
-<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8h_source.html#l00123">123</a> of file <a class="el" href="satellite-mobility-model_8h_source.html">satellite-mobility-model.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-mobility-model_8h_source.html#l00129">129</a> of file <a class="el" href="satellite-mobility-model_8h_source.html">satellite-mobility-model.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="satellite-mobility-model_8cc_source.html#l00035">GetTypeId()</a>, and <a class="el" href="satellite-mobility-model_8cc_source.html#l00090">NotifyGeoCourseChange()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="satellite-mobility-model_8cc_source.html#l00036">GetTypeId()</a>, and <a class="el" href="satellite-mobility-model_8cc_source.html#l00099">NotifyGeoCourseChange()</a>.</p>
 
 </div>
 </div>

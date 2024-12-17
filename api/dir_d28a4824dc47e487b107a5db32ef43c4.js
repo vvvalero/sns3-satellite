@@ -2,11 +2,12 @@ var dir_d28a4824dc47e487b107a5db32ef43c4 =
 [
     [ "sat-arq-fwd-example.cc", "sat-arq-fwd-example_8cc.html", null ],
     [ "sat-arq-rtn-example.cc", "sat-arq-rtn-example_8cc.html", null ],
+    [ "sat-beam-position-tracer.cc", "sat-beam-position-tracer_8cc.html", "sat-beam-position-tracer_8cc" ],
     [ "sat-cbr-example.cc", "sat-cbr-example_8cc.html", null ],
     [ "sat-cbr-full-example.cc", "sat-cbr-full-example_8cc.html", null ],
     [ "sat-cbr-stats-example.cc", "sat-cbr-stats-example_8cc.html", "sat-cbr-stats-example_8cc" ],
     [ "sat-cbr-user-defined-example.cc", "sat-cbr-user-defined-example_8cc.html", "sat-cbr-user-defined-example_8cc" ],
-    [ "sat-constellation-example.cc", "sat-constellation-example_8cc.html", "sat-constellation-example_8cc" ],
+    [ "sat-constellation-example.cc", "sat-constellation-example_8cc.html", null ],
     [ "sat-dama-http-sim-tn9.cc", "sat-dama-http-sim-tn9_8cc.html", null ],
     [ "sat-dama-onoff-sim-tn9.cc", "sat-dama-onoff-sim-tn9_8cc.html", null ],
     [ "sat-dama-sim-tn9.cc", "sat-dama-sim-tn9_8cc.html", null ],
@@ -18,6 +19,7 @@ var dir_d28a4824dc47e487b107a5db32ef43c4 =
     [ "sat-fwd-system-test-example.cc", "sat-fwd-system-test-example_8cc.html", "sat-fwd-system-test-example_8cc" ],
     [ "sat-generic-launcher.cc", "sat-generic-launcher_8cc.html", null ],
     [ "sat-group-example.cc", "sat-group-example_8cc.html", "sat-group-example_8cc" ],
+    [ "sat-gw-handover-example.cc", "sat-gw-handover-example_8cc.html", null ],
     [ "sat-handover-example.cc", "sat-handover-example_8cc.html", null ],
     [ "sat-http-example.cc", "sat-http-example_8cc.html", null ],
     [ "sat-iot-example.cc", "sat-iot-example_8cc.html", null ],
@@ -29,7 +31,10 @@ var dir_d28a4824dc47e487b107a5db32ef43c4 =
     [ "sat-log-example.cc", "sat-log-example_8cc.html", null ],
     [ "sat-logon-example.cc", "sat-logon-example_8cc.html", null ],
     [ "sat-loo-example.cc", "sat-loo-example_8cc.html", null ],
+    [ "sat-lora-constellation-example.cc", "sat-lora-constellation-example_8cc.html", null ],
     [ "sat-lora-example.cc", "sat-lora-example_8cc.html", null ],
+    [ "sat-lora-handover-example.cc", "sat-lora-handover-example_8cc.html", null ],
+    [ "sat-lora-regenerative-example.cc", "sat-lora-regenerative-example_8cc.html", null ],
     [ "sat-markov-fading-trace-example.cc", "sat-markov-fading-trace-example_8cc.html", [
       [ "SatMarkovFadingExamplePlot", "classns3_1_1_sat_markov_fading_example_plot.html", "classns3_1_1_sat_markov_fading_example_plot" ]
     ] ],

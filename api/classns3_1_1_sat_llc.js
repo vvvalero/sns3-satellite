@@ -4,7 +4,6 @@ var classns3_1_1_sat_llc =
     [ "ReadCtrlMsgCallback", "classns3_1_1_sat_llc.html#a1d45e4e931d7ce35810250c2c73e0689", null ],
     [ "ReceiveCallback", "classns3_1_1_sat_llc.html#abaf5d1bca6dd020ef82b56e9a0a82595", null ],
     [ "SatLlc", "classns3_1_1_sat_llc.html#aafa396d050ceed7b6733283115082e18", null ],
-    [ "SatLlc", "classns3_1_1_sat_llc.html#ae566820982cea742f60ac4f00f154015", null ],
     [ "~SatLlc", "classns3_1_1_sat_llc.html#aa58e9f96953e8eddf4a45559a071b3a5", null ],
     [ "AddDecap", "classns3_1_1_sat_llc.html#aecc934327cb549e028691b132aebf4aa", null ],
     [ "AddEncap", "classns3_1_1_sat_llc.html#a8fc6ec523e408643337aa441efade508", null ],

@@ -131,6 +131,9 @@ $(document).ready(function(){initNavTree('satellite-scpc-scheduler_8h.html','');
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="satellite-fwd-link-scheduler_8h_source.html">satellite-fwd-link-scheduler.h</a>&quot;</code><br />
 <code>#include &lt;ns3/pointer.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for satellite-scpc-scheduler.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -138,56 +141,56 @@ $(document).ready(function(){initNavTree('satellite-scpc-scheduler_8h.html','');
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="satellite-scpc-scheduler_8h__incl.png" border="0" usemap="#a_2builds_2sns3_2satellite_2satellite_2model_2satellite-scpc-scheduler_8h" alt=""/></div>
 <map name="a_2builds_2sns3_2satellite_2satellite_2model_2satellite-scpc-scheduler_8h" id="a_2builds_2sns3_2satellite_2satellite_2model_2satellite-scpc-scheduler_8h">
-<area shape="rect" title=" " alt="" coords="2515,5,2696,61"/>
-<area shape="rect" href="satellite-fwd-link-scheduler_8h.html" title=" " alt="" coords="2468,109,2600,151"/>
-<area shape="rect" title=" " alt="" coords="2624,117,2731,143"/>
-<area shape="rect" href="satellite-bbframe-conf_8h.html" title=" " alt="" coords="554,355,732,382"/>
-<area shape="rect" title=" " alt="" coords="494,534,573,561"/>
-<area shape="rect" title=" " alt="" coords="1338,445,1444,471"/>
-<area shape="rect" href="satellite-bbframe-container_8h.html" title=" " alt="" coords="1898,199,2110,225"/>
-<area shape="rect" href="satellite-bbframe_8h.html" title=" " alt="" coords="1726,273,1872,300"/>
-<area shape="rect" title=" " alt="" coords="1332,534,1436,561"/>
-<area shape="rect" title=" " alt="" coords="2304,445,2465,471"/>
-<area shape="rect" href="satellite-cno-estimator_8h.html" title=" " alt="" coords="757,355,940,382"/>
-<area shape="rect" href="satellite-mac_8h.html" title=" " alt="" coords="2672,199,2792,225"/>
-<area shape="rect" title=" " alt="" coords="2850,527,3006,568"/>
-<area shape="rect" title=" " alt="" coords="3312,616,3473,643"/>
-<area shape="rect" href="satellite-phy_8h.html" title=" " alt="" coords="1547,273,1662,300"/>
-<area shape="rect" href="satellite-signal-parameters_8h.html" title=" " alt="" coords="1140,355,1351,382"/>
-<area shape="rect" title=" " alt="" coords="2559,355,2671,382"/>
-<area shape="rect" title=" " alt="" coords="2824,273,2939,300"/>
-<area shape="rect" title=" " alt="" coords="2963,273,3030,300"/>
-<area shape="rect" href="satellite-net-device_8h.html" title=" " alt="" coords="3496,199,3657,225"/>
-<area shape="rect" href="satellite-scheduling-object_8h.html" title=" " alt="" coords="1837,348,1988,389"/>
-<area shape="rect" title=" " alt="" coords="3856,199,3950,225"/>
-<area shape="rect" title=" " alt="" coords="3974,199,4069,225"/>
-<area shape="rect" title=" " alt="" coords="4093,199,4161,225"/>
-<area shape="rect" href="satellite-enums_8h.html" title=" " alt="" coords="2532,534,2668,561"/>
-<area shape="rect" href="satellite-link-results_8h.html" title=" " alt="" coords="655,445,820,471"/>
-<area shape="rect" title=" " alt="" coords="687,616,788,643"/>
-<area shape="rect" title=" " alt="" coords="288,534,339,561"/>
-<area shape="rect" title=" " alt="" coords="1722,534,1890,561"/>
-<area shape="rect" title=" " alt="" coords="2537,616,2664,643"/>
-<area shape="rect" title=" " alt="" coords="3228,616,3287,643"/>
-<area shape="rect" title=" " alt="" coords="2048,616,2110,643"/>
-<area shape="rect" href="satellite-look-up-table_8h.html" title=" " alt="" coords="648,534,827,561"/>
-<area shape="rect" href="satellite-mutual-information-table_8h.html" title=" " alt="" coords="852,527,1058,568"/>
-<area shape="rect" title=" " alt="" coords="1192,273,1254,300"/>
-<area shape="rect" href="satellite-control-message_8h.html" title=" " alt="" coords="3112,355,3313,382"/>
-<area shape="rect" href="satellite-node-info_8h.html" title=" " alt="" coords="2735,445,2890,471"/>
-<area shape="rect" href="satellite-queue_8h.html" title=" " alt="" coords="1578,355,1710,382"/>
-<area shape="rect" href="satellite-frame-conf_8h.html" title=" " alt="" coords="2066,445,2228,471"/>
-<area shape="rect" href="satellite-mac-tag_8h.html" title=" " alt="" coords="3158,534,3304,561"/>
-<area shape="rect" title=" " alt="" coords="3117,445,3222,471"/>
-<area shape="rect" title=" " alt="" coords="3415,445,3538,471"/>
-<area shape="rect" title=" " alt="" coords="3247,445,3290,471"/>
-<area shape="rect" href="satellite-antenna-gain-pattern_8h.html" title=" " alt="" coords="2165,348,2332,389"/>
-<area shape="rect" href="satellite-beam-channel-pair_8h.html" title=" " alt="" coords="52,437,226,479"/>
-<area shape="rect" href="satellite-phy-rx-carrier-conf_8h.html" title=" " alt="" coords="258,348,428,389"/>
-<area shape="rect" href="satellite-utils_8h.html" title=" " alt="" coords="2540,445,2660,471"/>
-<area shape="rect" href="satellite-packet-classifier_8h.html" title=" " alt="" coords="3155,273,3352,300"/>
-<area shape="rect" title=" " alt="" coords="3528,273,3659,300"/>
-<area shape="rect" title=" " alt="" coords="3684,273,3754,300"/>
+<area shape="rect" title=" " alt="" coords="647,5,828,61"/>
+<area shape="rect" href="satellite-fwd-link-scheduler_8h.html" title=" " alt="" coords="2409,109,2541,151"/>
+<area shape="rect" title=" " alt="" coords="1513,616,1575,643"/>
+<area shape="rect" title=" " alt="" coords="2602,534,2673,561"/>
+<area shape="rect" title=" " alt="" coords="1666,534,1726,561"/>
+<area shape="rect" title=" " alt="" coords="2565,117,2672,143"/>
+<area shape="rect" href="satellite-bbframe-conf_8h.html" title=" " alt="" coords="3097,355,3276,382"/>
+<area shape="rect" title=" " alt="" coords="3207,534,3286,561"/>
+<area shape="rect" title=" " alt="" coords="4292,534,4343,561"/>
+<area shape="rect" title=" " alt="" coords="2679,445,2785,471"/>
+<area shape="rect" href="satellite-bbframe-container_8h.html" title=" " alt="" coords="2074,199,2286,225"/>
+<area shape="rect" href="satellite-bbframe_8h.html" title=" " alt="" coords="2004,273,2151,300"/>
+<area shape="rect" title=" " alt="" coords="452,534,556,561"/>
+<area shape="rect" title=" " alt="" coords="978,445,1139,471"/>
+<area shape="rect" href="satellite-cno-estimator_8h.html" title=" " alt="" coords="2714,355,2897,382"/>
+<area shape="rect" href="satellite-mac_8h.html" title=" " alt="" coords="2565,199,2685,225"/>
+<area shape="rect" title=" " alt="" coords="4367,527,4523,568"/>
+<area shape="rect" title=" " alt="" coords="5115,534,5277,561"/>
+<area shape="rect" title=" " alt="" coords="1164,445,1279,471"/>
+<area shape="rect" title=" " alt="" coords="2561,445,2655,471"/>
+<area shape="rect" href="satellite-phy_8h.html" title=" " alt="" coords="3533,273,3648,300"/>
+<area shape="rect" href="satellite-signal-parameters_8h.html" title=" " alt="" coords="1768,355,1979,382"/>
+<area shape="rect" title=" " alt="" coords="4044,355,4156,382"/>
+<area shape="rect" title=" " alt="" coords="3996,273,4063,300"/>
+<area shape="rect" href="satellite-net-device_8h.html" title=" " alt="" coords="4973,199,5134,225"/>
+<area shape="rect" href="satellite-scheduling-object_8h.html" title=" " alt="" coords="3402,348,3553,389"/>
+<area shape="rect" title=" " alt="" coords="2867,199,2962,225"/>
+<area shape="rect" title=" " alt="" coords="2986,199,3054,225"/>
+<area shape="rect" href="satellite-enums_8h.html" title=" " alt="" coords="3999,534,4135,561"/>
+<area shape="rect" title=" " alt="" coords="4379,616,4437,643"/>
+<area shape="rect" href="satellite-link-results_8h.html" title=" " alt="" coords="3615,445,3780,471"/>
+<area shape="rect" title=" " alt="" coords="3292,616,3393,643"/>
+<area shape="rect" title=" " alt="" coords="4807,534,4975,561"/>
+<area shape="rect" title=" " alt="" coords="4003,616,4130,643"/>
+<area shape="rect" href="satellite-look-up-table_8h.html" title=" " alt="" coords="3431,534,3609,561"/>
+<area shape="rect" title=" " alt="" coords="449,445,511,471"/>
+<area shape="rect" title=" " alt="" coords="1807,534,1870,561"/>
+<area shape="rect" href="satellite-control-message_8h.html" title=" " alt="" coords="4181,355,4382,382"/>
+<area shape="rect" href="satellite-handover-module_8h.html" title=" " alt="" coords="2104,348,2245,389"/>
+<area shape="rect" href="satellite-node-info_8h.html" title=" " alt="" coords="4953,445,5108,471"/>
+<area shape="rect" href="satellite-queue_8h.html" title=" " alt="" coords="669,355,801,382"/>
+<area shape="rect" title=" " alt="" coords="535,445,598,471"/>
+<area shape="rect" href="satellite-frame-conf_8h.html" title=" " alt="" coords="4209,445,4372,471"/>
+<area shape="rect" title=" " alt="" coords="5233,445,5356,471"/>
+<area shape="rect" href="satellite-antenna-gain-pattern_8h.html" title=" " alt="" coords="2523,348,2690,389"/>
+<area shape="rect" href="satellite-beam-channel-pair_8h.html" title=" " alt="" coords="3417,437,3591,479"/>
+<area shape="rect" href="satellite-phy-rx-carrier-conf_8h.html" title=" " alt="" coords="3679,348,3849,389"/>
+<area shape="rect" href="satellite-utils_8h.html" title=" " alt="" coords="2012,445,2132,471"/>
+<area shape="rect" href="satellite-packet-classifier_8h.html" title=" " alt="" coords="4564,273,4761,300"/>
+<area shape="rect" title=" " alt="" coords="5532,273,5663,300"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">

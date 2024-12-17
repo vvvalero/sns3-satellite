@@ -131,6 +131,8 @@ $(document).ready(function(){initNavTree('satellite-gw-llc_8h.html',''); initRes
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="satellite-llc_8h_source.html">satellite-llc.h</a>&quot;</code><br />
 <code>#include &lt;ns3/ptr.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for satellite-gw-llc.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -138,37 +140,43 @@ $(document).ready(function(){initNavTree('satellite-gw-llc_8h.html',''); initRes
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="satellite-gw-llc_8h__incl.png" border="0" usemap="#a_2builds_2sns3_2satellite_2satellite_2model_2satellite-gw-llc_8h" alt=""/></div>
 <map name="a_2builds_2sns3_2satellite_2satellite_2model_2satellite-gw-llc_8h" id="a_2builds_2sns3_2satellite_2satellite_2model_2satellite-gw-llc_8h">
-<area shape="rect" title=" " alt="" coords="1904,5,2085,61"/>
-<area shape="rect" href="satellite-llc_8h.html" title=" " alt="" coords="1835,109,1941,136"/>
-<area shape="rect" title=" " alt="" coords="1834,497,1913,524"/>
-<area shape="rect" href="satellite-base-encapsulator_8h.html" title=" " alt="" coords="743,184,953,211"/>
-<area shape="rect" title=" " alt="" coords="958,572,1021,599"/>
-<area shape="rect" title=" " alt="" coords="560,497,661,524"/>
-<area shape="rect" title=" " alt="" coords="1411,497,1579,524"/>
-<area shape="rect" title=" " alt="" coords="1839,415,2001,442"/>
-<area shape="rect" title=" " alt="" coords="1863,333,1913,360"/>
-<area shape="rect" title=" " alt="" coords="411,333,573,360"/>
-<area shape="rect" href="satellite-control-message_8h.html" title=" " alt="" coords="1259,259,1461,285"/>
-<area shape="rect" title=" " alt="" coords="305,497,412,524"/>
-<area shape="rect" href="satellite-queue_8h.html" title=" " alt="" coords="273,259,405,285"/>
-<area shape="rect" title=" " alt="" coords="93,333,197,360"/>
-<area shape="rect" title=" " alt="" coords="648,259,851,285"/>
-<area shape="rect" title=" " alt="" coords="875,259,1018,285"/>
-<area shape="rect" title=" " alt="" coords="1043,259,1157,285"/>
-<area shape="rect" href="satellite-enums_8h.html" title=" " alt="" coords="713,497,849,524"/>
-<area shape="rect" href="satellite-frame-conf_8h.html" title=" " alt="" coords="1009,333,1172,360"/>
-<area shape="rect" href="satellite-mac-tag_8h.html" title=" " alt="" coords="1297,333,1444,360"/>
-<area shape="rect" title=" " alt="" coords="1469,333,1574,360"/>
-<area shape="rect" title=" " alt="" coords="1599,333,1721,360"/>
-<area shape="rect" title=" " alt="" coords="1745,333,1788,360"/>
-<area shape="rect" title=" " alt="" coords="659,572,786,599"/>
-<area shape="rect" title=" " alt="" coords="811,572,869,599"/>
-<area shape="rect" href="satellite-const-variables_8h.html" title=" " alt="" coords="1286,415,1477,442"/>
-<area shape="rect" href="satellite-wave-form-conf_8h.html" title=" " alt="" coords="801,408,951,449"/>
-<area shape="rect" title=" " alt="" coords="1027,408,1183,449"/>
-<area shape="rect" title=" " alt="" coords="1207,415,1262,442"/>
-<area shape="rect" title=" " alt="" coords="1704,415,1787,442"/>
-<area shape="rect" title=" " alt="" coords="273,333,335,360"/>
+<area shape="rect" title=" " alt="" coords="1633,5,1815,61"/>
+<area shape="rect" href="satellite-llc_8h.html" title=" " alt="" coords="1249,109,1356,136"/>
+<area shape="rect" title=" " alt="" coords="1703,572,1766,599"/>
+<area shape="rect" title=" " alt="" coords="1331,497,1402,524"/>
+<area shape="rect" title=" " alt="" coords="2650,497,2729,524"/>
+<area shape="rect" href="satellite-base-encapsulator_8h.html" title=" " alt="" coords="752,184,963,211"/>
+<area shape="rect" title=" " alt="" coords="2473,572,2532,599"/>
+<area shape="rect" title=" " alt="" coords="632,497,733,524"/>
+<area shape="rect" title=" " alt="" coords="2388,497,2556,524"/>
+<area shape="rect" title=" " alt="" coords="1093,497,1144,524"/>
+<area shape="rect" title=" " alt="" coords="655,415,817,442"/>
+<area shape="rect" title=" " alt="" coords="94,497,255,524"/>
+<area shape="rect" href="satellite-control-message_8h.html" title=" " alt="" coords="1341,259,1542,285"/>
+<area shape="rect" title=" " alt="" coords="779,497,885,524"/>
+<area shape="rect" href="satellite-queue_8h.html" title=" " alt="" coords="245,415,377,442"/>
+<area shape="rect" title=" " alt="" coords="504,497,608,524"/>
+<area shape="rect" title=" " alt="" coords="756,259,959,285"/>
+<area shape="rect" title=" " alt="" coords="983,259,1126,285"/>
+<area shape="rect" title=" " alt="" coords="1151,259,1265,285"/>
+<area shape="rect" href="satellite-enums_8h.html" title=" " alt="" coords="2228,497,2364,524"/>
+<area shape="rect" href="satellite-frame-conf_8h.html" title=" " alt="" coords="1909,333,2072,360"/>
+<area shape="rect" href="satellite-mac-tag_8h.html" title=" " alt="" coords="960,333,1107,360"/>
+<area shape="rect" title=" " alt="" coords="1151,415,1227,442"/>
+<area shape="rect" title=" " alt="" coords="1182,333,1287,360"/>
+<area shape="rect" title=" " alt="" coords="1312,333,1435,360"/>
+<area shape="rect" title=" " alt="" coords="1459,333,1501,360"/>
+<area shape="rect" title=" " alt="" coords="1526,333,1586,360"/>
+<area shape="rect" title=" " alt="" coords="2233,572,2359,599"/>
+<area shape="rect" href="satellite-const-variables_8h.html" title=" " alt="" coords="1506,415,1697,442"/>
+<area shape="rect" href="satellite-wave-form-conf_8h.html" title=" " alt="" coords="2183,408,2334,449"/>
+<area shape="rect" title=" " alt="" coords="1773,408,1929,449"/>
+<area shape="rect" title=" " alt="" coords="1953,415,2028,442"/>
+<area shape="rect" title=" " alt="" coords="2053,415,2107,442"/>
+<area shape="rect" title=" " alt="" coords="1568,497,1635,524"/>
+<area shape="rect" title=" " alt="" coords="993,415,1076,442"/>
+<area shape="rect" title=" " alt="" coords="279,497,342,524"/>
+<area shape="rect" title=" " alt="" coords="366,497,429,524"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -178,8 +186,24 @@ $(document).ready(function(){initNavTree('satellite-gw-llc_8h.html',''); initRes
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="satellite-gw-llc_8h__dep__incl.png" border="0" usemap="#a_2builds_2sns3_2satellite_2satellite_2model_2satellite-gw-llc_8hdep" alt=""/></div>
 <map name="a_2builds_2sns3_2satellite_2satellite_2model_2satellite-gw-llc_8hdep" id="a_2builds_2sns3_2satellite_2satellite_2model_2satellite-gw-llc_8hdep">
-<area shape="rect" title=" " alt="" coords="5,5,187,61"/>
-<area shape="rect" href="satellite-gw-llc_8cc.html" title=" " alt="" coords="5,109,187,165"/>
+<area shape="rect" title=" " alt="" coords="1271,5,1452,61"/>
+<area shape="rect" href="satellite-gw-llc_8cc.html" title=" " alt="" coords="1168,109,1349,165"/>
+<area shape="rect" href="satellite-topology_8h.html" title=" " alt="" coords="1373,109,1555,165"/>
+<area shape="rect" href="lora-end-device-status_8cc.html" title=" " alt="" coords="5,213,168,269"/>
+<area shape="rect" href="lora-network-server_8cc.html" title=" " alt="" coords="193,213,349,269"/>
+<area shape="rect" href="lora-network-status_8cc.html" title=" " alt="" coords="373,213,529,269"/>
+<area shape="rect" href="lorawan-mac-end-device_8cc.html" title=" " alt="" coords="553,213,733,269"/>
+<area shape="rect" href="satellite-gw-mac_8cc.html" title=" " alt="" coords="757,213,939,269"/>
+<area shape="rect" href="satellite-gw-phy_8cc.html" title=" " alt="" coords="963,213,1144,269"/>
+<area shape="rect" href="satellite-isl-arbiter_8cc.html" title=" " alt="" coords="1168,213,1349,269"/>
+<area shape="rect" href="satellite-llc_8cc.html" title=" " alt="" coords="1373,213,1555,269"/>
+<area shape="rect" href="satellite-lorawan-net-device_8cc.html" title=" " alt="" coords="1579,213,1760,269"/>
+<area shape="rect" href="satellite-mac_8cc.html" title=" " alt="" coords="1784,213,1965,269"/>
+<area shape="rect" href="satellite-orbiter-feeder-phy_8cc.html" title=" " alt="" coords="1989,213,2171,269"/>
+<area shape="rect" href="satellite-orbiter-user-phy_8cc.html" title=" " alt="" coords="2195,213,2376,269"/>
+<area shape="rect" href="satellite-topology_8cc.html" title=" " alt="" coords="2400,213,2581,269"/>
+<area shape="rect" href="satellite-ut-mac_8cc.html" title=" " alt="" coords="2605,213,2787,269"/>
+<area shape="rect" href="satellite-ut-phy_8cc.html" title=" " alt="" coords="2811,213,2992,269"/>
 </map>
 </div>
 </div>

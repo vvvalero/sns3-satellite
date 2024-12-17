@@ -15,6 +15,7 @@ var classns3_1_1_sat_fwd_link_scheduler =
     [ "SatFwdLinkScheduler", "classns3_1_1_sat_fwd_link_scheduler.html#a90139aa882738fd4061fa55044af7c54", null ],
     [ "~SatFwdLinkScheduler", "classns3_1_1_sat_fwd_link_scheduler.html#ade38bcf4b398fba09c15b6ce56b60488", null ],
     [ "SatFwdLinkScheduler", "classns3_1_1_sat_fwd_link_scheduler.html#a1fe9a8cd4279eed7ad54bb46deaec6c8", null ],
+    [ "ClearAllPackets", "classns3_1_1_sat_fwd_link_scheduler.html#a34d3129b5ad974b050e5dc106ca2506b", null ],
     [ "CnoInfoUpdated", "classns3_1_1_sat_fwd_link_scheduler.html#a560c9d543754ce71ff6f7b190deb2e6b", null ],
     [ "CnoMatchWithFrame", "classns3_1_1_sat_fwd_link_scheduler.html#ab97037a1d50d3b5eb7ecd041a8ca9399", null ],
     [ "CompareSoFlowId", "classns3_1_1_sat_fwd_link_scheduler.html#ae9d22cc769aef9538255bd88c2e0c23d", null ],

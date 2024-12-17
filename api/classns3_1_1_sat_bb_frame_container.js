@@ -5,6 +5,7 @@ var classns3_1_1_sat_bb_frame_container =
     [ "SatBbFrameContainer", "classns3_1_1_sat_bb_frame_container.html#a0614c228fb0a6edd1df89770cfff9711", null ],
     [ "~SatBbFrameContainer", "classns3_1_1_sat_bb_frame_container.html#a0062614059dc0e41a946a9a186f12904", null ],
     [ "AddData", "classns3_1_1_sat_bb_frame_container.html#ab3b2f20c41b9c1876fa11bbe5188a6b0", null ],
+    [ "ClearAllFrames", "classns3_1_1_sat_bb_frame_container.html#abc5e5b12706c615867adf755e75eb42b", null ],
     [ "CreateFrameToTail", "classns3_1_1_sat_bb_frame_container.html#a9ef236cf44976a0f13bb7fb587123170", null ],
     [ "GetBytesLeftInTailFrame", "classns3_1_1_sat_bb_frame_container.html#a12ef8e2e933af63dfb2023441ffa6791", null ],
     [ "GetFrameSymbols", "classns3_1_1_sat_bb_frame_container.html#a48a988da17bbcfa3472181cfd086774b", null ],

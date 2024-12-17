@@ -131,6 +131,8 @@ $(document).ready(function(){initNavTree('lora-tag_8h.html',''); initResizable()
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="satellite-enums_8h_source.html">satellite-enums.h</a>&quot;</code><br />
 <code>#include &lt;ns3/tag.h&gt;</code><br />
+<code>#include &lt;ostream&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for lora-tag.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -138,9 +140,11 @@ $(document).ready(function(){initNavTree('lora-tag_8h.html',''); initResizable()
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="lora-tag_8h__incl.png" border="0" usemap="#a_2builds_2sns3_2satellite_2satellite_2model_2lora-tag_8h" alt=""/></div>
 <map name="a_2builds_2sns3_2satellite_2satellite_2model_2lora-tag_8h" id="a_2builds_2sns3_2satellite_2satellite_2model_2lora-tag_8h">
-<area shape="rect" title=" " alt="" coords="157,5,348,47"/>
+<area shape="rect" title=" " alt="" coords="276,5,467,47"/>
 <area shape="rect" href="satellite-enums_8h.html" title=" " alt="" coords="118,95,254,121"/>
 <area shape="rect" title=" " alt="" coords="278,95,361,121"/>
+<area shape="rect" title=" " alt="" coords="385,95,461,121"/>
+<area shape="rect" title=" " alt="" coords="485,95,556,121"/>
 <area shape="rect" title=" " alt="" coords="5,169,132,196"/>
 <area shape="rect" title=" " alt="" coords="157,169,215,196"/>
 <area shape="rect" title=" " alt="" coords="240,169,303,196"/>
@@ -153,27 +157,44 @@ $(document).ready(function(){initNavTree('lora-tag_8h.html',''); initResizable()
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="lora-tag_8h__dep__incl.png" border="0" usemap="#a_2builds_2sns3_2satellite_2satellite_2model_2lora-tag_8hdep" alt=""/></div>
 <map name="a_2builds_2sns3_2satellite_2satellite_2model_2lora-tag_8hdep" id="a_2builds_2sns3_2satellite_2satellite_2model_2lora-tag_8hdep">
-<area shape="rect" title=" " alt="" coords="378,5,569,47"/>
-<area shape="rect" href="lora-end-device-status_8cc.html" title=" " alt="" coords="5,95,168,151"/>
-<area shape="rect" href="lora-tag_8cc.html" title=" " alt="" coords="193,95,349,151"/>
-<area shape="rect" href="lorawan-mac-end-device-class-a_8cc.html" title=" " alt="" coords="373,95,574,151"/>
-<area shape="rect" href="lorawan-mac-end-device_8cc.html" title=" " alt="" coords="598,95,778,151"/>
-<area shape="rect" href="lorawan-mac-gateway_8h.html" title=" " alt="" coords="802,95,982,151"/>
-<area shape="rect" href="lora-gateway-status_8h.html" title=" " alt="" coords="718,199,874,255"/>
-<area shape="rect" href="lorawan-mac-gateway_8cc.html" title=" " alt="" coords="898,199,1078,255"/>
-<area shape="rect" href="lora-gateway-status_8cc.html" title=" " alt="" coords="290,303,446,359"/>
-<area shape="rect" href="lora-network-server_8h.html" title=" " alt="" coords="799,719,955,775"/>
-<area shape="rect" href="lora-network-status_8cc.html" title=" " alt="" coords="1338,407,1494,463"/>
-<area shape="rect" href="lora-network-status_8h.html" title=" " alt="" coords="1030,303,1186,359"/>
-<area shape="rect" href="lora-network-server_8cc.html" title=" " alt="" coords="1010,823,1166,879"/>
-<area shape="rect" href="lora-adr-component_8h.html" title=" " alt="" coords="573,511,729,567"/>
-<area shape="rect" href="lora-network-controller-components_8h.html" title=" " alt="" coords="791,407,1035,463"/>
-<area shape="rect" href="lora-network-controller_8h.html" title=" " alt="" coords="1029,511,1187,567"/>
-<area shape="rect" href="lora-network-scheduler_8h.html" title=" " alt="" coords="1103,615,1262,671"/>
-<area shape="rect" href="lora-adr-component_8cc.html" title=" " alt="" coords="573,615,729,671"/>
-<area shape="rect" href="lora-network-controller-components_8cc.html" title=" " alt="" coords="753,511,1004,567"/>
-<area shape="rect" href="lora-network-controller_8cc.html" title=" " alt="" coords="915,615,1079,671"/>
-<area shape="rect" href="lora-network-scheduler_8cc.html" title=" " alt="" coords="1097,719,1263,775"/>
+<area shape="rect" title=" " alt="" coords="1166,5,1357,47"/>
+<area shape="rect" href="lora-end-device-status_8cc.html" title=" " alt="" coords="5,407,168,463"/>
+<area shape="rect" href="lora-tag_8cc.html" title=" " alt="" coords="991,95,1147,151"/>
+<area shape="rect" href="lorawan-ground-mac-gateway_8h.html" title=" " alt="" coords="1018,199,1198,255"/>
+<area shape="rect" href="lorawan-mac-end-device_8cc.html" title=" " alt="" coords="193,407,373,463"/>
+<area shape="rect" href="satellite-lorawan-net-device_8cc.html" title=" " alt="" coords="397,407,579,463"/>
+<area shape="rect" href="lorawan-mac-end-device-class-a_8cc.html" title=" " alt="" coords="1325,95,1526,151"/>
+<area shape="rect" href="lorawan-mac-gateway_8h.html" title=" " alt="" coords="1550,95,1730,151"/>
+<area shape="rect" href="lorawan-orbiter-mac-gateway_8h.html" title=" " alt="" coords="2138,199,2318,255"/>
+<area shape="rect" href="lorawan-ground-mac-gateway_8cc.html" title=" " alt="" coords="1015,303,1198,359"/>
+<area shape="rect" href="satellite-topology_8h.html" title=" " alt="" coords="1372,303,1553,359"/>
+<area shape="rect" href="lora-network-server_8cc.html" title=" " alt="" coords="2874,823,3030,879"/>
+<area shape="rect" href="lora-network-status_8cc.html" title=" " alt="" coords="2707,407,2863,463"/>
+<area shape="rect" href="satellite-gw-mac_8cc.html" title=" " alt="" coords="653,407,835,463"/>
+<area shape="rect" href="satellite-gw-phy_8cc.html" title=" " alt="" coords="859,407,1040,463"/>
+<area shape="rect" href="satellite-isl-arbiter_8cc.html" title=" " alt="" coords="1064,407,1245,463"/>
+<area shape="rect" href="satellite-llc_8cc.html" title=" " alt="" coords="1269,407,1451,463"/>
+<area shape="rect" href="satellite-mac_8cc.html" title=" " alt="" coords="1475,407,1656,463"/>
+<area shape="rect" href="satellite-orbiter-feeder-phy_8cc.html" title=" " alt="" coords="1680,407,1861,463"/>
+<area shape="rect" href="satellite-orbiter-user-phy_8cc.html" title=" " alt="" coords="1885,407,2067,463"/>
+<area shape="rect" href="satellite-topology_8cc.html" title=" " alt="" coords="2091,407,2272,463"/>
+<area shape="rect" href="satellite-ut-mac_8cc.html" title=" " alt="" coords="2296,407,2477,463"/>
+<area shape="rect" href="satellite-ut-phy_8cc.html" title=" " alt="" coords="2501,407,2683,463"/>
+<area shape="rect" href="lora-gateway-status_8h.html" title=" " alt="" coords="1537,199,1693,255"/>
+<area shape="rect" href="lorawan-mac-gateway_8cc.html" title=" " alt="" coords="1717,199,1897,255"/>
+<area shape="rect" href="satellite-orbiter-net-device-lora_8cc.html" title=" " alt="" coords="1921,199,2113,255"/>
+<area shape="rect" href="lora-gateway-status_8cc.html" title=" " alt="" coords="1653,303,1809,359"/>
+<area shape="rect" href="lora-network-server_8h.html" title=" " alt="" coords="2990,719,3146,775"/>
+<area shape="rect" href="lora-network-status_8h.html" title=" " alt="" coords="2990,303,3146,359"/>
+<area shape="rect" href="lora-adr-component_8h.html" title=" " alt="" coords="3041,511,3197,567"/>
+<area shape="rect" href="lora-network-controller-components_8h.html" title=" " alt="" coords="3178,407,3422,463"/>
+<area shape="rect" href="lora-network-controller_8h.html" title=" " alt="" coords="3497,511,3655,567"/>
+<area shape="rect" href="lora-network-scheduler_8h.html" title=" " alt="" coords="3626,615,3785,671"/>
+<area shape="rect" href="lora-adr-component_8cc.html" title=" " alt="" coords="3041,615,3197,671"/>
+<area shape="rect" href="lora-network-controller-components_8cc.html" title=" " alt="" coords="3221,511,3472,567"/>
+<area shape="rect" href="lora-network-controller_8cc.html" title=" " alt="" coords="3438,615,3602,671"/>
+<area shape="rect" href="lora-network-scheduler_8cc.html" title=" " alt="" coords="3623,719,3788,775"/>
+<area shape="rect" href="lorawan-orbiter-mac-gateway_8cc.html" title=" " alt="" coords="3170,303,3350,359"/>
 </map>
 </div>
 </div>

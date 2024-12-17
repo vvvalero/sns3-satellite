@@ -17,6 +17,7 @@ var classns3_1_1_sat_s_g_p4_mobility_model =
     [ "PefToItrf", "classns3_1_1_sat_s_g_p4_mobility_model.html#a6411d24b8b6dd17bb0a0950f7eb95ee4", null ],
     [ "rTemeTorItrf", "classns3_1_1_sat_s_g_p4_mobility_model.html#ab1d90261c6cbc484c68fbd7395c1c9fc", null ],
     [ "rvTemeTovItrf", "classns3_1_1_sat_s_g_p4_mobility_model.html#a91b9e7a56419bed2d4fbde244caeef7e", null ],
+    [ "SetStartDate", "classns3_1_1_sat_s_g_p4_mobility_model.html#abd50151d624e15baabc11b75c67093f7", null ],
     [ "SetStartTime", "classns3_1_1_sat_s_g_p4_mobility_model.html#a42848bcf15bf9636c22794f17887745a", null ],
     [ "SetTleInfo", "classns3_1_1_sat_s_g_p4_mobility_model.html#acd29441ee01c0d39512efc09e7b3a3d7", null ],
     [ "TemeToPef", "classns3_1_1_sat_s_g_p4_mobility_model.html#a96dbe69273c4916334193d7433b3ae82", null ],

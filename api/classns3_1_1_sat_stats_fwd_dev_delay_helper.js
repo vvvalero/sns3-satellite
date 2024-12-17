@@ -4,5 +4,6 @@ var classns3_1_1_sat_stats_fwd_dev_delay_helper =
     [ "~SatStatsFwdDevDelayHelper", "classns3_1_1_sat_stats_fwd_dev_delay_helper.html#aeb796e0c5795b30b9509dafc3245c717", null ],
     [ "DoInstallProbes", "classns3_1_1_sat_stats_fwd_dev_delay_helper.html#ae97db4d8d39bb32499d1ba20654c6892", null ],
     [ "GetTypeId", "classns3_1_1_sat_stats_fwd_dev_delay_helper.html#ad9d0b2e9f1ef017680b821f4d2a0cd24", null ],
-    [ "m_probes", "classns3_1_1_sat_stats_fwd_dev_delay_helper.html#ae5b5821bd7327802dcd44f106c2d1e4b", null ]
+    [ "UpdateIdentifierOnProbes", "classns3_1_1_sat_stats_fwd_dev_delay_helper.html#a9b229054674649ad241987452edd7bbe", null ],
+    [ "m_probes", "classns3_1_1_sat_stats_fwd_dev_delay_helper.html#a8ca1fdf2e46814a93b1b023047359f49", null ]
 ];

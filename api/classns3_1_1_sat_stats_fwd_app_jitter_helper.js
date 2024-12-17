@@ -6,6 +6,7 @@ var classns3_1_1_sat_stats_fwd_app_jitter_helper =
     [ "GetAndUpdatePreviousDelay", "classns3_1_1_sat_stats_fwd_app_jitter_helper.html#a11250fd1ac6b2aa50e938bbed2cfd13e", null ],
     [ "GetTypeId", "classns3_1_1_sat_stats_fwd_app_jitter_helper.html#a6de7a800ddf52c55c1869bfb9f753a25", null ],
     [ "RxCallback", "classns3_1_1_sat_stats_fwd_app_jitter_helper.html#af8a0e76b50e415c1bdb35c038f258270", null ],
+    [ "UpdateIdentifierOnProbes", "classns3_1_1_sat_stats_fwd_app_jitter_helper.html#a920571f6e26a37047093deeba4758747", null ],
     [ "m_previousDelayMap", "classns3_1_1_sat_stats_fwd_app_jitter_helper.html#a42cba6ef2363bea6f9068a4c1d04b500", null ],
-    [ "m_probes", "classns3_1_1_sat_stats_fwd_app_jitter_helper.html#a1ef4f6444a7ef78ca32b4c0e7e036606", null ]
+    [ "m_probes", "classns3_1_1_sat_stats_fwd_app_jitter_helper.html#aeab9c9175292bc88cb6089fd4967c2b4", null ]
 ];

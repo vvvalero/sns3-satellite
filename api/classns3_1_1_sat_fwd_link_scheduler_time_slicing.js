@@ -4,6 +4,7 @@ var classns3_1_1_sat_fwd_link_scheduler_time_slicing =
     [ "SatFwdLinkSchedulerTimeSlicing", "classns3_1_1_sat_fwd_link_scheduler_time_slicing.html#a2aaa3f65813b54883ca2bfc3930d0d93", null ],
     [ "~SatFwdLinkSchedulerTimeSlicing", "classns3_1_1_sat_fwd_link_scheduler_time_slicing.html#acd58e0ad83985b394bd18f2a4ca8a1b6", null ],
     [ "CanOpenBbFrame", "classns3_1_1_sat_fwd_link_scheduler_time_slicing.html#ad9234b4035cd08de83c95c4f1502c6f4", null ],
+    [ "ClearAllPackets", "classns3_1_1_sat_fwd_link_scheduler_time_slicing.html#a4e87a587dfc22fcf4709feaeb73f2ca2", null ],
     [ "DoDispose", "classns3_1_1_sat_fwd_link_scheduler_time_slicing.html#aa4cc153bfd2908c63d38df1ddc26fc96", null ],
     [ "GetInstanceTypeId", "classns3_1_1_sat_fwd_link_scheduler_time_slicing.html#adbc1cb240cfa107359f56049d2f2c23c", null ],
     [ "GetNextFrame", "classns3_1_1_sat_fwd_link_scheduler_time_slicing.html#a43515cf758c6ff84eb7cd9827dea6035", null ],

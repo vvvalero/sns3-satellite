@@ -131,39 +131,44 @@ $(document).ready(function(){initNavTree('satellite-stats-helper-container_8cc.h
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="satellite-stats-helper-container_8h_source.html">satellite-stats-helper-container.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-antenna-gain-helper_8h_source.html">satellite-stats-antenna-gain-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-backlogged-request-helper_8h_source.html">satellite-stats-backlogged-request-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-beam-service-time-helper_8h_source.html">satellite-stats-beam-service-time-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-capacity-request-helper_8h_source.html">satellite-stats-capacity-request-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-carrier-id-helper_8h_source.html">satellite-stats-carrier-id-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-composite-sinr-helper_8h_source.html">satellite-stats-composite-sinr-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-delay-helper_8h_source.html">satellite-stats-delay-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-frame-load-helper_8h_source.html">satellite-stats-frame-load-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-frame-type-usage-helper_8h_source.html">satellite-stats-frame-type-usage-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-fwd-link-scheduler-symbol-rate-helper_8h_source.html">satellite-stats-fwd-link-scheduler-symbol-rate-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-jitter-helper_8h_source.html">satellite-stats-jitter-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-link-delay-helper_8h_source.html">satellite-stats-link-delay-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-link-jitter-helper_8h_source.html">satellite-stats-link-jitter-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-link-modcod-helper_8h_source.html">satellite-stats-link-modcod-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-link-rx-power-helper_8h_source.html">satellite-stats-link-rx-power-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-link-sinr-helper_8h_source.html">satellite-stats-link-sinr-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-marsala-correlation-helper_8h_source.html">satellite-stats-marsala-correlation-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-packet-collision-helper_8h_source.html">satellite-stats-packet-collision-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-packet-drop-rate-helper_8h_source.html">satellite-stats-packet-drop-rate-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-packet-error-helper_8h_source.html">satellite-stats-packet-error-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-plt-helper_8h_source.html">satellite-stats-plt-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-queue-helper_8h_source.html">satellite-stats-queue-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-rbdc-request-helper_8h_source.html">satellite-stats-rbdc-request-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-resources-granted-helper_8h_source.html">satellite-stats-resources-granted-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-satellite-queue-helper_8h_source.html">satellite-stats-satellite-queue-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-signalling-load-helper_8h_source.html">satellite-stats-signalling-load-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-throughput-helper_8h_source.html">satellite-stats-throughput-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-waveform-usage-helper_8h_source.html">satellite-stats-waveform-usage-helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="satellite-stats-window-load-helper_8h_source.html">satellite-stats-window-load-helper.h</a>&quot;</code><br />
 <code>#include &lt;ns3/enum.h&gt;</code><br />
 <code>#include &lt;ns3/log.h&gt;</code><br />
 <code>#include &lt;ns3/satellite-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-antenna-gain-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-backlogged-request-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-beam-service-time-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-capacity-request-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-carrier-id-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-composite-sinr-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-delay-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-frame-load-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-frame-type-usage-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-fwd-link-scheduler-symbol-rate-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-jitter-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-link-delay-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-link-jitter-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-link-modcod-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-link-rx-power-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-link-sinr-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-marsala-correlation-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-packet-collision-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-packet-drop-rate-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-packet-error-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-plt-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-queue-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-rbdc-request-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-resources-granted-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-satellite-queue-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-signalling-load-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-throughput-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-waveform-usage-helper.h&gt;</code><br />
-<code>#include &lt;ns3/satellite-stats-window-load-helper.h&gt;</code><br />
+<code>#include &lt;ns3/satellite-topology.h&gt;</code><br />
+<code>#include &lt;ns3/satellite-ut-mac.h&gt;</code><br />
+<code>#include &lt;ns3/singleton.h&gt;</code><br />
 <code>#include &lt;ns3/string.h&gt;</code><br />
+<code>#include &lt;list&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for satellite-stats-helper-container.cc:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -171,46 +176,56 @@ $(document).ready(function(){initNavTree('satellite-stats-helper-container_8cc.h
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="satellite-stats-helper-container_8cc__incl.png" border="0" usemap="#a_2builds_2sns3_2satellite_2satellite_2stats_2satellite-stats-helper-container_8cc" alt=""/></div>
 <map name="a_2builds_2sns3_2satellite_2satellite_2stats_2satellite-stats-helper-container_8cc" id="a_2builds_2sns3_2satellite_2satellite_2stats_2satellite-stats-helper-container_8cc">
-<area shape="rect" title=" " alt="" coords="3178,5,3366,61"/>
-<area shape="rect" href="satellite-stats-helper-container_8h.html" title=" " alt="" coords="225,117,383,158"/>
-<area shape="rect" title=" " alt="" coords="408,124,507,151"/>
-<area shape="rect" title=" " alt="" coords="531,124,613,151"/>
-<area shape="rect" title=" " alt="" coords="637,124,795,151"/>
-<area shape="rect" title=" " alt="" coords="820,117,991,158"/>
-<area shape="rect" title=" " alt="" coords="1015,109,1171,165"/>
-<area shape="rect" title=" " alt="" coords="1196,117,1404,158"/>
-<area shape="rect" title=" " alt="" coords="1429,117,1622,158"/>
-<area shape="rect" title=" " alt="" coords="1646,117,1789,158"/>
-<area shape="rect" title=" " alt="" coords="1813,117,1995,158"/>
-<area shape="rect" title=" " alt="" coords="2019,117,2157,158"/>
-<area shape="rect" title=" " alt="" coords="2182,117,2338,158"/>
-<area shape="rect" title=" " alt="" coords="2362,117,2563,158"/>
-<area shape="rect" title=" " alt="" coords="2588,109,2751,165"/>
-<area shape="rect" title=" " alt="" coords="2775,117,2913,158"/>
-<area shape="rect" title=" " alt="" coords="2937,117,3087,158"/>
-<area shape="rect" title=" " alt="" coords="3111,117,3255,158"/>
-<area shape="rect" title=" " alt="" coords="3279,117,3444,158"/>
-<area shape="rect" title=" " alt="" coords="3468,117,3639,158"/>
-<area shape="rect" title=" " alt="" coords="3663,117,3801,158"/>
-<area shape="rect" title=" " alt="" coords="3825,109,3980,165"/>
-<area shape="rect" title=" " alt="" coords="4004,117,4191,158"/>
-<area shape="rect" title=" " alt="" coords="4215,117,4407,158"/>
-<area shape="rect" title=" " alt="" coords="4431,117,4593,158"/>
-<area shape="rect" title=" " alt="" coords="4617,117,4756,158"/>
-<area shape="rect" title=" " alt="" coords="4780,117,4919,158"/>
-<area shape="rect" title=" " alt="" coords="4943,117,5110,158"/>
-<area shape="rect" title=" " alt="" coords="5135,117,5337,158"/>
-<area shape="rect" title=" " alt="" coords="5362,117,5545,158"/>
-<area shape="rect" title=" " alt="" coords="5569,117,5749,158"/>
-<area shape="rect" title=" " alt="" coords="5773,117,5928,158"/>
-<area shape="rect" title=" " alt="" coords="5952,117,6147,158"/>
-<area shape="rect" title=" " alt="" coords="6171,117,6338,158"/>
-<area shape="rect" title=" " alt="" coords="6363,124,6461,151"/>
-<area shape="rect" title=" " alt="" coords="5,221,107,247"/>
-<area shape="rect" title=" " alt="" coords="131,221,210,247"/>
-<area shape="rect" title=" " alt="" coords="235,213,373,255"/>
-<area shape="rect" title=" " alt="" coords="397,221,440,247"/>
-<area shape="rect" title=" " alt="" coords="464,221,507,247"/>
+<area shape="rect" title=" " alt="" coords="3404,5,3592,61"/>
+<area shape="rect" href="satellite-stats-helper-container_8h.html" title=" " alt="" coords="41,117,200,158"/>
+<area shape="rect" title=" " alt="" coords="1982,303,2041,329"/>
+<area shape="rect" title=" " alt="" coords="4097,221,4139,247"/>
+<area shape="rect" href="satellite-stats-antenna-gain-helper_8h.html" title=" " alt="" coords="3413,117,3583,158"/>
+<area shape="rect" href="satellite-stats-backlogged-request-helper_8h.html" title=" " alt="" coords="611,117,803,158"/>
+<area shape="rect" href="satellite-stats-beam-service-time-helper_8h.html" title=" " alt="" coords="1413,117,1580,158"/>
+<area shape="rect" href="satellite-stats-capacity-request-helper_8h.html" title=" " alt="" coords="828,117,1000,158"/>
+<area shape="rect" href="satellite-stats-carrier-id-helper_8h.html" title=" " alt="" coords="2365,117,2524,158"/>
+<area shape="rect" href="satellite-stats-composite-sinr-helper_8h.html" title=" " alt="" coords="5036,117,5221,158"/>
+<area shape="rect" href="satellite-stats-delay-helper_8h.html" title=" " alt="" coords="5297,117,5451,158"/>
+<area shape="rect" href="satellite-stats-frame-load-helper_8h.html" title=" " alt="" coords="2548,117,2704,158"/>
+<area shape="rect" href="satellite-stats-frame-type-usage-helper_8h.html" title=" " alt="" coords="1231,117,1389,158"/>
+<area shape="rect" href="satellite-stats-fwd-link-scheduler-symbol-rate-helper_8h.html" title=" " alt="" coords="1789,109,1961,165"/>
+<area shape="rect" href="satellite-stats-jitter-helper_8h.html" title=" " alt="" coords="4493,117,4641,158"/>
+<area shape="rect" href="satellite-stats-link-delay-helper_8h.html" title=" " alt="" coords="4870,117,5011,158"/>
+<area shape="rect" href="satellite-stats-link-jitter-helper_8h.html" title=" " alt="" coords="3957,117,4098,158"/>
+<area shape="rect" href="satellite-stats-link-modcod-helper_8h.html" title=" " alt="" coords="3791,117,3933,158"/>
+<area shape="rect" href="satellite-stats-link-rx-power-helper_8h.html" title=" " alt="" coords="2728,117,2871,158"/>
+<area shape="rect" href="satellite-stats-link-sinr-helper_8h.html" title=" " alt="" coords="2895,117,3037,158"/>
+<area shape="rect" href="satellite-stats-marsala-correlation-helper_8h.html" title=" " alt="" coords="2170,117,2341,158"/>
+<area shape="rect" href="satellite-stats-packet-collision-helper_8h.html" title=" " alt="" coords="1605,117,1765,158"/>
+<area shape="rect" href="satellite-stats-packet-drop-rate-helper_8h.html" title=" " alt="" coords="3607,117,3767,158"/>
+<area shape="rect" href="satellite-stats-packet-error-helper_8h.html" title=" " alt="" coords="1986,117,2146,158"/>
+<area shape="rect" href="satellite-stats-plt-helper_8h.html" title=" " alt="" coords="4335,117,4469,158"/>
+<area shape="rect" href="satellite-stats-queue-helper_8h.html" title=" " alt="" coords="3061,117,3218,158"/>
+<area shape="rect" href="satellite-stats-rbdc-request-helper_8h.html" title=" " alt="" coords="3243,117,3388,158"/>
+<area shape="rect" href="satellite-stats-resources-granted-helper_8h.html" title=" " alt="" coords="5475,117,5655,158"/>
+<area shape="rect" href="satellite-stats-satellite-queue-helper_8h.html" title=" " alt="" coords="225,117,395,158"/>
+<area shape="rect" href="satellite-stats-signalling-load-helper_8h.html" title=" " alt="" coords="4665,117,4845,158"/>
+<area shape="rect" href="satellite-stats-throughput-helper_8h.html" title=" " alt="" coords="4123,117,4311,158"/>
+<area shape="rect" href="satellite-stats-waveform-usage-helper_8h.html" title=" " alt="" coords="1024,117,1207,158"/>
+<area shape="rect" href="satellite-stats-window-load-helper_8h.html" title=" " alt="" coords="420,117,587,158"/>
+<area shape="rect" title=" " alt="" coords="5679,124,5778,151"/>
+<area shape="rect" title=" " alt="" coords="5803,124,5884,151"/>
+<area shape="rect" title=" " alt="" coords="5908,124,6067,151"/>
+<area shape="rect" title=" " alt="" coords="6091,124,6265,151"/>
+<area shape="rect" title=" " alt="" coords="6290,124,6455,151"/>
+<area shape="rect" title=" " alt="" coords="6480,124,6601,151"/>
+<area shape="rect" title=" " alt="" coords="6626,124,6725,151"/>
+<area shape="rect" href="satellite-stats-helper_8h.html" title=" " alt="" coords="2780,221,2949,247"/>
+<area shape="rect" title=" " alt="" coords="963,303,1065,329"/>
+<area shape="rect" title=" " alt="" coords="2825,303,2904,329"/>
+<area shape="rect" title=" " alt="" coords="158,221,201,247"/>
+<area shape="rect" title=" " alt="" coords="3721,303,3771,329"/>
+<area shape="rect" title=" " alt="" coords="3859,221,3971,247"/>
+<area shape="rect" title=" " alt="" coords="3177,221,3328,247"/>
+<area shape="rect" title=" " alt="" coords="1811,221,1974,247"/>
+<area shape="rect" title=" " alt="" coords="2150,213,2299,255"/>
+<area shape="rect" title=" " alt="" coords="4537,221,4597,247"/>
 </map>
 </div>
 </div>
@@ -309,9 +324,9 @@ Functions</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">  .AddAttribute (# <span class="keywordtype">id</span>,                                                \</div>
 <div class="line">      std::string (<span class="stringliteral">&quot;Enable the output of &quot;</span>) + desc,                   \</div>
 <div class="line">      EnumValue (SatStatsHelper::OUTPUT_NONE),                        \</div>
-<div class="line">      MakeEnumAccessor (&amp;SatStatsHelperContainer::Add ## <span class="keywordtype">id</span>),</div>
+<div class="line">      MakeEnumAccessor&lt;SatStatsHelper::OutputType_t&gt; (&amp;SatStatsHelperContainer::Add ## <span class="keywordtype">id</span>),</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l00162">162</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l00188">188</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
 
 </div>
 </div>
@@ -348,9 +363,9 @@ Functions</h2></td></tr>
 <div class="line"><a class="code" href="satellite-stats-helper-container_8cc.html#a18bf149b83cc584a8801d7e93518ef17">    ADD_SAT_STATS_AVERAGED_DISTRIBUTION_OUTPUT_CHECKER                                             \</a></div>
 <div class="line"><a class="code" href="satellite-stats-helper-container_8cc.html#a18bf149b83cc584a8801d7e93518ef17">    ADD_SAT_STATS_ATTRIBUTE_HEAD</a>(AverageSat##<span class="keywordtype">id</span>, std::string(<span class="stringliteral">&quot;average SAT &quot;</span>) + desc)               \</div>
 <div class="line">    ADD_SAT_STATS_AVERAGED_DISTRIBUTION_OUTPUT_CHECKER</div>
-<div class="ttc" id="asatellite-stats-helper-container_8cc_html_a18bf149b83cc584a8801d7e93518ef17"><div class="ttname"><a href="satellite-stats-helper-container_8cc.html#a18bf149b83cc584a8801d7e93518ef17">ADD_SAT_STATS_ATTRIBUTE_HEAD</a></div><div class="ttdeci">#define ADD_SAT_STATS_ATTRIBUTE_HEAD(id, desc)</div><div class="ttdef"><b>Definition:</b> <a href="satellite-stats-helper-container_8cc_source.html#l00162">satellite-stats-helper-container.cc:162</a></div></div>
+<div class="ttc" id="asatellite-stats-helper-container_8cc_html_a18bf149b83cc584a8801d7e93518ef17"><div class="ttname"><a href="satellite-stats-helper-container_8cc.html#a18bf149b83cc584a8801d7e93518ef17">ADD_SAT_STATS_ATTRIBUTE_HEAD</a></div><div class="ttdeci">#define ADD_SAT_STATS_ATTRIBUTE_HEAD(id, desc)</div><div class="ttdef"><b>Definition:</b> <a href="satellite-stats-helper-container_8cc_source.html#l00188">satellite-stats-helper-container.cc:188</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l00196">196</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l00222">222</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
 
 </div>
 </div>
@@ -392,7 +407,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code" href="satellite-stats-helper-container_8cc.html#a18bf149b83cc584a8801d7e93518ef17">    ADD_SAT_STATS_ATTRIBUTE_HEAD</a>(PerUt##<span class="keywordtype">id</span>, std::string(<span class="stringliteral">&quot;per UT &quot;</span>) + desc)                         \</div>
 <div class="line">    ADD_SAT_STATS_BASIC_OUTPUT_CHECKER</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l00168">168</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l00194">194</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
 
 </div>
 </div>
@@ -434,7 +449,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code" href="satellite-stats-helper-container_8cc.html#a18bf149b83cc584a8801d7e93518ef17">    ADD_SAT_STATS_ATTRIBUTE_HEAD</a>(PerUt##<span class="keywordtype">id</span>, std::string(<span class="stringliteral">&quot;per UT &quot;</span>) + desc)                         \</div>
 <div class="line">    ADD_SAT_STATS_DISTRIBUTION_OUTPUT_CHECKER</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l00182">182</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l00208">208</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
 
 </div>
 </div>
@@ -458,7 +473,7 @@ Functions</h2></td></tr>
 <div class="line">      SatStatsHelper::OUTPUT_PDF_PLOT,       <span class="stringliteral">&quot;PDF_PLOT&quot;</span>,              \</div>
 <div class="line">      SatStatsHelper::OUTPUT_CDF_PLOT,       <span class="stringliteral">&quot;CDF_PLOT&quot;</span>))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l00152">152</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l00178">178</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
 
 </div>
 </div>
@@ -479,7 +494,7 @@ Functions</h2></td></tr>
 <div class="line">      SatStatsHelper::OUTPUT_SCATTER_FILE,   <span class="stringliteral">&quot;SCATTER_FILE&quot;</span>,          \</div>
 <div class="line">      SatStatsHelper::OUTPUT_SCATTER_PLOT,   <span class="stringliteral">&quot;SCATTER_PLOT&quot;</span>))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l00132">132</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l00158">158</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
 
 </div>
 </div>
@@ -506,7 +521,7 @@ Functions</h2></td></tr>
 <div class="line">      SatStatsHelper::OUTPUT_PDF_PLOT,       <span class="stringliteral">&quot;PDF_PLOT&quot;</span>,              \</div>
 <div class="line">      SatStatsHelper::OUTPUT_CDF_PLOT,       <span class="stringliteral">&quot;CDF_PLOT&quot;</span>))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l00139">139</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l00165">165</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
 
 </div>
 </div>
@@ -552,7 +567,7 @@ Functions</h2></td></tr>
 <div class="line">        }                                                                                          \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01070">1070</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01096">1096</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
 
 </div>
 </div>
@@ -598,7 +613,7 @@ Functions</h2></td></tr>
 <div class="line">        }                                                                                          \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01088">1088</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01114">1114</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
 
 </div>
 </div>
@@ -644,7 +659,7 @@ Functions</h2></td></tr>
 <div class="line">        }                                                                                          \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01211">1211</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01237">1237</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
 
 </div>
 </div>
@@ -690,7 +705,7 @@ Functions</h2></td></tr>
 <div class="line">        }                                                                                          \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01142">1142</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01168">1168</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
 
 </div>
 </div>
@@ -736,7 +751,7 @@ Functions</h2></td></tr>
 <div class="line">        }                                                                                          \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01106">1106</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01132">1132</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
 
 </div>
 </div>
@@ -782,7 +797,7 @@ Functions</h2></td></tr>
 <div class="line">        }                                                                                          \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01124">1124</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01150">1150</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
 
 </div>
 </div>
@@ -827,7 +842,7 @@ Functions</h2></td></tr>
 <div class="line">        }                                                                                          \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l00968">968</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l00994">994</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
 
 </div>
 </div>
@@ -872,7 +887,7 @@ Functions</h2></td></tr>
 <div class="line">        }                                                                                          \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01002">1002</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01028">1028</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
 
 </div>
 </div>
@@ -917,7 +932,7 @@ Functions</h2></td></tr>
 <div class="line">        }                                                                                          \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01019">1019</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01045">1045</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
 
 </div>
 </div>
@@ -962,7 +977,7 @@ Functions</h2></td></tr>
 <div class="line">        }                                                                                          \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l00985">985</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01011">1011</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
 
 </div>
 </div>
@@ -1007,7 +1022,7 @@ Functions</h2></td></tr>
 <div class="line">        }                                                                                          \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01194">1194</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01220">1220</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
 
 </div>
 </div>
@@ -1052,7 +1067,7 @@ Functions</h2></td></tr>
 <div class="line">        }                                                                                          \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01177">1177</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01203">1203</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
 
 </div>
 </div>
@@ -1097,7 +1112,7 @@ Functions</h2></td></tr>
 <div class="line">        }                                                                                          \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01160">1160</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01186">1186</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
 
 </div>
 </div>
@@ -1142,7 +1157,7 @@ Functions</h2></td></tr>
 <div class="line">        }                                                                                          \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01036">1036</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01062">1062</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
 
 </div>
 </div>
@@ -1187,7 +1202,7 @@ Functions</h2></td></tr>
 <div class="line">        }                                                                                          \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01053">1053</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="satellite-stats-helper-container_8cc_source.html#l01079">1079</a> of file <a class="el" href="satellite-stats-helper-container_8cc_source.html">satellite-stats-helper-container.cc</a>.</p>
 
 </div>
 </div>

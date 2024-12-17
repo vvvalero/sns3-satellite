@@ -166,7 +166,7 @@ $(document).ready(function(){initNavTree('functions_t.html',''); initResizable()
 : <a class="el" href="classns3_1_1_sat_gw_mac.html#a039f56013bf2f9faebba37ce0a9dd258">ns3::SatGwMac</a>
 </li>
 <li>TCP
-: <a class="el" href="classns3_1_1_simulation_helper.html#ace1b7fe6575e4f44ef13c2890ed982f4a31cbd22f6b11292ce11d37a96fef8ff6">ns3::SimulationHelper</a>
+: <a class="el" href="classns3_1_1_sat_traffic_helper.html#ad23815f9b109df6ebf0c6da55950faaca35f554ecfbadb14daa712b4dea0ed5f8">ns3::SatTrafficHelper</a>
 </li>
 <li>TDMA_SYNC
 : <a class="el" href="classns3_1_1_sat_ut_mac_state.html#a9df5f2e0f71fa8f65691f022e288aa23a19932b4dde2a0d4ab2fd3fd50bdaa86d">ns3::SatUtMacState</a>
@@ -183,6 +183,7 @@ $(document).ready(function(){initNavTree('functions_t.html',''); initResizable()
 <li>TestFileValue()
 : <a class="el" href="class_sat_constellation_test2.html#a2e7f0b484e3bb4fa2befec43235af9e9">SatConstellationTest2</a>
 , <a class="el" href="class_sat_constellation_test3.html#a7f32ac690efbeb8ab6338865490ace9a">SatConstellationTest3</a>
+, <a class="el" href="class_sat_handover_test1.html#a7edaaf683faa6fbde19b9210a0e7aee5">SatHandoverTest1</a>
 </li>
 <li>TestGetFading()
 : <a class="el" href="class_sat_fading_external_input_trace_test_case.html#a02d8427fb2980cf56868e28195d5b517">SatFadingExternalInputTraceTestCase</a>
@@ -239,19 +240,54 @@ $(document).ready(function(){initNavTree('functions_t.html',''); initResizable()
 , <a class="el" href="classns3_1_1_sat_phy_rx_carrier_packet_probe.html#af1afc23f0ac16137e6f5d5e7e2491e5c">ns3::SatPhyRxCarrierPacketProbe</a>
 , <a class="el" href="classns3_1_1_sat_sinr_probe.html#a10d7dd4a1a4c16e6af6d68964a517b7c">ns3::SatSinrProbe</a>
 </li>
-<li>TRAFFIC_MODEL_ATTRIBUTE_ACCESSOR_DEFINE()
-: <a class="el" href="classns3_1_1_simulation_helper_conf.html#ab0c3ed4b920dd6a5133f7e50e3c01374">ns3::SimulationHelperConf</a>
+<li>TRAFFIC_MODEL_CODEC_ATTRIBUTE_ACCESSOR_DEFINE()
+: <a class="el" href="classns3_1_1_sat_traffic_helper_conf.html#a825bdd918c0c82e33f6a854c667c0499">ns3::SatTrafficHelperConf</a>
+</li>
+<li>TRAFFIC_MODEL_DATA_RATE_ATTRIBUTE_ACCESSOR_DEFINE()
+: <a class="el" href="classns3_1_1_sat_traffic_helper_conf.html#a3d8435b64e5695ab3d4687b61c125c76">ns3::SatTrafficHelperConf</a>
+</li>
+<li>TRAFFIC_MODEL_DIRECTION_ATTRIBUTE_ACCESSOR_DEFINE()
+: <a class="el" href="classns3_1_1_sat_traffic_helper_conf.html#a5c79d1afe8cce5239571c9dfd8488e47">ns3::SatTrafficHelperConf</a>
+</li>
+<li>TRAFFIC_MODEL_INTERVAL_ATTRIBUTE_ACCESSOR_DEFINE()
+: <a class="el" href="classns3_1_1_sat_traffic_helper_conf.html#a5b6925eb5707afbe131bb1f08521bcc7">ns3::SatTrafficHelperConf</a>
+</li>
+<li>TRAFFIC_MODEL_OFF_TIME_ATTRIBUTE_ACCESSOR_DEFINE()
+: <a class="el" href="classns3_1_1_sat_traffic_helper_conf.html#a550335975117add406c6fd3a25f45ebb">ns3::SatTrafficHelperConf</a>
+</li>
+<li>TRAFFIC_MODEL_OFF_TIME_PATTERN_ATTRIBUTE_ACCESSOR_DEFINE()
+: <a class="el" href="classns3_1_1_sat_traffic_helper_conf.html#aeb2cff103f2f25e66c26f7401b03e5a0">ns3::SatTrafficHelperConf</a>
+</li>
+<li>TRAFFIC_MODEL_ON_TIME_ATTRIBUTE_ACCESSOR_DEFINE()
+: <a class="el" href="classns3_1_1_sat_traffic_helper_conf.html#a81b6cf3bbed48ec3a6f10c19ac35a1f4">ns3::SatTrafficHelperConf</a>
+</li>
+<li>TRAFFIC_MODEL_ON_TIME_PATTERN_ATTRIBUTE_ACCESSOR_DEFINE()
+: <a class="el" href="classns3_1_1_sat_traffic_helper_conf.html#a5dc59902f8bc15d9c65b05e5575bdedb">ns3::SatTrafficHelperConf</a>
+</li>
+<li>TRAFFIC_MODEL_PACKET_SIZE_ATTRIBUTE_ACCESSOR_DEFINE()
+: <a class="el" href="classns3_1_1_sat_traffic_helper_conf.html#a21941666c317423056ed114354d7bb93">ns3::SatTrafficHelperConf</a>
+</li>
+<li>TRAFFIC_MODEL_PERCENTAGE_ATTRIBUTE_ACCESSOR_DEFINE()
+: <a class="el" href="classns3_1_1_sat_traffic_helper_conf.html#a614ee3fb8b871f020d2a369dd3123815">ns3::SatTrafficHelperConf</a>
+</li>
+<li>TRAFFIC_MODEL_PROTOCOL_ATTRIBUTE_ACCESSOR_DEFINE()
+: <a class="el" href="classns3_1_1_sat_traffic_helper_conf.html#ad2cfb0d580a2f96df303fbf30b66920a">ns3::SatTrafficHelperConf</a>
+</li>
+<li>TRAFFIC_MODEL_START_DELAY_ATTRIBUTE_ACCESSOR_DEFINE()
+: <a class="el" href="classns3_1_1_sat_traffic_helper_conf.html#a988f1f5bff2472e4e2f3cbdeb15a74cb">ns3::SatTrafficHelperConf</a>
+</li>
+<li>TRAFFIC_MODEL_START_TIME_ATTRIBUTE_ACCESSOR_DEFINE()
+: <a class="el" href="classns3_1_1_sat_traffic_helper_conf.html#a52a61749c8610f2a246965f40030dca3">ns3::SatTrafficHelperConf</a>
+</li>
+<li>TRAFFIC_MODEL_STOP_TIME_ATTRIBUTE_ACCESSOR_DEFINE()
+: <a class="el" href="classns3_1_1_sat_traffic_helper_conf.html#a60196f110f61fba864fd9c45a271d696">ns3::SatTrafficHelperConf</a>
 </li>
 <li>TrafficConfiguration_t()
 : <a class="el" href="struct_traffic_configuration__t.html#a997ca677f554f7728d3ace59264147f3">TrafficConfiguration_t</a>
 </li>
 <li>TrafficDirection_t
 : <a class="el" href="classns3_1_1_sat_traffic_helper.html#aa567bdf2842ee4255d96524091b52682">ns3::SatTrafficHelper</a>
-, <a class="el" href="classns3_1_1_simulation_helper.html#a8b86c00ea977318601f1f369d969fe61">ns3::SimulationHelper</a>
-, <a class="el" href="classns3_1_1_simulation_helper_conf.html#a65569564d25d90868e2dfe7aec0a0eb0">ns3::SimulationHelperConf</a>
-</li>
-<li>TrafficModel_t
-: <a class="el" href="classns3_1_1_simulation_helper.html#a2e7e7e80ffd116eaf0e5eaf9307ca2ea">ns3::SimulationHelper</a>
+, <a class="el" href="classns3_1_1_sat_traffic_helper_conf.html#a6a870a59e980c601773a14a22e4235ea">ns3::SatTrafficHelperConf</a>
 </li>
 <li>TrafficType_t
 : <a class="el" href="classns3_1_1_sat_traffic_helper.html#a9f1f9fc294f01a81436278c116b79579">ns3::SatTrafficHelper</a>
@@ -260,8 +296,8 @@ $(document).ready(function(){initNavTree('functions_t.html',''); initResizable()
 : <a class="el" href="classns3_1_1_sat_beam_scheduler.html#a9f01a4ec600d4507bed4bcfdce229058">ns3::SatBeamScheduler</a>
 </li>
 <li>TransmitCallback
-: <a class="el" href="classns3_1_1_sat_geo_mac.html#a11197885a2b902be5df314667611125a">ns3::SatGeoMac</a>
-, <a class="el" href="classns3_1_1_sat_mac.html#a27a11a151e2031a549d4d63d2e9a98be">ns3::SatMac</a>
+: <a class="el" href="classns3_1_1_sat_mac.html#a27a11a151e2031a549d4d63d2e9a98be">ns3::SatMac</a>
+, <a class="el" href="classns3_1_1_sat_orbiter_mac.html#aeab2f159b4542148925ff449f692267d">ns3::SatOrbiterMac</a>
 </li>
 <li>TransmitComplete()
 : <a class="el" href="classns3_1_1_point_to_point_isl_net_device.html#aca3dcddeb526d65aea61c1bc4a00cb46">ns3::PointToPointIslNetDevice</a>
@@ -286,8 +322,8 @@ $(document).ready(function(){initNavTree('functions_t.html',''); initResizable()
 , <a class="el" href="classns3_1_1_sat_phy_tx.html#a00a5c22ca636e2d092687b2fc187c8a8a96386bc0dc80ac93af9f9c3c048c4171">ns3::SatPhyTx</a>
 </li>
 <li>TransportLayerProtocol_t
-: <a class="el" href="classns3_1_1_simulation_helper.html#ace1b7fe6575e4f44ef13c2890ed982f4">ns3::SimulationHelper</a>
-, <a class="el" href="classns3_1_1_simulation_helper_conf.html#a8dfd76192a85666bbb753730e97e899b">ns3::SimulationHelperConf</a>
+: <a class="el" href="classns3_1_1_sat_traffic_helper.html#ad23815f9b109df6ebf0c6da55950faac">ns3::SatTrafficHelper</a>
+, <a class="el" href="classns3_1_1_sat_traffic_helper_conf.html#a4582a5e8ed60a4dc745ea8977e9a2c9e">ns3::SatTrafficHelperConf</a>
 </li>
 <li>Transpose()
 : <a class="el" href="structns3_1_1_sat_s_g_p4_mobility_model_1_1_matrix.html#a313c62c5b63dea6b40614401ba624579">ns3::SatSGP4MobilityModel::Matrix</a>
