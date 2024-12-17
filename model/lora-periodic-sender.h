@@ -29,6 +29,8 @@
 #include <ns3/attribute.h>
 #include <ns3/nstime.h>
 
+#include <stdint.h>
+
 namespace ns3
 {
 

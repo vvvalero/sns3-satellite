@@ -85,7 +85,8 @@ class LoraGatewayStatus : public Object
     // Time GetNextTransmissionTime (void);
 
   private:
-    Address m_address; //!< The Address of the P2PNetDevice of this gateway
+    Address
+        m_address; //!< The Address of the P2PNetDevice of this gateway // TODO useless ??? Remove !
 
     Ptr<NetDevice>
         m_netDevice; //!< The NetDevice through which to reach this gateway from the server

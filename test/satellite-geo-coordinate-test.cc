@@ -32,6 +32,8 @@
 #include "ns3/singleton.h"
 #include "ns3/test.h"
 
+#include <stdint.h>
+
 using namespace ns3;
 
 // #define PRINT_POSITION_INFO // uncomment to see info while executing test

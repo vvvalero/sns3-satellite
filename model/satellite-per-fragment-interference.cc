@@ -24,6 +24,7 @@
 #include <ns3/simulator.h>
 
 #include <cstddef>
+#include <stdint.h>
 #include <utility>
 #include <vector>
 

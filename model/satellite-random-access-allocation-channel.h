@@ -27,6 +27,7 @@
 #include <ns3/uinteger.h>
 
 #include <cmath>
+#include <stdint.h>
 
 namespace ns3
 {

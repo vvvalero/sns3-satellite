@@ -28,6 +28,7 @@
 #include <ns3/random-variable-stream.h>
 
 #include <sstream>
+#include <stdint.h>
 #include <string>
 #include <unordered_set>
 #include <vector>

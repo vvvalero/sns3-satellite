@@ -37,6 +37,7 @@
 #include <ns3/traced-value.h>
 
 #include <list>
+#include <stdint.h>
 #include <vector>
 
 namespace ns3
@@ -51,7 +52,7 @@ class LorawanMacEndDevice : public LorawanMac
     static TypeId GetTypeId(void);
 
     LorawanMacEndDevice();
-    LorawanMacEndDevice(uint32_t satId, uint32_t beamId);
+    LorawanMacEndDevice(Ptr<Node> node, uint32_t satId, uint32_t beamId);
     virtual ~LorawanMacEndDevice();
 
     /////////////////////
@@ -363,11 +364,49 @@ class LorawanMacEndDevice : public LorawanMac
     void SetGatewayUpdateCallback(LorawanMacEndDevice::GatewayUpdateCallback cb);
 
     /**
+     * \brief Callback to reconfigure physical layer during handover.
+     * \param uint32_t new beam Id
+     */
+    typedef Callback<void, uint32_t, uint32_t> HandoverCallback;
+
+    /**
+     * \brief Method to set handover callback.
+     * \param cb callback to invoke whenever a TIM-U is received prompting us to switch beams
+     */
+    void SetHandoverCallback(LorawanMacEndDevice::HandoverCallback cb);
+
+    /**
+     * \brief Callback to update addresses in statistics helpers
+     */
+    typedef Callback<void, Ptr<Node>> UpdateAddressAndIdentifierCallback;
+
+    /**
+     * \brief Set the callback to update addresses in statistics helpers.
+     * \param cb Callback to update addresses in statistics helpers
+     */
+    void SetUpdateAddressAndIdentifierCallback(
+        LorawanMacEndDevice::UpdateAddressAndIdentifierCallback cb);
+
+    /**
      * Set address of the GW (or its MAC) serving this UT.
      *
      * \param gwAddress Address of the GW.
      */
     void SetGwAddress(Mac48Address gwAddress);
+
+    /**
+     * Set address of the Lorawan GW (or its MAC) serving this UT.
+     *
+     * \param satAddress Address of the GW.
+     */
+    void SetSatAddress(Mac48Address satAddress);
+
+    /**
+     * Set if associated satellite is regenerative.
+     *
+     * \param isRegenerative Set to true if satellite is regenerative.
+     */
+    void SetRegenerative(bool isRegenerative);
 
     /**
      * Set RA channel assigned for this UT.
@@ -379,6 +418,13 @@ class LorawanMacEndDevice : public LorawanMac
     void SetPhyRx(Ptr<SatLoraPhyRx> phyRx);
 
     Ptr<SatLoraPhyRx> GetPhyRx();
+
+    /**
+     * Method handling beam handover
+     * \param satId New satellite id
+     * \param beamId New satellite beam id
+     */
+    void ChangeBeam(uint32_t satId, uint32_t beamId);
 
   protected:
     /**
@@ -392,6 +438,11 @@ class LorawanMacEndDevice : public LorawanMac
         bool waitingAck = false;
         uint8_t retxLeft;
     };
+
+    /**
+     * Node containing this MAC
+     */
+    Ptr<Node> m_node;
 
     /**
      * Enable Data Rate adaptation during the retransmission procedure.
@@ -427,6 +478,13 @@ class LorawanMacEndDevice : public LorawanMac
      * The address of this device.
      */
     LoraDeviceAddress m_address;
+
+    /**
+     * Check for UT handovers and perform it if necessary
+     *
+     * \return true if a handover has been performed
+     */
+    bool CheckHandovers();
 
     /**
      * Find the minimum waiting time before the next possible transmission based
@@ -485,6 +543,9 @@ class LorawanMacEndDevice : public LorawanMac
      */
     LorawanMacEndDevice::GatewayUpdateCallback m_gatewayUpdateCallback;
 
+    /**
+     * Gateway address used in case of transparent satellite
+     */
     Mac48Address m_gwAddress;
 
     /**
@@ -496,6 +557,11 @@ class LorawanMacEndDevice : public LorawanMac
      * Reception phy layer for Lora operations
      */
     Ptr<SatLoraPhyRx> m_phyRx;
+
+    /**
+     * Tell if satellite is regenerative
+     */
+    bool m_isRegenerative;
 
   private:
     /**
@@ -560,6 +626,16 @@ class LorawanMacEndDevice : public LorawanMac
     LorawanMacHeader::MType m_mType;
 
     uint16_t m_currentFCnt;
+
+    /**
+     * The physical layer handover callback
+     */
+    LorawanMacEndDevice::HandoverCallback m_handoverCallback;
+
+    /**
+     * Callback to update addresses in statistics helpers
+     */
+    LorawanMacEndDevice::UpdateAddressAndIdentifierCallback m_updateAddressAndIdentifierCallback;
 };
 
 } /* namespace ns3 */

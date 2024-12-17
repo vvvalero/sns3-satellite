@@ -234,12 +234,9 @@ SatGwHelper::Install(NodeContainer c,
                      Ptr<SatChannel> rCh,
                      SatPhy::ChannelPairGetterCallback cbChannel,
                      Ptr<SatNcc> ncc,
-                     Ptr<SatLowerLayerServiceConf> llsConf,
-                     SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                     SatEnums::RegenerationMode_t returnLinkRegenerationMode)
+                     Ptr<SatLowerLayerServiceConf> llsConf)
 {
-    NS_LOG_FUNCTION(this << gwId << satId << beamId << fCh << rCh << ncc << llsConf
-                         << forwardLinkRegenerationMode << returnLinkRegenerationMode);
+    NS_LOG_FUNCTION(this << gwId << satId << beamId << fCh << rCh << ncc << llsConf);
 
     NetDeviceContainer devs;
 
@@ -255,9 +252,7 @@ SatGwHelper::Install(NodeContainer c,
                          rCh,
                          cbChannel,
                          ncc,
-                         llsConf,
-                         forwardLinkRegenerationMode,
-                         returnLinkRegenerationMode));
+                         llsConf));
     }
 
     return devs;

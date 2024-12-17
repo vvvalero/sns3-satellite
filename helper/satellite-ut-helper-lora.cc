@@ -39,6 +39,7 @@
 #include <ns3/satellite-phy-rx.h>
 #include <ns3/satellite-phy-tx.h>
 #include <ns3/satellite-queue.h>
+#include <ns3/satellite-topology.h>
 #include <ns3/satellite-typedefs.h>
 #include <ns3/satellite-ut-phy.h>
 #include <ns3/singleton.h>
@@ -104,12 +105,9 @@ SatUtHelperLora::Install(Ptr<Node> n,
                          Ptr<SatNcc> ncc,
                          Address satUserAddress,
                          SatPhy::ChannelPairGetterCallback cbChannel,
-                         SatMac::RoutingUpdateCallback cbRouting,
-                         SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                         SatEnums::RegenerationMode_t returnLinkRegenerationMode)
+                         SatMac::RoutingUpdateCallback cbRouting)
 {
-    NS_LOG_FUNCTION(this << n << satId << beamId << fCh << rCh << gwNd << ncc << satUserAddress
-                         << forwardLinkRegenerationMode << returnLinkRegenerationMode);
+    NS_LOG_FUNCTION(this << n << satId << beamId << fCh << rCh << gwNd << ncc << satUserAddress);
 
     NetDeviceContainer container;
 
@@ -150,7 +148,8 @@ SatUtHelperLora::Install(Ptr<Node> n,
     parameters.m_daIfModel = m_daInterferenceModel;
     parameters.m_raIfModel = m_raSettings.m_raInterferenceModel;
     parameters.m_raIfEliminateModel = m_raSettings.m_raInterferenceEliminationModel;
-    parameters.m_linkRegenerationMode = forwardLinkRegenerationMode;
+    parameters.m_linkRegenerationMode =
+        Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode();
     parameters.m_bwConverter = m_carrierBandwidthConverter;
     parameters.m_carrierCount = m_fwdLinkCarrierCount;
     parameters.m_cec = cec;
@@ -161,8 +160,7 @@ SatUtHelperLora::Install(Ptr<Node> n,
         params,
         m_linkResults,
         parameters,
-        m_superframeSeq->GetSuperframeConf(SatConstVariables::SUPERFRAME_SEQUENCE),
-        forwardLinkRegenerationMode);
+        m_superframeSeq->GetSuperframeConf(SatConstVariables::SUPERFRAME_SEQUENCE));
     phy->SetChannelPairGetterCallback(cbChannel);
 
     // Set fading
@@ -170,7 +168,7 @@ SatUtHelperLora::Install(Ptr<Node> n,
     phy->SetRxFadingContainer(n->GetObject<SatBaseFading>());
 
     Ptr<LorawanMacEndDeviceClassA> mac =
-        CreateObject<LorawanMacEndDeviceClassA>(satId, beamId, m_superframeSeq);
+        CreateObject<LorawanMacEndDeviceClassA>(n, satId, beamId, m_superframeSeq);
 
     // TODO configuration for EU only
     mac->SetTxDbmForTxPower(std::vector<double>{16, 14, 12, 10, 8, 6, 4, 2});
@@ -187,7 +185,7 @@ SatUtHelperLora::Install(Ptr<Node> n,
     dev->SetPhy(phy);
 
     // Attach the Mac layer to SatNetDevice
-    dev->SetLorawanMac(mac);
+    dev->SetMac(mac);
     mac->SetDevice(dev);
 
     mac->SetPhy(phy);
@@ -210,6 +208,15 @@ SatUtHelperLora::Install(Ptr<Node> n,
     mac->SetRoutingUpdateCallback(cbRouting);
     mac->SetGwAddress(gwAddr);
 
+    mac->SetHandoverCallback(MakeCallback(&SatUtPhy::PerformHandover, phy));
+
+    if (Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode() ==
+        SatEnums::REGENERATION_NETWORK)
+    {
+        mac->SetSatAddress(Mac48Address::ConvertFrom(satUserAddress));
+        mac->SetRegenerative(true);
+    }
+
     // Add UT to NCC
     ncc->AddUt(m_llsConf,
                dev->GetAddress(),
@@ -224,6 +231,17 @@ SatUtHelperLora::Install(Ptr<Node> n,
     dev->SetNodeInfo(nodeInfo);
     mac->SetNodeInfo(nodeInfo);
     phy->SetNodeInfo(nodeInfo);
+
+    Ptr<SatHandoverModule> handoverModule = n->GetObject<SatHandoverModule>();
+    if (handoverModule != nullptr)
+    {
+        handoverModule->SetHandoverRequestCallback(
+            MakeCallback(&LorawanMacEndDevice::ChangeBeam, mac));
+        mac->SetHandoverModule(handoverModule);
+        mac->SetBeamSchedulerCallback(MakeCallback(&SatNcc::GetBeamScheduler, ncc));
+    }
+
+    Singleton<SatTopology>::Get()->AddUtLayersLora(n, satId, beamId, 0, dev, mac, phy);
 
     return dev;
 }

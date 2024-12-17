@@ -30,6 +30,8 @@
 #include "lora-network-scheduler.h"
 #include "lorawan-mac-end-device-class-a.h"
 
+#include <ns3/point-to-point-net-device.h>
+
 #include <iterator>
 #include <map>
 
@@ -63,7 +65,7 @@ class LoraNetworkStatus : public Object
      *
      * Each GW is identified by its Address in the NS-GW network.
      */
-    void AddGateway(Address& address, Ptr<LoraGatewayStatus> gwStatus);
+    void AddGateway(Ptr<Node> gw, Address& address, Ptr<LoraGatewayStatus> gwStatus);
 
     /**
      * Update network status on the received packet.
@@ -120,6 +122,12 @@ class LoraNetworkStatus : public Object
   public:
     std::map<LoraDeviceAddress, Ptr<LoraEndDeviceStatus>> m_endDeviceStatuses;
     std::map<Address, Ptr<LoraGatewayStatus>> m_gatewayStatuses;
+
+    std::map<Ptr<Node>, Ptr<PointToPointNetDevice>> m_gws;
+
+    SatEnums::RegenerationMode_t m_forwardLinkRegenerationMode;
+
+    Ptr<UniformRandomVariable> m_uniform;
 };
 
 } // namespace ns3

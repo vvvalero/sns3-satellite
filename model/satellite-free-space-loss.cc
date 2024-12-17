@@ -29,6 +29,7 @@
 #include <ns3/string.h>
 
 #include <cmath>
+#include <stdint.h>
 
 NS_LOG_COMPONENT_DEFINE("SatFreeSpaceLoss");
 

@@ -32,6 +32,7 @@
 
 #include <list>
 #include <map>
+#include <stdint.h>
 #include <vector>
 
 namespace ns3

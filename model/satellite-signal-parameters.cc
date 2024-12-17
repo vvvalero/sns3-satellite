@@ -27,6 +27,8 @@
 #include <ns3/log.h>
 #include <ns3/ptr.h>
 
+#include <stdint.h>
+
 NS_LOG_COMPONENT_DEFINE("SatSignalParameters");
 
 namespace ns3

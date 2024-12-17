@@ -30,6 +30,7 @@
 #include <ns3/traced-callback.h>
 
 #include <map>
+#include <stdint.h>
 #include <string>
 #include <vector>
 
@@ -136,17 +137,9 @@ class SatLlc : public Object
     static TypeId GetTypeId(void);
 
     /**
-     * Construct a SatLlc, should not be used
+     * \brief Construct a SatLlc
      */
     SatLlc();
-
-    /**
-     * \brief Construct a SatLlc
-     * \param forwardLinkRegenerationMode Forward link regeneration model
-     * \param returnLinkRegenerationMode Return link regeneration model
-     */
-    SatLlc(SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-           SatEnums::RegenerationMode_t returnLinkRegenerationMode);
 
     /**
      * Destroy a SatLlc

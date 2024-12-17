@@ -27,6 +27,8 @@
 #include <ns3/traced-callback.h>
 #include <ns3/traffic-time-tag.h>
 
+#include <stdint.h>
+
 NS_LOG_COMPONENT_DEFINE("SatOnOffApplication");
 
 namespace ns3

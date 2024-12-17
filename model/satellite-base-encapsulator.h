@@ -32,6 +32,8 @@
 #include <ns3/traced-value.h>
 #include <ns3/uinteger.h>
 
+#include <stdint.h>
+
 namespace ns3
 {
 

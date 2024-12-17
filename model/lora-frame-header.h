@@ -28,6 +28,7 @@
 
 #include <list>
 #include <ostream>
+#include <stdint.h>
 
 namespace ns3
 {

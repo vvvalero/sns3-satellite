@@ -20,6 +20,8 @@
 
 #include "satellite-lora-phy-tx.h"
 
+#include <stdint.h>
+
 namespace ns3
 {
 

@@ -251,18 +251,20 @@ SatHelper::SatHelper(std::string scenarioPath)
 
     if (m_satConstellationEnabled)
     {
-        if (m_satConf->GetForwardLinkRegenerationMode() != SatEnums::REGENERATION_NETWORK)
-        {
-            NS_FATAL_ERROR("Forward regeneration must be network when using constellations");
-        }
-        if (m_satConf->GetReturnLinkRegenerationMode() != SatEnums::REGENERATION_NETWORK)
-        {
-            NS_FATAL_ERROR("Return regeneration must be network when using constellations");
-        }
-
         std::vector<std::string> tles;
 
         LoadConstellationTopology(tles, isls);
+
+        if (Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode() !=
+            SatEnums::REGENERATION_NETWORK)
+        {
+            NS_FATAL_ERROR("Forward regeneration must be network when using constellations");
+        }
+        if (Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() !=
+            SatEnums::REGENERATION_NETWORK)
+        {
+            NS_FATAL_ERROR("Return regeneration must be network when using constellations");
+        }
 
         m_antennaGainPatterns =
             CreateObject<SatAntennaGainPatternContainer>(tles.size(),
@@ -307,14 +309,11 @@ SatHelper::SatHelper(std::string scenarioPath)
     }
 
     m_beamHelper =
-        CreateObject<SatBeamHelper>(m_standard,
-                                    isls,
+        CreateObject<SatBeamHelper>(isls,
                                     MakeCallback(&SatConf::GetCarrierBandwidthHz, m_satConf),
                                     m_satConf->GetRtnLinkCarrierCount(),
                                     m_satConf->GetFwdLinkCarrierCount(),
-                                    m_satConf->GetSuperframeSeq(),
-                                    m_satConf->GetForwardLinkRegenerationMode(),
-                                    m_satConf->GetReturnLinkRegenerationMode());
+                                    m_satConf->GetSuperframeSeq());
 
     m_beamHelper->SetAntennaGainPatterns(m_antennaGainPatterns);
 
@@ -829,27 +828,20 @@ SatHelper::DoCreateScenario(BeamUserInfoMap_t& beamInfos, uint32_t gwUsers)
             NetDeviceContainer::Iterator itNd;
             for (itNd = utNetDevices.Begin(); itNd != utNetDevices.End(); itNd++)
             {
-                Ptr<SatUtMac> utMac =
-                    DynamicCast<SatUtMac>(DynamicCast<SatNetDevice>(*itNd)->GetMac());
-                if (utMac != nullptr)
+                Ptr<SatMac> mac = DynamicCast<SatMac>(DynamicCast<SatNetDevice>(*itNd)->GetMac());
+                if (mac != nullptr && gwMac != nullptr)
                 {
                     gwMac->ConnectUt(Mac48Address::ConvertFrom((*itNd)->GetAddress()));
                 }
             }
 
-            if (m_satConstellationEnabled)
+            DynamicCast<SatOrbiterNetDevice>(
+                Singleton<SatTopology>::Get()->GetOrbiterNode(feederSatId)->GetDevice(0))
+                ->ConnectGw(Mac48Address::ConvertFrom(netDevices.first->GetAddress()),
+                            feederBeamId);
+
+            if (m_satConstellationEnabled == false)
             {
-                DynamicCast<SatOrbiterNetDevice>(
-                    Singleton<SatTopology>::Get()->GetOrbiterNode(feederSatId)->GetDevice(0))
-                    ->ConnectGw(Mac48Address::ConvertFrom(netDevices.first->GetAddress()),
-                                feederBeamId);
-            }
-            else
-            {
-                DynamicCast<SatOrbiterNetDevice>(
-                    Singleton<SatTopology>::Get()->GetOrbiterNode(feederSatId)->GetDevice(0))
-                    ->ConnectGw(Mac48Address::ConvertFrom(netDevices.first->GetAddress()),
-                                feederBeamId);
                 m_userHelper->PopulateBeamRoutings(uts,
                                                    netDevices.second,
                                                    gwNode,
@@ -866,6 +858,7 @@ SatHelper::DoCreateScenario(BeamUserInfoMap_t& beamInfos, uint32_t gwUsers)
             }
         }
 
+        // TODO remove this ?
         m_mobileUtsByBeam
             .clear(); // Release unused resources (mobile UTs starting in non-existent beams)
 
@@ -904,9 +897,26 @@ SatHelper::DoCreateScenario(BeamUserInfoMap_t& beamInfos, uint32_t gwUsers)
                     Ptr<SatNetDevice> netDevice = DynamicCast<SatNetDevice>(ut->GetDevice(j));
                     if (netDevice)
                     {
-                        Ptr<SatUtMac> mac = DynamicCast<SatUtMac>(netDevice->GetMac());
-                        mac->SetUpdateIslCallback(
-                            MakeCallback(&SatBeamHelper::SetIslRoutes, m_beamHelper));
+                        Ptr<SatMac> mac = netDevice->GetMac();
+                        switch (m_standard)
+                        {
+                        case SatEnums::DVB: {
+                            Ptr<SatUtMac> utMac = DynamicCast<SatUtMac>(mac);
+                            utMac->SetUpdateIslCallback(
+                                MakeCallback(&SatBeamHelper::SetIslRoutes, m_beamHelper));
+                            break;
+                        }
+                        case SatEnums::LORA: {
+                            Ptr<LorawanMacEndDevice> endDeviceMac =
+                                DynamicCast<LorawanMacEndDevice>(mac);
+                            endDeviceMac->SetUpdateIslCallback(
+                                MakeCallback(&SatBeamHelper::SetIslRoutes, m_beamHelper));
+                            break;
+                        }
+                        default: {
+                            NS_FATAL_ERROR("Unknown standard");
+                        }
+                        }
                     }
                 }
             }
@@ -981,7 +991,21 @@ SatHelper::SetGwAddressInUts()
     {
         ut = *it;
         Mac48Address gwAddress = Singleton<SatTopology>::Get()->GetGwAddressInUt(ut->GetId());
-        Singleton<SatTopology>::Get()->GetUtMac(ut)->SetGwAddress(gwAddress);
+
+        switch (m_standard)
+        {
+        case SatEnums::DVB: {
+            Singleton<SatTopology>::Get()->GetDvbUtMac(ut)->SetGwAddress(gwAddress);
+            break;
+        }
+        case SatEnums::LORA: {
+            Singleton<SatTopology>::Get()->GetLoraUtMac(ut)->SetGwAddress(gwAddress);
+            break;
+        }
+        default: {
+            NS_FATAL_ERROR("Unknown standard");
+        }
+        }
     }
 }
 
@@ -1340,7 +1364,8 @@ SatHelper::InstallMobilityObserver(uint32_t satId, NodeContainer nodes) const
             observer = CreateObject<SatMobilityObserver>(
                 ownMobility,
                 satMobility,
-                m_beamHelper->GetReturnLinkRegenerationMode() != SatEnums::TRANSPARENT);
+                Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() !=
+                    SatEnums::TRANSPARENT);
 
             (*i)->AggregateObject(observer);
         }
@@ -1867,6 +1892,8 @@ SatHelper::ReadStandard(std::string pathName)
     {
         NS_FATAL_ERROR("Unknown standard: " << standardString << ". Must be DVB or LORA");
     }
+
+    Singleton<SatTopology>::Get()->SetStandard(m_standard);
 }
 
 } // namespace ns3

@@ -21,9 +21,13 @@
 #include "satellite-lorawan-net-device.h"
 
 #include "lora-frame-header.h"
+#include "lora-tag.h"
 #include "lorawan-mac-header.h"
+#include "satellite-topology.h"
 
+#include <ns3/ipv4-header.h>
 #include <ns3/log.h>
+#include <ns3/singleton.h>
 
 NS_LOG_COMPONENT_DEFINE("SatLorawanNetDevice");
 
@@ -35,21 +39,29 @@ NS_OBJECT_ENSURE_REGISTERED(SatLorawanNetDevice);
 TypeId
 SatLorawanNetDevice::GetTypeId(void)
 {
-    static TypeId tid =
-        TypeId("ns3::SatLorawanNetDevice")
-            .SetParent<SatNetDevice>()
-            .AddAttribute("ForwardToUtUsers",
-                          "Forward to UT users or stop packet transmission here",
-                          BooleanValue(false),
-                          MakeBooleanAccessor(&SatLorawanNetDevice::m_forwardToUtUsers),
-                          MakeBooleanChecker())
-            .AddConstructor<SatLorawanNetDevice>();
+    static TypeId tid = TypeId("ns3::SatLorawanNetDevice")
+                            .SetParent<SatNetDevice>()
+                            .AddConstructor<SatLorawanNetDevice>();
     return tid;
 }
 
 SatLorawanNetDevice::SatLorawanNetDevice()
 {
     NS_LOG_FUNCTION(this);
+
+    switch (Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode())
+    {
+    case SatEnums::TRANSPARENT: {
+        m_isRegenerative = false;
+        break;
+    }
+    case SatEnums::REGENERATION_NETWORK: {
+        m_isRegenerative = true;
+        break;
+    }
+    default:
+        NS_FATAL_ERROR("Incorrect regeneration mode for LORA");
+    }
 }
 
 void
@@ -101,7 +113,7 @@ SatLorawanNetDevice::Receive(Ptr<const Packet> packet)
         SatDevTimeTag timeTag;
         if (packet->PeekPacketTag(timeTag))
         {
-            NS_LOG_DEBUG(this << " contains a SatMacTimeTag tag");
+            NS_LOG_DEBUG(this << " contains a SatDevTimeTag tag");
             Time delay = Simulator::Now() - timeTag.GetSenderTimestamp();
             m_rxDelayTrace(delay, addr);
             if (m_lastDelay.IsZero() == false)
@@ -121,13 +133,14 @@ SatLorawanNetDevice::Receive(Ptr<const Packet> packet)
     }
 
     // Pass the packet to the upper layer if IP header in packet (GW or UT side)
-    if (m_forwardToUtUsers)
+    LorawanMacHeader mHdr;
+    LoraFrameHeader fHdr;
+    Ipv4Header ipv4Header;
+    Ptr<Packet> pktCopy = packet->Copy();
+    pktCopy->RemoveHeader(mHdr);
+    pktCopy->RemoveHeader(fHdr);
+    if (pktCopy->PeekHeader(ipv4Header))
     {
-        Ptr<Packet> pktCopy = packet->Copy();
-        LorawanMacHeader mHdr;
-        pktCopy->RemoveHeader(mHdr);
-        LoraFrameHeader fHdr;
-        pktCopy->RemoveHeader(fHdr);
         m_rxCallback(this, pktCopy, Ipv4L3Protocol::PROT_NUMBER, Address());
     }
 }
@@ -135,7 +148,14 @@ SatLorawanNetDevice::Receive(Ptr<const Packet> packet)
 bool
 SatLorawanNetDevice::Send(Ptr<Packet> packet, const Address& dest, uint16_t protocolNumber)
 {
-    NS_LOG_FUNCTION(this << packet);
+    NS_LOG_FUNCTION(this << packet << dest << protocolNumber);
+
+    // only send tagged Lora packets
+    LoraTag tag;
+    if ((!packet->PeekPacketTag(tag)) && (m_nodeInfo->GetNodeType() == SatEnums::NT_GW))
+    {
+        return false;
+    }
 
     // Add packet trace entry:
     SatEnums::SatLinkDir_t ld =
@@ -171,7 +191,16 @@ SatLorawanNetDevice::Send(Ptr<Packet> packet, const Address& dest, uint16_t prot
         }
     }
 
-    m_lorawanMac->Send(packet, dest, protocolNumber);
+    if (m_isRegenerative && m_nodeInfo->GetNodeType() == SatEnums::NT_GW)
+    {
+        uint8_t flowId = m_classifier->Classify(packet, dest, protocolNumber);
+
+        m_llc->Enque(packet, dest, flowId);
+    }
+    else
+    {
+        DynamicCast<LorawanMac>(m_mac)->Send(packet, dest, protocolNumber);
+    }
 
     return true;
 }
@@ -181,19 +210,6 @@ SatLorawanNetDevice::SendControlMsg(Ptr<SatControlMessage> msg, const Address& d
 {
     // We send nothing in Lora Mode. Control is made via LorawanMacCommand
     return true;
-}
-
-Ptr<LorawanMac>
-SatLorawanNetDevice::GetLorawanMac()
-{
-    return m_lorawanMac;
-}
-
-void
-SatLorawanNetDevice::SetLorawanMac(Ptr<LorawanMac> lorawanMac)
-{
-    SetMac(lorawanMac);
-    m_lorawanMac = lorawanMac;
 }
 
 void

@@ -32,6 +32,7 @@
 
 #include <iterator>
 #include <list>
+#include <stdint.h>
 #include <vector>
 
 namespace ns3

@@ -27,6 +27,7 @@
 
 #include "lora-tag.h"
 #include "lorawan-mac-end-device.h"
+#include "satellite-ground-station-address-tag.h"
 #include "satellite-lorawan-net-device.h"
 #include "satellite-phy.h"
 
@@ -74,15 +75,22 @@ LorawanMacEndDeviceClassA::GetTypeId(void)
     return tid;
 }
 
+TypeId
+LorawanMacEndDeviceClassA::GetInstanceTypeId(void) const
+{
+    return GetTypeId();
+}
+
 LorawanMacEndDeviceClassA::LorawanMacEndDeviceClassA()
 {
     NS_FATAL_ERROR("Default constructor not in use");
 }
 
-LorawanMacEndDeviceClassA::LorawanMacEndDeviceClassA(uint32_t satId,
+LorawanMacEndDeviceClassA::LorawanMacEndDeviceClassA(Ptr<Node> node,
+                                                     uint32_t satId,
                                                      uint32_t beamId,
                                                      Ptr<SatSuperframeSeq> seq)
-    : LorawanMacEndDevice(satId, beamId),
+    : LorawanMacEndDevice(node, satId, beamId),
       m_superframeSeq(seq),
       m_firstWindowDelay(Seconds(1)),
       m_secondWindowDelay(Seconds(2)),
@@ -91,6 +99,11 @@ LorawanMacEndDeviceClassA::LorawanMacEndDeviceClassA(uint32_t satId,
       m_rx1DrOffset(0)
 {
     NS_LOG_FUNCTION(this);
+
+    ObjectBase::ConstructSelf(AttributeConstructionList());
+
+    NS_ASSERT_MSG(m_secondWindowDelay > m_firstWindowDelay + m_firstWindowDuration,
+                  "Second window must open after first one is closed");
 
     // Void the two receiveWindow events
     m_closeFirstWindow = EventId();
@@ -116,7 +129,7 @@ LorawanMacEndDeviceClassA::SendToPhy(Ptr<Packet> packetToSend)
     /////////////////////////////////////////////////////////
     // Add headers, prepare TX parameters and send the packet
     /////////////////////////////////////////////////////////
-    NS_LOG_FUNCTION(this);
+    NS_LOG_FUNCTION(this << packetToSend);
 
     NS_LOG_DEBUG("PacketToSend: " << packetToSend);
 
@@ -191,15 +204,30 @@ LorawanMacEndDeviceClassA::SendToPhy(Ptr<Packet> packetToSend)
 
     SatMacTag mTag;
     packetToSend->RemovePacketTag(mTag);
-    mTag.SetDestAddress(m_gwAddress);
+    if (m_isRegenerative)
+    {
+        mTag.SetDestAddress(Mac48Address::ConvertFrom(m_satelliteAddress));
+    }
+    else
+    {
+        mTag.SetDestAddress(m_gwAddress);
+    }
     mTag.SetSourceAddress(Mac48Address::ConvertFrom(m_device->GetAddress()));
     packetToSend->AddPacketTag(mTag);
 
     SatAddressE2ETag addressE2ETag;
     packetToSend->RemovePacketTag(addressE2ETag);
-    addressE2ETag.SetE2EDestAddress(Mac48Address::GetBroadcast());
+    addressE2ETag.SetE2EDestAddress(m_gwAddress);
     addressE2ETag.SetE2ESourceAddress(Mac48Address::ConvertFrom(m_device->GetAddress()));
     packetToSend->AddPacketTag(addressE2ETag);
+
+    if (m_isRegenerative)
+    {
+        SatGroundStationAddressTag groundStationAddressTag;
+        packetToSend->RemovePacketTag(groundStationAddressTag);
+        groundStationAddressTag = SatGroundStationAddressTag(m_gwAddress);
+        packetToSend->AddPacketTag(groundStationAddressTag);
+    }
 
     SatPhy::PacketContainer_t packets;
     packets.push_back(packetToSend);
@@ -301,8 +329,6 @@ LorawanMacEndDeviceClassA::Receive(Ptr<Packet> packet)
 
             // Parse the MAC commands
             ParseCommands(fHdr);
-
-            // m_device->GetObject<SatLorawanNetDevice> ()->Receive (packetCopy);
 
             // Call the trace source
             m_receivedPacket(packet);

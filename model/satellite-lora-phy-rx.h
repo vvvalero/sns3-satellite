@@ -28,6 +28,8 @@
 #include <ns3/object.h>
 #include <ns3/packet.h>
 
+#include <stdint.h>
+
 namespace ns3
 {
 

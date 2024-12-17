@@ -27,6 +27,7 @@
 #include "satellite-isl-arbiter.h"
 
 #include <map>
+#include <stdint.h>
 #include <string>
 
 namespace ns3

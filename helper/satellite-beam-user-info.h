@@ -23,6 +23,7 @@
 
 #include <ns3/geo-coordinate.h>
 
+#include <stdint.h>
 #include <utility>
 #include <vector>
 

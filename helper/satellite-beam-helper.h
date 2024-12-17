@@ -102,24 +102,18 @@ class SatBeamHelper : public Object
     /**
      * Constructor for SatBeamHelper.
      *
-     * \param standard                    The standard to use (DVB or LORA)
      * \param isls                        List of all ISLs
      * \param bandwidthConverterCb        Callback to convert bandwidth
      * \param fwdLinkCarrierCount         Number of carriers used in forward link
      * \param rtnLinkCarrierCount         Number of carriers used in return link
      * \param seq                         Pointer to used superframe sequence configuration
-     * (containing superframe configurations). \param forwardLinkRegenerationMode The regeneration
-     * mode used in satellites for forward link \param returnLinkRegenerationMode  The regeneration
      * mode used in satellites for return link
      */
-    SatBeamHelper(SatEnums::Standard_t standard,
-                  std::vector<std::pair<uint32_t, uint32_t>> isls,
+    SatBeamHelper(std::vector<std::pair<uint32_t, uint32_t>> isls,
                   SatTypedefs::CarrierBandwidthConverter_t bandwidthConverterCb,
                   uint32_t fwdLinkCarrierCount,
                   uint32_t rtnLinkCarrierCount,
-                  Ptr<SatSuperframeSeq> seq,
-                  SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                  SatEnums::RegenerationMode_t returnLinkRegenerationMode);
+                  Ptr<SatSuperframeSeq> seq);
 
     /**
      * Destructor for SatBeamHelper.
@@ -347,12 +341,6 @@ class SatBeamHelper : public Object
     uint32_t GetUtBeamId(Ptr<Node> utNode) const;
 
     /**
-     * Get the regeneration mode used in satellites for return link
-     * \return The regeneration mode used in satellites for return link
-     */
-    SatEnums::RegenerationMode_t GetReturnLinkRegenerationMode() const;
-
-    /**
      *
      * \param beamInfo Multicast info for the beams. Receiver UTs in a  beam for the multicast
      * group. \param sourceUtNode Source UT node. (NULL in case that source is behind
@@ -563,24 +551,9 @@ class SatBeamHelper : public Object
                                bool routeToSatellite);
 
     /**
-     * The global standard used. Can be either DVB or Lora
-     */
-    SatEnums::Standard_t m_standard;
-
-    /**
      * Indicates if using DVB-S2 or DVB-S2X
      */
     SatEnums::DvbVersion_t m_dvbVersion;
-
-    /**
-     * The regeneration mode used in satellites for forward link
-     */
-    SatEnums::RegenerationMode_t m_forwardLinkRegenerationMode;
-
-    /**
-     * The regeneration mode used in satellites for return link
-     */
-    SatEnums::RegenerationMode_t m_returnLinkRegenerationMode;
 
     /**
      * Map used in regenerative mode to store GW Net device (we need only one per GW)

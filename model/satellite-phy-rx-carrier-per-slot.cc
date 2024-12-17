@@ -190,7 +190,8 @@ SatPhyRxCarrierPerSlot::CreateInterference(Ptr<SatSignalParameters> rxParams, Ad
 void
 SatPhyRxCarrierPerSlot::EndRxData(uint32_t key)
 {
-    NS_LOG_FUNCTION(this);
+    NS_LOG_FUNCTION(this << key);
+
     NS_LOG_INFO(this << " state: " << GetState());
 
     NS_ASSERT(GetState() == RX);

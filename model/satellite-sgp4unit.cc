@@ -51,6 +51,8 @@
 
 #include "satellite-sgp4unit.h"
 
+#include <stdint.h>
+
 /* ----------- local functions - only ever used internally by sgp4 ---------- */
 static void dpper(double e3,
                   double ee2,

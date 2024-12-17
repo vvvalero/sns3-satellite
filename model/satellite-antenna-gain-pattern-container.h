@@ -27,6 +27,7 @@
 #include "ns3/satellite-beam-user-info.h"
 
 #include <map>
+#include <stdint.h>
 #include <string>
 #include <utility>
 

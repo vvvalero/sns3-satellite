@@ -27,6 +27,7 @@
 #include <ns3/singleton.h>
 
 #include <limits>
+#include <stdint.h>
 #include <utility>
 #include <vector>
 

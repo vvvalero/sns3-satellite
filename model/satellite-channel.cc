@@ -142,6 +142,7 @@ void
 SatChannel::AddRx(Ptr<SatPhyRx> phyRx)
 {
     NS_LOG_FUNCTION(this << phyRx);
+
     m_phyRxContainer.push_back(phyRx);
 }
 

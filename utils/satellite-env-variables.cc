@@ -168,6 +168,28 @@ SatEnvVariables::DoInitialize()
         pathToExecutable[sizeof(pathToExecutable) - 1] = '\0';
         m_pathToExecutable = std::string(pathToExecutable);
 
+        if (!IsValidDirectory(LocateDataDirectory() + "/additional-input"))
+        {
+            NS_FATAL_ERROR("No directory additional-input inside "
+                           << LocateDataDirectory()
+                           << ". Make sure you executed 'git submodule update --init --recursive' "
+                              "from satellite repository");
+        }
+        if (!IsValidDirectory(LocateDataDirectory() + "/scenarios"))
+        {
+            NS_FATAL_ERROR("No directory scenarios inside "
+                           << LocateDataDirectory()
+                           << ". Make sure you executed 'git submodule update --init --recursive' "
+                              "from satellite repository");
+        }
+        if (!IsValidDirectory(LocateDataDirectory() + "/sgp4"))
+        {
+            NS_FATAL_ERROR("No directory sgp4 inside "
+                           << LocateDataDirectory()
+                           << ". Make sure you executed 'git submodule update --init --recursive' "
+                              "from satellite repository");
+        }
+
         if (m_enableSimInfoOutput)
         {
             if (!m_isOutputPathInitialized)

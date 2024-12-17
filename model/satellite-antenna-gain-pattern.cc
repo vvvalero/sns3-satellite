@@ -30,6 +30,7 @@
 #include <fstream>
 #include <iostream>
 #include <limits>
+#include <stdint.h>
 #include <stdlib.h>
 #include <string>
 #include <utility>

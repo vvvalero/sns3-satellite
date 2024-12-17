@@ -24,6 +24,7 @@
 #include "satellite-phy-rx-carrier-per-frame.h"
 
 #include <list>
+#include <stdint.h>
 #include <vector>
 
 namespace ns3

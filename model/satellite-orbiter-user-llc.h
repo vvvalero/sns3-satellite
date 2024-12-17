@@ -41,17 +41,9 @@ class SatOrbiterUserLlc : public SatOrbiterLlc
     static TypeId GetTypeId(void);
 
     /**
-     * Construct a SatOrbiterUserLlc, should not be used
+     * Construct a SatOrbiterUserLlc
      */
     SatOrbiterUserLlc();
-
-    /**
-     * Construct a ELLITE_ORBITER_USER_LLC_HSatOrbiterUserLlc
-     * \param forwardLinkRegenerationMode Forward link regeneration model
-     * \param returnLinkRegenerationMode Return link regeneration model
-     */
-    SatOrbiterUserLlc(SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                      SatEnums::RegenerationMode_t returnLinkRegenerationMode);
 
     /**
      * Destroy a SatOrbiterUserLlc

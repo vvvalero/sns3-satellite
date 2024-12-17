@@ -183,7 +183,7 @@ SatNetDevice::Receive(Ptr<const Packet> packet)
         SatDevTimeTag timeTag;
         if (packet->PeekPacketTag(timeTag))
         {
-            NS_LOG_DEBUG(this << " contains a SatMacTimeTag tag");
+            NS_LOG_DEBUG(this << " contains a SatDevTimeTag tag");
             Time delay = Simulator::Now() - timeTag.GetSenderTimestamp();
             m_rxDelayTrace(delay, addr);
             if (m_lastDelay.IsZero() == false)
@@ -197,7 +197,7 @@ SatNetDevice::Receive(Ptr<const Packet> packet)
         SatDevLinkTimeTag linkTimeTag;
         if (packet->PeekPacketTag(linkTimeTag))
         {
-            NS_LOG_DEBUG(this << " contains a SatMacTimeTag tag");
+            NS_LOG_DEBUG(this << " contains a SatDevLinkTimeTag tag");
             Time delay = Simulator::Now() - linkTimeTag.GetSenderTimestamp();
             m_rxLinkDelayTrace(delay, addr);
             if (m_lastLinkDelay.IsZero() == false)

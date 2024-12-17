@@ -27,6 +27,8 @@
 #include "ns3/satellite-module.h"
 #include "ns3/traffic-module.h"
 
+#include <stdint.h>
+
 using namespace ns3;
 
 /**

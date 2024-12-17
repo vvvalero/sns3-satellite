@@ -26,12 +26,15 @@
 
 #include "lora-tag.h"
 #include "lorawan-mac-end-device-class-a.h"
+#include "satellite-id-mapper.h"
 #include "satellite-phy.h"
 #include "satellite-time-tag.h"
+#include "satellite-topology.h"
 
 #include <ns3/ipv4-header.h>
 #include <ns3/log.h>
 #include <ns3/simulator.h>
+#include <ns3/singleton.h>
 
 #include <algorithm>
 #include <cmath>
@@ -116,8 +119,9 @@ LorawanMacEndDevice::LorawanMacEndDevice()
     NS_FATAL_ERROR("Default constructor not in use");
 }
 
-LorawanMacEndDevice::LorawanMacEndDevice(uint32_t satId, uint32_t beamId)
+LorawanMacEndDevice::LorawanMacEndDevice(Ptr<Node> node, uint32_t satId, uint32_t beamId)
     : LorawanMac(satId, beamId),
+      m_node(node),
       m_enableDRAdapt(false),
       m_maxNumbTx(8),
       m_dataRate(0),
@@ -130,14 +134,15 @@ LorawanMacEndDevice::LorawanMacEndDevice(uint32_t satId, uint32_t beamId)
       // LoraWAN default
       m_receiveWindowDurationInSymbols(8),
       m_gatewayUpdateCallback(),
+      m_isRegenerative(false),
       // LoraWAN default
       m_controlDataRate(false),
       m_lastKnownLinkMargin(0),
       m_lastKnownGatewayCount(0),
       m_aggregatedDutyCycle(1),
       m_mType(LorawanMacHeader::CONFIRMED_DATA_UP),
-      m_currentFCnt(0)
-
+      m_currentFCnt(0),
+      m_handoverCallback()
 {
     NS_LOG_FUNCTION(this);
 
@@ -170,10 +175,10 @@ LorawanMacEndDevice::Send(Ptr<Packet> packet)
 
     // If it is not possible to transmit now because of the duty cycle,
     // or because we are receiving, schedule a tx/retx later
-    Time netxTxDelay = GetNextTransmissionDelay();
-    if (netxTxDelay != Seconds(0))
+    Time nextTxDelay = GetNextTransmissionDelay();
+    if (nextTxDelay != Seconds(0))
     {
-        postponeTransmission(netxTxDelay, packet);
+        postponeTransmission(nextTxDelay, packet);
         return;
     }
 
@@ -204,21 +209,29 @@ LorawanMacEndDevice::Send(Ptr<Packet> packet)
 }
 
 void
-LorawanMacEndDevice::postponeTransmission(Time netxTxDelay, Ptr<Packet> packet)
+LorawanMacEndDevice::postponeTransmission(Time nextTxDelay, Ptr<Packet> packet)
 {
     NS_LOG_FUNCTION(this);
     // Delete previously scheduled transmissions if any.
     Simulator::Cancel(m_nextTx);
-    m_nextTx = Simulator::Schedule(netxTxDelay, &LorawanMacEndDevice::DoSend, this, packet);
+    m_nextTx = Simulator::Schedule(nextTxDelay, &LorawanMacEndDevice::DoSend, this, packet);
     NS_LOG_WARN("Attempting to send, but the aggregate duty cycle won't allow it. Scheduling a tx "
                 "at a delay "
-                << netxTxDelay.GetSeconds() << ".");
+                << nextTxDelay.GetSeconds() << ".");
 }
 
 void
 LorawanMacEndDevice::DoSend(Ptr<Packet> packet)
 {
-    NS_LOG_FUNCTION(this);
+    NS_LOG_FUNCTION(this << packet);
+
+    if (CheckHandovers())
+    {
+        // If handover, wait a short time that hadover has been made
+        Simulator::Schedule(MicroSeconds(1), &LorawanMacEndDevice::DoSend, this, packet);
+        return;
+    }
+
     // Checking if this is the transmission of a new packet
     if (packet != m_retxParams.packet)
     {
@@ -526,6 +539,76 @@ LorawanMacEndDevice::GetMType(void)
 void
 LorawanMacEndDevice::TxFinished()
 {
+}
+
+bool
+LorawanMacEndDevice::CheckHandovers()
+{
+    NS_LOG_FUNCTION(this);
+
+    if (m_handoverModule != nullptr)
+    {
+        if (m_handoverModule->CheckForHandoverRecommendation(m_satId, m_beamId))
+        {
+            NS_LOG_INFO("Lora UT handover, old satellite is " << m_satId << ", old beam is "
+                                                              << m_beamId);
+
+            Ptr<SatBeamScheduler> srcScheduler = m_beamSchedulerCallback(m_satId, m_beamId);
+
+            m_satId = m_handoverModule->GetAskedSatId();
+            m_beamId = m_handoverModule->GetAskedBeamId();
+
+            NS_LOG_INFO("Lora UT handover, new satellite is " << m_satId << ", new beam is "
+                                                              << m_beamId);
+
+            Ptr<SatTopology> satTopology = Singleton<SatTopology>::Get();
+
+            satTopology->UpdateUtSatAndBeam(m_node, m_satId, m_beamId);
+            Ptr<Node> gwNode = satTopology->GetGwFromBeam(m_beamId);
+            satTopology->UpdateGwConnectedToUt(m_node, gwNode);
+
+            Address satAddress = m_beamSchedulerCallback(m_satId, m_beamId)->GetSatAddress();
+            Mac48Address satAddress48 = Mac48Address::ConvertFrom(satAddress);
+            if (satAddress48 != m_satelliteAddress)
+            {
+                SetSatelliteAddress(satAddress48);
+            }
+
+            Mac48Address gwAddress =
+                Singleton<SatTopology>::Get()->GetGwAddressInUt(m_nodeInfo->GetNodeId());
+            if (gwAddress != m_gwAddress)
+            {
+                SetGwAddress(gwAddress);
+                m_routingUpdateCallback(m_nodeInfo->GetMacAddress(), gwAddress);
+            }
+            m_handoverCallback(m_satId, m_beamId);
+
+            Ptr<SatBeamScheduler> dstScheduler = m_beamSchedulerCallback(m_satId, m_beamId);
+            srcScheduler->DisconnectUt(m_nodeInfo->GetMacAddress());
+            dstScheduler->ConnectUt(m_nodeInfo->GetMacAddress());
+
+            Ptr<SatIdMapper> satIdMapper = Singleton<SatIdMapper>::Get();
+            satIdMapper->UpdateMacToSatId(m_nodeInfo->GetMacAddress(), m_satId);
+            satIdMapper->UpdateMacToBeamId(m_nodeInfo->GetMacAddress(), m_beamId);
+            satTopology->UpdateUtSatAndBeam(m_node, m_satId, m_beamId);
+            m_updateIslCallback();
+
+            if (!m_updateAddressAndIdentifierCallback.IsNull())
+            {
+                m_updateAddressAndIdentifierCallback(m_node);
+            }
+
+            return true;
+        }
+    }
+
+    return false;
+}
+
+void
+LorawanMacEndDevice::ChangeBeam(uint32_t satId, uint32_t beamId)
+{
+    NS_LOG_FUNCTION(this << satId << beamId);
 }
 
 Time
@@ -960,12 +1043,43 @@ LorawanMacEndDevice::SetGatewayUpdateCallback(LorawanMacEndDevice::GatewayUpdate
 }
 
 void
+LorawanMacEndDevice::SetHandoverCallback(LorawanMacEndDevice::HandoverCallback cb)
+{
+    NS_LOG_FUNCTION(this << &cb);
+    m_handoverCallback = cb;
+}
+
+void
+LorawanMacEndDevice::SetUpdateAddressAndIdentifierCallback(
+    LorawanMacEndDevice::UpdateAddressAndIdentifierCallback cb)
+{
+    NS_LOG_FUNCTION(this << &cb);
+    m_updateAddressAndIdentifierCallback = cb;
+}
+
+void
 LorawanMacEndDevice::SetGwAddress(Mac48Address gwAddress)
 {
     NS_LOG_FUNCTION(this << gwAddress);
 
     // m_gatewayUpdateCallback (gwAddress);
     m_gwAddress = gwAddress;
+}
+
+void
+LorawanMacEndDevice::SetSatAddress(Mac48Address satAddress)
+{
+    NS_LOG_FUNCTION(this << satAddress);
+
+    m_satelliteAddress = satAddress;
+}
+
+void
+LorawanMacEndDevice::SetRegenerative(bool isRegenerative)
+{
+    NS_LOG_FUNCTION(this << isRegenerative);
+
+    m_isRegenerative = isRegenerative;
 }
 
 void

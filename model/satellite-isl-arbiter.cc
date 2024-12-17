@@ -24,6 +24,7 @@
 #include "satellite-isl-arbiter.h"
 
 #include "satellite-id-mapper.h"
+#include "satellite-topology.h"
 
 #include <ns3/singleton.h>
 

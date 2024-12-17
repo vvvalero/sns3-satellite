@@ -27,6 +27,8 @@
 #include "lorawan-mac.h"
 #include "satellite-bbframe-container.h"
 
+#include <stdint.h>
+
 namespace ns3
 {
 
@@ -40,14 +42,15 @@ class LorawanMacGateway : public LorawanMac
     virtual ~LorawanMacGateway();
 
     // Implementation of the LorawanMac interface
-    virtual void Send(Ptr<Packet> packet);
+    virtual void Send(Ptr<Packet> packet) = 0;
 
     // Implementation of the LorawanMac interface
     bool IsTransmitting(void);
 
     // Implementation of the LorawanMac interface
     // virtual void Receive (Ptr<Packet const> packet);
-    virtual void Receive(SatPhy::PacketContainer_t packets, Ptr<SatSignalParameters> /*rxParams*/);
+    virtual void Receive(SatPhy::PacketContainer_t packets,
+                         Ptr<SatSignalParameters> /*rxParams*/) = 0;
 
     // Implementation of the LorawanMac interface
     virtual void FailedReception(Ptr<const Packet> packet);

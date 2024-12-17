@@ -30,6 +30,7 @@
 
 #include <fstream>
 #include <set>
+#include <stdint.h>
 #include <string>
 #include <utility>
 #include <vector>
@@ -203,18 +204,6 @@ class SatConf : public Object
      * \return The number of the carriers in return link.
      */
     uint32_t GetFwdLinkCarrierCount() const;
-
-    /**
-     * Get the regeneration mode used in satellites for forward link
-     * \return The regeneration mode used in satellites for forward link
-     */
-    SatEnums::RegenerationMode_t GetForwardLinkRegenerationMode() const;
-
-    /**
-     * Get the regeneration mode used in satellites for return link
-     * \return The regeneration mode used in satellites for return link
-     */
-    SatEnums::RegenerationMode_t GetReturnLinkRegenerationMode() const;
 
     /**
      * Load a vector of TLE information from a file

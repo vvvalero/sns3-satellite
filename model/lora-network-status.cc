@@ -27,14 +27,18 @@
 #include "lora-device-address.h"
 #include "lora-end-device-status.h"
 #include "lora-gateway-status.h"
+#include "satellite-lorawan-net-device.h"
+#include "satellite-topology.h"
 
 #include <ns3/log.h>
 #include <ns3/net-device.h>
 #include <ns3/node-container.h>
 #include <ns3/packet.h>
 #include <ns3/pointer.h>
+#include <ns3/singleton.h>
 
 #include <map>
+#include <stdint.h>
 #include <utility>
 
 namespace ns3
@@ -54,6 +58,9 @@ LoraNetworkStatus::GetTypeId(void)
 LoraNetworkStatus::LoraNetworkStatus()
 {
     NS_LOG_FUNCTION_NOARGS();
+
+    m_forwardLinkRegenerationMode = Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode();
+    m_uniform = CreateObject<UniformRandomVariable>();
 }
 
 LoraNetworkStatus::~LoraNetworkStatus()
@@ -83,7 +90,7 @@ LoraNetworkStatus::AddNode(Ptr<LorawanMacEndDeviceClassA> edMac)
 }
 
 void
-LoraNetworkStatus::AddGateway(Address& address, Ptr<LoraGatewayStatus> gwStatus)
+LoraNetworkStatus::AddGateway(Ptr<Node> gw, Address& address, Ptr<LoraGatewayStatus> gwStatus)
 {
     NS_LOG_FUNCTION(this << address << gwStatus);
 
@@ -96,6 +103,19 @@ LoraNetworkStatus::AddGateway(Address& address, Ptr<LoraGatewayStatus> gwStatus)
         m_gatewayStatuses.insert(std::pair<Address, Ptr<LoraGatewayStatus>>(address, gwStatus));
         NS_LOG_DEBUG("Added to the list a gateway with address " << address);
     }
+
+    // Get the PointToPointNetDevice
+    Ptr<PointToPointNetDevice> p2pNetDevice;
+    for (uint32_t i = 0; i < gw->GetNDevices(); i++)
+    {
+        p2pNetDevice = gw->GetDevice(i)->GetObject<PointToPointNetDevice>();
+        if (p2pNetDevice != nullptr)
+        {
+            break;
+        }
+    }
+
+    m_gws.insert(std::make_pair(gw, p2pNetDevice));
 }
 
 void
@@ -153,6 +173,40 @@ LoraNetworkStatus::GetBestGatewayForDevice(LoraDeviceAddress deviceAddress, int 
     // ask the EndDeviceStatus to pick the best gateway for us via its method.
     std::map<double, Address> gwAddresses = edStatus->GetPowerGatewayMap();
 
+    if (m_forwardLinkRegenerationMode == SatEnums::REGENERATION_NETWORK)
+    {
+        uint8_t beamToUse = edStatus->GetBeamId();
+        Ptr<Node> gateway;
+        std::vector<Address> possibleAddresses;
+        Ptr<SatLorawanNetDevice> lorawanNetDevice;
+        for (std::map<Ptr<Node>, Ptr<PointToPointNetDevice>>::iterator it = m_gws.begin();
+             it != m_gws.end();
+             it++)
+        {
+            gateway = it->first;
+            for (uint32_t i = 0; i < gateway->GetNDevices(); i++)
+            {
+                lorawanNetDevice = gateway->GetDevice(i)->GetObject<SatLorawanNetDevice>();
+                if (lorawanNetDevice != nullptr)
+                {
+                    uint8_t beam = lorawanNetDevice->GetMac()->GetBeamId();
+                    if (beam == beamToUse)
+                    {
+                        possibleAddresses.push_back(it->second->GetAddress());
+                    }
+                }
+            }
+        }
+        if (possibleAddresses.size() > 0)
+        {
+            return possibleAddresses[m_uniform->GetInteger() % possibleAddresses.size()];
+        }
+        else
+        {
+            return gwAddresses.begin()->second;
+        }
+    }
+
     // By iterating on the map in reverse, we go from the 'best'
     // gateway, i.e. the one with the highest received power, to the
     // worst.
@@ -191,14 +245,16 @@ LoraNetworkStatus::GetReplyForDevice(LoraDeviceAddress edAddress, int windowNumb
     tag.SetModcod(edStatus->GetModcod());
     switch (windowNumber)
     {
-    case 1:
+    case 1: {
         tag.SetDataRate(edStatus->GetMac()->GetFirstReceiveWindowDataRate());
         tag.SetFrequency(edStatus->GetFirstReceiveWindowFrequency());
         break;
-    case 2:
+    }
+    case 2: {
         tag.SetDataRate(edStatus->GetMac()->GetSecondReceiveWindowDataRate());
         tag.SetFrequency(edStatus->GetSecondReceiveWindowFrequency());
         break;
+    }
     }
 
     packet->AddPacketTag(tag);

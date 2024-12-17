@@ -25,6 +25,8 @@
 #include <ns3/object.h>
 #include <ns3/simulator.h>
 
+#include <stdint.h>
+
 namespace ns3
 {
 

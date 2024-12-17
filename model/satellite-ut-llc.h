@@ -26,6 +26,7 @@
 
 #include <ns3/ptr.h>
 
+#include <stdint.h>
 #include <vector>
 
 namespace ns3
@@ -53,17 +54,9 @@ class SatUtLlc : public SatLlc
     static TypeId GetTypeId(void);
 
     /**
-     * Construct a SatUtLlc, should not be used
+     * Construct a SatUtLlc
      */
     SatUtLlc();
-
-    /**
-     * Construct a SatUtLlc
-     * \param forwardLinkRegenerationMode Forward link regeneration model
-     * \param returnLinkRegenerationMode Return link regeneration model
-     */
-    SatUtLlc(SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-             SatEnums::RegenerationMode_t returnLinkRegenerationMode);
 
     /**
      * Destroy a SatUtLlc

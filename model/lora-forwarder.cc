@@ -62,7 +62,7 @@ LoraForwarder::SetPointToPointNetDevice(Ptr<PointToPointNetDevice> pointToPointN
 void
 LoraForwarder::SetLoraNetDevice(uint8_t beamId, Ptr<SatLorawanNetDevice> loraNetDevice)
 {
-    NS_LOG_FUNCTION(this << loraNetDevice);
+    NS_LOG_FUNCTION(this << beamId << loraNetDevice);
 
     m_satLorawanNetDevices[beamId] = loraNetDevice;
 }
@@ -76,9 +76,6 @@ LoraForwarder::ReceiveFromLora(Ptr<SatLorawanNetDevice> loraNetDevice,
     NS_LOG_FUNCTION(this << packet << protocol << sender);
 
     Ptr<Packet> packetCopy = packet->Copy();
-
-    LoraBeamTag beamTag = LoraBeamTag(loraNetDevice->GetLorawanMac()->GetBeamId());
-    packetCopy->AddPacketTag(beamTag);
 
     m_pointToPointNetDevice->Send(packetCopy, m_pointToPointNetDevice->GetBroadcast(), protocol);
 

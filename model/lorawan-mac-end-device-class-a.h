@@ -30,6 +30,8 @@
 #include "lorawan-mac-end-device.h" // LorawanMacEndDevice
 #include "lorawan-mac.h"            // Packet
 
+#include <stdint.h>
+
 namespace ns3
 {
 
@@ -41,8 +43,13 @@ class LorawanMacEndDeviceClassA : public LorawanMacEndDevice
   public:
     static TypeId GetTypeId(void);
 
+    TypeId GetInstanceTypeId(void) const;
+
     LorawanMacEndDeviceClassA();
-    LorawanMacEndDeviceClassA(uint32_t satId, uint32_t beamId, Ptr<SatSuperframeSeq> seq);
+    LorawanMacEndDeviceClassA(Ptr<Node> node,
+                              uint32_t satId,
+                              uint32_t beamId,
+                              Ptr<SatSuperframeSeq> seq);
     virtual ~LorawanMacEndDeviceClassA();
 
     /////////////////////

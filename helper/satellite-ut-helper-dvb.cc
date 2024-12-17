@@ -113,12 +113,9 @@ SatUtHelperDvb::Install(Ptr<Node> n,
                         Ptr<SatNcc> ncc,
                         Address satUserAddress,
                         SatPhy::ChannelPairGetterCallback cbChannel,
-                        SatMac::RoutingUpdateCallback cbRouting,
-                        SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                        SatEnums::RegenerationMode_t returnLinkRegenerationMode)
+                        SatMac::RoutingUpdateCallback cbRouting)
 {
-    NS_LOG_FUNCTION(this << n << satId << beamId << fCh << rCh << gwNd << ncc << satUserAddress
-                         << forwardLinkRegenerationMode << returnLinkRegenerationMode);
+    NS_LOG_FUNCTION(this << n << satId << beamId << fCh << rCh << gwNd << ncc << satUserAddress);
 
     NetDeviceContainer container;
 
@@ -162,7 +159,8 @@ SatUtHelperDvb::Install(Ptr<Node> n,
     parameters.m_daIfModel = m_daInterferenceModel;
     parameters.m_raIfModel = m_raSettings.m_raInterferenceModel;
     parameters.m_raIfEliminateModel = m_raSettings.m_raInterferenceEliminationModel;
-    parameters.m_linkRegenerationMode = forwardLinkRegenerationMode;
+    parameters.m_linkRegenerationMode =
+        Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode();
     parameters.m_bwConverter = m_carrierBandwidthConverter;
     parameters.m_carrierCount = m_fwdLinkCarrierCount;
     parameters.m_cec = cec;
@@ -173,21 +171,15 @@ SatUtHelperDvb::Install(Ptr<Node> n,
         params,
         m_linkResults,
         parameters,
-        m_superframeSeq->GetSuperframeConf(SatConstVariables::SUPERFRAME_SEQUENCE),
-        forwardLinkRegenerationMode);
+        m_superframeSeq->GetSuperframeConf(SatConstVariables::SUPERFRAME_SEQUENCE));
     phy->SetChannelPairGetterCallback(cbChannel);
 
     // Set fading
     phy->SetTxFadingContainer(n->GetObject<SatBaseFading>());
     phy->SetRxFadingContainer(n->GetObject<SatBaseFading>());
 
-    Ptr<SatUtMac> mac = CreateObject<SatUtMac>(n,
-                                               satId,
-                                               beamId,
-                                               m_superframeSeq,
-                                               forwardLinkRegenerationMode,
-                                               returnLinkRegenerationMode,
-                                               m_crdsaOnlyForControl);
+    Ptr<SatUtMac> mac =
+        CreateObject<SatUtMac>(n, satId, beamId, m_superframeSeq, m_crdsaOnlyForControl);
 
     // Set the control message container callbacks
     mac->SetReadCtrlCallback(m_readCtrlCb);
@@ -215,8 +207,7 @@ SatUtHelperDvb::Install(Ptr<Node> n,
     mac->SetSliceSubscriptionCallback(MakeCallback(&SatUtPhy::UpdateSliceSubscription, phy));
 
     // Create Logical Link Control (LLC) layer
-    Ptr<SatUtLlc> llc =
-        CreateObject<SatUtLlc>(forwardLinkRegenerationMode, returnLinkRegenerationMode);
+    Ptr<SatUtLlc> llc = CreateObject<SatUtLlc>();
 
     // Set the control msg read callback to LLC due to ARQ ACKs
     llc->SetReadCtrlCallback(m_readCtrlCb);
@@ -226,8 +217,9 @@ SatUtHelperDvb::Install(Ptr<Node> n,
     llc->SetRequestManager(rm);
     rm->SetCtrlMsgCallback(MakeCallback(&SatNetDevice::SendControlMsg, dev));
 
-    if (returnLinkRegenerationMode != SatEnums::TRANSPARENT &&
-        returnLinkRegenerationMode != SatEnums::REGENERATION_PHY)
+    if (Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() != SatEnums::TRANSPARENT &&
+        Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() !=
+            SatEnums::REGENERATION_PHY)
     {
         llc->SetAdditionalHeaderSize(SatAddressE2ETag::SIZE);
         rm->SetHeaderOffsetVbdc(38.0 / (38 - 2 - SatAddressE2ETag::SIZE));
@@ -278,7 +270,8 @@ SatUtHelperDvb::Install(Ptr<Node> n,
     // Destination = GW MAC address (or SAT user MAC address if regenerative)
     // Flow id = by default 0
     Ptr<SatBaseEncapsulator> utEncap;
-    if (returnLinkRegenerationMode == SatEnums::REGENERATION_NETWORK)
+    if (Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() ==
+        SatEnums::REGENERATION_NETWORK)
     {
         utEncap = CreateObject<SatBaseEncapsulator>(addr,
                                                     Mac48Address::ConvertFrom(satUserAddress),
@@ -311,7 +304,8 @@ SatUtHelperDvb::Install(Ptr<Node> n,
     queue->AddQueueEventCallback(macCb);
     queue->AddQueueEventCallback(rmCb);
     utEncap->SetQueue(queue);
-    if (returnLinkRegenerationMode == SatEnums::REGENERATION_NETWORK)
+    if (Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() ==
+        SatEnums::REGENERATION_NETWORK)
     {
         llc->AddEncap(addr,
                       Mac48Address::ConvertFrom(satUserAddress),
@@ -424,7 +418,7 @@ SatUtHelperDvb::Install(Ptr<Node> n,
         mac->SetUpdateGwAddressCallback(MakeCallback(&SatRequestManager::SetGwAddress, rm));
     }
 
-    Singleton<SatTopology>::Get()->AddUtLayers(n, satId, beamId, 0, dev, llc, mac, phy);
+    Singleton<SatTopology>::Get()->AddUtLayersDvb(n, satId, beamId, 0, dev, llc, mac, phy);
 
     return dev;
 }

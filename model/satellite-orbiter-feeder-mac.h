@@ -34,6 +34,8 @@
 #include <ns3/packet.h>
 #include <ns3/ptr.h>
 
+#include <stdint.h>
+
 namespace ns3
 {
 
@@ -58,13 +60,8 @@ class SatOrbiterFeederMac : public SatOrbiterMac
      *
      * \param satId ID of sat for UT
      * \param beamid ID of beam for UT
-     * \param forwardLinkRegenerationMode Forward link regeneration mode
-     * \param returnLinkRegenerationMode Return link regeneration mode
      */
-    SatOrbiterFeederMac(uint32_t satId,
-                        uint32_t beamId,
-                        SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                        SatEnums::RegenerationMode_t returnLinkRegenerationMode);
+    SatOrbiterFeederMac(uint32_t satId, uint32_t beamId);
 
     /**
      * Destructor for SatOrbiterFeederMac

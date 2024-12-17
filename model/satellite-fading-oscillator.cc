@@ -24,6 +24,7 @@
 
 #include <cmath>
 #include <complex>
+#include <stdint.h>
 
 namespace ns3
 {

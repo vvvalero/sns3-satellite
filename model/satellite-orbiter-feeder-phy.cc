@@ -29,6 +29,7 @@
 #include "satellite-phy-tx.h"
 #include "satellite-signal-parameters.h"
 #include "satellite-time-tag.h"
+#include "satellite-topology.h"
 #include "satellite-uplink-info-tag.h"
 #include "satellite-utils.h"
 
@@ -37,6 +38,7 @@
 #include <ns3/log.h>
 #include <ns3/pointer.h>
 #include <ns3/simulator.h>
+#include <ns3/singleton.h>
 #include <ns3/uinteger.h>
 
 #include <limits>
@@ -178,15 +180,13 @@ SatOrbiterFeederPhy::SatOrbiterFeederPhy(void)
 SatOrbiterFeederPhy::SatOrbiterFeederPhy(SatPhy::CreateParam_t& params,
                                          Ptr<SatLinkResults> linkResults,
                                          SatPhyRxCarrierConf::RxCarrierCreateParams_s parameters,
-                                         Ptr<SatSuperframeConf> superFrameConf,
-                                         SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                                         SatEnums::RegenerationMode_t returnLinkRegenerationMode)
+                                         Ptr<SatSuperframeConf> superFrameConf)
     : SatPhy(params)
 {
     NS_LOG_FUNCTION(this);
 
-    m_forwardLinkRegenerationMode = forwardLinkRegenerationMode;
-    m_returnLinkRegenerationMode = returnLinkRegenerationMode;
+    m_forwardLinkRegenerationMode = Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode();
+    m_returnLinkRegenerationMode = Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode();
     m_isSending = false;
     m_queueSizeBytes = 0;
     m_queueSizePackets = 0;
@@ -215,7 +215,7 @@ SatOrbiterFeederPhy::SatOrbiterFeederPhy(SatPhy::CreateParam_t& params,
     parameters.m_rxTemperatureK = SatUtils::DbToLinear(SatPhy::GetRxNoiseTemperatureDbk());
     parameters.m_extNoiseDensityWhz = SatUtils::DbToLinear(m_extNoisePowerDensityDbwHz);
     parameters.m_aciIfWrtNoiseFactor = 0.0;
-    if (forwardLinkRegenerationMode == SatEnums::TRANSPARENT)
+    if (m_forwardLinkRegenerationMode == SatEnums::TRANSPARENT)
     {
         parameters.m_rxMode = SatPhyRxCarrierConf::TRANSPARENT;
     }
@@ -223,7 +223,7 @@ SatOrbiterFeederPhy::SatOrbiterFeederPhy(SatPhy::CreateParam_t& params,
     {
         parameters.m_rxMode = SatPhyRxCarrierConf::NORMAL;
     }
-    parameters.m_linkRegenerationMode = forwardLinkRegenerationMode;
+    parameters.m_linkRegenerationMode = m_forwardLinkRegenerationMode;
     parameters.m_chType = SatEnums::FORWARD_FEEDER_CH;
 
     Ptr<SatPhyRxCarrierConf> carrierConf = CreateObject<SatPhyRxCarrierConf>(parameters);

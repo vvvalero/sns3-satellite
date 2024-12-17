@@ -22,6 +22,7 @@
 
 #include <ns3/log.h>
 
+#include <stdint.h>
 #include <utility>
 
 NS_LOG_COMPONENT_DEFINE("SatFadingInputTrace");

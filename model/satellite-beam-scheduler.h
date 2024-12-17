@@ -40,6 +40,7 @@
 #include <cmath>
 #include <list>
 #include <map>
+#include <stdint.h>
 #include <string>
 #include <utility>
 #include <vector>
@@ -335,6 +336,12 @@ class SatBeamScheduler : public Object
     {
         return m_gwAddress;
     }
+
+    /**
+     * Set if SNS-3 is used with Lora standard. TBTPs are not sent in this mode.
+     * \param useLora boolean indicating if lora is used.
+     */
+    void SetUseLora(bool useLora);
 
   private:
     /**
@@ -724,6 +731,11 @@ class SatBeamScheduler : public Object
      * Indicates if Cno sample have been received since last C/N0 control message sent
      */
     bool m_receivedSatelliteCnoSample;
+
+    /**
+     * Flag indicating if lora standard is used
+     */
+    bool m_useLora;
 };
 
 } // namespace ns3

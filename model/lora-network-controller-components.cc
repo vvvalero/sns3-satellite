@@ -22,6 +22,8 @@
 
 #include "lora-network-controller-components.h"
 
+#include <stdint.h>
+
 namespace ns3
 {
 

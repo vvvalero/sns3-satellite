@@ -26,6 +26,7 @@
 #include "lorawan-mac-header.h"
 #include "satellite-bbframe-conf.h"
 #include "satellite-lorawan-net-device.h"
+#include "satellite-orbiter-net-device-lora.h"
 
 #include <ns3/log.h>
 
@@ -39,9 +40,7 @@ NS_OBJECT_ENSURE_REGISTERED(LorawanMacGateway);
 TypeId
 LorawanMacGateway::GetTypeId(void)
 {
-    static TypeId tid = TypeId("ns3::LorawanMacGateway")
-                            .SetParent<LorawanMac>()
-                            .AddConstructor<LorawanMacGateway>();
+    static TypeId tid = TypeId("ns3::LorawanMacGateway").SetParent<LorawanMac>();
     return tid;
 }
 
@@ -180,7 +179,8 @@ LorawanMacGateway::Receive(SatPhy::PacketContainer_t packets, Ptr<SatSignalParam
 
         if (macHdr.IsUplink())
         {
-            m_device->GetObject<SatLorawanNetDevice>()->Receive(packetCopy);
+            Ptr<SatLorawanNetDevice> lorawanNetDevice = m_device->GetObject<SatLorawanNetDevice>();
+            lorawanNetDevice->Receive(packetCopy);
 
             NS_LOG_DEBUG("Received packet: " << packet);
 

@@ -23,6 +23,7 @@
 
 #include "satellite-base-fader-conf.h"
 
+#include <stdint.h>
 #include <vector>
 
 namespace ns3

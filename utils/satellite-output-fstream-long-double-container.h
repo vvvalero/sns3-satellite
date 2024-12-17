@@ -27,6 +27,7 @@
 #include <ns3/gnuplot.h>
 
 #include <fstream>
+#include <stdint.h>
 
 namespace ns3
 {

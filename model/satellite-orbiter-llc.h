@@ -25,6 +25,7 @@
 #include "satellite-llc.h"
 #include "satellite-node-info.h"
 
+#include <stdint.h>
 #include <vector>
 
 namespace ns3
@@ -45,17 +46,9 @@ class SatOrbiterLlc : public SatLlc
     static TypeId GetTypeId(void);
 
     /**
-     * Construct a SatOrbiterLlc, should not be used
+     * Construct a SatOrbiterLlc
      */
     SatOrbiterLlc();
-
-    /**
-     * Construct a SatOrbiterLlc
-     * \param forwardLinkRegenerationMode Forward link regeneration model
-     * \param returnLinkRegenerationMode Return link regeneration model
-     */
-    SatOrbiterLlc(SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                  SatEnums::RegenerationMode_t returnLinkRegenerationMode);
 
     /**
      * Destroy a SatOrbiterLlc

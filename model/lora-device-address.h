@@ -26,6 +26,7 @@
 #include <ns3/address.h>
 
 #include <ostream>
+#include <stdint.h>
 #include <string>
 
 namespace ns3

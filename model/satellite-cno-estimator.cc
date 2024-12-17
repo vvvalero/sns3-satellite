@@ -26,6 +26,7 @@
 #include <cmath>
 #include <math.h>
 #include <numeric>
+#include <stdint.h>
 #include <utility>
 
 NS_LOG_COMPONENT_DEFINE("SatCnoEstimator");

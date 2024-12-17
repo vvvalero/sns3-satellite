@@ -30,7 +30,9 @@
 #include "lorawan-mac-end-device-class-a.h"
 #include "lorawan-mac-header.h"
 #include "satellite-lorawan-net-device.h"
+#include "satellite-topology.h"
 
+#include "ns3/singleton.h"
 #include <ns3/log.h>
 
 namespace ns3
@@ -97,19 +99,32 @@ LoraNetworkServer::AddGateway(Ptr<Node> gateway, Ptr<NetDevice> netDevice)
         }
     }
 
-    // Get the gateway's LoRa MAC layer (assumes gateway's MAC is configured as first device)
-    Ptr<SatLorawanNetDevice> satLoraNetDevice =
-        DynamicCast<SatLorawanNetDevice>(gateway->GetDevice(1));
-    Ptr<LorawanMacGateway> gwMac = DynamicCast<LorawanMacGateway>(satLoraNetDevice->GetMac());
-    NS_ASSERT(gwMac != nullptr);
-
     // Get the Address
     Address gatewayAddress = p2pNetDevice->GetAddress();
 
-    // Create new gatewayStatus
-    Ptr<LoraGatewayStatus> gwStatus = Create<LoraGatewayStatus>(gatewayAddress, netDevice, gwMac);
-
-    m_status->AddGateway(gatewayAddress, gwStatus);
+    // Get the gateway's LoRa MAC layer (assumes gateway's MAC is configured as first device)
+    switch (Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode())
+    {
+    case SatEnums::TRANSPARENT: {
+        Ptr<SatLorawanNetDevice> satLoraNetDevice =
+            DynamicCast<SatLorawanNetDevice>(gateway->GetDevice(1));
+        Ptr<LorawanMacGateway> gwMac = DynamicCast<LorawanMacGateway>(satLoraNetDevice->GetMac());
+        // Create new gatewayStatus
+        Ptr<LoraGatewayStatus> gwStatus =
+            Create<LoraGatewayStatus>(gatewayAddress, netDevice, gwMac);
+        m_status->AddGateway(gateway, gatewayAddress, gwStatus);
+        break;
+    }
+    case SatEnums::REGENERATION_NETWORK: {
+        // Create new gatewayStatus
+        Ptr<LoraGatewayStatus> gwStatus =
+            Create<LoraGatewayStatus>(gatewayAddress, netDevice, nullptr);
+        m_status->AddGateway(gateway, gatewayAddress, gwStatus);
+        break;
+    }
+    default:
+        NS_FATAL_ERROR("Incorrect regeneration mode for LORA");
+    }
 }
 
 void

@@ -26,6 +26,7 @@
 #include <ns3/pointer.h>
 
 #include <map>
+#include <stdint.h>
 #include <utility>
 #include <vector>
 

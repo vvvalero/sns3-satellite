@@ -32,6 +32,7 @@
 #include "ns3/node.h"
 
 #include <cstddef>
+#include <stdint.h>
 
 namespace ns3
 {

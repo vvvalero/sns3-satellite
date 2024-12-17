@@ -32,6 +32,8 @@
 #include <ns3/packet.h>
 #include <ns3/ptr.h>
 
+#include <stdint.h>
+
 namespace ns3
 {
 
@@ -57,8 +59,7 @@ class SatGwPhy : public SatPhy
     SatGwPhy(SatPhy::CreateParam_t& params,
              Ptr<SatLinkResults> linkResults,
              SatPhyRxCarrierConf::RxCarrierCreateParams_s parameters,
-             Ptr<SatSuperframeConf> superFrameConf,
-             SatEnums::RegenerationMode_t returnLinkRegenerationMode);
+             Ptr<SatSuperframeConf> superFrameConf);
 
     /**
      * Destructor for SatGwPhy

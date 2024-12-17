@@ -24,6 +24,8 @@
 
 #include "satellite-sgp4ext.h"
 
+#include <stdint.h>
+
 double
 sgn(double x)
 {

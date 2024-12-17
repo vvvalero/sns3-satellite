@@ -33,6 +33,7 @@
 
 #include <map>
 #include <set>
+#include <stdint.h>
 #include <utility>
 
 namespace ns3

@@ -24,6 +24,7 @@
 #include "satellite-lora-conf.h"
 
 #include <ns3/log.h>
+#include <ns3/lorawan-ground-mac-gateway.h>
 #include <ns3/lorawan-mac-gateway.h>
 #include <ns3/pointer.h>
 #include <ns3/satellite-channel-estimation-error-container.h>
@@ -39,6 +40,7 @@
 #include <ns3/satellite-node-info.h>
 #include <ns3/satellite-orbiter-net-device.h>
 #include <ns3/satellite-phy-rx-carrier-conf.h>
+#include <ns3/satellite-topology.h>
 #include <ns3/satellite-typedefs.h>
 #include <ns3/singleton.h>
 
@@ -98,12 +100,9 @@ SatGwHelperLora::Install(Ptr<Node> n,
                          Ptr<SatChannel> rCh,
                          SatPhy::ChannelPairGetterCallback cbChannel,
                          Ptr<SatNcc> ncc,
-                         Ptr<SatLowerLayerServiceConf> llsConf,
-                         SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                         SatEnums::RegenerationMode_t returnLinkRegenerationMode)
+                         Ptr<SatLowerLayerServiceConf> llsConf)
 {
-    NS_LOG_FUNCTION(this << n << gwId << satId << beamId << fCh << rCh << ncc << llsConf
-                         << forwardLinkRegenerationMode << returnLinkRegenerationMode);
+    NS_LOG_FUNCTION(this << n << gwId << satId << beamId << fCh << rCh << ncc << llsConf);
 
     NetDeviceContainer container;
 
@@ -136,8 +135,10 @@ SatGwHelperLora::Install(Ptr<Node> n,
     {
         uint32_t minWfId = m_superframeSeq->GetWaveformConf()->GetMinWfId();
         uint32_t maxWfId = m_superframeSeq->GetWaveformConf()->GetMaxWfId();
-        if (returnLinkRegenerationMode == SatEnums::TRANSPARENT ||
-            returnLinkRegenerationMode == SatEnums::REGENERATION_PHY)
+        if (Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() ==
+                SatEnums::TRANSPARENT ||
+            Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() ==
+                SatEnums::REGENERATION_PHY)
         {
             cec = Create<SatRtnLinkChannelEstimationErrorContainer>(minWfId, maxWfId);
         }
@@ -154,7 +155,8 @@ SatGwHelperLora::Install(Ptr<Node> n,
     parameters.m_daIfModel = m_daInterferenceModel;
     parameters.m_raIfModel = m_raSettings.m_raInterferenceModel;
     parameters.m_raIfEliminateModel = m_raSettings.m_raInterferenceEliminationModel;
-    parameters.m_linkRegenerationMode = returnLinkRegenerationMode;
+    parameters.m_linkRegenerationMode =
+        Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode();
     parameters.m_bwConverter = m_carrierBandwidthConverter;
     parameters.m_carrierCount = m_rtnLinkCarrierCount;
     parameters.m_cec = cec;
@@ -166,16 +168,15 @@ SatGwHelperLora::Install(Ptr<Node> n,
         params,
         m_linkResults,
         parameters,
-        m_superframeSeq->GetSuperframeConf(SatConstVariables::SUPERFRAME_SEQUENCE),
-        returnLinkRegenerationMode);
+        m_superframeSeq->GetSuperframeConf(SatConstVariables::SUPERFRAME_SEQUENCE));
 
-    ncc->SetUseLora(true);
+    // ncc->SetUseLora(true);
 
     // Set fading
     phy->SetTxFadingContainer(n->GetObject<SatBaseFading>());
     phy->SetRxFadingContainer(n->GetObject<SatBaseFading>());
 
-    Ptr<LorawanMacGateway> mac = CreateObject<LorawanMacGateway>(satId, beamId);
+    Ptr<LorawanMacGateway> mac = CreateObject<LorawanGroundMacGateway>(satId, beamId);
 
     SatLoraConf satLoraConf;
     satLoraConf.SetConf(mac);
@@ -199,7 +200,7 @@ SatGwHelperLora::Install(Ptr<Node> n,
     dev->SetPhy(phy);
 
     // Attach the Mac layer to SatNetDevice
-    dev->SetLorawanMac(mac);
+    dev->SetMac(mac);
     mac->SetDevice(dev);
 
     mac->SetPhy(phy);
@@ -224,10 +225,19 @@ SatGwHelperLora::Install(Ptr<Node> n,
     // Begin frame end scheduling for processes utilizing frame length as interval
     // Node info needs to be set before the start in order to get the scheduling context correctly
     // set
-    if (returnLinkRegenerationMode == SatEnums::TRANSPARENT)
+    if (Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() == SatEnums::TRANSPARENT)
     {
         phy->BeginEndScheduling();
     }
+
+    Singleton<SatTopology>::Get()->AddGwLayersLora(n,
+                                                   feederSatId,
+                                                   feederBeamId,
+                                                   satId,
+                                                   beamId,
+                                                   dev,
+                                                   DynamicCast<LorawanGroundMacGateway>(mac),
+                                                   phy);
 
     return dev;
 }

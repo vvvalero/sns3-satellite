@@ -26,6 +26,7 @@
 #include "ns3/singleton.h"
 
 #include <fstream>
+#include <stdint.h>
 
 /**
  * \file sat-link-results-plot.cc

@@ -26,6 +26,7 @@
 #include <ns3/object.h>
 
 #include <map>
+#include <stdint.h>
 
 namespace ns3
 {

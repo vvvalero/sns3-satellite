@@ -23,6 +23,8 @@
 
 #include "satellite-superframe-sequence.h"
 
+#include <stdint.h>
+
 namespace ns3
 {
 

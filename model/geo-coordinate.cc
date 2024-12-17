@@ -30,6 +30,7 @@
 #include <istream>
 #include <ostream>
 #include <sstream>
+#include <stdint.h>
 
 NS_LOG_COMPONENT_DEFINE("geo-coordinate");
 

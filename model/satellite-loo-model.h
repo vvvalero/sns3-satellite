@@ -28,6 +28,7 @@
 #include <ns3/vector.h>
 
 #include <complex>
+#include <stdint.h>
 #include <vector>
 
 namespace ns3

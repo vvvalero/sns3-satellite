@@ -23,6 +23,7 @@
 
 #include <ns3/simple-ref-count.h>
 
+#include <stdint.h>
 #include <string>
 #include <vector>
 

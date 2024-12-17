@@ -35,6 +35,7 @@
 #include <ns3/packet.h>
 
 #include <map>
+#include <stdint.h>
 
 namespace ns3
 {

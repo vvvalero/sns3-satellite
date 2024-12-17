@@ -37,6 +37,8 @@
 #include "ns3/test.h"
 #include "ns3/timer.h"
 
+#include <stdint.h>
+
 using namespace ns3;
 
 class SatEstimatorBaseTestCase : public TestCase

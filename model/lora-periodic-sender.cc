@@ -140,11 +140,13 @@ LoraPeriodicSender::StartApplication(void)
         for (uint32_t i = 0; i < m_node->GetNDevices(); i++)
         {
             loraNetDevice = DynamicCast<SatLorawanNetDevice>(m_node->GetDevice(i));
-            if (loraNetDevice)
+            if (loraNetDevice != nullptr)
             {
                 break;
             }
         }
+
+        NS_ASSERT(loraNetDevice != nullptr);
 
         m_mac = DynamicCast<LorawanMac>(loraNetDevice->GetMac());
         NS_ASSERT(m_mac != nullptr);

@@ -34,6 +34,8 @@
 #include <ns3/singleton.h>
 #include <ns3/test.h>
 
+#include <stdint.h>
+
 using namespace ns3;
 
 /**

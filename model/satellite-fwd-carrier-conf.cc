@@ -23,6 +23,8 @@
 #include <ns3/fatal-error.h>
 #include <ns3/log.h>
 
+#include <stdint.h>
+
 NS_LOG_COMPONENT_DEFINE("SatFwdCarrierConf");
 
 namespace ns3

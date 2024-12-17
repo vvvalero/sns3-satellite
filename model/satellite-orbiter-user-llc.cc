@@ -25,6 +25,7 @@
 #include "satellite-return-link-encapsulator-arq.h"
 #include "satellite-return-link-encapsulator.h"
 
+#include <stdint.h>
 #include <utility>
 
 NS_LOG_COMPONENT_DEFINE("SatOrbiterUserLlc");
@@ -43,14 +44,6 @@ SatOrbiterUserLlc::GetTypeId(void)
 
 SatOrbiterUserLlc::SatOrbiterUserLlc()
     : SatOrbiterLlc()
-{
-    NS_LOG_FUNCTION(this);
-    NS_ASSERT(false); // this version of the constructor should not been used
-}
-
-SatOrbiterUserLlc::SatOrbiterUserLlc(SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                                     SatEnums::RegenerationMode_t returnLinkRegenerationMode)
-    : SatOrbiterLlc(forwardLinkRegenerationMode, returnLinkRegenerationMode)
 {
     NS_LOG_FUNCTION(this);
 }

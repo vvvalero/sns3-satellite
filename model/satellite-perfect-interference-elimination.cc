@@ -27,6 +27,7 @@
 
 #include <cmath>
 #include <limits>
+#include <stdint.h>
 #include <utility>
 #include <vector>
 

@@ -337,7 +337,7 @@ class SatMobilityTestSuite : public TestSuite
 };
 
 SatMobilityTestSuite::SatMobilityTestSuite()
-    : TestSuite("sat-mobility-test", Type::UNIT)
+    : TestSuite("sat-mobility-test", Type::SYSTEM)
 {
     AddTestCase(new SatMobilityRandomTestCase, TestCase::Duration::QUICK);
     AddTestCase(new SatMobilityList1TestCase, TestCase::Duration::QUICK);

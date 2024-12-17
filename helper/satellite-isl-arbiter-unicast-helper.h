@@ -28,6 +28,7 @@
 #include <ns3/satellite-isl-arbiter-unicast.h>
 
 #include <map>
+#include <stdint.h>
 #include <utility>
 #include <vector>
 

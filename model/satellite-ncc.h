@@ -32,6 +32,7 @@
 #include <ns3/traced-callback.h>
 
 #include <map>
+#include <stdint.h>
 #include <tuple>
 #include <utility>
 

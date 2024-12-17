@@ -36,6 +36,7 @@
 
 #include <cstring>
 #include <queue>
+#include <stdint.h>
 #include <string>
 
 namespace ns3
@@ -72,13 +73,8 @@ class SatMac : public Object
      * \brief Construct a SatMac
      * \param satId ID of sat for this MAC
      * \param beamId ID of beam for this MAC
-     * \param forwardLinkRegenerationMode Forward link regeneration model
-     * \param returnLinkRegenerationMode Return link regeneration model
      */
-    SatMac(uint32_t satId,
-           uint32_t beamId,
-           SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-           SatEnums::RegenerationMode_t returnLinkRegenerationMode);
+    SatMac(uint32_t satId, uint32_t beamId);
 
     /**
      * \brief Destroy a SatMac

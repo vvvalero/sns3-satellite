@@ -35,6 +35,7 @@
 #include <ns3/satellite-gw-phy.h>
 #include <ns3/satellite-id-mapper.h>
 #include <ns3/satellite-link-results.h>
+#include <ns3/satellite-lorawan-net-device.h>
 #include <ns3/satellite-lower-layer-service.h>
 #include <ns3/satellite-net-device.h>
 #include <ns3/satellite-node-info.h>
@@ -112,18 +113,29 @@ SatGwHelperDvb::Install(Ptr<Node> n,
                         Ptr<SatChannel> rCh,
                         SatPhy::ChannelPairGetterCallback cbChannel,
                         Ptr<SatNcc> ncc,
-                        Ptr<SatLowerLayerServiceConf> llsConf,
-                        SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                        SatEnums::RegenerationMode_t returnLinkRegenerationMode)
+                        Ptr<SatLowerLayerServiceConf> llsConf)
 {
-    NS_LOG_FUNCTION(this << n << gwId << satId << beamId << fCh << rCh << ncc << llsConf
-                         << forwardLinkRegenerationMode << returnLinkRegenerationMode);
+    NS_LOG_FUNCTION(this << n << gwId << satId << beamId << fCh << rCh << ncc << llsConf);
 
     NetDeviceContainer container;
 
     // Create SatNetDevice
-    m_deviceFactory.SetTypeId("ns3::SatNetDevice");
-    Ptr<SatNetDevice> dev = m_deviceFactory.Create<SatNetDevice>();
+    Ptr<SatNetDevice> dev;
+    switch (Singleton<SatTopology>::Get()->GetStandard())
+    {
+    case SatEnums::DVB: {
+        m_deviceFactory.SetTypeId("ns3::SatNetDevice");
+        dev = m_deviceFactory.Create<SatNetDevice>();
+        break;
+    }
+    case SatEnums::LORA: {
+        m_deviceFactory.SetTypeId("ns3::SatLorawanNetDevice");
+        dev = m_deviceFactory.Create<SatLorawanNetDevice>();
+        break;
+    }
+    default:
+        NS_FATAL_ERROR("Incorrect standard chosen");
+    }
 
     // Attach the SatNetDevices to nodes
     n->AddDevice(dev);
@@ -153,8 +165,10 @@ SatGwHelperDvb::Install(Ptr<Node> n,
     {
         uint32_t minWfId = m_superframeSeq->GetWaveformConf()->GetMinWfId();
         uint32_t maxWfId = m_superframeSeq->GetWaveformConf()->GetMaxWfId();
-        if (returnLinkRegenerationMode == SatEnums::TRANSPARENT ||
-            returnLinkRegenerationMode == SatEnums::REGENERATION_PHY)
+        if (Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() ==
+                SatEnums::TRANSPARENT ||
+            Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() ==
+                SatEnums::REGENERATION_PHY)
         {
             cec = Create<SatRtnLinkChannelEstimationErrorContainer>(minWfId, maxWfId);
         }
@@ -171,7 +185,8 @@ SatGwHelperDvb::Install(Ptr<Node> n,
     parameters.m_daIfModel = m_daInterferenceModel;
     parameters.m_raIfModel = m_raSettings.m_raInterferenceModel;
     parameters.m_raIfEliminateModel = m_raSettings.m_raInterferenceEliminationModel;
-    parameters.m_linkRegenerationMode = returnLinkRegenerationMode;
+    parameters.m_linkRegenerationMode =
+        Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode();
     parameters.m_bwConverter = m_carrierBandwidthConverter;
     parameters.m_carrierCount = m_rtnLinkCarrierCount;
     parameters.m_cec = cec;
@@ -183,8 +198,7 @@ SatGwHelperDvb::Install(Ptr<Node> n,
         params,
         m_linkResults,
         parameters,
-        m_superframeSeq->GetSuperframeConf(SatConstVariables::SUPERFRAME_SEQUENCE),
-        returnLinkRegenerationMode);
+        m_superframeSeq->GetSuperframeConf(SatConstVariables::SUPERFRAME_SEQUENCE));
     phy->SetChannelPairGetterCallback(cbChannel);
 
     ncc->SetUseLogon(m_superframeSeq->GetSuperframeConf(SatConstVariables::SUPERFRAME_SEQUENCE)
@@ -194,13 +208,7 @@ SatGwHelperDvb::Install(Ptr<Node> n,
     phy->SetTxFadingContainer(n->GetObject<SatBaseFading>());
     phy->SetRxFadingContainer(n->GetObject<SatBaseFading>());
 
-    Ptr<SatGwMac> mac = CreateObject<SatGwMac>(n,
-                                               satId,
-                                               beamId,
-                                               feederSatId,
-                                               feederBeamId,
-                                               forwardLinkRegenerationMode,
-                                               returnLinkRegenerationMode);
+    Ptr<SatGwMac> mac = CreateObject<SatGwMac>(n, satId, beamId, feederSatId, feederBeamId);
 
     // Set the control message container callbacks
     mac->SetReadCtrlCallback(m_readCtrlCb);
@@ -233,14 +241,14 @@ SatGwHelperDvb::Install(Ptr<Node> n,
     dev->SetMac(mac);
 
     // Create Logical Link Control (LLC) layer
-    Ptr<SatGwLlc> llc =
-        CreateObject<SatGwLlc>(forwardLinkRegenerationMode, returnLinkRegenerationMode);
+    Ptr<SatGwLlc> llc = CreateObject<SatGwLlc>();
 
     // Set the control msg read callback to LLC due to ARQ ACKs
     llc->SetReadCtrlCallback(m_readCtrlCb);
 
-    if (forwardLinkRegenerationMode != SatEnums::TRANSPARENT &&
-        forwardLinkRegenerationMode != SatEnums::REGENERATION_PHY)
+    if (Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode() != SatEnums::TRANSPARENT &&
+        Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode() !=
+            SatEnums::REGENERATION_PHY)
     {
         llc->SetAdditionalHeaderSize(SatAddressE2ETag::SIZE);
     }
@@ -308,7 +316,7 @@ SatGwHelperDvb::Install(Ptr<Node> n,
     // Begin frame end scheduling for processes utilizing frame length as interval
     // Node info needs to be set before the start in order to get the scheduling context correctly
     // set
-    if (returnLinkRegenerationMode == SatEnums::TRANSPARENT)
+    if (Singleton<SatTopology>::Get()->GetReturnLinkRegenerationMode() == SatEnums::TRANSPARENT)
     {
         phy->BeginEndScheduling();
     }
@@ -353,7 +361,7 @@ SatGwHelperDvb::Install(Ptr<Node> n,
     }
 
     Singleton<SatTopology>::Get()
-        ->AddGwLayers(n, feederSatId, feederBeamId, satId, beamId, dev, llc, mac, phy);
+        ->AddGwLayersDvb(n, feederSatId, feederBeamId, satId, beamId, dev, llc, mac, phy);
 
     return dev;
 }

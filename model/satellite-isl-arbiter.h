@@ -30,6 +30,7 @@
 #include <ns3/node.h>
 #include <ns3/packet.h>
 
+#include <stdint.h>
 #include <string>
 
 namespace ns3

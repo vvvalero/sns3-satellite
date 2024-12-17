@@ -51,6 +51,7 @@
 #include <ns3/uinteger.h>
 
 #include <iostream>
+#include <stdint.h>
 
 using namespace ns3;
 
@@ -118,7 +119,6 @@ SatLoraFirstWindowTestCase::DoRun(void)
     Config::SetDefault("ns3::LorawanMacEndDevice::DataRate", UintegerValue(5));
     Config::SetDefault("ns3::LorawanMacEndDevice::MType",
                        EnumValue(LorawanMacHeader::CONFIRMED_DATA_UP));
-    Config::SetDefault("ns3::SatLorawanNetDevice::ForwardToUtUsers", BooleanValue(false));
     Config::SetDefault("ns3::SatLoraConf::Standard", EnumValue(SatLoraConf::SATELLITE));
 
     Config::SetDefault("ns3::LorawanMacEndDeviceClassA::FirstWindowDelay",
@@ -271,7 +271,6 @@ SatLoraSecondWindowTestCase::DoRun(void)
     Config::SetDefault("ns3::LorawanMacEndDevice::DataRate", UintegerValue(5));
     Config::SetDefault("ns3::LorawanMacEndDevice::MType",
                        EnumValue(LorawanMacHeader::CONFIRMED_DATA_UP));
-    Config::SetDefault("ns3::SatLorawanNetDevice::ForwardToUtUsers", BooleanValue(false));
     Config::SetDefault("ns3::SatLoraConf::Standard", EnumValue(SatLoraConf::SATELLITE));
 
     Config::SetDefault("ns3::LorawanMacEndDeviceClassA::FirstWindowDelay",
@@ -392,7 +391,7 @@ class SatLoraOutOfWindowWindowTestCase : public TestCase
 };
 
 SatLoraOutOfWindowWindowTestCase::SatLoraOutOfWindowWindowTestCase()
-    : TestCase("Test satellite lorawan with acks sent in second window."),
+    : TestCase("Test satellite lorawan with acks sent out of reception windows."),
       m_edReceiveDate(Seconds(0)),
       m_phyGwReceive(false),
       m_phyEdReceive(false)
@@ -446,7 +445,6 @@ SatLoraOutOfWindowWindowTestCase::DoRun(void)
     Config::SetDefault("ns3::LorawanMacEndDevice::DataRate", UintegerValue(5));
     Config::SetDefault("ns3::LorawanMacEndDevice::MType",
                        EnumValue(LorawanMacHeader::CONFIRMED_DATA_UP));
-    Config::SetDefault("ns3::SatLorawanNetDevice::ForwardToUtUsers", BooleanValue(false));
     Config::SetDefault("ns3::SatLoraConf::Standard", EnumValue(SatLoraConf::SATELLITE));
 
     Config::SetDefault("ns3::LorawanMacEndDeviceClassA::FirstWindowDelay",
@@ -569,7 +567,8 @@ class SatLoraOutOfWindowWindowNoRetransmissionTestCase : public TestCase
 };
 
 SatLoraOutOfWindowWindowNoRetransmissionTestCase::SatLoraOutOfWindowWindowNoRetransmissionTestCase()
-    : TestCase("Test satellite lorawan with acks sent in second window."),
+    : TestCase("Test satellite lorawan with acks sent out of reception windows and no "
+               "retransmission needed."),
       m_edReceiveDate(Seconds(0))
 {
 }
@@ -606,7 +605,6 @@ SatLoraOutOfWindowWindowNoRetransmissionTestCase::DoRun(void)
     Config::SetDefault("ns3::LorawanMacEndDevice::DataRate", UintegerValue(5));
     Config::SetDefault("ns3::LorawanMacEndDevice::MType",
                        EnumValue(LorawanMacHeader::UNCONFIRMED_DATA_UP));
-    Config::SetDefault("ns3::SatLorawanNetDevice::ForwardToUtUsers", BooleanValue(false));
     Config::SetDefault("ns3::SatLoraConf::Standard", EnumValue(SatLoraConf::SATELLITE));
 
     Config::SetDefault("ns3::LorawanMacEndDeviceClassA::FirstWindowDelay",
@@ -754,7 +752,6 @@ SatLoraCbrTestCase::DoRun(void)
     Config::SetDefault("ns3::LorawanMacEndDevice::DataRate", UintegerValue(5));
     Config::SetDefault("ns3::LorawanMacEndDevice::MType",
                        EnumValue(LorawanMacHeader::CONFIRMED_DATA_UP));
-    Config::SetDefault("ns3::SatLorawanNetDevice::ForwardToUtUsers", BooleanValue(true));
     Config::SetDefault("ns3::SatLoraConf::Standard", EnumValue(SatLoraConf::SATELLITE));
 
     Config::SetDefault("ns3::LorawanMacEndDeviceClassA::FirstWindowDelay",
@@ -869,7 +866,7 @@ class SatLoraTestSuite : public TestSuite
 };
 
 SatLoraTestSuite::SatLoraTestSuite()
-    : TestSuite("sat-lora-test", Type::UNIT)
+    : TestSuite("sat-lora-test", Type::SYSTEM)
 {
     AddTestCase(new SatLoraFirstWindowTestCase, TestCase::Duration::QUICK);
     AddTestCase(new SatLoraSecondWindowTestCase, TestCase::Duration::QUICK);

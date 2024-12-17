@@ -354,6 +354,8 @@ SatNcc::AddBeam(uint32_t satId,
 
     scheduler->SetSendTbtpCallback(tbtpCb);
 
+    scheduler->SetUseLora(m_useLora);
+
     m_beamSchedulers.insert(std::make_pair(std::make_pair(satId, beamId), scheduler));
 }
 
@@ -591,6 +593,12 @@ SatNcc::SetUseLora(bool useLora)
     NS_LOG_FUNCTION(this << useLora);
 
     m_useLora = useLora;
+
+    for (std::pair<std::pair<uint32_t, uint32_t>, Ptr<SatBeamScheduler>> beamScheduler :
+         m_beamSchedulers)
+    {
+        beamScheduler.second->SetUseLora(m_useLora);
+    }
 }
 
 void

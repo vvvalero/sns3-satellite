@@ -24,6 +24,8 @@
 #include <ns3/mobility-model.h>
 #include <ns3/propagation-delay-model.h>
 
+#include <stdint.h>
+
 namespace ns3
 {
 

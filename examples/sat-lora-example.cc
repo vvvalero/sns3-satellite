@@ -45,7 +45,7 @@ main(int argc, char* argv[])
     std::string beams = "3 4 5 6";
     // std::string beams = "8";
     uint32_t nbGwUser = 1;
-    uint32_t nbUtsPerBeam = 100;
+    uint32_t nbUtsPerBeam = 5;
     uint32_t nbEndUsersPerUt = 1;
 
     Time appStartTime = Seconds(0.001);
@@ -122,7 +122,6 @@ main(int argc, char* argv[])
     Config::SetDefault("ns3::LorawanMacEndDevice::DataRate", UintegerValue(5));
     Config::SetDefault("ns3::LorawanMacEndDevice::MType",
                        EnumValue(LorawanMacHeader::CONFIRMED_DATA_UP));
-    Config::SetDefault("ns3::SatLorawanNetDevice::ForwardToUtUsers", BooleanValue(true));
 
     // Config::SetDefault ("ns3::SatLoraConf::Standard", EnumValue (SatLoraConf::EU863_870));
     Config::SetDefault("ns3::SatLoraConf::Standard", EnumValue(SatLoraConf::SATELLITE));

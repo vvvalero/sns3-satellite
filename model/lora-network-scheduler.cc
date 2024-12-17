@@ -22,6 +22,8 @@
 
 #include "lora-network-scheduler.h"
 
+#include <stdint.h>
+
 NS_LOG_COMPONENT_DEFINE("LoraNetworkScheduler");
 
 namespace ns3
@@ -73,6 +75,9 @@ LoraNetworkScheduler::LoraNetworkScheduler(Ptr<LoraNetworkStatus> status,
       m_secondWindowAnswerDelay(Seconds(2))
 {
     ObjectBase::ConstructSelf(AttributeConstructionList());
+
+    NS_ASSERT_MSG(m_firstWindowAnswerDelay < m_secondWindowAnswerDelay,
+                  "First window answer delay must be lower than second window answer delay");
 }
 
 LoraNetworkScheduler::~LoraNetworkScheduler()

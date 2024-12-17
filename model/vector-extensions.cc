@@ -25,6 +25,7 @@
 #include "vector-extensions.h"
 
 #include <cmath>
+#include <stdint.h>
 
 namespace ns3
 {

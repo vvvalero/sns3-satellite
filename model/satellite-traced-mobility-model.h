@@ -26,6 +26,7 @@
 
 #include <ns3/nstime.h>
 
+#include <stdint.h>
 #include <string>
 
 namespace ns3

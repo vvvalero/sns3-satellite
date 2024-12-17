@@ -25,6 +25,7 @@
 #include "ns3/log.h"
 
 #include <fstream>
+#include <stdint.h>
 
 NS_LOG_COMPONENT_DEFINE("SatOutputFileStreamWrapper");
 

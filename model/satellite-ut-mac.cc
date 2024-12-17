@@ -167,10 +167,8 @@ SatUtMac::SatUtMac(Ptr<Node> node,
                    uint32_t satId,
                    uint32_t beamId,
                    Ptr<SatSuperframeSeq> seq,
-                   SatEnums::RegenerationMode_t forwardLinkRegenerationMode,
-                   SatEnums::RegenerationMode_t returnLinkRegenerationMode,
                    bool crdsaOnlyForControl)
-    : SatMac(satId, beamId, forwardLinkRegenerationMode, returnLinkRegenerationMode),
+    : SatMac(satId, beamId),
       m_node(node),
       m_satId(satId),
       m_beamId(beamId),
@@ -2060,12 +2058,12 @@ SatUtMac::DoFrameStart()
                         SetSatelliteAddress(satAddress48);
                     }
 
-                    Address gwAddress = m_beamSchedulerCallback(m_satId, m_beamId)->GetGwAddress();
-                    Mac48Address gwAddress48 = Mac48Address::ConvertFrom(gwAddress);
-                    if (gwAddress48 != m_gwAddress)
+                    Mac48Address gwAddress =
+                        Singleton<SatTopology>::Get()->GetGwAddressInUt(m_nodeInfo->GetNodeId());
+                    if (gwAddress != m_gwAddress)
                     {
-                        SetGwAddress(gwAddress48);
-                        m_updateGwAddressCallback(gwAddress48);
+                        SetGwAddress(gwAddress);
+                        m_updateGwAddressCallback(gwAddress);
                         m_routingUpdateCallback(m_nodeInfo->GetMacAddress(), gwAddress);
                     }
                     m_handoverCallback(m_satId, m_beamId);

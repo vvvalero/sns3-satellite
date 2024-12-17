@@ -27,12 +27,15 @@
 #include "lora-frame-header.h"
 #include "lora-tag.h"
 #include "lorawan-mac-header.h"
+#include "satellite-ground-station-address-tag.h"
+#include "satellite-topology.h"
 
 #include <ns3/command-line.h>
 #include <ns3/log.h>
 #include <ns3/packet.h>
 #include <ns3/pointer.h>
 #include <ns3/simulator.h>
+#include <ns3/singleton.h>
 
 #include <algorithm>
 #include <iostream>
@@ -58,6 +61,7 @@ LoraEndDeviceStatus::LoraEndDeviceStatus(LoraDeviceAddress endDeviceAddress,
                                          Ptr<LorawanMacEndDeviceClassA> endDeviceMac)
     : m_reply(LoraEndDeviceStatus::Reply()),
       m_endDeviceAddress(endDeviceAddress),
+      m_utAddress(endDeviceMac->GetAddress()),
       m_receivedPacketList(ReceivedPacketList()),
       m_mac(endDeviceMac)
 {
@@ -159,6 +163,14 @@ LoraEndDeviceStatus::GetCompleteReplyPacket(void)
     replyPacket->AddHeader(m_reply.frameHeader);
     replyPacket->AddHeader(m_reply.macHeader);
 
+    if (Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode() ==
+        SatEnums::REGENERATION_NETWORK)
+    {
+        SatGroundStationAddressTag groundStationAddressTag =
+            SatGroundStationAddressTag(Mac48Address::ConvertFrom(m_utAddress));
+        replyPacket->AddPacketTag(groundStationAddressTag);
+    }
+
     NS_LOG_DEBUG("Added MAC header" << m_reply.macHeader);
     NS_LOG_DEBUG("Added frame header" << m_reply.frameHeader);
 
@@ -218,6 +230,7 @@ void
 LoraEndDeviceStatus::SetBeamId(uint8_t beamId)
 {
     NS_LOG_FUNCTION(this << beamId);
+
     m_beamId = beamId;
 }
 

@@ -27,6 +27,7 @@
 #include <ns3/mac48-address.h>
 
 #include <map>
+#include <stdint.h>
 
 namespace ns3
 {

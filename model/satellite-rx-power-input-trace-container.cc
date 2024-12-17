@@ -28,6 +28,7 @@
 
 #include <ios>
 #include <sstream>
+#include <stdint.h>
 #include <string>
 #include <utility>
 

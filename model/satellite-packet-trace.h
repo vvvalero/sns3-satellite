@@ -28,6 +28,7 @@
 #include <ns3/object.h>
 #include <ns3/output-stream-wrapper.h>
 
+#include <stdint.h>
 #include <string>
 
 namespace ns3

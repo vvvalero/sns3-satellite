@@ -22,6 +22,8 @@
 
 #include <ns3/log.h>
 
+#include <stdint.h>
+
 NS_LOG_COMPONENT_DEFINE("SatBaseFaderConf");
 
 namespace ns3

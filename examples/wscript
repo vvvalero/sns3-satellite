@@ -43,8 +43,17 @@ def build(bld):
     obj = bld.create_ns3_program('sat-gw-handover-example', ['satellite'])
     obj.source = 'sat-gw-handover-example.cc'
 
+    obj = bld.create_ns3_program('sat-lora-constellation-example', ['satellite'])
+    obj.source = 'sat-lora-constellation-example.cc'
+
     obj = bld.create_ns3_program('sat-lora-example', ['satellite'])
+    obj.source = 'sat-lora-handover-example.cc'
+
+    obj = bld.create_ns3_program('sat-lora-handover-example', ['satellite'])
     obj.source = 'sat-lora-example.cc'
+
+    obj = bld.create_ns3_program('sat-lora-regenerative-example', ['satellite'])
+    obj.source = 'sat-lora-regenerative-example.cc'
 
     obj = bld.create_ns3_program('sat-list-position-ext-fading-example', ['satellite'])
     obj.source = 'sat-list-position-ext-fading-example.cc'

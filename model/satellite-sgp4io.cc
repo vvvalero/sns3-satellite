@@ -27,6 +27,8 @@
 
 #include "satellite-sgp4io.h"
 
+#include <stdint.h>
+
 /* -----------------------------------------------------------------------------
  *
  *                           function twoline2rv

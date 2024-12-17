@@ -30,6 +30,8 @@
 #include "ns3/net-device-container.h"
 #include "ns3/object-factory.h"
 
+#include <stdint.h>
+
 namespace ns3
 {
 

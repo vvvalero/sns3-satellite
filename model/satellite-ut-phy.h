@@ -35,6 +35,7 @@
 #include <ns3/ptr.h>
 
 #include <set>
+#include <stdint.h>
 
 namespace ns3
 {
@@ -68,8 +69,7 @@ class SatUtPhy : public SatPhy
     SatUtPhy(SatPhy::CreateParam_t& params,
              Ptr<SatLinkResults> linkResults,
              SatPhyRxCarrierConf::RxCarrierCreateParams_s parameters,
-             Ptr<SatSuperframeConf> superFrameConf,
-             SatEnums::RegenerationMode_t forwardLinkRegenerationMode);
+             Ptr<SatSuperframeConf> superFrameConf);
 
     /**
      * Destructor

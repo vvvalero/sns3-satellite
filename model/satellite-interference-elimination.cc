@@ -25,6 +25,8 @@
 #include <ns3/log.h>
 #include <ns3/simulator.h>
 
+#include <stdint.h>
+
 NS_LOG_COMPONENT_DEFINE("SatInterferenceElimination");
 
 namespace ns3

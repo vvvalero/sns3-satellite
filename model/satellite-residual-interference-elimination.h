@@ -25,6 +25,8 @@
 #include "satellite-interference-elimination.h"
 #include "satellite-wave-form-conf.h"
 
+#include <stdint.h>
+
 namespace ns3
 {
 

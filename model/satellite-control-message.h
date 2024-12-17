@@ -36,6 +36,7 @@
 #include <map>
 #include <ostream>
 #include <set>
+#include <stdint.h>
 #include <utility>
 #include <vector>
 

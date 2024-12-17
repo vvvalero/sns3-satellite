@@ -24,6 +24,7 @@
 #include <ns3/object.h>
 #include <ns3/random-variable-stream.h>
 
+#include <stdint.h>
 #include <string>
 #include <vector>
 

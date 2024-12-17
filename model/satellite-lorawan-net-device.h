@@ -35,6 +35,8 @@
 #include <ns3/ipv4-l3-protocol.h>
 #include <ns3/node.h>
 
+#include <stdint.h>
+
 namespace ns3
 {
 
@@ -65,9 +67,6 @@ class SatLorawanNetDevice : public SatNetDevice
     virtual bool Send(Ptr<Packet> packet, const Address& dest, uint16_t protocolNumber);
     bool SendControlMsg(Ptr<SatControlMessage> msg, const Address& dest);
 
-    Ptr<LorawanMac> GetLorawanMac();
-    void SetLorawanMac(Ptr<LorawanMac> lorawanMac);
-
     typedef Callback<bool, Ptr<SatLorawanNetDevice>, Ptr<const Packet>, uint16_t, const Address&>
         ReceiveCallback;
 
@@ -93,8 +92,7 @@ class SatLorawanNetDevice : public SatNetDevice
     virtual void DoDispose(void);
 
   private:
-    Ptr<LorawanMac> m_lorawanMac;
-    bool m_forwardToUtUsers;
+    bool m_isRegenerative;
     ReceiveCallback m_rxNetworkServerCallback;
 };
 

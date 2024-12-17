@@ -29,6 +29,7 @@
 #include <ns3/position-allocator.h>
 #include <ns3/random-variable-stream.h>
 
+#include <stdint.h>
 #include <vector>
 
 namespace ns3

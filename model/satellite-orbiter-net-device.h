@@ -73,14 +73,14 @@ class SatOrbiterNetDevice : public NetDevice
      * \param packet Packet received
      * \param userAddress MAC address of user that received this packet
      */
-    void ReceivePacketUser(Ptr<Packet> packet, const Address& userAddress);
+    virtual void ReceivePacketUser(Ptr<Packet> packet, const Address& userAddress) = 0;
 
     /**
      * \brief Receive the packet from the lower layers, in network regeneration on forward link
      * \param packet Packet received
      * \param feederAddress MAC address of feeder that received this packet
      */
-    void ReceivePacketFeeder(Ptr<Packet> packet, const Address& feederAddress);
+    virtual void ReceivePacketFeeder(Ptr<Packet> packet, const Address& feederAddress) = 0;
 
     /**
      * \brief Receive the packet from the lower layers
@@ -103,9 +103,9 @@ class SatOrbiterNetDevice : public NetDevice
      * \param rxParams Strucutre storing additional parameters
      * \return True if success
      */
-    bool SendControlMsgToFeeder(Ptr<SatControlMessage> msg,
-                                const Address& dest,
-                                Ptr<SatSignalParameters> rxParams);
+    virtual bool SendControlMsgToFeeder(Ptr<SatControlMessage> msg,
+                                        const Address& dest,
+                                        Ptr<SatSignalParameters> rxParams) = 0;
 
     /**
      * Add the User Phy object for the beam
@@ -268,14 +268,14 @@ class SatOrbiterNetDevice : public NetDevice
      * \param utAddress MAC address of the UT to connect
      * \param beamId beam used by satellite to reach this UT
      */
-    void ConnectUt(Mac48Address utAddress, uint32_t beamId);
+    virtual void ConnectUt(Mac48Address utAddress, uint32_t beamId) = 0;
 
     /**
      * Disconnect a UT to this satellite.
      * \param utAddress MAC address of the UT to disconnect
      * \param beamId beam used by satellite to reach this UT
      */
-    void DisconnectUt(Mac48Address utAddress, uint32_t beamId);
+    virtual void DisconnectUt(Mac48Address utAddress, uint32_t beamId) = 0;
 
     /**
      * The the list of UT MAC connected to this satellite.
@@ -320,7 +320,7 @@ class SatOrbiterNetDevice : public NetDevice
      * \param packet The packet to send
      * \param destination The MAC address of ground station that will receive the packet
      */
-    void ReceiveFromIsl(Ptr<Packet> packet, Mac48Address destination);
+    virtual void ReceiveFromIsl(Ptr<Packet> packet, Mac48Address destination) = 0;
 
     // inherited from NetDevice base class.
     virtual void SetIfIndex(const uint32_t index);
@@ -359,7 +359,6 @@ class SatOrbiterNetDevice : public NetDevice
      */
     virtual void DoDispose(void);
 
-  private:
     /**
      * Get UT MAC address associated to this packet.
      * May be source or destination depending on link

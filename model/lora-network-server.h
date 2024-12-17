@@ -38,6 +38,8 @@
 #include <ns3/packet.h>
 #include <ns3/point-to-point-net-device.h>
 
+#include <stdint.h>
+
 namespace ns3
 {
 

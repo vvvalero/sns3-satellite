@@ -28,6 +28,7 @@
 #include <ns3/tag.h>
 
 #include <ostream>
+#include <stdint.h>
 
 namespace ns3
 {

@@ -32,6 +32,7 @@
 #include <ns3/string.h>
 
 #include <map>
+#include <stdint.h>
 #include <string>
 
 #define STRINGIFY(x) #x

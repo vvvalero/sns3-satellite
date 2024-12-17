@@ -24,6 +24,7 @@
 #define SATELLITE_CONST_VARIABLES_H
 
 #include <cstdint>
+#include <stdint.h>
 
 namespace ns3
 {
