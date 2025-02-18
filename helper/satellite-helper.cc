@@ -393,8 +393,6 @@ SatHelper::LoadConstellationTopology(std::vector<std::string>& tles,
 {
     NS_LOG_FUNCTION(this);
 
-    m_scenarioPath + "beams/rtnConf.txt";
-
     m_satConf->Initialize(m_rtnConfFileName,
                           m_fwdConfFileName,
                           m_gwPosFileName,

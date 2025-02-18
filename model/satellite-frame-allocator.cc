@@ -28,6 +28,7 @@
 
 #include <algorithm>
 #include <limits>
+#include <random>
 #include <utility>
 #include <vector>
 
@@ -1364,7 +1365,8 @@ SatFrameAllocator::SortUts()
     }
 
     // sort UTs using random method.
-    std::random_shuffle(uts.begin(), uts.end());
+    std::default_random_engine rng = std::default_random_engine{};
+    std::shuffle(uts.begin(), uts.end(), rng);
 
     return uts;
 }
@@ -1382,7 +1384,8 @@ SatFrameAllocator::SortCarriers()
     }
 
     // sort available carriers using random methods.
-    std::random_shuffle(carriers.begin(), carriers.end());
+    std::default_random_engine rng = std::default_random_engine{};
+    std::shuffle(carriers.begin(), carriers.end(), rng);
 
     return carriers;
 }
@@ -1403,7 +1406,8 @@ SatFrameAllocator::SortUtRcs(Address ut)
     if (rcIndices.size() > 2)
     {
         // sort RCs in UT using random method.
-        std::random_shuffle(rcIndices.begin() + 1, rcIndices.end());
+        std::default_random_engine rng = std::default_random_engine{};
+        std::shuffle(rcIndices.begin() + 1, rcIndices.end(), rng);
     }
 
     return rcIndices;

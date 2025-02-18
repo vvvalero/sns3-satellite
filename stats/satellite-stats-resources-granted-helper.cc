@@ -345,7 +345,7 @@ SatStatsResourcesGrantedHelper::InstallProbe(Ptr<Node> utNode, R (C::*collectorT
 
 } // end of `void InstallProbe (Ptr<Node>, R (C::*) (P, P));`
 
-template <typename R, typename C, typename P>
+// template <typename R, typename C, typename P>
 void
 SatStatsResourcesGrantedHelper::UpdateIdentifierOnProbes()
 {
@@ -358,7 +358,6 @@ SatStatsResourcesGrantedHelper::UpdateIdentifierOnProbes()
         Ptr<Probe> probe = it->first;
         Ptr<Node> node = it->second.first;
         uint32_t identifier = it->second.second;
-        R (C::*collectorTraceSink)(P, P);
 
         switch (GetOutputType())
         {
@@ -368,19 +367,76 @@ SatStatsResourcesGrantedHelper::UpdateIdentifierOnProbes()
             break;
 
         case SatStatsHelper::OUTPUT_SCALAR_FILE: {
-            collectorTraceSink = &ScalarCollector::TraceSinkUinteger32;
+            if (!m_terminalCollectors.DisconnectWithProbe(probe->GetObject<Probe>(),
+                                                          "Output",
+                                                          identifier,
+                                                          &ScalarCollector::TraceSinkUinteger32))
+            {
+                NS_FATAL_ERROR("Error disconnecting trace file on handover");
+            }
+
+            identifier = GetIdentifierForUtUser(node);
+
+            if (!m_terminalCollectors.ConnectWithProbe(probe->GetObject<Probe>(),
+                                                       "Output",
+                                                       identifier,
+                                                       &ScalarCollector::TraceSinkUinteger32))
+            {
+                NS_FATAL_ERROR("Error connecting trace file on handover");
+            }
+
+            it->second.second = identifier;
             break;
         }
 
         case SatStatsHelper::OUTPUT_SCATTER_FILE: {
-            collectorTraceSink = &UnitConversionCollector::TraceSinkUinteger32;
+            if (!m_terminalCollectors.DisconnectWithProbe(
+                    probe->GetObject<Probe>(),
+                    "Output",
+                    identifier,
+                    &UnitConversionCollector::TraceSinkUinteger32))
+            {
+                NS_FATAL_ERROR("Error disconnecting trace file on handover");
+            }
+
+            identifier = GetIdentifierForUtUser(node);
+
+            if (!m_terminalCollectors.ConnectWithProbe(
+                    probe->GetObject<Probe>(),
+                    "Output",
+                    identifier,
+                    &UnitConversionCollector::TraceSinkUinteger32))
+            {
+                NS_FATAL_ERROR("Error connecting trace file on handover");
+            }
+
+            it->second.second = identifier;
             break;
         }
 
         case SatStatsHelper::OUTPUT_HISTOGRAM_FILE:
         case SatStatsHelper::OUTPUT_PDF_FILE:
         case SatStatsHelper::OUTPUT_CDF_FILE: {
-            collectorTraceSink = &DistributionCollector::TraceSinkUinteger32;
+            if (!m_terminalCollectors.DisconnectWithProbe(
+                    probe->GetObject<Probe>(),
+                    "Output",
+                    identifier,
+                    &DistributionCollector::TraceSinkUinteger32))
+            {
+                NS_FATAL_ERROR("Error disconnecting trace file on handover");
+            }
+
+            identifier = GetIdentifierForUtUser(node);
+
+            if (!m_terminalCollectors.ConnectWithProbe(probe->GetObject<Probe>(),
+                                                       "Output",
+                                                       identifier,
+                                                       &DistributionCollector::TraceSinkUinteger32))
+            {
+                NS_FATAL_ERROR("Error connecting trace file on handover");
+            }
+
+            it->second.second = identifier;
             break;
         }
 
@@ -390,14 +446,53 @@ SatStatsResourcesGrantedHelper::UpdateIdentifierOnProbes()
             break;
 
         case SatStatsHelper::OUTPUT_SCATTER_PLOT: {
-            collectorTraceSink = &UnitConversionCollector::TraceSinkUinteger32;
+            if (!m_terminalCollectors.DisconnectWithProbe(
+                    probe->GetObject<Probe>(),
+                    "Output",
+                    identifier,
+                    &UnitConversionCollector::TraceSinkUinteger32))
+            {
+                NS_FATAL_ERROR("Error disconnecting trace file on handover");
+            }
+
+            identifier = GetIdentifierForUtUser(node);
+
+            if (!m_terminalCollectors.ConnectWithProbe(
+                    probe->GetObject<Probe>(),
+                    "Output",
+                    identifier,
+                    &UnitConversionCollector::TraceSinkUinteger32))
+            {
+                NS_FATAL_ERROR("Error connecting trace file on handover");
+            }
+
+            it->second.second = identifier;
             break;
         }
 
         case SatStatsHelper::OUTPUT_HISTOGRAM_PLOT:
         case SatStatsHelper::OUTPUT_PDF_PLOT:
         case SatStatsHelper::OUTPUT_CDF_PLOT: {
-            collectorTraceSink = &DistributionCollector::TraceSinkUinteger32;
+            if (!m_terminalCollectors.DisconnectWithProbe(
+                    probe->GetObject<Probe>(),
+                    "Output",
+                    identifier,
+                    &DistributionCollector::TraceSinkUinteger32))
+            {
+                NS_FATAL_ERROR("Error disconnecting trace file on handover");
+            }
+
+            identifier = GetIdentifierForUtUser(node);
+
+            if (!m_terminalCollectors.ConnectWithProbe(probe->GetObject<Probe>(),
+                                                       "Output",
+                                                       identifier,
+                                                       &DistributionCollector::TraceSinkUinteger32))
+            {
+                NS_FATAL_ERROR("Error connecting trace file on handover");
+            }
+
+            it->second.second = identifier;
             break;
         }
 
@@ -405,26 +500,6 @@ SatStatsResourcesGrantedHelper::UpdateIdentifierOnProbes()
             NS_FATAL_ERROR("SatStatsResourcesGrantedHelper - Invalid output type");
             break;
         }
-
-        if (!m_terminalCollectors.DisconnectWithProbe(probe->GetObject<Probe>(),
-                                                      "Output",
-                                                      identifier,
-                                                      collectorTraceSink))
-        {
-            NS_FATAL_ERROR("Error disconnecting trace file on handover");
-        }
-
-        identifier = GetIdentifierForUtUser(node);
-
-        if (!m_terminalCollectors.ConnectWithProbe(probe->GetObject<Probe>(),
-                                                   "Output",
-                                                   identifier,
-                                                   collectorTraceSink))
-        {
-            NS_FATAL_ERROR("Error connecting trace file on handover");
-        }
-
-        it->second.second = identifier;
     }
 } // end of `void UpdateIdentifierOnProbes ();`
 

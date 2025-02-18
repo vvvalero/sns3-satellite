@@ -60,7 +60,7 @@ class SatStatsResourcesGrantedHelper : public SatStatsHelper
     /**
      * Change identifier used on probes, when handovers occur.
      */
-    template <typename R, typename C, typename P>
+    // template <typename R, typename C, typename P>
     void UpdateIdentifierOnProbes();
 
   protected:
