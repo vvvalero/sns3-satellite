@@ -468,7 +468,8 @@ main(int argc, char* argv[])
             }
 
             // randomize users
-            std::random_shuffle(ids.begin(), ids.end());
+            Ptr<UniformRandomVariable> r = CreateObject<UniformRandomVariable>();
+            Shuffle(ids.begin(), ids.end(), r);
 
             // set source GW or UT users
             groupSource = users.Get(sources[i]);
