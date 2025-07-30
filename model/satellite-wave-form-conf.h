@@ -229,6 +229,16 @@ class SatWaveformConf : public Object
     SatWaveformConf(std::string directoryPathName);
 
     /**
+     * Notifier called once the ObjectBase is fully constructed.
+     *
+     * This method is invoked once all member attributes have been
+     * initialized. Subclasses can override this method to be notified
+     * of this event but if they do this, they must chain up to their
+     * parent's NotifyConstructionCompleted method.
+     */
+    virtual void NotifyConstructionCompleted() override;
+
+    /**
      * Destructor for SatWaveformConf
      */
     virtual ~SatWaveformConf();
@@ -237,12 +247,6 @@ class SatWaveformConf : public Object
      * Derived from Object
      */
     static TypeId GetTypeId(void);
-
-    /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
 
     /**
      * Check if ACM is enabled.

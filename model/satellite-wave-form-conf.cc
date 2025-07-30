@@ -206,9 +206,7 @@ SatWaveformConf::SatWaveformConf(std::string directoryPathName)
       m_maxWfId(23),
       m_burstLength(SatEnums::UNKNOWN_BURST)
 {
-    NS_LOG_FUNCTION(this);
-
-    ObjectBase::ConstructSelf(AttributeConstructionList());
+    NS_LOG_FUNCTION(this << directoryPathName);
 
     if (!Singleton<SatEnvVariables>::Get()->IsValidDirectory(directoryPathName))
     {
@@ -220,6 +218,14 @@ SatWaveformConf::SatWaveformConf(std::string directoryPathName)
 
     ReadFromFile(waveformsFilePathName);
     ReadFromFileDefaultWaveform(defaultWaveform);
+}
+
+void
+SatWaveformConf::NotifyConstructionCompleted()
+{
+    NS_LOG_FUNCTION(this);
+
+    Object::NotifyConstructionCompleted();
 
     switch (m_burstLength)
     {
@@ -266,14 +272,6 @@ SatWaveformConf::GetTypeId(void)
                                                           "ShortAndLongBurst"))
                             .AddConstructor<SatWaveformConf>();
     return tid;
-}
-
-TypeId
-SatWaveformConf::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
 }
 
 SatWaveformConf::~SatWaveformConf()

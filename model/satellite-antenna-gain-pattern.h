@@ -79,6 +79,16 @@ class SatAntennaGainPattern : public Object
      */
     SatAntennaGainPattern(std::string filePathName, GeoCoordinate defaultSatellitePosition);
 
+    /**
+     * Notifier called once the ObjectBase is fully constructed.
+     *
+     * This method is invoked once all member attributes have been
+     * initialized. Subclasses can override this method to be notified
+     * of this event but if they do this, they must chain up to their
+     * parent's NotifyConstructionCompleted method.
+     */
+    virtual void NotifyConstructionCompleted() override;
+
     ~SatAntennaGainPattern()
     {
     }
@@ -224,6 +234,9 @@ class SatAntennaGainPattern : public Object
      */
     static const std::string m_nanStringArray[4];
     std::vector<std::string> m_nanStrings;
+
+    std::string m_filePathName;
+    GeoCoordinate m_defaultSatellitePosition;
 };
 
 } // namespace ns3
