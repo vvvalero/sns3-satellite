@@ -43,7 +43,15 @@ NS_OBJECT_ENSURE_REGISTERED(SatPacketTrace);
 
 SatPacketTrace::SatPacketTrace()
 {
-    ObjectBase::ConstructSelf(AttributeConstructionList());
+    NS_LOG_FUNCTION(this);
+}
+
+void
+SatPacketTrace::NotifyConstructionCompleted()
+{
+    NS_LOG_FUNCTION(this);
+
+    Object::NotifyConstructionCompleted();
 
     AsciiTraceHelper asciiTraceHelper;
 
@@ -58,13 +66,6 @@ SatPacketTrace::SatPacketTrace()
 SatPacketTrace::~SatPacketTrace()
 {
     NS_LOG_FUNCTION(this);
-}
-
-TypeId
-SatPacketTrace::GetInstanceTypeId() const
-{
-    NS_LOG_FUNCTION(this);
-    return GetTypeId();
 }
 
 TypeId

@@ -22,6 +22,7 @@
 #define SATELLITE_CHANNEL_H
 
 #include "satellite-enums.h"
+#include "satellite-fading-external-input-trace-container.h"
 #include "satellite-free-space-loss.h"
 #include "satellite-phy-rx-carrier-conf.h"
 #include "satellite-phy-rx.h"
@@ -70,6 +71,16 @@ class SatChannel : public Channel
      * Default constructor.
      */
     SatChannel();
+
+    /**
+     * Notifier called once the ObjectBase is fully constructed.
+     *
+     * This method is invoked once all member attributes have been
+     * initialized. Subclasses can override this method to be notified
+     * of this event but if they do this, they must chain up to their
+     * parent's NotifyConstructionCompleted method.
+     */
+    virtual void NotifyConstructionCompleted() override;
 
     /**
      * Destructor for SatChannel
@@ -258,6 +269,11 @@ class SatChannel : public Channel
      * \brief Defines whether external fading input tracing is in use or not
      */
     bool m_enableExternalFadingInputTrace;
+
+    /**
+     * \brief External fading input tracing container
+     */
+    Ptr<SatFadingExternalInputTraceContainer> m_satFadingExternalInputTraceContainer;
 
     /**
      * Dispose SatChannel.

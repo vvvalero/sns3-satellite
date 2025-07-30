@@ -73,9 +73,23 @@ SatChannel::SatChannel()
        */
       m_enableRxPowerOutputTrace(false),
       m_enableFadingOutputTrace(false),
-      m_enableExternalFadingInputTrace(false)
+      m_enableExternalFadingInputTrace(false),
+      m_satFadingExternalInputTraceContainer(nullptr)
 {
     NS_LOG_FUNCTION(this);
+}
+
+void
+SatChannel::NotifyConstructionCompleted()
+{
+    NS_LOG_FUNCTION(this);
+
+    Channel::NotifyConstructionCompleted();
+
+    if (m_enableExternalFadingInputTrace)
+    {
+        m_satFadingExternalInputTraceContainer = CreateObject<SatFadingExternalInputTraceContainer>();
+    }
 }
 
 SatChannel::~SatChannel()
@@ -665,10 +679,7 @@ SatChannel::GetExternalFadingTrace(Ptr<SatSignalParameters> rxParams, Ptr<SatPhy
         NS_FATAL_ERROR("SatChannel::GetExternalFadingTrace - Invalid node ID");
     }
 
-    return (Singleton<SatFadingExternalInputTraceContainer>::Get()->GetFadingTrace((uint32_t)nodeId,
-                                                                                   m_channelType,
-                                                                                   mobility))
-        ->GetFading();
+    return (m_satFadingExternalInputTraceContainer->GetFadingTrace((uint32_t)nodeId, m_channelType, mobility))->GetFading();
 }
 
 /// TODO get rid of source MAC address peeking

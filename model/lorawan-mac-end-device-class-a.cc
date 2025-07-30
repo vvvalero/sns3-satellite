@@ -75,12 +75,6 @@ LorawanMacEndDeviceClassA::GetTypeId(void)
     return tid;
 }
 
-TypeId
-LorawanMacEndDeviceClassA::GetInstanceTypeId(void) const
-{
-    return GetTypeId();
-}
-
 LorawanMacEndDeviceClassA::LorawanMacEndDeviceClassA()
 {
     NS_FATAL_ERROR("Default constructor not in use");
@@ -99,8 +93,14 @@ LorawanMacEndDeviceClassA::LorawanMacEndDeviceClassA(Ptr<Node> node,
       m_rx1DrOffset(0)
 {
     NS_LOG_FUNCTION(this);
+}
 
-    ObjectBase::ConstructSelf(AttributeConstructionList());
+void
+LorawanMacEndDeviceClassA::NotifyConstructionCompleted()
+{
+    NS_LOG_FUNCTION(this);
+
+    LorawanMacEndDevice::NotifyConstructionCompleted();
 
     NS_ASSERT_MSG(m_secondWindowDelay > m_firstWindowDelay + m_firstWindowDuration,
                   "Second window must open after first one is closed");

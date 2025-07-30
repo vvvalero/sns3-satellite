@@ -46,19 +46,9 @@ SatLog::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatLog::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatLog::SatLog()
 {
     NS_LOG_FUNCTION(this);
-
-    ObjectBase::ConstructSelf(AttributeConstructionList());
 }
 
 SatLog::~SatLog()

@@ -170,7 +170,7 @@ SatLoraFirstWindowTestCase::DoRun(void)
 
     // >>> Start of actual test using Simple scenario >>>
     Ptr<Node> utNode = Singleton<SatTopology>::Get()->GetUtNode(0);
-    Ptr<LoraPeriodicSender> app = Create<LoraPeriodicSender>();
+    Ptr<LoraPeriodicSender> app = CreateObject<LoraPeriodicSender>();
 
     app->SetInterval(Seconds(10));
 
@@ -325,7 +325,7 @@ SatLoraSecondWindowTestCase::DoRun(void)
 
     // >>> Start of actual test using Simple scenario >>>
     Ptr<Node> utNode = Singleton<SatTopology>::Get()->GetUtNode(0);
-    Ptr<LoraPeriodicSender> app = Create<LoraPeriodicSender>();
+    Ptr<LoraPeriodicSender> app = CreateObject<LoraPeriodicSender>();
 
     app->SetInterval(Seconds(10));
 
@@ -499,7 +499,7 @@ SatLoraOutOfWindowWindowTestCase::DoRun(void)
 
     // >>> Start of actual test using Simple scenario >>>
     Ptr<Node> utNode = Singleton<SatTopology>::Get()->GetUtNode(0);
-    Ptr<LoraPeriodicSender> app = Create<LoraPeriodicSender>();
+    Ptr<LoraPeriodicSender> app = CreateObject<LoraPeriodicSender>();
 
     app->SetInterval(Seconds(10));
 
@@ -659,7 +659,7 @@ SatLoraOutOfWindowWindowNoRetransmissionTestCase::DoRun(void)
 
     // >>> Start of actual test using Simple scenario >>>
     Ptr<Node> utNode = Singleton<SatTopology>::Get()->GetUtNode(0);
-    Ptr<LoraPeriodicSender> app = Create<LoraPeriodicSender>();
+    Ptr<LoraPeriodicSender> app = CreateObject<LoraPeriodicSender>();
 
     app->SetInterval(Seconds(10));
 

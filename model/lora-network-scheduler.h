@@ -44,10 +44,19 @@ class LoraNetworkScheduler : public Object
   public:
     static TypeId GetTypeId(void);
 
-    TypeId GetInstanceTypeId(void) const;
-
     LoraNetworkScheduler();
     LoraNetworkScheduler(Ptr<LoraNetworkStatus> status, Ptr<LoraNetworkController> controller);
+
+    /**
+     * Notifier called once the ObjectBase is fully constructed.
+     *
+     * This method is invoked once all member attributes have been
+     * initialized. Subclasses can override this method to be notified
+     * of this event but if they do this, they must chain up to their
+     * parent's NotifyConstructionCompleted method.
+     */
+    virtual void NotifyConstructionCompleted() override;
+
     virtual ~LoraNetworkScheduler();
 
     /**
