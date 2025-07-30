@@ -109,7 +109,6 @@ SatFwdLinkScheduler::GetTypeId(void)
     static TypeId tid =
         TypeId("ns3::SatFwdLinkScheduler")
             .SetParent<Object>()
-            .AddConstructor<SatFwdLinkScheduler>()
             .AddAttribute("Interval",
                           "The time for periodic scheduling",
                           TimeValue(MilliSeconds(20)),
@@ -188,12 +187,22 @@ SatFwdLinkScheduler::SatFwdLinkScheduler(Ptr<SatBbFrameConf> conf,
       m_cnoEstimatorMode(SatCnoEstimator::LAST),
       m_carrierBandwidthInHz(carrierBandwidthInHz)
 {
-    NS_LOG_FUNCTION(this);
-
-    ObjectBase::ConstructSelf(AttributeConstructionList());
+    NS_LOG_FUNCTION(this << conf << address << carrierBandwidthInHz);
 
     // Random variable used in scheduling
     m_random = CreateObject<UniformRandomVariable>();
+}
+
+void
+SatFwdLinkScheduler::NotifyConstructionCompleted()
+{
+    NS_LOG_FUNCTION(this);
+
+    Object::NotifyConstructionCompleted();
+
+    Simulator::Schedule(m_periodicInterval,
+                        &SatFwdLinkScheduler::PeriodicTimerExpired,
+                        this);
 }
 
 SatFwdLinkScheduler::~SatFwdLinkScheduler()
@@ -299,19 +308,12 @@ SatFwdLinkScheduler::ClearAllPackets()
 void
 SatFwdLinkScheduler::PeriodicTimerExpired()
 {
-    NS_FATAL_ERROR("SatFwdLinkScheduler::ScheduleBbFrames: should not be here");
-}
+    NS_LOG_FUNCTION(this);
 
-void
-SatFwdLinkScheduler::SendAndClearSymbolsSentStat()
-{
-    NS_FATAL_ERROR("SatFwdLinkScheduler::SendAndClearSymbolsSentStat: should not be here");
-}
+    SendAndClearSymbolsSentStat();
+    ScheduleBbFrames();
 
-void
-SatFwdLinkScheduler::ScheduleBbFrames()
-{
-    NS_FATAL_ERROR("SatFwdLinkScheduler::ScheduleBbFrames: should not be here");
+    Simulator::Schedule(m_periodicInterval, &SatFwdLinkScheduler::PeriodicTimerExpired, this);
 }
 
 void

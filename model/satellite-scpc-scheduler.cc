@@ -80,15 +80,19 @@ SatScpcScheduler::SatScpcScheduler(Ptr<SatBbFrameConf> conf,
     : SatFwdLinkScheduler(conf, address, carrierBandwidthInHz),
       m_symbolsSent(0)
 {
+    NS_LOG_FUNCTION(this << conf << address << carrierBandwidthInHz);
+}
+
+void
+SatScpcScheduler::NotifyConstructionCompleted()
+{
     NS_LOG_FUNCTION(this);
 
-    ObjectBase::ConstructSelf(AttributeConstructionList());
+    SatFwdLinkScheduler::NotifyConstructionCompleted();
 
-    std::vector<SatEnums::SatModcod_t> modCods = conf->GetModCodsUsed();
+    std::vector<SatEnums::SatModcod_t> modCods = m_bbFrameConf->GetModCodsUsed();
 
     m_bbFrameContainer = CreateObject<SatBbFrameContainer>(modCods, m_bbFrameConf);
-
-    Simulator::Schedule(m_periodicInterval, &SatScpcScheduler::PeriodicTimerExpired, this);
 }
 
 SatScpcScheduler::~SatScpcScheduler()
@@ -162,17 +166,6 @@ SatScpcScheduler::GetNextFrame()
     }
 
     return std::make_pair(frame, frameDuration);
-}
-
-void
-SatScpcScheduler::PeriodicTimerExpired()
-{
-    NS_LOG_FUNCTION(this);
-
-    SendAndClearSymbolsSentStat();
-    ScheduleBbFrames();
-
-    Simulator::Schedule(m_periodicInterval, &SatScpcScheduler::PeriodicTimerExpired, this);
 }
 
 void

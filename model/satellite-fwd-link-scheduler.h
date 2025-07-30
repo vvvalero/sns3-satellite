@@ -142,6 +142,16 @@ class SatFwdLinkScheduler : public Object
                         double carrierBandwidthInHz);
 
     /**
+     * Notifier called once the ObjectBase is fully constructed.
+     *
+     * This method is invoked once all member attributes have been
+     * initialized. Subclasses can override this method to be notified
+     * of this event but if they do this, they must chain up to their
+     * parent's NotifyConstructionCompleted method.
+     */
+    virtual void NotifyConstructionCompleted() override;
+
+    /**
      * Destroy a SatFwdLinkScheduler
      *
      * This is the destructor for the SatFwdLinkScheduler.
@@ -249,7 +259,7 @@ class SatFwdLinkScheduler : public Object
     /**
      * Schedule BB Frames.
      */
-    void ScheduleBbFrames();
+    virtual void ScheduleBbFrames() = 0;
 
     /**
      * Check if given estimated C/N0 match with given frame.
@@ -270,7 +280,7 @@ class SatFwdLinkScheduler : public Object
     /**
      * Send stats and reset all the symbols sent count for each slice to zero.
      */
-    virtual void SendAndClearSymbolsSentStat();
+    virtual void SendAndClearSymbolsSentStat() = 0;
 
     /**
      *  Handles periodic timer timeouts.
