@@ -107,8 +107,6 @@ SatFadingExternalInputTraceContainer::NotifyConstructionCompleted()
 {
     NS_LOG_FUNCTION(this);
 
-    std::cout << "SatFadingExternalInputTraceContainer::NotifyConstructionCompleted()" << std::endl;
-
     Object::NotifyConstructionCompleted();
 
     m_dataPath = Singleton<SatEnvVariables>::Get()->LocateDataDirectory() +
