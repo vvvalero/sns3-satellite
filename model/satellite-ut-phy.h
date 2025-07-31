@@ -72,6 +72,16 @@ class SatUtPhy : public SatPhy
              Ptr<SatSuperframeConf> superFrameConf);
 
     /**
+     * Notifier called once the ObjectBase is fully constructed.
+     *
+     * This method is invoked once all member attributes have been
+     * initialized. Subclasses can override this method to be notified
+     * of this event but if they do this, they must chain up to their
+     * parent's NotifyConstructionCompleted method.
+     */
+    virtual void NotifyConstructionCompleted() override;
+
+    /**
      * Destructor
      */
     virtual ~SatUtPhy();
@@ -80,7 +90,6 @@ class SatUtPhy : public SatPhy
      * inherited from Object
      */
     static TypeId GetTypeId(void);
-    TypeId GetInstanceTypeId(void) const;
     /**
      * Initialization of SatUtPhy
      */
@@ -127,6 +136,21 @@ class SatUtPhy : public SatPhy
     void UpdateSliceSubscription(uint8_t slice);
 
   private:
+    /**
+     *  Link results used for this physical layer.
+     */
+    Ptr<SatLinkResults> m_linkResults;
+
+    /**
+     *  RX carrier configuration parameters.
+     */
+    SatPhyRxCarrierConf::RxCarrierCreateParams_s m_parameters;
+
+    /**
+     *  Super frame cofiguration.
+     */
+    Ptr<SatSuperframeConf> m_superFrameConf;
+
     /**
      * \brief Update the underlying SatChannel to send and receive data from
      * the current beam (as described in the m_beamId attribute).

@@ -65,6 +65,16 @@ class SatOrbiterUserPhy : public SatPhy
                       Ptr<SatSuperframeConf> superFrameConf);
 
     /**
+     * Notifier called once the ObjectBase is fully constructed.
+     *
+     * This method is invoked once all member attributes have been
+     * initialized. Subclasses can override this method to be notified
+     * of this event but if they do this, they must chain up to their
+     * parent's NotifyConstructionCompleted method.
+     */
+    virtual void NotifyConstructionCompleted() override;
+
+    /**
      * Destructor for SatOrbiterUserPhy
      */
     virtual ~SatOrbiterUserPhy();
@@ -73,7 +83,6 @@ class SatOrbiterUserPhy : public SatPhy
      * inherited from Object
      */
     static TypeId GetTypeId(void);
-    TypeId GetInstanceTypeId(void) const;
     virtual void DoInitialize(void);
 
     /**
@@ -158,6 +167,21 @@ class SatOrbiterUserPhy : public SatPhy
     TracedCallback<uint32_t, const Address&> m_queueSizePacketsTrace;
 
   private:
+    /**
+     *  Link results used for this physical layer.
+     */
+    Ptr<SatLinkResults> m_linkResults;
+
+    /**
+     *  RX carrier configuration parameters.
+     */
+    SatPhyRxCarrierConf::RxCarrierCreateParams_s m_parameters;
+
+    /**
+     *  Super frame cofiguration.
+     */
+    Ptr<SatSuperframeConf> m_superFrameConf;
+
     /**
      * Send a packet from the queue. Used only in REGENERATION_PHY mode.
      */
