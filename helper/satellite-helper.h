@@ -85,12 +85,6 @@ class SatHelper : public Object
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of object instance
-     * \return the TypeId of object instance
-     */
-    TypeId GetInstanceTypeId(void) const;
-
-    /**
      * \brief Default constructor. Not in use.
      */
     SatHelper();
@@ -101,6 +95,16 @@ class SatHelper : public Object
      * \param scenarioPath Scenario folder path
      */
     SatHelper(std::string scenarioPath);
+
+    /**
+     * Notifier called once the ObjectBase is fully constructed.
+     *
+     * This method is invoked once all member attributes have been
+     * initialized. Subclasses can override this method to be notified
+     * of this event but if they do this, they must chain up to their
+     * parent's NotifyConstructionCompleted method.
+     */
+    virtual void NotifyConstructionCompleted() override;
 
     /**
      * Destructor for SatHelper

@@ -89,12 +89,6 @@ class SatBeamHelper : public Object
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
-
-    /**
      * Default constructor for SatBeamHelper (should not be used).
      */
     SatBeamHelper();
@@ -114,6 +108,16 @@ class SatBeamHelper : public Object
                   uint32_t fwdLinkCarrierCount,
                   uint32_t rtnLinkCarrierCount,
                   Ptr<SatSuperframeSeq> seq);
+
+    /**
+     * Notifier called once the ObjectBase is fully constructed.
+     *
+     * This method is invoked once all member attributes have been
+     * initialized. Subclasses can override this method to be notified
+     * of this event but if they do this, they must chain up to their
+     * parent's NotifyConstructionCompleted method.
+     */
+    virtual void NotifyConstructionCompleted() override;
 
     /**
      * Destructor for SatBeamHelper.
@@ -380,6 +384,9 @@ class SatBeamHelper : public Object
   private:
     CarrierFreqConverter m_carrierFreqConverter;
     SatTypedefs::CarrierBandwidthConverter_t m_carrierBandwidthConverter;
+
+    uint32_t m_rtnLinkCarrierCount;
+    uint32_t m_fwdLinkCarrierCount;
 
     Ptr<SatSuperframeSeq> m_superframeSeq;
 

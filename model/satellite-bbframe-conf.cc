@@ -194,7 +194,15 @@ SatBbFrameConf::SatBbFrameConf(double symbolRate, SatEnums::DvbVersion_t dvbVers
       m_bbFrameS2XPilots(true),
       m_modCodsUsedStr("")
 {
-    ObjectBase::ConstructSelf(AttributeConstructionList());
+    NS_LOG_FUNCTION(this << symbolRate << dvbVersion);
+}
+
+void
+SatBbFrameConf::NotifyConstructionCompleted()
+{
+    NS_LOG_FUNCTION(this);
+
+    Object::NotifyConstructionCompleted();
 
     // Initialize the payloads
     for (uint32_t i = 0; i < 7; ++i)
@@ -443,12 +451,6 @@ SatBbFrameConf::GetTypeId(void)
                           MakeStringChecker())
             .AddConstructor<SatBbFrameConf>();
     return tid;
-}
-
-TypeId
-SatBbFrameConf::GetInstanceTypeId() const
-{
-    return GetTypeId();
 }
 
 SatBbFrameConf::~SatBbFrameConf()

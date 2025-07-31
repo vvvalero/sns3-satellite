@@ -56,7 +56,6 @@ class SatLoraConf : public Object
      * \return the object TypeId
      */
     static TypeId GetTypeId(void);
-    TypeId GetInstanceTypeId(void) const;
 
     void SetConf(Ptr<LorawanMacGateway> gatewayMac);
     void SetConf(Ptr<LorawanMacEndDeviceClassA> endDeviceMac);

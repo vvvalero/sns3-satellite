@@ -91,11 +91,6 @@ class SimulationHelper : public Object
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Derived from Object.
-     */
-    TypeId GetInstanceTypeId(void) const;
-
-    /**
      * \brief Set default values shared by all examples using
      * SimulationHelper. Adjust to your needs.
      */

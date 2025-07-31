@@ -228,14 +228,6 @@ SatBeamHelper::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatBeamHelper::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatBeamHelper::SatBeamHelper()
     : m_printDetailedInformationToCreationTraces(false),
       m_fadingModel(),
@@ -261,6 +253,8 @@ SatBeamHelper::SatBeamHelper(std::vector<std::pair<uint32_t, uint32_t>> isls,
                              uint32_t fwdLinkCarrierCount,
                              Ptr<SatSuperframeSeq> seq)
     : m_carrierBandwidthConverter(bandwidthConverterCb),
+      m_rtnLinkCarrierCount(rtnLinkCarrierCount),
+      m_fwdLinkCarrierCount(fwdLinkCarrierCount),
       m_superframeSeq(seq),
       m_printDetailedInformationToCreationTraces(false),
       m_fadingModel(SatEnums::FADING_MARKOV),
@@ -276,10 +270,14 @@ SatBeamHelper::SatBeamHelper(std::vector<std::pair<uint32_t, uint32_t>> isls,
       m_isls(isls)
 {
     NS_LOG_FUNCTION(this << rtnLinkCarrierCount << fwdLinkCarrierCount << seq);
+}
 
-    // uncomment next code line, if attributes are needed already in construction phase.
-    // E.g attributes set by object factory affecting object creation
-    ObjectBase::ConstructSelf(AttributeConstructionList());
+void
+SatBeamHelper::NotifyConstructionCompleted()
+{
+    NS_LOG_FUNCTION(this);
+
+    Object::NotifyConstructionCompleted();
 
     m_channelFactory.SetTypeId("ns3::SatChannel");
 
@@ -342,24 +340,24 @@ SatBeamHelper::SatBeamHelper(std::vector<std::pair<uint32_t, uint32_t>> isls,
     switch (Singleton<SatTopology>::Get()->GetStandard())
     {
     case SatEnums::DVB: {
-        m_gwHelper = CreateObject<SatGwHelperDvb>(bandwidthConverterCb,
-                                                  rtnLinkCarrierCount,
-                                                  seq,
+        m_gwHelper = CreateObject<SatGwHelperDvb>(m_carrierBandwidthConverter,
+                                                  m_rtnLinkCarrierCount,
+                                                  m_superframeSeq,
                                                   rtnReadCtrlCb,
                                                   fwdReserveCtrlCb,
                                                   fwdSendCtrlCb,
                                                   gwRaSettings);
-        m_utHelper = CreateObject<SatUtHelperDvb>(bandwidthConverterCb,
-                                                  fwdLinkCarrierCount,
-                                                  seq,
+        m_utHelper = CreateObject<SatUtHelperDvb>(m_carrierBandwidthConverter,
+                                                  m_fwdLinkCarrierCount,
+                                                  m_superframeSeq,
                                                   fwdReadCtrlCb,
                                                   rtnReserveCtrlCb,
                                                   rtnSendCtrlCb,
                                                   utRaSettings);
-        m_orbiterHelper = CreateObject<SatOrbiterHelperDvb>(bandwidthConverterCb,
-                                                            rtnLinkCarrierCount,
-                                                            fwdLinkCarrierCount,
-                                                            seq,
+        m_orbiterHelper = CreateObject<SatOrbiterHelperDvb>(m_carrierBandwidthConverter,
+                                                            m_rtnLinkCarrierCount,
+                                                            m_fwdLinkCarrierCount,
+                                                            m_superframeSeq,
                                                             fwdReadCtrlCb,
                                                             rtnReadCtrlCb,
                                                             orbiterRaSettings);
@@ -369,9 +367,9 @@ SatBeamHelper::SatBeamHelper(std::vector<std::pair<uint32_t, uint32_t>> isls,
         if (Singleton<SatTopology>::Get()->GetForwardLinkRegenerationMode() ==
             SatEnums::TRANSPARENT)
         {
-            m_gwHelper = CreateObject<SatGwHelperLora>(bandwidthConverterCb,
-                                                       rtnLinkCarrierCount,
-                                                       seq,
+            m_gwHelper = CreateObject<SatGwHelperLora>(m_carrierBandwidthConverter,
+                                                       m_rtnLinkCarrierCount,
+                                                       m_superframeSeq,
                                                        rtnReadCtrlCb,
                                                        fwdReserveCtrlCb,
                                                        fwdSendCtrlCb,
@@ -380,25 +378,25 @@ SatBeamHelper::SatBeamHelper(std::vector<std::pair<uint32_t, uint32_t>> isls,
         else
         {
             Config::SetDefault("ns3::SatGwMac::SendNcrBroadcast", BooleanValue(false));
-            m_gwHelper = CreateObject<SatGwHelperDvb>(bandwidthConverterCb,
-                                                      rtnLinkCarrierCount,
-                                                      seq,
+            m_gwHelper = CreateObject<SatGwHelperDvb>(m_carrierBandwidthConverter,
+                                                      m_rtnLinkCarrierCount,
+                                                      m_superframeSeq,
                                                       rtnReadCtrlCb,
                                                       fwdReserveCtrlCb,
                                                       fwdSendCtrlCb,
                                                       gwRaSettings);
         }
-        m_utHelper = CreateObject<SatUtHelperLora>(bandwidthConverterCb,
-                                                   fwdLinkCarrierCount,
-                                                   seq,
+        m_utHelper = CreateObject<SatUtHelperLora>(m_carrierBandwidthConverter,
+                                                   m_fwdLinkCarrierCount,
+                                                   m_superframeSeq,
                                                    fwdReadCtrlCb,
                                                    rtnReserveCtrlCb,
                                                    rtnSendCtrlCb,
                                                    utRaSettings);
-        m_orbiterHelper = CreateObject<SatOrbiterHelperLora>(bandwidthConverterCb,
-                                                             rtnLinkCarrierCount,
-                                                             fwdLinkCarrierCount,
-                                                             seq,
+        m_orbiterHelper = CreateObject<SatOrbiterHelperLora>(m_carrierBandwidthConverter,
+                                                             m_rtnLinkCarrierCount,
+                                                             m_fwdLinkCarrierCount,
+                                                             m_superframeSeq,
                                                              fwdReadCtrlCb,
                                                              rtnReadCtrlCb,
                                                              orbiterRaSettings);

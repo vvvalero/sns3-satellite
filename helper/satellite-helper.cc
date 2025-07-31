@@ -174,14 +174,6 @@ SatHelper::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatHelper::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatHelper::SatHelper()
 {
     NS_LOG_FUNCTION(this);
@@ -231,9 +223,14 @@ SatHelper::SatHelper(std::string scenarioPath)
     {
         NS_FATAL_ERROR("position subfolder of scenario must contain tles.txt or sat_positions.txt");
     }
+}
 
-    // uncomment next line, if attributes are needed already in construction phase
-    ObjectBase::ConstructSelf(AttributeConstructionList());
+void
+SatHelper::NotifyConstructionCompleted()
+{
+    NS_LOG_FUNCTION(this);
+
+    Object::NotifyConstructionCompleted();
 
     Singleton<SatEnvVariables>::Get()->Initialize();
     Singleton<SatIdMapper>::Get()->Reset();
@@ -243,8 +240,8 @@ SatHelper::SatHelper(std::string scenarioPath)
 
     if (m_standard == SatEnums::LORA)
     {
-        SatLoraConf satLoraConf;
-        satLoraConf.setSatConfAttributes(m_satConf);
+        Ptr<SatLoraConf> satLoraConf = CreateObject<SatLoraConf>();
+        satLoraConf->setSatConfAttributes(m_satConf);
     }
 
     std::vector<std::pair<uint32_t, uint32_t>> isls;

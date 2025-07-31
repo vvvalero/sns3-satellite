@@ -178,8 +178,8 @@ SatGwHelperLora::Install(Ptr<Node> n,
 
     Ptr<LorawanMacGateway> mac = CreateObject<LorawanGroundMacGateway>(satId, beamId);
 
-    SatLoraConf satLoraConf;
-    satLoraConf.SetConf(mac);
+    Ptr<SatLoraConf> satLoraConf = CreateObject<SatLoraConf>();
+    satLoraConf->SetConf(mac);
 
     // Attach the Mac layer receiver to Phy
     SatPhy::ReceiveCallback recCb = MakeCallback(&LorawanMac::Receive, mac);

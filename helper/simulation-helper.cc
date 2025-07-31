@@ -146,14 +146,6 @@ SimulationHelper::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SimulationHelper::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SimulationHelper::SimulationHelper()
     : m_satHelper(nullptr),
       m_statContainer(nullptr),
@@ -199,9 +191,7 @@ SimulationHelper::SimulationHelper(std::string simulationName)
       m_progressLoggingEnabled(false),
       m_progressUpdateInterval(Seconds(0.5))
 {
-    NS_LOG_FUNCTION(this);
-
-    ObjectBase::ConstructSelf(AttributeConstructionList());
+    NS_LOG_FUNCTION(this << simulationName);
 
     m_simulationName = simulationName;
     Config::SetDefault("ns3::SatEnvVariables::SimulationCampaignName",

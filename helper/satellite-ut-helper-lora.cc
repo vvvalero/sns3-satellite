@@ -173,8 +173,8 @@ SatUtHelperLora::Install(Ptr<Node> n,
     // TODO configuration for EU only
     mac->SetTxDbmForTxPower(std::vector<double>{16, 14, 12, 10, 8, 6, 4, 2});
 
-    SatLoraConf satLoraConf;
-    satLoraConf.SetConf(mac);
+    Ptr<SatLoraConf> satLoraConf = CreateObject<SatLoraConf>();
+    satLoraConf->SetConf(mac);
 
     // Attach the Mac layer receiver to Phy
     SatPhy::ReceiveCallback recCb = MakeCallback(&LorawanMac::Receive, mac);
