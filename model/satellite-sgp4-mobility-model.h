@@ -56,12 +56,21 @@ class SatSGP4MobilityModel : public SatMobilityModel
      * @return the object TypeId.
      */
     static TypeId GetTypeId(void);
-    TypeId GetInstanceTypeId(void) const;
 
     /**
      * @brief Default constructor.
      */
     SatSGP4MobilityModel();
+
+    /**
+     * Notifier called once the ObjectBase is fully constructed.
+     *
+     * This method is invoked once all member attributes have been
+     * initialized. Subclasses can override this method to be notified
+     * of this event but if they do this, they must chain up to their
+     * parent's NotifyConstructionCompleted method.
+     */
+    virtual void NotifyConstructionCompleted() override;
 
     /**
      * @brief Destructor.

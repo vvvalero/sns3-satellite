@@ -89,9 +89,15 @@ SatReturnLinkEncapsulatorArq::SatReturnLinkEncapsulatorArq(Mac48Address encapAdd
       m_arqHeaderSize(1),
       m_nextExpectedSeqNo(0)
 {
+    NS_LOG_FUNCTION(this << encapAddress << decapAddress << sourceE2EAddress << destE2EAddress << flowId << additionalHeaderSize);
+}
+
+void
+SatReturnLinkEncapsulatorArq::NotifyConstructionCompleted()
+{
     NS_LOG_FUNCTION(this);
 
-    ObjectBase::ConstructSelf(AttributeConstructionList());
+    SatReturnLinkEncapsulator::NotifyConstructionCompleted();
 
     m_seqNo = Create<SatArqSequenceNumber>(m_arqWindowSize);
 }
@@ -144,12 +150,6 @@ SatReturnLinkEncapsulatorArq::GetTypeId(void)
                           MakeTimeAccessor(&SatReturnLinkEncapsulatorArq::m_rxWaitingTimer),
                           MakeTimeChecker());
     return tid;
-}
-
-TypeId
-SatReturnLinkEncapsulatorArq::GetInstanceTypeId() const
-{
-    return GetTypeId();
 }
 
 void

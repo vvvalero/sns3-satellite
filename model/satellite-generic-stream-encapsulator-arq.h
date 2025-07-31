@@ -75,6 +75,16 @@ class SatGenericStreamEncapsulatorArq : public SatGenericStreamEncapsulator
                                     uint32_t additionalHeaderSize = 0);
 
     /**
+     * Notifier called once the ObjectBase is fully constructed.
+     *
+     * This method is invoked once all member attributes have been
+     * initialized. Subclasses can override this method to be notified
+     * of this event but if they do this, they must chain up to their
+     * parent's NotifyConstructionCompleted method.
+     */
+    virtual void NotifyConstructionCompleted() override;
+
+    /**
      * Destructor for SatGenericStreamEncapsulatorArq
      */
     virtual ~SatGenericStreamEncapsulatorArq();
@@ -84,7 +94,6 @@ class SatGenericStreamEncapsulatorArq : public SatGenericStreamEncapsulator
      * \return the object TypeId
      */
     static TypeId GetTypeId(void);
-    TypeId GetInstanceTypeId(void) const;
 
     /**
      * Dispose of this class instance

@@ -65,19 +65,20 @@ SatSGP4MobilityModel::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatSGP4MobilityModel::GetInstanceTypeId(void) const
-{
-    return GetTypeId();
-}
-
 SatSGP4MobilityModel::SatSGP4MobilityModel()
     : m_startStr("1992-01-01 00:00:00"),
       m_timeLastUpdate(Time::Min())
 {
     NS_LOG_FUNCTION(this);
+}
 
-    ObjectBase::ConstructSelf(AttributeConstructionList());
+void
+SatSGP4MobilityModel::NotifyConstructionCompleted()
+{
+    NS_LOG_FUNCTION(this);
+
+    SatMobilityModel::NotifyConstructionCompleted();
+
     SetStartTime(JulianDate(m_startStr));
 }
 

@@ -59,14 +59,6 @@ SatUtScheduler::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatUtScheduler::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatUtScheduler::SatUtScheduler()
     : m_schedContextCallback(),
       m_txOpportunityCallback(),
@@ -86,8 +78,14 @@ SatUtScheduler::SatUtScheduler(Ptr<SatLowerLayerServiceConf> lls)
       m_nodeInfo()
 {
     NS_LOG_FUNCTION(this);
+}
 
-    ObjectBase::ConstructSelf(AttributeConstructionList());
+void
+SatUtScheduler::NotifyConstructionCompleted()
+{
+    NS_LOG_FUNCTION(this);
+
+    Object::NotifyConstructionCompleted();
 
     m_utScheduledByteCounters = std::vector<uint32_t>(m_llsConf->GetDaServiceCount(), 0);
 
