@@ -103,7 +103,7 @@ SimulationHelperConf::GetTypeId(void)
                           MakeBooleanChecker())
             .AddAttribute("MobileUtsFolder",
                           "Select the folder where mobile UTs traces should be found",
-                          StringValue(Singleton<SatEnvVariables>::Get()->LocateDataDirectory() +
+                          StringValue(SatEnvVariables::GetInstance()->LocateDataDirectory() +
                                       "/utpositions/mobiles/"),
                           MakeStringAccessor(&SimulationHelperConf::m_mobileUtsFolder),
                           MakeStringChecker());
@@ -1179,12 +1179,12 @@ SimulationHelper::SetupOutputPath()
     NS_LOG_FUNCTION(this);
     if (m_outputPath == "")
     {
-        m_outputPath = Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/sims/" +
+        m_outputPath = SatEnvVariables::GetInstance()->LocateDataDirectory() + "/sims/" +
                        m_simulationName + "/";
         // Create the simulation campaign output directory in data/sims/
-        if (!Singleton<SatEnvVariables>::Get()->IsValidDirectory(m_outputPath))
+        if (!SatEnvVariables::GetInstance()->IsValidDirectory(m_outputPath))
         {
-            Singleton<SatEnvVariables>::Get()->CreateDirectory(m_outputPath);
+            SatEnvVariables::GetInstance()->CreateDirectory(m_outputPath);
         }
         if (m_simulationTag != "")
         {
@@ -1193,13 +1193,13 @@ SimulationHelper::SetupOutputPath()
 
             // Create the simulation output directory by tag name in
             // data/sims/simulation-campaign-directory/
-            if (!Singleton<SatEnvVariables>::Get()->IsValidDirectory(m_outputPath))
+            if (!SatEnvVariables::GetInstance()->IsValidDirectory(m_outputPath))
             {
-                Singleton<SatEnvVariables>::Get()->CreateDirectory(m_outputPath);
+                SatEnvVariables::GetInstance()->CreateDirectory(m_outputPath);
             }
         }
     }
-    Singleton<SatEnvVariables>::Get()->SetOutputPath(m_outputPath);
+    SatEnvVariables::GetInstance()->SetOutputPath(m_outputPath);
 }
 
 Ptr<SatHelper>
@@ -1219,7 +1219,7 @@ SimulationHelper::CreateSatScenario(SatHelper::PreDefinedScenario_t scenario,
         NS_FATAL_ERROR("Must specify a scenario folder name from data submodule");
     }
 
-    if (Singleton<SatEnvVariables>::Get()->IsValidDirectory(m_scenarioPath + "/beamhopping"))
+    if (SatEnvVariables::GetInstance()->IsValidDirectory(m_scenarioPath + "/beamhopping"))
     {
         ConfigureFwdLinkBeamHopping();
     }
@@ -1629,9 +1629,9 @@ SimulationHelper::LoadScenario(std::string name)
     NS_LOG_FUNCTION(this << name);
 
     std::string path =
-        Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/scenarios/" + name;
+        SatEnvVariables::GetInstance()->LocateDataDirectory() + "/scenarios/" + name;
 
-    if (!Singleton<SatEnvVariables>::Get()->IsValidFile(path))
+    if (!SatEnvVariables::GetInstance()->IsValidFile(path))
     {
         NS_FATAL_ERROR("Scenario in " << path << " does not exist");
     }
@@ -1696,7 +1696,7 @@ SimulationHelper::StoreAttributesToFile(std::string fileName, bool outputAttribu
     NS_LOG_FUNCTION(this);
 
     std::string outputPath;
-    outputPath = Singleton<SatEnvVariables>::Get()->GetOutputPath();
+    outputPath = SatEnvVariables::GetInstance()->GetOutputPath();
 
     //  Store set attribute values to XML output file
     Config::SetDefault("ns3::ConfigStore::Filename", StringValue(outputPath + "/" + fileName));

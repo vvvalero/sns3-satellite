@@ -280,12 +280,12 @@ SatPerPacketFwdLinkUserTestCase::~SatPerPacketFwdLinkUserTestCase()
 void
 SatPerPacketFwdLinkUserTestCase::DoRun(void)
 {
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
+    SatEnvVariables::GetInstance()->DoInitialize();
 
     InitOutput(true);
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-per-packet-if",
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-per-packet-if",
                                                           m_extName,
                                                           true);
 
@@ -308,7 +308,7 @@ SatPerPacketFwdLinkUserTestCase::DoRun(void)
 
     // Creating the reference system.
     Ptr<SatHelper> helper = CreateObject<SatHelper>(
-        Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/scenarios/geo-33E");
+        SatEnvVariables::GetInstance()->LocateDataDirectory() + "/scenarios/geo-33E");
 
     // create user defined scenario with beams 1 and 5
     SatBeamUserInfo beamInfo = SatBeamUserInfo(1, 1);
@@ -376,7 +376,7 @@ SatPerPacketFwdLinkUserTestCase::DoRun(void)
 
     Simulator::Destroy();
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 }
 
 /**
@@ -481,12 +481,12 @@ SatPerPacketFwdLinkFullTestCase::~SatPerPacketFwdLinkFullTestCase()
 void
 SatPerPacketFwdLinkFullTestCase::DoRun(void)
 {
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
+    SatEnvVariables::GetInstance()->DoInitialize();
 
     InitOutput(false);
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-per-packet-if",
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-per-packet-if",
                                                           m_extName,
                                                           true);
 
@@ -504,7 +504,7 @@ SatPerPacketFwdLinkFullTestCase::DoRun(void)
 
     // Creating the reference system.
     Ptr<SatHelper> helper = CreateObject<SatHelper>(
-        Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/scenarios/geo-33E");
+        SatEnvVariables::GetInstance()->LocateDataDirectory() + "/scenarios/geo-33E");
 
     helper->CreatePredefinedScenario(SatHelper::FULL);
 
@@ -566,7 +566,7 @@ SatPerPacketFwdLinkFullTestCase::DoRun(void)
 
     Simulator::Destroy();
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 }
 
 /**
@@ -665,12 +665,12 @@ SatPerPacketRtnLinkUserTestCase::~SatPerPacketRtnLinkUserTestCase()
 void
 SatPerPacketRtnLinkUserTestCase::DoRun(void)
 {
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
+    SatEnvVariables::GetInstance()->DoInitialize();
 
     InitOutput(false);
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-per-packet-if",
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-per-packet-if",
                                                           m_extName,
                                                           true);
 
@@ -697,7 +697,7 @@ SatPerPacketRtnLinkUserTestCase::DoRun(void)
 
     // Creating the reference system.
     Ptr<SatHelper> helper = CreateObject<SatHelper>(
-        Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/scenarios/geo-33E");
+        SatEnvVariables::GetInstance()->LocateDataDirectory() + "/scenarios/geo-33E");
 
     // create user defined scenario with beams 1 and 5
     SatBeamUserInfo beamInfo = SatBeamUserInfo(1, 1);
@@ -756,7 +756,7 @@ SatPerPacketRtnLinkUserTestCase::DoRun(void)
 
     Simulator::Destroy();
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 }
 
 // Default name to show for test. When the second constructor is used, the text to append this name
@@ -831,12 +831,12 @@ SatPerPacketRtnLinkFullTestCase::~SatPerPacketRtnLinkFullTestCase()
 void
 SatPerPacketRtnLinkFullTestCase::DoRun(void)
 {
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
+    SatEnvVariables::GetInstance()->DoInitialize();
 
     InitOutput(false);
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-per-packet-if",
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-per-packet-if",
                                                           m_extName,
                                                           true);
 
@@ -863,7 +863,7 @@ SatPerPacketRtnLinkFullTestCase::DoRun(void)
 
     // Creating the reference system.
     Ptr<SatHelper> helper = CreateObject<SatHelper>(
-        Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/scenarios/geo-33E");
+        SatEnvVariables::GetInstance()->LocateDataDirectory() + "/scenarios/geo-33E");
     helper->CreatePredefinedScenario(SatHelper::FULL);
 
     // set callback traces where we want results out
@@ -915,7 +915,7 @@ SatPerPacketRtnLinkFullTestCase::DoRun(void)
 
     Simulator::Destroy();
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 }
 
 /**

@@ -82,7 +82,7 @@ SatAntennaGainPatternContainer::SatAntennaGainPatternContainer(uint32_t nbSats,
 
     NS_LOG_INFO(this << " directory for antenna patterns set to " << m_patternsFolder);
 
-    if (!Singleton<SatEnvVariables>::Get()->IsValidDirectory(m_patternsFolder))
+    if (!SatEnvVariables::GetInstance()->IsValidDirectory(m_patternsFolder))
     {
         NS_FATAL_ERROR("SatAntennaGainPatternContainer::SatAntennaGainPatternContainer directory "
                        << m_patternsFolder << " not found in antennapatterns folder");

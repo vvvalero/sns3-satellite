@@ -86,8 +86,8 @@ GeoCoordinateTestCase::DoRun(void)
     GeoCoordinate position2;
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-geo-coordinate", "", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-geo-coordinate", "", true);
 
     for (int i = -180; i <= 180; i += 30)
     {
@@ -112,7 +112,7 @@ GeoCoordinateTestCase::DoRun(void)
         Validate(position1, position2);
     }
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 }
 
 void

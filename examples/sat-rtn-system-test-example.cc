@@ -104,7 +104,7 @@ main(int argc, char* argv[])
 
     // To read input attributes from input xml-file
     std::string inputFileNameWithPath =
-        Singleton<SatEnvVariables>::Get()->LocateDirectory("contrib/satellite/examples") +
+        SatEnvVariables::GetInstance()->LocateDirectory("contrib/satellite/examples") +
         "/sys-rtn-test.xml";
 
     // read command line parameters given by user

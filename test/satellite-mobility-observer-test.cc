@@ -314,8 +314,8 @@ void
 SatMobilityObserverTestCase::DoRun(void)
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-mobility-observer", "", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-mobility-observer", "", true);
 
     // create mobilities
     Ptr<SatConstantPositionMobilityModel> gwMob = CreateObject<SatConstantPositionMobilityModel>();
@@ -486,7 +486,7 @@ SatMobilityObserverTestCase::DoRun(void)
 
     Simulator::Destroy();
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 }
 
 /**

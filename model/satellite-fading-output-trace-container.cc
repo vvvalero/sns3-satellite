@@ -102,7 +102,7 @@ SatFadingOutputTraceContainer::AddNode(key_t key)
     NS_LOG_FUNCTION(this);
 
     std::stringstream filename;
-    std::string dataPath = Singleton<SatEnvVariables>::Get()->GetOutputPath();
+    std::string dataPath = SatEnvVariables::GetInstance()->GetOutputPath();
 
     int32_t gwId = Singleton<SatIdMapper>::Get()->GetGwIdWithMac(key.first);
     int32_t utId = Singleton<SatIdMapper>::Get()->GetUtIdWithMac(key.first);

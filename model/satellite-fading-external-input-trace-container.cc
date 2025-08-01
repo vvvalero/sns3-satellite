@@ -109,7 +109,7 @@ SatFadingExternalInputTraceContainer::NotifyConstructionCompleted()
 
     Object::NotifyConstructionCompleted();
 
-    m_dataPath = Singleton<SatEnvVariables>::Get()->LocateDataDirectory() +
+    m_dataPath = SatEnvVariables::GetInstance()->LocateDataDirectory() +
                  "/additional-input/ext-fadingtraces/input/";
 }
 

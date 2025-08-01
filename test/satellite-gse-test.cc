@@ -93,8 +93,8 @@ void
 SatGseTestCase::DoRun(void)
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-gse", "", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-gse", "", true);
 
     Mac48Address source = Mac48Address::Allocate();
     Mac48Address dest = Mac48Address::Allocate();
@@ -156,7 +156,7 @@ SatGseTestCase::DoRun(void)
 
     Simulator::Destroy();
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 }
 
 void

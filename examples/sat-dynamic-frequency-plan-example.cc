@@ -69,7 +69,7 @@ main(int argc, char* argv[])
     double initialBandwidth(3.75e6);
     Time superframeDuration(MicroSeconds(26500));
     std::string inputFileNameWithPath =
-        Singleton<SatEnvVariables>::Get()->LocateDirectory("contrib/satellite/examples") +
+        SatEnvVariables::GetInstance()->LocateDirectory("contrib/satellite/examples") +
         "/generic-input-attributes.xml";
 
     Ptr<SimulationHelper> simulationHelper = CreateObject<SimulationHelper>("generic-launcher");

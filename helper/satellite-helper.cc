@@ -210,15 +210,15 @@ SatHelper::SatHelper(std::string scenarioPath)
 
     ReadStandard(m_scenarioPath + "/standard/standard.txt");
 
-    if (Singleton<SatEnvVariables>::Get()->IsValidFile(m_scenarioPath + "/positions/tles.txt"))
+    if (SatEnvVariables::GetInstance()->IsValidFile(m_scenarioPath + "/positions/tles.txt"))
     {
-        NS_ASSERT_MSG(!Singleton<SatEnvVariables>::Get()->IsValidFile(
+        NS_ASSERT_MSG(!SatEnvVariables::GetInstance()->IsValidFile(
                           m_scenarioPath + "/positions/sat_positions.txt"),
                       "position subfolder of scenario cannot have both contain tles.txt and "
                       "sat_positions.txt");
         m_satConstellationEnabled = true;
     }
-    else if (!Singleton<SatEnvVariables>::Get()->IsValidFile(m_scenarioPath +
+    else if (!SatEnvVariables::GetInstance()->IsValidFile(m_scenarioPath +
                                                              "/positions/sat_positions.txt"))
     {
         NS_FATAL_ERROR("position subfolder of scenario must contain tles.txt or sat_positions.txt");
@@ -232,7 +232,7 @@ SatHelper::NotifyConstructionCompleted()
 
     Object::NotifyConstructionCompleted();
 
-    Singleton<SatEnvVariables>::Get()->Initialize();
+    SatEnvVariables::GetInstance()->Initialize();
     Singleton<SatIdMapper>::Get()->Reset();
     Singleton<SatTopology>::Get()->Reset();
 
@@ -361,9 +361,9 @@ SatHelper::EnableCreationTraces()
 
     std::stringstream outputPathCreation;
     std::stringstream outputPathUt;
-    outputPathCreation << Singleton<SatEnvVariables>::Get()->GetOutputPath() << "/"
+    outputPathCreation << SatEnvVariables::GetInstance()->GetOutputPath() << "/"
                        << m_scenarioCreationFileName << ".log";
-    outputPathUt << Singleton<SatEnvVariables>::Get()->GetOutputPath() << "/"
+    outputPathUt << SatEnvVariables::GetInstance()->GetOutputPath() << "/"
                  << m_utCreationFileName << ".log";
 
     m_creationTraceStream = asciiTraceHelper.CreateFileStream(outputPathCreation.str());
@@ -401,7 +401,7 @@ SatHelper::LoadConstellationTopology(std::vector<std::string>& tles,
     tles = m_satConf->LoadTles(m_scenarioPath + "/positions/tles.txt",
                                m_scenarioPath + "/positions/start_date.txt");
 
-    if (Singleton<SatEnvVariables>::Get()->IsValidFile(m_scenarioPath + "/positions/isls.txt"))
+    if (SatEnvVariables::GetInstance()->IsValidFile(m_scenarioPath + "/positions/isls.txt"))
     {
         isls = m_satConf->LoadIsls(m_scenarioPath + "/positions/isls.txt");
     }
@@ -1036,7 +1036,7 @@ SatHelper::LoadMobileUTsFromFolder(const std::string& folderName, Ptr<RandomVari
 {
     NS_LOG_FUNCTION(this << folderName << utUsers);
 
-    if (!(Singleton<SatEnvVariables>::Get()->IsValidDirectory(folderName)))
+    if (!(SatEnvVariables::GetInstance()->IsValidDirectory(folderName)))
     {
         NS_LOG_INFO("Directory '" << folderName
                                   << "' does not exist, no mobile UTs will be created.");
@@ -1046,7 +1046,7 @@ SatHelper::LoadMobileUTsFromFolder(const std::string& folderName, Ptr<RandomVari
     for (std::string& filename : SystemPath::ReadFiles(folderName))
     {
         std::string filepath = folderName + "/" + filename;
-        if (Singleton<SatEnvVariables>::Get()->IsValidDirectory(filepath))
+        if (SatEnvVariables::GetInstance()->IsValidDirectory(filepath))
         {
             NS_LOG_INFO("Skipping directory '" << filename << "'");
             continue;
@@ -1086,8 +1086,8 @@ SatHelper::LoadMobileUtFromFile(const std::string& filename)
 {
     NS_LOG_FUNCTION(this << filename);
 
-    if (Singleton<SatEnvVariables>::Get()->IsValidFile(
-            Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/" + filename))
+    if (SatEnvVariables::GetInstance()->IsValidFile(
+            SatEnvVariables::GetInstance()->LocateDataDirectory() + "/" + filename))
     {
         NS_FATAL_ERROR(filename << " is not a valid file name");
     }
@@ -1118,8 +1118,8 @@ SatHelper::LoadMobileUtFromFile(uint32_t satId, const std::string& filename)
 {
     NS_LOG_FUNCTION(this << satId << filename);
 
-    if (Singleton<SatEnvVariables>::Get()->IsValidFile(
-            Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/" + filename))
+    if (SatEnvVariables::GetInstance()->IsValidFile(
+            SatEnvVariables::GetInstance()->LocateDataDirectory() + "/" + filename))
     {
         NS_FATAL_ERROR(filename << " is not a valid file name");
     }

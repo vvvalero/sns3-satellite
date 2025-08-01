@@ -85,8 +85,8 @@ ScenarioCreationSimple::DoRun(void)
     Singleton<SatIdMapper>::Get()->Reset();
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-scenario-creation",
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-scenario-creation",
                                                           "simple-scenario",
                                                           true);
 
@@ -94,7 +94,7 @@ ScenarioCreationSimple::DoRun(void)
 
     // Creating the reference system.
     Ptr<SatHelper> helper = CreateObject<SatHelper>(
-        Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/scenarios/geo-33E");
+        SatEnvVariables::GetInstance()->LocateDataDirectory() + "/scenarios/geo-33E");
 
     // Enable creation traces
     Config::SetDefault("ns3::SatHelper::ScenarioCreationTraceEnabled", BooleanValue(true));
@@ -109,7 +109,7 @@ ScenarioCreationSimple::DoRun(void)
                           1,
                           "UT User count is not what expected!");
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 
     Simulator::Destroy();
 }
@@ -159,8 +159,8 @@ ScenarioCreationLarger::DoRun(void)
     Singleton<SatIdMapper>::Get()->Reset();
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-scenario-creation",
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-scenario-creation",
                                                           "larger-scenario",
                                                           true);
 
@@ -168,7 +168,7 @@ ScenarioCreationLarger::DoRun(void)
 
     // Creating the reference system.
     Ptr<SatHelper> helper = CreateObject<SatHelper>(
-        Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/scenarios/geo-33E");
+        SatEnvVariables::GetInstance()->LocateDataDirectory() + "/scenarios/geo-33E");
 
     // Enable creation traces
     Config::SetDefault("ns3::SatHelper::ScenarioCreationTraceEnabled", BooleanValue(true));
@@ -183,7 +183,7 @@ ScenarioCreationLarger::DoRun(void)
                           5,
                           "UT User count is not what expected!");
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 
     Simulator::Destroy();
 }
@@ -233,8 +233,8 @@ ScenarioCreationFull::DoRun(void)
     Singleton<SatIdMapper>::Get()->Reset();
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-scenario-creation",
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-scenario-creation",
                                                           "full-scenario",
                                                           true);
 
@@ -242,7 +242,7 @@ ScenarioCreationFull::DoRun(void)
 
     // Creating the reference system.
     Ptr<SatHelper> helper = CreateObject<SatHelper>(
-        Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/scenarios/geo-33E");
+        SatEnvVariables::GetInstance()->LocateDataDirectory() + "/scenarios/geo-33E");
 
     // Enable creation traces
     Config::SetDefault("ns3::SatHelper::ScenarioCreationTraceEnabled", BooleanValue(true));
@@ -262,7 +262,7 @@ ScenarioCreationFull::DoRun(void)
                           72 * 3 * 3,
                           "UT User count is not what expected!");
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 
     Simulator::Destroy();
 }
@@ -315,8 +315,8 @@ ScenarioCreationUser::DoRun(void)
     Singleton<SatIdMapper>::Get()->Reset();
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-scenario-creation",
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-scenario-creation",
                                                           "user-scenario",
                                                           true);
 
@@ -324,7 +324,7 @@ ScenarioCreationUser::DoRun(void)
 
     // Creating the reference system.
     Ptr<SatHelper> helper = CreateObject<SatHelper>(
-        Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/scenarios/geo-33E");
+        SatEnvVariables::GetInstance()->LocateDataDirectory() + "/scenarios/geo-33E");
     SatBeamUserInfo beamInfo = SatBeamUserInfo(1, 1);
     std::map<std::pair<uint32_t, uint32_t>, SatBeamUserInfo> beamMap;
     beamMap[std::make_pair(0, 8)] = beamInfo;
@@ -345,7 +345,7 @@ ScenarioCreationUser::DoRun(void)
                           5,
                           "UT User count is not what expected!");
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 
     Simulator::Destroy();
 }

@@ -100,7 +100,7 @@ SatRxCnoInputTraceContainer::AddNode(key_t key)
     NS_LOG_FUNCTION(this);
 
     std::stringstream filename;
-    std::string dataPath = Singleton<SatEnvVariables>::Get()->LocateDataDirectory();
+    std::string dataPath = SatEnvVariables::GetInstance()->LocateDataDirectory();
 
     int32_t gwId = Singleton<SatIdMapper>::Get()->GetGwIdWithMac(key.first);
     int32_t utId = Singleton<SatIdMapper>::Get()->GetUtIdWithMac(key.first);

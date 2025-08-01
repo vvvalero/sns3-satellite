@@ -75,7 +75,7 @@ main(int argc, char* argv[])
 
     simulationHelper->LoadScenario("constellation-eutelsat-geo-2-sats-handovers");
 
-    std::string mobileUtFolder = Singleton<SatEnvVariables>::Get()->LocateDataDirectory() +
+    std::string mobileUtFolder = SatEnvVariables::GetInstance()->LocateDataDirectory() +
                                  "/additional-input/utpositions/mobiles/scenario6";
     simulationHelper->CreateSatScenario(SatHelper::NONE, mobileUtFolder);
 

@@ -63,7 +63,7 @@ main(int argc, char* argv[])
     Config::SetDefault("ns3::SatEnvVariables::EnableSimulationOutputOverwrite", BooleanValue(true));
 
     // Find the input xml file in case example is run from other than ns-3 root directory
-    std::string pathToFile = Singleton<SatEnvVariables>::Get()->LocateFile(
+    std::string pathToFile = SatEnvVariables::GetInstance()->LocateFile(
         "contrib/satellite/examples/tn9-dama-input-attributes.xml");
 
     // read command line parameters given by user

@@ -45,7 +45,7 @@ int
 main(int argc, char* argv[])
 {
     std::string inputFileNameWithPath =
-        Singleton<SatEnvVariables>::Get()->LocateDirectory("contrib/satellite/examples") +
+        SatEnvVariables::GetInstance()->LocateDirectory("contrib/satellite/examples") +
         "/generic-input-attributes.xml";
     uint32_t posCount = 1;
 

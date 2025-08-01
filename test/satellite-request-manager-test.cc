@@ -96,8 +96,8 @@ void
 SatBaseTestCase::DoRun()
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-rm", "", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-rm", "", true);
 
     // Base test case tests that no Capacity Requests are generated when CRA, RBDC
     // and VBDC are disabled for all lower layer service RC indices.
@@ -156,7 +156,7 @@ SatBaseTestCase::DoRun()
 
     Simulator::Destroy();
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 }
 
 bool

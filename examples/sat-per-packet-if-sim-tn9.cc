@@ -61,7 +61,7 @@ main(int argc, char* argv[])
     Config::SetDefault("ns3::SatEnvVariables::EnableSimulationOutputOverwrite", BooleanValue(true));
 
     // To read attributes from file
-    std::string pathToFile = Singleton<SatEnvVariables>::Get()->LocateFile(
+    std::string pathToFile = SatEnvVariables::GetInstance()->LocateFile(
         "contrib/satellite/examples/tn9-dama-input-attributes.xml");
 
     /**

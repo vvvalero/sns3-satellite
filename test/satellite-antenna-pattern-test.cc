@@ -62,16 +62,16 @@ void
 SatAntennaPatternTestCase::DoRun(void)
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-antenna-gain-pattern", "", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-antenna-gain-pattern", "", true);
 
     std::cout << "SatEnvVariables::GetCurrentWorkingDirectory()"
-              << Singleton<SatEnvVariables>::Get()->GetCurrentWorkingDirectory() << std::endl;
+              << SatEnvVariables::GetInstance()->GetCurrentWorkingDirectory() << std::endl;
 
     // Create antenna gain container
     SatAntennaGainPatternContainer gpContainer(
         1,
-        Singleton<SatEnvVariables>::Get()->LocateDataDirectory() +
+        SatEnvVariables::GetInstance()->LocateDataDirectory() +
             "/scenarios/geo-33E/antennapatterns");
 
     GeoCoordinate geoPos = GeoCoordinate(0.0, 33.0, 35786000);
@@ -133,7 +133,7 @@ SatAntennaPatternTestCase::DoRun(void)
         NS_TEST_ASSERT_MSG_EQ(bestBeamId, expectedBeamIds[i], "Not expected best spot-beam id");
     }
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 }
 
 /**

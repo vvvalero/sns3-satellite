@@ -75,8 +75,8 @@ void
 SatFreeSpaceLossTestCase::DoRun(void)
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-fsl", "", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-fsl", "", true);
 
     SatFreeSpaceLoss fsl;
     double frequency = 17.9 * std::pow(10.0, 9); // reference frequency
@@ -85,7 +85,7 @@ SatFreeSpaceLossTestCase::DoRun(void)
 
     // Creating the reference system.
     Ptr<SatHelper> helper = CreateObject<SatHelper>(
-        Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/scenarios/geo-33E");
+        SatEnvVariables::GetInstance()->LocateDataDirectory() + "/scenarios/geo-33E");
 
     helper->CreatePredefinedScenario(SatHelper::SIMPLE);
 
@@ -127,7 +127,7 @@ SatFreeSpaceLossTestCase::DoRun(void)
 
     Simulator::Destroy();
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 }
 
 /**

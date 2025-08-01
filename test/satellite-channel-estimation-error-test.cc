@@ -64,8 +64,8 @@ void
 SatFwdChannelEstimationErrorTestCase::DoRun(void)
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-channel-estimation-error",
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-channel-estimation-error",
                                                           "fwd",
                                                           true);
 
@@ -79,7 +79,7 @@ SatFwdChannelEstimationErrorTestCase::DoRun(void)
         std::cout << "SINR in: " << in << ", SINR out: " << out << std::endl;
     }
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 }
 
 /**
@@ -109,8 +109,8 @@ void
 SatRtnChannelEstimationErrorTestCase::DoRun(void)
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-channel-estimation-error",
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-channel-estimation-error",
                                                           "rtn",
                                                           true);
 
@@ -127,7 +127,7 @@ SatRtnChannelEstimationErrorTestCase::DoRun(void)
             std::cout << "SINR in: " << in << ", SINR out: " << out << std::endl;
         }
     }
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 }
 
 /**

@@ -42,6 +42,8 @@ namespace ns3
 
 NS_OBJECT_ENSURE_REGISTERED(SatEnvVariables);
 
+Ptr<SatEnvVariables> SatEnvVariables::m_instance = nullptr;
+
 TypeId
 SatEnvVariables::GetTypeId(void)
 {
@@ -98,12 +100,6 @@ SatEnvVariables::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatEnvVariables::GetInstanceTypeId(void) const
-{
-    return GetTypeId();
-}
-
 SatEnvVariables::SatEnvVariables()
     : m_currentWorkingDirectory(""),
       m_pathToExecutable(""),
@@ -123,13 +119,26 @@ SatEnvVariables::SatEnvVariables()
       m_isInitialized(false)
 {
     NS_LOG_FUNCTION(this);
+}
 
-    // Attributes are needed already in construction phase:
-    // - ConstructSelf call in constructor
-    // - GetInstanceTypeId needs to be implemented
-    ObjectBase::ConstructSelf(AttributeConstructionList());
+void
+SatEnvVariables::NotifyConstructionCompleted()
+{
+    NS_LOG_FUNCTION(this);
+
+    Object::NotifyConstructionCompleted();
 
     Initialize();
+}
+
+Ptr<SatEnvVariables>
+SatEnvVariables::GetInstance()
+{
+    if (m_instance == nullptr)
+    {
+        m_instance = CreateObject<SatEnvVariables>();
+    }
+    return m_instance;
 }
 
 void

@@ -124,8 +124,8 @@ void
 SatCtrlMsgContDelOnTestCase::DoRun(void)
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-ctrl-msg-container-unit",
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-ctrl-msg-container-unit",
                                                           "delon",
                                                           true);
 
@@ -186,7 +186,7 @@ SatCtrlMsgContDelOnTestCase::DoRun(void)
 
     Simulator::Destroy();
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 }
 
 /**
@@ -227,8 +227,8 @@ void
 SatCtrlMsgContDelOffTestCase::DoRun(void)
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-ctrl-msg-container-unit",
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-ctrl-msg-container-unit",
                                                           "deloff",
                                                           true);
 
@@ -289,7 +289,7 @@ SatCtrlMsgContDelOffTestCase::DoRun(void)
 
     Simulator::Destroy();
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 }
 
 /**

@@ -92,7 +92,7 @@ SatLinkResultsPlot::SatLinkResultsPlot()
     m_minSinrDb = 0.0;
     m_maxSinrDb = 20.0;
     m_inputPath =
-        Singleton<SatEnvVariables>::Get()->GetDataPath() + "/additional-input/linkresults/";
+        SatEnvVariables::GetInstance()->GetDataPath() + "/additional-input/linkresults/";
 }
 
 void

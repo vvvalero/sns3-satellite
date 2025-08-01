@@ -100,8 +100,8 @@ SatConstellationTest1::DoRun(void)
     Config::Reset();
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-constellation", "test1", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-constellation", "test1", true);
 
     /// Set regeneration mode
     Config::SetDefault("ns3::SatConf::ForwardLinkRegenerationMode",
@@ -317,8 +317,8 @@ SatConstellationTest2::DoRun(void)
     Singleton<SatIdMapper>::Get()->Reset();
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-constellation", "test2", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-constellation", "test2", true);
 
     /// Set regeneration mode
     Config::SetDefault("ns3::SatConf::ForwardLinkRegenerationMode",
@@ -595,8 +595,8 @@ SatConstellationTest3::DoRun(void)
     Singleton<SatIdMapper>::Get()->Reset();
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-constellation", "test3", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-constellation", "test3", true);
 
     /// Set regeneration mode
     Config::SetDefault("ns3::SatConf::ForwardLinkRegenerationMode",
@@ -812,8 +812,8 @@ SatConstellationTest4::DoRun(void)
     Config::Reset();
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-constellation", "test4", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-constellation", "test4", true);
 
     /// Set regeneration mode
     Config::SetDefault("ns3::SatConf::ForwardLinkRegenerationMode",

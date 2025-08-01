@@ -96,8 +96,8 @@ void
 SatMobilityRandomTestCase::DoRun(void)
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-mobility", "random", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-mobility", "random", true);
 
     MobilityHelper mobility;
     mobility.SetPositionAllocator("ns3::SatRandomBoxPositionAllocator",
@@ -134,7 +134,7 @@ SatMobilityRandomTestCase::DoRun(void)
 
     Simulator::Destroy();
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 }
 
 /**
@@ -184,8 +184,8 @@ void
 SatMobilityList1TestCase::DoRun(void)
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-mobility", "list1", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-mobility", "list1", true);
 
     MobilityHelper mobility;
     Ptr<SatListPositionAllocator> positionAlloc = CreateObject<SatListPositionAllocator>();
@@ -227,7 +227,7 @@ SatMobilityList1TestCase::DoRun(void)
 
     Simulator::Destroy();
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 }
 
 /**
@@ -280,8 +280,8 @@ void
 SatMobilityList2TestCase::DoRun(void)
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-mobility", "list2", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-mobility", "list2", true);
 
     // now do same with Cartesian coordinates used by SatMobilityModel SetPosition
     // and SatPositionAllocator GetNext
@@ -323,7 +323,7 @@ SatMobilityList2TestCase::DoRun(void)
 
     Simulator::Destroy();
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 }
 
 /**

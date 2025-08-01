@@ -173,8 +173,8 @@ SatHandoverTest1::DoRun(void)
     Singleton<SatIdMapper>::Get()->Reset();
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-handover", "test1", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-handover", "test1", true);
 
     /// Set regeneration mode
     Config::SetDefault("ns3::SatConf::ForwardLinkRegenerationMode",
@@ -207,7 +207,7 @@ SatHandoverTest1::DoRun(void)
 
     simulationHelper->LoadScenario("constellation-eutelsat-geo-2-sats-handovers");
 
-    std::string mobileUtFolder = Singleton<SatEnvVariables>::Get()->LocateDataDirectory() +
+    std::string mobileUtFolder = SatEnvVariables::GetInstance()->LocateDataDirectory() +
                                  "/additional-input/utpositions/mobiles/scenario6";
     simulationHelper->CreateSatScenario(SatHelper::NONE, mobileUtFolder);
 
@@ -474,8 +474,8 @@ SatHandoverTest2::DoRun(void)
     Singleton<SatIdMapper>::Get()->Reset();
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-handover", "test2", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-handover", "test2", true);
 
     /// Set regeneration mode
     Config::SetDefault("ns3::SatConf::ForwardLinkRegenerationMode",

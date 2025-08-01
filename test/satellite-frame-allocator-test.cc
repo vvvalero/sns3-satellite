@@ -137,7 +137,7 @@ SatFrameAllocatorTestCase::SatFrameAllocatorTestCase()
     m_cnoValues[8] = std::numeric_limits<double>::quiet_NaN();
     m_cnoValues[9] = SatUtils::DbToLinear(60.0);
 
-    std::string dataPath = Singleton<SatEnvVariables>::Get()->GetDataPath();
+    std::string dataPath = SatEnvVariables::GetInstance()->GetDataPath();
     std::string folderNameWithPath = dataPath + "/scenarios/geo-33E/waveforms";
     m_waveFormConf = CreateObject<SatWaveformConf>(folderNameWithPath);
 }
@@ -768,8 +768,8 @@ void
 SatFrameAllocatorTestCase::DoRun(void)
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("sat-frame-allocator", "", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("sat-frame-allocator", "", true);
 
     // test single UT with all configuration types, ACM and FCA disabled
     RunSingleUtTest(SatSuperframeConf::CONFIG_TYPE_0, false, false);
@@ -794,7 +794,7 @@ SatFrameAllocatorTestCase::DoRun(void)
     // test with two and three UTs
     RunMultiUtTest();
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 }
 
 /**

@@ -81,7 +81,7 @@ main(int argc, char* argv[])
     auto simulationHelper = CreateObject<SimulationHelper>("example-link-budget");
     Config::SetDefault("ns3::SatEnvVariables::EnableSimulationOutputOverwrite", BooleanValue(true));
     std::string inputFileNameWithPath =
-        Singleton<SatEnvVariables>::Get()->LocateDirectory("contrib/satellite/examples") +
+        SatEnvVariables::GetInstance()->LocateDirectory("contrib/satellite/examples") +
         "/sat-link-budget-input-attributes.xml";
 
     // read command line parameters can be given by user

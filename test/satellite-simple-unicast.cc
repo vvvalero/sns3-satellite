@@ -91,8 +91,8 @@ void
 SimpleUnicast1::DoRun(void)
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-simple-unicast",
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast",
                                                           "unicast1",
                                                           true);
 
@@ -105,7 +105,7 @@ SimpleUnicast1::DoRun(void)
 
     // Creating the reference system.
     Ptr<SatHelper> helper = CreateObject<SatHelper>(
-        Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/scenarios/geo-33E");
+        SatEnvVariables::GetInstance()->LocateDataDirectory() + "/scenarios/geo-33E");
     helper->CreatePredefinedScenario(SatHelper::SIMPLE);
 
     NodeContainer utUsers = Singleton<SatTopology>::Get()->GetUtUserNodes();
@@ -145,7 +145,7 @@ SimpleUnicast1::DoRun(void)
     NS_TEST_ASSERT_MSG_NE(sender->GetSent(), (uint32_t)0, "Nothing sent!");
     NS_TEST_ASSERT_MSG_EQ(receiver->GetTotalRx(), sender->GetSent(), "Packets were lost!");
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
     // <<< End of actual test using Simple scenario <<<
 }
 
@@ -196,8 +196,8 @@ void
 SimpleUnicast2::DoRun(void)
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-simple-unicast",
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast",
                                                           "unicast2",
                                                           true);
 
@@ -210,7 +210,7 @@ SimpleUnicast2::DoRun(void)
 
     // Creating the reference system.
     Ptr<SatHelper> helper = CreateObject<SatHelper>(
-        Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/scenarios/geo-33E");
+        SatEnvVariables::GetInstance()->LocateDataDirectory() + "/scenarios/geo-33E");
     helper->CreatePredefinedScenario(SatHelper::LARGER);
 
     NodeContainer utUsers = Singleton<SatTopology>::Get()->GetUtUserNodes();
@@ -279,7 +279,7 @@ SimpleUnicast2::DoRun(void)
                           sender2->GetSent(),
                           "Packets were lost between sender 2 and receiver 2!");
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
     // <<< End of actual test using Larger scenario <<<
 }
 
@@ -330,8 +330,8 @@ void
 SimpleUnicast3::DoRun(void)
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-simple-unicast",
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast",
                                                           "unicast3",
                                                           true);
 
@@ -344,7 +344,7 @@ SimpleUnicast3::DoRun(void)
 
     // Creating the reference system.
     Ptr<SatHelper> helper = CreateObject<SatHelper>(
-        Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/scenarios/geo-33E");
+        SatEnvVariables::GetInstance()->LocateDataDirectory() + "/scenarios/geo-33E");
     helper->CreatePredefinedScenario(SatHelper::FULL);
 
     NodeContainer utUsers = Singleton<SatTopology>::Get()->GetUtUserNodes();
@@ -417,7 +417,7 @@ SimpleUnicast3::DoRun(void)
                               "Packets were lost between sender and receiver" << i << "!");
     }
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
     // <<< End of actual test using Full scenario <<<
 }
 
@@ -467,8 +467,8 @@ void
 SimpleUnicast4::DoRun(void)
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-simple-unicast",
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast",
                                                           "unicast4",
                                                           true);
 
@@ -481,7 +481,7 @@ SimpleUnicast4::DoRun(void)
 
     // Creating the reference system.
     Ptr<SatHelper> helper = CreateObject<SatHelper>(
-        Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/scenarios/geo-33E");
+        SatEnvVariables::GetInstance()->LocateDataDirectory() + "/scenarios/geo-33E");
     helper->CreatePredefinedScenario(SatHelper::SIMPLE);
 
     // >>> Start of actual test using Simple scenario >>>
@@ -521,7 +521,7 @@ SimpleUnicast4::DoRun(void)
     NS_TEST_ASSERT_MSG_NE(sender->GetSent(), (uint32_t)0, "Nothing sent !");
     NS_TEST_ASSERT_MSG_EQ(receiver->GetTotalRx(), sender->GetSent(), "Packets were lost !");
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
     // <<< End of actual test using Simple scenario <<<
 }
 
@@ -572,8 +572,8 @@ void
 SimpleUnicast5::DoRun(void)
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-simple-unicast",
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast",
                                                           "unicast5",
                                                           true);
 
@@ -586,7 +586,7 @@ SimpleUnicast5::DoRun(void)
 
     // Creating the reference system.
     Ptr<SatHelper> helper = CreateObject<SatHelper>(
-        Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/scenarios/geo-33E");
+        SatEnvVariables::GetInstance()->LocateDataDirectory() + "/scenarios/geo-33E");
     helper->CreatePredefinedScenario(SatHelper::LARGER);
 
     // >>> Start of actual test using Larger scenario >>>
@@ -638,7 +638,7 @@ SimpleUnicast5::DoRun(void)
                           sender1->GetSent() + sender2->GetSent(),
                           "Packets were lost!");
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
     // <<< End of actual test using Larger scenario <<<
 }
 
@@ -688,8 +688,8 @@ void
 SimpleUnicast6::DoRun(void)
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-simple-unicast",
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast",
                                                           "unicast6",
                                                           true);
 
@@ -702,7 +702,7 @@ SimpleUnicast6::DoRun(void)
 
     // Creating the reference system.
     Ptr<SatHelper> helper = CreateObject<SatHelper>(
-        Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/scenarios/geo-33E");
+        SatEnvVariables::GetInstance()->LocateDataDirectory() + "/scenarios/geo-33E");
     helper->CreatePredefinedScenario(SatHelper::FULL);
 
     // >>> Start of actual test using Full scenario >>>
@@ -771,7 +771,7 @@ SimpleUnicast6::DoRun(void)
 
     NS_TEST_ASSERT_MSG_EQ(receiver->GetTotalRx(), totalTxBytes, "Packets were lost!");
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
     // <<< End of actual test using Full scenario <<<
 }
 
@@ -823,8 +823,8 @@ void
 SimpleUnicast7::DoRun(void)
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-simple-unicast",
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast",
                                                           "unicast7",
                                                           true);
 
@@ -837,7 +837,7 @@ SimpleUnicast7::DoRun(void)
 
     // Creating the reference system.
     Ptr<SatHelper> helper = CreateObject<SatHelper>(
-        Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/scenarios/geo-33E");
+        SatEnvVariables::GetInstance()->LocateDataDirectory() + "/scenarios/geo-33E");
     helper->CreatePredefinedScenario(SatHelper::SIMPLE);
 
     NodeContainer utUsers = Singleton<SatTopology>::Get()->GetUtUserNodes();
@@ -906,7 +906,7 @@ SimpleUnicast7::DoRun(void)
                           utSender->GetSent(),
                           "Packets were lost to GW!");
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
     // <<< End of actual test using Simple scenario <<<
 }
 
@@ -958,8 +958,8 @@ void
 SimpleUnicast8::DoRun(void)
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-simple-unicast",
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast",
                                                           "unicast8",
                                                           true);
 
@@ -972,7 +972,7 @@ SimpleUnicast8::DoRun(void)
 
     // Creating the reference system.
     Ptr<SatHelper> helper = CreateObject<SatHelper>(
-        Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/scenarios/geo-33E");
+        SatEnvVariables::GetInstance()->LocateDataDirectory() + "/scenarios/geo-33E");
     helper->CreatePredefinedScenario(SatHelper::LARGER);
 
     NodeContainer utUsers = Singleton<SatTopology>::Get()->GetUtUserNodes();
@@ -1065,7 +1065,7 @@ SimpleUnicast8::DoRun(void)
                           utSender1->GetSent() + utSender2->GetSent(),
                           "Packets were lost to GW!");
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
     // <<< End of actual test using Larger scenario <<<
 }
 

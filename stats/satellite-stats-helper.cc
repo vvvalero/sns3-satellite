@@ -481,7 +481,7 @@ SatStatsHelper::CreateCollectorPerIdentifier(CollectorMap& collectorMap) const
 std::string
 SatStatsHelper::GetOutputPath() const
 {
-    return Singleton<SatEnvVariables>::Get()->GetOutputPath();
+    return SatEnvVariables::GetInstance()->GetOutputPath();
 }
 
 std::string

@@ -63,7 +63,7 @@ main(int argc, char* argv[])
 
     // To read attributes from file
     std::string inputFileNameWithPath =
-        Singleton<SatEnvVariables>::Get()->LocateDirectory("contrib/satellite/examples") +
+        SatEnvVariables::GetInstance()->LocateDirectory("contrib/satellite/examples") +
         "/tn9-ra-input-attributes.xml";
 
     // read command line parameters given by user

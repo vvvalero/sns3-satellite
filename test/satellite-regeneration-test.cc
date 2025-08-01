@@ -129,8 +129,8 @@ SatRegenerationTest1::DoRun(void)
     Config::Reset();
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-regeneration", "test1", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-regeneration", "test1", true);
 
     /// Set regeneration mode
     Config::SetDefault("ns3::SatConf::ForwardLinkRegenerationMode",
@@ -151,7 +151,7 @@ SatRegenerationTest1::DoRun(void)
     Config::SetDefault("ns3::CbrApplication::PacketSize", UintegerValue(512));
 
     // Creating the reference system.
-    m_helper = CreateObject<SatHelper>(Singleton<SatEnvVariables>::Get()->LocateDataDirectory() +
+    m_helper = CreateObject<SatHelper>(SatEnvVariables::GetInstance()->LocateDataDirectory() +
                                        "/scenarios/geo-33E");
     m_helper->CreatePredefinedScenario(SatHelper::SIMPLE);
 
@@ -426,8 +426,8 @@ SatRegenerationTest2::DoRun(void)
     Config::Reset();
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-regeneration", "test2", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-regeneration", "test2", true);
 
     /// Set regeneration mode
     Config::SetDefault("ns3::SatConf::ForwardLinkRegenerationMode",
@@ -456,7 +456,7 @@ SatRegenerationTest2::DoRun(void)
     Config::SetDefault("ns3::CbrApplication::PacketSize", UintegerValue(512));
 
     // Creating the reference system.
-    m_helper = CreateObject<SatHelper>(Singleton<SatEnvVariables>::Get()->LocateDataDirectory() +
+    m_helper = CreateObject<SatHelper>(SatEnvVariables::GetInstance()->LocateDataDirectory() +
                                        "/scenarios/geo-33E");
     m_helper->CreatePredefinedScenario(SatHelper::SIMPLE);
 
@@ -706,8 +706,8 @@ SatRegenerationTest3::DoRun(void)
     Config::Reset();
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-regeneration", "test3", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-regeneration", "test3", true);
 
     /// Set regeneration mode
     Config::SetDefault("ns3::SatConf::ForwardLinkRegenerationMode",
@@ -973,8 +973,8 @@ SatRegenerationTest4::DoRun(void)
     Config::Reset();
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-regeneration", "test4", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-regeneration", "test4", true);
 
     /// Set regeneration mode
     Config::SetDefault("ns3::SatConf::ForwardLinkRegenerationMode",
@@ -1189,8 +1189,8 @@ SatRegenerationTest5::DoRun(void)
     Config::Reset();
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-regeneration", "test5", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-regeneration", "test5", true);
 
     /// Set regeneration mode
     Config::SetDefault("ns3::SatConf::ForwardLinkRegenerationMode",
@@ -1422,8 +1422,8 @@ SatRegenerationTest6::DoRun(void)
     Config::Reset();
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-regeneration", "test6", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-regeneration", "test6", true);
 
     /// Set regeneration mode
     Config::SetDefault("ns3::SatConf::ForwardLinkRegenerationMode",
@@ -1626,8 +1626,8 @@ SatRegenerationTest7::DoRun(void)
     Config::Reset();
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-regeneration", "test7", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-regeneration", "test7", true);
 
     /// Set regeneration mode
     Config::SetDefault("ns3::SatConf::ForwardLinkRegenerationMode",
@@ -1890,8 +1890,8 @@ SatRegenerationTest8::DoRun(void)
     Config::Reset();
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-regeneration", "test8", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-regeneration", "test8", true);
 
     /// Set regeneration mode
     Config::SetDefault("ns3::SatConf::ForwardLinkRegenerationMode",

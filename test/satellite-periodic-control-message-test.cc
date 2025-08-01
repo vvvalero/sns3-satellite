@@ -92,8 +92,8 @@ void
 SatPeriodicControlMessageTest1::DoRun(void)
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-periodic-control-message",
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-periodic-control-message",
                                                           "",
                                                           true);
 
@@ -138,7 +138,7 @@ SatPeriodicControlMessageTest1::DoRun(void)
 
     // Creating the reference system.
     Ptr<SatHelper> helper = CreateObject<SatHelper>(
-        Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/scenarios/geo-33E");
+        SatEnvVariables::GetInstance()->LocateDataDirectory() + "/scenarios/geo-33E");
     helper->CreatePredefinedScenario(SatHelper::SIMPLE);
 
     // >>> Start of actual test using Simple scenario >>>
@@ -178,7 +178,7 @@ SatPeriodicControlMessageTest1::DoRun(void)
     NS_TEST_ASSERT_MSG_NE(sender->GetSent(), (uint32_t)0, "Nothing sent !");
     NS_TEST_ASSERT_MSG_EQ(receiver->GetTotalRx(), sender->GetSent(), "Packets were lost !");
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
     // <<< End of actual test using Simple scenario <<<
 }
 

@@ -239,7 +239,7 @@ main(int argc, char* argv[])
         Seconds(3));*/
 
     // Outputs
-    std::string outputPath = Singleton<SatEnvVariables>::Get()->LocateDirectory(
+    std::string outputPath = SatEnvVariables::GetInstance()->LocateDirectory(
         "contrib/satellite/data/sims/example-lora-handover");
     Config::SetDefault("ns3::ConfigStore::Filename",
                        StringValue(outputPath + "/output-attributes.xml"));

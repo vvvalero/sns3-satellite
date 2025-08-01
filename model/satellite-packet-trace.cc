@@ -56,7 +56,7 @@ SatPacketTrace::NotifyConstructionCompleted()
     AsciiTraceHelper asciiTraceHelper;
 
     std::stringstream outputPath;
-    outputPath << Singleton<SatEnvVariables>::Get()->GetOutputPath() << "/" << m_fileName << ".log";
+    outputPath << SatEnvVariables::GetInstance()->GetOutputPath() << "/" << m_fileName << ".log";
 
     m_packetTraceStream = asciiTraceHelper.CreateFileStream(outputPath.str());
 

@@ -208,7 +208,7 @@ SatWaveformConf::SatWaveformConf(std::string directoryPathName)
 {
     NS_LOG_FUNCTION(this << directoryPathName);
 
-    if (!Singleton<SatEnvVariables>::Get()->IsValidDirectory(directoryPathName))
+    if (!SatEnvVariables::GetInstance()->IsValidDirectory(directoryPathName))
     {
         NS_FATAL_ERROR("No such directory: " << directoryPathName);
     }

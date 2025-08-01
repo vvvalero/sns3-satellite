@@ -88,8 +88,8 @@ SatFadingExternalInputTraceTestCase::DoRun(void)
     uint32_t numGws(5);
 
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-fading-external-input-trace",
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-fading-external-input-trace",
                                                           "",
                                                           true);
 
@@ -138,7 +138,7 @@ SatFadingExternalInputTraceTestCase::DoRun(void)
 
     Simulator::Destroy();
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
 }
 
 /**

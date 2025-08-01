@@ -48,8 +48,8 @@ NS_OBJECT_ENSURE_REGISTERED(SatLinkResults);
 SatLinkResults::SatLinkResults()
     : m_isInitialized(false)
 {
-    std::string dataPath = Singleton<SatEnvVariables>::Get()->GetDataPath();
-    m_inputPath = Singleton<SatEnvVariables>::Get()->LocateDirectory(
+    std::string dataPath = SatEnvVariables::GetInstance()->GetDataPath();
+    m_inputPath = SatEnvVariables::GetInstance()->LocateDirectory(
         dataPath + "/additional-input/linkresults/");
 }
 

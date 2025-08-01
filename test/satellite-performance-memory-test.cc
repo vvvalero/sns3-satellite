@@ -95,8 +95,8 @@ void
 Pm1::DoRun(void)
 {
     // Set simulation output details
-    Singleton<SatEnvVariables>::Get()->DoInitialize();
-    Singleton<SatEnvVariables>::Get()->SetOutputVariables("test-sat-perf-mem", "", true);
+    SatEnvVariables::GetInstance()->DoInitialize();
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-perf-mem", "", true);
 
     // Create simple scenario
 
@@ -107,7 +107,7 @@ Pm1::DoRun(void)
 
     // Creating the reference system.
     Ptr<SatHelper> helper = CreateObject<SatHelper>(
-        Singleton<SatEnvVariables>::Get()->LocateDataDirectory() + "/scenarios/geo-33E");
+        SatEnvVariables::GetInstance()->LocateDataDirectory() + "/scenarios/geo-33E");
     helper->CreatePredefinedScenario(SatHelper::FULL);
 
     NodeContainer gwUsers = Singleton<SatTopology>::Get()->GetGwUserNodes();
@@ -165,7 +165,7 @@ Pm1::DoRun(void)
                           gwSender->GetSent(),
                           "Packets were lost between GW and UT!");
 
-    Singleton<SatEnvVariables>::Get()->DoDispose();
+    SatEnvVariables::GetInstance()->DoDispose();
     // <<< End of actual test using Simple scenario <<<
 }
 
