@@ -111,14 +111,6 @@ SimulationHelperConf::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SimulationHelperConf::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SimulationHelperConf::SimulationHelperConf()
     : m_simTime(0),
       m_enabledBeams(""),

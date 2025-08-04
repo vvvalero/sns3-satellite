@@ -91,12 +91,6 @@ SatUserHelper::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatUserHelper::GetInstanceTypeId(void) const
-{
-    return GetTypeId();
-}
-
 SatUserHelper::SatUserHelper()
     : m_backboneNetworkType(SatUserHelper::NETWORK_TYPE_SAT_SIMPLE),
       m_subscriberNetworkType(SatUserHelper::NETWORK_TYPE_CSMA),

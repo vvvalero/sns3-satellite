@@ -68,7 +68,6 @@ class SatGwHelper : public Object
      * \return the object TypeId
      */
     static TypeId GetTypeId(void);
-    TypeId GetInstanceTypeId(void) const;
 
     /**
      * Default constructor.

@@ -59,7 +59,6 @@ class SatConf : public Object
      * \return the object TypeId
      */
     static TypeId GetTypeId(void);
-    TypeId GetInstanceTypeId(void) const;
 
     inline Ptr<SatSuperframeSeq> GetSuperframeSeq()
     {

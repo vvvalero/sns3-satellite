@@ -90,12 +90,6 @@ class SatTrafficHelper : public Object
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of object instance
-     * \return the TypeId of object instance
-     */
-    TypeId GetInstanceTypeId(void) const;
-
-    /**
      * \brief Default constructor. Not used.
      */
     SatTrafficHelper();
@@ -528,11 +522,6 @@ class SatTrafficHelperConf : public Object
      * \brief Derived from Object.
      */
     static TypeId GetTypeId(void);
-
-    /**
-     * \brief Derived from Object.
-     */
-    TypeId GetInstanceTypeId(void) const;
 
     /**
      * \brief Install traffic models from configuration files

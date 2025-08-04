@@ -102,12 +102,6 @@ SatGwHelper::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatGwHelper::GetInstanceTypeId(void) const
-{
-    return GetTypeId();
-}
-
 SatGwHelper::SatGwHelper()
     : m_rtnLinkCarrierCount(0),
       m_daInterferenceModel(SatPhyRxCarrierConf::IF_CONSTANT),

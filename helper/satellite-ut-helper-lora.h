@@ -49,11 +49,6 @@ class SatUtHelperLora : public SatUtHelper
     static TypeId GetTypeId(void);
 
     /**
-     * Derived from Object
-     */
-    TypeId GetInstanceTypeId(void) const;
-
-    /**
      * Default constructor
      */
     SatUtHelperLora();

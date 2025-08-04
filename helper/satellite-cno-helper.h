@@ -63,12 +63,6 @@ class SatCnoHelper : public Object
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of object instance
-     * \return the TypeId of object instance
-     */
-    TypeId GetInstanceTypeId(void) const;
-
-    /**
      * \brief Default constructor
      */
     SatCnoHelper();

@@ -75,14 +75,6 @@ SatOrbiterHelperLora::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatOrbiterHelperLora::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatOrbiterHelperLora::SatOrbiterHelperLora()
     : SatOrbiterHelper()
 {

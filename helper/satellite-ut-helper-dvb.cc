@@ -69,14 +69,6 @@ SatUtHelperDvb::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatUtHelperDvb::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatUtHelperDvb::SatUtHelperDvb()
 {
     NS_LOG_FUNCTION(this);

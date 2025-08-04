@@ -267,14 +267,6 @@ SatTrafficHelperConf::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatTrafficHelperConf::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatTrafficHelperConf::SatTrafficHelperConf()
     : m_simTime(Seconds(0)),
       m_trafficHelper(nullptr)
@@ -311,14 +303,6 @@ SatTrafficHelper::GetTypeId(void)
                           MakeBooleanAccessor(&SatTrafficHelper::m_enableDefaultStatistics),
                           MakeBooleanChecker());
     return tid;
-}
-
-TypeId
-SatTrafficHelper::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
 }
 
 SatTrafficHelper::SatTrafficHelper()

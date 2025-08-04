@@ -107,14 +107,6 @@ SatUtHelper::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatUtHelper::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatUtHelper::SatUtHelper()
     : m_carrierBandwidthConverter(),
       m_fwdLinkCarrierCount(),

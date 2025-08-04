@@ -609,11 +609,6 @@ class SimulationHelperConf : public Object
      */
     static TypeId GetTypeId(void);
 
-    /**
-     * \brief Derived from Object.
-     */
-    TypeId GetInstanceTypeId(void) const;
-
     Time m_simTime;
     std::string m_enabledBeams;
     Ptr<RandomVariableStream> m_utCount;

@@ -61,14 +61,6 @@ SatUtHelperLora::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatUtHelperLora::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatUtHelperLora::SatUtHelperLora()
 {
     NS_LOG_FUNCTION(this);

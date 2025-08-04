@@ -72,12 +72,6 @@ SatGwHelperDvb::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatGwHelperDvb::GetInstanceTypeId(void) const
-{
-    return GetTypeId();
-}
-
 SatGwHelperDvb::SatGwHelperDvb()
 {
     // this default constructor should be never called

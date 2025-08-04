@@ -69,11 +69,6 @@ class SatUtHelper : public Object
     static TypeId GetTypeId(void);
 
     /**
-     * Derived from Object
-     */
-    TypeId GetInstanceTypeId(void) const;
-
-    /**
      * Default constructor
      */
     SatUtHelper();

@@ -59,12 +59,6 @@ SatGwHelperLora::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatGwHelperLora::GetInstanceTypeId(void) const
-{
-    return GetTypeId();
-}
-
 SatGwHelperLora::SatGwHelperLora()
 {
     // this default constructor should be never called

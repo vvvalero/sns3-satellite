@@ -48,14 +48,6 @@ SatGroupHelper::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatGroupHelper::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatGroupHelper::SatGroupHelper()
     : m_scenarioCreated(false),
       m_satConstellationEnabled(false)

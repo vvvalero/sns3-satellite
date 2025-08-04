@@ -69,10 +69,6 @@ class SatUserHelper : public Object
     static TypeId GetTypeId(void);
 
     /**
-     * Derived from Object
-     */
-    TypeId GetInstanceTypeId(void) const;
-    /**
      * Create a SatUserHelper to make life easier when creating Users and their connections to
      * satellite network.
      */
