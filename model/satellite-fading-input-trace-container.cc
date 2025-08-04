@@ -48,14 +48,6 @@ SatFadingInputTraceContainer::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatFadingInputTraceContainer::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatFadingInputTraceContainer::SatFadingInputTraceContainer()
 {
     NS_LOG_FUNCTION(this);

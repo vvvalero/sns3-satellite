@@ -51,14 +51,6 @@ SatFadingOutputTraceContainer::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatFadingOutputTraceContainer::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatFadingOutputTraceContainer::SatFadingOutputTraceContainer()
     : m_enableFigureOutput(true)
 {
