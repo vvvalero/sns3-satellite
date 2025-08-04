@@ -110,12 +110,6 @@ SatInterference::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatInterference::GetInstanceTypeId(void) const
-{
-    return GetTypeId();
-}
-
 SatInterference::SatInterference()
     : m_currentlyReceiving(0)
 {

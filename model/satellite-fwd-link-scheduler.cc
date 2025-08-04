@@ -161,14 +161,6 @@ SatFwdLinkScheduler::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatFwdLinkScheduler::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatFwdLinkScheduler::SatFwdLinkScheduler()
     : m_additionalSortCriteria(SatFwdLinkScheduler::NO_SORT),
       m_cnoEstimatorMode(SatCnoEstimator::LAST),

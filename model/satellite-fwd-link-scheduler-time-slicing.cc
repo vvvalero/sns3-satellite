@@ -49,12 +49,6 @@ SatFwdLinkSchedulerTimeSlicing::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatFwdLinkSchedulerTimeSlicing::GetInstanceTypeId() const
-{
-    return GetTypeId();
-}
-
 SatFwdLinkSchedulerTimeSlicing::SatFwdLinkSchedulerTimeSlicing()
     : SatFwdLinkScheduler()
 {

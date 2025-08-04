@@ -55,12 +55,6 @@ class SatFwdLinkSchedulerDefault : public SatFwdLinkScheduler
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
-
-    /**
      * Construct a SatFwdLinkScheduler
      *
      * This the default constructor for the SatFwdLinkScheduler is not supported.

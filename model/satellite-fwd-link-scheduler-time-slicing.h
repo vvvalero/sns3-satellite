@@ -53,7 +53,6 @@ class SatFwdLinkSchedulerTimeSlicing : public SatFwdLinkScheduler
      * \return the object TypeId
      */
     static TypeId GetTypeId(void);
-    TypeId GetInstanceTypeId(void) const;
 
     /**
      * Construct a SatFwdLinkScheduler

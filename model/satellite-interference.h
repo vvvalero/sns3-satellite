@@ -108,11 +108,6 @@ class SatInterference : public Object
     static TypeId GetTypeId(void);
 
     /**
-     * Derived from Object
-     */
-    TypeId GetInstanceTypeId(void) const;
-
-    /**
      * Constructor for Satellite interference base class
      */
     SatInterference();

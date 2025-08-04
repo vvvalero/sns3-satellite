@@ -61,14 +61,6 @@ SatFwdLinkSchedulerDefault::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatFwdLinkSchedulerDefault::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatFwdLinkSchedulerDefault::SatFwdLinkSchedulerDefault()
     : SatFwdLinkScheduler()
 {
