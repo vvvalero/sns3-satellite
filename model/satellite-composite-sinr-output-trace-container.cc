@@ -51,14 +51,6 @@ SatCompositeSinrOutputTraceContainer::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatCompositeSinrOutputTraceContainer::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatCompositeSinrOutputTraceContainer::SatCompositeSinrOutputTraceContainer()
     : m_enableFigureOutput(true)
 {

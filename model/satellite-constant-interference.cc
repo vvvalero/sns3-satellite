@@ -51,12 +51,6 @@ SatConstantInterference::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatConstantInterference::GetInstanceTypeId(void) const
-{
-    return GetTypeId();
-}
-
 SatConstantInterference::SatConstantInterference()
     : m_power(0.0),
       m_rxing(false)

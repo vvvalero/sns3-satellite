@@ -128,12 +128,6 @@ class SatBaseTraceContainer : public Object
     static TypeId GetTypeId(void);
 
     /**
-     * \brief NS-3 instance type id function
-     * \return Instance type is
-     */
-    TypeId GetInstanceTypeId(void) const;
-
-    /**
      * \brief Function for resetting the trace
      */
     virtual void Reset() = 0;
