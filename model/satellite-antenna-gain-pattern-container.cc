@@ -57,13 +57,6 @@ SatAntennaGainPatternContainer::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatAntennaGainPatternContainer::GetInstanceTypeId() const
-{
-    NS_LOG_FUNCTION(this);
-    return GetTypeId();
-}
-
 SatAntennaGainPatternContainer::SatAntennaGainPatternContainer()
 {
     NS_LOG_FUNCTION(this);

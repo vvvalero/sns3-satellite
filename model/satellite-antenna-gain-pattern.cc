@@ -61,12 +61,6 @@ SatAntennaGainPattern::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatAntennaGainPattern::GetInstanceTypeId(void) const
-{
-    return GetTypeId();
-}
-
 SatAntennaGainPattern::SatAntennaGainPattern()
     : m_antennaPattern(),
       m_validPositions(),

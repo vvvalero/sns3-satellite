@@ -55,7 +55,6 @@ class SatAntennaGainPatternContainer : public Object
      * \return the object TypeId
      */
     static TypeId GetTypeId(void);
-    TypeId GetInstanceTypeId() const;
 
     /**
      * Default constructor. Not used.

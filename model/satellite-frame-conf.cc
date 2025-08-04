@@ -471,13 +471,6 @@ SatSuperframeConf::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatSuperframeConf::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-    return GetTypeId();
-}
-
 void
 SatSuperframeConf::AddFrameConf(SatFrameConf::SatFrameConfParams_t frameConfParameters,
                                 double bandwidthInHz,
@@ -1378,13 +1371,6 @@ SatSuperframeConf0::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatSuperframeConf0::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-    return GetTypeId();
-}
-
 void
 SatSuperframeConf0::DoConfigure()
 {
@@ -1477,13 +1463,6 @@ SatSuperframeConf1::GetTypeId(void)
                                                                                  0);
 
     return tid;
-}
-
-TypeId
-SatSuperframeConf1::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-    return GetTypeId();
 }
 
 void
@@ -1580,13 +1559,6 @@ SatSuperframeConf2::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatSuperframeConf2::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-    return GetTypeId();
-}
-
 void
 SatSuperframeConf2::DoConfigure()
 {
@@ -1681,13 +1653,6 @@ SatSuperframeConf3::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatSuperframeConf3::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-    return GetTypeId();
-}
-
 void
 SatSuperframeConf3::DoConfigure()
 {
@@ -1729,13 +1694,6 @@ SatSuperframeConf4::GetTypeId(void)
         ;
 
     return tid;
-}
-
-TypeId
-SatSuperframeConf4::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-    return GetTypeId();
 }
 
 void

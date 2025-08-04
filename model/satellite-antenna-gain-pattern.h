@@ -62,12 +62,6 @@ class SatAntennaGainPattern : public Object
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
-
-    /**
      * Default constructor.
      */
     SatAntennaGainPattern();

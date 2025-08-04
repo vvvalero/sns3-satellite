@@ -587,12 +587,6 @@ class SatSuperframeConf : public Object
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
-
-    /**
      * Default constructor for SatSuperframeConf
      */
     SatSuperframeConf();
@@ -981,12 +975,6 @@ class SatSuperframeConf0 : public SatSuperframeConf
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
-
-    /**
      * Default constructor for SatSuperframeConf
      */
     SatSuperframeConf0();
@@ -1013,12 +1001,6 @@ class SatSuperframeConf1 : public SatSuperframeConf
      * \return the object TypeId
      */
     static TypeId GetTypeId(void);
-
-    /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
 
     /**
      * Default constructor for SatSuperframeConf
@@ -1050,12 +1032,6 @@ class SatSuperframeConf2 : public SatSuperframeConf
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
-
-    /**
      * Default constructor for SatSuperframeConf
      */
     SatSuperframeConf2();
@@ -1084,12 +1060,6 @@ class SatSuperframeConf3 : public SatSuperframeConf
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
-
-    /**
      * Default constructor for SatSuperframeConf
      */
     SatSuperframeConf3();
@@ -1116,12 +1086,6 @@ class SatSuperframeConf4 : public SatSuperframeConf
      * \return the object TypeId
      */
     static TypeId GetTypeId(void);
-
-    /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
 
     /**
      * Default constructor for SatSuperframeConf
