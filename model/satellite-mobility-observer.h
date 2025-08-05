@@ -50,7 +50,6 @@ class SatMobilityObserver : public Object
      * \return the object TypeId
      */
     static TypeId GetTypeId(void);
-    TypeId GetInstanceTypeId(void) const;
 
     /**
      * \brief Default constructor of the mobility observer (should not be called)

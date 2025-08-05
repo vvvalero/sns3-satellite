@@ -62,11 +62,6 @@ class SatGwMac : public SatMac
     static TypeId GetTypeId(void);
 
     /**
-     * Derived from Object
-     */
-    TypeId GetInstanceTypeId(void) const;
-
-    /**
      * Default constructor, which is not used.
      */
     SatGwMac();

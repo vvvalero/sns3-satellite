@@ -405,14 +405,6 @@ SatLowerLayerServiceConf::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatLowerLayerServiceConf::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 bool
 SatLowerLayerServiceConf::GetDaConstantAssignmentProvided(uint8_t index) const
 {

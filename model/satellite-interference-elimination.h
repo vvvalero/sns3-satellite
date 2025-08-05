@@ -41,11 +41,6 @@ class SatInterferenceElimination : public Object
     static TypeId GetTypeId(void);
 
     /**
-     * Derived from Object
-     */
-    TypeId GetInstanceTypeId(void) const;
-
-    /**
      * Constructor for Satellite interference elimination base class
      */
     SatInterferenceElimination();

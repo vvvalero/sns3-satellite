@@ -62,11 +62,6 @@ class SatHandoverModule : public Object
     static TypeId GetTypeId(void);
 
     /**
-     * Derived from Object
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
-
-    /**
      * Dispose of this class instance
      */
     virtual void DoDispose();

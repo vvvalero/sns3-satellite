@@ -48,14 +48,6 @@ SatInterferenceInputTraceContainer::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatInterferenceInputTraceContainer::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatInterferenceInputTraceContainer::SatInterferenceInputTraceContainer()
 {
     NS_LOG_FUNCTION(this);

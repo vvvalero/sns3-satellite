@@ -42,12 +42,6 @@ SatInterferenceElimination::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatInterferenceElimination::GetInstanceTypeId(void) const
-{
-    return GetTypeId();
-}
-
 SatInterferenceElimination::SatInterferenceElimination()
 {
 }

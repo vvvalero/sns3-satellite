@@ -51,14 +51,6 @@ SatInterferenceOutputTraceContainer::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatInterferenceOutputTraceContainer::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatInterferenceOutputTraceContainer::SatInterferenceOutputTraceContainer()
     : m_enableFigureOutput(true)
 {

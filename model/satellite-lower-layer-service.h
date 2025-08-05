@@ -523,12 +523,6 @@ class SatLowerLayerServiceConf : public Object
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
-
-    /**
      * Get count of configured RA services.
      *
      * \return count of configured RA services.

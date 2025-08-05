@@ -58,12 +58,6 @@ SatMobilityModel::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatMobilityModel::GetInstanceTypeId(void) const
-{
-    return GetTypeId();
-}
-
 SatMobilityModel::SatMobilityModel()
     : m_cartesianPositionOutdated(false),
       m_GetAsGeoCoordinates(true)

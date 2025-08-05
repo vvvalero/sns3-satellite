@@ -70,14 +70,6 @@ SatHandoverModule::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatHandoverModule::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 void
 SatHandoverModule::DoDispose()
 {

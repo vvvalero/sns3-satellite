@@ -104,14 +104,6 @@ SatGwMac::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatGwMac::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatGwMac::SatGwMac()
     : SatMac(),
       m_fwdScheduler(),

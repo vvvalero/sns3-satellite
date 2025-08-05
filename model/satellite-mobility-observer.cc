@@ -87,14 +87,6 @@ SatMobilityObserver::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatMobilityObserver::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatMobilityObserver::SatMobilityObserver()
 {
     NS_LOG_FUNCTION(this);
