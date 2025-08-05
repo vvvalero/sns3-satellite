@@ -50,14 +50,6 @@ SatRxPowerOutputTraceContainer::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatRxPowerOutputTraceContainer::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatRxPowerOutputTraceContainer::SatRxPowerOutputTraceContainer()
     : m_enableFigureOutput(true)
 {

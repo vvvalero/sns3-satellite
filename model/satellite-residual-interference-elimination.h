@@ -43,11 +43,6 @@ class SatResidualInterferenceElimination : public SatInterferenceElimination
     static TypeId GetTypeId(void);
 
     /**
-     * Derived from Object
-     */
-    TypeId GetInstanceTypeId(void) const;
-
-    /**
      * Default constructor. Should not be used.
      */
     SatResidualInterferenceElimination();

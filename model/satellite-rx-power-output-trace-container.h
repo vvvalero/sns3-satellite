@@ -69,12 +69,6 @@ class SatRxPowerOutputTraceContainer : public SatBaseTraceContainer
     static TypeId GetTypeId(void);
 
     /**
-     * \brief NS-3 instance type id function
-     * \return Instance type is
-     */
-    TypeId GetInstanceTypeId(void) const;
-
-    /**
      *  \brief Do needed dispose actions.
      */
     void DoDispose();

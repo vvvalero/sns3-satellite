@@ -179,14 +179,6 @@ SatRequestManager::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatRequestManager::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 void
 SatRequestManager::DoDispose()
 {

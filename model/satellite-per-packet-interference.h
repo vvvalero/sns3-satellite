@@ -54,12 +54,6 @@ class SatPerPacketInterference : public SatInterference
 
     /**
      *
-     * \return
-     */
-    TypeId GetInstanceTypeId(void) const;
-
-    /**
-     *
      */
     SatPerPacketInterference();
 

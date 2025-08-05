@@ -48,12 +48,6 @@ SatPerfectInterferenceElimination::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatPerfectInterferenceElimination::GetInstanceTypeId(void) const
-{
-    return GetTypeId();
-}
-
 SatPerfectInterferenceElimination::SatPerfectInterferenceElimination()
 {
     NS_LOG_FUNCTION(this);

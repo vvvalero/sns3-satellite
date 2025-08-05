@@ -52,14 +52,6 @@ SatPerPacketInterference::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatPerPacketInterference::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatPerPacketInterference::SatPerPacketInterference()
     : m_residualPowerW(0.0),
       m_rxing(false),

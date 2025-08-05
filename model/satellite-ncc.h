@@ -63,12 +63,6 @@ class SatNcc : public Object
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
-
-    /**
      * Construct a SatNcc
      *
      * This is the constructor for the SatNcc

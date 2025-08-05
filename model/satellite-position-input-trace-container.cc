@@ -46,14 +46,6 @@ SatPositionInputTraceContainer::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatPositionInputTraceContainer::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatPositionInputTraceContainer::SatPositionInputTraceContainer()
 {
     NS_LOG_FUNCTION(this);

@@ -56,12 +56,6 @@ SatResidualInterferenceElimination::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatResidualInterferenceElimination::GetInstanceTypeId(void) const
-{
-    return GetTypeId();
-}
-
 SatResidualInterferenceElimination::SatResidualInterferenceElimination()
     : SatInterferenceElimination(),
       m_waveformConf(0),

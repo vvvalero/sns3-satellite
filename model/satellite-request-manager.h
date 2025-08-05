@@ -71,12 +71,6 @@ class SatRequestManager : public Object
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
-
-    /**
      * Dispose of this class instance
      */
     virtual void DoDispose();

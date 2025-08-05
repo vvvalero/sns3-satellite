@@ -48,14 +48,6 @@ SatRxPowerInputTraceContainer::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatRxPowerInputTraceContainer::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatRxPowerInputTraceContainer::SatRxPowerInputTraceContainer()
 {
     NS_LOG_FUNCTION(this);

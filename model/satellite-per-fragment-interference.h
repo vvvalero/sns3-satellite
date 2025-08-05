@@ -45,11 +45,6 @@ class SatPerFragmentInterference : public SatPerPacketInterference
     static TypeId GetTypeId();
 
     /**
-     * Inherited from ObjectBase base class.
-     */
-    TypeId GetInstanceTypeId(void) const;
-
-    /**
      * Default constructor
      */
     SatPerFragmentInterference();

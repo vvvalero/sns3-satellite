@@ -71,7 +71,6 @@ class SatOrbiterMac : public SatMac
      * inherited from Object
      */
     static TypeId GetTypeId(void);
-    TypeId GetInstanceTypeId(void) const;
     virtual void DoInitialize(void);
 
     /**

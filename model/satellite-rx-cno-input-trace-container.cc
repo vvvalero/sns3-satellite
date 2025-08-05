@@ -48,14 +48,6 @@ SatRxCnoInputTraceContainer::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatRxCnoInputTraceContainer::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatRxCnoInputTraceContainer::SatRxCnoInputTraceContainer()
 {
     NS_LOG_FUNCTION(this);

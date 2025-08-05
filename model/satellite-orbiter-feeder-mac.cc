@@ -55,14 +55,6 @@ SatOrbiterFeederMac::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatOrbiterFeederMac::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatOrbiterFeederMac::SatOrbiterFeederMac(void)
 {
     NS_LOG_FUNCTION(this);

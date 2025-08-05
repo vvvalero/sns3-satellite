@@ -72,14 +72,6 @@ SatNcc::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatNcc::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatNcc::SatNcc()
     : m_utHandoverDelay(Seconds(0.0)),
       m_utTimeout(Seconds(10)),

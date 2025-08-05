@@ -45,13 +45,6 @@ SatPerFragmentInterference::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatPerFragmentInterference::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-    return GetTypeId();
-}
-
 SatPerFragmentInterference::SatPerFragmentInterference()
     : SatPerPacketInterference(),
       m_ifPowerAtEventChangeW(),
