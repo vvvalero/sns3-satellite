@@ -71,12 +71,6 @@ class SatDefaultSuperframeAllocator : public SatSuperframeAllocator
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
-
-    /**
      * \brief Reserve minimum rate from the allocator. This method is called to perform CAC
      * functionality.
      *

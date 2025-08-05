@@ -65,14 +65,6 @@ SatDefaultSuperframeAllocator::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatDefaultSuperframeAllocator::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatDefaultSuperframeAllocator::SatDefaultSuperframeAllocator(Ptr<SatSuperframeConf> superFrameConf)
     : SatSuperframeAllocator(superFrameConf),
       m_targetLoad(0.0),
@@ -82,7 +74,7 @@ SatDefaultSuperframeAllocator::SatDefaultSuperframeAllocator(Ptr<SatSuperframeCo
       m_rcBasedAllocationEnabled(false),
       m_totalBandwidth(0.0)
 {
-    NS_LOG_FUNCTION(this);
+    NS_LOG_FUNCTION(this << superFrameConf);
 
     uint32_t currentMinCarrierPayloadInBytes = std::numeric_limits<uint32_t>::max();
     uint32_t currentMostRobustSlotPayloadInBytes = std::numeric_limits<uint32_t>::max();

@@ -39,14 +39,6 @@ SatSuperframeAllocator::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatSuperframeAllocator::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatSuperframeAllocator::SatSuperframeAllocator(Ptr<SatSuperframeConf> superFrameConf)
     : m_superframeConf(superFrameConf)
 {

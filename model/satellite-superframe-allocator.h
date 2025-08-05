@@ -65,12 +65,6 @@ class SatSuperframeAllocator : public Object
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
-
-    /**
      * \brief Get super frame duration.
      *
      *  \return Super frame duration.
