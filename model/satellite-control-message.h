@@ -256,12 +256,6 @@ class SatTbtpMessage : public SatControlMessage
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
-
-    /**
      * Default constructor for SatTbtpHeader. Set sequence id to 0.
      */
     SatTbtpMessage();
@@ -429,12 +423,6 @@ class SatCrMessage : public SatControlMessage
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
-
-    /**
      * Define type RequestDescriptor_t
      */
     typedef std::pair<uint8_t, SatEnums::SatCapacityAllocationCategory_t> RequestDescriptor_t;
@@ -551,12 +539,6 @@ class SatArqAckMessage : public SatControlMessage
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
-
-    /**
      * \brief Get type of the message.
      * \return SatControlMsgTag::SAT_ARQ_ACK
      */
@@ -627,12 +609,6 @@ class SatCnoReportMessage : public SatControlMessage
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
-
-    /**
      * \brief Get type of the message.
      *
      * \return SatControlMsgTag::SAT_CN0_REPORT
@@ -690,12 +666,6 @@ class SatRaMessage : public SatControlMessage
      * methods derived from base classes
      */
     static TypeId GetTypeId(void);
-
-    /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
 
     /**
      * \brief Get type of the message.
@@ -796,12 +766,6 @@ class SatTimuMessage : public SatControlMessage
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
-
-    /**
      * \brief Get type of the message.
      *
      * \return SatControlMsgTag::SAT_TIMU_CTRL_MSG
@@ -896,12 +860,6 @@ class SatHandoverRecommendationMessage : public SatControlMessage
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
-
-    /**
      * \brief Get type of the message.
      *
      * \return SatControlMsgTag::SAT_HR_CTRL_MSG
@@ -975,12 +933,6 @@ class SatSliceSubscriptionMessage : public SatControlMessage
      * methods derived from base classes
      */
     static TypeId GetTypeId(void);
-
-    /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
 
     /**
      * \brief Get type of the message.
@@ -1058,12 +1010,6 @@ class SatLogonMessage : public SatControlMessage
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
-
-    /**
      * \brief Get type of the message.
      *
      * \return SatControlMsgTag::SAT_LOGON_CTRL_MSG
@@ -1104,12 +1050,6 @@ class SatLogonResponseMessage : public SatControlMessage
      * methods derived from base classes
      */
     static TypeId GetTypeId(void);
-
-    /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
 
     /**
      * \brief Get type of the message.
@@ -1168,12 +1108,6 @@ class SatLogoffMessage : public SatControlMessage
     static TypeId GetTypeId(void);
 
     /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
-
-    /**
      * \brief Get type of the message.
      *
      * \return SatControlMsgTag::SAT_LOGOFF_CTRL_MSG
@@ -1213,12 +1147,6 @@ class SatNcrMessage : public SatControlMessage
      * methods derived from base classes
      */
     static TypeId GetTypeId(void);
-
-    /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
 
     /**
      * \brief Get type of the message.
@@ -1275,12 +1203,6 @@ class SatCmtMessage : public SatControlMessage
      * methods derived from base classes
      */
     static TypeId GetTypeId(void);
-
-    /**
-     * \brief Get the type ID of instance
-     * \return the object TypeId
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
 
     /**
      * \brief Get type of the message.
