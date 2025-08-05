@@ -282,8 +282,8 @@ SatBeamHelper::NotifyConstructionCompleted()
     m_channelFactory.SetTypeId("ns3::SatChannel");
 
     // create SatChannel containers
-    m_ulChannels = Create<SatChannelPair>();
-    m_flChannels = Create<SatChannelPair>();
+    m_ulChannels = CreateObject<SatChannelPair>();
+    m_flChannels = CreateObject<SatChannelPair>();
 
     // create link specific control message containers
     Ptr<SatControlMsgContainer> rtnCtrlMsgContainer =

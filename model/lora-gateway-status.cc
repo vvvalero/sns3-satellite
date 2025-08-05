@@ -36,7 +36,10 @@ NS_OBJECT_ENSURE_REGISTERED(LoraGatewayStatus);
 TypeId
 LoraGatewayStatus::GetTypeId(void)
 {
-    static TypeId tid = TypeId("ns3::LoraGatewayStatus").AddConstructor<LoraGatewayStatus>();
+    static TypeId tid =
+        TypeId("ns3::LoraGatewayStatus")
+            .SetParent<Object>()
+            .AddConstructor<LoraGatewayStatus>();
     return tid;
 }
 

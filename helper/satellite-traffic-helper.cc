@@ -348,7 +348,7 @@ SatTrafficHelper::AddLoraPeriodicTraffic(Time interval,
     for (uint32_t i = 0; i < uts.GetN(); i++)
     {
         node = uts.Get(i);
-        Ptr<LoraPeriodicSender> app = Create<LoraPeriodicSender>();
+        Ptr<LoraPeriodicSender> app = CreateObject<LoraPeriodicSender>();
 
         app->SetInterval(interval);
         NS_LOG_DEBUG("Created an application with interval = " << interval.GetHours() << " hours");

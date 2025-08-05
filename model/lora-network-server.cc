@@ -111,14 +111,14 @@ LoraNetworkServer::AddGateway(Ptr<Node> gateway, Ptr<NetDevice> netDevice)
         Ptr<LorawanMacGateway> gwMac = DynamicCast<LorawanMacGateway>(satLoraNetDevice->GetMac());
         // Create new gatewayStatus
         Ptr<LoraGatewayStatus> gwStatus =
-            Create<LoraGatewayStatus>(gatewayAddress, netDevice, gwMac);
+            CreateObject<LoraGatewayStatus>(gatewayAddress, netDevice, gwMac);
         m_status->AddGateway(gateway, gatewayAddress, gwStatus);
         break;
     }
     case SatEnums::REGENERATION_NETWORK: {
         // Create new gatewayStatus
         Ptr<LoraGatewayStatus> gwStatus =
-            Create<LoraGatewayStatus>(gatewayAddress, netDevice, nullptr);
+            CreateObject<LoraGatewayStatus>(gatewayAddress, netDevice, nullptr);
         m_status->AddGateway(gateway, gatewayAddress, gwStatus);
         break;
     }
