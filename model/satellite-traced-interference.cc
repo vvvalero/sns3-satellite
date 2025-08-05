@@ -48,12 +48,6 @@ SatTracedInterference::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatTracedInterference::GetInstanceTypeId(void) const
-{
-    return GetTypeId();
-}
-
 SatTracedInterference::SatTracedInterference(SatEnums::ChannelType_t channeltype,
                                              double rxBandwidth)
     : m_rxing(false),

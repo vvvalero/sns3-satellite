@@ -111,14 +111,6 @@ SatUtMac::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatUtMac::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatUtMac::SatUtMac()
     : SatMac(),
       m_satId(0),

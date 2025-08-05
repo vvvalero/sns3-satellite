@@ -52,14 +52,6 @@ SatUtMacState::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatUtMacState::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatUtMacState::SatUtMacState()
     : m_rcstState(HOLD_STANDBY),
       m_lastNcrDateReceived(Seconds(0)),

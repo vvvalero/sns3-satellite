@@ -63,12 +63,6 @@ SatTracedMobilityModel::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatTracedMobilityModel::GetInstanceTypeId(void) const
-{
-    return GetTypeId();
-}
-
 void
 SatTracedMobilityModel::DoDispose()
 {

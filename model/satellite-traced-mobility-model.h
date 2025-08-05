@@ -46,7 +46,6 @@ class SatTracedMobilityModel : public SatMobilityModel
      * \return the object TypeId
      */
     static TypeId GetTypeId(void);
-    TypeId GetInstanceTypeId(void) const;
 
     /**
      * Dispose of this class instance

@@ -59,14 +59,6 @@ SatScpcScheduler::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatScpcScheduler::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 SatScpcScheduler::SatScpcScheduler()
     : SatFwdLinkScheduler()
 {

@@ -78,10 +78,6 @@ class SatUtMac : public SatMac
      * Derived from Object
      */
     static TypeId GetTypeId(void);
-    /**
-     * Derived from Object
-     */
-    virtual TypeId GetInstanceTypeId(void) const;
 
     /**
      * Default constructor, which is not used.

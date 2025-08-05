@@ -47,12 +47,6 @@ class SatTracedInterference : public SatInterference
     static TypeId GetTypeId(void);
 
     /**
-     * Derived from Object
-     * \return TypeId of instance
-     */
-    TypeId GetInstanceTypeId(void) const;
-
-    /**
      * Constructor
      * \param channeltype
      * \param rxBandwidth

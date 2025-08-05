@@ -58,14 +58,6 @@ SatSuperframeSeq::GetTypeId(void)
     return tid;
 }
 
-TypeId
-SatSuperframeSeq::GetInstanceTypeId(void) const
-{
-    NS_LOG_FUNCTION(this);
-
-    return GetTypeId();
-}
-
 void
 SatSuperframeSeq::AddWaveformConf(Ptr<SatWaveformConf> wfConf)
 {
