@@ -29,8 +29,8 @@
 #include "satellite-node-info.h"
 #include "satellite-queue.h"
 
-#include <ns3/callback.h>
-#include <ns3/object.h>
+#include "ns3/callback.h"
+#include "ns3/object.h"
 
 #include <deque>
 #include <map>

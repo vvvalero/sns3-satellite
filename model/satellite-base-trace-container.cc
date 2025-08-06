@@ -20,7 +20,7 @@
 
 #include "satellite-base-trace-container.h"
 
-#include <ns3/log.h>
+#include "ns3/log.h"
 
 NS_LOG_COMPONENT_DEFINE("SatBaseTraceContainer");
 

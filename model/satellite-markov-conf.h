@@ -24,12 +24,12 @@
 #include "satellite-loo-conf.h"
 #include "satellite-rayleigh-conf.h"
 
-#include <ns3/boolean.h>
-#include <ns3/double.h>
-#include <ns3/nstime.h>
-#include <ns3/object.h>
-#include <ns3/simulator.h>
-#include <ns3/uinteger.h>
+#include "ns3/boolean.h"
+#include "ns3/double.h"
+#include "ns3/nstime.h"
+#include "ns3/object.h"
+#include "ns3/simulator.h"
+#include "ns3/uinteger.h"
 
 #include <map>
 #include <stdint.h>

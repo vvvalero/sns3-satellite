@@ -20,9 +20,9 @@
 #ifndef GEO_COORDINATE_H
 #define GEO_COORDINATE_H
 
-#include <ns3/attribute-helper.h>
-#include <ns3/attribute.h>
-#include <ns3/vector.h>
+#include "ns3/attribute-helper.h"
+#include "ns3/attribute.h"
+#include "ns3/vector.h"
 
 #include <istream>
 #include <ostream>

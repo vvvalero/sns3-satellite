@@ -21,7 +21,7 @@
 #ifndef SAT_STATIC_BSTP_H
 #define SAT_STATIC_BSTP_H
 
-#include <ns3/simple-ref-count.h>
+#include "ns3/simple-ref-count.h"
 
 #include <map>
 #include <stdint.h>

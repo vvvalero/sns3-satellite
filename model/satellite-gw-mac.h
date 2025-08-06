@@ -24,10 +24,10 @@
 #include "satellite-mac.h"
 #include "satellite-phy.h"
 
-#include <ns3/callback.h>
-#include <ns3/nstime.h>
-#include <ns3/ptr.h>
-#include <ns3/traced-callback.h>
+#include "ns3/callback.h"
+#include "ns3/nstime.h"
+#include "ns3/ptr.h"
+#include "ns3/traced-callback.h"
 
 #include <map>
 #include <set>

@@ -24,7 +24,7 @@
 #include "satellite-antenna-gain-pattern-container.h"
 #include "satellite-mobility-model.h"
 
-#include <ns3/nstime.h>
+#include "ns3/nstime.h"
 
 #include <stdint.h>
 #include <string>

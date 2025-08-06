@@ -21,7 +21,7 @@
 #ifndef SATELLITE_GSE_HEADERS_H
 #define SATELLITE_GSE_HEADERS_H
 
-#include <ns3/header.h>
+#include "ns3/header.h"
 
 #include <ostream>
 #include <stdint.h>

@@ -25,7 +25,7 @@
 
 #include "lora-device-address.h"
 
-#include <ns3/object.h>
+#include "ns3/object.h"
 
 #include <stdint.h>
 

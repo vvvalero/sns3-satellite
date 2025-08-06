@@ -26,10 +26,10 @@
 #include "satellite-enums.h"
 #include "satellite-utils.h"
 
-#include <ns3/nstime.h>
-#include <ns3/object.h>
-#include <ns3/packet.h>
-#include <ns3/ptr.h>
+#include "ns3/nstime.h"
+#include "ns3/object.h"
+#include "ns3/packet.h"
+#include "ns3/ptr.h"
 
 #include <stdint.h>
 #include <utility>

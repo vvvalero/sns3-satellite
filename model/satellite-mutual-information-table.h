@@ -22,7 +22,7 @@
 #ifndef SATELLITE_MUTUAL_INFORMATION_TABLE_H
 #define SATELLITE_MUTUAL_INFORMATION_TABLE_H
 
-#include <ns3/object.h>
+#include "ns3/object.h"
 
 #include <fstream>
 #include <string>

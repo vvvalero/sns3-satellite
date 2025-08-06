@@ -24,11 +24,11 @@
 #include "satellite-enums.h"
 #include "satellite-packet-classifier.h"
 
-#include <ns3/mac48-address.h>
-#include <ns3/net-device.h>
-#include <ns3/nstime.h>
-#include <ns3/simulator.h>
-#include <ns3/traced-callback.h>
+#include "ns3/mac48-address.h"
+#include "ns3/net-device.h"
+#include "ns3/nstime.h"
+#include "ns3/simulator.h"
+#include "ns3/traced-callback.h"
 
 #include <stdint.h>
 #include <string>

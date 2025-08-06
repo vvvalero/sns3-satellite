@@ -20,7 +20,7 @@
 
 #include "satellite-scpc-scheduler.h"
 
-#include <ns3/log.h>
+#include "ns3/log.h"
 
 #include <utility>
 #include <vector>

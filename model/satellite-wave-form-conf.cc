@@ -24,13 +24,13 @@
 #include "satellite-link-results.h"
 #include "satellite-utils.h"
 
-#include <ns3/boolean.h>
-#include <ns3/double.h>
-#include <ns3/enum.h>
-#include <ns3/log.h>
-#include <ns3/satellite-env-variables.h>
-#include <ns3/singleton.h>
-#include <ns3/uinteger.h>
+#include "ns3/boolean.h"
+#include "ns3/double.h"
+#include "ns3/enum.h"
+#include "ns3/log.h"
+#include "ns3/satellite-env-variables.h"
+#include "ns3/singleton.h"
+#include "ns3/uinteger.h"
 
 #include <algorithm>
 #include <cmath>

@@ -26,9 +26,9 @@
 #include "satellite-lower-layer-service.h"
 #include "satellite-superframe-sequence.h"
 
-#include <ns3/address.h>
-#include <ns3/log.h>
-#include <ns3/packet.h>
+#include "ns3/address.h"
+#include "ns3/log.h"
+#include "ns3/packet.h"
 
 #include <map>
 #include <tuple>

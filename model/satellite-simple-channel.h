@@ -20,8 +20,8 @@
 #ifndef SATELLITE_SIMPLE_CHANNEL_H
 #define SATELLITE_SIMPLE_CHANNEL_H
 
-#include <ns3/channel.h>
-#include <ns3/mac48-address.h>
+#include "ns3/channel.h"
+#include "ns3/mac48-address.h"
 
 #include <cstddef>
 #include <stdint.h>

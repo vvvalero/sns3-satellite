@@ -20,8 +20,8 @@
 #ifndef SATELLITE_ID_MAPPER_H
 #define SATELLITE_ID_MAPPER_H
 
-#include <ns3/mac48-address.h>
-#include <ns3/object.h>
+#include "ns3/mac48-address.h"
+#include "ns3/object.h"
 
 #include <map>
 #include <stdint.h>

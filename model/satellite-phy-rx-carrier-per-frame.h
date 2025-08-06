@@ -28,7 +28,7 @@
 #include "satellite-phy-rx-carrier.h"
 #include "satellite-rtn-link-time.h"
 
-#include <ns3/singleton.h>
+#include "ns3/singleton.h"
 
 #include <list>
 #include <map>

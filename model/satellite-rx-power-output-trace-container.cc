@@ -23,9 +23,9 @@
 #include "../utils/satellite-env-variables.h"
 #include "satellite-id-mapper.h"
 
-#include <ns3/boolean.h>
-#include <ns3/singleton.h>
-#include <ns3/string.h>
+#include "ns3/boolean.h"
+#include "ns3/singleton.h"
+#include "ns3/string.h"
 
 #include <ios>
 #include <sstream>

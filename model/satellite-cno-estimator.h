@@ -23,8 +23,8 @@
 
 #include "satellite-cno-estimator.h"
 
-#include <ns3/nstime.h>
-#include <ns3/simple-ref-count.h>
+#include "ns3/nstime.h"
+#include "ns3/simple-ref-count.h"
 
 #include <cmath>
 #include <map>

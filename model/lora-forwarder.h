@@ -25,10 +25,10 @@
 
 #include "satellite-lorawan-net-device.h"
 
-#include <ns3/application.h>
-#include <ns3/attribute.h>
-#include <ns3/nstime.h>
-#include <ns3/point-to-point-net-device.h>
+#include "ns3/application.h"
+#include "ns3/attribute.h"
+#include "ns3/nstime.h"
+#include "ns3/point-to-point-net-device.h"
 
 #include <map>
 #include <stdint.h>

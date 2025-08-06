@@ -25,9 +25,9 @@
 #include "geo-coordinate.h"
 #include "satellite-antenna-gain-pattern-container.h"
 
-#include <ns3/object.h>
-#include <ns3/position-allocator.h>
-#include <ns3/random-variable-stream.h>
+#include "ns3/object.h"
+#include "ns3/position-allocator.h"
+#include "ns3/random-variable-stream.h"
 
 #include <stdint.h>
 #include <vector>

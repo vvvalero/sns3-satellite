@@ -21,7 +21,7 @@
 #ifndef SATELLITE_ARQ_HEADER_H
 #define SATELLITE_ARQ_HEADER_H
 
-#include <ns3/header.h>
+#include "ns3/header.h"
 
 #include <ostream>
 #include <stdint.h>

@@ -25,7 +25,7 @@
 
 #include "satellite-enums.h"
 
-#include <ns3/tag.h>
+#include "ns3/tag.h"
 
 #include <ostream>
 #include <stdint.h>

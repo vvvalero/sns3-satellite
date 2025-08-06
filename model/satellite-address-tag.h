@@ -21,8 +21,8 @@
 #ifndef SATELLITE_ADDRESS_TAG_H
 #define SATELLITE_ADDRESS_TAG_H
 
-#include <ns3/address.h>
-#include <ns3/tag.h>
+#include "ns3/address.h"
+#include "ns3/tag.h"
 
 #include <ostream>
 #include <stdint.h>

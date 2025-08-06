@@ -24,11 +24,11 @@
 
 #include "satellite-ut-helper.h"
 
-#include <ns3/satellite-channel.h>
-#include <ns3/satellite-ncc.h>
-#include <ns3/satellite-superframe-sequence.h>
-#include <ns3/satellite-typedefs.h>
-#include <ns3/satellite-ut-mac.h>
+#include "ns3/satellite-channel.h"
+#include "ns3/satellite-ncc.h"
+#include "ns3/satellite-superframe-sequence.h"
+#include "ns3/satellite-typedefs.h"
+#include "ns3/satellite-ut-mac.h"
 
 #include <stdint.h>
 

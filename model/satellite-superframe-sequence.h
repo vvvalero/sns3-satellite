@@ -25,8 +25,8 @@
 #include "satellite-frame-conf.h"
 #include "satellite-wave-form-conf.h"
 
-#include <ns3/object.h>
-#include <ns3/ptr.h>
+#include "ns3/object.h"
+#include "ns3/ptr.h"
 
 #include <map>
 #include <stdint.h>

@@ -27,11 +27,11 @@
 #include "satellite-frame-conf.h"
 #include "satellite-mac-tag.h"
 
-#include <ns3/header.h>
-#include <ns3/mac48-address.h>
-#include <ns3/nstime.h>
-#include <ns3/object.h>
-#include <ns3/simulator.h>
+#include "ns3/header.h"
+#include "ns3/mac48-address.h"
+#include "ns3/nstime.h"
+#include "ns3/object.h"
+#include "ns3/simulator.h"
 
 #include <map>
 #include <ostream>

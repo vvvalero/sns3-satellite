@@ -21,10 +21,10 @@
 #ifndef SATELLITE_QUEUE_H_
 #define SATELLITE_QUEUE_H_
 
-#include <ns3/nstime.h>
-#include <ns3/object.h>
-#include <ns3/packet.h>
-#include <ns3/traced-callback.h>
+#include "ns3/nstime.h"
+#include "ns3/object.h"
+#include "ns3/packet.h"
+#include "ns3/traced-callback.h"
 
 #include <deque>
 #include <queue>
@@ -331,10 +331,10 @@ class SatQueue : public Object
 #ifndef SATELLITE_QUEUE_H_
 #define SATELLITE_QUEUE_H_
 
-#include <ns3/nstime.h>
-#include <ns3/object.h>
-#include <ns3/packet.h>
-#include <ns3/traced-callback.h>
+#include "ns3/nstime.h"
+#include "ns3/object.h"
+#include "ns3/packet.h"
+#include "ns3/traced-callback.h"
 
 #include <queue>
 
@@ -638,10 +638,10 @@ class SatQueue : public Object
 #ifndef SATELLITE_QUEUE_H_
 #define SATELLITE_QUEUE_H_
 
-#include <ns3/nstime.h>
-#include <ns3/object.h>
-#include <ns3/packet.h>
-#include <ns3/traced-callback.h>
+#include "ns3/nstime.h"
+#include "ns3/object.h"
+#include "ns3/packet.h"
+#include "ns3/traced-callback.h"
 
 #include <queue>
 

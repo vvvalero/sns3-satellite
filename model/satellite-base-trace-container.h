@@ -22,8 +22,8 @@
 
 #include "satellite-enums.h"
 
-#include <ns3/object.h>
-#include <ns3/simulator.h>
+#include "ns3/object.h"
+#include "ns3/simulator.h"
 
 #include <stdint.h>
 

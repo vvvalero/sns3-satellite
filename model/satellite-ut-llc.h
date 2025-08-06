@@ -24,7 +24,7 @@
 #include "satellite-llc.h"
 #include "satellite-queue.h"
 
-#include <ns3/ptr.h>
+#include "ns3/ptr.h"
 
 #include <stdint.h>
 #include <vector>

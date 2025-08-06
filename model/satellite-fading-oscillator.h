@@ -20,9 +20,9 @@
 #ifndef SATELLITE_FADING_OSCILLATOR_H
 #define SATELLITE_FADING_OSCILLATOR_H
 
-#include <ns3/double.h>
-#include <ns3/object.h>
-#include <ns3/simulator.h>
+#include "ns3/double.h"
+#include "ns3/object.h"
+#include "ns3/simulator.h"
 
 #include <complex>
 

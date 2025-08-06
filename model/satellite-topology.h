@@ -39,9 +39,9 @@
 #include "satellite-ut-mac.h"
 #include "satellite-ut-phy.h"
 
-#include <ns3/node-container.h>
-#include <ns3/node.h>
-#include <ns3/object.h>
+#include "ns3/node-container.h"
+#include "ns3/node.h"
+#include "ns3/object.h"
 
 #include <map>
 #include <ostream>

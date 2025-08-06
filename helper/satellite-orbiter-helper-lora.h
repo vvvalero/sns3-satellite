@@ -30,6 +30,7 @@
 #include "ns3/node-container.h"
 #include "ns3/object-factory.h"
 #include "ns3/output-stream-wrapper.h"
+#include "ns3/pointer.h"
 #include "ns3/satellite-bbframe-conf.h"
 #include "ns3/satellite-channel.h"
 #include "ns3/satellite-fwd-link-scheduler.h"
@@ -41,7 +42,6 @@
 #include "ns3/satellite-superframe-sequence.h"
 #include "ns3/satellite-typedefs.h"
 #include "ns3/traced-callback.h"
-#include <ns3/pointer.h>
 
 #include <map>
 #include <stdint.h>

@@ -28,8 +28,8 @@
 #include "satellite-sgp4ext.h"
 #include "satellite-sgp4unit.h"
 
-#include <ns3/assert.h>
-#include <ns3/nstime.h>
+#include "ns3/assert.h"
+#include "ns3/nstime.h"
 
 #include <algorithm>
 #include <cmath>

@@ -23,8 +23,8 @@
 
 #include "satellite-conf.h"
 
-#include <ns3/lorawan-mac-end-device-class-a.h>
-#include <ns3/lorawan-mac-gateway.h>
+#include "ns3/lorawan-mac-end-device-class-a.h"
+#include "ns3/lorawan-mac-gateway.h"
 
 namespace ns3
 {

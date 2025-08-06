@@ -21,7 +21,7 @@
 #ifndef SATELLITE_CRDSA_REPLICA_TAG_H
 #define SATELLITE_CRDSA_REPLICA_TAG_H
 
-#include <ns3/tag.h>
+#include "ns3/tag.h"
 
 #include <ostream>
 #include <stdint.h>

@@ -28,8 +28,8 @@
 #include "satellite-mac.h"
 #include "satellite-phy.h"
 
-#include <ns3/object.h>
-#include <ns3/packet.h>
+#include "ns3/object.h"
+#include "ns3/packet.h"
 
 #include <array>
 #include <stdint.h>

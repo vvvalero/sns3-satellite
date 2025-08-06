@@ -31,8 +31,8 @@
 #include "satellite-lorawan-net-device.h"
 #include "satellite-phy.h"
 
-#include <ns3/log.h>
-#include <ns3/pointer.h>
+#include "ns3/log.h"
+#include "ns3/pointer.h"
 
 #include <algorithm>
 

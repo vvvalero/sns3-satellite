@@ -23,7 +23,7 @@
 #ifndef LORA_DEVICE_ADDRESS_H
 #define LORA_DEVICE_ADDRESS_H
 
-#include <ns3/address.h>
+#include "ns3/address.h"
 
 #include <ostream>
 #include <stdint.h>

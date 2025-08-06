@@ -23,10 +23,10 @@
 
 #include "satellite-enums.h"
 
-#include <ns3/mac48-address.h>
-#include <ns3/nstime.h>
-#include <ns3/object.h>
-#include <ns3/output-stream-wrapper.h>
+#include "ns3/mac48-address.h"
+#include "ns3/nstime.h"
+#include "ns3/object.h"
+#include "ns3/output-stream-wrapper.h"
 
 #include <stdint.h>
 #include <string>

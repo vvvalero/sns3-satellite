@@ -20,7 +20,7 @@
 
 #include "satellite-superframe-allocator.h"
 
-#include <ns3/log.h>
+#include "ns3/log.h"
 
 #include <map>
 #include <stdint.h>

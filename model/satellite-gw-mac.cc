@@ -33,15 +33,15 @@
 #include "satellite-uplink-info-tag.h"
 #include "satellite-utils.h"
 
-#include <ns3/address.h>
-#include <ns3/boolean.h>
-#include <ns3/log.h>
-#include <ns3/mac48-address.h>
-#include <ns3/packet.h>
-#include <ns3/pointer.h>
-#include <ns3/simulator.h>
-#include <ns3/singleton.h>
-#include <ns3/uinteger.h>
+#include "ns3/address.h"
+#include "ns3/boolean.h"
+#include "ns3/log.h"
+#include "ns3/mac48-address.h"
+#include "ns3/packet.h"
+#include "ns3/pointer.h"
+#include "ns3/simulator.h"
+#include "ns3/singleton.h"
+#include "ns3/uinteger.h"
 
 #include <sstream>
 #include <utility>

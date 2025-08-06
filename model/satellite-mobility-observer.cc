@@ -22,11 +22,11 @@
 
 #include "satellite-utils.h"
 
-#include <ns3/boolean.h>
-#include <ns3/double.h>
-#include <ns3/log.h>
-#include <ns3/pointer.h>
-#include <ns3/trace-source-accessor.h>
+#include "ns3/boolean.h"
+#include "ns3/double.h"
+#include "ns3/log.h"
+#include "ns3/pointer.h"
+#include "ns3/trace-source-accessor.h"
 
 #include <cmath>
 #include <stdint.h>

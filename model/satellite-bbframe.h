@@ -24,10 +24,10 @@
 #include "satellite-bbframe-conf.h"
 #include "satellite-enums.h"
 
-#include <ns3/nstime.h>
-#include <ns3/packet.h>
-#include <ns3/simple-ref-count.h>
-#include <ns3/traced-callback.h>
+#include "ns3/nstime.h"
+#include "ns3/packet.h"
+#include "ns3/simple-ref-count.h"
+#include "ns3/traced-callback.h"
 
 #include <stdint.h>
 #include <vector>

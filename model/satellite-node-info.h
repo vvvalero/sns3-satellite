@@ -23,8 +23,8 @@
 
 #include "satellite-enums.h"
 
-#include <ns3/mac48-address.h>
-#include <ns3/simple-ref-count.h>
+#include "ns3/mac48-address.h"
+#include "ns3/simple-ref-count.h"
 
 #include <stdint.h>
 

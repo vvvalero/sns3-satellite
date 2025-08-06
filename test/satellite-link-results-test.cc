@@ -25,11 +25,11 @@
  * \brief Test cases for satellite link results.
  */
 
-#include <ns3/log.h>
-#include <ns3/ptr.h>
-#include <ns3/satellite-link-results.h>
-#include <ns3/satellite-look-up-table.h>
-#include <ns3/test.h>
+#include "ns3/log.h"
+#include "ns3/ptr.h"
+#include "ns3/satellite-link-results.h"
+#include "ns3/satellite-look-up-table.h"
+#include "ns3/test.h"
 
 NS_LOG_COMPONENT_DEFINE("TestLinkResult");
 

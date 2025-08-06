@@ -23,7 +23,7 @@
 
 #include "satellite-fwd-link-scheduler.h"
 
-#include <ns3/pointer.h>
+#include "ns3/pointer.h"
 
 #include <stdint.h>
 #include <utility>

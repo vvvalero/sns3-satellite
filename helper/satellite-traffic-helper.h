@@ -24,12 +24,12 @@
 
 #include "satellite-helper.h"
 
-#include <ns3/application-container.h>
-#include <ns3/cbr-application.h>
-#include <ns3/config.h>
-#include <ns3/object.h>
-#include <ns3/satellite-stats-helper-container.h>
-#include <ns3/string.h>
+#include "ns3/application-container.h"
+#include "ns3/cbr-application.h"
+#include "ns3/config.h"
+#include "ns3/object.h"
+#include "ns3/satellite-stats-helper-container.h"
+#include "ns3/string.h"
 
 #include <map>
 #include <stdint.h>

@@ -24,9 +24,9 @@
 #include "satellite-control-message.h"
 #include "satellite-frame-conf.h"
 
-#include <ns3/address.h>
-#include <ns3/simple-ref-count.h>
-#include <ns3/traced-callback.h>
+#include "ns3/address.h"
+#include "ns3/simple-ref-count.h"
+#include "ns3/traced-callback.h"
 
 #include <list>
 #include <map>

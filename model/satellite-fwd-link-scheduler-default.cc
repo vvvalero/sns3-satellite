@@ -20,7 +20,7 @@
 
 #include "satellite-fwd-link-scheduler-default.h"
 
-#include <ns3/log.h>
+#include "ns3/log.h"
 
 #include <utility>
 #include <vector>

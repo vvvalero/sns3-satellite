@@ -23,10 +23,10 @@
 #include "geo-coordinate.h"
 #include "satellite-mobility-model.h"
 
-#include <ns3/enum.h>
-#include <ns3/log.h>
-#include <ns3/simulator.h>
-#include <ns3/uinteger.h>
+#include "ns3/enum.h"
+#include "ns3/log.h"
+#include "ns3/simulator.h"
+#include "ns3/uinteger.h"
 
 #include <map>
 #include <utility>

@@ -23,9 +23,9 @@
 
 #include "satellite-frame-conf.h"
 
-#include <ns3/callback.h>
-#include <ns3/mac48-address.h>
-#include <ns3/object.h>
+#include "ns3/callback.h"
+#include "ns3/mac48-address.h"
+#include "ns3/object.h"
 
 #include <stdint.h>
 #include <vector>

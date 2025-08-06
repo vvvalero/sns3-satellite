@@ -31,17 +31,17 @@
 #include "satellite-rx-power-output-trace-container.h"
 #include "satellite-utils.h"
 
-#include <ns3/boolean.h>
-#include <ns3/enum.h>
-#include <ns3/log.h>
-#include <ns3/mobility-model.h>
-#include <ns3/net-device.h>
-#include <ns3/node.h>
-#include <ns3/object.h>
-#include <ns3/packet.h>
-#include <ns3/propagation-delay-model.h>
-#include <ns3/simulator.h>
-#include <ns3/singleton.h>
+#include "ns3/boolean.h"
+#include "ns3/enum.h"
+#include "ns3/log.h"
+#include "ns3/mobility-model.h"
+#include "ns3/net-device.h"
+#include "ns3/node.h"
+#include "ns3/object.h"
+#include "ns3/packet.h"
+#include "ns3/propagation-delay-model.h"
+#include "ns3/simulator.h"
+#include "ns3/singleton.h"
 
 #include <algorithm>
 #include <cstddef>

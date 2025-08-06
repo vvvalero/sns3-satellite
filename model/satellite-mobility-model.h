@@ -23,7 +23,7 @@
 
 #include "geo-coordinate.h"
 
-#include <ns3/mobility-model.h>
+#include "ns3/mobility-model.h"
 
 namespace ns3
 {

@@ -25,10 +25,10 @@
 
 #include "satellite-phy-rx-carrier.h"
 
-#include <ns3/mac48-address.h>
-#include <ns3/object.h>
-#include <ns3/ptr.h>
-#include <ns3/traced-callback.h>
+#include "ns3/mac48-address.h"
+#include "ns3/object.h"
+#include "ns3/ptr.h"
+#include "ns3/traced-callback.h"
 
 #include <deque>
 #include <list>

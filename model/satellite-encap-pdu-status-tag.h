@@ -21,7 +21,7 @@
 #ifndef SATELLITE_ENCAP_PDU_STATUS_TAG_H
 #define SATELLITE_ENCAP_PDU_STATUS_TAG_H
 
-#include <ns3/tag.h>
+#include "ns3/tag.h"
 
 #include <ostream>
 #include <stdint.h>

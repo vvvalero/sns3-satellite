@@ -24,10 +24,10 @@
 #include "satellite-node-info.h"
 #include "satellite-scheduling-object.h"
 
-#include <ns3/boolean.h>
-#include <ns3/log.h>
-#include <ns3/packet.h>
-#include <ns3/uinteger.h>
+#include "ns3/boolean.h"
+#include "ns3/log.h"
+#include "ns3/packet.h"
+#include "ns3/uinteger.h"
 
 #include <algorithm>
 #include <vector>

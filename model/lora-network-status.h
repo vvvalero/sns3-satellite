@@ -30,7 +30,7 @@
 #include "lora-network-scheduler.h"
 #include "lorawan-mac-end-device-class-a.h"
 
-#include <ns3/point-to-point-net-device.h>
+#include "ns3/point-to-point-net-device.h"
 
 #include <iterator>
 #include <map>

@@ -22,9 +22,9 @@
 #ifndef SATELLITE_RANDOM_ACCESS_ALLOCATION_CHANNEL_H
 #define SATELLITE_RANDOM_ACCESS_ALLOCATION_CHANNEL_H
 
-#include <ns3/object.h>
-#include <ns3/simulator.h>
-#include <ns3/uinteger.h>
+#include "ns3/object.h"
+#include "ns3/simulator.h"
+#include "ns3/uinteger.h"
 
 #include <cmath>
 #include <stdint.h>

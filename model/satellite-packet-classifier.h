@@ -24,7 +24,7 @@
 #include "satellite-control-message.h"
 #include "satellite-enums.h"
 
-#include <ns3/simple-ref-count.h>
+#include "ns3/simple-ref-count.h"
 
 #include <stdint.h>
 

@@ -31,16 +31,16 @@
 #include "satellite-scheduling-object.h"
 #include "satellite-signal-parameters.h"
 
-#include <ns3/address.h>
-#include <ns3/callback.h>
-#include <ns3/mac48-address.h>
-#include <ns3/node.h>
-#include <ns3/nstime.h>
-#include <ns3/packet.h>
-#include <ns3/ptr.h>
-#include <ns3/random-variable-stream.h>
-#include <ns3/timer.h>
-#include <ns3/traced-callback.h>
+#include "ns3/address.h"
+#include "ns3/callback.h"
+#include "ns3/mac48-address.h"
+#include "ns3/node.h"
+#include "ns3/nstime.h"
+#include "ns3/packet.h"
+#include "ns3/ptr.h"
+#include "ns3/random-variable-stream.h"
+#include "ns3/timer.h"
+#include "ns3/traced-callback.h"
 
 #include <cstring>
 #include <map>

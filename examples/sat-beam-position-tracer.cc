@@ -18,12 +18,12 @@
  * Author: Bastien Tauran <bastien.tauran@viveris.fr>
  */
 
-#include <ns3/config-store-module.h>
-#include <ns3/core-module.h>
-#include <ns3/internet-module.h>
-#include <ns3/network-module.h>
-#include <ns3/satellite-module.h>
-#include <ns3/traffic-module.h>
+#include "ns3/config-store-module.h"
+#include "ns3/core-module.h"
+#include "ns3/internet-module.h"
+#include "ns3/network-module.h"
+#include "ns3/satellite-module.h"
+#include "ns3/traffic-module.h"
 
 using namespace ns3;
 

@@ -25,8 +25,8 @@
 #include "satellite-frame-conf.h"
 #include "satellite-superframe-sequence.h"
 
-#include <ns3/mac48-address.h>
-#include <ns3/object.h>
+#include "ns3/mac48-address.h"
+#include "ns3/object.h"
 
 #include <map>
 #include <stdint.h>

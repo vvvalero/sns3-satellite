@@ -32,11 +32,11 @@
 #include "satellite-ut-mac-state.h"
 #include "satellite-ut-scheduler.h"
 
-#include <ns3/callback.h>
-#include <ns3/nstime.h>
-#include <ns3/ptr.h>
-#include <ns3/traced-callback.h>
-#include <ns3/traced-value.h>
+#include "ns3/callback.h"
+#include "ns3/nstime.h"
+#include "ns3/ptr.h"
+#include "ns3/traced-callback.h"
+#include "ns3/traced-value.h"
 
 #include <map>
 #include <queue>

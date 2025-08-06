@@ -26,12 +26,12 @@
 #include "satellite-enums.h"
 #include "satellite-utils.h"
 
-#include <ns3/boolean.h>
-#include <ns3/double.h>
-#include <ns3/enum.h>
-#include <ns3/log.h>
-#include <ns3/nstime.h>
-#include <ns3/simulator.h>
+#include "ns3/boolean.h"
+#include "ns3/double.h"
+#include "ns3/enum.h"
+#include "ns3/log.h"
+#include "ns3/nstime.h"
+#include "ns3/simulator.h"
 
 #include <algorithm>
 #include <cmath>

@@ -21,9 +21,9 @@
 #ifndef SATELLITE_ARQ_BUFFER_CONTEXT_H_
 #define SATELLITE_ARQ_BUFFER_CONTEXT_H_
 
-#include <ns3/event-id.h>
-#include <ns3/object.h>
-#include <ns3/packet.h>
+#include "ns3/event-id.h"
+#include "ns3/object.h"
+#include "ns3/packet.h"
 
 #include <stdint.h>
 

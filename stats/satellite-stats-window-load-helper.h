@@ -24,8 +24,8 @@
 
 #include "satellite-stats-helper.h"
 
-#include <ns3/callback.h>
-#include <ns3/ptr.h>
+#include "ns3/callback.h"
+#include "ns3/ptr.h"
 
 namespace ns3
 {

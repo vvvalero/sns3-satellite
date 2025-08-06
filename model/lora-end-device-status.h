@@ -28,10 +28,10 @@
 #include "lorawan-mac-end-device-class-a.h"
 #include "lorawan-mac-header.h"
 
-#include <ns3/ipv4-header.h>
-#include <ns3/net-device.h>
-#include <ns3/object.h>
-#include <ns3/pointer.h>
+#include "ns3/ipv4-header.h"
+#include "ns3/net-device.h"
+#include "ns3/object.h"
+#include "ns3/pointer.h"
 
 #include <iostream>
 #include <list>

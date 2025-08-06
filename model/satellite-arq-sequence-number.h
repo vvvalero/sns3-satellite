@@ -21,7 +21,7 @@
 #ifndef SATELLITE_ARQ_SEQUENCE_NUMBER_H_
 #define SATELLITE_ARQ_SEQUENCE_NUMBER_H_
 
-#include <ns3/simple-ref-count.h>
+#include "ns3/simple-ref-count.h"
 
 #include <map>
 #include <stdint.h>

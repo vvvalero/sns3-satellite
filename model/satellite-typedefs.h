@@ -23,9 +23,9 @@
 
 #include "satellite-enums.h"
 
-#include <ns3/callback.h>
-#include <ns3/mac48-address.h>
-#include <ns3/ptr.h>
+#include "ns3/callback.h"
+#include "ns3/mac48-address.h"
+#include "ns3/ptr.h"
 
 #include <stdint.h>
 #include <string>

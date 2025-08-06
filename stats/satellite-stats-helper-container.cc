@@ -52,13 +52,13 @@
 #include "satellite-stats-waveform-usage-helper.h"
 #include "satellite-stats-window-load-helper.h"
 
-#include <ns3/enum.h>
-#include <ns3/log.h>
-#include <ns3/satellite-helper.h>
-#include <ns3/satellite-topology.h>
-#include <ns3/satellite-ut-mac.h>
-#include <ns3/singleton.h>
-#include <ns3/string.h>
+#include "ns3/enum.h"
+#include "ns3/log.h"
+#include "ns3/satellite-helper.h"
+#include "ns3/satellite-topology.h"
+#include "ns3/satellite-ut-mac.h"
+#include "ns3/singleton.h"
+#include "ns3/string.h"
 
 #include <list>
 #include <string>

@@ -29,9 +29,9 @@
 #include "lora-network-status.h"
 #include "lorawan-mac-header.h"
 
-#include <ns3/core-module.h>
-#include <ns3/object.h>
-#include <ns3/packet.h>
+#include "ns3/core-module.h"
+#include "ns3/object.h"
+#include "ns3/packet.h"
 
 namespace ns3
 {

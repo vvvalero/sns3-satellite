@@ -22,9 +22,9 @@
 
 #include "satellite-traced-interference.h"
 
-#include <ns3/log.h>
-#include <ns3/simulator.h>
-#include <ns3/singleton.h>
+#include "ns3/log.h"
+#include "ns3/simulator.h"
+#include "ns3/singleton.h"
 
 #include <limits>
 #include <stdint.h>

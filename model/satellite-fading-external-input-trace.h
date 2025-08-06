@@ -21,7 +21,7 @@
 #ifndef SATELLITE_FADING_EXTERNAL_INPUT_TRACE_H
 #define SATELLITE_FADING_EXTERNAL_INPUT_TRACE_H
 
-#include <ns3/simple-ref-count.h>
+#include "ns3/simple-ref-count.h"
 
 #include <stdint.h>
 #include <string>

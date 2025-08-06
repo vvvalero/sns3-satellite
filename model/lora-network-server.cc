@@ -32,8 +32,8 @@
 #include "satellite-lorawan-net-device.h"
 #include "satellite-topology.h"
 
+#include "ns3/log.h"
 #include "ns3/singleton.h"
-#include <ns3/log.h>
 
 namespace ns3
 {

@@ -24,11 +24,11 @@
 #include "../utils/satellite-env-variables.h"
 #include "satellite-enums.h"
 
-#include <ns3/double.h>
-#include <ns3/log.h>
-#include <ns3/object.h>
-#include <ns3/singleton.h>
-#include <ns3/string.h>
+#include "ns3/double.h"
+#include "ns3/log.h"
+#include "ns3/object.h"
+#include "ns3/singleton.h"
+#include "ns3/string.h"
 
 #include <sstream>
 #include <string>

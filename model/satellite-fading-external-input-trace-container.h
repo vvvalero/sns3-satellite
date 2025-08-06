@@ -25,8 +25,8 @@
 #include "satellite-enums.h"
 #include "satellite-fading-external-input-trace.h"
 
-#include <ns3/mobility-model.h>
-#include <ns3/object.h>
+#include "ns3/mobility-model.h"
+#include "ns3/object.h"
 
 #include <map>
 #include <stdint.h>

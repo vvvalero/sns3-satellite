@@ -20,7 +20,7 @@
 #ifndef SATELLITE_MARKOV_MODEL_H
 #define SATELLITE_MARKOV_MODEL_H
 
-#include <ns3/object.h>
+#include "ns3/object.h"
 
 #include <stdint.h>
 

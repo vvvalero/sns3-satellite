@@ -27,8 +27,8 @@
 #include "satellite-markov-model.h"
 #include "satellite-rayleigh-model.h"
 
-#include <ns3/traced-callback.h>
-#include <ns3/vector.h>
+#include "ns3/traced-callback.h"
+#include "ns3/vector.h"
 
 #include <stdint.h>
 

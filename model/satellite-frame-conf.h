@@ -27,9 +27,9 @@
 #include "satellite-enums.h"
 #include "satellite-wave-form-conf.h"
 
-#include <ns3/ptr.h>
-#include <ns3/random-variable-stream.h>
-#include <ns3/simple-ref-count.h>
+#include "ns3/ptr.h"
+#include "ns3/random-variable-stream.h"
+#include "ns3/simple-ref-count.h"
 
 #include <map>
 #include <sstream>

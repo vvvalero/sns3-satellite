@@ -23,9 +23,9 @@
 #ifndef LORAWAN_MAC_COMMAND_H
 #define LORAWAN_MAC_COMMAND_H
 
-#include <ns3/buffer.h>
-#include <ns3/nstime.h>
-#include <ns3/object.h>
+#include "ns3/buffer.h"
+#include "ns3/nstime.h"
+#include "ns3/object.h"
 
 #include <list>
 #include <ostream>

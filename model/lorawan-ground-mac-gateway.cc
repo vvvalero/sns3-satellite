@@ -29,7 +29,7 @@
 #include "satellite-lorawan-net-device.h"
 #include "satellite-orbiter-net-device-lora.h"
 
-#include <ns3/log.h>
+#include "ns3/log.h"
 
 namespace ns3
 {

@@ -27,9 +27,9 @@
 #include "satellite-random-access-allocation-channel.h"
 #include "satellite-superframe-sequence.h"
 
-#include <ns3/object.h>
-#include <ns3/simulator.h>
-#include <ns3/uinteger.h>
+#include "ns3/object.h"
+#include "ns3/simulator.h"
+#include "ns3/uinteger.h"
 
 #include <map>
 #include <stdint.h>

@@ -21,7 +21,7 @@
 
 #include "satellite-ut-mac-state.h"
 
-#include <ns3/log.h>
+#include "ns3/log.h"
 
 #include <stdint.h>
 

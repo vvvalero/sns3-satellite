@@ -20,7 +20,7 @@
 #ifndef SAT_ONOFF_APPLICATION_H
 #define SAT_ONOFF_APPLICATION_H
 
-#include <ns3/onoff-application.h>
+#include "ns3/onoff-application.h"
 
 namespace ns3
 {

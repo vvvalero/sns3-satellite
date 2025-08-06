@@ -24,9 +24,9 @@
 #include "geo-coordinate.h"
 #include "satellite-mobility-model.h"
 
-#include <ns3/object.h>
-#include <ns3/random-variable-stream.h>
-#include <ns3/traced-callback.h>
+#include "ns3/object.h"
+#include "ns3/random-variable-stream.h"
+#include "ns3/traced-callback.h"
 
 #include <fstream>
 #include <string>

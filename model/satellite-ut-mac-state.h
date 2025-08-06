@@ -22,9 +22,9 @@
 #ifndef SATELLITE_UT_MAC_STATE_H
 #define SATELLITE_UT_MAC_STATE_H
 
-#include <ns3/nstime.h>
-#include <ns3/object.h>
-#include <ns3/simulator.h>
+#include "ns3/nstime.h"
+#include "ns3/object.h"
+#include "ns3/simulator.h"
 
 namespace ns3
 {

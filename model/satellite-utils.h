@@ -23,8 +23,8 @@
 #include "satellite-enums.h"
 #include "satellite-mac-tag.h"
 
-#include <ns3/mac48-address.h>
-#include <ns3/packet.h>
+#include "ns3/mac48-address.h"
+#include "ns3/packet.h"
 
 #include <cmath>
 #include <limits>

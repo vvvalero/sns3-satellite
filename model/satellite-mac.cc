@@ -26,15 +26,15 @@
 #include "satellite-topology.h"
 #include "satellite-typedefs.h"
 
-#include <ns3/boolean.h>
-#include <ns3/log.h>
-#include <ns3/nstime.h>
-#include <ns3/packet.h>
-#include <ns3/pointer.h>
-#include <ns3/simulator.h>
-#include <ns3/singleton.h>
-#include <ns3/trace-source-accessor.h>
-#include <ns3/uinteger.h>
+#include "ns3/boolean.h"
+#include "ns3/log.h"
+#include "ns3/nstime.h"
+#include "ns3/packet.h"
+#include "ns3/pointer.h"
+#include "ns3/simulator.h"
+#include "ns3/singleton.h"
+#include "ns3/trace-source-accessor.h"
+#include "ns3/uinteger.h"
 
 NS_LOG_COMPONENT_DEFINE("SatMac");
 

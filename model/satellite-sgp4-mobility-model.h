@@ -30,8 +30,8 @@
 #include "satellite-sgp4io.h"
 #include "satellite-sgp4unit.h"
 
-#include <ns3/nstime.h>
-#include <ns3/vector.h>
+#include "ns3/nstime.h"
+#include "ns3/vector.h"
 
 #include <stdint.h>
 #include <string>

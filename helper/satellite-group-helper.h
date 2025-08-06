@@ -22,13 +22,13 @@
 #ifndef SATELLITE_GROUP_HELPER_H
 #define SATELLITE_GROUP_HELPER_H
 
-#include <ns3/geo-coordinate.h>
-#include <ns3/mobility-helper.h>
-#include <ns3/node-container.h>
-#include <ns3/satellite-handover-module.h>
-#include <ns3/satellite-mobility-model.h>
-#include <ns3/satellite-position-allocator.h>
-#include <ns3/vector.h>
+#include "ns3/geo-coordinate.h"
+#include "ns3/mobility-helper.h"
+#include "ns3/node-container.h"
+#include "ns3/satellite-handover-module.h"
+#include "ns3/satellite-mobility-model.h"
+#include "ns3/satellite-position-allocator.h"
+#include "ns3/vector.h"
 
 #include <algorithm>
 #include <list>

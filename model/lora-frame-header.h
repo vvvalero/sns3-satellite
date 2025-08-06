@@ -24,7 +24,7 @@
 #include "lora-device-address.h"
 #include "lorawan-mac-command.h"
 
-#include <ns3/header.h>
+#include "ns3/header.h"
 
 #include <list>
 #include <ostream>

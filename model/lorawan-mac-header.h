@@ -21,7 +21,7 @@
 #ifndef LORAWAN_MAC_HEADER_H
 #define LORAWAN_MAC_HEADER_H
 
-#include <ns3/header.h>
+#include "ns3/header.h"
 
 #include <ostream>
 #include <stdint.h>

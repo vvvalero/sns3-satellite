@@ -29,9 +29,9 @@
 #include "satellite-frame-conf.h"
 #include "satellite-superframe-allocator.h"
 
-#include <ns3/address.h>
-#include <ns3/simple-ref-count.h>
-#include <ns3/traced-callback.h>
+#include "ns3/address.h"
+#include "ns3/simple-ref-count.h"
+#include "ns3/traced-callback.h"
 
 #include <map>
 #include <stdint.h>

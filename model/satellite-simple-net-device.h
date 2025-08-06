@@ -23,10 +23,10 @@
 
 #include "satellite-simple-channel.h"
 
-#include <ns3/error-model.h>
-#include <ns3/net-device.h>
-#include <ns3/packet.h>
-#include <ns3/traced-callback.h>
+#include "ns3/error-model.h"
+#include "ns3/net-device.h"
+#include "ns3/packet.h"
+#include "ns3/traced-callback.h"
 
 #include <stdint.h>
 

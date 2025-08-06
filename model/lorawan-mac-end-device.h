@@ -33,8 +33,8 @@
 #include "lorawan-mac.h"
 #include "satellite-ut-mac.h"
 
-#include <ns3/random-variable-stream.h>
-#include <ns3/traced-value.h>
+#include "ns3/random-variable-stream.h"
+#include "ns3/traced-value.h"
 
 #include <list>
 #include <stdint.h>

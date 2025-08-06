@@ -30,9 +30,9 @@
 #include "satellite-net-device.h"
 #include "satellite-signal-parameters.h"
 
-#include <ns3/mobility-model.h>
-#include <ns3/nstime.h>
-#include <ns3/packet.h>
+#include "ns3/mobility-model.h"
+#include "ns3/nstime.h"
+#include "ns3/packet.h"
 
 #include <stdint.h>
 #include <vector>

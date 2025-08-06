@@ -22,7 +22,7 @@
 #ifndef SATELLITE_LOOK_UP_TABLE_H
 #define SATELLITE_LOOK_UP_TABLE_H
 
-#include <ns3/object.h>
+#include "ns3/object.h"
 
 #include <fstream>
 #include <string>

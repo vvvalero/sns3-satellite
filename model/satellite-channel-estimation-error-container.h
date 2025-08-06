@@ -23,7 +23,7 @@
 
 #include "satellite-channel-estimation-error.h"
 
-#include <ns3/object.h>
+#include "ns3/object.h"
 
 #include <map>
 #include <stdint.h>

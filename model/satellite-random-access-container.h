@@ -26,10 +26,10 @@
 #include "satellite-enums.h"
 #include "satellite-random-access-container-conf.h"
 
-#include <ns3/object.h>
-#include <ns3/random-variable-stream.h>
-#include <ns3/simulator.h>
-#include <ns3/uinteger.h>
+#include "ns3/object.h"
+#include "ns3/random-variable-stream.h"
+#include "ns3/simulator.h"
+#include "ns3/uinteger.h"
 
 #include <map>
 #include <set>

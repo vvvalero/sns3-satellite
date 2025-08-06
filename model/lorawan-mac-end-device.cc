@@ -31,10 +31,10 @@
 #include "satellite-time-tag.h"
 #include "satellite-topology.h"
 
-#include <ns3/ipv4-header.h>
-#include <ns3/log.h>
-#include <ns3/simulator.h>
-#include <ns3/singleton.h>
+#include "ns3/ipv4-header.h"
+#include "ns3/log.h"
+#include "ns3/simulator.h"
+#include "ns3/singleton.h"
 
 #include <algorithm>
 #include <cmath>

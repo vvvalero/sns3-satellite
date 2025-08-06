@@ -27,9 +27,9 @@
 #include "satellite-mac-tag.h"
 #include "satellite-queue.h"
 
-#include <ns3/log.h>
-#include <ns3/mac48-address.h>
-#include <ns3/simulator.h>
+#include "ns3/log.h"
+#include "ns3/mac48-address.h"
+#include "ns3/simulator.h"
 
 #include <algorithm>
 #include <limits>

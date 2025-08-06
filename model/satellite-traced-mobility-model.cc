@@ -22,10 +22,10 @@
 
 #include "satellite-position-input-trace-container.h"
 
-#include <ns3/enum.h>
-#include <ns3/log.h>
-#include <ns3/simulator.h>
-#include <ns3/singleton.h>
+#include "ns3/enum.h"
+#include "ns3/log.h"
+#include "ns3/simulator.h"
+#include "ns3/singleton.h"
 
 #include <string>
 

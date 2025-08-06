@@ -25,9 +25,9 @@
 #include "lorawan-mac-header.h"
 #include "satellite-topology.h"
 
-#include <ns3/ipv4-header.h>
-#include <ns3/log.h>
-#include <ns3/singleton.h>
+#include "ns3/ipv4-header.h"
+#include "ns3/log.h"
+#include "ns3/singleton.h"
 
 NS_LOG_COMPONENT_DEFINE("SatLorawanNetDevice");
 

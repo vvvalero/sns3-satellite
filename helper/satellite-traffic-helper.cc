@@ -24,16 +24,16 @@
 #include "satellite-on-off-helper.h"
 #include "simulation-helper.h"
 
-#include <ns3/cbr-helper.h>
-#include <ns3/log.h>
-#include <ns3/lora-periodic-sender.h>
-#include <ns3/nrtv-helper.h>
-#include <ns3/packet-sink-helper.h>
-#include <ns3/packet-sink.h>
-#include <ns3/satellite-topology.h>
-#include <ns3/singleton.h>
-#include <ns3/three-gpp-http-satellite-helper.h>
-#include <ns3/type-id.h>
+#include "ns3/cbr-helper.h"
+#include "ns3/log.h"
+#include "ns3/lora-periodic-sender.h"
+#include "ns3/nrtv-helper.h"
+#include "ns3/packet-sink-helper.h"
+#include "ns3/packet-sink.h"
+#include "ns3/satellite-topology.h"
+#include "ns3/singleton.h"
+#include "ns3/three-gpp-http-satellite-helper.h"
+#include "ns3/type-id.h"
 
 #include <string>
 #include <utility>

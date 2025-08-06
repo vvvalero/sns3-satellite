@@ -24,7 +24,7 @@
 #include "satellite-channel.h"
 #include "satellite-typedefs.h"
 
-#include <ns3/object.h>
+#include "ns3/object.h"
 
 #include <map>
 #include <stdint.h>

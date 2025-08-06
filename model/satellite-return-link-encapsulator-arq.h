@@ -26,8 +26,8 @@
 #include "satellite-control-message.h"
 #include "satellite-return-link-encapsulator.h"
 
-#include <ns3/event-id.h>
-#include <ns3/mac48-address.h>
+#include "ns3/event-id.h"
+#include "ns3/mac48-address.h"
 
 #include <map>
 #include <stdint.h>

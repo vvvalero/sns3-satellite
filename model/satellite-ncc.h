@@ -27,9 +27,9 @@
 #include "satellite-gw-mac.h"
 #include "satellite-orbiter-net-device.h"
 
-#include <ns3/object.h>
-#include <ns3/ptr.h>
-#include <ns3/traced-callback.h>
+#include "ns3/object.h"
+#include "ns3/ptr.h"
+#include "ns3/traced-callback.h"
 
 #include <map>
 #include <stdint.h>

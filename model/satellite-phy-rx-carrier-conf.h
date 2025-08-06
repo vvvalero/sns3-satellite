@@ -28,7 +28,7 @@
 #include "satellite-link-results.h"
 #include "satellite-typedefs.h"
 
-#include <ns3/object.h>
+#include "ns3/object.h"
 
 #include <stdint.h>
 

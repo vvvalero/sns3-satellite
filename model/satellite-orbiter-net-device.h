@@ -28,11 +28,11 @@
 #include "satellite-point-to-point-isl-net-device.h"
 #include "satellite-signal-parameters.h"
 
-#include <ns3/error-model.h>
-#include <ns3/mac48-address.h>
-#include <ns3/net-device.h>
-#include <ns3/output-stream-wrapper.h>
-#include <ns3/traced-callback.h>
+#include "ns3/error-model.h"
+#include "ns3/mac48-address.h"
+#include "ns3/net-device.h"
+#include "ns3/output-stream-wrapper.h"
+#include "ns3/traced-callback.h"
 
 #include <map>
 #include <set>

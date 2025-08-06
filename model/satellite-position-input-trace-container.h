@@ -25,7 +25,7 @@
 #include "satellite-antenna-gain-pattern-container.h"
 #include "satellite-base-trace-container.h"
 
-#include <ns3/satellite-input-fstream-time-double-container.h>
+#include "ns3/satellite-input-fstream-time-double-container.h"
 
 #include <map>
 #include <string>

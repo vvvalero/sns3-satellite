@@ -28,10 +28,10 @@
 #include "satellite-helper.h"
 #include "satellite-traffic-helper.h"
 
-#include <ns3/command-line.h>
-#include <ns3/random-variable-stream.h>
-#include <ns3/satellite-enums.h>
-#include <ns3/satellite-stats-helper-container.h>
+#include "ns3/command-line.h"
+#include "ns3/random-variable-stream.h"
+#include "ns3/satellite-enums.h"
+#include "ns3/satellite-stats-helper-container.h"
 
 #include <map>
 #include <set>

@@ -23,8 +23,8 @@
 
 #include "satellite-output-fstream-wrapper.h"
 
+#include "ns3/gnuplot.h"
 #include "ns3/object.h"
-#include <ns3/gnuplot.h>
 
 #include <fstream>
 #include <stdint.h>

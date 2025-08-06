@@ -25,7 +25,7 @@
 #include "satellite-mobility-model.h"
 #include "satellite-propagation-delay-model.h"
 
-#include <ns3/object.h>
+#include "ns3/object.h"
 
 #include <string>
 

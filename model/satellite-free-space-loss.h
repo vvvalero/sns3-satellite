@@ -20,8 +20,8 @@
 #ifndef SATELLITE_FREE_SPACE_LOSS_H
 #define SATELLITE_FREE_SPACE_LOSS_H
 
-#include <ns3/mobility-model.h>
-#include <ns3/object.h>
+#include "ns3/mobility-model.h"
+#include "ns3/object.h"
 
 namespace ns3
 {

@@ -23,7 +23,7 @@
 #ifndef SATELLITE_ENUMS_H
 #define SATELLITE_ENUMS_H
 
-#include <ns3/fatal-error.h>
+#include "ns3/fatal-error.h"
 
 #include <string>
 #include <vector>

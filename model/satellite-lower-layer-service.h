@@ -23,9 +23,9 @@
 #ifndef SATELLITE_LOWER_LAYER_SERIVICE_H
 #define SATELLITE_LOWER_LAYER_SERIVICE_H
 
-#include <ns3/nstime.h>
-#include <ns3/object.h>
-#include <ns3/random-variable-stream.h>
+#include "ns3/nstime.h"
+#include "ns3/object.h"
+#include "ns3/random-variable-stream.h"
 
 #include <sstream>
 #include <stdint.h>

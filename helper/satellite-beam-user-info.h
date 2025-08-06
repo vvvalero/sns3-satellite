@@ -21,7 +21,7 @@
 #ifndef SAT_BEAM_USER_INFO_H
 #define SAT_BEAM_USER_INFO_H
 
-#include <ns3/geo-coordinate.h>
+#include "ns3/geo-coordinate.h"
 
 #include <stdint.h>
 #include <utility>
