@@ -19,9 +19,9 @@
  */
 
 /**
- * \file satellite-cra-test.cc
- * \ingroup satellite
- * \brief CRA test case implementations.
+ * @file satellite-cra-test.cc
+ * @ingroup satellite
+ * @brief CRA test case implementations.
  *
  * In this module implements the CRA Test Cases
  * defined in TN6.
@@ -45,8 +45,8 @@
 using namespace ns3;
 
 /**
- * \ingroup satellite
- * \brief 'CRA, test 1' test case implementation.
+ * @ingroup satellite
+ * @brief 'CRA, test 1' test case implementation.
  *
  * This case tests successful transmission of UDP packets from UT connected user
  * to GW connected user in simple scenario and using CRA only.

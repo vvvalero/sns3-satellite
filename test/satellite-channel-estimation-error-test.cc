@@ -19,9 +19,9 @@
  */
 
 /**
- * \file satellite-channel-estimation-error-test.cc
- * \ingroup satellite
- * \brief Channel estimation error test suite
+ * @file satellite-channel-estimation-error-test.cc
+ * @ingroup satellite
+ * @brief Channel estimation error test suite
  */
 
 #include "../model/satellite-channel-estimation-error-container.h"
@@ -37,8 +37,8 @@
 using namespace ns3;
 
 /**
- * \ingroup satellite
- * \brief Test case for FWD link channel estimation error
+ * @ingroup satellite
+ * @brief Test case for FWD link channel estimation error
  */
 
 class SatFwdChannelEstimationErrorTestCase : public TestCase
@@ -83,8 +83,8 @@ SatFwdChannelEstimationErrorTestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Test case for RTN link channel estimation error
+ * @ingroup satellite
+ * @brief Test case for RTN link channel estimation error
  */
 class SatRtnChannelEstimationErrorTestCase : public TestCase
 {
@@ -131,8 +131,8 @@ SatRtnChannelEstimationErrorTestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Test suite for satellite channel estimation error
+ * @ingroup satellite
+ * @brief Test suite for satellite channel estimation error
  */
 class SatChannelEstimationErrorTestSuite : public TestSuite
 {

@@ -33,8 +33,8 @@ namespace ns3
 {
 
 /**
- * \ingroup satellite
- * \brief SatFwdLinkSchedulerDefault schedules BB frames for forward link. This is the reference
+ * @ingroup satellite
+ * @brief SatFwdLinkSchedulerDefault schedules BB frames for forward link. This is the reference
  * case of the scheduler, without separation between slices. It uses only one instance of
  * BbFrameContainer.
  *
@@ -49,8 +49,8 @@ class SatFwdLinkSchedulerDefault : public SatFwdLinkScheduler
 {
   public:
     /**
-     * \brief Get the type ID
-     * \return the object TypeId
+     * @brief Get the type ID
+     * @return the object TypeId
      */
     static TypeId GetTypeId(void);
 
@@ -65,9 +65,9 @@ class SatFwdLinkSchedulerDefault : public SatFwdLinkScheduler
     /**
      * Actual constructor of a SatFwdLinkScheduler
      *
-     * \param conf BB Frame configuration
-     * \param address MAC address
-     * \param carrierBandwidthInHz Carrier bandwidth where scheduler is associated to [Hz].
+     * @param conf BB Frame configuration
+     * @param address MAC address
+     * @param carrierBandwidthInHz Carrier bandwidth where scheduler is associated to [Hz].
      */
     SatFwdLinkSchedulerDefault(Ptr<SatBbFrameConf> conf,
                                Mac48Address address,
@@ -93,7 +93,7 @@ class SatFwdLinkSchedulerDefault : public SatFwdLinkScheduler
     /**
      * Get next frame to be transmitted.
      *
-     * \return Pointer to frame
+     * @return Pointer to frame
      */
     virtual std::pair<Ptr<SatBbFrame>, const Time> GetNextFrame();
 
@@ -121,7 +121,7 @@ class SatFwdLinkSchedulerDefault : public SatFwdLinkScheduler
     /**
      * Gets scheduling object in sorted order according to configured sorting criteria.
      *
-     * \param output reference to a vector which will be filled with pointers to
+     * @param output reference to a vector which will be filled with pointers to
      *               the scheduling objects available for scheduling.
      */
     void GetSchedulingObjects(std::vector<Ptr<SatSchedulingObject>>& output);

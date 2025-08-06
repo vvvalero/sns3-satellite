@@ -19,9 +19,9 @@
  */
 
 /**
- * \file satellite-per-packet-if-test.cc
- * \ingroup satellite
- * \brief System test cases for Satellite Per-Packet Interference Model.
+ * @file satellite-per-packet-if-test.cc
+ * @ingroup satellite
+ * @brief System test cases for Satellite Per-Packet Interference Model.
  */
 
 // Include a header file from your module to test.
@@ -179,8 +179,8 @@ SatPerPacketBaseTestCase::PrintTraceInfo()
 }
 
 /**
- * \ingroup satellite
- * \brief Per-packet interference, Forward Link System test case.
+ * @ingroup satellite
+ * @brief Per-packet interference, Forward Link System test case.
  *        User defined scenario created without fading and dummy frame sending.
  *
  *  Pre-conditions:
@@ -378,8 +378,8 @@ SatPerPacketFwdLinkUserTestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Per-packet interference, Forward Link System test case.
+ * @ingroup satellite
+ * @brief Per-packet interference, Forward Link System test case.
  *        Full scenario created without fading and dummy frame sending.
  *
  *  Pre-conditions:
@@ -566,8 +566,8 @@ SatPerPacketFwdLinkFullTestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Per-packet interference, Return Link System test case.
+ * @ingroup satellite
+ * @brief Per-packet interference, Return Link System test case.
  *
  *  Pre-conditions:
  *    Network is configured to use only one carrier in return link.
@@ -911,8 +911,8 @@ SatPerPacketRtnLinkFullTestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Test suite for Satellite interference unit test cases.
+ * @ingroup satellite
+ * @brief Test suite for Satellite interference unit test cases.
  */
 class SatPerPacketIfTestSuite : public TestSuite
 {

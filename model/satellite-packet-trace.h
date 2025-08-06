@@ -35,8 +35,8 @@ namespace ns3
 {
 
 /**
- * \ingroup satellite
- * \brief The SatPacketTrace implements a packet trace functionality.
+ * @ingroup satellite
+ * @brief The SatPacketTrace implements a packet trace functionality.
  * The movement of packet through the satellite stack can be traced
  * in different protocol layers and direction.
  */
@@ -45,7 +45,7 @@ class SatPacketTrace : public Object
 {
   public:
     /**
-     * \brief Constructor
+     * @brief Constructor
      */
     SatPacketTrace();
 
@@ -60,13 +60,13 @@ class SatPacketTrace : public Object
     virtual void NotifyConstructionCompleted() override;
 
     /**
-     * \brief Destructor
+     * @brief Destructor
      */
     virtual ~SatPacketTrace();
 
     /**
-     * \brief Get the type ID
-     * \return the object TypeId
+     * @brief Get the type ID
+     * @return the object TypeId
      */
     static TypeId GetTypeId(void);
 
@@ -76,15 +76,15 @@ class SatPacketTrace : public Object
     virtual void DoDispose();
 
     /**
-     * \brief Add a packet trace entry to the log
-     * \param now Time time of a trace event
-     * \param packetEvent Packet event(SND, RCV, DRP, ENQ)
-     * \param nodeType Node type (UT, SAT, GW, NCC, TER)
-     * \param nodeId Node id
-     * \param macAddress MAC address
-     * \param logLevel Log level (ND, LLC, MAC, PHY, CH)
-     * \param linkDir Link direction (FWD, RTN)
-     * \param packetInfo Packet info (List of: Packet id, source MAC address, destination MAC
+     * @brief Add a packet trace entry to the log
+     * @param now Time time of a trace event
+     * @param packetEvent Packet event(SND, RCV, DRP, ENQ)
+     * @param nodeType Node type (UT, SAT, GW, NCC, TER)
+     * @param nodeId Node id
+     * @param macAddress MAC address
+     * @param logLevel Log level (ND, LLC, MAC, PHY, CH)
+     * @param linkDir Link direction (FWD, RTN)
+     * @param packetInfo Packet info (List of: Packet id, source MAC address, destination MAC
      * address)
      */
     void AddTraceEntry(Time now,
@@ -98,7 +98,7 @@ class SatPacketTrace : public Object
 
   private:
     /**
-     * \brief Print header to the packet trace log
+     * @brief Print header to the packet trace log
      */
     void PrintHeader();
 

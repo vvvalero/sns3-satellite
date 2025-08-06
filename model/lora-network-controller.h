@@ -59,7 +59,7 @@ class LoraNetworkController : public Object
     /**
      * Method that is called by the NetworkServer when a new packet is received.
      *
-     * \param packet The newly received packet.
+     * @param packet The newly received packet.
      */
     void OnNewPacket(Ptr<const Packet> packet);
 

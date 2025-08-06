@@ -30,8 +30,8 @@ namespace ns3
 {
 
 /**
- * \ingroup satellite
- * \brief Class handling UT Mac states and transitions.
+ * @ingroup satellite
+ * @brief Class handling UT Mac states and transitions.
  *
  */
 class SatUtMacState : public Object
@@ -77,7 +77,7 @@ class SatUtMacState : public Object
     /**
      * Get the current state.
      *
-     * \return The current state.
+     * @return The current state.
      */
     RcstState_t GetState() const;
 
@@ -123,7 +123,7 @@ class SatUtMacState : public Object
 
     /**
      * Check if NCR m_ncrSyncTimeout has been reached.
-     * \return true if Now () > m_lastNcrDateReceived + m_ncrSyncTimeout
+     * @return true if Now () > m_lastNcrDateReceived + m_ncrSyncTimeout
      */
     bool IsNcrTimeout() const;
 

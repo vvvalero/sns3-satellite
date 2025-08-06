@@ -30,10 +30,10 @@
 using namespace ns3;
 
 /**
- * \file sat-essa-example.cc
- * \ingroup satellite
+ * @file sat-essa-example.cc
+ * @ingroup satellite
  *
- * \brief This file allows to create a E-SSA scenario
+ * @brief This file allows to create a E-SSA scenario
  */
 
 NS_LOG_COMPONENT_DEFINE("sat-essa-example");

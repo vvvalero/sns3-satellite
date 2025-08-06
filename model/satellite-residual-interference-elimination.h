@@ -31,8 +31,8 @@ namespace ns3
 {
 
 /**
- * \ingroup satellite
- * \brief Satellite interference elimination with residual power.
+ * @ingroup satellite
+ * @brief Satellite interference elimination with residual power.
  */
 class SatResidualInterferenceElimination : public SatInterferenceElimination
 {
@@ -59,9 +59,9 @@ class SatResidualInterferenceElimination : public SatInterferenceElimination
 
     /**
      * Eliminate the residual power of interference for the given packets
-     * \param packetInterferedWith Parameters of the packet whose interference level should be
+     * @param packetInterferedWith Parameters of the packet whose interference level should be
      * lowered \param processedPacket Parameters of the packet we want to remove interference from
-     * \param isRegenerative Tell if we are in regenerative configuration. Depending on this value,
+     * @param isRegenerative Tell if we are in regenerative configuration. Depending on this value,
      * the computations are made on the GW or on the satellite
      */
     void EliminateInterferences(Ptr<SatSignalParameters> packetInterferedWith,
@@ -71,9 +71,9 @@ class SatResidualInterferenceElimination : public SatInterferenceElimination
 
     /**
      * Calculate residual power of interference for the given packets
-     * \param packetInterferedWith Parameters of the packet whose interference level should be
+     * @param packetInterferedWith Parameters of the packet whose interference level should be
      * lowered \param processedPacket Parameters of the packet we want to remove interference from
-     * \param isRegenerative Tell if we are in regenerative configuration. Depending on this value,
+     * @param isRegenerative Tell if we are in regenerative configuration. Depending on this value,
      * the computations are made on the GW or on the satellite \param startTime Normalized start
      * time of the interference, with respect to packetInterferedWith \param endTime Normalized end
      * time of the interference, with respect to packetInterferedWith
@@ -91,7 +91,7 @@ class SatResidualInterferenceElimination : public SatInterferenceElimination
     }
 
     /**
-     * \brief Calculate the residual power of interference for a given packet
+     * @brief Calculate the residual power of interference for a given packet
      */
     double GetResidualPower(Ptr<SatSignalParameters> processedPacket, double EsNo);
 

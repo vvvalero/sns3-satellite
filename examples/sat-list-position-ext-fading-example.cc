@@ -30,10 +30,10 @@
 using namespace ns3;
 
 /**
- * \file sat-list-position-ext-fading-example.cc
- * \ingroup satellite
+ * @file sat-list-position-ext-fading-example.cc
+ * @ingroup satellite
  *
- * \brief  List position external fading example demonstrates how to set user defined (list)
+ * @brief  List position external fading example demonstrates how to set user defined (list)
  *         positions with external fading. The example is useful when new list positions and
  *         external fading trace sources are taken into use.
  *

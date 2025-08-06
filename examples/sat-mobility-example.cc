@@ -30,10 +30,10 @@
 using namespace ns3;
 
 /**
- * \file sat-mobility-example.cc
- * \ingroup satellite
+ * @file sat-mobility-example.cc
+ * @ingroup satellite
  *
- * \brief Simulation script to run example simulation with a moving satellite.
+ * @brief Simulation script to run example simulation with a moving satellite.
  *        This example is not used anymore
  *
  * execute command -> ./waf --run "sat-mobility-example --PrintHelp"

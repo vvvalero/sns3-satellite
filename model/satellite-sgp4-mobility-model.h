@@ -40,8 +40,8 @@ namespace ns3
 {
 
 /**
- * \ingroup satellite
- * \brief Keep track of the current position and velocity of satellite using SGP4 model.
+ * @ingroup satellite
+ * @brief Keep track of the current position and velocity of satellite using SGP4 model.
  */
 class SatSGP4MobilityModel : public SatMobilityModel
 {
@@ -80,7 +80,7 @@ class SatSGP4MobilityModel : public SatMobilityModel
     /**
      * Set the simulation absolute start time in string format.
      *
-     * \param startStr Start time of simulation, on format "YYYY-MM-DD hh:mm:ss"
+     * @param startStr Start time of simulation, on format "YYYY-MM-DD hh:mm:ss"
      */
     void SetStartDate(std::string startStr);
 

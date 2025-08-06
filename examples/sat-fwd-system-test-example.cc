@@ -30,10 +30,10 @@
 using namespace ns3;
 
 /**
- * \file sat-fwd-system-test-example.cc
- * \ingroup satellite
+ * @file sat-fwd-system-test-example.cc
+ * @ingroup satellite
  *
- * \brief Simulation script to execute system tests for the forward link.
+ * @brief Simulation script to execute system tests for the forward link.
  *
  * To get help of the command line arguments for the example,
  * execute command -> ./waf --run "sat-fwd-sys-test --PrintHelp"

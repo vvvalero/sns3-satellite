@@ -68,7 +68,7 @@ class LorawanMacEndDeviceClassA : public LorawanMacEndDevice
     /**
      * Add headers and send a packet with the sending function of the physical layer.
      *
-     * \param packet the packet to send
+     * @param packet the packet to send
      */
     virtual void SendToPhy(Ptr<Packet> packet);
 
@@ -82,7 +82,7 @@ class LorawanMacEndDeviceClassA : public LorawanMacEndDevice
      * This method is typically registered as a callback in the underlying PHY
      * layer so that it's called when a packet is going up the stack.
      *
-     * \param packet the received packet.
+     * @param packet the received packet.
      */
     virtual void Receive(Ptr<Packet> packet);
 
@@ -98,7 +98,7 @@ class LorawanMacEndDeviceClassA : public LorawanMacEndDevice
     /**
      *  Set the random access model.
      *
-     * \param randomAccessModel The model to use.
+     * @param randomAccessModel The model to use.
      */
     void SetRaModel(SatEnums::RandomAccessModel_t randomAccessModel);
 
@@ -130,7 +130,7 @@ class LorawanMacEndDeviceClassA : public LorawanMacEndDevice
      * Find the minimum waiting time before the next possible transmission based
      * on End Device's Class Type.
      *
-     * \param waitingTime The minimum waiting time that has to be respected,
+     * @param waitingTime The minimum waiting time that has to be respected,
      * irrespective of the class (e.g., because of duty cycle limitations).
      */
     virtual Time GetNextClassTransmissionDelay(Time waitingTime);
@@ -138,28 +138,28 @@ class LorawanMacEndDeviceClassA : public LorawanMacEndDevice
     /**
      * Get the Data Rate that will be used in the first receive window.
      *
-     * \return The Data Rate
+     * @return The Data Rate
      */
     uint8_t GetFirstReceiveWindowDataRate(void);
 
     /**
      * Set the Data Rate to be used in the second receive window.
      *
-     * \param dataRate The Data Rate.
+     * @param dataRate The Data Rate.
      */
     void SetSecondReceiveWindowDataRate(uint8_t dataRate);
 
     /**
      * Get the Data Rate that will be used in the second receive window.
      *
-     * \return The Data Rate
+     * @return The Data Rate
      */
     uint8_t GetSecondReceiveWindowDataRate(void);
 
     /**
      * Set the frequency that will be used for the second receive window.
      *
-     * \param frequencyMHz the Frequency.
+     * @param frequencyMHz the Frequency.
      */
     void SetSecondReceiveWindowFrequency(double frequencyMHz);
 
@@ -178,7 +178,7 @@ class LorawanMacEndDeviceClassA : public LorawanMacEndDevice
      * Perform the actions that need to be taken when receiving a RxParamSetupReq
      * command based on the Device's Class Type.
      *
-     * \param rxParamSetupReq The Parameter Setup Request, which contains:
+     * @param rxParamSetupReq The Parameter Setup Request, which contains:
      *                            - The offset to set.
      *                            - The data rate to use for the second receive window.
      *                            - The frequency to use for the second receive window.

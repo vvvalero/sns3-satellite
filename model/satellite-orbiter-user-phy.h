@@ -46,7 +46,7 @@ class SatPhyRxCarrierPerFrame;
 class SatPhyRxCarrierPerWindow;
 
 /**
- * \ingroup satellite
+ * @ingroup satellite
  *
  * The SatOrbiterUserPhy models the user link physical layer of the
  * satellite node.
@@ -92,15 +92,15 @@ class SatOrbiterUserPhy : public SatPhy
 
     /**
      * Send Pdu to the PHY tx module (for satellite switch packet forwarding)
-     * \param rxParams Transmission parameters
+     * @param rxParams Transmission parameters
      */
     virtual void SendPduWithParams(Ptr<SatSignalParameters> rxParams);
 
     /**
-     * \brief Receives packets from lower layer.
+     * @brief Receives packets from lower layer.
      *
-     * \param rxParams Packet reception parameters
-     * \param phyError Boolean indicating whether the packet successfully
+     * @param rxParams Packet reception parameters
+     * @param phyError Boolean indicating whether the packet successfully
      * received or not? Note, that this parameter is not used in the satellite,
      * but exists since we are using a general interface defined in the parent
      * class.
@@ -108,16 +108,16 @@ class SatOrbiterUserPhy : public SatPhy
     virtual void Receive(Ptr<SatSignalParameters> rxParams, bool phyError);
 
     /**
-     * \brief Get additional interference, used to compute final SINR at RX
+     * @brief Get additional interference, used to compute final SINR at RX
      *
-     * \return Additional interference
+     * @return Additional interference
      */
     virtual double GetAdditionalInterference();
 
     /**
-     * \brief Callback signature for `QueueSizeBytes` and `QueueSizePackets` trace source.
-     * \param size number of bytes or number of packets of queue
-     * \param from The MAC source address of packets
+     * @brief Callback signature for `QueueSizeBytes` and `QueueSizePackets` trace source.
+     * @param size number of bytes or number of packets of queue
+     * @param from The MAC source address of packets
      */
     typedef void (*QueueSizeCallback)(uint32_t size, const Address& from);
 
@@ -139,20 +139,20 @@ class SatOrbiterUserPhy : public SatPhy
 
   protected:
     /**
-     * \brief Invoke the `Rx` trace source for each received packet.
-     * \param packets Container of the pointers to the packets received.
+     * @brief Invoke the `Rx` trace source for each received packet.
+     * @param packets Container of the pointers to the packets received.
      */
     virtual void RxTraces(SatPhy::PacketContainer_t packets);
 
     /**
-     * \brief Get the link TX direction. Must be implemented by child clases.
-     * \return The link TX direction
+     * @brief Get the link TX direction. Must be implemented by child clases.
+     * @return The link TX direction
      */
     virtual SatEnums::SatLinkDir_t GetSatLinkTxDir();
 
     /**
-     * \brief Get the link RX direction. Must be implemented by child clases.
-     * \return The link RX direction
+     * @brief Get the link RX direction. Must be implemented by child clases.
+     * @return The link RX direction
      */
     virtual SatEnums::SatLinkDir_t GetSatLinkRxDir();
 
@@ -194,8 +194,8 @@ class SatOrbiterUserPhy : public SatPhy
 
     /**
      * Get destination address of packets.
-     * \brief packets The packets from where extract destination
-     * \return The destination MAC address
+     * @brief packets The packets from where extract destination
+     * @return The destination MAC address
      */
     Address GetE2EDestinationAddress(SatPhy::PacketContainer_t packets);
 

@@ -19,9 +19,9 @@
  */
 
 /**
- * \file satellite-fsl-test.cc
- * \ingroup satellite
- * \brief Test cases to unit test Satellite Free Space Loss model.
+ * @file satellite-fsl-test.cc
+ * @ingroup satellite
+ * @brief Test cases to unit test Satellite Free Space Loss model.
  */
 
 #include "ns3/log.h"
@@ -39,8 +39,8 @@
 using namespace ns3;
 
 /**
- * \ingroup satellite
- * \brief Test case to unit test satellite free space loss (FSL) model.
+ * @ingroup satellite
+ * @brief Test case to unit test satellite free space loss (FSL) model.
  *
  * This case tests that SatFreeSpaceLoss object can be created successfully and free space loss
  * (FSL) is calculates correctly.
@@ -131,7 +131,7 @@ SatFreeSpaceLossTestCase::DoRun(void)
 }
 
 /**
- * \brief Test suite for Satellite free space loss unit test cases.
+ * @brief Test suite for Satellite free space loss unit test cases.
  */
 class SatFreeSpaceLossTestSuite : public TestSuite
 {

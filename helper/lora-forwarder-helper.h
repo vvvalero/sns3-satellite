@@ -45,8 +45,8 @@ class LoraForwarderHelper : public Object
 {
   public:
     /**
-     * \brief Get the type ID
-     * \return the object TypeId
+     * @brief Get the type ID
+     * @return the object TypeId
      */
     static TypeId GetTypeId(void);
 
@@ -64,18 +64,18 @@ class LoraForwarderHelper : public Object
     /**
      * Install if ground GW is a Lora GW
      *
-     * \param node GW node where the forwarder is installed
+     * @param node GW node where the forwarder is installed
      *
-     * \return LoraForwarder application
+     * @return LoraForwarder application
      */
     Ptr<Application> InstallPrivGwLora(Ptr<Node> node) const;
 
     /**
      * Install if ground GW is a DVB GW. Lora GW is on a satellite
      *
-     * \param node Ground GW node where the forwarder is installed
+     * @param node Ground GW node where the forwarder is installed
      *
-     * \return LoraForwarder application
+     * @return LoraForwarder application
      */
     Ptr<Application> InstallPrivGwDvb(Ptr<Node> node) const;
 

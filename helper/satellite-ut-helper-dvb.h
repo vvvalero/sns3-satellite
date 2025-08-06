@@ -36,7 +36,7 @@ namespace ns3
 {
 
 /**
- * \brief Creates needed objects for DVB UT nodes like SatOrbiterNetDevice objects.
+ * @brief Creates needed objects for DVB UT nodes like SatOrbiterNetDevice objects.
  *        Handles needed configuration for the UT nodes.
  *
  */
@@ -73,15 +73,15 @@ class SatUtHelperDvb : public SatUtHelper
     }
 
     /**
-     * \param n node
-     * \param satId  id of the satellite
-     * \param beamId  id of the beam
-     * \param fCh forward channel
-     * \param rCh return channel
-     * \param gwNd satellite netdevice of the GW
-     * \param ncc NCC (Network Control Center)
-     * \param satUserAddress MAC address of satellite user link
-     * \return Net device installed to node
+     * @param n node
+     * @param satId  id of the satellite
+     * @param beamId  id of the beam
+     * @param fCh forward channel
+     * @param rCh return channel
+     * @param gwNd satellite netdevice of the GW
+     * @param ncc NCC (Network Control Center)
+     * @param satUserAddress MAC address of satellite user link
+     * @return Net device installed to node
      *
      * This method creates a ns3::SatChannel with the
      * attributes configured by SatUtHelper::SetChannelAttribute,

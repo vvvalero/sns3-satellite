@@ -19,9 +19,9 @@
  */
 
 /**
- * \file satellite-simple-unicast.cc
- * \ingroup satellite
- * \brief 'Simple Point-to-Point Test Cases' implementation of TN4.
+ * @file satellite-simple-unicast.cc
+ * @ingroup satellite
+ * @brief 'Simple Point-to-Point Test Cases' implementation of TN4.
  *
  * In this module are implemented all 'Simple Point-to-Point' Test Cases
  * defined in document TN4.
@@ -46,8 +46,8 @@
 using namespace ns3;
 
 /**
- * \ingroup satellite
- * \brief 'Forward Link Unicast, Simple' test case implementation, id: simple_unicast-1 / TN4.
+ * @ingroup satellite
+ * @brief 'Forward Link Unicast, Simple' test case implementation, id: simple_unicast-1 / TN4.
  *
  * This case tests successful transmission of a single UDP packet from GW connected user
  * to UT connected user in simple scenario.
@@ -148,8 +148,8 @@ SimpleUnicast1::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief 'Forward Link Unicast, Larger' test case implementation, id: simple_unicast-2 / TN4.
+ * @ingroup satellite
+ * @brief 'Forward Link Unicast, Larger' test case implementation, id: simple_unicast-2 / TN4.
  *
  * This case tests successful transmission of a single UDP packet from GW connected user
  * to UT connected users in larger scenario.
@@ -280,8 +280,8 @@ SimpleUnicast2::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief 'Forward Link Unicast, Full' test case implementation, id: simple_unicast-3 / TN4.
+ * @ingroup satellite
+ * @brief 'Forward Link Unicast, Full' test case implementation, id: simple_unicast-3 / TN4.
  *
  * This case tests successful transmission of a single UDP packet from GW connected user
  * to UT connected user in full scenario.
@@ -416,8 +416,8 @@ SimpleUnicast3::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief 'Return Link Unicast, Simple' test case implementation, id: simple_unicast-4 / TN4.
+ * @ingroup satellite
+ * @brief 'Return Link Unicast, Simple' test case implementation, id: simple_unicast-4 / TN4.
  *
  * This case tests successful transmission of a single UDP packet from UT connected user
  * to GW connected user in simple scenario.
@@ -518,8 +518,8 @@ SimpleUnicast4::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief 'Return Link Unicast, Larger' test case implementation, id: simple_unicast-5 / TN4.
+ * @ingroup satellite
+ * @brief 'Return Link Unicast, Larger' test case implementation, id: simple_unicast-5 / TN4.
  *
  * This case tests successful transmission of a single UDP packet from UT connected user
  * to GW connected user in larger scenario.
@@ -633,8 +633,8 @@ SimpleUnicast5::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief 'Return Link Unicast, Full' test case implementation, id: simple_unicast-6 / TN4.
+ * @ingroup satellite
+ * @brief 'Return Link Unicast, Full' test case implementation, id: simple_unicast-6 / TN4.
  *
  * This case tests successful transmission of a single UDP packet from UT connected user
  * to GW connected user in full scenario.
@@ -764,8 +764,8 @@ SimpleUnicast6::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief 'Forward Link Unicast, Simple' test case implementation, id: simple_unicast-1 / TN4.
+ * @ingroup satellite
+ * @brief 'Forward Link Unicast, Simple' test case implementation, id: simple_unicast-1 / TN4.
  *
  * This case tests successful transmission of a single TCP packet from GW and UT connected
  * users to each other’s in simple scenario.
@@ -897,8 +897,8 @@ SimpleUnicast7::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief 'Forward Link Unicast, Simple' test case implementation, id: simple_unicast-1 / TN4.
+ * @ingroup satellite
+ * @brief 'Forward Link Unicast, Simple' test case implementation, id: simple_unicast-1 / TN4.
  *
  * This case tests successful transmission of a single TCP packet from GW and UT connected
  * users to each other’s in simple scenario.

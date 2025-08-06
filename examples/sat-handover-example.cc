@@ -32,10 +32,10 @@
 using namespace ns3;
 
 /**
- * \file sat-handover-example.cc
- * \ingroup satellite
+ * @file sat-handover-example.cc
+ * @ingroup satellite
  *
- * \brief  Test handover for UTs
+ * @brief  Test handover for UTs
  *
  */
 

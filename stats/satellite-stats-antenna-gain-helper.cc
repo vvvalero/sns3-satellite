@@ -307,7 +307,7 @@ SatStatsAntennaGainHelper::DoInstall()
     }
 
     case SatStatsHelper::OUTPUT_SCALAR_PLOT:
-        /// \todo Add support for boxes in Gnuplot.
+        /// @todo Add support for boxes in Gnuplot.
         NS_FATAL_ERROR(GetOutputTypeName(GetOutputType())
                        << " is not a valid output type for this statistics.");
         break;
@@ -362,7 +362,7 @@ SatStatsAntennaGainHelper::DoInstall()
             plotAggregator->SetLegend("Antenna gain (in dB)", "Frequency");
             plotAggregator->Set2dDatasetDefaultStyle(Gnuplot2dDataset::LINES);
             plotAggregator->Add2dDataset(GetName(), GetName());
-            /// \todo Find a better dataset name.
+            /// @todo Find a better dataset name.
 
             // Setup the final-level collector.
             m_averagingCollector = CreateObject<DistributionCollector>();
@@ -382,7 +382,7 @@ SatStatsAntennaGainHelper::DoInstall()
                 "Output",
                 GetName(),
                 MakeCallback(&MagisterGnuplotAggregator::Write2d, plotAggregator));
-            /// \todo Find a better dataset name.
+            /// @todo Find a better dataset name.
 
             // Setup collectors.
             m_terminalCollectors.SetType("ns3::ScalarCollector");

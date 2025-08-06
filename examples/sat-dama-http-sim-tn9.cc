@@ -29,10 +29,10 @@
 using namespace ns3;
 
 /**
- * \file sat-dama-http-sim-tn9.cc
- * \ingroup satellite
+ * @file sat-dama-http-sim-tn9.cc
+ * @ingroup satellite
  *
- * \brief Simulation script to run example simulation results with HTTP traffic
+ * @brief Simulation script to run example simulation results with HTTP traffic
  * model. Currently only one beam is simulated with one user and
  * and DAMA configuration.
  *

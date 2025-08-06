@@ -19,9 +19,9 @@
  */
 
 /**
- * \file satellite-fading-external-input-trace-test.cc
- * \ingroup satellite
- * \brief Test cases to unit test external fading traces
+ * @file satellite-fading-external-input-trace-test.cc
+ * @ingroup satellite
+ * @brief Test cases to unit test external fading traces
  */
 
 #include "../model/satellite-channel.h"
@@ -39,8 +39,8 @@
 using namespace ns3;
 
 /**
- * \ingroup satellite
- * \brief Test case to unit test satellite fading external input trace and container for these
+ * @ingroup satellite
+ * @brief Test case to unit test satellite fading external input trace and container for these
  * objects.
  *
  */
@@ -145,8 +145,8 @@ SatFadingExternalInputTraceTestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Test suite for satellite fading external input trace
+ * @ingroup satellite
+ * @brief Test suite for satellite fading external input trace
  */
 class SatFadingExternalInputTraceTestSuite : public TestSuite
 {

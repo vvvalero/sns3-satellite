@@ -19,9 +19,9 @@
  */
 
 /**
- * \file satellite-scenario-creation.cc
- * \ingroup satellite
- * \brief 'Scenario Creation Test Cases' implementation of TN4.
+ * @file satellite-scenario-creation.cc
+ * @ingroup satellite
+ * @brief 'Scenario Creation Test Cases' implementation of TN4.
  *
  * In this module are implemented all 'Scenario Creation' Test Cases
  * defined in document TN4.
@@ -41,7 +41,7 @@
 using namespace ns3;
 
 /**
- * \brief 'Scenario Creation, Simple' test case implementation, id: sc-1 / TN4.
+ * @brief 'Scenario Creation, Simple' test case implementation, id: sc-1 / TN4.
  *
  * This case tests successful creation of the simple scenario creation of the reference system.
  *  1.  Simple test scenario created with helper
@@ -115,7 +115,7 @@ ScenarioCreationSimple::DoRun(void)
 }
 
 /**
- * \brief 'Scenario Creation, Larger' test case implementation, id: sc-2 / TN4.
+ * @brief 'Scenario Creation, Larger' test case implementation, id: sc-2 / TN4.
  *
  * This case tests successful creation of the larger scenario creation of the reference system.
  *  1.  Larger test scenario created with helper
@@ -189,7 +189,7 @@ ScenarioCreationLarger::DoRun(void)
 }
 
 /**
- * \brief 'Scenario Creation, Full' test case implementation, id: sc-3 / TN4.
+ * @brief 'Scenario Creation, Full' test case implementation, id: sc-3 / TN4.
  *
  * This case tests successful creation of the full scenario creation of the reference system.
  *  1.  Full test scenario created with helper
@@ -268,7 +268,7 @@ ScenarioCreationFull::DoRun(void)
 }
 
 /**
- * \brief 'Scenario Creation, User Defined' test case implementation, id: tbd / TN4.
+ * @brief 'Scenario Creation, User Defined' test case implementation, id: tbd / TN4.
  *
  * This case tests successful creation of the user defined scenario creation of the reference
  * system.

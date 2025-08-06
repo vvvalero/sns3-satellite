@@ -32,9 +32,9 @@ namespace ns3
 {
 
 /**
- * \ingroup satellite
+ * @ingroup satellite
  *
- * \brief SatEnums class is for simplifying the use of enumerators
+ * @brief SatEnums class is for simplifying the use of enumerators
  * in the satellite module. The enums specified in this class mainly
  * consist of enums used in multiple classes.
  */
@@ -42,8 +42,8 @@ class SatEnums
 {
   public:
     /**
-     * \enum ChannelType_t
-     * \brief Types of channel.
+     * @enum ChannelType_t
+     * @brief Types of channel.
      */
     typedef enum
     {
@@ -55,8 +55,8 @@ class SatEnums
     } ChannelType_t;
 
     /**
-     * \enum PropagationDelayModel_t
-     * \brief Propagation delay model.
+     * @enum PropagationDelayModel_t
+     * @brief Propagation delay model.
      */
     typedef enum
     {
@@ -65,8 +65,8 @@ class SatEnums
     } PropagationDelayModel_t;
 
     /**
-     * \enum CarrierBandwidthType_t
-     * \brief Types of bandwidth.
+     * @enum CarrierBandwidthType_t
+     * @brief Types of bandwidth.
      */
     typedef enum
     {
@@ -76,8 +76,8 @@ class SatEnums
     } CarrierBandwidthType_t;
 
     /**
-     * \enum FadingModel_t
-     * \brief Fading models
+     * @enum FadingModel_t
+     * @brief Fading models
      */
     typedef enum
     {
@@ -87,8 +87,8 @@ class SatEnums
     } FadingModel_t;
 
     /**
-     * \enum RegenerationMode_t
-     * \brief The regeneration mode used in satellites.
+     * @enum RegenerationMode_t
+     * @brief The regeneration mode used in satellites.
      * It can be set for each link with different values.
      */
     typedef enum
@@ -103,8 +103,8 @@ class SatEnums
     } RegenerationMode_t;
 
     /**
-     * \enum IslArbiterType_t
-     * \brief Choose the arbiter to use to route packets on ISLs
+     * @enum IslArbiterType_t
+     * @brief Choose the arbiter to use to route packets on ISLs
      */
     typedef enum
     {
@@ -115,8 +115,8 @@ class SatEnums
     } IslArbiterType_t;
 
     /**
-     * \enum Standard_t
-     * \brief The global standard used. Can be either DVB or Lora
+     * @enum Standard_t
+     * @brief The global standard used. Can be either DVB or Lora
      */
     typedef enum
     {
@@ -125,8 +125,8 @@ class SatEnums
     } Standard_t;
 
     /**
-     * \enum SatLoraNodeType_t
-     * \brief Specifies standard used and the king of node
+     * @enum SatLoraNodeType_t
+     * @brief Specifies standard used and the king of node
      */
     typedef enum
     {
@@ -139,8 +139,8 @@ class SatEnums
     } SatLoraNodeType_t;
 
     /**
-     * \enum DvbVersion_t
-     * \brief The scheduling algorithm used to fill the BBFrames.
+     * @enum DvbVersion_t
+     * @brief The scheduling algorithm used to fill the BBFrames.
      */
     typedef enum
     {
@@ -149,8 +149,8 @@ class SatEnums
     } DvbVersion_t;
 
     /**
-     * \enum FwdSchedulingAlgorithm_t
-     * \brief The scheduling algorithm used to fill the BBFrames.
+     * @enum FwdSchedulingAlgorithm_t
+     * @brief The scheduling algorithm used to fill the BBFrames.
      */
     typedef enum
     {
@@ -169,8 +169,8 @@ class SatEnums
     } BbFrameUsageMode_t;
 
     /**
-     * \enum SatModcod_t
-     * \brief Modulation scheme and coding rate for DVB-S2.
+     * @enum SatModcod_t
+     * @brief Modulation scheme and coding rate for DVB-S2.
      */
     typedef enum
     {
@@ -2222,9 +2222,9 @@ class SatEnums
     }
 
     /**
-     * \enum SatBbFrameType_t
+     * @enum SatBbFrameType_t
      *
-     * \brief BB frame type used in DVB-S2 FWD link
+     * @brief BB frame type used in DVB-S2 FWD link
      */
     typedef enum
     {
@@ -2261,9 +2261,9 @@ class SatEnums
     }
 
     /**
-     * \enum SatFlowId_t
+     * @enum SatFlowId_t
      *
-     * \brief Lower layer flow identifiers
+     * @brief Lower layer flow identifiers
      */
     typedef enum
     {
@@ -2275,7 +2275,7 @@ class SatEnums
     } SatFlowId_t;
 
     /**
-     * \brief Definition for different types of Capacity Request (CR) messages.
+     * @brief Definition for different types of Capacity Request (CR) messages.
      */
     typedef enum
     {
@@ -2286,7 +2286,7 @@ class SatEnums
     } SatWaveFormBurstLength_t;
 
     /**
-     * \brief Definition for different types of Capacity Request (CR) messages.
+     * @brief Definition for different types of Capacity Request (CR) messages.
      */
     typedef enum
     {
@@ -2328,8 +2328,8 @@ class SatEnums
     }
 
     /**
-     * \enum RxPowerCalculationMode_t
-     * \brief Modes of Rx power calculation.
+     * @enum RxPowerCalculationMode_t
+     * @brief Modes of Rx power calculation.
      */
     typedef enum
     {
@@ -2367,9 +2367,9 @@ class SatEnums
     }
 
     /**
-     * \enum SatPacketEvent_t
+     * @enum SatPacketEvent_t
      *
-     * \brief Packet event used for packet tracing
+     * @brief Packet event used for packet tracing
      */
     typedef enum
     {
@@ -2405,9 +2405,9 @@ class SatEnums
     }
 
     /**
-     * \enum SatNodeType_t
+     * @enum SatNodeType_t
      *
-     * \brief Node type used for packet tracing
+     * @brief Node type used for packet tracing
      */
     typedef enum
     {
@@ -2451,9 +2451,9 @@ class SatEnums
     }
 
     /**
-     * \enum SatLinkDir_t
+     * @enum SatLinkDir_t
      *
-     * \brief Link direction used for packet tracing
+     * @brief Link direction used for packet tracing
      */
     typedef enum
     {
@@ -2485,9 +2485,9 @@ class SatEnums
     }
 
     /**
-     * \enum SatLogLevel_t
+     * @enum SatLogLevel_t
      *
-     * \brief Log level used for packet tracing
+     * @brief Log level used for packet tracing
      */
     typedef enum
     {
@@ -2527,8 +2527,8 @@ class SatEnums
     }
 
     /**
-     * \enum RandomAccessTriggerType_t
-     * \brief The defined random access trigger types. These help determine
+     * @enum RandomAccessTriggerType_t
+     * @brief The defined random access trigger types. These help determine
      * which algorithm to use if multiple algorithms are enabled
      */
     typedef enum
@@ -2561,8 +2561,8 @@ class SatEnums
     }
 
     /**
-     * \enum RandomAccessModel_t
-     * \brief The defined random access models. These define the implemented algorithms
+     * @enum RandomAccessModel_t
+     * @brief The defined random access models. These define the implemented algorithms
      */
     typedef enum
     {
@@ -2603,8 +2603,8 @@ class SatEnums
     }
 
     /**
-     * \enum RandomAccessTxOpportunityType_t
-     * \brief Random access Tx opportunity types. These are used to define to which algorithm
+     * @enum RandomAccessTxOpportunityType_t
+     * @brief Random access Tx opportunity types. These are used to define to which algorithm
      * the results provided by this module applies to
      */
     typedef enum
@@ -2643,8 +2643,8 @@ class SatEnums
     }
 
     /**
-     * \enum PacketType_t
-     * \brief Packet types. These are used determine Rx side actions
+     * @enum PacketType_t
+     * @brief Packet types. These are used determine Rx side actions
      */
     typedef enum
     {
@@ -2681,8 +2681,8 @@ class SatEnums
     }
 
     /**
-     * \enum RbcdCapacityRequestAlgorithm_t
-     * \brief The defined RBDC capacity request algorithms. These help determine
+     * @enum RbcdCapacityRequestAlgorithm_t
+     * @brief The defined RBDC capacity request algorithms. These help determine
      * which algorithm to use when calculating RBDC requests.
      */
     typedef enum
@@ -2709,8 +2709,8 @@ class SatEnums
     }
 
     /**
-     * \enum VbcdCapacityRequestAlgorithm_t
-     * \brief The defined VBDC capacity request algorithms. These help determine
+     * @enum VbcdCapacityRequestAlgorithm_t
+     * @brief The defined VBDC capacity request algorithms. These help determine
      * which algorithm to use when calculating VBDC requests.
      */
     typedef enum
@@ -2737,8 +2737,8 @@ class SatEnums
     }
 
     /**
-     * \enum SatSuperframeAllocatorType_t
-     * \brief SuperframeAllocator type to use
+     * @enum SatSuperframeAllocatorType_t
+     * @brief SuperframeAllocator type to use
      */
     typedef enum
     {
@@ -2746,8 +2746,8 @@ class SatEnums
     } SuperframeAllocatorType_t;
 
     /**
-     * \enum LinkResults_t
-     * \brief Return link Link result types. These are used to define which type of
+     * @enum LinkResults_t
+     * @brief Return link Link result types. These are used to define which type of
      * waveforms are used to check link results on the return link.
      */
     typedef enum

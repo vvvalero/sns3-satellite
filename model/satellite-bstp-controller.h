@@ -35,8 +35,8 @@ namespace ns3
 {
 
 /**
- * \ingroup satellite
- * \brief SatBstpController class is responsible of enabling and
+ * @ingroup satellite
+ * @brief SatBstpController class is responsible of enabling and
  * disabling configurable spot-beams defined by a Beam Switching
  * Time Plan (BSTP). Currently the SatBstpController supports only
  * static beam hopping patterns, where the BSTP is defined by
@@ -76,7 +76,7 @@ class SatBstpController : public Object
     virtual ~SatBstpController();
 
     /**
-     * \brief Initialize the beam hopping configurations.
+     * @brief Initialize the beam hopping configurations.
      */
     void Initialize();
 
@@ -96,13 +96,13 @@ class SatBstpController : public Object
     typedef Callback<void, bool> ToggleCallback;
 
     /**
-     * \brief Add a callback to the SatNetDevice of GW matching
+     * @brief Add a callback to the SatNetDevice of GW matching
      * to a certain beam id.
-     * \param beamId Beam id
-     * \param userFreqId User frequency id
-     * \param feederFreqId Feeder frequency id
-     * \param gwId Gateway id
-     * \param cb Callback to the toggle method of ND
+     * @param beamId Beam id
+     * @param userFreqId User frequency id
+     * @param feederFreqId Feeder frequency id
+     * @param gwId Gateway id
+     * @param cb Callback to the toggle method of ND
      */
     void AddNetDeviceCallback(uint32_t beamId,
                               uint32_t userFreqId,
@@ -112,7 +112,7 @@ class SatBstpController : public Object
 
   protected:
     /**
-     * \brief Periodical method to enable/disable certain beam
+     * @brief Periodical method to enable/disable certain beam
      * ids related to the scheduling and transmission of BB frames.
      */
     void DoBstpConfiguration();

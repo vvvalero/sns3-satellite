@@ -30,10 +30,10 @@
 using namespace ns3;
 
 /**
- * \file sat-mobility-position-generator.cc
- * \ingroup satellite
+ * @file sat-mobility-position-generator.cc
+ * @ingroup satellite
  *
- * \brief Simulation script to run example simulation results with
+ * @brief Simulation script to run example simulation results with
  * a high degree of customization through XML file.
  *
  * execute command -> ./waf --run "sat-mobility-position-generator --PrintHelp"

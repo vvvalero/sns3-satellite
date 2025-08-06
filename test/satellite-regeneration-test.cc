@@ -19,9 +19,9 @@
  */
 
 /**
- * \file satellite-regeneration-test.cc
- * \ingroup satellite
- * \brief Regeneration test case implementations.
+ * @file satellite-regeneration-test.cc
+ * @ingroup satellite
+ * @brief Regeneration test case implementations.
  *
  * In this module implements the Regeneration Test Cases.
  */
@@ -51,8 +51,8 @@
 using namespace ns3;
 
 /**
- * \ingroup satellite
- * \brief 'Regeneration, test 1' test case implementation.
+ * @ingroup satellite
+ * @brief 'Regeneration, test 1' test case implementation.
  *
  * This case tests that delay of packets takes into account regeneration in satellite
  *
@@ -273,8 +273,8 @@ SatRegenerationTest1::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief 'Regeneration, test 2' test case implementation.
+ * @ingroup satellite
+ * @brief 'Regeneration, test 2' test case implementation.
  *
  * This case tests physical regeneration on satellite. It is based on a SIMPLE scenario, with losses
  * on uplink, forward and return.
@@ -548,8 +548,8 @@ SatRegenerationTest2::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief 'Regeneration, test 3' test case implementation.
+ * @ingroup satellite
+ * @brief 'Regeneration, test 3' test case implementation.
  *
  * This case tests physical regeneration on satellite. It is based on a LARGER scenario, with
  * collisions on return uplink.
@@ -874,8 +874,8 @@ SatRegenerationTest3::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief 'Regeneration, test 4' test case implementation.
+ * @ingroup satellite
+ * @brief 'Regeneration, test 4' test case implementation.
  *
  * This case tests link regeneration on satellite. It is based on a LARGER scenario.
  *
@@ -1074,8 +1074,8 @@ SatRegenerationTest4::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief 'Regeneration, test 5' test case implementation.
+ * @ingroup satellite
+ * @brief 'Regeneration, test 5' test case implementation.
  *
  * This case tests ACM on all links.
  * It is based on a SIMPLE scenario, with PHY regeneration on FWD and LINK regeneration on RTN.
@@ -1322,8 +1322,8 @@ SatRegenerationTest5::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief 'Regeneration, test 6' test case implementation.
+ * @ingroup satellite
+ * @brief 'Regeneration, test 6' test case implementation.
  *
  * This case tests network regeneration on satellite. It is based on a LARGER scenario.
  *
@@ -1511,8 +1511,8 @@ SatRegenerationTest6::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief 'Regeneration, test 7' test case implementation.
+ * @ingroup satellite
+ * @brief 'Regeneration, test 7' test case implementation.
  *
  * This case tests ACM on all links.
  * It is based on a SIMPLE scenario, with network regeneration on FWD and RTN.
@@ -1759,8 +1759,8 @@ SatRegenerationTest7::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief 'Regeneration, test 8' test case implementation.
+ * @ingroup satellite
+ * @brief 'Regeneration, test 8' test case implementation.
  *
  * This test is launched several time to test every regeneration combination.
  * We measure if packets are seen on sat traces, and should have (for RX):

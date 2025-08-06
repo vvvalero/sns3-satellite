@@ -19,9 +19,9 @@
  */
 
 /**
- * \file satellite-handover-test.cc
- * \ingroup satellite
- * \brief Handover test case implementations.
+ * @file satellite-handover-test.cc
+ * @ingroup satellite
+ * @brief Handover test case implementations.
  *
  * In this module implements the Handover Test Cases.
  */
@@ -56,8 +56,8 @@
 using namespace ns3;
 
 /**
- * \ingroup satellite
- * \brief 'Handover, test 1 test case implementation.
+ * @ingroup satellite
+ * @brief 'Handover, test 1 test case implementation.
  *
  * This case tests that a application throughputs PerEntity are correct.
  * It generates a conf with 2 GEO satellites, 2 GWs, 4 UTs (3 static and 1 moving) and 1 UT users
@@ -417,8 +417,8 @@ SatHandoverTest1::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief 'Handover, test 2 test case implementation.
+ * @ingroup satellite
+ * @brief 'Handover, test 2 test case implementation.
  *
  * This case tests that communication remains after GW handover.
  */

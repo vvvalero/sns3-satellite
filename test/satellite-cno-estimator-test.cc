@@ -19,9 +19,9 @@
  */
 
 /**
- * \file satellite-cno-estimator.cc
- * \ingroup satellite
- * \brief Test cases to unit test Satellite C/N0 estimator.
+ * @file satellite-cno-estimator.cc
+ * @ingroup satellite
+ * @brief Test cases to unit test Satellite C/N0 estimator.
  */
 
 // Include a header file from your module to test.
@@ -92,8 +92,8 @@ SatEstimatorBaseTestCase::CreateEstimator(SatCnoEstimator::EstimationMode_t mode
 }
 
 /**
- * \ingroup satellite
- * \brief Test case to unit test satellite C/N0 estimator with mode LAST.
+ * @ingroup satellite
+ * @brief Test case to unit test satellite C/N0 estimator with mode LAST.
  *
  * This case tests that SatBasicCnoEstimator can be created in mode LAST and
  * C/N0 is estimated correctly in set window.
@@ -218,8 +218,8 @@ SatBasicEstimatorLastTestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Test case to unit test satellite C/N0 estimator with mode MINIMUM.
+ * @ingroup satellite
+ * @brief Test case to unit test satellite C/N0 estimator with mode MINIMUM.
  *
  * This case tests that SatBasicCnoEstimator can be created in mode MINIMUM and
  * C/N0 is estimated correctly in set window.
@@ -308,8 +308,8 @@ SatBasicEstimatorMinTestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Test case to unit test satellite C/N0 estimator with mode AVERAGE.
+ * @ingroup satellite
+ * @brief Test case to unit test satellite C/N0 estimator with mode AVERAGE.
  *
  * This case tests that SatBasicCnoEstimator can be created in mode AVERAGE and
  * C/N0 is estimated correctly in set window.
@@ -406,8 +406,8 @@ SatBasicEstimatorAverageTestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Test suite for Satellite C/N0 estimator unit test cases.
+ * @ingroup satellite
+ * @brief Test suite for Satellite C/N0 estimator unit test cases.
  */
 class SatBasicCnoEstimatorTestSuite : public TestSuite
 {

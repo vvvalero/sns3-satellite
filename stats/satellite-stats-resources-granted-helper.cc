@@ -190,7 +190,7 @@ SatStatsResourcesGrantedHelper::DoInstall()
     }
 
     case SatStatsHelper::OUTPUT_SCALAR_PLOT:
-        /// \todo Add support for boxes in Gnuplot.
+        /// @todo Add support for boxes in Gnuplot.
         NS_FATAL_ERROR(GetOutputTypeName(GetOutputType())
                        << " is not a valid output type for this statistics.");
         break;

@@ -19,9 +19,9 @@
  */
 
 /**
- * \file satellite-control-msg-container-test.cc
- * \ingroup satellite
- * \brief Test cases to unit test satellite control message container.
+ * @file satellite-control-msg-container-test.cc
+ * @ingroup satellite
+ * @brief Test cases to unit test satellite control message container.
  */
 
 // Include a header file from your module to test.
@@ -87,8 +87,8 @@ SatCtrlMsgContBaseTestCase::GetMessage(uint32_t msgId)
 }
 
 /**
- * \ingroup satellite
- * \brief Test case to unit test satellite control message container with flag deletedOnRead set.
+ * @ingroup satellite
+ * @brief Test case to unit test satellite control message container with flag deletedOnRead set.
  *
  * This case tests that SatControlMsgContainer can be created with flag deletedOnRead set and
  * messages can be read correctly in set store window time.
@@ -190,8 +190,8 @@ SatCtrlMsgContDelOnTestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Test case to unit test satellite control message container with flag deletedOnRead not
+ * @ingroup satellite
+ * @brief Test case to unit test satellite control message container with flag deletedOnRead not
  * set.
  *
  * This case tests that SatControlMsgContainer can be created with flag deletedOnRead not set and
@@ -293,8 +293,8 @@ SatCtrlMsgContDelOffTestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Test suite for Satellite control message container unit test cases.
+ * @ingroup satellite
+ * @brief Test suite for Satellite control message container unit test cases.
  */
 class SatCtrlMsgContainerTestSuite : public TestSuite
 {

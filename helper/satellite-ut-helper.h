@@ -45,7 +45,7 @@ namespace ns3
 {
 
 /**
- * \brief Creates needed objects for UT nodes like SatOrbiterNetDevice objects.
+ * @brief Creates needed objects for UT nodes like SatOrbiterNetDevice objects.
  *        Handles needed configuration for the UT nodes.
  *
  */
@@ -94,7 +94,7 @@ class SatUtHelper : public Object
 
     /*
      * Initializes the UT helper based on attributes
-     * \param lrFwd DVB-S2 or DVB-S2X link results
+     * @param lrFwd DVB-S2 or DVB-S2X link results
      */
     void Initialize(Ptr<SatLinkResultsFwd> lrFwd);
 
@@ -102,8 +102,8 @@ class SatUtHelper : public Object
      * Set an attribute value to be propagated to each NetDevice created by the
      * helper.
      *
-     * \param name the name of the attribute to set
-     * \param value the value of the attribute to set
+     * @param name the name of the attribute to set
+     * @param value the value of the attribute to set
      *
      * Set these attributes on each ns3::SatNetDevice created
      * by SatUtHelper::Install
@@ -114,8 +114,8 @@ class SatUtHelper : public Object
      * Set an attribute value to be propagated to each Channel created by the
      * helper.
      *
-     * \param name the name of the attribute to set
-     * \param value the value of the attribute to set
+     * @param name the name of the attribute to set
+     * @param value the value of the attribute to set
      *
      * Set these attribute on each ns3::SatChannel created
      * by SatUtHelper::Install
@@ -125,8 +125,8 @@ class SatUtHelper : public Object
     /**
      * Set an attribute value to be propagated to each Phy created by the helper.
      *
-     * \param name the name of the attribute to set
-     * \param value the value of the attribute to set
+     * @param name the name of the attribute to set
+     * @param value the value of the attribute to set
      *
      * Set these attributes on each ns3::SatNetDevice created
      * by SatUtHelper::Install
@@ -134,15 +134,15 @@ class SatUtHelper : public Object
     void SetPhyAttribute(std::string name, const AttributeValue& value);
 
     /**
-     * \param c a set of nodes
-     * \param satId  id of the satellite
-     * \param beamId  id of the beam
-     * \param fCh forward channel
-     * \param rCh return channel
-     * \param gwNd satellite netdevice of the GW
-     * \param ncc NCC (Network Control Center)
-     * \param satUserAddress MAC address of satellite user link
-     * \return Container of installed net devices
+     * @param c a set of nodes
+     * @param satId  id of the satellite
+     * @param beamId  id of the beam
+     * @param fCh forward channel
+     * @param rCh return channel
+     * @param gwNd satellite netdevice of the GW
+     * @param ncc NCC (Network Control Center)
+     * @param satUserAddress MAC address of satellite user link
+     * @return Container of installed net devices
      *
      * This method creates a ns3::SatChannel with the
      * attributes configured by SatUtHelper::SetChannelAttribute,
@@ -162,15 +162,15 @@ class SatUtHelper : public Object
                                SatPhy::ChannelPairGetterCallback cbChannel,
                                SatMac::RoutingUpdateCallback cbRouting);
     /**
-     * \param n node
-     * \param satId  id of the satellite
-     * \param beamId  id of the beam
-     * \param fCh forward channel
-     * \param rCh return channel
-     * \param gwNd satellite netdevice of the GW
-     * \param ncc NCC (Network Control Center)
-     * \param satUserAddress MAC address of satellite user link
-     * \return Net device installed to node
+     * @param n node
+     * @param satId  id of the satellite
+     * @param beamId  id of the beam
+     * @param fCh forward channel
+     * @param rCh return channel
+     * @param gwNd satellite netdevice of the GW
+     * @param ncc NCC (Network Control Center)
+     * @param satUserAddress MAC address of satellite user link
+     * @return Net device installed to node
      *
      * Saves you from having to construct a temporary NodeContainer.
      * This method is implemented in child classes.
@@ -188,8 +188,8 @@ class SatUtHelper : public Object
 
     /**
      * Enables creation traces to be written in given file
-     * \param stream  stream for creation trace outputs
-     * \param cb  callback to connect traces
+     * @param stream  stream for creation trace outputs
+     * @param cb  callback to connect traces
      */
     void EnableCreationTraces(Ptr<OutputStreamWrapper> stream, CallbackBase& cb);
 
@@ -229,7 +229,7 @@ class SatUtHelper : public Object
     Ptr<SatLinkResults> m_linkResults;
 
     /**
-     * \brief Trace callback for creation traces
+     * @brief Trace callback for creation traces
      */
     TracedCallback<std::string> m_creationTrace;
 

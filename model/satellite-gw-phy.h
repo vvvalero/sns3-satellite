@@ -44,7 +44,7 @@ class SatPhyRxCarrierPerFrame;
 class SatPhyRxCarrierPerWindow;
 
 /**
- * \ingroup satellite
+ * @ingroup satellite
  *
  * The SatGwPhy models the physical layer of the satellite system (UT, GW, satellite)
  */
@@ -88,35 +88,35 @@ class SatGwPhy : public SatPhy
     virtual void DoDispose(void);
 
     /**
-     * \brief Get additional interference, used to compute final SINR at RX
+     * @brief Get additional interference, used to compute final SINR at RX
      *
-     * \return Additional interference
+     * @return Additional interference
      */
     virtual double GetAdditionalInterference();
 
     /**
-     * \brief Change underlying SatChannel to send and receive data from a new satellite and beam
-     * \param satId the new satellite to listen/send to
-     * \param beamId the new beam to listen/send to
+     * @brief Change underlying SatChannel to send and receive data from a new satellite and beam
+     * @param satId the new satellite to listen/send to
+     * @param beamId the new beam to listen/send to
      */
     void PerformHandover(uint32_t satId, uint32_t beamId);
 
   protected:
     /**
-     * \brief Get the link TX direction. Must be implemented by child clases.
-     * \return The link TX direction
+     * @brief Get the link TX direction. Must be implemented by child clases.
+     * @return The link TX direction
      */
     virtual SatEnums::SatLinkDir_t GetSatLinkTxDir();
 
     /**
-     * \brief Get the link RX direction. Must be implemented by child clases.
-     * \return The link RX direction
+     * @brief Get the link RX direction. Must be implemented by child clases.
+     * @return The link RX direction
      */
     virtual SatEnums::SatLinkDir_t GetSatLinkRxDir();
 
   private:
     /**
-     * \brief Update the underlying SatChannel to send and receive data from
+     * @brief Update the underlying SatChannel to send and receive data from
      * the current beam (as described in the m_beamId attribute).
      */
     void AssignNewSatChannels();

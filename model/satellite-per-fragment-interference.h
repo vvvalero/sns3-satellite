@@ -31,8 +31,8 @@ namespace ns3
 {
 
 /**
- * \ingroup satellite
- * \brief Packet fragment by packet fragment interference. Interference
+ * @ingroup satellite
+ * @brief Packet fragment by packet fragment interference. Interference
  * is calculated separately for each fragment of a packet depending of
  * how other interferent packets overlaps.
  */
@@ -64,9 +64,9 @@ class SatPerFragmentInterference : public SatPerPacketInterference
      * Calculates interference power for the given reference
      * Sets final power at end time to finalPower.
      *
-     * \param event Reference event which for interference is calculated.
+     * @param event Reference event which for interference is calculated.
      *
-     * \return Final calculated power value at end of receiving
+     * @return Final calculated power value at end of receiving
      */
     std::vector<std::pair<double, double>> DoCalculate(
         Ptr<SatInterference::InterferenceChangeEvent> event);
@@ -87,12 +87,12 @@ class SatPerFragmentInterference : public SatPerPacketInterference
      * the event being processed proportional to the remaining time
      * until the end of the event whose interferences are being calculated.
      *
-     * \param timeRatio ratio of time compared to an event duration of the
+     * @param timeRatio ratio of time compared to an event duration of the
      * distance between the event being processed and the end of the event
      * whose interferences are being calculated.
-     * \param interferenceValue the interference value of the event being
+     * @param interferenceValue the interference value of the event being
      * processed.
-     * \param ifPowerW the current value of the interference for the event
+     * @param ifPowerW the current value of the interference for the event
      * whose interferences are being calculated; which will be updated.
      */
     void onInterferentEvent(long double timeRatio, double interferenceValue, double& ifPowerW);

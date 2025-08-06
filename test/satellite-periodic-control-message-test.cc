@@ -19,9 +19,9 @@
  */
 
 /**
- * \file satellite-periodic-control-message-test.cc
- * \ingroup satellite
- * \brief Periodic control message test case implementations.
+ * @file satellite-periodic-control-message-test.cc
+ * @ingroup satellite
+ * @brief Periodic control message test case implementations.
  *
  * In this module implements the Periodic control message test cases
  * defined in TN6.
@@ -45,8 +45,8 @@
 using namespace ns3;
 
 /**
- * \ingroup satellite
- * \brief 'Periodic control message, test 1' test case implementation.
+ * @ingroup satellite
+ * @brief 'Periodic control message, test 1' test case implementation.
  *
  * This case tests successful transmission of UDP packets from UT connected user
  * to GW connected user in simple scenario and using periodic control slots and VBDC only.

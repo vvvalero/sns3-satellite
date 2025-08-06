@@ -96,7 +96,7 @@ class LoraNetworkServer : public Application
 
     /**
      * Receive a packet from a gateway.
-     * \param packet the received packet
+     * @param packet the received packet
      */
     bool Receive(Ptr<NetDevice> device,
                  Ptr<const Packet> packet,

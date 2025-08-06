@@ -32,10 +32,10 @@
 using namespace ns3;
 
 /**
- * \file sat-per-packet-if-sim-tn9.cc
- * \ingroup satellite
+ * @file sat-per-packet-if-sim-tn9.cc
+ * @ingroup satellite
  *
- * \brief Simulation script to run example simulation results related to per-packet
+ * @brief Simulation script to run example simulation results related to per-packet
  * interference performance.
  *
  * execute command -> ./waf --run "sat-per-packet-if-sim-tn9 --PrintHelp"

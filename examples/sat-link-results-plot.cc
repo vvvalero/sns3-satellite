@@ -29,9 +29,9 @@
 #include <stdint.h>
 
 /**
- * \file sat-link-results-plot.cc
- * \ingroup satellite
- * \brief Example for plotting satellite link results data.
+ * @file sat-link-results-plot.cc
+ * @ingroup satellite
+ * @brief Example for plotting satellite link results data.
  *
  * \sa SatLinkResultsPlot
  */
@@ -41,8 +41,8 @@ namespace ns3
 {
 
 /**
- * \ingroup satellite
- * \brief Example for plotting satellite link results data.
+ * @ingroup satellite
+ * @brief Example for plotting satellite link results data.
  *
  * This example can be run as it is, without any argument, i.e.:
  *

@@ -50,10 +50,10 @@ NS_OBJECT_ENSURE_REGISTERED(SatTrafficHelperConf);
  * .SIM_ADD_TRAFFIC_MODEL_ATTRIBUTES macro helps defining specific attribute
  * for traffic models in method GetTypeId.
  *
- * \param index Name of the traffic model which attributes are added to the configuration.
- * \param value Attribute value
+ * @param index Name of the traffic model which attributes are added to the configuration.
+ * @param value Attribute value
  *
- * \return TypeId
+ * @return TypeId
  */
 #define SIM_ADD_TRAFFIC_MODEL_PROTOCOL_ATTRIBUTE(index, value)                                     \
     AddAttribute("Traffic" TOSTRING(index) "Protocol",                                             \

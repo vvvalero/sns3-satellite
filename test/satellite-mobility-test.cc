@@ -19,9 +19,9 @@
  */
 
 /**
- * \ingroup satellite
- * \file satellite-mobility-test.cc
- * \brief Test cases to unit test Satellite Mobility.
+ * @ingroup satellite
+ * @file satellite-mobility-test.cc
+ * @brief Test cases to unit test Satellite Mobility.
  */
 
 // Include a header file from your module to test.
@@ -57,8 +57,8 @@ SatCourseChange(std::string context, Ptr<const SatMobilityModel> position)
 }
 
 /**
- * \ingroup satellite
- * \brief Test case to unit test satellite mobility's position
+ * @ingroup satellite
+ * @brief Test case to unit test satellite mobility's position
  *        setting from random box position allocator.
  *        (Constant position mobility model used).
  *
@@ -138,8 +138,8 @@ SatMobilityRandomTestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Test case to unit test satellite mobility's position
+ * @ingroup satellite
+ * @brief Test case to unit test satellite mobility's position
  *        setting from list position allocator. No conversion expected to happen.
  *        (Constant position mobility model used).
  *
@@ -231,8 +231,8 @@ SatMobilityList1TestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Test case to unit test satellite mobility's position
+ * @ingroup satellite
+ * @brief Test case to unit test satellite mobility's position
  *        setting from list position allocator. Conversion expected to happen.
  *        (Constant position mobility model used).
  *
@@ -327,8 +327,8 @@ SatMobilityList2TestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Test suite for Satellite mobility unit test cases.
+ * @ingroup satellite
+ * @brief Test suite for Satellite mobility unit test cases.
  */
 class SatMobilityTestSuite : public TestSuite
 {

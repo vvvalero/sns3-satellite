@@ -48,7 +48,7 @@ class SatIslArbiterUnicastHelper : public Object
     /**
      * Constructor
      *
-     * \param isls List of all ISLs
+     * @param isls List of all ISLs
      */
     SatIslArbiterUnicastHelper(std::vector<std::pair<uint32_t, uint32_t>> isls);
 

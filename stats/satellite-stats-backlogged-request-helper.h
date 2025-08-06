@@ -33,8 +33,8 @@ class SatHelper;
 class DataCollectionObject;
 
 /**
- * \ingroup satstats
- * \brief
+ * @ingroup satstats
+ * @brief
  */
 class SatStatsBackloggedRequestHelper : public SatStatsHelper
 {

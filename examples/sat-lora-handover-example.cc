@@ -30,10 +30,10 @@
 using namespace ns3;
 
 /**
- * \file sat-lora-handover-example.cc
- * \ingroup satellite
+ * @file sat-lora-handover-example.cc
+ * @ingroup satellite
  *
- * \brief  Test handover for both GW and UT when using regenerative LORA
+ * @brief  Test handover for both GW and UT when using regenerative LORA
  *
  */
 

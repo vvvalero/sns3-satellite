@@ -37,8 +37,8 @@ namespace ns3
 {
 
 /**
- * \ingroup satellite
- * \brief SatAntennaGainPattern class holds the antenna gain pattern data
+ * @ingroup satellite
+ * @brief SatAntennaGainPattern class holds the antenna gain pattern data
  * for a one single spot-beam. In initialization phase, the gain pattern
  * is read from a file to a container. Current implementation assumes
  * that the antenna pattern is using a constant longitude-latitude grid of
@@ -56,8 +56,8 @@ class SatAntennaGainPattern : public Object
 {
   public:
     /**
-     * \brief Get the type ID
-     * \return the object TypeId
+     * @brief Get the type ID
+     * @return the object TypeId
      */
     static TypeId GetTypeId(void);
 
@@ -68,8 +68,8 @@ class SatAntennaGainPattern : public Object
 
     /**
      * Constructor with initialization parameters.
-     * \param filePathName Path of file to read antenna gain patterns
-     * \param defaultSatellitePosition Position of satellite associated to this pattern
+     * @param filePathName Path of file to read antenna gain patterns
+     * @param defaultSatellitePosition Position of satellite associated to this pattern
      */
     SatAntennaGainPattern(std::string filePathName, GeoCoordinate defaultSatellitePosition);
 
@@ -88,24 +88,24 @@ class SatAntennaGainPattern : public Object
     }
 
     /**
-     * \brief Calculate the antenna gain value for a certain {latitude, longitude} point
-     * \param mobility The mobility model of the associated satellite
-     * \return The gain value in linear format
+     * @brief Calculate the antenna gain value for a certain {latitude, longitude} point
+     * @param mobility The mobility model of the associated satellite
+     * @return The gain value in linear format
      */
     double GetAntennaGain_lin(GeoCoordinate coord, Ptr<SatMobilityModel> mobility) const;
 
     /**
-     * \brief Get a valid random position under this spot-beam coverage.
-     * \param mobility The mobility model of the associated satellite
-     * \return A valid random GeoCoordinate
+     * @brief Get a valid random position under this spot-beam coverage.
+     * @param mobility The mobility model of the associated satellite
+     * @return A valid random GeoCoordinate
      */
     GeoCoordinate GetValidRandomPosition(Ptr<SatMobilityModel> mobility) const;
 
     /**
-     * \brief Check if a given position is under this spot-beam coverage.
-     * \param coord The position to check for validity
-     * \param mobility The mobility model of the associated satellite
-     * \return Whether or not the given position is valid for this spot-beam
+     * @brief Check if a given position is under this spot-beam coverage.
+     * @param coord The position to check for validity
+     * @param mobility The mobility model of the associated satellite
+     * @return Whether or not the given position is valid for this spot-beam
      */
     bool IsValidPosition(GeoCoordinate coord,
                          TracedCallback<double> cb,
@@ -118,23 +118,23 @@ class SatAntennaGainPattern : public Object
     /**
      * Get latitude of this beam with best gain, based on satellite given in mobility model.
      *
-     * \param mobility The mobility model of the associated satellite
-     * \return Latitude with best gain.
+     * @param mobility The mobility model of the associated satellite
+     * @return Latitude with best gain.
      */
     double GetCenterLatitude(Ptr<SatMobilityModel> mobility) const;
 
     /**
      * Get latitude of this beam with best gain, based on satellite given in mobility model.
      *
-     * \param mobility The mobility model of the associated satellite
-     * \return Longitude with best gain.
+     * @param mobility The mobility model of the associated satellite
+     * @return Longitude with best gain.
      */
     double GetCenterLongitude(Ptr<SatMobilityModel> mobility) const;
 
   private:
     /**
-     * \brief Read the antenna gain pattern from a file
-     * \param filePathName Path and file name of the antenna pattern file
+     * @brief Read the antenna gain pattern from a file
+     * @param filePathName Path and file name of the antenna pattern file
      */
     void ReadAntennaPatternFromFile(std::string filePathName);
 

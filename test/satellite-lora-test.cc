@@ -19,9 +19,9 @@
  */
 
 /**
- * \ingroup satellite
- * \file satellite-mobility-test.cc
- * \brief Test cases to unit test Satellite Mobility.
+ * @ingroup satellite
+ * @file satellite-mobility-test.cc
+ * @brief Test cases to unit test Satellite Mobility.
  */
 
 // Include a header file from your module to test.
@@ -56,8 +56,8 @@
 using namespace ns3;
 
 /**
- * \ingroup satellite
- * \brief Test case to check if Lora ack arrives in first reception window.
+ * @ingroup satellite
+ * @brief Test case to check if Lora ack arrives in first reception window.
  *
  *  Expected result:
  *    Ack is received and with correct date range, corresponding to first window opening and
@@ -208,8 +208,8 @@ SatLoraFirstWindowTestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Test case to check if Lora ack arrives in second reception window.
+ * @ingroup satellite
+ * @brief Test case to check if Lora ack arrives in second reception window.
  *
  *  Expected result:
  *    Ack is received and with correct date range, corresponding to second window opening and
@@ -362,8 +362,8 @@ SatLoraSecondWindowTestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Test case to check if packet retransmitted if ack outside of both windows.
+ * @ingroup satellite
+ * @brief Test case to check if packet retransmitted if ack outside of both windows.
  *
  *  Expected result:
  *    Ack is not received and packet is retransmitted.
@@ -540,8 +540,8 @@ SatLoraOutOfWindowWindowTestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Test case to check that packet is not retransmitted if ack outside of both windows but no
+ * @ingroup satellite
+ * @brief Test case to check that packet is not retransmitted if ack outside of both windows but no
  * retransmission asked.
  *
  *  Expected result:
@@ -691,8 +691,8 @@ SatLoraOutOfWindowWindowNoRetransmissionTestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Test case to check if packet is received on App layer.
+ * @ingroup satellite
+ * @brief Test case to check if packet is received on App layer.
  *
  *  Expected result:
  *    Rx and Sink callbacks have data.
@@ -856,8 +856,8 @@ SatLoraCbrTestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Test suite for Satellite mobility unit test cases.
+ * @ingroup satellite
+ * @brief Test suite for Satellite mobility unit test cases.
  */
 class SatLoraTestSuite : public TestSuite
 {

@@ -30,7 +30,7 @@ namespace ns3
 {
 
 /**
- * \brief A configuration class for the satellite reference system
+ * @brief A configuration class for the satellite reference system
  *
  */
 class SatLoraConf : public Object
@@ -52,8 +52,8 @@ class SatLoraConf : public Object
     }
 
     /**
-     * \brief Get the type ID
-     * \return the object TypeId
+     * @brief Get the type ID
+     * @return the object TypeId
      */
     static TypeId GetTypeId(void);
 

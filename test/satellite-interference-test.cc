@@ -21,9 +21,9 @@
  */
 
 /**
- * \file satellite-interference-test.cc
- * \ingroup satellite
- * \brief Test cases to unit test Satellite Interference Models.
+ * @file satellite-interference-test.cc
+ * @ingroup satellite
+ * @brief Test cases to unit test Satellite Interference Models.
  */
 
 // Include a header file from your module to test.
@@ -45,8 +45,8 @@
 using namespace ns3;
 
 /**
- * \ingroup satellite
- * \brief Test case to unit test satellite constant interference model.
+ * @ingroup satellite
+ * @brief Test case to unit test satellite constant interference model.
  *
  * This case tests that SatConstantInterference object can be created successfully and interference
  * value set is correct.
@@ -125,8 +125,8 @@ SatConstantInterferenceTestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Test case to unit test satellite per packet interference model.
+ * @ingroup satellite
+ * @brief Test case to unit test satellite per packet interference model.
  *
  * This case tests that SatPerPacketInterference object can be created successfully and interference
  * value calculated correctly.
@@ -302,8 +302,8 @@ SatPerPacketInterferenceTestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Test suite for Satellite interference unit test cases.
+ * @ingroup satellite
+ * @brief Test suite for Satellite interference unit test cases.
  */
 class SatInterferenceTestSuite : public TestSuite
 {

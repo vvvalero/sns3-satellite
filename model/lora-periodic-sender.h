@@ -44,13 +44,13 @@ class LoraPeriodicSender : public Application
 
     /**
      * Set the sending interval
-     * \param interval the interval between two packet sendings
+     * @param interval the interval between two packet sendings
      */
     void SetInterval(Time interval);
 
     /**
      * Get the sending inteval
-     * \returns the interval between two packet sends
+     * @returns the interval between two packet sends
      */
     Time GetInterval(void) const;
 

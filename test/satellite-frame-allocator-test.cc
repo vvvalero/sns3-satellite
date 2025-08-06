@@ -21,9 +21,9 @@
  */
 
 /**
- * \file satellite-frame-allocator-test.cc
- * \ingroup satellite
- * \brief Test cases to unit test Satellite Frame Allocator and its related objects.
+ * @file satellite-frame-allocator-test.cc
+ * @ingroup satellite
+ * @brief Test cases to unit test Satellite Frame Allocator and its related objects.
  */
 
 #include "../model/satellite-superframe-allocator.h"
@@ -43,8 +43,8 @@
 using namespace ns3;
 
 /**
- * \ingroup satellite
- * \brief Test case to unit test Satellite Frame Allocator.
+ * @ingroup satellite
+ * @brief Test case to unit test Satellite Frame Allocator.
  *
  * This case tests that SatFrameAllocator object allocates symbols (time slots)
  * for UT/RCs correctly with different configurations.
@@ -798,7 +798,7 @@ SatFrameAllocatorTestCase::DoRun(void)
 }
 
 /**
- * \brief Test suite for Satellite Frame Allocator unit test cases.
+ * @brief Test suite for Satellite Frame Allocator unit test cases.
  */
 class SatFrameAllocatorTestSuite : public TestSuite
 {

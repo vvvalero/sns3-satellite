@@ -19,9 +19,9 @@
  */
 
 /**
- * \file satellite-ncr-test.cc
- * \ingroup satellite
- * \brief NCR test case implementations.
+ * @file satellite-ncr-test.cc
+ * @ingroup satellite
+ * @brief NCR test case implementations.
  *
  * In this module implements the NCR Test Cases.
  */
@@ -46,8 +46,8 @@
 using namespace ns3;
 
 /**
- * \ingroup satellite
- * \brief 'NCR, test 1' test case implementation.
+ * @ingroup satellite
+ * @brief 'NCR, test 1' test case implementation.
  *
  * This case tests logon mechanism, and that no data is sent by UT before entering TDMA_SYNC state.
  *
@@ -222,8 +222,8 @@ SatNcrTest1::GetData(Ptr<CbrApplication> sender, Ptr<PacketSink> receiver)
 }
 
 /**
- * \ingroup satellite
- * \brief 'NCR, test 2' test case implementation.
+ * @ingroup satellite
+ * @brief 'NCR, test 2' test case implementation.
  *
  * This case tests ncr recovery mechanism.
  *
@@ -448,8 +448,8 @@ SatNcrTest2::ChangeTxStatus(bool enable)
 }
 
 /**
- * \ingroup satellite
- * \brief 'NCR, test 3' test case implementation.
+ * @ingroup satellite
+ * @brief 'NCR, test 3' test case implementation.
  *
  * This case tests ncr recovery timeout mechanism and logoff.
  *

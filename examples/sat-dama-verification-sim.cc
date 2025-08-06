@@ -30,10 +30,10 @@
 using namespace ns3;
 
 /**
- * \file sat-dama-verification-sim.cc
- * \ingroup satellite
+ * @file sat-dama-verification-sim.cc
+ * @ingroup satellite
  *
- * \brief Simulation script to run example simulation results related to
+ * @brief Simulation script to run example simulation results related to
  * satellite RTN link performance.
  *
  * execute command -> ./waf --run "sat-dama-verification-sim --PrintHelp"

@@ -19,9 +19,9 @@
  */
 
 /**
- * \file satellite-performance-memory-test.cc
- * \ingroup satellite
- * \brief 'Performance and Memory Consumption Test Cases' implementation of TN4.
+ * @file satellite-performance-memory-test.cc
+ * @ingroup satellite
+ * @brief 'Performance and Memory Consumption Test Cases' implementation of TN4.
  *
  * In this module are implemented all 'Performance and Memory Consumption' Test Cases
  * defined in document TN4.
@@ -46,8 +46,8 @@
 using namespace ns3;
 
 /**
- * \ingroup satellite
- * \brief 'Performance and memory tracking' test case implementation, id: pm-1 / TN4.
+ * @ingroup satellite
+ * @brief 'Performance and memory tracking' test case implementation, id: pm-1 / TN4.
  *
  * Full scenario created with helper
  * 1.  GW connected user sends single packet to UT connected user.

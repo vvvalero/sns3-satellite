@@ -31,7 +31,7 @@ namespace ns3
 {
 
 /**
- * \ingroup satellite
+ * @ingroup satellite
  *
  * @brief extensions to ns3::Vector3D to support additional operations
  *

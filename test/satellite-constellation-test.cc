@@ -19,9 +19,9 @@
  */
 
 /**
- * \file satellite-constellation-test.cc
- * \ingroup satellite
- * \brief Constellation test case implementations.
+ * @file satellite-constellation-test.cc
+ * @ingroup satellite
+ * @brief Constellation test case implementations.
  *
  * In this module implements the Constellation Test Cases.
  */
@@ -56,8 +56,8 @@
 using namespace ns3;
 
 /**
- * \ingroup satellite
- * \brief 'Constellation, test 1' test case implementation.
+ * @ingroup satellite
+ * @brief 'Constellation, test 1' test case implementation.
  *
  * This case tests that a topology is correctly loaded.
  * It load the eutelsat-geo-2-sats configuration
@@ -213,8 +213,8 @@ SatConstellationTest1::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief 'Constellation, test 2 test case implementation.
+ * @ingroup satellite
+ * @brief 'Constellation, test 2 test case implementation.
  *
  * This case tests that a application throughputs PerEntity are correct.
  * It generates a conf with 2 satellites, 2 GWs, 3 UTs and 3 UT users per UT.
@@ -491,8 +491,8 @@ SatConstellationTest2::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief 'Constellation, test 3 test case implementation.
+ * @ingroup satellite
+ * @brief 'Constellation, test 3 test case implementation.
  *
  * This case tests that a application throughputs PerEntity are correct, with one ISL link.
  * It generates a conf with 2 satellites, 2 GWs, 3 UTs and 3 UT users per UT.
@@ -769,8 +769,8 @@ SatConstellationTest3::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief 'Constellation, test 4' test case implementation.
+ * @ingroup satellite
+ * @brief 'Constellation, test 4' test case implementation.
  *
  * This case tests that a topology with hundreds of LEO satellites is correctly loaded.
  * It load the telesat-351-sats configuration

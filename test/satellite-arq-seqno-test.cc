@@ -19,9 +19,9 @@
  */
 
 /**
- * \ingroup satellite
- * \file satellite-rle-test.cc
- * \brief Return Link Encapsulator test suite
+ * @ingroup satellite
+ * @file satellite-rle-test.cc
+ * @brief Return Link Encapsulator test suite
  */
 
 #include "../model/satellite-arq-sequence-number.h"
@@ -38,9 +38,9 @@
 using namespace ns3;
 
 /**
- * \file satellite-arq-seqno-test.cc
- * \ingroup satellite
- * \brief ARQ sequence number handler test
+ * @file satellite-arq-seqno-test.cc
+ * @ingroup satellite
+ * @brief ARQ sequence number handler test
  */
 class SatSeqNoTestCase : public TestCase
 {
@@ -99,8 +99,8 @@ SatSeqNoTestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Test suite for RLE.
+ * @ingroup satellite
+ * @brief Test suite for RLE.
  */
 class SatArqSeqNoTraceSuite : public TestSuite
 {

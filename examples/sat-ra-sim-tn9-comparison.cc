@@ -30,10 +30,10 @@
 using namespace ns3;
 
 /**
- * \file sat-ra-sim-tn9-comparison.cc
- * \ingroup satellite
+ * @file sat-ra-sim-tn9-comparison.cc
+ * @ingroup satellite
  *
- * \brief Simulation script to run example simulation results related to satellite RTN
+ * @brief Simulation script to run example simulation results related to satellite RTN
  * link performance. Currently only one beam is simulated with variable amount of users
  * and RA-DAMA configuration. This example is a CRDSA decoder test for providing comparison
  * results with the following parameters:

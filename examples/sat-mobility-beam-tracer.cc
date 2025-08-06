@@ -47,10 +47,10 @@ SatCourseChange(std::string context, Ptr<const SatMobilityModel> position)
 }
 
 /**
- * \file sat-mobility-beam-tracer.cc
- * \ingroup satellite
+ * @file sat-mobility-beam-tracer.cc
+ * @ingroup satellite
  *
- * \brief Simulation script to run example simulation results with
+ * @brief Simulation script to run example simulation results with
  * a high degree of customization through XML file.
  *
  * execute command -> ./ns3 run "sat-mobility-beam-tracer --PrintHelp"

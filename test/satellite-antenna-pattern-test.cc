@@ -31,9 +31,9 @@
 using namespace ns3;
 
 /**
- * \file satellite-antenna-pattern-test.cc
- * \ingroup satellite
- * \brief Satellite antenna pattern test case implementation.
+ * @file satellite-antenna-pattern-test.cc
+ * @ingroup satellite
+ * @brief Satellite antenna pattern test case implementation.
  *
  * This case creates the antenna gain patterns classes and compares the
  * antenna gain values and best beam ids for the test positions (= GW positions
@@ -137,8 +137,8 @@ SatAntennaPatternTestCase::DoRun(void)
 }
 
 /**
- * \ingroup satellite
- * \brief Satellite antenna pattern test suite
+ * @ingroup satellite
+ * @brief Satellite antenna pattern test suite
  */
 class SatAntennaPatternTestSuite : public TestSuite
 {

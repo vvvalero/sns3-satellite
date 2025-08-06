@@ -19,9 +19,9 @@
  */
 
 /**
- * \file satellite-mobility-observer-test.cc
- * \ingroup satellite
- * \brief Test cases to unit test Satellite Mobility Observer model.
+ * @file satellite-mobility-observer-test.cc
+ * @ingroup satellite
+ * @brief Test cases to unit test Satellite Mobility Observer model.
  */
 
 #include "../model/satellite-constant-position-mobility-model.h"
@@ -266,8 +266,8 @@ static const double g_refElAngles[g_latitudeCount][g_longitudeCount] = {
     }};
 
 /**
- * \ingroup satellite
- * \brief Test case to unit test Satellite Mobility Observer.
+ * @ingroup satellite
+ * @brief Test case to unit test Satellite Mobility Observer.
  *
  * This case tests that SatMobilityObserver object can be created successfully and it calculates
  * correctly.
@@ -489,7 +489,7 @@ SatMobilityObserverTestCase::DoRun(void)
 }
 
 /**
- * \brief Test suite for Satellite mobility observer unit test cases.
+ * @brief Test suite for Satellite mobility observer unit test cases.
  */
 class SatMobilityObserverTestSuite : public TestSuite
 {
