@@ -1620,8 +1620,7 @@ SimulationHelper::LoadScenario(std::string name)
 {
     NS_LOG_FUNCTION(this << name);
 
-    std::string path =
-        SatEnvVariables::GetInstance()->LocateDataDirectory() + "/scenarios/" + name;
+    std::string path = SatEnvVariables::GetInstance()->LocateDataDirectory() + "/scenarios/" + name;
 
     if (!SatEnvVariables::GetInstance()->IsValidFile(path))
     {

@@ -50,7 +50,9 @@ class SatFadingExternalInputTraceTestCase : public TestCase
     SatFadingExternalInputTraceTestCase();
     virtual ~SatFadingExternalInputTraceTestCase();
 
-    void TestGetFading(Ptr<SatFadingExternalInputTraceContainer> traceContainer, uint32_t nodeId, SatEnums::ChannelType_t channelType);
+    void TestGetFading(Ptr<SatFadingExternalInputTraceContainer> traceContainer,
+                       uint32_t nodeId,
+                       SatEnums::ChannelType_t channelType);
 
   private:
     virtual void DoRun(void);
@@ -68,15 +70,15 @@ SatFadingExternalInputTraceTestCase::~SatFadingExternalInputTraceTestCase()
 }
 
 void
-SatFadingExternalInputTraceTestCase::TestGetFading(Ptr<SatFadingExternalInputTraceContainer> traceContainer,
-                                                   uint32_t nodeId,
-                                                   SatEnums::ChannelType_t channelType)
+SatFadingExternalInputTraceTestCase::TestGetFading(
+    Ptr<SatFadingExternalInputTraceContainer> traceContainer,
+    uint32_t nodeId,
+    SatEnums::ChannelType_t channelType)
 {
     Ptr<SatMobilityModel> mobility;
 
-    Ptr<SatFadingExternalInputTrace> trace = traceContainer->GetFadingTrace(nodeId,
-                                                                            channelType,
-                                                                            mobility);
+    Ptr<SatFadingExternalInputTrace> trace =
+        traceContainer->GetFadingTrace(nodeId, channelType, mobility);
     double fading = trace->GetFading();
     m_results.push_back(fading);
 }
@@ -90,11 +92,12 @@ SatFadingExternalInputTraceTestCase::DoRun(void)
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
     SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-fading-external-input-trace",
-                                                          "",
-                                                          true);
+                                                       "",
+                                                       true);
 
     // Test the fading traces
-    Ptr<SatFadingExternalInputTraceContainer> traceContainer = CreateObject<SatFadingExternalInputTraceContainer>();
+    Ptr<SatFadingExternalInputTraceContainer> traceContainer =
+        CreateObject<SatFadingExternalInputTraceContainer>();
     bool success = traceContainer->TestFadingTraces(numUts, numGws);
     NS_TEST_ASSERT_MSG_EQ(success, true, "SatChannelFadingTrace test failed");
 

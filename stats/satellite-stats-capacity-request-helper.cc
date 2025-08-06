@@ -129,8 +129,7 @@ SatStatsCapacityRequestHelper::DoInstall()
 
         const bool ret = requestManager->TraceConnect("CrTraceLog", context.str(), aggregatorSink);
         NS_ASSERT_MSG(ret, "Error connecting to CrTraceLog of node " << (*it)->GetId());
-        NS_LOG_INFO(this << " successfully connected"
-                         << " with node ID " << (*it)->GetId());
+        NS_LOG_INFO(this << " successfully connected" << " with node ID " << (*it)->GetId());
 
     } // end of `for (NodeContainer::Iterator it = uts.Begin () -> uts.End ())`
 

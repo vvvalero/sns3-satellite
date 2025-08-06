@@ -272,8 +272,8 @@ main(int argc, char* argv[])
     // Outputs
     simulationHelper->EnableProgressLogs();
 
-    std::string outputPath = SatEnvVariables::GetInstance()->LocateDirectory(
-        "contrib/satellite/data/sims/example-lora");
+    std::string outputPath =
+        SatEnvVariables::GetInstance()->LocateDirectory("contrib/satellite/data/sims/example-lora");
     Config::SetDefault("ns3::ConfigStore::Filename",
                        StringValue(outputPath + "/output-attributes.xml"));
     Config::SetDefault("ns3::ConfigStore::FileFormat", StringValue("Xml"));

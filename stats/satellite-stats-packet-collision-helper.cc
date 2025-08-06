@@ -98,8 +98,7 @@ SatStatsPacketCollisionHelper::CollisionRxCallback(uint32_t nPackets,
     if (from.IsInvalid())
     {
         NS_LOG_WARN(this << " discarding " << nPackets << " packets"
-                         << " from statistics collection because of"
-                         << " invalid sender address");
+                         << " from statistics collection because of" << " invalid sender address");
     }
     else
     {
@@ -351,11 +350,11 @@ SatStatsFeederPacketCollisionHelper::DoInstall()
                 }
                 else
                 {
-                    NS_FATAL_ERROR("Error connecting to " << GetTraceSourceName() << " trace source"
-                                                          << " of SatPhyRxCarrier"
-                                                          << " at node ID " << (*it)->GetId()
-                                                          << " device #" << (*itDev)->GetIfIndex()
-                                                          << " RX carrier #" << itCarrier->first);
+                    NS_FATAL_ERROR("Error connecting to "
+                                   << GetTraceSourceName() << " trace source"
+                                   << " of SatPhyRxCarrier" << " at node ID " << (*it)->GetId()
+                                   << " device #" << (*itDev)->GetIfIndex() << " RX carrier #"
+                                   << itCarrier->first);
                 }
 
             } // end of `for (ObjectVectorValue::Iterator itCarrier = carriers)`
@@ -571,10 +570,10 @@ SatStatsUserPacketCollisionHelper::DoInstall()
                 else
                 {
                     NS_FATAL_ERROR("Error connecting to " << GetTraceSourceName() << " trace source"
-                                                          << " of SatPhyRxCarrier"
-                                                          << " at node ID " << (*it)->GetId()
-                                                          << " device #" << dev->GetIfIndex()
-                                                          << " RX carrier #" << itCarrier->first);
+                                                          << " of SatPhyRxCarrier" << " at node ID "
+                                                          << (*it)->GetId() << " device #"
+                                                          << dev->GetIfIndex() << " RX carrier #"
+                                                          << itCarrier->first);
                 }
 
             } // end of `for (ObjectVectorValue::Iterator itCarrier = carriers)`

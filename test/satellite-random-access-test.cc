@@ -268,8 +268,8 @@ SatSlottedAlohaTest1::DoRun(void)
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
     SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-random-access",
-                                                          "slottedAloha",
-                                                          true);
+                                                       "slottedAloha",
+                                                       true);
 
     // Create simple scenario
 

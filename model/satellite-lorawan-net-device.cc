@@ -99,8 +99,8 @@ SatLorawanNetDevice::Receive(Ptr<const Packet> packet)
 
             if (item.GetTypeId() == SatAddressTag::GetTypeId())
             {
-                NS_LOG_DEBUG(this << " contains a SatAddressTag tag:"
-                                  << " start=" << item.GetStart() << " end=" << item.GetEnd());
+                NS_LOG_DEBUG(this << " contains a SatAddressTag tag:" << " start="
+                                  << item.GetStart() << " end=" << item.GetEnd());
                 SatAddressTag addrTag;
                 item.GetTag(addrTag);
                 addr = addrTag.GetSourceAddress();
@@ -182,8 +182,8 @@ SatLorawanNetDevice::Send(Ptr<Packet> packet, const Address& dest, uint16_t prot
 
         if (item.GetTypeId() == SatAddressTag::GetTypeId())
         {
-            NS_LOG_DEBUG(this << " contains a SatAddressTag tag:"
-                              << " start=" << item.GetStart() << " end=" << item.GetEnd());
+            NS_LOG_DEBUG(this << " contains a SatAddressTag tag:" << " start=" << item.GetStart()
+                              << " end=" << item.GetEnd());
             SatAddressTag addrTag;
             item.GetTag(addrTag);
             addr = addrTag.GetSourceAddress();

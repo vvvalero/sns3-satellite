@@ -426,8 +426,7 @@ SatStatsLinkDelayHelper::RxLinkDelayCallback(const Time& delay, const Address& f
     if (from.IsInvalid())
     {
         NS_LOG_WARN(this << " discarding a packet delay of " << delay.GetSeconds()
-                         << " from statistics collection because of"
-                         << " invalid sender address");
+                         << " from statistics collection because of" << " invalid sender address");
     }
     else if (Mac48Address::ConvertFrom(from).IsBroadcast())
     {

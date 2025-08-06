@@ -438,8 +438,7 @@ SatStatsSatelliteQueueHelper::QueueSizeCallback(uint32_t size, const Address& fr
 
     if (from.IsInvalid())
     {
-        NS_LOG_WARN(this << " discarding a packet"
-                         << " from statistics collection because of"
+        NS_LOG_WARN(this << " discarding a packet" << " from statistics collection because of"
                          << " invalid sender address");
     }
     else if (Mac48Address::ConvertFrom(from).IsBroadcast())
@@ -460,8 +459,7 @@ SatStatsSatelliteQueueHelper::QueueSizeCallback(uint32_t size, const Address& fr
         }
         else
         {
-            NS_LOG_WARN(this << " discarding a packet"
-                             << " from statistics collection because of"
+            NS_LOG_WARN(this << " discarding a packet" << " from statistics collection because of"
                              << " unknown sender address " << from);
         }
     }

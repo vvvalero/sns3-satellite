@@ -493,8 +493,7 @@ SatStatsRbdcRequestHelper::InstallProbes()
 
         const bool ret = requestManager->TraceConnect("RbdcTrace", context.str(), callback);
         NS_ASSERT_MSG(ret, "Error connecting to CrTraceLog of node " << (*it)->GetId());
-        NS_LOG_INFO(this << " successfully connected"
-                         << " with node ID " << (*it)->GetId());
+        NS_LOG_INFO(this << " successfully connected" << " with node ID " << (*it)->GetId());
     }
 }
 

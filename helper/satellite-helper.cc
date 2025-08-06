@@ -212,14 +212,14 @@ SatHelper::SatHelper(std::string scenarioPath)
 
     if (SatEnvVariables::GetInstance()->IsValidFile(m_scenarioPath + "/positions/tles.txt"))
     {
-        NS_ASSERT_MSG(!SatEnvVariables::GetInstance()->IsValidFile(
-                          m_scenarioPath + "/positions/sat_positions.txt"),
+        NS_ASSERT_MSG(!SatEnvVariables::GetInstance()->IsValidFile(m_scenarioPath +
+                                                                   "/positions/sat_positions.txt"),
                       "position subfolder of scenario cannot have both contain tles.txt and "
                       "sat_positions.txt");
         m_satConstellationEnabled = true;
     }
     else if (!SatEnvVariables::GetInstance()->IsValidFile(m_scenarioPath +
-                                                             "/positions/sat_positions.txt"))
+                                                          "/positions/sat_positions.txt"))
     {
         NS_FATAL_ERROR("position subfolder of scenario must contain tles.txt or sat_positions.txt");
     }
@@ -363,8 +363,8 @@ SatHelper::EnableCreationTraces()
     std::stringstream outputPathUt;
     outputPathCreation << SatEnvVariables::GetInstance()->GetOutputPath() << "/"
                        << m_scenarioCreationFileName << ".log";
-    outputPathUt << SatEnvVariables::GetInstance()->GetOutputPath() << "/"
-                 << m_utCreationFileName << ".log";
+    outputPathUt << SatEnvVariables::GetInstance()->GetOutputPath() << "/" << m_utCreationFileName
+                 << ".log";
 
     m_creationTraceStream = asciiTraceHelper.CreateFileStream(outputPathCreation.str());
     m_utTraceStream = asciiTraceHelper.CreateFileStream(outputPathUt.str());

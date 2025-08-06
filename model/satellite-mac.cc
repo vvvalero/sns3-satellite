@@ -214,7 +214,9 @@ SatMac::Enable()
 {
     NS_LOG_FUNCTION(this);
     if (!m_txEnabled)
+    {
         m_beamEnabledTime = Simulator::Now();
+    }
     m_txEnabled = true;
 }
 
@@ -223,7 +225,9 @@ SatMac::Disable()
 {
     NS_LOG_FUNCTION(this);
     if (m_txEnabled)
+    {
         m_beamServiceTrace(Simulator::Now() - m_beamEnabledTime);
+    }
     m_txEnabled = false;
 }
 
@@ -359,9 +363,8 @@ SatMac::RxTraces(SatPhy::PacketContainer_t packets)
 
                     if (item.GetTypeId() == SatAddressTag::GetTypeId())
                     {
-                        NS_LOG_DEBUG(this << " contains a SatAddressTag tag:"
-                                          << " start=" << item.GetStart()
-                                          << " end=" << item.GetEnd());
+                        NS_LOG_DEBUG(this << " contains a SatAddressTag tag:" << " start="
+                                          << item.GetStart() << " end=" << item.GetEnd());
                         SatAddressTag addrTag;
                         item.GetTag(addrTag);
                         addr = addrTag.GetSourceAddress();
@@ -399,8 +402,8 @@ SatMac::RxTraces(SatPhy::PacketContainer_t packets)
                 }
             } // end of `if (destAddress == m_nodeInfo->GetMacAddress () || destAddress.IsBroadcast
               // ())`
-        }     // end of `for it1 = packets.begin () -> packets.end ()`
-    }         // end of `if (m_isStatisticsTagsEnabled)`
+        } // end of `for it1 = packets.begin () -> packets.end ()`
+    } // end of `if (m_isStatisticsTagsEnabled)`
 }
 
 void

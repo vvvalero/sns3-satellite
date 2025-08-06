@@ -87,8 +87,8 @@ ScenarioCreationSimple::DoRun(void)
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
     SatEnvVariables::GetInstance()->SetOutputVariables("test-scenario-creation",
-                                                          "simple-scenario",
-                                                          true);
+                                                       "simple-scenario",
+                                                       true);
 
     // Create simple scenario
 
@@ -161,8 +161,8 @@ ScenarioCreationLarger::DoRun(void)
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
     SatEnvVariables::GetInstance()->SetOutputVariables("test-scenario-creation",
-                                                          "larger-scenario",
-                                                          true);
+                                                       "larger-scenario",
+                                                       true);
 
     // Create larger scenario
 
@@ -235,8 +235,8 @@ ScenarioCreationFull::DoRun(void)
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
     SatEnvVariables::GetInstance()->SetOutputVariables("test-scenario-creation",
-                                                          "full-scenario",
-                                                          true);
+                                                       "full-scenario",
+                                                       true);
 
     // Create full scenario
 
@@ -317,8 +317,8 @@ ScenarioCreationUser::DoRun(void)
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
     SatEnvVariables::GetInstance()->SetOutputVariables("test-scenario-creation",
-                                                          "user-scenario",
-                                                          true);
+                                                       "user-scenario",
+                                                       true);
 
     // Create user scenario
 

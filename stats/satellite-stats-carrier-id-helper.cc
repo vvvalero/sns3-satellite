@@ -274,11 +274,11 @@ SatStatsCarrierIdHelper::DoInstall()
                 }
                 else
                 {
-                    NS_FATAL_ERROR("Error connecting to " << GetTraceSourceName() << " trace source"
-                                                          << " of SatPhyRxCarrier"
-                                                          << " at node ID " << (*it)->GetId()
-                                                          << " device #" << (*itDev)->GetIfIndex()
-                                                          << " RX carrier #" << itCarrier->first);
+                    NS_FATAL_ERROR("Error connecting to "
+                                   << GetTraceSourceName() << " trace source"
+                                   << " of SatPhyRxCarrier" << " at node ID " << (*it)->GetId()
+                                   << " device #" << (*itDev)->GetIfIndex() << " RX carrier #"
+                                   << itCarrier->first);
                 }
 
             } // end of `for (ObjectVectorValue::Iterator itCarrier = carriers)`
@@ -296,8 +296,7 @@ SatStatsCarrierIdHelper::CarrierIdRxCallback(uint32_t carrierId, const Address& 
 
     if (from.IsInvalid())
     {
-        NS_LOG_WARN(this << " discarding a packet"
-                         << " from statistics collection because of"
+        NS_LOG_WARN(this << " discarding a packet" << " from statistics collection because of"
                          << " invalid sender address");
         return;
     }
@@ -307,8 +306,7 @@ SatStatsCarrierIdHelper::CarrierIdRxCallback(uint32_t carrierId, const Address& 
 
     if (it == m_identifierMap.end())
     {
-        NS_LOG_WARN(this << " discarding a packet"
-                         << " from statistics collection because of"
+        NS_LOG_WARN(this << " discarding a packet" << " from statistics collection because of"
                          << " unknown sender address " << from);
         return;
     }

@@ -425,8 +425,7 @@ SatStatsPltHelper::RxPltCallback(const Time& plt, const Address& from)
     if (from.IsInvalid())
     {
         NS_LOG_WARN(this << " discarding a object PLT of " << plt.GetSeconds()
-                         << " from statistics collection because of"
-                         << " invalid sender address");
+                         << " from statistics collection because of" << " invalid sender address");
     }
     else
     {
@@ -693,8 +692,8 @@ SatStatsFwdAppPltHelper::DoInstallProbes()
 
             if (isConnected)
             {
-                NS_LOG_INFO(this << " successfully connected"
-                                 << " with node ID " << (*it)->GetId() << " application #" << i);
+                NS_LOG_INFO(this << " successfully connected" << " with node ID " << (*it)->GetId()
+                                 << " application #" << i);
             }
             else
             {
@@ -703,8 +702,8 @@ SatStatsFwdAppPltHelper::DoInstallProbes()
                  * not every kind of Application is equipped with the expected
                  * RxPlt or Rx trace source.
                  */
-                NS_LOG_WARN(this << " unable to connect"
-                                 << " with node ID " << (*it)->GetId() << " application #" << i);
+                NS_LOG_WARN(this << " unable to connect" << " with node ID " << (*it)->GetId()
+                                 << " application #" << i);
             }
 
         } // end of `for (i = 0; i < (*it)->GetNApplications (); i++)`
@@ -788,8 +787,8 @@ SatStatsRtnAppPltHelper::DoInstallProbes()
 
             if (isConnected)
             {
-                NS_LOG_INFO(this << " successfully connected"
-                                 << " with node ID " << (*it)->GetId() << " application #" << i);
+                NS_LOG_INFO(this << " successfully connected" << " with node ID " << (*it)->GetId()
+                                 << " application #" << i);
             }
             else
             {
@@ -798,8 +797,8 @@ SatStatsRtnAppPltHelper::DoInstallProbes()
                  * not every kind of Application is equipped with the expected
                  * RxPlt or Rx trace source.
                  */
-                NS_LOG_WARN(this << " unable to connect"
-                                 << " with node ID " << (*it)->GetId() << " application #" << i);
+                NS_LOG_WARN(this << " unable to connect" << " with node ID " << (*it)->GetId()
+                                 << " application #" << i);
             }
 
         } // end of `for (i = 0; i < (*it)->GetNApplications (); i++)`
@@ -833,9 +832,8 @@ SatStatsRtnAppPltHelper::Ipv4Callback(const Time& plt, const Address& from)
     else
     {
         NS_LOG_WARN(this << " discarding a object PLT of " << plt.GetSeconds()
-                         << " from statistics collection"
-                         << " because it comes from sender " << from
-                         << " without valid InetSocketAddress");
+                         << " from statistics collection" << " because it comes from sender "
+                         << from << " without valid InetSocketAddress");
     }
 }
 

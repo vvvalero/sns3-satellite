@@ -187,8 +187,7 @@ SatStatsFrameLoadHelper::DoInstall()
 
         if (ret)
         {
-            NS_LOG_INFO(this << " successfully connected"
-                             << " with beam " << it->second);
+            NS_LOG_INFO(this << " successfully connected" << " with beam " << it->second);
         }
         else
         {
@@ -230,8 +229,8 @@ SatStatsFrameLoadHelper::FrameSymbolLoadCallback(std::string context,
     // Get the right collector for this frame ID and identifier.
     Ptr<ScalarCollector> collector = GetCollector(frameId, context);
     NS_ASSERT_MSG(collector != nullptr,
-                  "Unable to get/create collector"
-                      << " for frame ID " << frameId << " and beam " << context);
+                  "Unable to get/create collector" << " for frame ID " << frameId << " and beam "
+                                                   << context);
 
     // Pass the sample to the collector.
     collector->TraceSinkDouble(0, loadRatio);
@@ -247,8 +246,8 @@ SatStatsFrameLoadHelper::FrameUserLoadCallback(std::string context,
     // Get the right collector for this frame ID and identifier.
     Ptr<ScalarCollector> collector = GetCollector(frameId, context);
     NS_ASSERT_MSG(collector != nullptr,
-                  "Unable to get/create collector"
-                      << " for frame ID " << frameId << " and identifier " << context);
+                  "Unable to get/create collector" << " for frame ID " << frameId
+                                                   << " and identifier " << context);
 
     // Pass the sample to the collector.
     collector->TraceSinkUinteger32(0, utCount);
@@ -345,8 +344,8 @@ SatStatsFrameLoadHelper::GetCollector(uint32_t frameId, std::string identifier)
         }
 
         collectorMap.ConnectToAggregator("Output", m_aggregator, &MultiFileAggregator::Write1d);
-        NS_LOG_INFO(this << " created " << n << " instance(s)"
-                         << " of " << collectorMap.GetType().GetName() << " for "
+        NS_LOG_INFO(this << " created " << n << " instance(s)" << " of "
+                         << collectorMap.GetType().GetName() << " for "
                          << GetIdentifierTypeName(GetIdentifierType()));
 
         std::pair<std::map<uint32_t, CollectorMap>::iterator, bool> ret;

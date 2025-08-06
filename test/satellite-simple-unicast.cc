@@ -92,9 +92,7 @@ SimpleUnicast1::DoRun(void)
 {
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
-    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast",
-                                                          "unicast1",
-                                                          true);
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast", "unicast1", true);
 
     // Create simple scenario
 
@@ -197,9 +195,7 @@ SimpleUnicast2::DoRun(void)
 {
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
-    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast",
-                                                          "unicast2",
-                                                          true);
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast", "unicast2", true);
 
     // Create larger scenario
 
@@ -331,9 +327,7 @@ SimpleUnicast3::DoRun(void)
 {
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
-    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast",
-                                                          "unicast3",
-                                                          true);
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast", "unicast3", true);
 
     // Create full scenario
 
@@ -468,9 +462,7 @@ SimpleUnicast4::DoRun(void)
 {
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
-    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast",
-                                                          "unicast4",
-                                                          true);
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast", "unicast4", true);
 
     // Create simple scenario
 
@@ -573,9 +565,7 @@ SimpleUnicast5::DoRun(void)
 {
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
-    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast",
-                                                          "unicast5",
-                                                          true);
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast", "unicast5", true);
 
     // Create larger scenario
 
@@ -689,9 +679,7 @@ SimpleUnicast6::DoRun(void)
 {
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
-    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast",
-                                                          "unicast6",
-                                                          true);
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast", "unicast6", true);
 
     // Create full scenario
 
@@ -824,9 +812,7 @@ SimpleUnicast7::DoRun(void)
 {
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
-    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast",
-                                                          "unicast7",
-                                                          true);
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast", "unicast7", true);
 
     // Create simple scenario
 
@@ -959,9 +945,7 @@ SimpleUnicast8::DoRun(void)
 {
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
-    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast",
-                                                          "unicast8",
-                                                          true);
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-simple-unicast", "unicast8", true);
 
     // Create Larger scenario
 

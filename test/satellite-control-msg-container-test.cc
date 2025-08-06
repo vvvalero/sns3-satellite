@@ -126,8 +126,8 @@ SatCtrlMsgContDelOnTestCase::DoRun(void)
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
     SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-ctrl-msg-container-unit",
-                                                          "delon",
-                                                          true);
+                                                       "delon",
+                                                       true);
 
     // create container with store time 100 ms and flag deletedOnRead set
     m_container = Create<SatControlMsgContainer>(Seconds(0.10), true);
@@ -229,8 +229,8 @@ SatCtrlMsgContDelOffTestCase::DoRun(void)
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
     SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-ctrl-msg-container-unit",
-                                                          "deloff",
-                                                          true);
+                                                       "deloff",
+                                                       true);
 
     // create container with store time 100 ms and flag deletedOnRead NOT set
     m_container = Create<SatControlMsgContainer>(Seconds(0.10), false);

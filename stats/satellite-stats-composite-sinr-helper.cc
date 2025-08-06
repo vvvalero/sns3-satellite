@@ -450,9 +450,9 @@ SatStatsFwdCompositeSinrHelper::DoInstallProbes()
             else
             {
                 NS_FATAL_ERROR("Error connecting to Sinr trace source"
-                               << " of SatPhyRxCarrier"
-                               << " at node ID " << (*it)->GetId() << " device #"
-                               << dev->GetIfIndex() << " RX carrier #" << itCarrier->first);
+                               << " of SatPhyRxCarrier" << " at node ID " << (*it)->GetId()
+                               << " device #" << dev->GetIfIndex() << " RX carrier #"
+                               << itCarrier->first);
             }
 
         } // end of `for (ObjectVectorValue::Iterator itCarrier = carriers)`
@@ -562,9 +562,8 @@ SatStatsRtnCompositeSinrHelper::DoInstallProbes()
                 else
                 {
                     NS_FATAL_ERROR("Error connecting to Sinr trace source"
-                                   << " of SatPhyRxCarrier"
-                                   << " at node ID " << (*it)->GetId() << " device #"
-                                   << (*itDev)->GetIfIndex() << " RX carrier #"
+                                   << " of SatPhyRxCarrier" << " at node ID " << (*it)->GetId()
+                                   << " device #" << (*itDev)->GetIfIndex() << " RX carrier #"
                                    << itCarrier->first);
                 }
 
@@ -584,8 +583,7 @@ SatStatsRtnCompositeSinrHelper::SinrCallback(double sinrDb, const Address& from)
     if (from.IsInvalid())
     {
         NS_LOG_WARN(this << " discarding a SINR trace of " << sinrDb << " dB"
-                         << " from statistics collection because of"
-                         << " invalid sender address");
+                         << " from statistics collection because of" << " invalid sender address");
     }
     else
     {

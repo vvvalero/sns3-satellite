@@ -130,9 +130,7 @@ SatBasicEstimatorLastTestCase::DoRun(void)
 {
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
-    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-cno-estimator-unit",
-                                                          "last",
-                                                          true);
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-cno-estimator-unit", "last", true);
 
     // create estimator with window 100 ms
     Simulator::Schedule(Seconds(0.05),
@@ -257,9 +255,7 @@ SatBasicEstimatorMinTestCase::DoRun(void)
 {
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
-    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-cno-estimator-unit",
-                                                          "min",
-                                                          true);
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-cno-estimator-unit", "min", true);
 
     // create estimator with window 200 ms
     Simulator::Schedule(Seconds(0.05),
@@ -350,8 +346,8 @@ SatBasicEstimatorAverageTestCase::DoRun(void)
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
     SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-cno-estimator-unit",
-                                                          "average",
-                                                          true);
+                                                       "average",
+                                                       true);
 
     // create estimator with window 200 ms
     Simulator::Schedule(Seconds(0.05),

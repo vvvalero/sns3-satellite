@@ -81,7 +81,6 @@ class SatScpcScheduler : public SatFwdLinkScheduler
      */
     virtual void NotifyConstructionCompleted() override;
 
-
     /**
      * Destroy a SatFwdLinkScheduler
      *

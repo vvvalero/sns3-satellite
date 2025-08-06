@@ -94,8 +94,8 @@ SatPeriodicControlMessageTest1::DoRun(void)
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
     SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-periodic-control-message",
-                                                          "",
-                                                          true);
+                                                       "",
+                                                       true);
 
     // Create simple scenario
 

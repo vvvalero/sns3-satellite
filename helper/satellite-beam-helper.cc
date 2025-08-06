@@ -1334,8 +1334,7 @@ SatBeamHelper::GetBeamInfo() const
     NS_LOG_FUNCTION(this);
 
     std::ostringstream oss;
-    oss << "--- Beam Info, "
-        << "number of created beams: " << m_beam.size() << " ---" << std::endl;
+    oss << "--- Beam Info, " << "number of created beams: " << m_beam.size() << " ---" << std::endl;
 
     if (m_beam.size() > 0)
     {

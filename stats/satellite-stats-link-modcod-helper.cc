@@ -422,8 +422,7 @@ SatStatsLinkModcodHelper::RxLinkModcodCallback(uint32_t modcod, const Address& f
     if (from.IsInvalid())
     {
         NS_LOG_WARN(this << " discarding a packet MODCOD ID " << modcod
-                         << " from statistics collection because of"
-                         << " invalid sender address");
+                         << " from statistics collection because of" << " invalid sender address");
     }
     else if (Mac48Address::ConvertFrom(from).IsBroadcast())
     {

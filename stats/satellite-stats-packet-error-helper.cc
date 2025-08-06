@@ -349,7 +349,7 @@ SatStatsPacketErrorHelper::ErrorRxCallback(uint32_t nPackets, const Address& fro
                 break;
 
             } // end of `switch (GetOutputType ())`
-        }     // end of for (it == m_identifierMap.begin ())
+        } // end of for (it == m_identifierMap.begin ())
     }
     else
     {
@@ -561,11 +561,10 @@ SatStatsPacketErrorHelper::InstallProbeOnGw(Ptr<Node> gwNode)
             }
             else
             {
-                NS_FATAL_ERROR("Error connecting to " << GetTraceSourceName() << " trace source"
-                                                      << " of SatPhyRxCarrier"
-                                                      << " at node ID " << gwNode->GetId()
-                                                      << " device #" << (*itDev)->GetIfIndex()
-                                                      << " RX carrier #" << itCarrier->first);
+                NS_FATAL_ERROR("Error connecting to "
+                               << GetTraceSourceName() << " trace source" << " of SatPhyRxCarrier"
+                               << " at node ID " << gwNode->GetId() << " device #"
+                               << (*itDev)->GetIfIndex() << " RX carrier #" << itCarrier->first);
             }
 
         } // end of `for (ObjectVectorValue::Iterator itCarrier = carriers)`
@@ -619,11 +618,10 @@ SatStatsPacketErrorHelper::InstallProbeOnSatFeeder(Ptr<Node> satNode)
             }
             else
             {
-                NS_FATAL_ERROR("Error connecting to " << GetTraceSourceName() << " trace source"
-                                                      << " of SatPhyRxCarrier"
-                                                      << " at node ID " << satNode->GetId()
-                                                      << " device #" << dev->GetIfIndex()
-                                                      << " RX carrier #" << itCarrier->first);
+                NS_FATAL_ERROR("Error connecting to "
+                               << GetTraceSourceName() << " trace source" << " of SatPhyRxCarrier"
+                               << " at node ID " << satNode->GetId() << " device #"
+                               << dev->GetIfIndex() << " RX carrier #" << itCarrier->first);
             }
 
         } // end of `for (ObjectVectorValue::Iterator itCarrier = carriers)`
@@ -677,11 +675,10 @@ SatStatsPacketErrorHelper::InstallProbeOnSatUser(Ptr<Node> satNode)
             }
             else
             {
-                NS_FATAL_ERROR("Error connecting to " << GetTraceSourceName() << " trace source"
-                                                      << " of SatPhyRxCarrier"
-                                                      << " at node ID " << satNode->GetId()
-                                                      << " device #" << dev->GetIfIndex()
-                                                      << " RX carrier #" << itCarrier->first);
+                NS_FATAL_ERROR("Error connecting to "
+                               << GetTraceSourceName() << " trace source" << " of SatPhyRxCarrier"
+                               << " at node ID " << satNode->GetId() << " device #"
+                               << dev->GetIfIndex() << " RX carrier #" << itCarrier->first);
             }
 
         } // end of `for (ObjectVectorValue::Iterator itCarrier = carriers)`
@@ -735,11 +732,10 @@ SatStatsPacketErrorHelper::InstallProbeOnUt(Ptr<Node> utNode)
         } // end of `if (probe->ConnectByObject (GetTraceSourceName (), itCarrier->second))`
         else
         {
-            NS_FATAL_ERROR("Error connecting to " << GetTraceSourceName() << " trace source"
-                                                  << " of SatPhyRxCarrier"
-                                                  << " at node ID " << utNode->GetId()
-                                                  << " device #" << dev->GetIfIndex()
-                                                  << " RX carrier #" << itCarrier->first);
+            NS_FATAL_ERROR("Error connecting to "
+                           << GetTraceSourceName() << " trace source" << " of SatPhyRxCarrier"
+                           << " at node ID " << utNode->GetId() << " device #" << dev->GetIfIndex()
+                           << " RX carrier #" << itCarrier->first);
         }
 
     } // end of `for (ObjectVectorValue::Iterator itCarrier = carriers)`

@@ -91,8 +91,7 @@ SatLinkResultsPlot::SatLinkResultsPlot()
     m_resolutionDb = 0.01;
     m_minSinrDb = 0.0;
     m_maxSinrDb = 20.0;
-    m_inputPath =
-        SatEnvVariables::GetInstance()->GetDataPath() + "/additional-input/linkresults/";
+    m_inputPath = SatEnvVariables::GetInstance()->GetDataPath() + "/additional-input/linkresults/";
 }
 
 void

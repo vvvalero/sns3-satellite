@@ -426,8 +426,7 @@ SatStatsJitterHelper::RxJitterCallback(const Time& jitter, const Address& from)
     if (from.IsInvalid())
     {
         NS_LOG_WARN(this << " discarding a packet jitter of " << jitter.GetSeconds()
-                         << " from statistics collection because of"
-                         << " invalid sender address");
+                         << " from statistics collection because of" << " invalid sender address");
     }
     else
     {
@@ -705,8 +704,8 @@ SatStatsFwdAppJitterHelper::DoInstallProbes()
 
             if (isConnected)
             {
-                NS_LOG_INFO(this << " successfully connected"
-                                 << " with node ID " << (*it)->GetId() << " application #" << i);
+                NS_LOG_INFO(this << " successfully connected" << " with node ID " << (*it)->GetId()
+                                 << " application #" << i);
             }
             else
             {
@@ -715,8 +714,8 @@ SatStatsFwdAppJitterHelper::DoInstallProbes()
                  * not every kind of Application is equipped with the expected
                  * RxJitter or Rx trace source.
                  */
-                NS_LOG_WARN(this << " unable to connect"
-                                 << " with node ID " << (*it)->GetId() << " application #" << i);
+                NS_LOG_WARN(this << " unable to connect" << " with node ID " << (*it)->GetId()
+                                 << " application #" << i);
             }
 
         } // end of `for (i = 0; i < (*it)->GetNApplications (); i++)`
@@ -1262,8 +1261,8 @@ SatStatsRtnAppJitterHelper::DoInstallProbes()
 
             if (isConnected)
             {
-                NS_LOG_INFO(this << " successfully connected"
-                                 << " with node ID " << (*it)->GetId() << " application #" << i);
+                NS_LOG_INFO(this << " successfully connected" << " with node ID " << (*it)->GetId()
+                                 << " application #" << i);
             }
             else
             {
@@ -1272,8 +1271,8 @@ SatStatsRtnAppJitterHelper::DoInstallProbes()
                  * not every kind of Application is equipped with the expected
                  * RxJitter or Rx trace source.
                  */
-                NS_LOG_WARN(this << " unable to connect"
-                                 << " with node ID " << (*it)->GetId() << " application #" << i);
+                NS_LOG_WARN(this << " unable to connect" << " with node ID " << (*it)->GetId()
+                                 << " application #" << i);
             }
 
         } // end of `for (i = 0; i < (*it)->GetNApplications (); i++)`
@@ -1333,9 +1332,8 @@ SatStatsRtnAppJitterHelper::Ipv4Callback(const Time& jitter, const Address& from
     else
     {
         NS_LOG_WARN(this << " discarding a packet jitter of " << jitter.GetSeconds()
-                         << " from statistics collection"
-                         << " because it comes from sender " << from
-                         << " without valid InetSocketAddress");
+                         << " from statistics collection" << " because it comes from sender "
+                         << from << " without valid InetSocketAddress");
     }
 }
 

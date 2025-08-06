@@ -75,9 +75,7 @@ SatDvbRcs2WaveformTableTestCase::DoRun(void)
 {
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
-    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-waveform-conf",
-                                                          "dvbrcs2",
-                                                          true);
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-waveform-conf", "dvbrcs2", true);
 
     std::string path = SatEnvVariables::GetInstance()->GetDataPath() + "/";
     std::string folderName = "scenarios/geo-33E/waveforms";

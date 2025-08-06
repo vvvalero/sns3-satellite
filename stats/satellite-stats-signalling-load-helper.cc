@@ -239,8 +239,7 @@ SatStatsSignallingLoadHelper::SignallingTxCallback(Ptr<const Packet> packet, con
     if (to.IsInvalid())
     {
         NS_LOG_WARN(this << " discarding packet " << packet << " (" << packet->GetSize()
-                         << " bytes)"
-                         << " from statistics collection because of"
+                         << " bytes)" << " from statistics collection because of"
                          << " invalid sender address");
     }
     else
@@ -269,8 +268,7 @@ SatStatsSignallingLoadHelper::SignallingTxCallback(Ptr<const Packet> packet, con
             if (it == m_identifierMap.end())
             {
                 NS_LOG_WARN(this << " discarding packet " << packet << " (" << packet->GetSize()
-                                 << " bytes)"
-                                 << " from statistics collection because of"
+                                 << " bytes)" << " from statistics collection because of"
                                  << " unknown sender address " << addr);
             }
             else
@@ -347,9 +345,8 @@ SatStatsFwdSignallingLoadHelper::DoInstallProbes()
             else
             {
                 NS_FATAL_ERROR("Error connecting to SignallingTx trace source"
-                               << " of SatNetDevice"
-                               << " at node ID " << (*it)->GetId() << " device #"
-                               << (*itDev)->GetIfIndex());
+                               << " of SatNetDevice" << " at node ID " << (*it)->GetId()
+                               << " device #" << (*itDev)->GetIfIndex());
             }
 
         } // end of `for (NetDeviceContainer::Iterator itDev = devs)`

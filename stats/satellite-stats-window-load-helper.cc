@@ -371,9 +371,8 @@ SatStatsRtnFeederWindowLoadHelper::DoInstallProbes()
                                                                    GetTraceSinkCallback()))
                 {
                     NS_FATAL_ERROR("Error connecting to WindowLoad trace source"
-                                   << " of SatPhyRxCarrier"
-                                   << " at node ID " << (*it)->GetId() << " device #"
-                                   << (*itDev)->GetIfIndex() << " RX carrier #"
+                                   << " of SatPhyRxCarrier" << " at node ID " << (*it)->GetId()
+                                   << " device #" << (*itDev)->GetIfIndex() << " RX carrier #"
                                    << itCarrier->first);
                 }
 

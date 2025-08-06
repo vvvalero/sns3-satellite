@@ -122,8 +122,7 @@ SatStatsBackloggedRequestHelper::DoInstall()
         NS_ASSERT_MSG(s != nullptr, "Error finding beam " << it->second);
         const bool ret = s->TraceConnect("BacklogRequestsTrace", context.str(), aggregatorSink);
         NS_ASSERT_MSG(ret, "Error connecting to BacklogRequestsTrace of beam " << it->second);
-        NS_LOG_INFO(this << " successfully connected"
-                         << " with beam " << it->second);
+        NS_LOG_INFO(this << " successfully connected" << " with beam " << it->second);
     }
 
 } // end of `void DoInstall ();`

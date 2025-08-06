@@ -51,9 +51,8 @@ NS_OBJECT_ENSURE_REGISTERED(LoraNetworkStatus);
 TypeId
 LoraNetworkStatus::GetTypeId(void)
 {
-    static TypeId tid = TypeId("ns3::LoraNetworkStatus")
-                            .SetParent<Object>()
-                            .AddConstructor<LoraNetworkStatus>();
+    static TypeId tid =
+        TypeId("ns3::LoraNetworkStatus").SetParent<Object>().AddConstructor<LoraNetworkStatus>();
     return tid;
 }
 

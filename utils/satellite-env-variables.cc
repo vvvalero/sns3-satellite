@@ -629,8 +629,7 @@ SatEnvVariables::DumpSimulationInformation()
         CreateObject<SatOutputFileStreamStringContainer>(fileName.str().c_str(), std::ios::out);
 
     std::ostringstream revisionCommand;
-    revisionCommand << "cd contrib/satellite"
-                    << " && git log -1 2>&1";
+    revisionCommand << "cd contrib/satellite" << " && git log -1 2>&1";
     ExecuteCommandAndReadOutput(revisionCommand.str(), outputContainer);
 
     std::stringstream line1;
@@ -657,11 +656,8 @@ SatEnvVariables::DumpRevisionDiff(std::string dataPath)
         CreateObject<SatOutputFileStreamStringContainer>(fileName.str().c_str(), std::ios::out);
 
     std::ostringstream diffCommand;
-    diffCommand << "cd contrib/satellite"
-                << " && git diff"
-                << " --ignore-all-space"
-                << " --ignore-space-change"
-                << " --ignore-blank-lines";
+    diffCommand << "cd contrib/satellite" << " && git diff" << " --ignore-all-space"
+                << " --ignore-space-change" << " --ignore-blank-lines";
 
     if (m_excludeDataFolderFromDiff)
     {

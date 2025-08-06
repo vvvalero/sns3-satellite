@@ -66,8 +66,8 @@ SatFwdChannelEstimationErrorTestCase::DoRun(void)
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
     SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-channel-estimation-error",
-                                                          "fwd",
-                                                          true);
+                                                       "fwd",
+                                                       true);
 
     Ptr<SatChannelEstimationErrorContainer> ceError =
         Create<SatFwdLinkChannelEstimationErrorContainer>();
@@ -111,8 +111,8 @@ SatRtnChannelEstimationErrorTestCase::DoRun(void)
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
     SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-channel-estimation-error",
-                                                          "rtn",
-                                                          true);
+                                                       "rtn",
+                                                       true);
 
     Ptr<SatChannelEstimationErrorContainer> ceError =
         Create<SatFwdLinkChannelEstimationErrorContainer>();

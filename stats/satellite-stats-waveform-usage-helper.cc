@@ -119,8 +119,7 @@ SatStatsWaveformUsageHelper::DoInstall()
         NS_ASSERT_MSG(s != nullptr, "Error finding beam " << it->second);
         const bool ret = s->TraceConnect("WaveformTrace", context.str(), waveformUsageCallback);
         NS_ASSERT_MSG(ret, "Error connecting to WaveformTrace of beam " << it->second);
-        NS_LOG_INFO(this << " successfully connected"
-                         << " with beam " << it->second);
+        NS_LOG_INFO(this << " successfully connected" << " with beam " << it->second);
     }
 
 } // end of `void DoInstall ();`
@@ -227,8 +226,8 @@ SatStatsWaveformUsageHelper::WaveformUsageCallback(std::string context, uint32_t
         }
 
         collectorMap.ConnectToAggregator("Output", m_aggregator, &MultiFileAggregator::Write1d);
-        NS_LOG_INFO(this << " created " << n << " instance(s)"
-                         << " of " << collectorMap.GetType().GetName() << " for "
+        NS_LOG_INFO(this << " created " << n << " instance(s)" << " of "
+                         << collectorMap.GetType().GetName() << " for "
                          << GetIdentifierTypeName(GetIdentifierType()));
 
         std::pair<std::map<uint32_t, CollectorMap>::iterator, bool> ret;

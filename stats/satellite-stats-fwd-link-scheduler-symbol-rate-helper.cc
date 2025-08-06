@@ -359,9 +359,8 @@ SatStatsFwdLinkSchedulerSymbolRateHelper::InstallProbes()
             if (!fwdLinkScheduler->TraceConnectWithoutContext("SymbolRate", GetTraceSinkCallback()))
             {
                 NS_FATAL_ERROR("Error connecting to Symbol Rate trace source"
-                               << " of SatFwdLinkScheduler"
-                               << " at node ID " << (*it)->GetId() << " device #"
-                               << (*itDev)->GetIfIndex());
+                               << " of SatFwdLinkScheduler" << " at node ID " << (*it)->GetId()
+                               << " device #" << (*itDev)->GetIfIndex());
             }
 
         } // end of `for (NetDeviceCOntainer::Iterator itDev = devs)`

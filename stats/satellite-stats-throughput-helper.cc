@@ -404,8 +404,7 @@ SatStatsThroughputHelper::RxCallback(Ptr<const Packet> packet, const Address& fr
     if (from.IsInvalid())
     {
         NS_LOG_WARN(this << " discarding packet " << packet << " (" << packet->GetSize()
-                         << " bytes)"
-                         << " from statistics collection because of"
+                         << " bytes)" << " from statistics collection because of"
                          << " invalid sender address");
     }
     else
@@ -416,8 +415,7 @@ SatStatsThroughputHelper::RxCallback(Ptr<const Packet> packet, const Address& fr
         if (it == m_identifierMap.end())
         {
             NS_LOG_WARN(this << " discarding packet " << packet << " (" << packet->GetSize()
-                             << " bytes)"
-                             << " from statistics collection because of"
+                             << " bytes)" << " from statistics collection because of"
                              << " unknown sender address " << from);
         }
         else
@@ -1369,8 +1367,7 @@ SatStatsRtnAppThroughputHelper::Ipv4Callback(Ptr<const Packet> packet, const Add
         if (it1 == m_identifierMap.end())
         {
             NS_LOG_WARN(this << " discarding packet " << packet << " (" << packet->GetSize()
-                             << " bytes)"
-                             << " from statistics collection because of"
+                             << " bytes)" << " from statistics collection because of"
                              << " unknown sender IPv4 address " << ipv4Addr);
         }
         else
@@ -1388,10 +1385,10 @@ SatStatsRtnAppThroughputHelper::Ipv4Callback(Ptr<const Packet> packet, const Add
     }
     else
     {
-        NS_LOG_WARN(
-            this << " discarding packet " << packet << " (" << packet->GetSize() << " bytes)"
-                 << " from statistics collection"
-                 << " because it comes from sender " << from << " without valid InetSocketAddress");
+        NS_LOG_WARN(this << " discarding packet " << packet << " (" << packet->GetSize()
+                         << " bytes)" << " from statistics collection"
+                         << " because it comes from sender " << from
+                         << " without valid InetSocketAddress");
     }
 
 } // end of `void Ipv4Callback (Ptr<const Packet>, const Address);`

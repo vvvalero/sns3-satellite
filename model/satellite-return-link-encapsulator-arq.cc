@@ -89,7 +89,8 @@ SatReturnLinkEncapsulatorArq::SatReturnLinkEncapsulatorArq(Mac48Address encapAdd
       m_arqHeaderSize(1),
       m_nextExpectedSeqNo(0)
 {
-    NS_LOG_FUNCTION(this << encapAddress << decapAddress << sourceE2EAddress << destE2EAddress << flowId << additionalHeaderSize);
+    NS_LOG_FUNCTION(this << encapAddress << decapAddress << sourceE2EAddress << destE2EAddress
+                         << flowId << additionalHeaderSize);
 }
 
 void

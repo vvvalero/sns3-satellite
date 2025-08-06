@@ -254,8 +254,8 @@ SatOrbiterMac::RxTraces(SatPhy::PacketContainer_t packets)
                 }
             } // end of `if (destAddress == m_nodeInfo->GetMacAddress () || destAddress.IsBroadcast
               // ())`
-        }     // end of `for it1 = packets.begin () -> packets.end ()`
-    }         // end of `if (m_isStatisticsTagsEnabled)`
+        } // end of `for it1 = packets.begin () -> packets.end ()`
+    } // end of `if (m_isStatisticsTagsEnabled)`
 }
 
 void

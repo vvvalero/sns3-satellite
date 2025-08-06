@@ -273,11 +273,11 @@ SatStatsMarsalaCorrelationHelper::DoInstall()
                 }
                 else
                 {
-                    NS_FATAL_ERROR("Error connecting to " << GetTraceSourceName() << " trace source"
-                                                          << " of SatPhyRxCarrier"
-                                                          << " at node ID " << (*it)->GetId()
-                                                          << " device #" << (*itDev)->GetIfIndex()
-                                                          << " RX carrier #" << itCarrier->first);
+                    NS_FATAL_ERROR("Error connecting to "
+                                   << GetTraceSourceName() << " trace source"
+                                   << " of SatPhyRxCarrier" << " at node ID " << (*it)->GetId()
+                                   << " device #" << (*itDev)->GetIfIndex() << " RX carrier #"
+                                   << itCarrier->first);
                 }
 
             } // end of `for (ObjectVectorValue::Iterator itCarrier = carriers)`
@@ -298,8 +298,7 @@ SatStatsMarsalaCorrelationHelper::CorrelationRxCallback(uint32_t nCorrelations,
     if (from.IsInvalid())
     {
         NS_LOG_WARN(this << " discarding " << nCorrelations << " packets"
-                         << " from statistics collection because of"
-                         << " invalid sender address");
+                         << " from statistics collection because of" << " invalid sender address");
         return;
     }
 
@@ -309,8 +308,8 @@ SatStatsMarsalaCorrelationHelper::CorrelationRxCallback(uint32_t nCorrelations,
     if (it == m_identifierMap.end())
     {
         NS_LOG_WARN(this << " discarding " << nCorrelations << " packets"
-                         << " from statistics collection because of"
-                         << " unknown sender address " << from);
+                         << " from statistics collection because of" << " unknown sender address "
+                         << from);
         return;
     }
 

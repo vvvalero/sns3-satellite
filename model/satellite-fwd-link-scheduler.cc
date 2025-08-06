@@ -192,9 +192,7 @@ SatFwdLinkScheduler::NotifyConstructionCompleted()
 
     Object::NotifyConstructionCompleted();
 
-    Simulator::Schedule(m_periodicInterval,
-                        &SatFwdLinkScheduler::PeriodicTimerExpired,
-                        this);
+    Simulator::Schedule(m_periodicInterval, &SatFwdLinkScheduler::PeriodicTimerExpired, this);
 }
 
 SatFwdLinkScheduler::~SatFwdLinkScheduler()

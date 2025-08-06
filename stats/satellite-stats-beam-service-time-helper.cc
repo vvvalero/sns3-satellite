@@ -120,10 +120,14 @@ SatStatsBeamServiceTimeHelper::DoInstall()
         {
             Ptr<SatNetDevice> dev = DynamicCast<SatNetDevice>((*node)->GetDevice(i));
             if (dev == nullptr)
+            {
                 continue;
+            }
             Ptr<SatMac> mac = dev->GetMac();
             if (mac == nullptr)
+            {
                 continue;
+            }
 
             // Connect the trace source
             uint32_t beamId = mac->GetBeamId();
@@ -132,8 +136,7 @@ SatStatsBeamServiceTimeHelper::DoInstall()
             const bool ret =
                 mac->TraceConnect("BeamServiceTime", context.str(), beamServiceCallback);
             NS_ASSERT_MSG(ret, "Error connecting to BeamServiceTime of beam " << beamId);
-            NS_LOG_INFO(this << " successfully connected"
-                             << " with beam " << beamId);
+            NS_LOG_INFO(this << " successfully connected" << " with beam " << beamId);
         }
     }
 

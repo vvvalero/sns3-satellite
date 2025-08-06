@@ -51,8 +51,7 @@ PrintBbFrameInfo(Ptr<SatBbFrame> bbFrame)
         return;
     }
 
-    std::cout << "[BBFrameTx] "
-              << "Time: " << Now().GetSeconds()
+    std::cout << "[BBFrameTx] " << "Time: " << Now().GetSeconds()
               << ", Frame Type: " << SatEnums::GetFrameTypeName(bbFrame->GetFrameType())
               << ", ModCod: " << SatEnums::GetModcodTypeName(bbFrame->GetModcod())
               << ", Occupancy: " << bbFrame->GetOccupancy()

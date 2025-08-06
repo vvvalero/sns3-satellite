@@ -426,8 +426,7 @@ SatStatsDelayHelper::RxDelayCallback(const Time& delay, const Address& from)
     if (from.IsInvalid())
     {
         NS_LOG_WARN(this << " discarding a packet delay of " << delay.GetSeconds()
-                         << " from statistics collection because of"
-                         << " invalid sender address");
+                         << " from statistics collection because of" << " invalid sender address");
     }
     else
     {
@@ -705,8 +704,8 @@ SatStatsFwdAppDelayHelper::DoInstallProbes()
 
             if (isConnected)
             {
-                NS_LOG_INFO(this << " successfully connected"
-                                 << " with node ID " << (*it)->GetId() << " application #" << i);
+                NS_LOG_INFO(this << " successfully connected" << " with node ID " << (*it)->GetId()
+                                 << " application #" << i);
             }
             else
             {
@@ -715,8 +714,8 @@ SatStatsFwdAppDelayHelper::DoInstallProbes()
                  * not every kind of Application is equipped with the expected
                  * RxDelay or Rx trace source.
                  */
-                NS_LOG_WARN(this << " unable to connect"
-                                 << " with node ID " << (*it)->GetId() << " application #" << i);
+                NS_LOG_WARN(this << " unable to connect" << " with node ID " << (*it)->GetId()
+                                 << " application #" << i);
             }
 
         } // end of `for (i = 0; i < (*it)->GetNApplications (); i++)`
@@ -1228,11 +1227,10 @@ SatStatsRtnAppDelayHelper::DoInstallProbes()
 
             if (!app->SetAttributeFailSafe("EnableStatisticsTags", BooleanValue(true)))
             {
-                NS_LOG_WARN(this << " node ID " << (*it)->GetId() << " application #" << i
-                                 << " might not produce the required tags"
-                                 << " in the transmitted packets,"
-                                 << " thus preventing delay statistics"
-                                 << " from this sender application");
+                NS_LOG_WARN(
+                    this << " node ID " << (*it)->GetId() << " application #" << i
+                         << " might not produce the required tags" << " in the transmitted packets,"
+                         << " thus preventing delay statistics" << " from this sender application");
             }
 
         } // end of `for (i = 0; i < (*it)->GetNApplications (); i++)`
@@ -1269,8 +1267,8 @@ SatStatsRtnAppDelayHelper::DoInstallProbes()
 
             if (isConnected)
             {
-                NS_LOG_INFO(this << " successfully connected"
-                                 << " with node ID " << (*it)->GetId() << " application #" << i);
+                NS_LOG_INFO(this << " successfully connected" << " with node ID " << (*it)->GetId()
+                                 << " application #" << i);
             }
             else
             {
@@ -1279,8 +1277,8 @@ SatStatsRtnAppDelayHelper::DoInstallProbes()
                  * not every kind of Application is equipped with the expected
                  * RxDelay or Rx trace source.
                  */
-                NS_LOG_WARN(this << " unable to connect"
-                                 << " with node ID " << (*it)->GetId() << " application #" << i);
+                NS_LOG_WARN(this << " unable to connect" << " with node ID " << (*it)->GetId()
+                                 << " application #" << i);
             }
 
         } // end of `for (i = 0; i < (*it)->GetNApplications (); i++)`
@@ -1361,9 +1359,8 @@ SatStatsRtnAppDelayHelper::Ipv4Callback(const Time& delay, const Address& from)
     else
     {
         NS_LOG_WARN(this << " discarding a packet delay of " << delay.GetSeconds()
-                         << " from statistics collection"
-                         << " because it comes from sender " << from
-                         << " without valid InetSocketAddress");
+                         << " from statistics collection" << " because it comes from sender "
+                         << from << " without valid InetSocketAddress");
     }
 }
 

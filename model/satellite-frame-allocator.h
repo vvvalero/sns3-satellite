@@ -224,7 +224,9 @@ class SatFrameAllocator : public SimpleRefCount<SatFrameAllocator>
     inline double GetCarrierBandwidthHz(bool checkParent = false) const
     {
         if (checkParent && m_frameConf->IsSubdivided())
+        {
             return 0.0;
+        }
         return m_frameConf->GetCarrierBandwidthHz(SatEnums::EFFECTIVE_BANDWIDTH);
     }
 

@@ -285,9 +285,7 @@ SatPerPacketFwdLinkUserTestCase::DoRun(void)
     InitOutput(true);
 
     // Set simulation output details
-    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-per-packet-if",
-                                                          m_extName,
-                                                          true);
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-per-packet-if", m_extName, true);
 
     // Configure a static error probability
     SatPhyRxCarrierConf::ErrorModel em(SatPhyRxCarrierConf::EM_NONE);
@@ -486,9 +484,7 @@ SatPerPacketFwdLinkFullTestCase::DoRun(void)
     InitOutput(false);
 
     // Set simulation output details
-    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-per-packet-if",
-                                                          m_extName,
-                                                          true);
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-per-packet-if", m_extName, true);
 
     Config::SetDefault("ns3::SatBeamHelper::FadingModel", EnumValue(m_fading));
     Config::SetDefault("ns3::SatFwdLinkScheduler::DummyFrameSendingEnabled",
@@ -670,9 +666,7 @@ SatPerPacketRtnLinkUserTestCase::DoRun(void)
     InitOutput(false);
 
     // Set simulation output details
-    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-per-packet-if",
-                                                          m_extName,
-                                                          true);
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-per-packet-if", m_extName, true);
 
     Config::SetDefault("ns3::SatBeamHelper::FadingModel", EnumValue(m_fading));
     Config::SetDefault("ns3::SatFwdLinkScheduler::DummyFrameSendingEnabled",
@@ -836,9 +830,7 @@ SatPerPacketRtnLinkFullTestCase::DoRun(void)
     InitOutput(false);
 
     // Set simulation output details
-    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-per-packet-if",
-                                                          m_extName,
-                                                          true);
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-per-packet-if", m_extName, true);
 
     Config::SetDefault("ns3::SatBeamHelper::FadingModel", EnumValue(m_fading));
     Config::SetDefault("ns3::SatFwdLinkScheduler::DummyFrameSendingEnabled",

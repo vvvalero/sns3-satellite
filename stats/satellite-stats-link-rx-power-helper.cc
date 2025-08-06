@@ -406,8 +406,7 @@ SatStatsLinkRxPowerHelper::RxPowerCallback(double rxPowerDb, const Address& from
     if (from.IsInvalid())
     {
         NS_LOG_WARN(this << " discarding a packet RX power of " << rxPowerDb << "dB"
-                         << " from statistics collection because of"
-                         << " invalid sender address");
+                         << " from statistics collection because of" << " invalid sender address");
     }
     else if (Mac48Address::ConvertFrom(from).IsBroadcast())
     {
@@ -632,16 +631,15 @@ SatStatsFwdFeederLinkRxPowerHelper::DoInstallProbes()
                                                                    GetTraceSinkCallback()))
                 {
                     NS_FATAL_ERROR("Error connecting to RxPowerTrace trace source"
-                                   << " of SatPhyRxCarrier"
-                                   << " at OrbiterSat node ID " << (*it)->GetId() << " device #"
-                                   << dev->GetIfIndex() << " PHY #" << itPhy->first
-                                   << " RX carrier #" << itCarrier->first);
+                                   << " of SatPhyRxCarrier" << " at OrbiterSat node ID "
+                                   << (*it)->GetId() << " device #" << dev->GetIfIndex() << " PHY #"
+                                   << itPhy->first << " RX carrier #" << itCarrier->first);
                 }
 
             } // end of `for (ObjectVectorValue::Iterator itCarrier = carriers)`
 
         } // end of `for (ObjectMapValue::Iterator itPhy = phys)`
-    }     // end of `for (it = sats.Begin(); it != sats.End (); ++it)`
+    } // end of `for (it = sats.Begin(); it != sats.End (); ++it)`
 
 } // end of `void DoInstallProbes ();`
 
@@ -703,9 +701,9 @@ SatStatsFwdUserLinkRxPowerHelper::DoInstallProbes()
                                                                GetTraceSinkCallback()))
             {
                 NS_FATAL_ERROR("Error connecting to RxPowerTrace trace source"
-                               << " of SatPhyRxCarrier"
-                               << " at node ID " << (*it)->GetId() << " device #"
-                               << dev->GetIfIndex() << " RX carrier #" << itCarrier->first);
+                               << " of SatPhyRxCarrier" << " at node ID " << (*it)->GetId()
+                               << " device #" << dev->GetIfIndex() << " RX carrier #"
+                               << itCarrier->first);
             }
 
         } // end of `for (ObjectVectorValue::Iterator itCarrier = carriers)`
@@ -778,9 +776,8 @@ SatStatsRtnFeederLinkRxPowerHelper::DoInstallProbes()
                                                                    GetTraceSinkCallback()))
                 {
                     NS_FATAL_ERROR("Error connecting to RxPowerTrace trace source"
-                                   << " of SatPhyRxCarrier"
-                                   << " at node ID " << (*it)->GetId() << " device #"
-                                   << (*itDev)->GetIfIndex() << " RX carrier #"
+                                   << " of SatPhyRxCarrier" << " at node ID " << (*it)->GetId()
+                                   << " device #" << (*itDev)->GetIfIndex() << " RX carrier #"
                                    << itCarrier->first);
                 }
 
@@ -859,9 +856,8 @@ SatStatsRtnUserLinkRxPowerHelper::DoInstallProbes()
                                                                    GetTraceSinkCallback()))
                 {
                     NS_FATAL_ERROR("Error connecting to RxPowerTrace trace source"
-                                   << " of SatPhyRxCarrier"
-                                   << " at node ID " << (*it)->GetId() << " device #"
-                                   << satOrbiterDev->GetIfIndex() << " RX carrier #"
+                                   << " of SatPhyRxCarrier" << " at node ID " << (*it)->GetId()
+                                   << " device #" << satOrbiterDev->GetIfIndex() << " RX carrier #"
                                    << itCarrier->first);
                 }
 

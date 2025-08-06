@@ -115,8 +115,8 @@ SatLoraRegenerativeFirstWindowTestCase::DoRun(void)
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
     SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-lora-regenerative",
-                                                          "first-window",
-                                                          true);
+                                                       "first-window",
+                                                       true);
 
     // Enable Lora
     Config::SetDefault("ns3::LorawanMacEndDevice::DataRate", UintegerValue(5));
@@ -282,8 +282,8 @@ SatLoraRegenerativeSecondWindowTestCase::DoRun(void)
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
     SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-lora-regenerative",
-                                                          "second-window",
-                                                          true);
+                                                       "second-window",
+                                                       true);
 
     // Enable Lora
     Config::SetDefault("ns3::LorawanMacEndDevice::DataRate", UintegerValue(5));
@@ -471,8 +471,8 @@ SatLoraRegenerativeOutOfWindowWindowTestCase::DoRun(void)
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
     SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-lora-regenerative",
-                                                          "out-of-window",
-                                                          true);
+                                                       "out-of-window",
+                                                       true);
 
     // Enable Lora
     Config::SetDefault("ns3::LorawanMacEndDevice::DataRate", UintegerValue(5));
@@ -651,8 +651,8 @@ SatLoraRegenerativeOutOfWindowWindowNoRetransmissionTestCase::DoRun(void)
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
     SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-lora-regenerative",
-                                                          "out-of-window",
-                                                          true);
+                                                       "out-of-window",
+                                                       true);
 
     // Enable Lora
     Config::SetDefault("ns3::LorawanMacEndDevice::DataRate", UintegerValue(5));
@@ -815,9 +815,7 @@ SatLoraRegenerativeCbrTestCase::DoRun(void)
 {
     // Set simulation output details
     SatEnvVariables::GetInstance()->DoInitialize();
-    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-lora-regenerative",
-                                                          "cbr",
-                                                          true);
+    SatEnvVariables::GetInstance()->SetOutputVariables("test-sat-lora-regenerative", "cbr", true);
 
     // Enable Lora
     Config::SetDefault("ns3::LorawanMacEndDevice::DataRate", UintegerValue(5));

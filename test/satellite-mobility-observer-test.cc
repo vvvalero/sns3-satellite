@@ -473,8 +473,7 @@ SatMobilityObserverTestCase::DoRun(void)
                 NS_TEST_ASSERT_MSG_EQ(std::isnan(gwEl),
                                       false,
                                       "UT elevation angle incorrect (NAN): lat-> "
-                                          << lat << " lon-> "
-                                          << " alt" << alt);
+                                          << lat << " lon-> " << " alt" << alt);
                 NS_TEST_ASSERT_MSG_EQ_TOL(gwEl,
                                           refValue,
                                           0.00001,
