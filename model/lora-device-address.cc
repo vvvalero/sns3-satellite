@@ -22,7 +22,7 @@
 
 #include "lora-device-address.h"
 
-#include <ns3/log.h>
+#include "ns3/log.h"
 
 #include <bitset>
 #include <ostream>

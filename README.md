@@ -1,4 +1,4 @@
-# Satellite NS-3
+# Satellite ns-3
 
 Satellite Network Simulator 3 (SNS-3) is a satellite network extension to Network Simulator 3 (ns-3) platform.
 SNS-3 was initially developed by Magister Solutions under ESA contact.
@@ -13,25 +13,33 @@ Some external modules have been partially or totally integrated to SNS-3:
  * [SGP4 satellite movement](https://gitlab.inesctec.pt/pmms/ns3-satellite/), with license GPLv2
  * [ISL routing](https://github.com/snkas/hypatia/), with license GPLv2
 
+# Prerequisites
+
+`libxml2-dev` is needed to launch some examples and tests. Install it via
+
+```shell
+$ sudo apt install libxml2-dev
+```
+
 # Installation Manual
 
-SNS-3 is built as an extension module to the [NS-3](https://www.nsnam.org/) network simulator; so their [installation instructions](https://www.nsnam.org/docs/release/3.43/tutorial/html/getting-started.html) apply, particularly concerning the dependencies. They are repeated here for convenience and proper integration of SNS-3.
+SNS-3 is built as an extension module to the [ns-3](https://www.nsnam.org/) network simulator; so their [installation instructions](https://www.nsnam.org/docs/release/3.45/tutorial/html/getting-started.html) apply, particularly concerning the dependencies. They are repeated here for convenience and proper integration of SNS-3.
 
-This revision of SNS-3 is compatible with NS-3.43.
+This revision of SNS-3 is compatible with ns-3.45.
 
 There are 2 methods to download and build (S)NS-3:
 
 *  the automated one using [bake](#bake);
 *  the manual one using [CMake](#cmake).
 
-The CMake method is recommended.
+The CMake method is recommended, as bake is not always compatible with the latest ns-3 version.
 
 ## Bake
 
 ### Preparations
 
 
-[Bake](http://planete.inria.fr/software/bake/index.html) is a tool developed to simplify the download and install process of NS-3. It can be extended to make it aware of external modules to NS-3 such as SNS-3. You will first need to get bake.
+[Bake](http://planete.inria.fr/software/bake/index.html) is a tool developed to simplify the download and install process of ns-3. It can be extended to make it aware of external modules to ns-3 such as SNS-3. You will first need to get bake.
 
 First you need to download Bake using Git, go to where you want Bake to be installed and call
 
@@ -47,7 +55,7 @@ $ export PATH=$PATH:$BAKE_HOME
 $ export PYTHONPATH=$PYTHONPATH:$BAKE_HOME
 ```
 
-Before installing NS-3, you will need to tell Bake how to find and download the SNS-3 extension module. To do so, you will have to create a **contrib** folder inside the newly acquired **bake** folder:
+Before installing ns-3, you will need to tell Bake how to find and download the SNS-3 extension module. To do so, you will have to create a **contrib** folder inside the newly acquired **bake** folder:
 
 ```shell
 $ cd bake
@@ -93,7 +101,7 @@ and drop the following file **sns3.xml** in this **contrib** folder:
 </configuration>
 ```
 
-This configuration file is used to get all the NS-3 modules needed to compile SNS-3. By default, for each module, bake takes the most recent commit on master. If you want a specific commit for a module, add the following line (with the wanted revision in value) between the flags `<attribute name="url" ...>` and `<attribute name="module_directory" ...>`:
+This configuration file is used to get all the ns-3 modules needed to compile SNS-3. By default, for each module, bake takes the most recent commit on master. If you want a specific commit for a module, add the following line (with the wanted revision in value) between the flags `<attribute name="url" ...>` and `<attribute name="module_directory" ...>`:
 
 ```xml
 <attribute name="revision" value="72aa513f43b7687336cf6251d50e81420c41691f"/>
@@ -111,7 +119,7 @@ Now you’re ready to use bake.
 Now that everything is in place, you can tell bake that you want to install SNS-3 (i.e.: `ns-3` plus the `sns3-satellite` module):
 
 ```shell
-$ ./bake.py configure -e ns-3.43 -e sns3-satellite -e sns3-stats -e sns3-traffic
+$ ./bake.py configure -e ns-3.45 -e sns3-satellite -e sns3-stats -e sns3-traffic
 $ ./bake.py deploy
 ```
 
@@ -125,21 +133,21 @@ $ ./bake.py check
 
 ## CMake
 
-If you wish to have finer control over what is being compiled, you can handle the download process of the dependencies yourself and use CMake directly to build NS-3.
+If you wish to have finer control over what is being compiled, you can handle the download process of the dependencies yourself and use CMake directly to build ns-3.
 
 You will need to:
 
-*  get NS-3 (by [cloning it using git](https://gitlab.com/nsnam/ns-3-dev.git));
+*  get ns-3 (by [cloning it using git](https://gitlab.com/nsnam/ns-3-dev.git));
 ```shell
-$ git clone https://gitlab.com/nsnam/ns-3-dev.git ns-3.43
+$ git clone https://gitlab.com/nsnam/ns-3-dev.git ns-3.45
 ```
 
 *  get the `satellite` module (by [cloning it using git](https://github.com/SNS-3/SNS-3-satellite));
 ```shell
-$ cd ns-3.43/contrib
+$ cd ns-3.45/contrib
 $ git clone https://github.com/sns3/sns3-satellite.git satellite
 ```
-*  get the `traffic` and `magister-stats` modules (needed until they are integrated into NS-3) as dependencies of the `satellite` module by cloning them :
+*  get the `traffic` and `magister-stats` modules (needed until they are integrated into ns-3) as dependencies of the `satellite` module by cloning them :
 
 ```shell
 $ git clone https://github.com/sns3/traffic.git traffic
@@ -147,35 +155,35 @@ $ git clone https://github.com/sns3/stats.git magister-stats
 ```
 
 *note : When retrieving the **satellite**, **traffic** and **magister-stats** modules, you should put
-them under the **ns-3.43/contrib/** folder. You can do so by cloning them directly in this folder,
+them under the **ns-3.45/contrib/** folder. You can do so by cloning them directly in this folder,
 extracting them here, copying the files afterwards or using symbolic links.*
 
 Make sure all the repositories are using compatible versions. The best way to ensure that is to use the same tag on all repositories. For the latest release:
 
- * On NS-3 repository:
+ * On ns-3 repository:
 ```shell
-$ cd ns-3.43
-$ git checkout ns-3.43
+$ cd ns-3.45
+$ git checkout ns-3.45
 ```
  * On `satellite`, `traffic` and `magister-stats` repositories:
 ```shell
-$ cd ns-3.43/contrib/[satellite|traffic|magister-stats]
-$ git checkout 3.43
+$ cd ns-3.45/contrib/[satellite|traffic|magister-stats]
+$ git checkout 3.45
 ```
 
-Then you need to configure CMake and ask it to build NS-3. It will automatically build all modules found in contrib:
+Then you need to configure CMake and ask it to build ns-3. It will automatically build all modules found in contrib:
 
 ```shell
-$ cd ns-3.43
+$ cd ns-3.45
 $ ./ns3 clean
 $ ./ns3 configure --build-profile=optimized --enable-examples --enable-tests
 $ ./ns3 build
 ```
 
-If you want to develop in NS-3, use it in [debug mode](https://www.nsnam.org/docs/release/3.43/tutorial/html/getting-started.html#debugging). It enables debug functionnalities but it is way more slower:
+If you want to develop in ns-3, use it in [debug mode](https://www.nsnam.org/docs/release/3.45/tutorial/html/getting-started.html#debugging). It enables debug functionnalities but it is way more slower:
 
 ```shell
-$ cd ns-3.43
+$ cd ns-3.45
 $ ./ns3 clean
 $ ./ns3 configure --build-profile=debug --enable-examples --enable-tests
 $ ./ns3 build
@@ -194,22 +202,22 @@ Once you compiled SNS-3 successfully, you will need an extra step before being a
 These data are available as a separate repository and bundled as a submodule in SNS-3. You can download them afterwards in the `satellite` repository using:
 
 ```shell
-$ cd source/ns-3.43/contrib/satellite
+$ cd source/ns-3.45/contrib/satellite
 $ git submodule update --init --recursive
 ```
 
 # Testing SNS-3
 
-You can run the unit tests of the NS-3 distribution by running the `./test.py` script:
+You can run the unit tests of the ns-3 distribution by running the `./test.py` script:
 
 ```shell
 $ ./test.py --no-build
 ```
 
-These tests are run in parallel by NS-3. You should eventually see a report saying that:
+These tests are run in parallel by ns-3. You should eventually see a report saying that:
 
 ```shell
-868 of 868 tests passed (868 passed, 0 failed, 0 crashed, 0 valgrind errors)
+896 of 896 tests passed (896 passed, 0 failed, 0 crashed, 0 valgrind errors)
 ```
 
 # Running SNS-3

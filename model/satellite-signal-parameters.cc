@@ -24,8 +24,8 @@
 
 #include "satellite-phy-tx.h"
 
-#include <ns3/log.h>
-#include <ns3/ptr.h>
+#include "ns3/log.h"
+#include "ns3/ptr.h"
 
 #include <stdint.h>
 

@@ -22,9 +22,9 @@
 
 #include "satellite-utils.h"
 
-#include <ns3/boolean.h>
-#include <ns3/double.h>
-#include <ns3/log.h>
+#include "ns3/boolean.h"
+#include "ns3/double.h"
+#include "ns3/log.h"
 
 #include <algorithm>
 #include <limits>
@@ -194,7 +194,9 @@ SatFrameAllocator::BandwidthComparator::operator()(const Ptr<SatFrameAllocator>&
     double bandwidthB = b->m_frameConf->GetBandwidthHz();
 
     if (bandwidthA == bandwidthB)
+    {
         return a > b;
+    }
     return bandwidthA > bandwidthB;
 }
 
@@ -336,7 +338,9 @@ SatFrameAllocator::SelectCarriers(uint16_t& count, uint16_t offset)
     {
         // Ensure that we get an even number of carriers on subdivided frames
         if (total % 2)
+        {
             ++count;
+        }
     }
     else
     {
