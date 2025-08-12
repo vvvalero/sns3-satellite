@@ -911,7 +911,7 @@ SatStatsFwdDevJitterHelper::UpdateIdentifierOnProbes()
             NS_FATAL_ERROR("Error disconnecting trace file on handover");
         }
 
-        identifier = GetIdentifierForUtUser(node);
+        identifier = GetIdentifierForUt(node);
 
         if (!ConnectProbeToCollector(probe, identifier))
         {
@@ -1025,7 +1025,7 @@ SatStatsFwdMacJitterHelper::UpdateIdentifierOnProbes()
             NS_FATAL_ERROR("Error disconnecting trace file on handover");
         }
 
-        identifier = GetIdentifierForUtUser(node);
+        identifier = GetIdentifierForUt(node);
 
         if (!ConnectProbeToCollector(probe, identifier))
         {
@@ -1166,7 +1166,7 @@ SatStatsFwdPhyJitterHelper::UpdateIdentifierOnProbes()
             NS_FATAL_ERROR("Error disconnecting trace file on handover");
         }
 
-        identifier = GetIdentifierForUtUser(node);
+        identifier = GetIdentifierForUt(node);
 
         if (!ConnectProbeToCollector(probe, identifier))
         {
