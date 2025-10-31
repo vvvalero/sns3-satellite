@@ -50,6 +50,12 @@ class SatConstantPositionMobilityModel : public SatMobilityModel
      */
     virtual ~SatConstantPositionMobilityModel();
 
+    // Inherited from MobilityModel
+    Ptr<MobilityModel> Copy() const override
+    {
+        return CreateObject<SatConstantPositionMobilityModel>(*this);
+    }
+
   private:
     Vector DoGetVelocity(void) const;
 

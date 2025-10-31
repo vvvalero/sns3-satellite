@@ -71,8 +71,8 @@ LorawanMacGateway::Send(Ptr<Packet> packet)
     uint8_t modcod = tag.GetModcod();
     uint8_t dataRate = tag.GetDataRate();
     double frequency = tag.GetFrequency();
-    NS_LOG_DEBUG("DR: " << (uint32_t) unsigned(dataRate));
-    NS_LOG_DEBUG("SF: " << (uint32_t) unsigned(GetSfFromDataRate(dataRate)));
+    NS_LOG_DEBUG("DR: " << (uint32_t)unsigned(dataRate));
+    NS_LOG_DEBUG("SF: " << (uint32_t)unsigned(GetSfFromDataRate(dataRate)));
     NS_LOG_DEBUG("BW: " << GetBandwidthFromDataRate(dataRate));
     NS_LOG_DEBUG("Freq: " << frequency << " MHz");
     packet->AddPacketTag(tag);

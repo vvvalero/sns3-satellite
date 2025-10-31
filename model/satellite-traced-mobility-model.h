@@ -69,6 +69,12 @@ class SatTracedMobilityModel : public SatMobilityModel
      */
     virtual ~SatTracedMobilityModel();
 
+    // Inherited from MobilityModel
+    Ptr<MobilityModel> Copy() const override
+    {
+        return CreateObject<SatTracedMobilityModel>(*this);
+    }
+
     /**
      * @brief Set the satellite ID linked to this node
      */

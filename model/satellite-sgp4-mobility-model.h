@@ -77,6 +77,12 @@ class SatSGP4MobilityModel : public SatMobilityModel
      */
     virtual ~SatSGP4MobilityModel();
 
+    // Inherited from MobilityModel
+    Ptr<MobilityModel> Copy() const override
+    {
+        return CreateObject<SatSGP4MobilityModel>(*this);
+    }
+
     /**
      * Set the simulation absolute start time in string format.
      *

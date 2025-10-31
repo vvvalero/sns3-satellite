@@ -119,6 +119,15 @@ SatSignalParameters::SetSinr(double sinr, double additionalInterference)
     m_ifParams->m_sinrComputed = true;
 }
 
+TypeId
+SatInterferenceParameters::GetTypeId(void)
+{
+    static TypeId tid = TypeId("ns3::SatInterferenceParameters")
+                            .SetParent<Object>()
+                            .AddConstructor<SatInterferenceParameters>();
+    return tid;
+}
+
 SatInterferenceParameters::~SatInterferenceParameters()
 {
 }

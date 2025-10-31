@@ -200,7 +200,7 @@ SatOrbiterMac::SendPacket(SatPhy::PacketContainer_t packets,
                   GetSatLinkTxDir(),
                   SatUtils::GetPacketInfo(packets));
 
-    Ptr<SatSignalParameters> txParams = Create<SatSignalParameters>();
+    Ptr<SatSignalParameters> txParams = CreateObject<SatSignalParameters>();
     txParams->m_duration = duration;
     txParams->m_packetsInBurst = packets;
     txParams->m_satId = m_satId;

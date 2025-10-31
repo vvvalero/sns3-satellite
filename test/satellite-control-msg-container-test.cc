@@ -131,8 +131,8 @@ SatCtrlMsgContDelOnTestCase::DoRun(void)
 
     // create container with store time 100 ms and flag deletedOnRead set
     m_container = Create<SatControlMsgContainer>(Seconds(0.10), true);
-    Ptr<SatControlMessage> crMsg = Create<SatCrMessage>();
-    Ptr<SatControlMessage> tbtpMsg = Create<SatTbtpMessage>();
+    Ptr<SatControlMessage> crMsg = CreateObject<SatCrMessage>();
+    Ptr<SatControlMessage> tbtpMsg = CreateObject<SatTbtpMessage>();
 
     // simulate message additions
     Simulator::Schedule(Seconds(0.09),
@@ -234,8 +234,8 @@ SatCtrlMsgContDelOffTestCase::DoRun(void)
 
     // create container with store time 100 ms and flag deletedOnRead NOT set
     m_container = Create<SatControlMsgContainer>(Seconds(0.10), false);
-    Ptr<SatControlMessage> crMsg = Create<SatCrMessage>();
-    Ptr<SatControlMessage> tbtpMsg = Create<SatTbtpMessage>();
+    Ptr<SatControlMessage> crMsg = CreateObject<SatCrMessage>();
+    Ptr<SatControlMessage> tbtpMsg = CreateObject<SatTbtpMessage>();
 
     // simulate message additions
     Simulator::Schedule(Seconds(0.09),

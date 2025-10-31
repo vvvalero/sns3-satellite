@@ -674,7 +674,7 @@ SatGenericStreamEncapsulatorArq::SendAck(uint8_t seqNo) const
      */
     if (!m_ctrlCallback.IsNull())
     {
-        Ptr<SatArqAckMessage> ack = Create<SatArqAckMessage>();
+        Ptr<SatArqAckMessage> ack = CreateObject<SatArqAckMessage>();
         ack->SetSequenceNumber(seqNo);
         ack->SetFlowId(m_flowId);
 

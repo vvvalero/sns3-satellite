@@ -398,7 +398,7 @@ SatPhy::SendPdu(PacketContainer_t p,
                   SatUtils::GetPacketInfo(p));
 
     // Create a new SatSignalParameters related to this packet transmission
-    Ptr<SatSignalParameters> txParams = Create<SatSignalParameters>();
+    Ptr<SatSignalParameters> txParams = CreateObject<SatSignalParameters>();
     txParams->m_duration = duration;
     txParams->m_phyTx = m_phyTx;
     txParams->m_packetsInBurst = p;
