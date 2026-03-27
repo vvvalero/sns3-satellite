@@ -131,7 +131,7 @@ You will need to:
 
 *  get NS-3 (by [cloning it using git](https://gitlab.com/nsnam/ns-3-dev.git));
 ```shell
-$ git clone https://gitlab.com/nsnam/ns-3-dev.git ns-3.43
+$ git clone https://github.com/vvvalero/sns3-satellite.git ns-3.43
 ```
 
 *  get the `satellite` module (by [cloning it using git](https://github.com/SNS-3/SNS-3-satellite));
